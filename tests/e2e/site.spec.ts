@@ -25,6 +25,7 @@ test('mobile navigation opens accessibly, traps focus, and closes on Escape', as
   await page.goto('/');
   const trigger = page.getByRole('button', { name: 'Menu' });
   await trigger.click();
+  await expect(page.locator('#site-nav button.nav-close')).toBeVisible();
   await expect(page.locator('#site-nav button.nav-close')).toBeFocused();
   const navBounds = await page.locator('#site-nav').boundingBox();
   expect(navBounds?.height).toBeGreaterThan(800);

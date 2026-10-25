@@ -1,19 +1,21 @@
-# QA matrix
-Candidate: pending freeze. Browser QA evidence must name exact Git SHA and export hash manifest.
+# QA matrix — final local export
+Build environment: SITE_URL=https://review.zk17-review.pages.dev, PUBLIC_RELEASE=false, PREVIEW_MEDIA_MODE=true, commitment disabled/null. See .agent/FINAL_GATES.json and raw logs.
 
-| Surface | Desktop 1280x720 | iPhone-class 390x844 | Android-class 412x915 |
-| --- | --- | --- | --- |
-| Arrival typography + actions | pending | pending | pending |
-| Header/menu/keyboard focus | pending | pending | pending |
-| On Field pin/parallax | pending | static vertical expected | static vertical expected |
-| Film room empty state | pending | pending | pending |
-| Off Field horizontal/vertical | pending | vertical expected | vertical expected |
-| Journey and Numbers | pending | pending | pending |
-| Next Chapter/uncommitted | pending | pending | pending |
-| Media/contact/footer | pending | pending | pending |
-| Reduced motion | pending | pending | pending |
-| No JS | pending | pending | pending |
-| Accessibility automated | pending | pending | pending |
-| Performance | pending | pending | pending |
+| Gate | Result |
+| --- | --- |
+| Production static build | PASS incl sitemap.xml and export audit |
+| TypeScript / ESLint | PASS / PASS |
+| Content / release tests | 7 passed |
+| Production dependency audit | 0 vulnerabilities |
+| Chromium suite | 17 passed, 4 project-specific intentional skips, 0 failures/flaky |
+| Mobile WebKit iPhone13 profile | 5 passed, 2 project-specific intentional skips, 0 failures/flaky |
+| Axe | 0 violations in all tested browser profiles |
+| 1280x720 / 390x844 / 412x915 captures | All8scenes, zero pageerrors, zero horizontal overflow, all9imageinstancesloaded |
+| Reduced motion | Static visibility and dynamic removal of pin spacers PASS |
+| No JavaScript mobile | Athlete heading and all8scenes readable |
+| CUA interactive | Hero film availability dialog opens/closes; Journey anchor changes destination |
+| Real approved athlete video | NOT SUPPLIED; actual playback acceptance remains content-dependent |
+| Physical devices / real Safari | UNKNOWN; WebKit emulation is not physical Safari proof |
+| Deployed runtime / performance | Pending preview deployment |
 
-Physical device / Safari / Firefox evidence remains UNKNOWN unless actually tested. Automated Chromium emulation alone is not physical-device proof. No athlete video supplied: actual approved-film playback acceptance remains owner-content dependent; fixture testing is bounded engineering proof only.
+Screenshots: .impeccable/review/{desktop,mobile,android}.png, corresponding full-page and scene captures. Reduced-motion capture ensures no hidden entry frames; separate tests prove motion cleanup. Final independent review must close visual findings before preview upload.

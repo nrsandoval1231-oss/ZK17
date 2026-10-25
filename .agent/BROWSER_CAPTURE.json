@@ -1,6 +1,6 @@
 {
   "baseURL": "http://127.0.0.1:3100",
-  "startedUtc": "2026-10-25T14:25:34.184Z",
+  "startedUtc": "2026-10-25T14:48:18.550Z",
   "viewports": [
     {
       "name": "desktop",
@@ -70,79 +70,79 @@
       ],
       "resources": [
         {
-          "name": "http://127.0.0.1:3100/_next/static/css/a6e424b9208db7bd.css",
-          "transferSize": 39108,
-          "duration": 6.100000023841858
+          "name": "http://127.0.0.1:3100/_next/static/css/5df63ccab67d64ec.css",
+          "transferSize": 39864,
+          "duration": 7.899999976158142
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/chunks/webpack-22bd3adce3350151.js",
           "transferSize": 3705,
-          "duration": 6.900000095367432
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/main-app-401c149f27d60e17.js",
-          "transferSize": 811,
-          "duration": 8.200000047683716
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/c15bf2b0-182b384b62e205ff.js",
-          "transferSize": 51869,
-          "duration": 8.399999976158142
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/309-0f9fc5513dc2a439.js",
-          "transferSize": 77971,
-          "duration": 9.899999976158142
+          "duration": 8.300000071525574
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/chunks/4bd1b696-c7408084347438ae.js",
           "transferSize": 204021,
-          "duration": 8.300000071525574
+          "duration": 70.20000004768372
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/chunks/main-app-401c149f27d60e17.js",
+          "transferSize": 811,
+          "duration": 44.10000002384186
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/chunks/c15bf2b0-182b384b62e205ff.js",
+          "transferSize": 51869,
+          "duration": 44.39999997615814
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/chunks/309-0f9fc5513dc2a439.js",
+          "transferSize": 77971,
+          "duration": 47
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/chunks/app/page-35ae30d64faae3db.js",
+          "transferSize": 22049,
+          "duration": 63.200000047683716
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/chunks/794-f09dc234193e386a.js",
           "transferSize": 243404,
-          "duration": 8.300000071525574
-        },
-        {
-          "name": "http://127.0.0.1:3100/media/arrival-706.webp",
-          "transferSize": 50958,
-          "duration": 10.399999976158142
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/app/page-602e3888ad7fd764.js",
-          "transferSize": 20611,
-          "duration": 9.600000023841858
+          "duration": 69.70000004768372
         },
         {
           "name": "http://127.0.0.1:3100/media/arrival-706.avif",
           "transferSize": 31588,
-          "duration": 7.899999976158142
+          "duration": 44.10000002384186
+        },
+        {
+          "name": "http://127.0.0.1:3100/media/arrival-706.webp",
+          "transferSize": 50958,
+          "duration": 46.799999952316284
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/dm-sans-latin-400-normal.7abd0811.woff2",
           "transferSize": 14500,
-          "duration": 52.799999952316284
+          "duration": 54.700000047683716
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-700-normal.e9811009.woff2",
           "transferSize": 22744,
-          "duration": 52.10000002384186
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-500-normal.6440fe73.woff2",
-          "transferSize": 21724,
-          "duration": 52.299999952316284
+          "duration": 53.59999990463257
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/dm-sans-latin-600-normal.ad414a0a.woff2",
           "transferSize": 14444,
-          "duration": 52.5
+          "duration": 52.90000009536743
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-500-normal.6440fe73.woff2",
+          "transferSize": 21724,
+          "duration": 53.10000002384186
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-600-normal.b506a7ca.woff2",
           "transferSize": 22608,
-          "duration": 52.60000002384186
+          "duration": 53.5
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-400-normal.a9143135.woff2",
@@ -152,34 +152,34 @@
         {
           "name": "http://127.0.0.1:3100/_next/static/media/dm-sans-latin-500-normal.210398b6.woff2",
           "transferSize": 14604,
-          "duration": 53.299999952316284
+          "duration": 53.5
         },
         {
           "name": "http://127.0.0.1:3100/media/portrait-706.avif",
           "transferSize": 30141,
-          "duration": 2.299999952316284
+          "duration": 2.5
         },
         {
           "name": "http://127.0.0.1:3100/media/on-field-706.avif",
           "transferSize": 46890,
-          "duration": 2.399999976158142
+          "duration": 2.700000047683716
         },
         {
           "name": "http://127.0.0.1:3100/media/running-706.avif",
           "transferSize": 44776,
-          "duration": 2.5
+          "duration": 3.200000047683716
         },
         {
           "name": "http://127.0.0.1:3100/media/throwing-706.avif",
           "transferSize": 32584,
-          "duration": 2.5
+          "duration": 3.5
         }
       ],
       "navigation": [
         {
-          "domContentLoaded": 21.199999928474426,
-          "load": 149.5,
-          "transferSize": 24785
+          "domContentLoaded": 22,
+          "load": 151.20000004768372,
+          "transferSize": 26056
         }
       ],
       "paint": [
@@ -262,126 +262,126 @@
       ],
       "resources": [
         {
-          "name": "http://127.0.0.1:3100/_next/static/css/a6e424b9208db7bd.css",
-          "transferSize": 39108,
-          "duration": 4.100000023841858
+          "name": "http://127.0.0.1:3100/_next/static/css/5df63ccab67d64ec.css",
+          "transferSize": 39864,
+          "duration": 5.399999976158142
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/chunks/webpack-22bd3adce3350151.js",
           "transferSize": 3705,
-          "duration": 5.100000023841858
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/main-app-401c149f27d60e17.js",
-          "transferSize": 811,
-          "duration": 6.100000023841858
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/c15bf2b0-182b384b62e205ff.js",
-          "transferSize": 51869,
-          "duration": 6.399999976158142
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/4bd1b696-c7408084347438ae.js",
-          "transferSize": 204021,
-          "duration": 6.100000023841858
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/794-f09dc234193e386a.js",
-          "transferSize": 243404,
-          "duration": 6.299999952316284
-        },
-        {
-          "name": "http://127.0.0.1:3100/media/arrival-360.avif",
-          "transferSize": 10534,
-          "duration": 5.599999904632568
+          "duration": 5.5
         },
         {
           "name": "http://127.0.0.1:3100/media/arrival-706.webp",
           "transferSize": 50958,
-          "duration": 8.599999904632568
+          "duration": 12.900000095367432
         },
         {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/app/page-602e3888ad7fd764.js",
-          "transferSize": 20611,
-          "duration": 8.599999904632568
+          "name": "http://127.0.0.1:3100/_next/static/chunks/main-app-401c149f27d60e17.js",
+          "transferSize": 811,
+          "duration": 7.400000095367432
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/chunks/794-f09dc234193e386a.js",
+          "transferSize": 243404,
+          "duration": 6.900000095367432
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/chunks/app/page-35ae30d64faae3db.js",
+          "transferSize": 22049,
+          "duration": 8.800000071525574
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/chunks/c15bf2b0-182b384b62e205ff.js",
+          "transferSize": 51869,
+          "duration": 7.5
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/chunks/4bd1b696-c7408084347438ae.js",
+          "transferSize": 204021,
+          "duration": 5.900000095367432
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/chunks/309-0f9fc5513dc2a439.js",
           "transferSize": 77971,
-          "duration": 7.299999952316284
+          "duration": 11
         },
         {
-          "name": "http://127.0.0.1:3100/_next/static/media/dm-sans-latin-400-normal.7abd0811.woff2",
-          "transferSize": 14500,
-          "duration": 56.59999990463257
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-700-normal.e9811009.woff2",
-          "transferSize": 22744,
-          "duration": 56
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-500-normal.6440fe73.woff2",
-          "transferSize": 21724,
-          "duration": 59.10000002384186
+          "name": "http://127.0.0.1:3100/media/arrival-360.avif",
+          "transferSize": 10534,
+          "duration": 5.800000071525574
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/dm-sans-latin-600-normal.ad414a0a.woff2",
           "transferSize": 14444,
-          "duration": 58.59999990463257
+          "duration": 69.5
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/media/dm-sans-latin-400-normal.7abd0811.woff2",
+          "transferSize": 14500,
+          "duration": 64.19999992847443
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-700-normal.e9811009.woff2",
+          "transferSize": 22744,
+          "duration": 66.19999992847443
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/dm-sans-latin-500-normal.210398b6.woff2",
           "transferSize": 14604,
-          "duration": 59.199999928474426
+          "duration": 63.40000009536743
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-500-normal.6440fe73.woff2",
+          "transferSize": 21724,
+          "duration": 63.60000002384186
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-600-normal.b506a7ca.woff2",
           "transferSize": 22608,
-          "duration": 59.39999997615814
+          "duration": 68.10000002384186
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-400-normal.a9143135.woff2",
           "transferSize": 21464,
-          "duration": 58.60000002384186
+          "duration": 69.19999992847443
         },
         {
           "name": "http://127.0.0.1:3100/media/on-field-360.avif",
           "transferSize": 17142,
-          "duration": 3.799999952316284
-        },
-        {
-          "name": "http://127.0.0.1:3100/media/throwing-360.avif",
-          "transferSize": 13337,
-          "duration": 3.100000023841858
+          "duration": 6.200000047683716
         },
         {
           "name": "http://127.0.0.1:3100/media/portrait-360.avif",
           "transferSize": 13228,
-          "duration": 3.399999976158142
+          "duration": 6.700000047683716
+        },
+        {
+          "name": "http://127.0.0.1:3100/media/throwing-360.avif",
+          "transferSize": 13337,
+          "duration": 6.5
         },
         {
           "name": "http://127.0.0.1:3100/media/running-360.avif",
           "transferSize": 18734,
-          "duration": 3.299999952316284
+          "duration": 7.100000023841858
         }
       ],
       "navigation": [
         {
-          "domContentLoaded": 78.29999995231628,
-          "load": 134.69999992847443,
-          "transferSize": 24785
+          "domContentLoaded": 19.800000071525574,
+          "load": 172.80000007152557,
+          "transferSize": 26056
         }
       ],
       "paint": [
         {
           "name": "first-paint",
-          "time": 88
+          "time": 116
         },
         {
           "name": "first-contentful-paint",
-          "time": 88
+          "time": 116
         }
       ],
       "scrollTriggers": 0
@@ -454,126 +454,126 @@
       ],
       "resources": [
         {
-          "name": "http://127.0.0.1:3100/_next/static/css/a6e424b9208db7bd.css",
-          "transferSize": 39108,
-          "duration": 4.300000071525574
+          "name": "http://127.0.0.1:3100/_next/static/css/5df63ccab67d64ec.css",
+          "transferSize": 39864,
+          "duration": 6.399999976158142
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/chunks/webpack-22bd3adce3350151.js",
           "transferSize": 3705,
-          "duration": 4.700000047683716
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/main-app-401c149f27d60e17.js",
-          "transferSize": 811,
-          "duration": 6.899999976158142
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/4bd1b696-c7408084347438ae.js",
-          "transferSize": 204021,
           "duration": 5.299999952316284
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/chunks/794-f09dc234193e386a.js",
           "transferSize": 243404,
-          "duration": 5.799999952316284
+          "duration": 7.399999976158142
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/chunks/4bd1b696-c7408084347438ae.js",
+          "transferSize": 204021,
+          "duration": 6.600000023841858
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/chunks/main-app-401c149f27d60e17.js",
+          "transferSize": 811,
+          "duration": 6.599999904632568
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/chunks/c15bf2b0-182b384b62e205ff.js",
           "transferSize": 51869,
-          "duration": 6.899999976158142
+          "duration": 7.199999928474426
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/chunks/309-0f9fc5513dc2a439.js",
           "transferSize": 77971,
-          "duration": 7.199999928474426
+          "duration": 11.5
         },
         {
           "name": "http://127.0.0.1:3100/media/arrival-540.avif",
           "transferSize": 19246,
-          "duration": 4.899999976158142
+          "duration": 7.200000047683716
         },
         {
           "name": "http://127.0.0.1:3100/media/arrival-706.webp",
           "transferSize": 50958,
-          "duration": 8.099999904632568
+          "duration": 13.800000071525574
         },
         {
-          "name": "http://127.0.0.1:3100/_next/static/chunks/app/page-602e3888ad7fd764.js",
-          "transferSize": 20611,
-          "duration": 7.099999904632568
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/media/dm-sans-latin-400-normal.7abd0811.woff2",
-          "transferSize": 14500,
-          "duration": 51.200000047683716
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-700-normal.e9811009.woff2",
-          "transferSize": 22744,
-          "duration": 50.90000009536743
-        },
-        {
-          "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-500-normal.6440fe73.woff2",
-          "transferSize": 21724,
-          "duration": 52
+          "name": "http://127.0.0.1:3100/_next/static/chunks/app/page-35ae30d64faae3db.js",
+          "transferSize": 22049,
+          "duration": 11.5
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/dm-sans-latin-600-normal.ad414a0a.woff2",
           "transferSize": 14444,
-          "duration": 52.10000002384186
+          "duration": 70.10000002384186
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/media/dm-sans-latin-400-normal.7abd0811.woff2",
+          "transferSize": 14500,
+          "duration": 73.29999995231628
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-700-normal.e9811009.woff2",
+          "transferSize": 22744,
+          "duration": 67.30000007152557
+        },
+        {
+          "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-500-normal.6440fe73.woff2",
+          "transferSize": 21724,
+          "duration": 71.80000007152557
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/dm-sans-latin-500-normal.210398b6.woff2",
           "transferSize": 14604,
-          "duration": 52.39999997615814
+          "duration": 71.5
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-600-normal.b506a7ca.woff2",
           "transferSize": 22608,
-          "duration": 52.800000071525574
+          "duration": 67.39999997615814
         },
         {
           "name": "http://127.0.0.1:3100/_next/static/media/barlow-condensed-latin-400-normal.a9143135.woff2",
           "transferSize": 21464,
-          "duration": 52.699999928474426
-        },
-        {
-          "name": "http://127.0.0.1:3100/media/on-field-540.avif",
-          "transferSize": 30470,
-          "duration": 2.700000047683716
-        },
-        {
-          "name": "http://127.0.0.1:3100/media/throwing-540.avif",
-          "transferSize": 22345,
-          "duration": 2.9000000953674316
+          "duration": 67.20000004768372
         },
         {
           "name": "http://127.0.0.1:3100/media/portrait-540.avif",
           "transferSize": 21676,
-          "duration": 3
+          "duration": 11.800000071525574
+        },
+        {
+          "name": "http://127.0.0.1:3100/media/on-field-540.avif",
+          "transferSize": 30470,
+          "duration": 12.400000095367432
         },
         {
           "name": "http://127.0.0.1:3100/media/running-540.avif",
           "transferSize": 32185,
-          "duration": 3.5
+          "duration": 14
+        },
+        {
+          "name": "http://127.0.0.1:3100/media/throwing-540.avif",
+          "transferSize": 22345,
+          "duration": 14
         }
       ],
       "navigation": [
         {
-          "domContentLoaded": 71.30000007152557,
-          "load": 129.20000004768372,
-          "transferSize": 24785
+          "domContentLoaded": 18.200000047683716,
+          "load": 176.70000004768372,
+          "transferSize": 26056
         }
       ],
       "paint": [
         {
           "name": "first-paint",
-          "time": 100
+          "time": 116
         },
         {
           "name": "first-contentful-paint",
-          "time": 100
+          "time": 116
         }
       ],
       "scrollTriggers": 0
@@ -587,5 +587,5 @@
     "heading": "ZEPHYR\nKREYE.",
     "scenes": 8
   },
-  "finishedUtc": "2026-10-25T14:25:38.884Z"
+  "finishedUtc": "2026-10-25T14:48:23.898Z"
 }
