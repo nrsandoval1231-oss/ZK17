@@ -1,0 +1,59 @@
+{
+  "sourceCandidate": "a32faccdda4de215b9d8c2fbf4967b7eb3d2ff9b",
+  "project": "zk17-review",
+  "branch": "review",
+  "environment": "preview",
+  "immutableURL": "https://e82599bc.zk17-review.pages.dev",
+  "previewURL": "https://review.zk17-review.pages.dev/concepts/player17/",
+  "verifiedUtc": "2026-10-25T18:40:42.720Z",
+  "commitDirty": false,
+  "checks": [
+    {
+      "route": "/concepts/player17/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "noindex": "noindex, nofollow",
+      "matches": true,
+      "bytes": 1134
+    },
+    {
+      "route": "/concepts/player17/off-field-v1.png",
+      "status": 200,
+      "contentType": "image/png",
+      "noindex": "noindex, nofollow",
+      "matches": true,
+      "bytes": 1714394
+    },
+    {
+      "route": "/concepts/player17/off-field-v1.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "noindex": "noindex, nofollow",
+      "matches": true,
+      "bytes": 155324
+    }
+  ],
+  "browser": {
+    "provider": "CUA IAB",
+    "width": 390,
+    "height": 844,
+    "imageComplete": true,
+    "naturalWidth": 1024,
+    "naturalHeight": 1536,
+    "renderedWidth": 358,
+    "renderedHeight": 537,
+    "overflow": 0,
+    "selectedFormat": "webp",
+    "viewportReset": true
+  },
+  "scope": "Static mockup only; homepage source unchanged",
+  "finalPublicRelease": "NOT AUTHORIZED",
+  "metrics": {
+    "lane": "fast artifact delivery",
+    "configIdentity": "UNKNOWN",
+    "tokens": "UNKNOWN",
+    "planningDuration": "UNKNOWN",
+    "audit": "Not required for additive artifact copy; parent deterministic checks and actual remote browser proof",
+    "repairs": 0
+  }
+}

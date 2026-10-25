@@ -4,3 +4,5 @@ ZK-11 mobile menu geometry/touch target [DONE: Sol PASS at b388d61412bbf9fdaf699
 ZK-09 actual social/NIL destinations [EXTERNAL / WAITING FOR OWNER CONTENT]. ZK-05 originals/rights/remaining approved content/domain/final public approval [EXTERNAL / OPEN].
 
 Final documentation handoff leaves runtime unchanged. No additional deployment needed for bookkeeping; no final public promotion authorized.
+
+ZK-12 phone-accessible static mockup [DONE: existing source artifact copied, responsive preview deployed, remotehash/browserproof]. Arcade integration not yet approved.
