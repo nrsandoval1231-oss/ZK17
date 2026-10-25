@@ -1,0 +1,19 @@
+{
+  "node": "ZK-13",
+  "lane": "singleLuna focusedfeature",
+  "startUtc": "2026-10-25T18:43:11Z",
+  "builderFinishUtc": "2026-10-25T18:55:50Z",
+  "planningDuration": "UNKNOWN",
+  "buildDuration": "UNKNOWN; packetstartincludesplanning",
+  "builderModel": "gpt-6-luna low namedrole",
+  "reviewerModel": "gpt-6-sol medium namedrole",
+  "configIdentity": "UNKNOWN",
+  "tokens": "UNKNOWN",
+  "auditStartUtc": "2026-10-25T19:04:57Z",
+  "auditFinishUtc": "2026-10-25T19:05:24Z",
+  "auditDurationSeconds": 27,
+  "elapsedToAcceptedSeconds": 1333,
+  "repairCount": 1,
+  "repairScope": "Onebounded integrationrepair WebKitcommittedfocus +noJSdesktopstack; prefreezevisualbatch andQAhelpercorrections separatelyrecorded",
+  "direction": "COMPLETE boundedarcade preview, ownercontent/publicgatesOPEN"
+}

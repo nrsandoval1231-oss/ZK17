@@ -1,5 +1,5 @@
 {
-  "origin": "http://127.0.0.1:3100",
+  "origin": "https://b1c08c85.zk17-review.pages.dev",
   "initial": {
     "rail": {
       "x": 0,
@@ -54,5 +54,5 @@
     "overflow": 0
   },
   "dynamicReducedMotion": "PASS",
-  "checkedUtc": "2026-10-25T19:03:13.888Z"
+  "checkedUtc": "2026-10-25T19:07:05.406Z"
 }

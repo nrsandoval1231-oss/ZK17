@@ -1,6 +1,3 @@
-# Preview status - delivered
-Preview: https://review.zk17-review.pages.dev
-Immutable: https://7010465a.zk17-review.pages.dev
-Source: b388d61412bbf9fdaf699a464efc9f92a9be3807
-DeploymentID: 7010465a-2138-4a4c-9205-62e6b3f9b9cc; preview/review successful; verified 2026-10-25T18:16:22.311Z.
-82 remote files match export hashes. Five mobile widths plus desktop runtime verified; actual alias menu opened/closed after reload. Noindex retained; no final public promotion. Final metadata commit does not change runtime output.
+# Review preview - PLAYER17 arcade delivered
+URL https://review.zk17-review.pages.dev/#offfield-personal
+Acceptedapplication 9ef24bcad6c3ba4bd18f46dcee4aa9404454ed5b; immutable https://b1c08c85.zk17-review.pages.dev; deployment b1c08c85-1025-4ff3-923a-e0d89ca0fc29.91remote assets hashmatched; six remoteviewportengineprobes and desktopmotion pass; actualaliasMusicStartBack verified. Screenshot-only followup doesnot changeacceptedUI. No finalpublicrelease.

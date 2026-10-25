@@ -6,3 +6,5 @@ ZK-09 actual social/NIL destinations [EXTERNAL / WAITING FOR OWNER CONTENT]. ZK-
 Final documentation handoff leaves runtime unchanged. No additional deployment needed for bookkeeping; no final public promotion authorized.
 
 ZK-12 phone-accessible static mockup [DONE: existing source artifact copied, responsive preview deployed, remotehash/browserproof]. Arcade integration not yet approved.
+
+ZK-13 owner-approved arcade integration [DONE at boundedreviewscope: accepted9ef24bc, nativeworkingcontrols, frozenproduction/browsergates andactualpreviewproof]. Originalmockup keptat /concepts/player17/. Missingfavorites arecontentgate, notinvented. FinalpublicremainsOPEN.
