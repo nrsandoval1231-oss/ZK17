@@ -1,0 +1,217 @@
+{
+  "origin": "http://127.0.0.1:3100",
+  "startedUtc": "2026-10-25T20:50:25.203Z",
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "height": 780,
+      "allThreeInlineCategories": "PASS",
+      "dialogs": 0,
+      "focusRestoration": "PASS",
+      "axeViolations": 0,
+      "geometry": {
+        "root": {
+          "x": 24,
+          "y": 64.265625,
+          "width": 272,
+          "height": 743.1875,
+          "top": 64.265625,
+          "right": 296,
+          "bottom": 807.453125,
+          "left": 24
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 51,
+            "y": 682.453125,
+            "width": 218,
+            "height": 54,
+            "top": 682.453125,
+            "right": 269,
+            "bottom": 736.453125,
+            "left": 51
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "allThreeInlineCategories": "PASS",
+      "dialogs": 0,
+      "focusRestoration": "PASS",
+      "axeViolations": 0,
+      "geometry": {
+        "root": {
+          "x": 24,
+          "y": 63.90625,
+          "width": 342,
+          "height": 758.890625,
+          "top": 63.90625,
+          "right": 366,
+          "bottom": 822.796875,
+          "left": 24
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 51,
+            "y": 697.796875,
+            "width": 288,
+            "height": 54,
+            "top": 697.796875,
+            "right": 339,
+            "bottom": 751.796875,
+            "left": 51
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 412,
+      "height": 915,
+      "allThreeInlineCategories": "PASS",
+      "dialogs": 0,
+      "focusRestoration": "PASS",
+      "axeViolations": 0,
+      "geometry": {
+        "root": {
+          "x": 24,
+          "y": 64.40625,
+          "width": 364,
+          "height": 760.984375,
+          "top": 64.40625,
+          "right": 388,
+          "bottom": 825.390625,
+          "left": 24
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 51,
+            "y": 700.390625,
+            "width": 310,
+            "height": 54,
+            "top": 700.390625,
+            "right": 361,
+            "bottom": 754.390625,
+            "left": 51
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "height": 1024,
+      "allThreeInlineCategories": "PASS",
+      "dialogs": 0,
+      "focusRestoration": "PASS",
+      "axeViolations": 0,
+      "geometry": {
+        "root": {
+          "x": 53.75,
+          "y": 63.984375,
+          "width": 660.5,
+          "height": 835.03125,
+          "top": 63.984375,
+          "right": 714.25,
+          "bottom": 899.015625,
+          "left": 53.75
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 209,
+            "y": 744.609375,
+            "width": 350,
+            "height": 56,
+            "top": 744.609375,
+            "right": 559,
+            "bottom": 800.609375,
+            "left": 209
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "height": 720,
+      "allThreeInlineCategories": "PASS",
+      "dialogs": 0,
+      "focusRestoration": "PASS",
+      "axeViolations": 0,
+      "geometry": {
+        "root": {
+          "x": 115.1875,
+          "y": -392.125,
+          "width": 1049.625,
+          "height": 930.03125,
+          "top": -392.125,
+          "right": 1164.8125,
+          "bottom": 537.90625,
+          "left": 115.1875
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 465,
+            "y": 367.90625,
+            "width": 350,
+            "height": 56,
+            "top": 367.90625,
+            "right": 815,
+            "bottom": 423.90625,
+            "left": 465
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "allThreeInlineCategories": "PASS",
+      "dialogs": 0,
+      "focusRestoration": "PASS",
+      "axeViolations": 0,
+      "geometry": {
+        "root": {
+          "x": 24,
+          "y": 64.90625,
+          "width": 342,
+          "height": 758.46875,
+          "top": 64.90625,
+          "right": 366,
+          "bottom": 823.375,
+          "left": 24
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 51,
+            "y": 698.375,
+            "width": 288,
+            "height": 54,
+            "top": 698.375,
+            "right": 339,
+            "bottom": 752.375,
+            "left": 51
+          }
+        ]
+      },
+      "errors": []
+    }
+  ],
+  "finishedUtc": "2026-10-25T20:50:40.274Z"
+}

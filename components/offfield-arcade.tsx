@@ -4,7 +4,6 @@ import { useLayoutEffect, useRef, useState } from 'react';
 import type { KeyboardEvent } from 'react';
 import type { OffFieldFeature } from '@/content/site';
 import styles from './offfield-arcade.module.css';
-import FootballGame from './football-game';
 
 const categories = ['Gaming', 'Movies', 'Music'] as const;
 type Category = (typeof categories)[number];
@@ -24,9 +23,8 @@ export default function OffFieldArcade({ features, athleteName }: { features: Of
     (started ? backRef.current : startRef.current)?.focus({ preventScroll: true });
   }, [started]);
 
-  const start = () => selected === 'Gaming' ? setGameOpen(true) : setStarted(true);
+  const start = () => setStarted(true);
   const back = () => setStarted(false);
-  const [gameOpen, setGameOpen] = useState(false);
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
     if (event.key === 'Escape' && started) {
       event.preventDefault();
@@ -81,12 +79,12 @@ export default function OffFieldArcade({ features, athleteName }: { features: Of
                       </label>
                     ))}
                   </fieldset>
-                  <p className={styles.teaser}>A passing challenge is ready. Movies and music are coming soon.</p>
+                  <p className={styles.teaser}>His picks. Coming soon.</p>
                   <button ref={startRef} className={styles.start} type="button" onClick={start}>PRESS START</button>
                 </>
               ) : (
                 <div className={styles.detail} aria-live="polite" aria-atomic="true">
-                  {selected === 'Gaming' ? <p>Lead moving receivers and drive the ball downfield in a twelve-snap passing challenge. Arcade scores are simulated.</p> : details.length ? <ul>{details.map((detail) => <li key={detail}>{detail}</li>)}</ul> : <p>{selected} details are coming soon.</p>}
+                  {details.length ? <ul>{details.map((detail) => <li key={detail}>{detail}</li>)}</ul> : <p>{selected} details are coming soon.</p>}
                   <button ref={backRef} type="button" className={styles.back} onClick={back}><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M16 10H4m0 0 5-5m-5 5 5 5" /></svg> BACK TO MENU</button>
                 </div>
               )}
@@ -94,7 +92,6 @@ export default function OffFieldArcade({ features, athleteName }: { features: Of
           </div>
         </div>
       </div>
-      {gameOpen && <FootballGame onExit={() => { setGameOpen(false); requestAnimationFrame(() => startRef.current?.focus()); }} />}
           </div>
         </div>
       </div>

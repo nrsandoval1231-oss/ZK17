@@ -1,30 +1,7 @@
 {
-  "sourceCandidate": "80aa97505959c07442af0301884f9e8d8ec99635",
   "project": "zk17-review",
   "branch": "review",
   "environment": "preview",
-  "reservedProductionBranch": "owner-approved-release",
-  "previewURL": "https://review.zk17-review.pages.dev/?v=pocket-pass#offfield-personal",
-  "immutableURL": "https://f148c164.zk17-review.pages.dev",
-  "deploymentID": "f148c164-1223-4ebc-b08b-040a6192f291",
-  "verifiedUtc": "2026-10-25T20:13:29.962Z",
-  "status": "success",
-  "commitDirty": false,
-  "remoteAssetProof": {
-    "filesChecked": 91,
-    "mismatches": 0,
-    "screenshotAdditionalFiles": 2,
-    "screenshotMismatches": 0
-  },
-  "browserProof": ".agent/evidence/football-game/browser.json",
-  "realRoundProof": ".agent/evidence/football-game/round.json",
-  "aliasProof": ".agent/evidence/football-game/alias-proof.json",
-  "realRound": {
-    "snaps": 12,
-    "touchdowns": 3,
-    "arcadeScore": 18,
-    "method": "Real pointer aim and Throw/Next Play clicks; no game-state injection"
-  },
-  "indexing": "noindex,nofollow; robots disallow",
+  "status": "pending owner revision validation",
   "finalPublicRelease": "NOT AUTHORIZED"
 }

@@ -1,7 +1,0 @@
-# Current state
-
-ZK-13 approved PLAYER17 arcade is implemented in the [review preview](https://review.zk17-review.pages.dev/#offfield-personal). Accepted application 9ef24bcad6c3ba4bd18f46dcee4aa9404454ed5b; delivery 718cc8c2900c9c03c5ec9deea44c4213a22e1c91; immutable https://78c3d475.zk17-review.pages.dev. It replaces the personal placeholder rail/list while preserving paired portraits, NIL inquiry, the canonical transparent mark, and eight scenes. Native category selection, Start, Back/Escape and committed focus work. Favorites remain unpublished.
-
-Build, typecheck, lint and 14 unit tests pass. Chromium 34 and WebKit 10 tests pass, with 12 intentional project skips. Six additional viewport/engine probes pass. Desktop horizontal travel is 282px; mobile/reduced-motion layouts stack, dynamic changes remove pins, and the no-JavaScript fallback is readable. All 91 deployed application assets plus the screenshot match hashes. The actual alias was manually tested. One bounded integration repair addressed WebKit focus and the no-JavaScript stack. Evidence: .agent/evidence/arcade-build/. Updating content: docs/ARCADE.md.
-
-OPEN: owner-approved favorites, social URLs and public representative NIL contact, original athlete exports/rights, approved film, optional verified stats, domain and final public approval. Physical devices UNKNOWN. Commitment disabled; unverified statistics unpublished. No final public promotion.

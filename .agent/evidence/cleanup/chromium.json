@@ -229,12 +229,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1146,
+                  "duration": 786,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:33:59.726Z",
+                  "startTime": "2026-10-25T20:50:27.061Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -263,12 +263,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1475,
+                  "duration": 1288,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:33:59.769Z",
+                  "startTime": "2026-10-25T20:50:27.057Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -297,12 +297,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 1024,
+                  "duration": 732,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:33:59.720Z",
+                  "startTime": "2026-10-25T20:50:27.050Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -312,7 +312,7 @@
           ],
           "id": "41922fa1b760a3f76b44-1181c3573dc0d422987e",
           "file": "arcade.spec.ts",
-          "line": 40,
+          "line": 35,
           "column": 5
         },
         {
@@ -331,12 +331,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1040,
+                  "duration": 614,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:33:59.769Z",
+                  "startTime": "2026-10-25T20:50:27.004Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -346,7 +346,7 @@
           ],
           "id": "41922fa1b760a3f76b44-03314b126b844013ed80",
           "file": "arcade.spec.ts",
-          "line": 61,
+          "line": 56,
           "column": 5
         },
         {
@@ -365,12 +365,12 @@
                   "workerIndex": 4,
                   "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 1163,
+                  "duration": 1173,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:33:59.793Z",
+                  "startTime": "2026-10-25T20:50:27.118Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -380,7 +380,7 @@
           ],
           "id": "41922fa1b760a3f76b44-2e275a72746752ea5147",
           "file": "arcade.spec.ts",
-          "line": 77,
+          "line": 72,
           "column": 5
         },
         {
@@ -396,15 +396,15 @@
               "projectName": "mobile-chromium",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 2,
+                  "workerIndex": 7,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 466,
+                  "duration": 584,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:04.373Z",
+                  "startTime": "2026-10-25T20:50:30.553Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -430,15 +430,15 @@
               "projectName": "mobile-chromium",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "workerIndex": 5,
+                  "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 1933,
+                  "duration": 2193,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:04.483Z",
+                  "startTime": "2026-10-25T20:50:30.375Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -464,15 +464,15 @@
               "projectName": "mobile-chromium",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 4,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 505,
+                  "duration": 455,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:04.622Z",
+                  "startTime": "2026-10-25T20:50:30.378Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -482,7 +482,7 @@
           ],
           "id": "41922fa1b760a3f76b44-57f6caaa2d568dc17adf",
           "file": "arcade.spec.ts",
-          "line": 40,
+          "line": 35,
           "column": 5
         },
         {
@@ -497,7 +497,7 @@
                   "type": "skip",
                   "location": {
                     "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                    "line": 62,
+                    "line": 57,
                     "column": 58
                   }
                 }
@@ -507,21 +507,21 @@
               "projectName": "mobile-chromium",
               "results": [
                 {
-                  "workerIndex": 9,
-                  "parallelIndex": 3,
+                  "workerIndex": 8,
+                  "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 197,
+                  "duration": 313,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:04.630Z",
+                  "startTime": "2026-10-25T20:50:30.832Z",
                   "annotations": [
                     {
                       "type": "skip",
                       "location": {
                         "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                        "line": 62,
+                        "line": 57,
                         "column": 58
                       }
                     }
@@ -534,7 +534,7 @@
           ],
           "id": "41922fa1b760a3f76b44-013e52b2ae4b89d53ea9",
           "file": "arcade.spec.ts",
-          "line": 61,
+          "line": 56,
           "column": 5
         },
         {
@@ -549,7 +549,7 @@
                   "type": "skip",
                   "location": {
                     "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                    "line": 78,
+                    "line": 73,
                     "column": 58
                   }
                 }
@@ -559,21 +559,21 @@
               "projectName": "mobile-chromium",
               "results": [
                 {
-                  "workerIndex": 7,
-                  "parallelIndex": 0,
+                  "workerIndex": 9,
+                  "parallelIndex": 2,
                   "status": "skipped",
-                  "duration": 147,
+                  "duration": 173,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:04.491Z",
+                  "startTime": "2026-10-25T20:50:30.988Z",
                   "annotations": [
                     {
                       "type": "skip",
                       "location": {
                         "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                        "line": 78,
+                        "line": 73,
                         "column": 58
                       }
                     }
@@ -586,7 +586,7 @@
           ],
           "id": "41922fa1b760a3f76b44-d06a86b53d830934c194",
           "file": "arcade.spec.ts",
-          "line": 77,
+          "line": 72,
           "column": 5
         },
         {
@@ -605,12 +605,12 @@
                   "workerIndex": 10,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 454,
+                  "duration": 495,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:07.771Z",
+                  "startTime": "2026-10-25T20:50:33.484Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -639,12 +639,12 @@
                   "workerIndex": 11,
                   "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 1218,
+                  "duration": 1134,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:10.897Z",
+                  "startTime": "2026-10-25T20:50:33.680Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -673,12 +673,12 @@
                   "workerIndex": 12,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 416,
+                  "duration": 589,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:10.972Z",
+                  "startTime": "2026-10-25T20:50:33.824Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -688,7 +688,7 @@
           ],
           "id": "41922fa1b760a3f76b44-ea2b069c69c0b046aad7",
           "file": "arcade.spec.ts",
-          "line": 40,
+          "line": 35,
           "column": 5
         },
         {
@@ -703,7 +703,7 @@
                   "type": "skip",
                   "location": {
                     "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                    "line": 62,
+                    "line": 57,
                     "column": 58
                   }
                 }
@@ -714,20 +714,20 @@
               "results": [
                 {
                   "workerIndex": 13,
-                  "parallelIndex": 2,
+                  "parallelIndex": 3,
                   "status": "skipped",
-                  "duration": 120,
+                  "duration": 223,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:11.008Z",
+                  "startTime": "2026-10-25T20:50:34.338Z",
                   "annotations": [
                     {
                       "type": "skip",
                       "location": {
                         "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                        "line": 62,
+                        "line": 57,
                         "column": 58
                       }
                     }
@@ -740,7 +740,7 @@
           ],
           "id": "41922fa1b760a3f76b44-a1f14e36f1d47014f0ab",
           "file": "arcade.spec.ts",
-          "line": 61,
+          "line": 56,
           "column": 5
         },
         {
@@ -755,7 +755,7 @@
                   "type": "skip",
                   "location": {
                     "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                    "line": 78,
+                    "line": 73,
                     "column": 58
                   }
                 }
@@ -765,21 +765,21 @@
               "projectName": "reduced-motion",
               "results": [
                 {
-                  "workerIndex": 10,
-                  "parallelIndex": 0,
+                  "workerIndex": 14,
+                  "parallelIndex": 2,
                   "status": "skipped",
-                  "duration": 50,
+                  "duration": 127,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:08.370Z",
+                  "startTime": "2026-10-25T20:50:35.912Z",
                   "annotations": [
                     {
                       "type": "skip",
                       "location": {
                         "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                        "line": 78,
+                        "line": 73,
                         "column": 58
                       }
                     }
@@ -792,426 +792,7 @@
           ],
           "id": "41922fa1b760a3f76b44-9d8d7d1a2e40b11e51d7",
           "file": "arcade.spec.ts",
-          "line": 77,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "football-game.spec.ts",
-      "file": "football-game.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "passing game starts, accepts a real throw, advances, pauses, restarts, and exits",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop-chromium",
-              "projectName": "desktop-chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 1953,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:34:00.929Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-2a12a26ad0b0421aea01",
-          "file": "football-game.spec.ts",
-          "line": 2,
-          "column": 5
-        },
-        {
-          "title": "phone game controls remain inside the viewport and title is renamed",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop-chromium",
-              "projectName": "desktop-chromium",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 1495,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:34:00.968Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-9f1561c3813a2192a7c9",
-          "file": "football-game.spec.ts",
-          "line": 10,
-          "column": 5
-        },
-        {
-          "title": "field keyboard controls, hidden pause, and scroll-lock cleanup work",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "desktop-chromium",
-              "projectName": "desktop-chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 2337,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\nExpected: visible\nError: strict mode violation: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') resolved to 2 elements:\n    1) <strong>PAUSED</strong> aka getByText('PAUSED', { exact: true })\n    2) <p aria-live=\"polite\" class=\"football-game_message___u0Hb\">Paused while away.</p> aka getByText('Paused while away.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\nExpected: visible\nError: strict mode violation: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') resolved to 2 elements:\n    1) <strong>PAUSED</strong> aka getByText('PAUSED', { exact: true })\n    2) <p aria-live=\"polite\" class=\"football-game_message___u0Hb\">Paused while away.</p> aka getByText('Paused while away.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\u001b[22m\n\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:18:196",
-                    "location": {
-                      "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
-                      "column": 196,
-                      "line": 18
-                    },
-                    "snippet": "  16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 1/12');await dialog.getByRole('button',{name:'NEXT PLAY'}).click();\n  17 |  // Handler-level browser check: dispatch the visibility event and verify pause; this does not claim a real tab-switch test.\n> 18 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n     |                                                                                                                                                                                                    ^\n  19 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  20 | });\n  21 |"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
-                        "column": 196,
-                        "line": 18
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\nExpected: visible\nError: strict mode violation: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') resolved to 2 elements:\n    1) <strong>PAUSED</strong> aka getByText('PAUSED', { exact: true })\n    2) <p aria-live=\"polite\" class=\"football-game_message___u0Hb\">Paused while away.</p> aka getByText('Paused while away.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\u001b[22m\n\n\n  16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 1/12');await dialog.getByRole('button',{name:'NEXT PLAY'}).click();\n  17 |  // Handler-level browser check: dispatch the visibility event and verify pause; this does not claim a real tab-switch test.\n> 18 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n     |                                                                                                                                                                                                    ^\n  19 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  20 | });\n  21 |\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:18:196"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:34:01.041Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-desktop-chromium\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-desktop-chromium\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
-                    "column": 196,
-                    "line": 18
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-d3ebe08116cc70787318",
-          "file": "football-game.spec.ts",
-          "line": 14,
-          "column": 5
-        },
-        {
-          "title": "passing game starts, accepts a real throw, advances, pauses, restarts, and exits",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mobile-chromium",
-              "projectName": "mobile-chromium",
-              "results": [
-                {
-                  "workerIndex": 7,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2179,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:34:04.779Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-94106c2887797649aa25",
-          "file": "football-game.spec.ts",
-          "line": 2,
-          "column": 5
-        },
-        {
-          "title": "phone game controls remain inside the viewport and title is renamed",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mobile-chromium",
-              "projectName": "mobile-chromium",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 1440,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:34:04.952Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-59f97325edede34213ee",
-          "file": "football-game.spec.ts",
-          "line": 10,
-          "column": 5
-        },
-        {
-          "title": "field keyboard controls, hidden pause, and scroll-lock cleanup work",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mobile-chromium",
-              "projectName": "mobile-chromium",
-              "results": [
-                {
-                  "workerIndex": 9,
-                  "parallelIndex": 3,
-                  "status": "failed",
-                  "duration": 3043,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\nExpected: visible\nError: strict mode violation: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') resolved to 2 elements:\n    1) <strong>PAUSED</strong> aka getByText('PAUSED', { exact: true })\n    2) <p aria-live=\"polite\" class=\"football-game_message___u0Hb\">Paused while away.</p> aka getByText('Paused while away.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\nExpected: visible\nError: strict mode violation: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') resolved to 2 elements:\n    1) <strong>PAUSED</strong> aka getByText('PAUSED', { exact: true })\n    2) <p aria-live=\"polite\" class=\"football-game_message___u0Hb\">Paused while away.</p> aka getByText('Paused while away.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\u001b[22m\n\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:18:196",
-                    "location": {
-                      "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
-                      "column": 196,
-                      "line": 18
-                    },
-                    "snippet": "  16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 1/12');await dialog.getByRole('button',{name:'NEXT PLAY'}).click();\n  17 |  // Handler-level browser check: dispatch the visibility event and verify pause; this does not claim a real tab-switch test.\n> 18 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n     |                                                                                                                                                                                                    ^\n  19 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  20 | });\n  21 |"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
-                        "column": 196,
-                        "line": 18
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\nExpected: visible\nError: strict mode violation: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') resolved to 2 elements:\n    1) <strong>PAUSED</strong> aka getByText('PAUSED', { exact: true })\n    2) <p aria-live=\"polite\" class=\"football-game_message___u0Hb\">Paused while away.</p> aka getByText('Paused while away.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\u001b[22m\n\n\n  16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 1/12');await dialog.getByRole('button',{name:'NEXT PLAY'}).click();\n  17 |  // Handler-level browser check: dispatch the visibility event and verify pause; this does not claim a real tab-switch test.\n> 18 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n     |                                                                                                                                                                                                    ^\n  19 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  20 | });\n  21 |\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:18:196"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:34:05.050Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-mobile-chromium\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-mobile-chromium\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
-                    "column": 196,
-                    "line": 18
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-3ac6f259359623a7e2bc",
-          "file": "football-game.spec.ts",
-          "line": 14,
-          "column": 5
-        },
-        {
-          "title": "passing game starts, accepts a real throw, advances, pauses, restarts, and exits",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "reduced-motion",
-              "projectName": "reduced-motion",
-              "results": [
-                {
-                  "workerIndex": 10,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1525,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:34:08.430Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-40913c099d47bb442937",
-          "file": "football-game.spec.ts",
-          "line": 2,
-          "column": 5
-        },
-        {
-          "title": "phone game controls remain inside the viewport and title is renamed",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "reduced-motion",
-              "projectName": "reduced-motion",
-              "results": [
-                {
-                  "workerIndex": 10,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 377,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:34:09.962Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-ed38016f58ac0f6f7adb",
-          "file": "football-game.spec.ts",
-          "line": 10,
-          "column": 5
-        },
-        {
-          "title": "field keyboard controls, hidden pause, and scroll-lock cleanup work",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "reduced-motion",
-              "projectName": "reduced-motion",
-              "results": [
-                {
-                  "workerIndex": 10,
-                  "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 1452,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\nExpected: visible\nError: strict mode violation: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') resolved to 2 elements:\n    1) <strong>PAUSED</strong> aka getByText('PAUSED', { exact: true })\n    2) <p aria-live=\"polite\" class=\"football-game_message___u0Hb\">Paused while away.</p> aka getByText('Paused while away.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\nExpected: visible\nError: strict mode violation: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') resolved to 2 elements:\n    1) <strong>PAUSED</strong> aka getByText('PAUSED', { exact: true })\n    2) <p aria-live=\"polite\" class=\"football-game_message___u0Hb\">Paused while away.</p> aka getByText('Paused while away.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\u001b[22m\n\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:18:196",
-                    "location": {
-                      "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
-                      "column": 196,
-                      "line": 18
-                    },
-                    "snippet": "  16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 1/12');await dialog.getByRole('button',{name:'NEXT PLAY'}).click();\n  17 |  // Handler-level browser check: dispatch the visibility event and verify pause; this does not claim a real tab-switch test.\n> 18 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n     |                                                                                                                                                                                                    ^\n  19 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  20 | });\n  21 |"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
-                        "column": 196,
-                        "line": 18
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\nExpected: visible\nError: strict mode violation: getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') resolved to 2 elements:\n    1) <strong>PAUSED</strong> aka getByText('PAUSED', { exact: true })\n    2) <p aria-live=\"polite\" class=\"football-game_message___u0Hb\">Paused while away.</p> aka getByText('Paused while away.')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).getByText('PAUSED')\u001b[22m\n\n\n  16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 1/12');await dialog.getByRole('button',{name:'NEXT PLAY'}).click();\n  17 |  // Handler-level browser check: dispatch the visibility event and verify pause; this does not claim a real tab-switch test.\n> 18 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n     |                                                                                                                                                                                                    ^\n  19 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  20 | });\n  21 |\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:18:196"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:34:10.350Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-reduced-motion\\error-context.md"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-reduced-motion\\trace.zip"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
-                    "column": 196,
-                    "line": 18
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-531fa648bdf86cfe18df",
-          "file": "football-game.spec.ts",
-          "line": 14,
+          "line": 72,
           "column": 5
         }
       ]
@@ -1235,15 +816,15 @@
               "projectName": "desktop-chromium",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 4,
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 499,
+                  "duration": 573,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:01.217Z",
+                  "startTime": "2026-10-25T20:50:27.830Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1269,15 +850,15 @@
               "projectName": "desktop-chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 371,
+                  "duration": 751,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:01.462Z",
+                  "startTime": "2026-10-25T20:50:28.024Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1303,15 +884,15 @@
               "projectName": "desktop-chromium",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 4,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 719,
+                  "duration": 964,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:01.725Z",
+                  "startTime": "2026-10-25T20:50:28.035Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1337,15 +918,15 @@
               "projectName": "desktop-chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 392,
+                  "duration": 610,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:01.841Z",
+                  "startTime": "2026-10-25T20:50:28.429Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1383,12 +964,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 54,
+                  "duration": 107,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:02.238Z",
+                  "startTime": "2026-10-25T20:50:28.677Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1423,15 +1004,15 @@
               "projectName": "desktop-chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 386,
+                  "duration": 726,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:02.299Z",
+                  "startTime": "2026-10-25T20:50:28.629Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1457,15 +1038,15 @@
               "projectName": "desktop-chromium",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 4,
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 1322,
+                  "duration": 1353,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:02.472Z",
+                  "startTime": "2026-10-25T20:50:28.782Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1491,15 +1072,15 @@
               "projectName": "desktop-chromium",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 1426,
+                  "duration": 764,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:02.556Z",
+                  "startTime": "2026-10-25T20:50:28.887Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1525,15 +1106,15 @@
               "projectName": "desktop-chromium",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 533,
+                  "duration": 690,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:02.693Z",
+                  "startTime": "2026-10-25T20:50:29.018Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1559,15 +1140,15 @@
               "projectName": "mobile-chromium",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 4,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 463,
+                  "duration": 618,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:05.412Z",
+                  "startTime": "2026-10-25T20:50:31.019Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1593,15 +1174,15 @@
               "projectName": "mobile-chromium",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 4,
+                  "workerIndex": 7,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 367,
+                  "duration": 381,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:05.886Z",
+                  "startTime": "2026-10-25T20:50:31.430Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1628,14 +1209,14 @@
               "results": [
                 {
                   "workerIndex": 8,
-                  "parallelIndex": 4,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 694,
+                  "duration": 969,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:06.260Z",
+                  "startTime": "2026-10-25T20:50:31.479Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1661,15 +1242,15 @@
               "projectName": "mobile-chromium",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 9,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 398,
+                  "duration": 555,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:06.446Z",
+                  "startTime": "2026-10-25T20:50:31.561Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1707,12 +1288,12 @@
                   "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 86,
+                  "duration": 123,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:06.603Z",
+                  "startTime": "2026-10-25T20:50:31.649Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1759,12 +1340,12 @@
                   "workerIndex": 6,
                   "parallelIndex": 1,
                   "status": "skipped",
-                  "duration": 107,
+                  "duration": 544,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:06.703Z",
+                  "startTime": "2026-10-25T20:50:31.779Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -1799,15 +1380,15 @@
               "projectName": "mobile-chromium",
               "results": [
                 {
-                  "workerIndex": 6,
-                  "parallelIndex": 1,
+                  "workerIndex": 7,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1283,
+                  "duration": 1467,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:06.816Z",
+                  "startTime": "2026-10-25T20:50:31.876Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1833,15 +1414,15 @@
               "projectName": "mobile-chromium",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 9,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 1386,
+                  "duration": 1516,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:06.863Z",
+                  "startTime": "2026-10-25T20:50:32.164Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1867,15 +1448,15 @@
               "projectName": "mobile-chromium",
               "results": [
                 {
-                  "workerIndex": 8,
-                  "parallelIndex": 4,
+                  "workerIndex": 6,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 349,
+                  "duration": 519,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:06.980Z",
+                  "startTime": "2026-10-25T20:50:32.331Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1901,15 +1482,15 @@
               "projectName": "reduced-motion",
               "results": [
                 {
-                  "workerIndex": 14,
-                  "parallelIndex": 3,
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 664,
+                  "duration": 466,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:11.567Z",
+                  "startTime": "2026-10-25T20:50:34.197Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1935,15 +1516,15 @@
               "projectName": "reduced-motion",
               "results": [
                 {
-                  "workerIndex": 13,
-                  "parallelIndex": 2,
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 840,
+                  "duration": 370,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:11.338Z",
+                  "startTime": "2026-10-25T20:50:34.701Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1972,12 +1553,12 @@
                   "workerIndex": 12,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 796,
+                  "duration": 1015,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:11.548Z",
+                  "startTime": "2026-10-25T20:50:34.756Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2004,14 +1585,14 @@
               "results": [
                 {
                   "workerIndex": 13,
-                  "parallelIndex": 2,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 484,
+                  "duration": 859,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:12.185Z",
+                  "startTime": "2026-10-25T20:50:34.933Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2040,12 +1621,12 @@
                   "workerIndex": 11,
                   "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 304,
+                  "duration": 743,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:12.277Z",
+                  "startTime": "2026-10-25T20:50:35.036Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2080,15 +1661,15 @@
               "projectName": "reduced-motion",
               "results": [
                 {
-                  "workerIndex": 14,
-                  "parallelIndex": 3,
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
                   "status": "skipped",
-                  "duration": 65,
+                  "duration": 109,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:12.336Z",
+                  "startTime": "2026-10-25T20:50:35.078Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -2123,15 +1704,15 @@
               "projectName": "reduced-motion",
               "results": [
                 {
-                  "workerIndex": 12,
-                  "parallelIndex": 1,
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 960,
+                  "duration": 1463,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:12.350Z",
+                  "startTime": "2026-10-25T20:50:35.193Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2157,15 +1738,15 @@
               "projectName": "reduced-motion",
               "results": [
                 {
-                  "workerIndex": 14,
-                  "parallelIndex": 3,
+                  "workerIndex": 12,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 615,
+                  "duration": 478,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:12.408Z",
+                  "startTime": "2026-10-25T20:50:35.780Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2194,12 +1775,12 @@
                   "workerIndex": 11,
                   "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 384,
+                  "duration": 477,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:34:12.588Z",
+                  "startTime": "2026-10-25T20:50:35.787Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -2217,11 +1798,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-25T19:33:59.051Z",
-    "duration": 14761.052,
-    "expected": 40,
+    "startTime": "2026-10-25T20:50:26.450Z",
+    "duration": 10819.95,
+    "expected": 34,
     "skipped": 8,
-    "unexpected": 3,
+    "unexpected": 0,
     "flaky": 0
   }
 }

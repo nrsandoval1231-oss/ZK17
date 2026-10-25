@@ -126,12 +126,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1289,
+                  "duration": 1520,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:26.964Z",
+                  "startTime": "2026-10-25T20:50:38.911Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -160,12 +160,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 4716,
+                  "duration": 4003,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:26.980Z",
+                  "startTime": "2026-10-25T20:50:38.895Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -194,12 +194,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 679,
+                  "duration": 803,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:26.993Z",
+                  "startTime": "2026-10-25T20:50:38.876Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -209,7 +209,7 @@
           ],
           "id": "41922fa1b760a3f76b44-9c6f7f9864a2ae6c88dd",
           "file": "arcade.spec.ts",
-          "line": 40,
+          "line": 35,
           "column": 5
         },
         {
@@ -224,7 +224,7 @@
                   "type": "skip",
                   "location": {
                     "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                    "line": 62,
+                    "line": 57,
                     "column": 58
                   }
                 }
@@ -237,18 +237,18 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "skipped",
-                  "duration": 322,
+                  "duration": 326,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:27.019Z",
+                  "startTime": "2026-10-25T20:50:38.905Z",
                   "annotations": [
                     {
                       "type": "skip",
                       "location": {
                         "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                        "line": 62,
+                        "line": 57,
                         "column": 58
                       }
                     }
@@ -261,7 +261,7 @@
           ],
           "id": "41922fa1b760a3f76b44-a6b832946cad2abb4218",
           "file": "arcade.spec.ts",
-          "line": 61,
+          "line": 56,
           "column": 5
         },
         {
@@ -276,7 +276,7 @@
                   "type": "skip",
                   "location": {
                     "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                    "line": 78,
+                    "line": 73,
                     "column": 58
                   }
                 }
@@ -289,18 +289,18 @@
                   "workerIndex": 4,
                   "parallelIndex": 4,
                   "status": "skipped",
-                  "duration": 322,
+                  "duration": 319,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:27.014Z",
+                  "startTime": "2026-10-25T20:50:38.842Z",
                   "annotations": [
                     {
                       "type": "skip",
                       "location": {
                         "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
-                        "line": 78,
+                        "line": 73,
                         "column": 58
                       }
                     }
@@ -313,117 +313,7 @@
           ],
           "id": "41922fa1b760a3f76b44-a22bab408cde9980c926",
           "file": "arcade.spec.ts",
-          "line": 77,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "football-game.spec.ts",
-      "file": "football-game.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "passing game starts, accepts a real throw, advances, pauses, restarts, and exits",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mobile-webkit",
-              "projectName": "mobile-webkit",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "parallelIndex": 4,
-                  "status": "passed",
-                  "duration": 12735,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:36:27.412Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-78ddad01285207778967",
-          "file": "football-game.spec.ts",
-          "line": 2,
-          "column": 5
-        },
-        {
-          "title": "phone game controls remain inside the viewport and title is renamed",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mobile-webkit",
-              "projectName": "mobile-webkit",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
-                  "status": "passed",
-                  "duration": 1880,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:36:27.414Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-b4018b0515125d141931",
-          "file": "football-game.spec.ts",
-          "line": 10,
-          "column": 5
-        },
-        {
-          "title": "field keyboard controls, hidden pause, and scroll-lock cleanup work",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "mobile-webkit",
-              "projectName": "mobile-webkit",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "parallelIndex": 2,
-                  "status": "passed",
-                  "duration": 7490,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-25T19:36:27.763Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e39fc1866e2e2c989e54-f2af658d8102e70f1697",
-          "file": "football-game.spec.ts",
-          "line": 14,
+          "line": 72,
           "column": 5
         }
       ]
@@ -447,15 +337,15 @@
               "projectName": "mobile-webkit",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 463,
+                  "duration": 973,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:28.399Z",
+                  "startTime": "2026-10-25T20:50:39.282Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -481,15 +371,15 @@
               "projectName": "mobile-webkit",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 510,
+                  "duration": 871,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:28.870Z",
+                  "startTime": "2026-10-25T20:50:39.369Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -515,15 +405,15 @@
               "projectName": "mobile-webkit",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 2813,
+                  "duration": 1965,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:29.345Z",
+                  "startTime": "2026-10-25T20:50:39.832Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -549,15 +439,15 @@
               "projectName": "mobile-webkit",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 3244,
+                  "duration": 1355,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:29.387Z",
+                  "startTime": "2026-10-25T20:50:40.269Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -592,15 +482,15 @@
               "projectName": "mobile-webkit",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
                   "status": "skipped",
-                  "duration": 241,
+                  "duration": 247,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:31.966Z",
+                  "startTime": "2026-10-25T20:50:40.264Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -644,15 +534,15 @@
               "projectName": "mobile-webkit",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
                   "status": "skipped",
-                  "duration": 251,
+                  "duration": 375,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:32.175Z",
+                  "startTime": "2026-10-25T20:50:40.526Z",
                   "annotations": [
                     {
                       "type": "skip",
@@ -687,15 +577,15 @@
               "projectName": "mobile-webkit",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2225,
+                  "duration": 2192,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:32.238Z",
+                  "startTime": "2026-10-25T20:50:40.569Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -721,15 +611,15 @@
               "projectName": "mobile-webkit",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 2062,
+                  "duration": 1660,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:32.460Z",
+                  "startTime": "2026-10-25T20:50:40.908Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -755,15 +645,15 @@
               "projectName": "mobile-webkit",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1362,
+                  "duration": 980,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-25T19:36:32.647Z",
+                  "startTime": "2026-10-25T20:50:41.644Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -781,9 +671,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-25T19:36:26.580Z",
-    "duration": 13850.061,
-    "expected": 13,
+    "startTime": "2026-10-25T20:50:38.418Z",
+    "duration": 4655.762,
+    "expected": 10,
     "skipped": 4,
     "unexpected": 0,
     "flaky": 0

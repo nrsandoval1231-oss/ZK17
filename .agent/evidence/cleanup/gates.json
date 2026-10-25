@@ -1,0 +1,28 @@
+{
+  "startedUtc": "2026-10-25T20:48:07.8270963Z",
+  "finishedUtc": "2026-10-25T20:48:46.2761543Z",
+  "removedArtifactFileScan": "PASS",
+  "checks": [
+    {
+      "seconds": 32.5753591,
+      "name": "build",
+      "exitCode": 0
+    },
+    {
+      "seconds": 2.018261,
+      "name": "typecheck",
+      "exitCode": 0
+    },
+    {
+      "seconds": 3.0410578,
+      "name": "lint",
+      "exitCode": 0
+    },
+    {
+      "seconds": 0.8070723,
+      "name": "test",
+      "exitCode": 0
+    }
+  ],
+  "referenceScan": "PASS"
+}
