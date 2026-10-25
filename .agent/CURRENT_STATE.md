@@ -1,7 +1,10 @@
 # Current task
 
-Branch: main. Owner supplied the top three TV shows, movies and games for the personal-interest scene. Replace Music with TV Shows, show Games/Movies/TV Shows, and open each ranked list directly on category activation. Preserve the ZEPHYR KREYE title, artwork, site behavior, and prior cleanup.
+Owner-supplied top-three update [DONE]. Branch main; deployed application source f24c1a98e3d51d53b797a1ed646834d515a194ed. TV Shows replaces Music; Games, Movies and TV Shows open their ranked lists directly. Owner order retained; Berserk, A Bronx Tale and The Last of Us use normalized title spellings. Native button activation and Back/Escape focus restoration verified.
 
-Content spelling is normalized to Berserk, A Bronx Tale and The Last of Us. Supplied order is retained. The scope is a small, reversible content/interaction update handled directly; no new system or dependency. Native buttons, ranked lists and focus restoration replace the two-step category selection flow. Existing Press Start remains available.
+Production build, TypeScript, lint and 14 unit tests pass. Chromium 34 and WebKit 10 browser tests pass, with 12 intentional project skips. Local and deployed six-viewport checks pass for all 18 category views, with no Axe violations, overflow or runtime errors. All 91 deployed assets match local hashes. Small reversible update handled directly with self-review; no independent critic claim.
 
-Next: production build/type/lint/unit checks, desktop/mobile interaction and accessibility checks, then push and verify the review preview. No final public release.
+Review preview: https://02aac211.zk17-review.pages.dev/#offfield-personal
+Evidence: .agent/evidence/interests/receipt.json
+
+Remaining owner gates: original photography and usage rights, approved social and representative destinations, film, verified statistics, domain and final public approval. No final public promotion. Application deployment stays frozen; subsequent receipt-only commits do not require redeployment.

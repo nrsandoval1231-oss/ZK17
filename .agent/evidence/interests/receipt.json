@@ -1,0 +1,24 @@
+{
+  "sourceCandidate": "f24c1a98e3d51d53b797a1ed646834d515a194ed",
+  "project": "zk17-review",
+  "branch": "review",
+  "environment": "preview",
+  "status": "success",
+  "immutableURL": "https://02aac211.zk17-review.pages.dev",
+  "deploymentID": "02aac211-c876-4501-aa05-d592a34480ed",
+  "previewURL": "https://02aac211.zk17-review.pages.dev/#offfield-personal",
+  "sharedAliasURL": "https://review.zk17-review.pages.dev/?v=top-three#offfield-personal",
+  "verifiedUtc": "2026-10-25T22:10:32.454Z",
+  "commitDirty": false,
+  "remoteAssetProof": {
+    "filesChecked": 91,
+    "mismatches": 0
+  },
+  "browserProof": ".agent/evidence/interests/browser.json",
+  "browserViewports": 6,
+  "categories": "Games, Movies and TV Shows directly open owner-supplied ranked top-three lists.",
+  "review": "Direct lead implementation and self-review for a small reversible content and interaction update.",
+  "limitations": [
+    "No final public release. Original media, rights, approved social and representative destinations, and release approval remain pending."
+  ]
+}

@@ -12,3 +12,5 @@ Current owner revision [DONE]: uniform inline categories, retained athlete-name 
 
 ZK-09: approved social/NIL destinations [EXTERNAL / OWNER CONTENT].
 ZK-05: original media/rights, remaining content, domain and final public approval [EXTERNAL / OPEN]. No final public promotion.
+
+Owner-supplied favorites [DONE]: Games, Movies and TV Shows directly display ranked top-three lists. Build, checks, desktop/mobile accessibility and deployed asset/browser verification pass. Review preview 02aac211; evidence in .agent/evidence/interests/.
