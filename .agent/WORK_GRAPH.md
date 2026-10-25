@@ -1,4 +1,7 @@
 # Work graph
-ZK-01 design through ZK-04 reviewpreview [DONE]. ZK-06 canonicalasset integration [DONE; prioraccompanyingtext rule superseded byowner]. ZK-07 removelegacywordmarks [DONE], independentPASS at fc060a9712eb7a5dba19a781dafab8817af14ca4, previewdeployed/livevalidated.
+ZK-01 through ZK-04 initial site and review preview [DONE]. ZK-06/07 canonical-only logo [DONE].
+ZK-08 two-world composition and NIL/social UI [DONE; Sol PASS at f2fab3d1e0585cf491eeba1231eacb2bec388b3e; deployed runtime verified].
+ZK-09 activate owner-approved social URLs and NIL representative destination [EXTERNAL / WAITING FOR CONTENT].
+ZK-05 original media/rights, remaining approved content, public domain and final owner approval [EXTERNAL / OPEN].
 
-ZK-05 finaloriginalmedia/rights/content/domain/ownerapproval [EXTERNAL/OPEN]. No finalpublicpromotion. Finalhandoff commit contains only documentation/evidence; runtimeremains accepted/deployed application candidate.
+Source integration preserves concurrent docs/APPAREL.md without runtime change. Final handoff is documentation/evidence only; no runtime redeployment needed for bookkeeping. Final public promotion remains unauthorized.

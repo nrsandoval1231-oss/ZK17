@@ -1,0 +1,7 @@
+# ZK-08 bounded outcome
+STATE: existing eight-scene site, owner requests paired portrait interpretation, socials and NIL inquiries. Approved destinations absent.
+DECISION: use unchanged authentic preview crops in a distinctive diptych, real internal navigation and typed public contact gates; never invent account/email values.
+ACTION: one Luna built, parent reran deterministic gates and batched responsive captures. One CSS layout repair separated closing logo/photo cells. QA utility changed immediate media-change assertion to a polling assertion; requirement unchanged. Sol independently accepted exact runtime candidate.
+OUTCOME:14 unit tests and30 browser checks pass,6 intentional skips; three deployed viewport probes no errors/overflow/alternate logos;79 files match reviewed export; mobile lab97 performance/100 accessibility. NIL/social activation remains owner-dependent.
+LESSON: reserve layout space for growing footer content, rather than percentage-based overlapping art. Named metric: photo/logo rectangle overlap ->0 across1440/390/412; final captions visible. Validate through screenshots plus geometry assertion; reversible through ordinary component/CSS changes. This promotes a repository-specific rule, not a model speedup claim. Concurrent docs-only remote work preserved by normal merge, no force push.
+NEXT: owner supplies public social URLs and representative destination; integrate through existing typed gates and revalidate actual links. Matching original portrait shoot and final public approval remain external.

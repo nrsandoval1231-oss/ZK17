@@ -60,5 +60,16 @@
   "tokens": "UNKNOWN",
   "planningBuildAuditDurations": "UNKNOWN unless individually sampled",
   "logs": "Raw gzip preserved; text logs normalize whitespace only",
-  "finalPublicRelease": "NOT AUTHORIZED"
+  "finalPublicRelease": "NOT AUTHORIZED",
+  "auditDurationSeconds": 18,
+  "elapsedToIndependentApplicationAcceptanceSeconds": 1275,
+  "elapsedScope": "From sampled scoped start16:12:21Z to Sol application PASS16:33:36Z",
+  "liveAssetMatches": 79,
+  "lighthouse": {
+    "performance": 97,
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 69
+  },
+  "deployedRuntime": "deployment-receipt.json"
 }

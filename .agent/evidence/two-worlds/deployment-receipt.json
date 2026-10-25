@@ -1,0 +1,33 @@
+{
+  "sourceCandidate": "f2fab3d1e0585cf491eeba1231eacb2bec388b3e",
+  "runtimeEquivalentMerge": "885c20ad1e77eee8e3a0a8222f3da3abaf078983",
+  "preservedConcurrentCommit": "39ce31b",
+  "concurrentChanges": "docs/APPAREL.md only; normal merge, no force push",
+  "previewURL": "https://review.zk17-review.pages.dev/#off-field",
+  "immutableURL": "https://02b9e2d5.zk17-review.pages.dev",
+  "deploymentID": "02b9e2d5-4248-463c-926a-84e280db574b",
+  "environment": "preview",
+  "branch": "review",
+  "commitDirty": false,
+  "verifiedUtc": "2026-10-25T16:35:05.035Z",
+  "remoteFiles": 79,
+  "mismatches": 0,
+  "lighthouse": {
+    "fetchTime": "2026-10-25T16:35:48.060Z",
+    "scores": {
+      "performance": 97,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 69
+    },
+    "profile": "Mobile simulated lab; not field metrics",
+    "seoFailure": "Intentional noindex only",
+    "lcpSeconds": 2.012305,
+    "cls": 0.06442813327426446
+  },
+  "manualAliasProof": "Off Field navigation shows paired authentic photos; at390px NIL inquiry link reaches actual LETS TALK NIL area; viewport reset and photo section left open",
+  "socialActivation": "OPEN: owner profile URLs not supplied",
+  "nilActivation": "OPEN: owner-approved public representative destination not supplied",
+  "matchingPortraitOriginals": "OPEN; current labeled preview crops used unchanged",
+  "finalPublicRelease": "NOT AUTHORIZED"
+}
