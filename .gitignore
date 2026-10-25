@@ -1,0 +1,9 @@
+node_modules/
+.next/
+out/
+.env*
+*.tsbuildinfo
+.wrangler/
+test-results/
+playwright-report/
+.impeccable/review/

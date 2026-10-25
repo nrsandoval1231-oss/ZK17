@@ -1,0 +1,20 @@
+{
+  "lane": "full",
+  "controller_model": "UNKNOWN - runtime identity not independently introspected",
+  "builder_model": "gpt-6-luna low (named agent role)",
+  "tribunal": {
+    "luna": "completed",
+    "terra": "completed",
+    "sol_direction": "PROCEED"
+  },
+  "planning_start_utc": "UNKNOWN",
+  "planning_finish_utc": "UNKNOWN",
+  "build_start_utc": "see COMPLETION.json",
+  "build_finish_utc": "PENDING",
+  "validation_duration": "PENDING",
+  "audit_duration": "PENDING",
+  "repair_count": 0,
+  "tokens": "UNKNOWN - no per-agent token meter supplied",
+  "config_identity": "role tool declarations; no global config-load claim",
+  "elapsed_to_accepted": "UNKNOWN until independent acceptance"
+}

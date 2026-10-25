@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "arrival",
+    "time": "08_56_00",
+    "crop": {
+      "left": 0,
+      "top": 270,
+      "width": 706,
+      "height": 690
+    },
+    "alt": "Zephyr Kreye wearing number 17 in a black uniform and helmet, photographed in black and white.",
+    "focal": "43% 32%",
+    "sourceName": "ChatGPT Image Oct 25, 2026, 08_56_00 AM.jpg",
+    "sourceSha256": "922d6be9e2b45d922665beada1593ad7a3f904682487d5e238e7defd306564c4",
+    "usage": "preview-only",
+    "rights": "pending",
+    "outputs": [
+      "/media/arrival-360.avif",
+      "/media/arrival-360.webp",
+      "/media/arrival-540.avif",
+      "/media/arrival-540.webp",
+      "/media/arrival-706.avif",
+      "/media/arrival-706.webp"
+    ]
+  },
+  {
+    "slug": "on-field",
+    "time": "08_55_49",
+    "crop": {
+      "left": 0,
+      "top": 300,
+      "width": 706,
+      "height": 750
+    },
+    "alt": "Zephyr Kreye, number 17 in a black uniform, preparing to throw during a football game.",
+    "focal": "50% 53%",
+    "sourceName": "ChatGPT Image Oct 25, 2026, 08_55_49 AM.jpg",
+    "sourceSha256": "2e454d84056a98e7c5f84176f25b75d68644c0c32a59577f1d602aa5c4633a08",
+    "usage": "preview-only",
+    "rights": "pending",
+    "outputs": [
+      "/media/on-field-360.avif",
+      "/media/on-field-360.webp",
+      "/media/on-field-540.avif",
+      "/media/on-field-540.webp",
+      "/media/on-field-706.avif",
+      "/media/on-field-706.webp"
+    ]
+  },
+  {
+    "slug": "portrait",
+    "time": "08_55_58",
+    "crop": {
+      "left": 0,
+      "top": 300,
+      "width": 706,
+      "height": 740
+    },
+    "alt": "Zephyr Kreye seated on the sideline in his number 17 black uniform.",
+    "focal": "51% 36%",
+    "sourceName": "ChatGPT Image Oct 25, 2026, 08_55_58 AM.jpg",
+    "sourceSha256": "f2746d74b3b940a86fb10ee7536eea856765af5c96a70887d47f1da4a1ff4e5e",
+    "usage": "preview-only",
+    "rights": "pending",
+    "outputs": [
+      "/media/portrait-360.avif",
+      "/media/portrait-360.webp",
+      "/media/portrait-540.avif",
+      "/media/portrait-540.webp",
+      "/media/portrait-706.avif",
+      "/media/portrait-706.webp"
+    ]
+  },
+  {
+    "slug": "throwing",
+    "time": "08_55_38",
+    "crop": {
+      "left": 0,
+      "top": 270,
+      "width": 706,
+      "height": 730
+    },
+    "alt": "Zephyr Kreye viewed from behind, wearing a purple number 17 uniform and preparing to throw.",
+    "focal": "50% 40%",
+    "sourceName": "ChatGPT Image Oct 25, 2026, 08_55_38 AM.jpg",
+    "sourceSha256": "1bb1e281e51fc3584827368a515aeaceb67cfa373acefc43513a0f1ada82911d",
+    "usage": "preview-only",
+    "rights": "pending",
+    "outputs": [
+      "/media/throwing-360.avif",
+      "/media/throwing-360.webp",
+      "/media/throwing-540.avif",
+      "/media/throwing-540.webp",
+      "/media/throwing-706.avif",
+      "/media/throwing-706.webp"
+    ]
+  },
+  {
+    "slug": "running",
+    "time": "08_56_03",
+    "crop": {
+      "left": 0,
+      "top": 280,
+      "width": 706,
+      "height": 620
+    },
+    "alt": "Zephyr Kreye carrying the football in a purple uniform.",
+    "focal": "49% 62%",
+    "sourceName": "ChatGPT Image Oct 25, 2026, 08_56_03 AM.jpg",
+    "sourceSha256": "e2b75448b5864c6df555a2116be3877de96c420df9ab843f93a724620b59c5dc",
+    "usage": "preview-only",
+    "rights": "pending",
+    "outputs": [
+      "/media/running-360.avif",
+      "/media/running-360.webp",
+      "/media/running-540.avif",
+      "/media/running-540.webp",
+      "/media/running-706.avif",
+      "/media/running-706.webp"
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "objective": "ZK-02 complete eight-scene responsive static website",
+  "changedFiles": [
+    ".agent/COMPLETION.json", ".gitignore", "README.md", "app/globals.css", "app/layout.tsx", "app/page.tsx",
+    "components/site-experience.tsx", "content/site.ts", "eslint.config.mjs", "next-env.d.ts",
+    "next.config.js", "package-lock.json", "package.json", "playwright.config.ts", "postcss.config.mjs",
+    "public/_headers", "public/favicon.svg", "public/og-zk17.png", "public/robots.txt",
+    "scripts/generate-og.mjs", "scripts/optimize-media.mjs", "scripts/release-check.mjs",
+    "scripts/serve-static.mjs", "tests/content.test.ts", "tests/e2e/site.spec.ts", "tsconfig.json"
+  ],
+  "commands": [
+    { "command": "npm run typecheck", "exitCode": 0, "result": "Passed." },
+    { "command": "npm run lint", "exitCode": 0, "result": "Passed." },
+    { "command": "npm test", "exitCode": 0, "result": "3 content eligibility tests passed." },
+    { "command": "npm run build", "exitCode": 0, "result": "Prebuild release guard passed in preview mode; Next.js 16.4.3 generated the static export in out/." },
+    { "command": "npm audit --omit=dev", "exitCode": 0, "result": "0 production dependency vulnerabilities." },
+    { "command": "npm run e2e -- --list", "exitCode": 0, "result": "Playwright discovered 21 tests across desktop Chromium, mobile Chromium, and reduced motion. The browser suite itself was not run; parent owns browser QA." },
+    { "command": "PUBLIC_RELEASE=true node scripts/release-check.mjs", "exitCode": 1, "result": "Correctly blocked release while PREVIEW_MEDIA_MODE defaults enabled." },
+    { "command": "node --check scripts/optimize-media.mjs; node --check scripts/generate-og.mjs; node --check scripts/serve-static.mjs", "exitCode": 0, "result": "All utility scripts passed syntax checks." }
+  ],
+  "startedUtc": "UNKNOWN; start was not recorded contemporaneously.",
+  "finishedUtc": "2026-10-25T14:16:17Z",
+  "configurationIdentity": "ZK-02 packet on main, initial repository had no commit; Node 24.21.0, npm 11.19.0, Next.js 16.4.3 with webpack static export, React 19, TypeScript, Tailwind CSS 4, GSAP ScrollTrigger, Playwright.",
+  "limitations": [
+    "The five owner-approved crops are preview-only and visibly labeled PREVIEW CROP · ORIGINAL PENDING; their rights remain pending and they cannot enter the approved public media gate.",
+    "No original photos or video sources were available. The browser suite and visual QA are reserved for the parent ZK-03 lane.",
+    "No canonical public URL or final public-release approval was supplied. The export remains noindex and robots-disallowed.",
+    "No push, merge, deploy, or external action was performed."
+  ]
+}
+
