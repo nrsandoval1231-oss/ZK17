@@ -1,0 +1,649 @@
+{
+  "origin": "http://127.0.0.1:3100",
+  "startedUtc": "2026-10-25T22:05:53.299Z",
+  "checks": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "height": 780,
+      "categories": [
+        {
+          "category": "Games",
+          "titles": [
+            "Madden",
+            "GTA 6",
+            "The Last of Us"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 218,
+            "scrollWidth": 218
+          }
+        },
+        {
+          "category": "Movies",
+          "titles": [
+            "A Bronx Tale",
+            "Interstellar",
+            "Step Brothers"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 218,
+            "scrollWidth": 218
+          }
+        },
+        {
+          "category": "TV Shows",
+          "titles": [
+            "Berserk",
+            "Attack on Titan",
+            "Demon Slayer"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 218,
+            "scrollWidth": 218
+          }
+        }
+      ],
+      "directActivation": "PASS",
+      "focusRestoration": "PASS",
+      "geometry": {
+        "root": {
+          "x": 24,
+          "y": 64.265625,
+          "width": 272,
+          "height": 743.1875,
+          "top": 64.265625,
+          "right": 296,
+          "bottom": 807.453125,
+          "left": 24
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 51,
+            "y": 470.453125,
+            "width": 218,
+            "height": 50,
+            "top": 470.453125,
+            "right": 269,
+            "bottom": 520.453125,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 522.453125,
+            "width": 218,
+            "height": 50,
+            "top": 522.453125,
+            "right": 269,
+            "bottom": 572.453125,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 574.453125,
+            "width": 218,
+            "height": 50,
+            "top": 574.453125,
+            "right": 269,
+            "bottom": 624.453125,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 682.453125,
+            "width": 218,
+            "height": 54,
+            "top": 682.453125,
+            "right": 269,
+            "bottom": 736.453125,
+            "left": 51
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "categories": [
+        {
+          "category": "Games",
+          "titles": [
+            "Madden",
+            "GTA 6",
+            "The Last of Us"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 288,
+            "scrollWidth": 288
+          }
+        },
+        {
+          "category": "Movies",
+          "titles": [
+            "A Bronx Tale",
+            "Interstellar",
+            "Step Brothers"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 288,
+            "scrollWidth": 288
+          }
+        },
+        {
+          "category": "TV Shows",
+          "titles": [
+            "Berserk",
+            "Attack on Titan",
+            "Demon Slayer"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 288,
+            "scrollWidth": 288
+          }
+        }
+      ],
+      "directActivation": "PASS",
+      "focusRestoration": "PASS",
+      "geometry": {
+        "root": {
+          "x": 24,
+          "y": 63.90625,
+          "width": 342,
+          "height": 758.890625,
+          "top": 63.90625,
+          "right": 366,
+          "bottom": 822.796875,
+          "left": 24
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 51,
+            "y": 485.796875,
+            "width": 288,
+            "height": 50,
+            "top": 485.796875,
+            "right": 339,
+            "bottom": 535.796875,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 537.796875,
+            "width": 288,
+            "height": 50,
+            "top": 537.796875,
+            "right": 339,
+            "bottom": 587.796875,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 589.796875,
+            "width": 288,
+            "height": 50,
+            "top": 589.796875,
+            "right": 339,
+            "bottom": 639.796875,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 697.796875,
+            "width": 288,
+            "height": 54,
+            "top": 697.796875,
+            "right": 339,
+            "bottom": 751.796875,
+            "left": 51
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 412,
+      "height": 915,
+      "categories": [
+        {
+          "category": "Games",
+          "titles": [
+            "Madden",
+            "GTA 6",
+            "The Last of Us"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 310,
+            "scrollWidth": 310
+          }
+        },
+        {
+          "category": "Movies",
+          "titles": [
+            "A Bronx Tale",
+            "Interstellar",
+            "Step Brothers"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 310,
+            "scrollWidth": 310
+          }
+        },
+        {
+          "category": "TV Shows",
+          "titles": [
+            "Berserk",
+            "Attack on Titan",
+            "Demon Slayer"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 310,
+            "scrollWidth": 310
+          }
+        }
+      ],
+      "directActivation": "PASS",
+      "focusRestoration": "PASS",
+      "geometry": {
+        "root": {
+          "x": 24,
+          "y": 64.40625,
+          "width": 364,
+          "height": 760.984375,
+          "top": 64.40625,
+          "right": 388,
+          "bottom": 825.390625,
+          "left": 24
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 51,
+            "y": 488.390625,
+            "width": 310,
+            "height": 50,
+            "top": 488.390625,
+            "right": 361,
+            "bottom": 538.390625,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 540.390625,
+            "width": 310,
+            "height": 50,
+            "top": 540.390625,
+            "right": 361,
+            "bottom": 590.390625,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 592.390625,
+            "width": 310,
+            "height": 50,
+            "top": 592.390625,
+            "right": 361,
+            "bottom": 642.390625,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 700.390625,
+            "width": 310,
+            "height": 54,
+            "top": 700.390625,
+            "right": 361,
+            "bottom": 754.390625,
+            "left": 51
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "height": 1024,
+      "categories": [
+        {
+          "category": "Games",
+          "titles": [
+            "Madden",
+            "GTA 6",
+            "The Last of Us"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 570,
+            "scrollWidth": 570
+          }
+        },
+        {
+          "category": "Movies",
+          "titles": [
+            "A Bronx Tale",
+            "Interstellar",
+            "Step Brothers"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 570,
+            "scrollWidth": 570
+          }
+        },
+        {
+          "category": "TV Shows",
+          "titles": [
+            "Berserk",
+            "Attack on Titan",
+            "Demon Slayer"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 570,
+            "scrollWidth": 570
+          }
+        }
+      ],
+      "directActivation": "PASS",
+      "focusRestoration": "PASS",
+      "geometry": {
+        "root": {
+          "x": 53.75,
+          "y": 63.984375,
+          "width": 660.5,
+          "height": 835.03125,
+          "top": 63.984375,
+          "right": 714.25,
+          "bottom": 899.015625,
+          "left": 53.75
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 181.5,
+            "y": 534.609375,
+            "width": 405,
+            "height": 48,
+            "top": 534.609375,
+            "right": 586.5,
+            "bottom": 582.609375,
+            "left": 181.5
+          },
+          {
+            "x": 181.5,
+            "y": 584.609375,
+            "width": 405,
+            "height": 48,
+            "top": 584.609375,
+            "right": 586.5,
+            "bottom": 632.609375,
+            "left": 181.5
+          },
+          {
+            "x": 181.5,
+            "y": 634.609375,
+            "width": 405,
+            "height": 48,
+            "top": 634.609375,
+            "right": 586.5,
+            "bottom": 682.609375,
+            "left": 181.5
+          },
+          {
+            "x": 209,
+            "y": 744.609375,
+            "width": 350,
+            "height": 56,
+            "top": 744.609375,
+            "right": 559,
+            "bottom": 800.609375,
+            "left": 209
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "height": 720,
+      "categories": [
+        {
+          "category": "Games",
+          "titles": [
+            "Madden",
+            "GTA 6",
+            "The Last of Us"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 620,
+            "scrollWidth": 620
+          }
+        },
+        {
+          "category": "Movies",
+          "titles": [
+            "A Bronx Tale",
+            "Interstellar",
+            "Step Brothers"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 620,
+            "scrollWidth": 620
+          }
+        },
+        {
+          "category": "TV Shows",
+          "titles": [
+            "Berserk",
+            "Attack on Titan",
+            "Demon Slayer"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 620,
+            "scrollWidth": 620
+          }
+        }
+      ],
+      "directActivation": "PASS",
+      "focusRestoration": "PASS",
+      "geometry": {
+        "root": {
+          "x": 115.1875,
+          "y": -210.125,
+          "width": 1049.625,
+          "height": 930.03125,
+          "top": -210.125,
+          "right": 1164.8125,
+          "bottom": 719.90625,
+          "left": 115.1875
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 437.5,
+            "y": 339.90625,
+            "width": 405,
+            "height": 48,
+            "top": 339.90625,
+            "right": 842.5,
+            "bottom": 387.90625,
+            "left": 437.5
+          },
+          {
+            "x": 437.5,
+            "y": 389.90625,
+            "width": 405,
+            "height": 48,
+            "top": 389.90625,
+            "right": 842.5,
+            "bottom": 437.90625,
+            "left": 437.5
+          },
+          {
+            "x": 437.5,
+            "y": 439.90625,
+            "width": 405,
+            "height": 48,
+            "top": 439.90625,
+            "right": 842.5,
+            "bottom": 487.90625,
+            "left": 437.5
+          },
+          {
+            "x": 465,
+            "y": 549.90625,
+            "width": 350,
+            "height": 56,
+            "top": 549.90625,
+            "right": 815,
+            "bottom": 605.90625,
+            "left": 465
+          }
+        ]
+      },
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "categories": [
+        {
+          "category": "Games",
+          "titles": [
+            "Madden",
+            "GTA 6",
+            "The Last of Us"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 288,
+            "scrollWidth": 288
+          }
+        },
+        {
+          "category": "Movies",
+          "titles": [
+            "A Bronx Tale",
+            "Interstellar",
+            "Step Brothers"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 288,
+            "scrollWidth": 288
+          }
+        },
+        {
+          "category": "TV Shows",
+          "titles": [
+            "Berserk",
+            "Attack on Titan",
+            "Demon Slayer"
+          ],
+          "rankedList": "PASS",
+          "axeViolations": 0,
+          "layout": {
+            "width": 288,
+            "scrollWidth": 288
+          }
+        }
+      ],
+      "directActivation": "PASS",
+      "focusRestoration": "PASS",
+      "geometry": {
+        "root": {
+          "x": 24,
+          "y": 64.90625,
+          "width": 342,
+          "height": 758.46875,
+          "top": 64.90625,
+          "right": 366,
+          "bottom": 823.375,
+          "left": 24
+        },
+        "overflow": 0,
+        "buttons": [
+          {
+            "x": 51,
+            "y": 486.375,
+            "width": 288,
+            "height": 50,
+            "top": 486.375,
+            "right": 339,
+            "bottom": 536.375,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 538.375,
+            "width": 288,
+            "height": 50,
+            "top": 538.375,
+            "right": 339,
+            "bottom": 588.375,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 590.375,
+            "width": 288,
+            "height": 50,
+            "top": 590.375,
+            "right": 339,
+            "bottom": 640.375,
+            "left": 51
+          },
+          {
+            "x": 51,
+            "y": 698.375,
+            "width": 288,
+            "height": 54,
+            "top": 698.375,
+            "right": 339,
+            "bottom": 752.375,
+            "left": 51
+          }
+        ]
+      },
+      "errors": []
+    }
+  ],
+  "finishedUtc": "2026-10-25T22:06:10.872Z"
+}

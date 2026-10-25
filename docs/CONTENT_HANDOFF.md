@@ -8,7 +8,7 @@ Update typed content in content/site.ts. Public eligibility is an affirmative ga
 | Highlight | Approved source and rights, title, season, optional verified opponent/game/date, captions/transcript |
 | Statistics | Season, game count, source, date, verification and publish approval |
 | Milestone/offer | Confirmed event/date, reliable source, explicit publish flag |
-| Gaming/movies/music | Zephyr-selected content; do not infer from Instagram music choices |
+| Games/movies/TV shows | Owner supplied the current top three in each category; further changes need owner approval |
 | Social | Each owner-approved HTTPS profile URL; no profile is inferred or linked when the list is empty |
 | NIL/business contact | Owner-approved parent/representative email or HTTPS contact URL, with source, date, verification, and publication approval |
 | Partnership | Verified and approved public association |

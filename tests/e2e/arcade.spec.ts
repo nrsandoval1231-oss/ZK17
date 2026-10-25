@@ -1,34 +1,42 @@
 import { test, expect } from '@playwright/test';
 
-test('arcade selection, start, Escape, and back restore focus', async ({ page }) => {
+test('category buttons and Press Start open picks and restore keyboard focus', async ({ page }) => {
   await page.goto('/#offfield-personal');
-  await page.getByRole('radio', { name: 'Gaming' }).focus();
-  await page.keyboard.press('ArrowDown');
-  const movies = page.getByRole('radio', { name: 'Movies' });
-  await expect(movies).toBeChecked();
+  const root = page.locator('#offfield-personal');
+  await root.getByRole('button', { name: 'Games', exact: true }).focus();
+  await page.keyboard.press('Tab');
+  const movies = root.getByRole('button', { name: 'Movies', exact: true });
+  await expect(movies).toBeFocused();
   await page.keyboard.press('Enter');
-  await expect(page.locator('#offfield-personal').getByRole('heading', { name: 'ZEPHYR KREYE', exact: true })).toBeVisible();
-  await expect(page.getByText('Movies details are coming soon.')).toBeVisible();
-  const back = page.getByRole('button', { name: 'BACK TO MENU' });
+  await expect(root.getByText('Interstellar', { exact: true })).toBeVisible();
+  const back = root.getByRole('button', { name: 'BACK TO MENU' });
   await expect(back).toBeFocused();
   await page.keyboard.press('Escape');
-  await expect(page.getByRole('button', { name: 'PRESS START' })).toBeFocused();
-  await expect(movies).toBeChecked();
+  await expect(movies).toBeFocused();
+  await root.getByRole('button', { name: 'PRESS START' }).focus();
   await page.keyboard.press('Space');
-  await expect(page.getByText('Movies details are coming soon.')).toBeVisible();
+  await expect(root.getByText('Interstellar', { exact: true })).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(root.getByRole('button', { name: 'PRESS START' })).toBeFocused();
 });
 
-test('each world opens its truthful empty state and returns to selection', async ({ page }) => {
+test('each category opens its owner-supplied top three directly', async ({ page }) => {
   await page.goto('/#offfield-personal');
-  for (const category of ['Gaming', 'Movies', 'Music']) {
-    await page.getByText(category, { exact: true }).click();
-    await expect(page.getByRole('radio', { name: category })).toBeChecked();
-    await page.getByRole('button', { name: 'PRESS START' }).click();
-    await expect(page.getByText(`${category} details are coming soon.`)).toBeVisible();
+  const root = page.locator('#offfield-personal');
+  const picks = [
+    { category: 'Games', titles: ['Madden', 'GTA 6', 'The Last of Us'] },
+    { category: 'Movies', titles: ['A Bronx Tale', 'Interstellar', 'Step Brothers'] },
+    { category: 'TV Shows', titles: ['Berserk', 'Attack on Titan', 'Demon Slayer'] },
+  ];
+  await expect(root.getByRole('button', { name: 'Music', exact: true })).toHaveCount(0);
+  for (const { category, titles } of picks) {
+    await root.getByRole('button', { name: category, exact: true }).click();
+    const items = root.getByRole('listitem');
+    await expect(items).toHaveCount(3);
+    for (const [index, title] of titles.entries()) await expect(items.nth(index).getByText(title, { exact: true })).toBeVisible();
     await expect(page.getByRole('dialog')).toHaveCount(0);
-    await page.getByRole('button', { name: 'BACK TO MENU' }).click();
-    await expect(page.getByRole('button', { name: 'PRESS START' })).toBeFocused();
-    await expect(page.getByRole('radio', { name: category })).toBeChecked();
+    await root.getByRole('button', { name: 'BACK TO MENU' }).click();
+    await expect(root.getByRole('button', { name: category, exact: true })).toBeFocused();
   }
 });
 
@@ -38,7 +46,7 @@ test('320px arcade stays within the viewport with touch-sized controls', async (
   const geometry = await page.evaluate(() => {
     const root = document.querySelector<HTMLElement>('#offfield-personal')!;
     const cabinet = root.querySelector<HTMLElement>('[class*="cabinet"]')!;
-    const start = root.querySelector<HTMLButtonElement>('button')!;
+    const start = root.querySelector<HTMLButtonElement>('button[class*="start"]')!;
     return {
       viewport: document.documentElement.clientWidth,
       document: document.documentElement.scrollWidth,

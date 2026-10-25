@@ -5,33 +5,37 @@ import type { KeyboardEvent } from 'react';
 import type { OffFieldFeature } from '@/content/site';
 import styles from './offfield-arcade.module.css';
 
-const categories = ['Gaming', 'Movies', 'Music'] as const;
+const categories = ['Games', 'Movies', 'TV Shows'] as const;
 type Category = (typeof categories)[number];
 
 export default function OffFieldArcade({ features, athleteName }: { features: OffFieldFeature[]; athleteName: string }) {
-  const [selected, setSelected] = useState<Category>('Gaming');
+  const [selected, setSelected] = useState<Category>('Games');
   const [started, setStarted] = useState(false);
   const startRef = useRef<HTMLButtonElement>(null);
   const backRef = useRef<HTMLButtonElement>(null);
+  const choiceRefs = useRef<Partial<Record<Category, HTMLButtonElement | null>>>({});
+  const returnTarget = useRef<Category | 'start'>('start');
   const previousStarted = useRef(false);
   const featureMap = new Map(features.map((feature) => [feature.label, feature.verifiedDetails]));
-  const details = featureMap.get(selected) ?? [];
+  const details = (featureMap.get(selected) ?? []).slice(0, 3);
 
   useLayoutEffect(() => {
     if (started === previousStarted.current) return;
     previousStarted.current = started;
-    (started ? backRef.current : startRef.current)?.focus({ preventScroll: true });
+    const target = started ? backRef.current : returnTarget.current === 'start' ? startRef.current : choiceRefs.current[returnTarget.current];
+    target?.focus({ preventScroll: true });
   }, [started]);
 
-  const start = () => setStarted(true);
+  const openCategory = (category: Category, target: Category | 'start') => {
+    returnTarget.current = target;
+    setSelected(category);
+    setStarted(true);
+  };
   const back = () => setStarted(false);
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
     if (event.key === 'Escape' && started) {
       event.preventDefault();
       back();
-    } else if (!started && event.target instanceof HTMLInputElement && event.target.type === 'radio' && event.key === 'Enter') {
-      event.preventDefault();
-      start();
     }
   };
 
@@ -70,21 +74,20 @@ export default function OffFieldArcade({ features, athleteName }: { features: Of
 
               {!started ? (
                 <>
-                  <fieldset className={styles.choices} aria-label="Choose a world">
+                  <div className={styles.choices} role="group" aria-label="Choose a category">
                     {categories.map((category) => (
-                      <label className={styles.choice} key={category} data-selected={selected === category}>
-                        <input type="radio" name="offfield-world" value={category} checked={selected === category} onChange={() => setSelected(category)} />
+                      <button type="button" ref={(node) => { choiceRefs.current[category] = node; }} className={styles.choice} key={category} data-selected={selected === category} onClick={() => openCategory(category, category)}>
                         <span className={styles.pointer} aria-hidden="true"><svg viewBox="0 0 12 14"><path d="M1 1v12l10-6z" /></svg></span>
                         <span>{category}</span>
-                      </label>
+                      </button>
                     ))}
-                  </fieldset>
-                  <p className={styles.teaser}>His picks. Coming soon.</p>
-                  <button ref={startRef} className={styles.start} type="button" onClick={start}>PRESS START</button>
+                  </div>
+                  <p className={styles.teaser}>His picks. Top three.</p>
+                  <button ref={startRef} className={styles.start} type="button" onClick={() => openCategory(selected, 'start')}>PRESS START</button>
                 </>
               ) : (
                 <div className={styles.detail} aria-live="polite" aria-atomic="true">
-                  {details.length ? <ul>{details.map((detail) => <li key={detail}>{detail}</li>)}</ul> : <p>{selected} details are coming soon.</p>}
+                  {details.length ? <><p className={styles.picksLabel}>HIS TOP THREE</p><ol className={styles.picks} aria-label={`Zephyr’s top three ${selected.toLowerCase()}`} role="list">{details.map((detail, index) => <li key={detail}><span className={styles.rank} aria-hidden="true">0{index + 1}</span><span className={styles.pickTitle}>{detail}</span></li>)}</ol></> : <p>{selected} details are coming soon.</p>}
                   <button ref={backRef} type="button" className={styles.back} onClick={back}><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M16 10H4m0 0 5-5m-5 5 5 5" /></svg> BACK TO MENU</button>
                 </div>
               )}

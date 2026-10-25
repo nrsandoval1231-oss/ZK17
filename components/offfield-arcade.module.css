@@ -60,8 +60,7 @@
 .screenLabel { margin: 16px 0 0; font: 400 clamp(9px, 1.8vw, 17px)/1.5 'Press Start 2P', monospace; letter-spacing: .09em; }
 
 .choices { display: grid; gap: 2px; width: min(100%, 405px); margin: auto 0 0; padding: 0; border: 0; }
-.choice { display: grid; min-height: 48px; grid-template-columns: 26px 1fr; align-items: center; padding: 8px 12px; border: 2px solid transparent; color: #f5efff; font: 400 clamp(13px, 2vw, 17px)/1.4 'Press Start 2P', monospace; text-align: left; text-transform: uppercase; cursor: pointer; }
-.choice input { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.choice { display: grid; width: 100%; min-height: 48px; grid-template-columns: 26px 1fr; align-items: center; padding: 8px 12px; border: 2px solid transparent; background: transparent; color: #f5efff; font: 400 clamp(13px, 2vw, 17px)/1.4 'Press Start 2P', monospace; text-align: left; text-transform: uppercase; cursor: pointer; }
 .pointer { visibility: hidden; display: grid; place-items: center; color: var(--arcade-lavender); }
 .pointer svg { width: 12px; height: 14px; fill: currentColor; }
 .choice[data-selected='true'] { border-color: var(--arcade-purple); }
@@ -74,7 +73,11 @@
 .detail { display: flex; width: min(100%, 620px); min-height: 245px; flex: 1; flex-direction: column; align-items: center; justify-content: flex-end; gap: 24px; }
 .detail p, .detail li { padding: 10px 13px; border-radius: 3px; background: rgb(8 9 14 / 92%); color: #e8e1ef; font: 400 clamp(11px, 1.55vw, 15px)/1.8 var(--body); }
 .detail p { margin: 0; }
-.detail ul { margin: 0; padding-left: 1.25em; text-align: left; }
+.picks { display: grid; gap: 8px; width: 100%; margin: 0; padding: 0; list-style: none; text-align: left; }
+.detail .picks li { display: grid; grid-template-columns: 28px minmax(0, 1fr); align-items: center; gap: 12px; margin: 0; padding: 10px 14px; }
+.rank { color: var(--arcade-lavender); font: 400 10px/1.4 'Press Start 2P', monospace; }
+.pickTitle { font: 500 clamp(14px, 1.6vw, 18px)/1.4 var(--body); }
+.detail .picksLabel { margin: 0; padding: 6px 10px; color: var(--arcade-lavender); font: 600 9px/1.5 var(--body); letter-spacing: .16em; }
 .back { min-height: 48px; min-width: min(100%, 310px); background: #211632; box-shadow: 0 3px 0 #09080c; font-size: clamp(10px, 1.45vw, 13px); }
 .back svg { width: 17px; height: 17px; margin-right: 10px; fill: none; stroke: currentColor; stroke-width: 1.5; }
 .back:hover { background: #392252; }
