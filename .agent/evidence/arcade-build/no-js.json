@@ -1,23 +1,23 @@
 {
   "content": "03 / OFF FIELD\n\nA DIFFERENT\nkind of game.\nPLAYER 17\n\nSELECT A WORLD\n\nGAMING\nMOVIES\nMUSIC\n\nHis picks. Coming soon.\n\nPRESS START\n\nFOOTBALL. THEN EVERYTHING ELSE.",
   "title": {
-    "x": 702.265625,
-    "y": 738.671875,
+    "x": 343.890625,
+    "y": 931.703125,
     "width": 592.21875,
     "height": 84,
-    "top": 738.671875,
-    "right": 1294.484375,
-    "bottom": 822.671875,
-    "left": 702.265625
+    "top": 931.703125,
+    "right": 936.109375,
+    "bottom": 1015.703125,
+    "left": 343.890625
   },
   "root": {
     "x": 115.1875,
     "y": 596.875,
     "width": 1049.625,
-    "height": 769,
+    "height": 930.03125,
     "top": 596.875,
     "right": 1164.8125,
-    "bottom": 1365.875,
+    "bottom": 1526.90625,
     "left": 115.1875
   },
   "overflow": 0
