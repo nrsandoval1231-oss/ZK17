@@ -8,7 +8,7 @@ ZK-11: mobile menu refinement [DONE].
 ZK-12: phone-accessible concept [DONE].
 ZK-13: approved CRT personal-interest scene [DONE].
 
-Current owner revision [VALIDATED LOCALLY]: uniform inline category navigation, retained ZEPHYR KREYE title and original artwork, unwanted dedicated implementation and artifacts removed. Fresh build and current-tree scans pass; browser checks pass. Next: independent review, then review-preview update and remote verification.
+Current owner revision [DONE]: uniform inline categories, retained athlete-name title/artwork, unwanted dedicated implementation/artifacts removed, clean-build scans and local/remote checks pass, independent critic accepted the frozen source. Git history and historical CDN caches are outside this current-tree cleanup.
 
 ZK-09: approved social/NIL destinations [EXTERNAL / OWNER CONTENT].
 ZK-05: original media/rights, remaining content, domain and final public approval [EXTERNAL / OPEN]. No final public promotion.

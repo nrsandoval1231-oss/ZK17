@@ -1,0 +1,21 @@
+{
+  "checkedUtc": "2026-10-25T21:02:44.973Z",
+  "cleanPreview": "https://b00e81f4.zk17-review.pages.dev",
+  "retiredRoutesChecked": 2,
+  "retiredCleanStatuses": [
+    404,
+    404
+  ],
+  "sharedAliasCachedStatuses": [
+    200,
+    200
+  ],
+  "cacheNote": "Shared alias retains earlier edge-cache assets; clean immutable preview does not contain them. No unrelated cache settings or deployment history changed.",
+  "cacheDocumentation": "https://developers.cloudflare.com/pages/configuration/serving-pages/#asset-retention",
+  "screenshot": {
+    "url": "https://b00e81f4.zk17-review.pages.dev/concepts/zk17/interests-mobile-v1.webp",
+    "status": 200,
+    "matches": true
+  },
+  "aliasCategoryBehavior": "All three categories inline, no dialog, focus restored"
+}

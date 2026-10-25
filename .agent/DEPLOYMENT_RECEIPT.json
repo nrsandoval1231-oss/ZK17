@@ -1,7 +1,32 @@
 {
+  "sourceCandidate": "834343b6e6f2c4cfaa137a0917da67ebd5930b19",
   "project": "zk17-review",
   "branch": "review",
   "environment": "preview",
-  "status": "pending owner revision validation",
-  "finalPublicRelease": "NOT AUTHORIZED"
+  "status": "success",
+  "immutableURL": "https://b00e81f4.zk17-review.pages.dev",
+  "deploymentID": "b00e81f4-12bc-46b7-b9a0-374d288c160b",
+  "previewURL": "https://b00e81f4.zk17-review.pages.dev/#offfield-personal",
+  "sharedAliasURL": "https://review.zk17-review.pages.dev/?v=interests#offfield-personal",
+  "verifiedUtc": "2026-10-25T21:04:20.448Z",
+  "commitDirty": false,
+  "remoteAssetProof": {
+    "filesChecked": 91,
+    "mismatches": 0
+  },
+  "browserProof": ".agent/evidence/cleanup/browser.json",
+  "categories": "Gaming, Movies and Music open inline content; no dialog",
+  "retiredAssetsOnCleanPreview": [
+    404,
+    404
+  ],
+  "sharedAliasHistoricalAssetCache": [
+    200,
+    200
+  ],
+  "limitations": [
+    "Git history was not rewritten.",
+    "Earlier edge-cached assets may remain on the shared alias; the clean immutable preview returns404.",
+    "No final public release."
+  ]
 }
