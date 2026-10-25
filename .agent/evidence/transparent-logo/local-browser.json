@@ -1,0 +1,250 @@
+{
+  "origin": "http://127.0.0.1:3100",
+  "startedUtc": "2026-10-25T17:04:46.507Z",
+  "viewports": [
+    {
+      "name": "desktop",
+      "status": 200,
+      "errors": [],
+      "width": 1280,
+      "contentWidth": 1280,
+      "logos": [
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 40,
+          "height": 40,
+          "alt": "ZK17 sword monogram"
+        },
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 90.78125,
+          "height": 90.78125,
+          "alt": "ZK17 sword monogram"
+        },
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 34,
+          "height": 34,
+          "alt": "ZK17 sword monogram"
+        },
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 500,
+          "height": 500,
+          "alt": "ZK17 sword monogram"
+        }
+      ],
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "/favicon.png?v=2"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-touch-icon.png?v=2"
+        }
+      ],
+      "og": "https://review.zk17-review.pages.dev/og-zk17.png",
+      "legacyWordmarks": 0,
+      "brandLinkText": [
+        "",
+        ""
+      ],
+      "closingBottom": {
+        "x": 60.15625,
+        "y": 561.484375,
+        "width": 1159.6875,
+        "height": 30,
+        "top": 561.484375,
+        "right": 1219.84375,
+        "bottom": 591.484375,
+        "left": 60.15625
+      },
+      "closingFuture": {
+        "x": 480.015625,
+        "y": 870.921875,
+        "width": 319.953125,
+        "height": 10.5,
+        "top": 870.921875,
+        "right": 799.96875,
+        "bottom": 881.421875,
+        "left": 480.015625
+      }
+    },
+    {
+      "name": "mobile",
+      "status": 200,
+      "errors": [],
+      "width": 390,
+      "contentWidth": 390,
+      "logos": [
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 34,
+          "height": 34,
+          "alt": "ZK17 sword monogram"
+        },
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 38.109375,
+          "height": 38.109375,
+          "alt": "ZK17 sword monogram"
+        },
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 29,
+          "height": 29,
+          "alt": "ZK17 sword monogram"
+        },
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 184.9375,
+          "height": 184.9375,
+          "alt": "ZK17 sword monogram"
+        }
+      ],
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "/favicon.png?v=2"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-touch-icon.png?v=2"
+        }
+      ],
+      "og": "https://review.zk17-review.pages.dev/og-zk17.png",
+      "legacyWordmarks": 0,
+      "brandLinkText": [
+        "",
+        ""
+      ],
+      "closingBottom": {
+        "x": 17,
+        "y": 493.578125,
+        "width": 356,
+        "height": 23,
+        "top": 493.578125,
+        "right": 373,
+        "bottom": 516.578125,
+        "left": 17
+      },
+      "closingFuture": {
+        "x": 58.375,
+        "y": 808.015625,
+        "width": 273.25,
+        "height": 9,
+        "top": 808.015625,
+        "right": 331.625,
+        "bottom": 817.015625,
+        "left": 58.375
+      }
+    },
+    {
+      "name": "android",
+      "status": 200,
+      "errors": [],
+      "width": 412,
+      "contentWidth": 412,
+      "logos": [
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 34,
+          "height": 34,
+          "alt": "ZK17 sword monogram"
+        },
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 40.6875,
+          "height": 40.6875,
+          "alt": "ZK17 sword monogram"
+        },
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 29,
+          "height": 29,
+          "alt": "ZK17 sword monogram"
+        },
+        {
+          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "loaded": true,
+          "naturalWidth": 512,
+          "naturalHeight": 512,
+          "width": 197.703125,
+          "height": 197.703125,
+          "alt": "ZK17 sword monogram"
+        }
+      ],
+      "icons": [
+        {
+          "rel": "icon",
+          "href": "/favicon.png?v=2"
+        },
+        {
+          "rel": "apple-touch-icon",
+          "href": "/apple-touch-icon.png?v=2"
+        }
+      ],
+      "og": "https://review.zk17-review.pages.dev/og-zk17.png",
+      "legacyWordmarks": 0,
+      "brandLinkText": [
+        "",
+        ""
+      ],
+      "closingBottom": {
+        "x": 17,
+        "y": 559.1875,
+        "width": 378,
+        "height": 23,
+        "top": 559.1875,
+        "right": 395,
+        "bottom": 582.1875,
+        "left": 17
+      },
+      "closingFuture": {
+        "x": 69.375,
+        "y": 878.75,
+        "width": 273.25,
+        "height": 9,
+        "top": 878.75,
+        "right": 342.625,
+        "bottom": 887.75,
+        "left": 69.375
+      }
+    }
+  ],
+  "finishedUtc": "2026-10-25T17:04:49.366Z"
+}

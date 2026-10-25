@@ -37,5 +37,9 @@
   "tokens": "UNKNOWN",
   "planningBuildAuditDuration": "UNKNOWN unless individually recorded",
   "logs": "Raw .log.gz, normalized text log",
-  "finalPublicRelease": "NOT AUTHORIZED"
+  "finalPublicRelease": "NOT AUTHORIZED",
+  "auditDurationSeconds": 36,
+  "elapsedToIndependentApplicationAcceptanceSeconds": 804,
+  "elapsedScope": "Sampled scoped start16:53:08Z to applicationPASS17:06:32Z",
+  "deployedMatchCount": 82
 }

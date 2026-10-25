@@ -1,6 +1,6 @@
 {
-  "origin": "http://127.0.0.1:3100",
-  "startedUtc": "2026-10-25T17:04:46.507Z",
+  "origin": "https://5f91b519.zk17-review.pages.dev",
+  "startedUtc": "2026-10-25T17:07:33.478Z",
   "viewports": [
     {
       "name": "desktop",
@@ -10,7 +10,7 @@
       "contentWidth": 1280,
       "logos": [
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -19,7 +19,7 @@
           "alt": "ZK17 sword monogram"
         },
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -28,7 +28,7 @@
           "alt": "ZK17 sword monogram"
         },
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -37,7 +37,7 @@
           "alt": "ZK17 sword monogram"
         },
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -91,7 +91,7 @@
       "contentWidth": 390,
       "logos": [
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -100,7 +100,7 @@
           "alt": "ZK17 sword monogram"
         },
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -109,7 +109,7 @@
           "alt": "ZK17 sword monogram"
         },
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -118,7 +118,7 @@
           "alt": "ZK17 sword monogram"
         },
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -172,7 +172,7 @@
       "contentWidth": 412,
       "logos": [
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -181,7 +181,7 @@
           "alt": "ZK17 sword monogram"
         },
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -190,7 +190,7 @@
           "alt": "ZK17 sword monogram"
         },
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -199,7 +199,7 @@
           "alt": "ZK17 sword monogram"
         },
         {
-          "src": "http://127.0.0.1:3100/brand/zk17-monogram-512-v2.png",
+          "src": "https://5f91b519.zk17-review.pages.dev/brand/zk17-monogram-512-v2.png",
           "loaded": true,
           "naturalWidth": 512,
           "naturalHeight": 512,
@@ -246,5 +246,5 @@
       }
     }
   ],
-  "finishedUtc": "2026-10-25T17:04:49.366Z"
+  "finishedUtc": "2026-10-25T17:07:39.528Z"
 }
