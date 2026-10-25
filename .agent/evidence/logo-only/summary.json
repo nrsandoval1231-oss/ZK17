@@ -32,5 +32,9 @@
   "logPreservation": "Raw .log.gz and whitespace-normalized text .log",
   "tokens": "UNKNOWN",
   "planningBuildAuditDurations": "UNKNOWN unless individually recorded",
-  "finalPublicRelease": "NOT AUTHORIZED"
+  "finalPublicRelease": "NOT AUTHORIZED",
+  "auditSeconds": 8,
+  "elapsedToApplicationAcceptanceSeconds": 307,
+  "elapsedScope": "From sampled scoped start15:43:05Z to independentPASS15:48:12Z",
+  "deployedRemoteMatchCount": 79
 }

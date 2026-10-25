@@ -1,5 +1,7 @@
 # Deployment runbook
 
+Latest canonical-only correction: https://review.zk17-review.pages.dev serves application fc060a9712eb7a5dba19a781dafab8817af14ca4. Immutable https://41ee31b3.zk17-review.pages.dev ; preview/review deployment41ee31b3-a9d9-41b9-a14e-90203c6a3278. Old wordmark lettering removed; new monogram is sole logo.79 remote files match reviewed export, three responsive absence/geometry checks pass. Evidence .agent/evidence/logo-only/. Earlier entries below are historical.
+
 Canonical logo refresh (2026-10-25): https://review.zk17-review.pages.dev now serves application source 958a229049a1a4f6ef14917fc3da1bb38d04e78f, immutable https://20c41eea.zk17-review.pages.dev . Deployment20c41eea-f975-41f1-8195-628e4be2926c is preview/review only.79 remote asset hashes and three responsive logo/footer captures pass. Receipt and scoped review: .agent/evidence/logo-01/. Earlier deployment below remains archived evidence; prior Lighthouse scores are not measurements of the refreshed logo build.
 
 Delivered review: https://review.zk17-review.pages.dev . Immutable: https://7b983368.zk17-review.pages.dev . Application source ee9877de49b10f7c969c6494a71c959b546b96c3; deployment 7b983368-bbcc-4c99-a927-8ea2dc6d03f8, environment preview/branch review. Actual remote hashes, browser checks and mobile lab results are in .agent/DEPLOYMENT_RECEIPT.json. Final documentation commits leave runtime unchanged. No production promotion performed.

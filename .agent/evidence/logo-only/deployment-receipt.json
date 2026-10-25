@@ -1,0 +1,21 @@
+{
+  "sourceCandidate": "fc060a9712eb7a5dba19a781dafab8817af14ca4",
+  "previewURL": "https://review.zk17-review.pages.dev",
+  "immutableURL": "https://41ee31b3.zk17-review.pages.dev",
+  "deploymentID": "41ee31b3-a9d9-41b9-a14e-90203c6a3278",
+  "environment": "preview",
+  "branch": "review",
+  "commitDirty": false,
+  "verifiedUtc": "2026-10-25T15:49:00.689Z",
+  "remoteFiles": 79,
+  "mismatches": 0,
+  "legacyWordmarkNodes": 0,
+  "visibleBrandLinkText": "empty; image only",
+  "responsiveViewports": [
+    1280,
+    390,
+    412
+  ],
+  "manualAliasProof": "Reloaded actual review alias; both brand links contain only canonical image; no oldwordmark nodes",
+  "finalPublicRelease": "NOT AUTHORIZED"
+}
