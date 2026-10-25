@@ -1,0 +1,7 @@
+{
+  "surface": "Deployed review preview at390x844",
+  "button": { "left": 295.625, "right": 357, "top": 15.75, "bottom": 47.25, "height": 31.5 },
+  "label": { "left": 303.625, "right": 332, "top": 24.75, "bottom": 38.25 },
+  "iconLines": [{ "left": 319, "right": 334, "top": 31, "bottom": 32 }, { "left": 319, "right": 334, "top": 36, "bottom": 37 }],
+  "finding": "Icon bars intersect label rectangle, giving a strikethrough. Target height below44px."
+}

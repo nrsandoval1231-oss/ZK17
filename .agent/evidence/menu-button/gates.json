@@ -1,0 +1,31 @@
+{
+  "finishedUtc": "2026-10-25T18:12:26.2560703Z",
+  "siteUrl": "https://review.zk17-review.pages.dev",
+  "checks": [
+    {
+      "name": "build",
+      "durationSeconds": 23.2692905,
+      "exitCode": 0,
+      "log": ".agent/evidence/menu-button/build.log"
+    },
+    {
+      "name": "typecheck",
+      "durationSeconds": 1.4740908,
+      "exitCode": 0,
+      "log": ".agent/evidence/menu-button/typecheck.log"
+    },
+    {
+      "name": "lint",
+      "durationSeconds": 2.8040008,
+      "exitCode": 0,
+      "log": ".agent/evidence/menu-button/lint.log"
+    },
+    {
+      "name": "test",
+      "durationSeconds": 0.5844496,
+      "exitCode": 0,
+      "log": ".agent/evidence/menu-button/test.log"
+    }
+  ],
+  "startedUtc": "2026-10-25T18:11:58.1152410Z"
+}

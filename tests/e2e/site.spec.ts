@@ -24,6 +24,17 @@ test('mobile navigation opens accessibly, traps focus, and closes on Escape', as
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
   const trigger = page.getByRole('button', { name: 'Menu' });
+  for (const width of [320, 390, 412, 768, 899]) {
+    await page.setViewportSize({ width, height: 844 });
+    const bounds = await trigger.boundingBox();
+    const label = await trigger.locator('span').boundingBox();
+    const icon = await trigger.locator('svg').boundingBox();
+    expect(bounds?.height).toBeGreaterThanOrEqual(44);
+    expect(bounds?.width).toBeGreaterThanOrEqual(44);
+    expect(label && icon && label.x + label.width).toBeLessThanOrEqual(icon?.x ?? 0);
+    expect(label && icon && icon.x + icon.width).toBeLessThanOrEqual((bounds?.x ?? 0) + (bounds?.width ?? 0));
+  }
+  await page.setViewportSize({ width: 390, height: 844 });
   await trigger.click();
   await expect(page.locator('#site-nav button.nav-close')).toBeVisible();
   await expect(page.locator('#site-nav button.nav-close')).toBeFocused();

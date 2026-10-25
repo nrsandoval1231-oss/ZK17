@@ -1,0 +1,22 @@
+{
+  "node_id": "ZK-11",
+  "base_sha": "09607b5cd747c23484812d2980f103fe4d5ab17e",
+  "start_utc": "2026-10-25T18:07:49Z",
+  "finish_utc": "2026-10-25T18:10:48Z",
+  "configuration_identity": "UNKNOWN",
+  "changed_files": [
+    "components/site-experience.tsx",
+    "app/globals.css",
+    "tests/e2e/site.spec.ts",
+    ".agent/MENU_COMPLETION.json"
+  ],
+  "checks": [
+    { "command": "npm run typecheck", "exit_code": 0, "result": "PASS" },
+    { "command": "npm run lint", "exit_code": 0, "result": "PASS" }
+  ],
+  "runtime_geometry_e2e": "NOT RUN; parent owns final browser gates",
+  "limitations": [
+    "No browser runtime or preview verification performed in this packet.",
+    "No push or deploy performed."
+  ]
+}
