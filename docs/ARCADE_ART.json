@@ -1,0 +1,55 @@
+{
+  "kind": "decorative fictional stadium illustration",
+  "purpose": "Approved PLAYER17 Off Field arcade background, no athletes or likenesses",
+  "source": "brand/arcade/player17-stadium-master.png",
+  "width": 1536,
+  "height": 1024,
+  "sourceSha256": "67ca2b9a5a385948337e54317e9de4ce802e3301f89120f15c46d97d6a147d02",
+  "method": "Built-in image generation edit of owner-approved concept to remove CRT/UI and retain stadium illustration",
+  "approvedConcept": "public/concepts/player17/off-field-v1.png",
+  "disclosure": "Original illustrated environment, not a real stadium photograph. UI text and controls implemented separately.",
+  "assets": [
+    {
+      "src": "/media/arcade/player17-stadium-768.webp",
+      "width": 768,
+      "height": 512,
+      "bytes": 85416,
+      "sha256": "2e2cd9f58152abb14c2f7dba368e0b03e1cb3efb35e0d3d018ba5e549d856b2c"
+    },
+    {
+      "src": "/media/arcade/player17-stadium-768.avif",
+      "width": 768,
+      "height": 512,
+      "bytes": 51842,
+      "sha256": "209fe30f8644ed087bd5b8503183b930db4d95dddafd07c9b787f07636746d1b"
+    },
+    {
+      "src": "/media/arcade/player17-stadium-1280.webp",
+      "width": 1280,
+      "height": 853,
+      "bytes": 180970,
+      "sha256": "b4044625c1cb9cfa310f2abc99b3037dc6c429545cf587ef5991574296b03600"
+    },
+    {
+      "src": "/media/arcade/player17-stadium-1280.avif",
+      "width": 1280,
+      "height": 853,
+      "bytes": 109906,
+      "sha256": "dbf7425f7b24b6617e3cd214ef32f991d7c7c55717df134e0737ad7bc3bbe6d8"
+    },
+    {
+      "src": "/media/arcade/player17-stadium-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 230058,
+      "sha256": "a3da358479c2089ce9ae0e8674c41af55ee73943becf4be40e67f1cfcd68a585"
+    },
+    {
+      "src": "/media/arcade/player17-stadium-1536.avif",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 142610,
+      "sha256": "982d0c0a599f25f7f183086e305b1309f6d194a737759dee82111c846785a544"
+    }
+  ]
+}

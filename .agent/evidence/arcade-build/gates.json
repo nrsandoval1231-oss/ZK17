@@ -1,0 +1,26 @@
+{
+  "finishedUtc": "2026-10-25T19:02:13.4077987Z",
+  "startedUtc": "2026-10-25T19:01:55.5408929Z",
+  "checks": [
+    {
+      "exitCode": 0,
+      "name": "build",
+      "seconds": 12.8118563
+    },
+    {
+      "exitCode": 0,
+      "name": "typecheck",
+      "seconds": 1.4778734
+    },
+    {
+      "exitCode": 0,
+      "name": "lint",
+      "seconds": 2.9749417
+    },
+    {
+      "exitCode": 0,
+      "name": "test",
+      "seconds": 0.595174
+    }
+  ]
+}

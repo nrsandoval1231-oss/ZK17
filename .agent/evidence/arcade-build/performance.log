@@ -1,0 +1,22 @@
+{
+  "initialMetrics": {
+    "cls": 0.06289453210714736,
+    "lcp": 124
+  },
+  "initialArcadeRequests": 1,
+  "artwork": {
+    "src": "http://127.0.0.1:3100/media/arcade/player17-stadium-768.avif",
+    "resources": [
+      {
+        "url": "http://127.0.0.1:3100/media/arcade/player17-stadium-768.avif",
+        "bytes": 51842,
+        "duration": 3.3000000715255737
+      }
+    ],
+    "metrics": {
+      "cls": 0.06289453210714736,
+      "lcp": 124
+    }
+  },
+  "errors": []
+}

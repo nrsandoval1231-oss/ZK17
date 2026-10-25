@@ -7,6 +7,7 @@ import '@fontsource/barlow-condensed/latin-700.css';
 import '@fontsource/dm-sans/latin-400.css';
 import '@fontsource/dm-sans/latin-500.css';
 import '@fontsource/dm-sans/latin-600.css';
+import '@fontsource/press-start-2p/latin-400.css';
 import { profile } from '@/content/site';
 const configuredSiteUrl = process.env.SITE_URL;
 const publicSiteUrl = (() => { try { const url = new URL(configuredSiteUrl ?? ''); return url.protocol === 'https:' && url.hostname.includes('.') && !/(example|localhost|127\.0\.0\.1)/i.test(url.hostname) ? url.origin : undefined; } catch { return undefined; } })();

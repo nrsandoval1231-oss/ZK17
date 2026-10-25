@@ -1,0 +1,71 @@
+{
+  "objective": "Implement approved PLAYER17 off-field arcade in the site",
+  "packet": ".agent/PACKET-ARCADE-BUILD.md",
+  "base": {
+    "branch": "main",
+    "sha": "956f4bf971ea9a377e1bc311673c5dd4f9b08b3b"
+  },
+  "start_utc": "2026-10-25T18:43:11Z",
+  "finish_utc": "2026-10-25T19:01:14Z",
+  "elapsed_seconds": 1083,
+  "lane": "single primary builder",
+  "model": "UNKNOWN",
+  "config_identity": "UNKNOWN",
+  "token_usage": "UNKNOWN",
+  "changed_files": [
+    "app/layout.tsx",
+    "components/site-experience.tsx",
+    "components/offfield-arcade.tsx",
+    "components/offfield-arcade.module.css",
+    "package.json",
+    "package-lock.json",
+    "tests/e2e/arcade.spec.ts",
+    "docs/ARCADE.md",
+    ".agent/ARCADE_BUILD_COMPLETION.json"
+  ],
+  "implementation": [
+    "Added responsive CRT arcade with semantic native radios, meaningful category screens, truthful coming-soon states, Escape/back behavior, and focus restoration.",
+    "Preserved the desktop horizontal story rail with positive-travel guarded GSAP pinning; narrow screens and reduced-motion use normal stacked layout.",
+    "Loaded the licensed self-hosted Press Start 2P font and responsive parent-provided stadium art; HTML remains separate from decorative artwork.",
+    "Replaced the old off-field placeholder rail and feature list, kept the offfield-personal anchor, and removed only its obsolete GSAP rail tween.",
+    "Documented how verified category details may be added and the fictional nature of the illustration."
+  ],
+  "validation": {
+    "commands": [
+      { "command": "npm run typecheck", "exit_code": 0 },
+      { "command": "npx eslint components/offfield-arcade.tsx components/site-experience.tsx tests/e2e/arcade.spec.ts app/layout.tsx", "exit_code": 0, "warnings": 0 },
+      { "command": "npx playwright test --config=playwright.arcade.config.ts", "exit_code": 0, "passed": 10, "skipped": 2, "duration_seconds": 19, "isolated_build": true },
+      { "command": "git diff --check", "exit_code": 0 }
+    ],
+    "browser_coverage": [
+      "Chromium desktop",
+      "Chromium mobile",
+      "Chromium reduced motion"
+    ],
+    "evidence": [
+      "Selection by arrows, Enter, and Space; category-specific empty states; Escape/back; and focus restoration passed.",
+      "320px viewport geometry and touch target checks passed.",
+      "Reduced-motion desktop stack check passed."
+    ]
+  },
+  "repair_count": 2,
+  "latest_repair": {
+    "packet": ".agent/PACKET-ARCADE-REPAIR1.md",
+    "status": "Implementation complete; parent browser rerun pending",
+    "changes": [
+      "Focus moves to Back in a layout effect after the category screen commits, without mount autofocus; returning to the menu restores focus to Press Start.",
+      "Added a noscript desktop stacked layout so title and cabinet remain readable within the viewport without JavaScript.",
+      "Strengthened the Escape behavior test to confirm Back has focus before pressing Escape and added JavaScript-disabled desktop bounds coverage."
+    ],
+    "validation": [
+      { "command": "npm run typecheck", "exit_code": 0 },
+      { "command": "npx eslint components/offfield-arcade.tsx tests/e2e/arcade.spec.ts", "exit_code": 0, "warnings": 0 },
+      { "command": "git diff --check", "exit_code": 0 }
+    ],
+    "browser_tests_after_repair": "Not run; parent owns production build and browser rerun."
+  },
+  "open_gates": [
+    "Parent owns final production build and repository-wide checks, browser rerun for repair1, independent review, live preview/browser review, and any release decisions.",
+    "No push, deployment, merge, or certification performed."
+  ]
+}

@@ -1,0 +1,133 @@
+.arcade {
+  --arcade-purple: #8848f5;
+  --arcade-lavender: #ac7cff;
+  --arcade-paper: #f6f4f8;
+  --arcade-ink: #111015;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: var(--arcade-ink);
+}
+
+.arcade .rail { width: 100%; margin: 0; overflow: visible; }
+.arcade .track { display: block; width: 100%; min-width: 0; padding: 0; }
+.introPanel { width: 100%; }
+.cabinetPanel { width: 100%; }
+.intro { margin: 0 0 26px; }
+.kicker { margin: 0 0 14px; font: 700 12px/1.2 var(--body); letter-spacing: .2em; }
+.intro h2 { margin: 0; font: 700 clamp(42px, 7vw, 80px)/.87 var(--display); letter-spacing: -.035em; }
+.intro h2 em { font: italic 400 clamp(40px, 7vw, 79px)/.95 Georgia, serif; letter-spacing: -.055em; }
+.rule { display: block; width: 105px; height: 4px; margin-top: 19px; background: var(--arcade-purple); }
+
+.cabinet {
+  padding: clamp(9px, 1.8vw, 18px);
+  border: 1px solid #303039;
+  border-radius: clamp(21px, 3vw, 38px);
+  background: linear-gradient(145deg, #25252e, #090a0f 28%, #111119 75%, #292832);
+  box-shadow: 0 17px 35px rgb(13 10 19 / 16%), inset 0 0 0 3px #08090e;
+}
+
+.bezel {
+  overflow: hidden;
+  padding: clamp(7px, 1.25vw, 13px);
+  border: 1px solid #3b3945;
+  border-radius: clamp(17px, 2.5vw, 30px);
+  background: #050609;
+  box-shadow: inset 0 0 0 3px #101117, inset 0 0 22px rgb(0 0 0 / 80%);
+}
+
+.screen {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 570px;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-radius: clamp(11px, 1.9vw, 21px);
+  background: #08090e;
+  color: #f8f4ff;
+}
+
+.stadium { position: absolute; z-index: -2; inset: 0 0 auto; height: 100%; }
+.stadium picture { display: block; width: 100%; height: 100%; }
+.stadium::after { position: absolute; inset: 0; content: ''; background: linear-gradient(180deg, rgb(5 5 10 / 30%), rgb(5 5 10 / 0%) 34%, #08090e 66%, #08090e); }
+.stadium img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.screen::after { position: absolute; z-index: 2; inset: 0; pointer-events: none; content: ''; opacity: .17; background: repeating-linear-gradient(0deg, transparent 0 3px, rgb(242 234 255 / 28%) 4px, transparent 5px); }
+
+.content { z-index: 3; display: flex; width: 100%; flex: 1; flex-direction: column; align-items: center; padding: clamp(38px, 7vw, 78px) 20px 34px; text-align: center; }
+.pixelTitle { margin: 0; color: #f8f2ff; font: 400 clamp(27px, 6.1vw, 70px)/1.2 'Press Start 2P', monospace; letter-spacing: -.06em; text-shadow: 0 5px 0 #631ac9, 3px 0 var(--arcade-purple), 0 0 17px rgb(160 76 255 / 38%); white-space: nowrap; }
+.screenLabel { margin: 16px 0 0; font: 400 clamp(9px, 1.8vw, 17px)/1.5 'Press Start 2P', monospace; letter-spacing: .09em; }
+
+.choices { display: grid; gap: 2px; width: min(100%, 405px); margin: auto 0 0; padding: 0; border: 0; }
+.choice { display: grid; min-height: 48px; grid-template-columns: 26px 1fr; align-items: center; padding: 8px 12px; border: 2px solid transparent; color: #f5efff; font: 400 clamp(13px, 2vw, 17px)/1.4 'Press Start 2P', monospace; text-align: left; text-transform: uppercase; cursor: pointer; }
+.choice input { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.pointer { visibility: hidden; display: grid; place-items: center; color: var(--arcade-lavender); }
+.pointer svg { width: 12px; height: 14px; fill: currentColor; }
+.choice[data-selected='true'] { border-color: var(--arcade-purple); }
+.choice[data-selected='true'] .pointer { visibility: visible; }
+.choice:focus-within { outline: 2px solid #fff; outline-offset: 2px; }
+.teaser { min-height: 24px; margin: 17px 0 21px; color: #bdb7c6; font: 400 clamp(11px, 1.55vw, 15px)/1.6 'Press Start 2P', monospace; }
+.start, .back { display: inline-flex; min-width: min(100%, 350px); min-height: 56px; align-items: center; justify-content: center; padding: 13px 18px; border: 0; border-radius: 4px; background: linear-gradient(180deg, #8848f5, #6720d4); box-shadow: 0 4px 0 #5f17c2; color: white; font: 400 clamp(12px, 1.8vw, 16px)/1.4 'Press Start 2P', monospace; text-align: center; cursor: pointer; }
+.start:hover, .back:hover { background: linear-gradient(180deg, #7638dd, #5920bd); }
+.start:active, .back:active { transform: translateY(2px); box-shadow: 0 2px 0 #5f17c2; }
+.detail { display: flex; width: min(100%, 620px); min-height: 245px; flex: 1; flex-direction: column; align-items: center; justify-content: flex-end; gap: 24px; }
+.detail p, .detail li { padding: 10px 13px; border-radius: 3px; background: rgb(8 9 14 / 92%); color: #e8e1ef; font: 400 clamp(11px, 1.55vw, 15px)/1.8 var(--body); }
+.detail p { margin: 0; }
+.detail ul { margin: 0; padding-left: 1.25em; text-align: left; }
+.back { min-height: 48px; min-width: min(100%, 310px); background: #211632; box-shadow: 0 3px 0 #09080c; font-size: clamp(10px, 1.45vw, 13px); }
+.back svg { width: 17px; height: 17px; margin-right: 10px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+.back:hover { background: #392252; }
+.outro { margin: 24px 0 0; font: 600 10px/1.5 var(--body); letter-spacing: .25em; text-align: center; }
+
+@media (min-width: 900px) {
+  .arcade { max-width: none; }
+  .arcade .rail { width: 100vw; height: 730px; margin-left: -9vw; overflow: hidden; }
+  .arcade .track { display: flex; width: max-content; min-width: 100%; height: 100%; align-items: center; gap: 4vw; padding: 24px 9vw; }
+  .arcade .introPanel { display: flex; width: 30vw; min-width: 280px; height: 100%; flex: 0 0 auto; align-items: center; }
+  .arcade .cabinetPanel { width: 70vw; max-width: 930px; flex: 0 0 auto; }
+  .intro { margin-bottom: 28px; }
+  .screen { min-height: clamp(600px, 65vh, 700px); }
+  .content { padding-top: clamp(56px, 6vw, 86px); padding-bottom: 42px; }
+  .stadium { height: 79%; }
+  .stadium::after { background: linear-gradient(180deg, rgb(5 5 10 / 28%), rgb(5 5 10 / 0%) 47%, #08090e 94%, #08090e); }
+  .stadium img { object-position: center bottom; }
+}
+
+@media (min-width: 900px) and (prefers-reduced-motion: reduce) {
+  .arcade { max-width: 1100px; }
+  .arcade .rail { width: 100%; height: auto; margin-left: 0; overflow: visible; }
+  .arcade .track { display: block; width: 100%; height: auto; padding: 0; }
+  .arcade .introPanel, .arcade .cabinetPanel { display: block; width: 100%; max-width: none; height: auto; }
+  .arcade .introPanel { margin-bottom: 26px; }
+  .screen { min-height: 600px; }
+}
+
+@media (max-width: 560px) {
+  .intro { margin-bottom: 22px; }
+  .kicker { margin-bottom: 12px; font-size: 10px; }
+  .intro h2 { font-size: clamp(36px, 11.8vw, 48px); }
+  .intro h2 em { font-size: clamp(35px, 11.3vw, 47px); }
+  .rule { width: 72px; height: 3px; margin-top: 15px; }
+  .cabinet { padding: 7px; border-radius: 21px; }
+  .bezel { padding: 6px; border-radius: 16px; }
+  .screen { min-height: 550px; }
+  .stadium { height: 60%; }
+  .stadium::after { background: linear-gradient(180deg, rgb(5 5 10 / 22%) 0%, transparent 42%, transparent 79%, #08090e 100%); }
+  .content { padding: 36px 12px 26px; }
+  .pixelTitle { font-size: clamp(21px, 7.2vw, 31px); }
+  .screenLabel { margin-top: 13px; font-size: clamp(8px, 2.3vw, 10px); }
+  .choices { width: 100%; margin-top: auto; }
+  .choice { min-height: 50px; grid-template-columns: 20px 1fr; padding: 7px 5px; font-size: clamp(10px, 3.15vw, 14px); }
+  .pointer svg { width: 10px; height: 12px; }
+  .teaser { margin: 15px 0 19px; font-size: clamp(8px, 2.3vw, 10px); }
+  .start { min-height: 54px; padding: 12px 8px; font-size: clamp(9px, 2.8vw, 12px); }
+  .detail { min-height: 252px; }
+  .detail p, .detail li { font-size: 13px; }
+  .back { min-height: 48px; font-size: 9px; }
+  .outro { margin-top: 18px; font-size: 8px; letter-spacing: .17em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .start, .back { transition: none; }
+}

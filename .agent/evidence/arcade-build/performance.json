@@ -1,0 +1,86 @@
+{
+  "origin": "http://127.0.0.1:3100",
+  "profile": "Chromium390x844,unthrottled browser observation,not Lighthouse/not real-device score",
+  "checkedUtc": "2026-10-25T19:03:15.095Z",
+  "initial": {
+    "metrics": {
+      "cls": 0.06289453210714736,
+      "lcp": 124
+    },
+    "resources": [
+      {
+        "url": "http://127.0.0.1:3100/media/arcade/player17-stadium-768.avif",
+        "bytes": 51842,
+        "duration": 3.3000000715255737
+      }
+    ],
+    "navigation": {
+      "name": "http://127.0.0.1:3100/",
+      "entryType": "navigation",
+      "startTime": 0,
+      "duration": 173.40000009536743,
+      "navigationId": 4730,
+      "initiatorType": "navigation",
+      "deliveryType": "",
+      "nextHopProtocol": "http/1.1",
+      "renderBlockingStatus": "non-blocking",
+      "contentType": "text/html",
+      "contentEncoding": "",
+      "workerStart": 0,
+      "workerRouterEvaluationStart": 0,
+      "workerCacheLookupStart": 0,
+      "workerMatchedSourceType": "",
+      "workerFinalSourceType": "",
+      "redirectStart": 0,
+      "redirectEnd": 0,
+      "fetchStart": 0.10000002384185791,
+      "domainLookupStart": 1.100000023841858,
+      "domainLookupEnd": 2.200000047683716,
+      "connectStart": 2.200000047683716,
+      "secureConnectionStart": 0,
+      "connectEnd": 3.3000000715255737,
+      "requestStart": 3.4000000953674316,
+      "responseStart": 5,
+      "firstInterimResponseStart": 0,
+      "finalResponseHeadersStart": 5,
+      "responseEnd": 5.600000023841858,
+      "transferSize": 31513,
+      "encodedBodySize": 31213,
+      "decodedBodySize": 31213,
+      "responseStatus": 200,
+      "serverTiming": [],
+      "unloadEventStart": 0,
+      "unloadEventEnd": 0,
+      "domInteractive": 24.5,
+      "domContentLoadedEventStart": 24.5,
+      "domContentLoadedEventEnd": 24.5,
+      "domComplete": 173,
+      "loadEventStart": 173,
+      "loadEventEnd": 173.40000009536743,
+      "type": "navigate",
+      "redirectCount": 0,
+      "activationStart": 0,
+      "criticalCHRestart": 0,
+      "notRestoredReasons": null,
+      "confidence": {
+        "randomizedTriggerRate": 0.4994798,
+        "value": "high"
+      }
+    }
+  },
+  "artwork": {
+    "src": "http://127.0.0.1:3100/media/arcade/player17-stadium-768.avif",
+    "resources": [
+      {
+        "url": "http://127.0.0.1:3100/media/arcade/player17-stadium-768.avif",
+        "bytes": 51842,
+        "duration": 3.3000000715255737
+      }
+    ],
+    "metrics": {
+      "cls": 0.06289453210714736,
+      "lcp": 124
+    }
+  },
+  "errors": []
+}
