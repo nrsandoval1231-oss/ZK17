@@ -1,3 +1,9 @@
 # Review preview - PLAYER17 arcade delivered
-URL https://review.zk17-review.pages.dev/#offfield-personal
-Acceptedapplication 9ef24bcad6c3ba4bd18f46dcee4aa9404454ed5b; immutable https://b1c08c85.zk17-review.pages.dev; deployment b1c08c85-1025-4ff3-923a-e0d89ca0fc29.91remote assets hashmatched; six remoteviewportengineprobes and desktopmotion pass; actualaliasMusicStartBack verified. Screenshot-only followup doesnot changeacceptedUI. No finalpublicrelease.
+
+Preview: https://review.zk17-review.pages.dev/#offfield-personal
+Immutable: https://78c3d475.zk17-review.pages.dev
+Delivery source: 718cc8c2900c9c03c5ec9deea44c4213a22e1c91
+Accepted application: 9ef24bcad6c3ba4bd18f46dcee4aa9404454ed5b
+Deployment: 78c3d475-283d-4a02-855c-20c8d0972fda, preview/review.
+
+The final delivery adds a screenshot artifact to the accepted application. All 91 application assets and the additional screenshot match local hashes. Six deployed viewport/engine probes, desktop motion/reduced-motion checks, and actual alias Start/Back/focus checks passed. Noindex is retained. No final public release.
