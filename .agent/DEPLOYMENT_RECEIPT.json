@@ -1,26 +1,22 @@
 {
-  "sourceCandidate": "ee9877de49b10f7c969c6494a71c959b546b96c3",
+  "sourceCandidate": "b388d61412bbf9fdaf699a464efc9f92a9be3807",
   "project": "zk17-review",
   "branch": "review",
   "environment": "preview",
   "reservedProductionBranch": "owner-approved-release",
   "previewURL": "https://review.zk17-review.pages.dev",
-  "immutableURL": "https://7b983368.zk17-review.pages.dev",
-  "deploymentID": "7b983368-bbcc-4c99-a927-8ea2dc6d03f8",
-  "createdUtc": "2026-10-25T14:57:46.732497Z",
-  "finishedUtc": "2026-10-25T14:57:48.469624Z",
+  "immutableURL": "https://7010465a.zk17-review.pages.dev",
+  "deploymentID": "7010465a-2138-4a4c-9205-62e6b3f9b9cc",
+  "verifiedUtc": "2026-10-25T18:16:22.311Z",
   "status": "success",
   "commitDirty": true,
-  "dirtyScope": "Evidence records only; runtime accepted at sourceCandidate",
-  "remoteAssetProof": { "filesChecked": 73, "mismatches": 0 },
-  "lighthouse": {
-    "fetchTime": "2026-10-25T14:58:28.394Z",
-    "profile": "Mobile simulated lab on immutable deployment",
-    "performance": 98, "accessibility": 100, "bestPractices": 100, "seo": 69,
-    "seoFailure": "Intentional preview noindex only",
-    "fcpSeconds": 0.9, "lcpSeconds": 2.1, "tbtMilliseconds": 30,
-    "cls": 0.065, "speedIndexSeconds": 1.4
+  "dirtyScope": "Two untracked prior deployment evidence archives only; accepted runtime unchanged",
+  "remoteAssetProof": {
+    "filesChecked": 82,
+    "mismatches": 0
   },
+  "browserProof": ".agent/evidence/menu-button/browser.json",
+  "manualAliasProof": "CUA alias reload, SVG present,44px target, menu opens/closes and focus enters close button; temporary viewport reset",
   "indexing": "noindex, nofollow; robots disallow",
   "finalPublicRelease": "NOT AUTHORIZED"
 }

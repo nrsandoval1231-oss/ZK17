@@ -1,6 +1,6 @@
 {
-  "origin": "http://127.0.0.1:3100",
-  "startedUtc": "2026-10-25T18:13:23.751Z",
+  "origin": "https://7010465a.zk17-review.pages.dev",
+  "startedUtc": "2026-10-25T18:15:21.359Z",
   "viewports": [
     {
       "width": 320,
@@ -198,5 +198,5 @@
     "menuHidden": true,
     "inlineLinks": 6
   },
-  "finishedUtc": "2026-10-25T18:13:28.993Z"
+  "finishedUtc": "2026-10-25T18:15:30.135Z"
 }

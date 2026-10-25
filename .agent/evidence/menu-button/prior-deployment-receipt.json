@@ -1,0 +1,26 @@
+{
+  "sourceCandidate": "ee9877de49b10f7c969c6494a71c959b546b96c3",
+  "project": "zk17-review",
+  "branch": "review",
+  "environment": "preview",
+  "reservedProductionBranch": "owner-approved-release",
+  "previewURL": "https://review.zk17-review.pages.dev",
+  "immutableURL": "https://7b983368.zk17-review.pages.dev",
+  "deploymentID": "7b983368-bbcc-4c99-a927-8ea2dc6d03f8",
+  "createdUtc": "2026-10-25T14:57:46.732497Z",
+  "finishedUtc": "2026-10-25T14:57:48.469624Z",
+  "status": "success",
+  "commitDirty": true,
+  "dirtyScope": "Evidence records only; runtime accepted at sourceCandidate",
+  "remoteAssetProof": { "filesChecked": 73, "mismatches": 0 },
+  "lighthouse": {
+    "fetchTime": "2026-10-25T14:58:28.394Z",
+    "profile": "Mobile simulated lab on immutable deployment",
+    "performance": 98, "accessibility": 100, "bestPractices": 100, "seo": 69,
+    "seoFailure": "Intentional preview noindex only",
+    "fcpSeconds": 0.9, "lcpSeconds": 2.1, "tbtMilliseconds": 30,
+    "cls": 0.065, "speedIndexSeconds": 1.4
+  },
+  "indexing": "noindex, nofollow; robots disallow",
+  "finalPublicRelease": "NOT AUTHORIZED"
+}

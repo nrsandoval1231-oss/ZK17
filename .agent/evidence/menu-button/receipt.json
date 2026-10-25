@@ -1,0 +1,22 @@
+{
+  "sourceCandidate": "b388d61412bbf9fdaf699a464efc9f92a9be3807",
+  "project": "zk17-review",
+  "branch": "review",
+  "environment": "preview",
+  "reservedProductionBranch": "owner-approved-release",
+  "previewURL": "https://review.zk17-review.pages.dev",
+  "immutableURL": "https://7010465a.zk17-review.pages.dev",
+  "deploymentID": "7010465a-2138-4a4c-9205-62e6b3f9b9cc",
+  "verifiedUtc": "2026-10-25T18:16:22.311Z",
+  "status": "success",
+  "commitDirty": true,
+  "dirtyScope": "Two untracked prior deployment evidence archives only; accepted runtime unchanged",
+  "remoteAssetProof": {
+    "filesChecked": 82,
+    "mismatches": 0
+  },
+  "browserProof": ".agent/evidence/menu-button/browser.json",
+  "manualAliasProof": "CUA alias reload, SVG present,44px target, menu opens/closes and focus enters close button; temporary viewport reset",
+  "indexing": "noindex, nofollow; robots disallow",
+  "finalPublicRelease": "NOT AUTHORIZED"
+}

@@ -1,6 +1,6 @@
-# Preview status — delivered
+# Preview status - delivered
 Preview: https://review.zk17-review.pages.dev
-Immutable: https://7b983368.zk17-review.pages.dev
-Source: ee9877de49b10f7c969c6494a71c959b546b96c3.
-Deployment ID: 7b983368-bbcc-4c99-a927-8ea2dc6d03f8; preview/review, successful 2026-10-25T14:57:48.469624Z.
-73 remote assets match export hashes. Browser interactions and mobile lab performance verified. Noindex retained; no final public promotion. Final metadata commit does not change runtime output.
+Immutable: https://7010465a.zk17-review.pages.dev
+Source: b388d61412bbf9fdaf699a464efc9f92a9be3807
+DeploymentID: 7010465a-2138-4a4c-9205-62e6b3f9b9cc; preview/review successful; verified 2026-10-25T18:16:22.311Z.
+82 remote files match export hashes. Five mobile widths plus desktop runtime verified; actual alias menu opened/closed after reload. Noindex retained; no final public promotion. Final metadata commit does not change runtime output.

@@ -1,0 +1,202 @@
+{
+  "origin": "https://7010465a.zk17-review.pages.dev",
+  "startedUtc": "2026-10-25T18:15:21.359Z",
+  "viewports": [
+    {
+      "width": 320,
+      "status": 200,
+      "button": {
+        "x": 240.46875,
+        "y": 9.5,
+        "width": 61.53125,
+        "height": 44,
+        "top": 9.5,
+        "right": 302,
+        "bottom": 53.5,
+        "left": 240.46875
+      },
+      "label": {
+        "x": 240.46875,
+        "y": 26,
+        "width": 31.53125,
+        "height": 11,
+        "top": 26,
+        "right": 272,
+        "bottom": 37,
+        "left": 240.46875
+      },
+      "icon": {
+        "x": 282,
+        "y": 21.5,
+        "width": 20,
+        "height": 20,
+        "top": 21.5,
+        "right": 302,
+        "bottom": 41.5,
+        "left": 282
+      },
+      "expanded": "false",
+      "overflow": 0,
+      "errors": [],
+      "openCloseAndFocus": "PASS"
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "button": {
+        "x": 310.46875,
+        "y": 9.5,
+        "width": 61.53125,
+        "height": 44,
+        "top": 9.5,
+        "right": 372,
+        "bottom": 53.5,
+        "left": 310.46875
+      },
+      "label": {
+        "x": 310.46875,
+        "y": 26,
+        "width": 31.53125,
+        "height": 11,
+        "top": 26,
+        "right": 342,
+        "bottom": 37,
+        "left": 310.46875
+      },
+      "icon": {
+        "x": 352,
+        "y": 21.5,
+        "width": 20,
+        "height": 20,
+        "top": 21.5,
+        "right": 372,
+        "bottom": 41.5,
+        "left": 352
+      },
+      "expanded": "false",
+      "overflow": 0,
+      "errors": [],
+      "openCloseAndFocus": "PASS"
+    },
+    {
+      "width": 412,
+      "status": 200,
+      "button": {
+        "x": 332.46875,
+        "y": 9.5,
+        "width": 61.53125,
+        "height": 44,
+        "top": 9.5,
+        "right": 394,
+        "bottom": 53.5,
+        "left": 332.46875
+      },
+      "label": {
+        "x": 332.46875,
+        "y": 26,
+        "width": 31.53125,
+        "height": 11,
+        "top": 26,
+        "right": 364,
+        "bottom": 37,
+        "left": 332.46875
+      },
+      "icon": {
+        "x": 374,
+        "y": 21.5,
+        "width": 20,
+        "height": 20,
+        "top": 21.5,
+        "right": 394,
+        "bottom": 41.5,
+        "left": 374
+      },
+      "expanded": "false",
+      "overflow": 0,
+      "errors": [],
+      "openCloseAndFocus": "PASS"
+    },
+    {
+      "width": 768,
+      "status": 200,
+      "button": {
+        "x": 684.46875,
+        "y": 9.5,
+        "width": 61.53125,
+        "height": 44,
+        "top": 9.5,
+        "right": 746,
+        "bottom": 53.5,
+        "left": 684.46875
+      },
+      "label": {
+        "x": 684.46875,
+        "y": 26,
+        "width": 31.53125,
+        "height": 11,
+        "top": 26,
+        "right": 716,
+        "bottom": 37,
+        "left": 684.46875
+      },
+      "icon": {
+        "x": 726,
+        "y": 21.5,
+        "width": 20,
+        "height": 20,
+        "top": 21.5,
+        "right": 746,
+        "bottom": 41.5,
+        "left": 726
+      },
+      "expanded": "false",
+      "overflow": 0,
+      "errors": [],
+      "openCloseAndFocus": "PASS"
+    },
+    {
+      "width": 899,
+      "status": 200,
+      "button": {
+        "x": 815.46875,
+        "y": 9.5,
+        "width": 61.53125,
+        "height": 44,
+        "top": 9.5,
+        "right": 877,
+        "bottom": 53.5,
+        "left": 815.46875
+      },
+      "label": {
+        "x": 815.46875,
+        "y": 26,
+        "width": 31.53125,
+        "height": 11,
+        "top": 26,
+        "right": 847,
+        "bottom": 37,
+        "left": 815.46875
+      },
+      "icon": {
+        "x": 857,
+        "y": 21.5,
+        "width": 20,
+        "height": 20,
+        "top": 21.5,
+        "right": 877,
+        "bottom": 41.5,
+        "left": 857
+      },
+      "expanded": "false",
+      "overflow": 0,
+      "errors": [],
+      "openCloseAndFocus": "PASS"
+    }
+  ],
+  "desktop": {
+    "width": 1280,
+    "menuHidden": true,
+    "inlineLinks": 6
+  },
+  "finishedUtc": "2026-10-25T18:15:30.135Z"
+}

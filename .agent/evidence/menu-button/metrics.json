@@ -1,0 +1,22 @@
+{
+  "node": "ZK-11",
+  "lane": "fast",
+  "builderModel": "gpt-6-luna low named role",
+  "reviewerModel": "gpt-6-sol medium named role",
+  "configIdentity": "UNKNOWN",
+  "tokens": "UNKNOWN",
+  "startedUtc": "2026-10-25T18:07:49Z",
+  "builderFinishedUtc": "2026-10-25T18:10:48Z",
+  "planningDuration": "UNKNOWN",
+  "builderDurationSeconds": 179,
+  "validation": "see gates.json and browser result timestamps",
+  "auditStartedUtc": "2026-10-25T18:14:03Z",
+  "auditFinishedUtc": "2026-10-25T18:14:49Z",
+  "auditDurationSeconds": 46,
+  "acceptedUtc": "2026-10-25T18:14:49Z",
+  "elapsedToAcceptedSeconds": 420,
+  "repairCount": 0,
+  "qaHelperCorrections": 1,
+  "sourceCandidate": "b388d61412bbf9fdaf699a464efc9f92a9be3807",
+  "direction": "COMPLETE ZK-11; owner content gates remain OPEN"
+}
