@@ -1,0 +1,6 @@
+# ZK-08-R1 — closing identity overlap
+Parent first batched desktop/mobile inspection found one defect: at1440desktop the canonical logo's black square covers the left edge of the closing photo preview label (PRE clipped to VIEW). Main new diptych and NIL block look clear. Preserve no mirroring/newassets, only canonical mark, empty data gates.
+
+Luna owns app/globals.css and .agent/TWO_WORLDS_REPAIR.json only, plus components/site-experience.tsx only if wrapper markup is strictly necessary. Not alone; preserve others' edits. Make existing closing-identity a real non-overlapping logo/portrait composition across desktop/390/412: grid/flex or explicit reserved columns, full square logo visible, portrait and full preview label visible. Avoid layering either photo over logo or vice versa; retain dedicated normal-flow identity zone above copyright and contact. Do not redesign diptych/contact/copy or add assets/features.
+
+Run focused lint/build or CSS validation, report actual changes/times/checks. Parent rebuild/finalgates/new confirmationcaptures and independentSol. One combined visual repair; stop polish after confirmation. No push/deploy/certify. Separate parent QA utility timing issue (immediate reduced-motion assertion raced event delivery) is parent-owned and not product defect; existing polling e2e passes.

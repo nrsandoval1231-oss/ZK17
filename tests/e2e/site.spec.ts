@@ -71,3 +71,25 @@ test('layout has no horizontal overflow and passes automated accessibility check
   const results = await new AxeBuilder({ page }).analyze();
   expect(results.violations).toEqual([]);
 });
+
+test('two-world diptych routes to the existing field and personal content without adding a scene', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('#arrival, #on-field, #film-room, #off-field, #journey, #numbers, #next-chapter, #closing')).toHaveCount(8);
+  await expect(page.locator('.two-worlds')).toBeVisible();
+  await expect(page.locator('.world-card-on .world-photo img')).toHaveAttribute('alt', /Zephyr Kreye/);
+  await expect(page.locator('.world-card-off .world-photo img')).toHaveAttribute('alt', /sideline/);
+  await expect(page.locator('.two-worlds')).toContainText('PREVIEW CROP · ORIGINAL PENDING');
+  await page.getByRole('link', { name: 'SEE HIM ON FIELD' }).click();
+  await expect(page).toHaveURL(/#on-field$/);
+  await page.getByRole('link', { name: 'EXPLORE PERSONAL' }).click();
+  await expect(page).toHaveURL(/#offfield-personal$/);
+});
+
+test('NIL inquiry anchor always works and empty social/contact states contain no outbound links', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('link', { name: 'NIL & BUSINESS INQUIRIES' }).click();
+  await expect(page).toHaveURL(/#nil-inquiries$/);
+  await expect(page.locator('#nil-inquiries')).toContainText('Representative contact details coming soon.');
+  await expect(page.locator('#nil-inquiries')).toContainText('Social profiles will appear here when links are ready');
+  await expect(page.locator('#nil-inquiries a[href^="mailto:"], #nil-inquiries a[href^="https:"]')).toHaveCount(0);
+});

@@ -1,0 +1,270 @@
+{
+  "origin": "http://127.0.0.1:3100",
+  "startedUtc": "2026-10-25T16:32:17.140Z",
+  "viewports": [
+    {
+      "name": "desktop",
+      "status": 200,
+      "errors": [],
+      "worlds": {
+        "bounds": {
+          "x": 129.59375,
+          "y": 71.921875,
+          "width": 1180.8125,
+          "height": 1047.21875,
+          "top": 71.921875,
+          "right": 1310.40625,
+          "bottom": 1119.140625,
+          "left": 129.59375
+        },
+        "text": "ONFIELD.PREVIEW CROP · ORIGINAL PENDINGHelmet on · Game day · No. 17SEE HIM ON FIELDOFFFIELD.PREVIEW CROP · ORIGINAL PENDINGHelmet off · Sideline portrait.EXPLORE PERSONAL",
+        "images": [
+          {
+            "src": "http://127.0.0.1:3100/media/arrival-706.avif",
+            "loaded": true,
+            "alt": "Zephyr Kreye wearing number 17 in a black uniform and helmet, photographed in black and white.",
+            "bounds": {
+              "x": 129.59375,
+              "y": 290.328125,
+              "width": 498.953125,
+              "height": 487.640625,
+              "top": 290.328125,
+              "right": 628.546875,
+              "bottom": 777.96875,
+              "left": 129.59375
+            }
+          },
+          {
+            "src": "http://127.0.0.1:3100/media/portrait-706.avif",
+            "loaded": true,
+            "alt": "Zephyr Kreye seated on the sideline in his number 17 black uniform.",
+            "bounds": {
+              "x": 700.546875,
+              "y": 419.921875,
+              "width": 609.859375,
+              "height": 639.21875,
+              "top": 419.921875,
+              "right": 1310.40625,
+              "bottom": 1059.140625,
+              "left": 700.546875
+            }
+          }
+        ],
+        "links": [
+          {
+            "href": "#on-field",
+            "text": "SEE HIM ON FIELD"
+          },
+          {
+            "href": "#offfield-personal",
+            "text": "EXPLORE PERSONAL"
+          }
+        ]
+      },
+      "viewport": 1440,
+      "contentWidth": 1440,
+      "scenes": 8,
+      "legacyWordmarks": 0,
+      "nil": "LET’S TALKNIL.Representative contact details coming soon.FOLLOW ALONGSocial profiles will appear here when links are ready.",
+      "links": [],
+      "closingLogo": {
+        "x": 261.203125,
+        "y": 88.71875,
+        "width": 500,
+        "height": 500,
+        "top": 88.71875,
+        "right": 761.203125,
+        "bottom": 588.71875,
+        "left": 261.203125
+      },
+      "closingPhoto": {
+        "x": 911.53125,
+        "y": 158.71875,
+        "width": 360,
+        "height": 360,
+        "top": 158.71875,
+        "right": 1271.53125,
+        "bottom": 518.71875,
+        "left": 911.53125
+      }
+    },
+    {
+      "name": "mobile",
+      "status": 200,
+      "errors": [],
+      "worlds": {
+        "bounds": {
+          "x": 24,
+          "y": 254.9375,
+          "width": 342,
+          "height": 362.96875,
+          "top": 254.9375,
+          "right": 366,
+          "bottom": 617.90625,
+          "left": 24
+        },
+        "text": "ONFIELD.PREVIEW CROP · ORIGINAL PENDINGHelmet on · Game day · No. 17SEE HIM ON FIELDOFFFIELD.PREVIEW CROP · ORIGINAL PENDINGHelmet off · Sideline portrait.EXPLORE PERSONAL",
+        "images": [
+          {
+            "src": "http://127.0.0.1:3100/media/arrival-360.avif",
+            "loaded": true,
+            "alt": "Zephyr Kreye wearing number 17 in a black uniform and helmet, photographed in black and white.",
+            "bounds": {
+              "x": 24,
+              "y": 338.125,
+              "width": 165,
+              "height": 161.328125,
+              "top": 338.125,
+              "right": 189,
+              "bottom": 499.453125,
+              "left": 24
+            }
+          },
+          {
+            "src": "http://127.0.0.1:3100/media/portrait-360.avif",
+            "loaded": true,
+            "alt": "Zephyr Kreye seated on the sideline in his number 17 black uniform.",
+            "bounds": {
+              "x": 201,
+              "y": 366.125,
+              "width": 165,
+              "height": 172.78125,
+              "top": 366.125,
+              "right": 366,
+              "bottom": 538.90625,
+              "left": 201
+            }
+          }
+        ],
+        "links": [
+          {
+            "href": "#on-field",
+            "text": "SEE HIM ON FIELD"
+          },
+          {
+            "href": "#offfield-personal",
+            "text": "EXPLORE PERSONAL"
+          }
+        ]
+      },
+      "viewport": 390,
+      "contentWidth": 390,
+      "scenes": 8,
+      "legacyWordmarks": 0,
+      "nil": "LET’S TALKNIL.Representative contact details coming soon.FOLLOW ALONGSocial profiles will appear here when links are ready.",
+      "links": [],
+      "closingLogo": {
+        "x": 31.234375,
+        "y": 288.015625,
+        "width": 184.9375,
+        "height": 184.9375,
+        "top": 288.015625,
+        "right": 216.171875,
+        "bottom": 472.953125,
+        "left": 31.234375
+      },
+      "closingPhoto": {
+        "x": 226.171875,
+        "y": 314.1875,
+        "width": 132.59375,
+        "height": 132.59375,
+        "top": 314.1875,
+        "right": 358.765625,
+        "bottom": 446.78125,
+        "left": 226.171875
+      }
+    },
+    {
+      "name": "android",
+      "status": 200,
+      "errors": [],
+      "worlds": {
+        "bounds": {
+          "x": 24,
+          "y": 254.578125,
+          "width": 364,
+          "height": 377.828125,
+          "top": 254.578125,
+          "right": 388,
+          "bottom": 632.40625,
+          "left": 24
+        },
+        "text": "ONFIELD.PREVIEW CROP · ORIGINAL PENDINGHelmet on · Game day · No. 17SEE HIM ON FIELDOFFFIELD.PREVIEW CROP · ORIGINAL PENDINGHelmet off · Sideline portrait.EXPLORE PERSONAL",
+        "images": [
+          {
+            "src": "http://127.0.0.1:3100/media/arrival-360.avif",
+            "loaded": true,
+            "alt": "Zephyr Kreye wearing number 17 in a black uniform and helmet, photographed in black and white.",
+            "bounds": {
+              "x": 24,
+              "y": 341.109375,
+              "width": 176,
+              "height": 172.078125,
+              "top": 341.109375,
+              "right": 200,
+              "bottom": 513.1875,
+              "left": 24
+            }
+          },
+          {
+            "src": "http://127.0.0.1:3100/media/portrait-360.avif",
+            "loaded": true,
+            "alt": "Zephyr Kreye seated on the sideline in his number 17 black uniform.",
+            "bounds": {
+              "x": 212,
+              "y": 369.109375,
+              "width": 176,
+              "height": 184.296875,
+              "top": 369.109375,
+              "right": 388,
+              "bottom": 553.40625,
+              "left": 212
+            }
+          }
+        ],
+        "links": [
+          {
+            "href": "#on-field",
+            "text": "SEE HIM ON FIELD"
+          },
+          {
+            "href": "#offfield-personal",
+            "text": "EXPLORE PERSONAL"
+          }
+        ]
+      },
+      "viewport": 412,
+      "contentWidth": 412,
+      "scenes": 8,
+      "legacyWordmarks": 0,
+      "nil": "LET’S TALKNIL.Representative contact details coming soon.FOLLOW ALONGSocial profiles will appear here when links are ready.",
+      "links": [],
+      "closingLogo": {
+        "x": 32.109375,
+        "y": 340.859375,
+        "width": 197.703125,
+        "height": 197.703125,
+        "top": 340.859375,
+        "right": 229.8125,
+        "bottom": 538.5625,
+        "left": 32.109375
+      },
+      "closingPhoto": {
+        "x": 239.8125,
+        "y": 369.671875,
+        "width": 140.078125,
+        "height": 140.078125,
+        "top": 369.671875,
+        "right": 379.890625,
+        "bottom": 509.75,
+        "left": 239.8125
+      }
+    }
+  ],
+  "desktopMotion": {
+    "railTravel": 86,
+    "pinSpacers": 2,
+    "reducedMotionPinSpacers": 0
+  },
+  "finishedUtc": "2026-10-25T16:32:21.171Z"
+}

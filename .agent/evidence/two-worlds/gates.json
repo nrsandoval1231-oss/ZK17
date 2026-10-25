@@ -1,0 +1,31 @@
+{
+  "checks": [
+    {
+      "log": ".agent/evidence/two-worlds/build.log",
+      "exitCode": 0,
+      "name": "build",
+      "durationSeconds": 11.4279545
+    },
+    {
+      "log": ".agent/evidence/two-worlds/typecheck.log",
+      "exitCode": 0,
+      "name": "typecheck",
+      "durationSeconds": 1.38074
+    },
+    {
+      "log": ".agent/evidence/two-worlds/lint.log",
+      "exitCode": 0,
+      "name": "lint",
+      "durationSeconds": 2.8469158
+    },
+    {
+      "log": ".agent/evidence/two-worlds/test.log",
+      "exitCode": 0,
+      "name": "test",
+      "durationSeconds": 0.5649212
+    }
+  ],
+  "siteUrl": "https://review.zk17-review.pages.dev",
+  "finishedUtc": "2026-10-25T16:31:48.7113022Z",
+  "startedUtc": "2026-10-25T16:31:32.4831769Z"
+}

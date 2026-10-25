@@ -1,0 +1,9 @@
+# Two worlds — implementation direction
+Experience mode, established ZK17 visual world. Owner supplied paired-portrait reference; this is a local composition extension, not a new brand. The screenshot establishes the visual intent without permission to reuse Lando assets, likeness, or exact layout.
+
+The contrast is helmet-on and helmet-off Zephyr. Build a light editorial diptych at the entrance of Off Field, paired large type and staggered real photo frames, restrained purple and working routes into football/personal content. Full photographic frames preserve authenticity; do not fake matching profile portraits. Dedicated mobile two-column composition must keep faces, labels and touch targets visible. Keep current eight scenes and GSAP rail.
+
+Connect presentation: complete approved social list plus NIL inquiries, using representative pathway only. Contact model source-backed and unpublished until owner supplies destination. Owner asked asynchronously for exact social URLs and representative destination; no substitute guesses. Finished campaign photo needs matching original helmet-on/helmet-off portrait exports and rights. Current preview crops remain authorized for preview only. Canonical supplied monogram stands alone.
+
+## Matching portrait shoot brief
+Capture Zephyr twice with the same camera height, distance and lighting: helmet on in his real number17 uniform, and helmet off. For a facing-pair treatment, photograph genuine opposing profiles; never mirror an image or reverse the jersey. Keep full head/helmet, shoulders and generous space around each subject, neutral background, no interface overlays. Supply full-resolution original JPEG/RAW exports and photographer/use approval. The current preview uses an existing game-day portrait and sideline portrait, not a newly commissioned matching shoot.

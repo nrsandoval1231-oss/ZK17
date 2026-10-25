@@ -1,0 +1,17 @@
+{
+  "node": "ZK-08-R1",
+  "started_utc": "UNKNOWN",
+  "finished_utc": "2026-10-25T16:30:46Z",
+  "changed_files": [
+    "app/globals.css",
+    ".agent/TWO_WORLDS_REPAIR.json"
+  ],
+  "repair": "Replaced overlapping absolute photo/logo positioning in the closing identity with a responsive two-column grid. The canonical logo and preview photo, including its PREVIEW caption, now occupy separate flow columns at desktop, tablet, and 390/412-class mobile widths.",
+  "validation": {
+    "lint": "PASS: npm run lint",
+    "diff_check": "PASS: git diff --check",
+    "build": "PASS: SITE_URL=https://review.zk17-review.pages.dev PUBLIC_RELEASE=false PREVIEW_MEDIA_MODE=true npm run build",
+    "visual_capture": "PENDING parent confirmation captures at 1440, 390, and 412; no builder screenshot claimed"
+  },
+  "authority": "No content, assets, or external destinations changed; no push, deployment, or certification performed."
+}

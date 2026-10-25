@@ -1,0 +1,64 @@
+{
+  "base": "3d21af1f71ef920ec5ae541b361cc41052f400aa",
+  "lane": "focused local visual extension",
+  "startUtc": "2026-10-25T16:12:21Z",
+  "repairCount": 1,
+  "repairCause": "Closing portrait label overlapped canonical logo; separate normal-flow columns confirmed",
+  "qaScriptRepair": "Await media-change DOM state via existing locator expectation instead of immediate assertion",
+  "unitTests": 14,
+  "chromium": {
+    "startTime": "2026-10-25T16:32:07.543Z",
+    "duration": 6121.716,
+    "expected": 23,
+    "skipped": 4,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "webkit": {
+    "startTime": "2026-10-25T16:32:14.669Z",
+    "duration": 2688.577,
+    "expected": 7,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "finalGateDurationSeconds": 16.228,
+  "desktopMotion": {
+    "railTravel": 86,
+    "pinSpacers": 2,
+    "reducedMotionPinSpacers": 0
+  },
+  "viewports": [
+    {
+      "name": "desktop",
+      "status": 200,
+      "errors": [],
+      "scenes": 8,
+      "legacyWordmarks": 0,
+      "overflow": 0
+    },
+    {
+      "name": "mobile",
+      "status": 200,
+      "errors": [],
+      "scenes": 8,
+      "legacyWordmarks": 0,
+      "overflow": 0
+    },
+    {
+      "name": "android",
+      "status": 200,
+      "errors": [],
+      "scenes": 8,
+      "legacyWordmarks": 0,
+      "overflow": 0
+    }
+  ],
+  "socialDestinations": "Owner URLs not supplied; empty and unpublished",
+  "nilDestination": "Owner representative destination not supplied; null and unpublished",
+  "builder": "gpt-6-luna low named role",
+  "tokens": "UNKNOWN",
+  "planningBuildAuditDurations": "UNKNOWN unless individually sampled",
+  "logs": "Raw gzip preserved; text logs normalize whitespace only",
+  "finalPublicRelease": "NOT AUTHORIZED"
+}
