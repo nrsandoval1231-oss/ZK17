@@ -1,6 +1,6 @@
 {
   "origin": "http://127.0.0.1:3100",
-  "startedUtc": "2026-10-25T15:18:38.173Z",
+  "startedUtc": "2026-10-25T15:23:43.316Z",
   "viewports": [
     {
       "name": "desktop",
@@ -56,7 +56,27 @@
           "href": "/apple-touch-icon.png"
         }
       ],
-      "og": "https://review.zk17-review.pages.dev/og-zk17.png"
+      "og": "https://review.zk17-review.pages.dev/og-zk17.png",
+      "closingBottom": {
+        "x": 60.15625,
+        "y": 631.359375,
+        "width": 1159.6875,
+        "height": 30,
+        "top": 631.359375,
+        "right": 1219.84375,
+        "bottom": 661.359375,
+        "left": 60.15625
+      },
+      "closingFuture": {
+        "x": 480.015625,
+        "y": 716.34375,
+        "width": 319.953125,
+        "height": 10.5,
+        "top": 716.34375,
+        "right": 799.96875,
+        "bottom": 726.84375,
+        "left": 480.015625
+      }
     },
     {
       "name": "mobile",
@@ -112,7 +132,27 @@
           "href": "/apple-touch-icon.png"
         }
       ],
-      "og": "https://review.zk17-review.pages.dev/og-zk17.png"
+      "og": "https://review.zk17-review.pages.dev/og-zk17.png",
+      "closingBottom": {
+        "x": 17,
+        "y": 700.5625,
+        "width": 356,
+        "height": 23,
+        "top": 700.5625,
+        "right": 373,
+        "bottom": 723.5625,
+        "left": 17
+      },
+      "closingFuture": {
+        "x": 58.375,
+        "y": 808.34375,
+        "width": 273.25,
+        "height": 9,
+        "top": 808.34375,
+        "right": 331.625,
+        "bottom": 817.34375,
+        "left": 58.375
+      }
     },
     {
       "name": "android",
@@ -168,8 +208,28 @@
           "href": "/apple-touch-icon.png"
         }
       ],
-      "og": "https://review.zk17-review.pages.dev/og-zk17.png"
+      "og": "https://review.zk17-review.pages.dev/og-zk17.png",
+      "closingBottom": {
+        "x": 17,
+        "y": 778.171875,
+        "width": 378,
+        "height": 23,
+        "top": 778.171875,
+        "right": 395,
+        "bottom": 801.171875,
+        "left": 17
+      },
+      "closingFuture": {
+        "x": 69.375,
+        "y": 879.125,
+        "width": 273.25,
+        "height": 9,
+        "top": 879.125,
+        "right": 342.625,
+        "bottom": 888.125,
+        "left": 69.375
+      }
     }
   ],
-  "finishedUtc": "2026-10-25T15:18:40.595Z"
+  "finishedUtc": "2026-10-25T15:23:46.061Z"
 }

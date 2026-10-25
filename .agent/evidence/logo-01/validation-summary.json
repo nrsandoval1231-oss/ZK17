@@ -29,15 +29,16 @@
   "horizontalOverflow": false,
   "diffCheck": "PASS",
   "dependencyChanges": false,
-  "repairCount": 0,
+  "repairCount": 1,
   "tokens": "UNKNOWN",
   "controllerRuntimeConfigIdentity": "UNKNOWN",
   "lane": "focused",
   "builder": "gpt-6-luna low, named role",
   "planningDuration": "UNKNOWN, start not measured separately",
   "buildDuration": "UNKNOWN, builder packet start does not distinguish planning",
-  "finalGateDurationSeconds": 17.8829642,
+  "finalGateDurationSeconds": 16.647,
   "elapsedToIndependentAcceptance": "PENDING",
   "finalPublicRelease": "NOT AUTHORIZED",
-  "logPreservation": "Raw command output preserved in corresponding .log.gz; text logs normalize trailing whitespace only"
+  "logPreservation": "Raw command output preserved in corresponding .log.gz; text logs normalize trailing whitespace only",
+  "footerSeparation": "PASS: future caption at least4px below copyright/rule bounds in all3 viewports"
 }

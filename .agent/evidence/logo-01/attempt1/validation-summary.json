@@ -1,0 +1,43 @@
+{
+  "base": "00ade83afed193d6060d45b54ad57e8bdd863ee4",
+  "scope": "Canonical owner-supplied logo",
+  "masterSha256": "6bb5f0a9598b91f5ba79f4935a0b2835d3d260eb4a537a1554e594a2d8864736",
+  "sourceMatchesAttachment": true,
+  "gates": "gates.json",
+  "unitTestsPassed": 7,
+  "chromium": {
+    "passed": 17,
+    "intentionalSkips": 4,
+    "failures": 0,
+    "flaky": 0
+  },
+  "webkit": {
+    "passed": 5,
+    "intentionalSkips": 2,
+    "failures": 0,
+    "flaky": 0
+  },
+  "browserProof": "browser.json",
+  "viewports": [
+    "1280x720",
+    "390x844",
+    "412x915"
+  ],
+  "logosPerViewport": 4,
+  "loadedSquareImages": true,
+  "pageErrors": 0,
+  "horizontalOverflow": false,
+  "diffCheck": "PASS",
+  "dependencyChanges": false,
+  "repairCount": 0,
+  "tokens": "UNKNOWN",
+  "controllerRuntimeConfigIdentity": "UNKNOWN",
+  "lane": "focused",
+  "builder": "gpt-6-luna low, named role",
+  "planningDuration": "UNKNOWN, start not measured separately",
+  "buildDuration": "UNKNOWN, builder packet start does not distinguish planning",
+  "finalGateDurationSeconds": 17.8829642,
+  "elapsedToIndependentAcceptance": "PENDING",
+  "finalPublicRelease": "NOT AUTHORIZED",
+  "logPreservation": "Raw command output preserved in corresponding .log.gz; text logs normalize trailing whitespace only"
+}

@@ -1,0 +1,18 @@
+{
+  "packet": "ZK-06-R1",
+  "base_sha": "79a896027d7729618e9d681e444845ed34e5c823",
+  "started_utc": "UNKNOWN (not sampled at dispatch)",
+  "finished_utc": "2026-10-25T15:22:07Z",
+  "changed_files": [
+    "app/globals.css"
+  ],
+  "change": "Moved closing-future into normal footer flow, centered and wrap-enabled it with a modest margin, and removed absolute bottom offsets at tablet and mobile breakpoints. The closing section retains min-height so content can expand naturally.",
+  "checks": [
+    { "command": "npm run lint", "exit_code": 0, "result": "ESLint passed." },
+    { "command": "git diff --check", "exit_code": 0, "result": "Passed; only configured LF-to-CRLF informational warnings appeared." }
+  ],
+  "limitations": [
+    "Closing layout screenshots and combined rebuild/final checks remain with the parent.",
+    "No deployment or certification performed."
+  ]
+}

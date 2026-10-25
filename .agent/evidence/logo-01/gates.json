@@ -1,31 +1,31 @@
 {
-  "finishedUtc": "2026-10-25T15:18:02.5734983Z",
-  "siteUrl": "https://review.zk17-review.pages.dev",
-  "startedUtc": "2026-10-25T15:17:44.6905341Z",
+  "finishedUtc": "2026-10-25T15:22:58.3065340Z",
   "checks": [
     {
+      "durationSeconds": 11.7031737,
       "log": ".agent/evidence/logo-01/build.log",
       "exitCode": 0,
-      "durationSeconds": 13.2299797,
       "name": "build"
     },
     {
+      "durationSeconds": 1.5033455,
       "log": ".agent/evidence/logo-01/typecheck.log",
       "exitCode": 0,
-      "durationSeconds": 1.3556956,
       "name": "typecheck"
     },
     {
+      "durationSeconds": 2.8727768,
       "log": ".agent/evidence/logo-01/lint.log",
       "exitCode": 0,
-      "durationSeconds": 2.7240976,
       "name": "lint"
     },
     {
+      "durationSeconds": 0.5608607,
       "log": ".agent/evidence/logo-01/test.log",
       "exitCode": 0,
-      "durationSeconds": 0.5637494,
       "name": "test"
     }
-  ]
+  ],
+  "startedUtc": "2026-10-25T15:22:41.6594868Z",
+  "siteUrl": "https://review.zk17-review.pages.dev"
 }
