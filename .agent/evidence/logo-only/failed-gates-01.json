@@ -1,0 +1,13 @@
+{
+  "siteUrl": "https://review.zk17-review.pages.dev",
+  "checks": [
+    {
+      "durationSeconds": 4.7783613,
+      "exitCode": 1,
+      "log": ".agent/evidence/logo-only/build.log",
+      "name": "build"
+    }
+  ],
+  "startedUtc": "2026-10-25T15:44:44.5487923Z",
+  "finishedUtc": "2026-10-25T15:44:49.3601285Z"
+}

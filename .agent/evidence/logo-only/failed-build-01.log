@@ -1,0 +1,76 @@
+
+> zk17-official@0.1.0 prebuild
+> node scripts/release-check.mjs
+
+Preview media mode enabled.
+
+> zk17-official@0.1.0 build
+> next build --webpack && node scripts/audit-export.mjs
+
+▲ Next.js 16.4.3 (webpack)
+✓ Running next.config.js took 23ms
+
+  Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[2]!C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[3]!C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\app\globals.css': No serializer registered for PostCSSSyntaxError
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> webpack/lib/ModuleBuildError -> PostCSSSyntaxError
+Failed to compile.
+
+./app/globals.css:15:202
+Syntax error: C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\app\globals.css Unknown word .closing-top
+
+  13 | .responsive-photo{position:relative;margin:0;overflow:hidden}.responsive-photo picture{display:block;width:100%;height:100%}.responsive-photo img{display:block;width:100%;height:100%;object-fit:cover}.responsive-photo figcaption{position:absolute;left:12px;bottom:12px;z-index:3;padding:7px 9px;background:rgba(9,9,13,.88);color:#f5f3f8;font:600 7px/1.2 var(--body);letter-spacing:.12em}.responsive-photo figcaption i{display:inline-block;width:5px;height:5px;margin-right:5px;border-radius:50%;background:var(--lavender)}.hero-photo{position:absolute;z-index:1;right:5vw;top:24%;width:35%;height:45%;background:var(--carbon)}.hero-mark{z-index:0}.hero-photo img{filter:grayscale(1)}.field-photo{position:absolute;inset:0;width:100%;height:100%;z-index:0}.field-photo img{filter:grayscale(1);object-position:50% 53%}.field-lines{z-index:1}.field-mark,.field-caption{z-index:2}.field-art:after{z-index:3}.closing-photo{position:absolute;right:7vw;bottom:27%;width:20vw;height:39%;z-index:1}.closing-photo img{filter:grayscale(1)}.closing-wordmark{position:relative;z-index:2}
+  14 | .brand{display:inline-flex;align-items:center;gap:9px;white-space:nowrap}.brand-logo{display:block;width:40px;height:40px;object-fit:contain;flex:none}.closing-top .brand-logo{width:34px;height:34px}.closing-top .closing-wordmark{width:min(48vw,500px);aspect-ratio:1;margin:0 auto;padding:0}.closing-logo{width:100%;height:100%;object-fit:contain}.archive-logo{width:min(30%,118px);height:auto;aspect-ratio:1;object-fit:contain}
+> 15 | h:29px;height:29px}.closing-top }
+     |                    ^
+  16 | @media(max-width:899px){.hero-photo{right:3vw;top:25%;width:43%;height:39%}.closing-photo{right:5vw;width:27vw;height:33%;bottom:29%}}
+  17 | @media(max-width:560px){.hero-photo{right:5vw;top:22%;width:48%;height:37%}.hero-photo figcaption{font-size:6px;left:5px;bottom:5px;padding:5px}.field-photo{opacity:.9}.closing-photo{right:3vw;width:34vw;height:28%;bottom:28%}}
+
+./app/globals.css
+Syntax error: C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\app\globals.css Unknown word .closing-top (15:202)
+
+  13 | .responsive-photo{position:relative;margin:0;overflow:hidden}.responsive-photo picture{display:block;width:100%;height:100%}.responsive-photo img{display:block;width:100%;height:100%;object-fit:cover}.responsive-photo figcaption{position:absolute;left:12px;bottom:12px;z-index:3;padding:7px 9px;background:rgba(9,9,13,.88);color:#f5f3f8;font:600 7px/1.2 var(--body);letter-spacing:.12em}.responsive-photo figcaption i{display:inline-block;width:5px;height:5px;margin-right:5px;border-radius:50%;background:var(--lavender)}.hero-photo{position:absolute;z-index:1;right:5vw;top:24%;width:35%;height:45%;background:var(--carbon)}.hero-mark{z-index:0}.hero-photo img{filter:grayscale(1)}.field-photo{position:absolute;inset:0;width:100%;height:100%;z-index:0}.field-photo img{filter:grayscale(1);object-position:50% 53%}.field-lines{z-index:1}.field-mark,.field-caption{z-index:2}.field-art:after{z-index:3}.closing-photo{position:absolute;right:7vw;bottom:27%;width:20vw;height:39%;z-index:1}.closing-photo img{filter:grayscale(1)}.closing-wordmark{position:relative;z-index:2}
+  14 | .brand{display:inline-flex;align-items:center;gap:9px;white-space:nowrap}.brand-logo{display:block;width:40px;height:40px;object-fit:contain;flex:none}.closing-top .brand-logo{width:34px;height:34px}.closing-top .closing-wordmark{width:min(48vw,500px);aspect-ratio:1;margin:0 auto;padding:0}.closing-logo{width:100%;height:100%;object-fit:contain}.archive-logo{width:min(30%,118px);height:auto;aspect-ratio:1;object-fit:contain}
+> 15 | h:29px;height:29px}.closing-top }
+     |                    ^
+  16 | @media(max-width:899px){.hero-photo{right:3vw;top:25%;width:43%;height:39%}.closing-photo{right:5vw;width:27vw;height:33%;bottom:29%}}
+  17 | @media(max-width:560px){.hero-photo{right:5vw;top:22%;width:48%;height:37%}.hero-photo figcaption{font-size:6px;left:5px;bottom:5px;padding:5px}.field-photo{opacity:.9}.closing-photo{right:3vw;width:34vw;height:28%;bottom:28%}}
+
+    at tryRunOrWebpackError (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:29:316153)
+    at __webpack_require_module__ (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:29:131548)
+    at __nested_webpack_require_161494__ (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:29:130983)
+    at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:29:131840
+    at symbolIterator (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+    at done (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\neo-async\async.js:1:14824)
+    at Hook.eval [as callAsync] (eval at create (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:14:9222), <anonymous>:15:1)
+    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:14:6376)
+    at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:29:130703
+    at symbolIterator (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\neo-async\async.js:1:14402)
+-- inner error --
+Syntax error: C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\app\globals.css Unknown word .closing-top (15:202)
+
+  13 | .responsive-photo{position:relative;margin:0;overflow:hidden}.responsive-photo picture{display:block;width:100%;height:100%}.responsive-photo img{display:block;width:100%;height:100%;object-fit:cover}.responsive-photo figcaption{position:absolute;left:12px;bottom:12px;z-index:3;padding:7px 9px;background:rgba(9,9,13,.88);color:#f5f3f8;font:600 7px/1.2 var(--body);letter-spacing:.12em}.responsive-photo figcaption i{display:inline-block;width:5px;height:5px;margin-right:5px;border-radius:50%;background:var(--lavender)}.hero-photo{position:absolute;z-index:1;right:5vw;top:24%;width:35%;height:45%;background:var(--carbon)}.hero-mark{z-index:0}.hero-photo img{filter:grayscale(1)}.field-photo{position:absolute;inset:0;width:100%;height:100%;z-index:0}.field-photo img{filter:grayscale(1);object-position:50% 53%}.field-lines{z-index:1}.field-mark,.field-caption{z-index:2}.field-art:after{z-index:3}.closing-photo{position:absolute;right:7vw;bottom:27%;width:20vw;height:39%;z-index:1}.closing-photo img{filter:grayscale(1)}.closing-wordmark{position:relative;z-index:2}
+  14 | .brand{display:inline-flex;align-items:center;gap:9px;white-space:nowrap}.brand-logo{display:block;width:40px;height:40px;object-fit:contain;flex:none}.closing-top .brand-logo{width:34px;height:34px}.closing-top .closing-wordmark{width:min(48vw,500px);aspect-ratio:1;margin:0 auto;padding:0}.closing-logo{width:100%;height:100%;object-fit:contain}.archive-logo{width:min(30%,118px);height:auto;aspect-ratio:1;object-fit:contain}
+> 15 | h:29px;height:29px}.closing-top }
+     |                    ^
+  16 | @media(max-width:899px){.hero-photo{right:3vw;top:25%;width:43%;height:39%}.closing-photo{right:5vw;width:27vw;height:33%;bottom:29%}}
+  17 | @media(max-width:560px){.hero-photo{right:5vw;top:22%;width:48%;height:37%}.hero-photo figcaption{font-size:6px;left:5px;bottom:5px;padding:5px}.field-photo{opacity:.9}.closing-photo{right:3vw;width:34vw;height:28%;bottom:28%}}
+
+    at Object.<anonymous> (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[2]!C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[3]!C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\app\globals.css:1:7)
+    at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:29:962868
+    at Hook.eval [as call] (eval at create (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:14:9000), <anonymous>:7:1)
+    at Hook.CALL_DELEGATE [as _call] (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:14:6270)
+    at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:29:131581
+    at tryRunOrWebpackError (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:29:316107)
+    at __webpack_require_module__ (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:29:131548)
+    at __nested_webpack_require_161494__ (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:29:130983)
+    at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\webpack\bundle5.js:29:131840
+    at symbolIterator (C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\compiled\neo-async\async.js:1:14444)
+
+Generated code for C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[2]!C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[15].oneOf[10].use[3]!C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\app\globals.css
+1 | throw new Error("Module build failed (from ./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js):\nSyntaxError\n\n(15:202) C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\app\\globals.css Unknown word .closing-top\n\n  13 | .responsive-photo{position:relative;margin:0;overflow:hidden}.responsive-photo picture{display:block;width:100%;height:100%}.responsive-photo img{display:block;width:100%;height:100%;object-fit:cover}.responsive-photo figcaption{position:absolute;left:12px;bottom:12px;z-index:3;padding:7px 9px;background:rgba(9,9,13,.88);color:#f5f3f8;font:600 7px/1.2 var(--body);letter-spacing:.12em}.responsive-photo figcaption i{display:inline-block;width:5px;height:5px;margin-right:5px;border-radius:50%;background:var(--lavender)}.hero-photo{position:absolute;z-index:1;right:5vw;top:24%;width:35%;height:45%;background:var(--carbon)}.hero-mark{z-index:0}.hero-photo img{filter:grayscale(1)}.field-photo{position:absolute;inset:0;width:100%;height:100%;z-index:0}.field-photo img{filter:grayscale(1);object-position:50% 53%}.field-lines{z-index:1}.field-mark,.field-caption{z-index:2}.field-art:after{z-index:3}.closing-photo{position:absolute;right:7vw;bottom:27%;width:20vw;height:39%;z-index:1}.closing-photo img{filter:grayscale(1)}.closing-wordmark{position:relative;z-index:2}\n  14 | .brand{display:inline-flex;align-items:center;gap:9px;white-space:nowrap}.brand-logo{display:block;width:40px;height:40px;object-fit:contain;flex:none}.closing-top .brand-logo{width:34px;height:34px}.closing-top .closing-wordmark{width:min(48vw,500px);aspect-ratio:1;margin:0 auto;padding:0}.closing-logo{width:100%;height:100%;object-fit:contain}.archive-logo{width:min(30%,118px);height:auto;aspect-ratio:1;object-fit:contain}\n> 15 | h:29px;height:29px}.closing-top }\n     |                    ^\n  16 | @media(max-width:899px){.hero-photo{right:3vw;top:25%;width:43%;height:39%}.closing-photo{right:5vw;width:27vw;height:33%;bottom:29%}}\n  17 | @media(max-width:560px){.hero-photo{right:5vw;top:22%;width:48%;height:37%}.hero-photo figcaption{font-size:6px;left:5px;bottom:5px;padding:5px}.field-photo{opacity:.9}.closing-photo{right:3vw;width:34vw;height:28%;bottom:28%}}\n");
+
+Import trace for requested module:
+./app/globals.css
+
+
+> Build failed because of webpack errors

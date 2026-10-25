@@ -1,0 +1,23 @@
+
+> zk17-official@0.1.0 test
+> tsx --test tests/*.test.ts
+
+▶ public content eligibility
+  ✔ keeps only source-backed approved media and linked highlights (0.9811ms)
+  ✔ requires source, date, season, and game count before stats appear (0.1418ms)
+  ✔ keeps uncommitted as the only commitment state and holds empty offers/partners/socials (0.1829ms)
+  ✔ uses only source-backed approved photo assignments and prefers them over preview fallbacks (0.2442ms)
+  ✔ keeps commitment content absent by default and renders only an approved enabled record (4.9574ms)
+✔ public content eligibility (7.4469ms)
+▶ release export media boundary
+  ✔ blocks preview files in public sources and in exported output even when preview mode is disabled (9.7639ms)
+  ✔ fails prebuild when commitment reveal is enabled without a published approved announcement (59.3958ms)
+✔ release export media boundary (70.0007ms)
+ℹ tests 7
+ℹ suites 2
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 188.8106

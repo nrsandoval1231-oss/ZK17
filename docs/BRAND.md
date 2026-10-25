@@ -5,3 +5,7 @@ The owner supplied and approved the sword-and-ZK monogram as the canonical ZK17 
 The generated logo images preserve the full square composition and black background. `scripts/generate-brand.mjs` verifies the master hash before producing square PNG derivatives at 32, 64, 180 and 512 px, plus `public/favicon.png` and a self-contained `public/favicon.svg` from the 64 px derivative, and `public/apple-touch-icon.png` at 180 px. It does not redraw, recolor, or crop the source mark. `scripts/generate-og.mjs` verifies the same master and places a 540 × 540 px square derivative in the 1200 × 630 px social image while retaining the athlete name, #17, class year, and campaign line.
 
 Run `node scripts/generate-brand.mjs` and `node scripts/generate-og.mjs` from the repository root to reproduce the assets. Presentation metadata lives in `content/brand.ts`; `components/brand-logo.tsx` renders the supplied monogram with its accessible text and explicit square dimensions.
+
+
+## Usage rule
+Use the supplied monogram as the only ZK17 logo. Do not pair it with a duplicate ZK17 wordmark. The athlete's name and jersey-number storytelling remain editorial content.

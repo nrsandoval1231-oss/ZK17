@@ -1,0 +1,36 @@
+{
+  "base": "d9e2ca850de5f970926cf275120954579f8fed33",
+  "lane": "focused",
+  "builder": "gpt-6-luna low named role",
+  "startUtc": "2026-10-25T15:43:05Z",
+  "repairCount": 1,
+  "repairCause": "Substring CSS cleanup left selector prefixes; integrated build caught error; scoped repair passed",
+  "finalGateSeconds": 16.508,
+  "unitTests": 7,
+  "chromium": {
+    "startTime": "2026-10-25T15:47:04.855Z",
+    "duration": 5364.474,
+    "expected": 17,
+    "skipped": 4,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "webkit": {
+    "startTime": "2026-10-25T15:47:11.204Z",
+    "duration": 2336.455,
+    "expected": 5,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "legacyWordmarkNodesPerViewport": [
+    0,
+    0,
+    0
+  ],
+  "sourceAssetChanges": false,
+  "logPreservation": "Raw .log.gz and whitespace-normalized text .log",
+  "tokens": "UNKNOWN",
+  "planningBuildAuditDurations": "UNKNOWN unless individually recorded",
+  "finalPublicRelease": "NOT AUTHORIZED"
+}

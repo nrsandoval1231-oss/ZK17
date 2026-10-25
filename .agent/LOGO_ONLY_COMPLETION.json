@@ -1,0 +1,26 @@
+{
+  "packet": "ZK-07 CSS syntax repair",
+  "base_sha": "d9e2ca850de5f970926cf275120954579f8fed33",
+  "started_utc": "UNKNOWN (not sampled at dispatch)",
+  "finished_utc": "2026-10-25T15:45:50Z",
+  "changed_files": [
+    "app/globals.css"
+  ],
+  "repair": "Restored the closing wordmark dimension rules as standalone .closing-wordmark selectors and removed the dangling .closing-top selector left by legacy style removal.",
+  "checks": [
+    {
+      "command": "SITE_URL=https://review.zk17-review.pages.dev PUBLIC_RELEASE=false PREVIEW_MEDIA_MODE=true npm run build",
+      "exit_code": 0,
+      "result": "Next production build, TypeScript, static generation, and export audit completed; preview export media audit skipped as expected for non-release build."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "Passed; only configured LF-to-CRLF informational warnings appeared."
+    }
+  ],
+  "limitations": [
+    "The parent retains the original failed-build log and owns final browser checks.",
+    "No deployment or certification performed."
+  ]
+}
