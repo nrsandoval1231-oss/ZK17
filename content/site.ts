@@ -60,4 +60,3 @@ export const previewPhotos: PreviewPhoto[] = [
  { kind: 'preview', id: 'throwing', src: '/media/throwing-706.webp', width: 706, height: 730, alt: 'Zephyr Kreye viewed from behind, wearing a purple number 17 uniform and preparing to throw.', focal: '50% 40%', label: 'PREVIEW CROP · ORIGINAL PENDING' },
  { kind: 'preview', id: 'running', src: '/media/running-706.webp', width: 706, height: 620, alt: 'Zephyr Kreye carrying the football in a purple uniform.', focal: '49% 62%', label: 'PREVIEW CROP · ORIGINAL PENDING' },
 ];
-

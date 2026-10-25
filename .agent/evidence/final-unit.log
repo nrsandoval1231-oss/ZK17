@@ -3,16 +3,16 @@
 > tsx --test tests/*.test.ts
 
 ▶ public content eligibility
-  ✔ keeps only source-backed approved media and linked highlights (2.2867ms)
-  ✔ requires source, date, season, and game count before stats appear (0.2186ms)
-  ✔ keeps uncommitted as the only commitment state and holds empty offers/partners/socials (0.2065ms)
-  ✔ uses only source-backed approved photo assignments and prefers them over preview fallbacks (0.2752ms)
-  ✔ keeps commitment content absent by default and renders only an approved enabled record (5.5058ms)
-✔ public content eligibility (9.9598ms)
+  ✔ keeps only source-backed approved media and linked highlights (1.0779ms)
+  ✔ requires source, date, season, and game count before stats appear (0.1491ms)
+  ✔ keeps uncommitted as the only commitment state and holds empty offers/partners/socials (0.1675ms)
+  ✔ uses only source-backed approved photo assignments and prefers them over preview fallbacks (0.2374ms)
+  ✔ keeps commitment content absent by default and renders only an approved enabled record (5.5836ms)
+✔ public content eligibility (8.9975ms)
 ▶ release export media boundary
-  ✔ blocks preview files in public sources and in exported output even when preview mode is disabled (10.7702ms)
-  ✔ fails prebuild when commitment reveal is enabled without a published approved announcement (52.7919ms)
-✔ release export media boundary (64.3657ms)
+  ✔ blocks preview files in public sources and in exported output even when preview mode is disabled (9.3205ms)
+  ✔ fails prebuild when commitment reveal is enabled without a published approved announcement (52.7381ms)
+✔ release export media boundary (62.7994ms)
 ℹ tests 7
 ℹ suites 2
 ℹ pass 7
@@ -20,4 +20,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 195.3122
+ℹ duration_ms 284.9157

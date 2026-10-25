@@ -1,39 +1,34 @@
 {
+  "audit": "0 vulnerabilities, package-lock unchanged since prior candidate audit",
+  "previewMediaMode": true,
+  "startedUtc": "2026-10-25T14:53:49.1466549Z",
+  "publicRelease": false,
   "siteUrl": "https://review.zk17-review.pages.dev",
   "checks": [
     {
-      "durationSeconds": 11.1915693,
-      "log": ".agent/evidence/final-build.log",
+      "durationSeconds": 11.7865058,
       "exitCode": 0,
-      "name": "build"
+      "name": "build",
+      "log": ".agent/evidence/final-build.log"
     },
     {
-      "durationSeconds": 1.4756311,
-      "log": ".agent/evidence/final-typecheck.log",
+      "durationSeconds": 1.6009053,
       "exitCode": 0,
-      "name": "typecheck"
+      "name": "typecheck",
+      "log": ".agent/evidence/final-typecheck.log"
     },
     {
-      "durationSeconds": 3.272225,
-      "log": ".agent/evidence/final-lint.log",
+      "durationSeconds": 3.2303588,
       "exitCode": 0,
-      "name": "lint"
+      "name": "lint",
+      "log": ".agent/evidence/final-lint.log"
     },
     {
-      "durationSeconds": 0.6218551,
-      "log": ".agent/evidence/final-unit.log",
+      "durationSeconds": 0.7127032,
       "exitCode": 0,
-      "name": "unit"
-    },
-    {
-      "durationSeconds": 0.8563258,
-      "log": ".agent/evidence/final-audit.log",
-      "exitCode": 0,
-      "name": "audit"
+      "name": "unit",
+      "log": ".agent/evidence/final-unit.log"
     }
   ],
-  "startedUtc": "2026-10-25T14:47:18.1845253Z",
-  "publicRelease": false,
-  "previewMediaMode": true,
-  "finishedUtc": "2026-10-25T14:47:35.6239610Z"
+  "finishedUtc": "2026-10-25T14:54:06.4851110Z"
 }

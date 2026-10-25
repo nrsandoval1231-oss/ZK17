@@ -21,3 +21,5 @@
 .gallery-empty{color:var(--silver)}.film-frame-art{position:absolute;inset:0}.film-frame-art>.media-placeholder{position:absolute;inset:0;min-height:0}.hero-photo figcaption{top:10px;bottom:auto;left:10px;max-width:calc(100% - 20px);font-size:8px;padding:7px 9px}.menu-toggle.is-open{visibility:hidden;pointer-events:none}@media(max-width:560px){.hero-photo figcaption{top:8px;bottom:auto;left:8px;font-size:7px;padding:5px 6px}}
 
 .film-frame-art>.media-placeholder{transition:transform .7s cubic-bezier(.2,.7,.2,1)}.film-frame:hover .film-frame-art>.media-placeholder{transform:scale(1.025)}.panel-one>.responsive-photo{height:100%}.announcement-copy{white-space:pre-line;line-height:.9}@media(max-width:899px){.hero-coord{max-width:24ch;line-height:1.5}}
+
+.film-frame-art .placeholder-caption{top:52px;left:28px;bottom:auto}@media(max-width:560px){.film-frame-art .placeholder-caption{top:39px;left:18px;bottom:auto}}
