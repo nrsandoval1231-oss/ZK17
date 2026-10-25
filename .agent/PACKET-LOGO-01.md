@@ -1,0 +1,10 @@
+# ZK-06 — Canonical supplied logo integration
+Lane: focused. READY. Base main 00ade83afed193d6060d45b54ad57e8bdd863ee4. Start UTC 2026-10-25T15:13:13Z.
+
+Owner explicitly supplied Photo 1.jpg as canonical logo. Master: C:/Users/nrsan/.codex/codex-remote-attachments/01a17354-88e2-7f53-a522-a4c909a6cbb4/4D6091BB-8612-46EF-A6A8-D61A9503DFE3/1-Photo-1.jpg . Preserve exact supplied JPEG in brand/; do not redraw, AI-generate, recolor or distort the mark. Black background may be integrated on existing black surfaces; derivative resizing/reencoding only. Preserve full square composition/aspect ratio.
+
+Luna owns brand/, public/brand/, favicon files, public/og-zk17.png, scripts/generate-brand.mjs, scripts/generate-og.mjs, components/brand-logo.tsx, components/site-experience.tsx, app/globals.css, app/layout.tsx, content/brand.ts, docs/BRAND.md, DESIGN.md and .agent/LOGO_COMPLETION.json. Other content/athlete photography, release gates, package files and deployment state excluded. You are not alone; preserve others' changes. Do not push/deploy/certify.
+
+Replace invented logo treatments in header and footer/closing identity with supplied monogram. Keep ZK17 identity as accompanying text where useful; do not replace name/#17 storytelling typography. Integrate canonical logo in favicon/apple touch/social art, accessible image text and predictable dimensions. Keep mobile header/menu space stable. Source metadata separated from presentation. Document owner approval, SHA256, exact master and deterministic generated sizes.
+
+Acceptance: recognizably exact supplied monogram in navigation, closing, favicon and OG; no squashing/clipping; legible header at 390px; no changes to content/motion/release rules. Run focused typecheck/lint and generate assets, report paths/start/finish/checks. Two distinct repair attempts max. Parent reruns final gates/browser checks, Sol scoped independent review, source push and review-branch deployment only. Final public launch remains unauthorized. Tokens/config runtime identity UNKNOWN unless measured.

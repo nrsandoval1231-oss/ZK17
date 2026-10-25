@@ -16,7 +16,7 @@ export const metadata: Metadata = {
  title: 'Zephyr Kreye — ZK17', description: 'Quarterback. Anna High School, Texas. Class of 2027.',
  robots: { index: false, follow: false },
  openGraph: { title: 'ZK17 — Zephyr Kreye', description: 'Built for the moment. Ready for what’s next.', ...(publicSiteUrl ? { images: ['/og-zk17.png'] } : {}), type: 'website' },
- icons: { icon: '/favicon.svg' },
+ icons: { icon: [{ url: '/favicon.png', type: 'image/png', sizes: '64x64' }], apple: '/apple-touch-icon.png' },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
  const jsonLd = { '@context': 'https://schema.org', '@type': 'Person', name: profile.name, memberOf: { '@type': 'SportsTeam', name: profile.school }, jobTitle: profile.position, description: `Class of ${profile.classYear} ${profile.position} at ${profile.school}, ${profile.location}.` };

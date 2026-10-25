@@ -17,3 +17,6 @@ OWN-WORLD: Obsidian/carbon film frames, restrained signature purple, condensed B
 STORY: Arrive in Zephyr's identity; enter his football world and film room; move to a lighter personal chapter; trace the confirmed journey; hold unverified numbers; leave the future open; close on ZK17 and professional media/contact availability.
 FIRST VIEWPORT: Zephyr Kreye's name, #17 identity, authentic black-and-white preview portrait, concise school/class information, film/journey actions and discreet scroll invitation. Main content readable before animation.
 FORM: Owner-pinned cinematic editorial brief overrides direction seed d50f03af. Desktop may pin football photography and advance a horizontal personal story; phones use vertical natural scrolling. No copied Lando layouts or assets; no generated athlete.
+
+## Canonical identity mark
+The owner-approved supplied ZK sword monogram is the identity mark in navigation, closing art, favicon, and social art. Preserve the exact square composition; keep ZK17 name and #17 storytelling typography as accompanying text. See `docs/BRAND.md` for source hash and deterministic asset generation.
