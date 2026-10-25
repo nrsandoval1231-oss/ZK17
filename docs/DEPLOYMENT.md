@@ -1,5 +1,7 @@
 # Deployment runbook
 
+Canonical logo refresh (2026-10-25): https://review.zk17-review.pages.dev now serves application source 958a229049a1a4f6ef14917fc3da1bb38d04e78f, immutable https://20c41eea.zk17-review.pages.dev . Deployment20c41eea-f975-41f1-8195-628e4be2926c is preview/review only.79 remote asset hashes and three responsive logo/footer captures pass. Receipt and scoped review: .agent/evidence/logo-01/. Earlier deployment below remains archived evidence; prior Lighthouse scores are not measurements of the refreshed logo build.
+
 Delivered review: https://review.zk17-review.pages.dev . Immutable: https://7b983368.zk17-review.pages.dev . Application source ee9877de49b10f7c969c6494a71c959b546b96c3; deployment 7b983368-bbcc-4c99-a927-8ea2dc6d03f8, environment preview/branch review. Actual remote hashes, browser checks and mobile lab results are in .agent/DEPLOYMENT_RECEIPT.json. Final documentation commits leave runtime unchanged. No production promotion performed.
 Target: owner GitHub nrsandoval1231-oss/ZK17 (empty verified 2026-10-25); Cloudflare Pages separate review project `zk17-review` with production branch `owner-approved-release`, deploy branch `review` only.
 Static export: npm ci; npm run typecheck; npm run lint; npm test; npm run build. Upload only out/ . Never upload repository root, docs, .agent, originals, source credentials or unverified data.

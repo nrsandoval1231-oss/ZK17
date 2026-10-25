@@ -37,8 +37,12 @@
   "planningDuration": "UNKNOWN, start not measured separately",
   "buildDuration": "UNKNOWN, builder packet start does not distinguish planning",
   "finalGateDurationSeconds": 16.647,
-  "elapsedToIndependentAcceptance": "PENDING",
   "finalPublicRelease": "NOT AUTHORIZED",
   "logPreservation": "Raw command output preserved in corresponding .log.gz; text logs normalize trailing whitespace only",
-  "footerSeparation": "PASS: future caption at least4px below copyright/rule bounds in all3 viewports"
+  "footerSeparation": "PASS: future caption at least4px below copyright/rule bounds in all3 viewports",
+  "elapsedToIndependentAcceptanceSeconds": 665,
+  "elapsedScope": "From first sampled work-start15:13:13Z to Sol application PASS15:24:18Z",
+  "auditDurationSeconds": 6,
+  "failedAuditDurationSeconds": 56,
+  "deployedRuntimeProof": "deployment-receipt.json and deployed-assets.json"
 }

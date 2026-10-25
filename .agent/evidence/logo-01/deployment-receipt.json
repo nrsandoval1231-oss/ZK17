@@ -1,0 +1,18 @@
+{
+  "sourceCandidate": "958a229049a1a4f6ef14917fc3da1bb38d04e78f",
+  "previewURL": "https://review.zk17-review.pages.dev",
+  "immutableURL": "https://20c41eea.zk17-review.pages.dev",
+  "deploymentID": "20c41eea-f975-41f1-8195-628e4be2926c",
+  "project": "zk17-review",
+  "environment": "preview",
+  "branch": "review",
+  "verifiedUtc": "2026-10-25T15:25:00.067Z",
+  "commitDirty": true,
+  "dirtyScope": "Parent deployment verification script only, .agent/; runtime source unchanged",
+  "remoteAssetsChecked": 79,
+  "remoteMismatches": 0,
+  "manualBrowser": "Deployed alias shows canonical header logo; mobile menu opens, close focused, closes; viewport reset",
+  "automatedBrowser": "All4 logo instances loaded square at1280/390/412, no overflow/errors; footer caption geometry separation passes",
+  "sourceMasterPreserved": true,
+  "finalPublicRelease": "NOT AUTHORIZED"
+}

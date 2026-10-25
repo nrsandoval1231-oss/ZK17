@@ -1,5 +1,5 @@
 # Work graph — final preview state
-ZK-06 supplied canonical logo [IMPLEMENTED / VALIDATED] -> Sol review [READY] -> push main/review deployment/live verification [WAIT]. Focused one-Luna packet. No final public release authority change.
+ZK-06 supplied canonical logo [DONE] -> Sol review [PASS at958a229] -> source push/review deployment/live verification [DONE]. Focused one-Luna packet, one reviewed footer repair. Final evidence handoff pending unchanged-runtime verification and GitHub synchronization. No final public release authority change.
 
 ZK-01 reference/design [DONE] -> ZK-02 app/media [DONE] -> ZK-03 QA/review [ACCEPTED at ee9877d] -> ZK-04 deployed preview/live QA [DONE]. ZK-05 originals/rights, approved content and final public approval [EXTERNAL / OPEN].
 

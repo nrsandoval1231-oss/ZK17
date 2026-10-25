@@ -1,4 +1,6 @@
 # QA matrix — final local export
+Canonical logo refresh: source958a229 independently PASS after one footer repair; fresh build/typecheck/lint/7unit, Chromium17/WebKit5 passes with6 intentional skips. Four logo instances load square at1280/390/412; footer caption stays below copyright/rule. Actual refreshed deployment79 files match export; deployed captures and manual mobile menu pass. See .agent/evidence/logo-01/. Historical Lighthouse metrics below describe the initial preview, not the refreshed logo build.
+
 Build environment: SITE_URL=https://review.zk17-review.pages.dev, PUBLIC_RELEASE=false, PREVIEW_MEDIA_MODE=true, commitment disabled/null. See .agent/FINAL_GATES.json and raw logs.
 
 | Gate | Result |

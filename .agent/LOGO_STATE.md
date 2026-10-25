@@ -1,4 +1,7 @@
 # ZK-06 canonical logo update
+COMPLETE review-preview scope. Application candidate 958a229049a1a4f6ef14917fc3da1bb38d04e78f independently accepted after one footer-flow repair. Seven unit tests and22 browser checks pass, six intentional skips. Canonical supplied JPEG preserved unchanged; all branding variants documented docs/BRAND.md. Refreshed preview https://review.zk17-review.pages.dev ; immutable https://20c41eea.zk17-review.pages.dev . Seventy-nine remote files match export hashes; three responsive deployed captures pass logo loading/square geometry/footer separation/overflow/error checks. Deployed mobile menu manually verified. No production release. Evidence: evidence/logo-01/deployment-receipt.json, review-pass.md and validation-summary.json.
+
+Historical dispatch context:
 Owner supplied exact JPEG sword monogram as canonical identity, 2026-10-25. Scoped focused packet: PACKET-LOGO-01.md. One Luna owns implementation; parent owns integrated checks, source identity, review deployment and browser evidence.
 
 Prior accepted application ee9877d / documentation 00ade83 preserved. Existing preview and final public-release boundary unchanged. No new athlete content. Initial UTC 2026-10-25T15:13:13Z; planning/build timings UNKNOWN unless recorded contemporaneously. Source preservation, optimized variants, accessible site integration, favicon and OG required. Direction: IMPLEMENT -> VALIDATE -> independent Sol review -> push main/review preview -> verify actual remote. Final public promotion remains unauthorized.
