@@ -2,7 +2,7 @@
 export const brand = {
   name: 'ZK17',
   monogram: {
-    src: '/brand/zk17-monogram-512.png',
+    src: '/brand/zk17-monogram-512-v2.png',
     alt: 'ZK17 sword monogram',
     width: 512,
     height: 512,

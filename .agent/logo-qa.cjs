@@ -18,6 +18,7 @@ const evidenceDir = process.env.QA_EVIDENCE_DIR || '.agent/evidence/logo-01';
       const response = await page.goto(origin, { waitUntil:'networkidle' });
       await page.evaluate(()=>document.fonts.ready);
       await page.screenshot({ path:path.join(output,`${name}.png`) });
+      await page.locator('.panel-archive').screenshot({ path:path.join(output,`${name}-archive.png`) });
       await page.locator('#closing').scrollIntoViewIfNeeded();
       await page.locator('#closing img').evaluateAll(imgs=>Promise.all(imgs.map(img=>img.decode())));
       await page.screenshot({ path:path.join(output,`${name}-closing.png`) });

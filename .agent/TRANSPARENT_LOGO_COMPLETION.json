@@ -1,0 +1,95 @@
+{
+  "packet": "ZK-10",
+  "status": "implemented_focused_checks_passed_parent_visual_recheck_pending",
+  "startedUtc": "2026-10-25T16:53:08Z",
+  "finishedUtc": "2026-10-25T17:00:37Z",
+  "durations": "UNKNOWN",
+  "tokens": "UNKNOWN",
+  "configurationIdentity": "UNKNOWN",
+  "source": {
+    "path": "brand/zk17-monogram-master.jpg",
+    "sha256": "6bb5f0a9598b91f5ba79f4935a0b2835d3d260eb4a537a1554e594a2d8864736",
+    "preserved": true,
+    "geometryMethod": "self-contained SVG luminance mask from exact JPEG; monotone component transfer; no tracing or generated cutout"
+  },
+  "generated": [
+    "brand/zk17-monogram-transparent.svg",
+    "public/brand/zk17-monogram-1254.png",
+    "public/brand/zk17-monogram-transparent.png",
+    "public/brand/zk17-monogram-32.png",
+    "public/brand/zk17-monogram-64.png",
+    "public/brand/zk17-monogram-180.png",
+    "public/brand/zk17-monogram-512.png",
+    "public/brand/zk17-monogram-512-v2.png",
+    "public/favicon.svg",
+    "public/favicon.png",
+    "public/apple-touch-icon.png",
+    "public/og-zk17.png"
+  ],
+  "changedFiles": [
+    "scripts/generate-brand.mjs",
+    "scripts/generate-og.mjs",
+    "content/brand.ts",
+    "app/layout.tsx",
+    "app/globals.css",
+    "docs/BRAND.md",
+    "DESIGN.md",
+    "brand/zk17-monogram-transparent.svg",
+    "public/brand/*",
+    "public/favicon*",
+    "public/apple-touch-icon.png",
+    "public/og-zk17.png"
+  ],
+  "checks": [
+    {
+      "command": "node scripts/generate-brand.mjs",
+      "result": "PASS"
+    },
+    {
+      "command": "node scripts/generate-og.mjs",
+      "result": "PASS"
+    },
+    {
+      "command": "node .agent/check-transparent-logo.cjs",
+      "result": "PASS",
+      "evidence": ".agent/evidence/transparent-logo/pixel-proof.json"
+    },
+    {
+      "command": "npm run typecheck",
+      "result": "PASS"
+    },
+    {
+      "command": "npm run lint",
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    },
+    {
+      "command": "npm run lint (contrast repair)",
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check (contrast repair)",
+      "result": "PASS"
+    }
+  ],
+  "pixelProof": {
+    "dimensions": "1254x1254",
+    "silhouetteIoUThreshold128": 0.9999006738894577,
+    "transparentPixels": 1309269,
+    "opaquePixels": 260132,
+    "partialAlphaPixels": 3115,
+    "cornerAlpha": 0,
+    "bladeSlotAlpha": 0,
+    "whiteStrokeAlpha": 255,
+    "nonwhitePixelsWithAlpha": 0,
+    "allPngVariantsTrueAlpha": true,
+    "ogCanvasOpaque": true
+  },
+  "limitations": [
+    "Full build, browser checks, screenshots, and independent review are parent-owned and pending.",
+    "No push, deployment, or certification performed."
+  ]
+}

@@ -1,0 +1,4 @@
+# ZK-10-R1 — archive caption contrast
+Integrated axe found serious contrast failures in newly dark archive panel: .panel-label span:nth-child(1) foreground#6940aa on#15141b ratio2.53; nth-child(2) foreground#54515a ratio2.35. Transparency/pixel proof and all other browser checks pass. Chromium20pass3contrastfail4intentional skips; no WebKit run after failure. Preserve evidence attempt1/.
+
+Luna owns app/globals.css and .agent/TRANSPARENT_LOGO_COMPLETION.json only. Not alone; preserve other edits. Apply specific .panel-archive .panel-label span rules so caption text is silver/white and optional first index lavender, all >=4.5:1. Existing explicit childcolors override inherited parent color, so target actual spans. No geometry/asset/layout/othercopy changes. Run focusedlint/diffcheck; parentrebuild/finalbrowserrepeat. One small boundedrepair, no more polish. No push/deploy/certify.

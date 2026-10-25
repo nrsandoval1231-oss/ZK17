@@ -1,0 +1,32 @@
+
+> zk17-official@0.1.0 test
+> tsx --test tests/*.test.ts
+
+▶ public NIL inquiry contact
+  ✔ stays unpublished without a record and fails closed at every approval gate (0.6189ms)
+  ✔ returns an approved email with an encoded NIL inquiry subject (0.5244ms)
+  ✔ accepts only clean HTTPS contact URLs (0.1581ms)
+  ✔ rejects malformed email destinations and control characters (0.1268ms)
+  ✔ renders only a pending message when no public contact or social profiles exist (4.3243ms)
+  ✔ renders every approved social profile as an accessible external link (0.778ms)
+  ✔ renders the approved contact action with its exact safe destination (0.3531ms)
+✔ public NIL inquiry contact (7.7372ms)
+▶ public content eligibility
+  ✔ keeps only source-backed approved media and linked highlights (1.2534ms)
+  ✔ requires source, date, season, and game count before stats appear (0.1772ms)
+  ✔ keeps uncommitted as the only commitment state and holds empty offers/partners/socials (0.1785ms)
+  ✔ uses only source-backed approved photo assignments and prefers them over preview fallbacks (0.3007ms)
+  ✔ keeps commitment content absent by default and renders only an approved enabled record (5.0716ms)
+✔ public content eligibility (7.8648ms)
+▶ release export media boundary
+  ✔ blocks preview files in public sources and in exported output even when preview mode is disabled (10.2888ms)
+  ✔ fails prebuild when commitment reveal is enabled without a published approved announcement (47.0998ms)
+✔ release export media boundary (58.1227ms)
+ℹ tests 14
+ℹ suites 3
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 185.4765

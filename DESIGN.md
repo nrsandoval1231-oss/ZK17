@@ -21,5 +21,7 @@ FORM: Owner-pinned cinematic editorial brief overrides direction seed d50f03af. 
 ## Canonical identity mark
 The owner-approved supplied ZK sword monogram is the identity mark in navigation, closing art, favicon, and social art. Preserve the exact square composition and use it as the sole ZK17 logo; keep the athlete name and #17 storytelling typography as editorial content, without companion ZK17 wordmarks. See `docs/BRAND.md` for source hash and deterministic asset generation.
 
+Transparent logo variants use the exact original JPEG as a self-contained SVG luminance mask; preserve the supplied square framing and negative spaces. Do not trace, redraw, crop, or place a background behind the mark. Where white mark contrast needs support, use the complete carbon archive panel surface.
+
 ## Two-worlds extension
 The Off Field scene opens with oversized ON FIELD/OFF FIELD type above full, authentic helmet-on arrival and helmet-off sideline preview photos in a restrained staggered diptych. Keep the faces and uniforms intact, retain preview labels, and do not mirror or synthesize a matching portrait. The cards route into the existing On Field and personal-content sections. The same scene retains its horizontal personal rail. NIL inquiry contact stays null until an owner-approved public representative destination is ready to commit; private pending details never belong in repository files. Approved social links remain individually source-gated.

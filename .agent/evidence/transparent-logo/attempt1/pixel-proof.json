@@ -1,0 +1,92 @@
+{
+  "checkedUtc": "2026-10-25T17:00:37.357Z",
+  "sourcePath": "brand/zk17-monogram-master.jpg",
+  "sourceSha256": "6bb5f0a9598b91f5ba79f4935a0b2835d3d260eb4a537a1554e594a2d8864736",
+  "fullPath": "public/brand/zk17-monogram-1254.png",
+  "width": 1254,
+  "height": 1254,
+  "silhouetteIoU": 0.9999006738894577,
+  "transparent": 1309269,
+  "opaque": 260132,
+  "partial": 3115,
+  "halo": 0,
+  "sample": {
+    "corner": 0,
+    "bladeSlot": 0,
+    "whiteStroke": 255
+  },
+  "variants": [
+    {
+      "path": "public/brand/zk17-monogram-1254.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "minAlpha": 0,
+      "maxAlpha": 255
+    },
+    {
+      "path": "public/brand/zk17-monogram-180.png",
+      "width": 180,
+      "height": 180,
+      "alpha": true,
+      "minAlpha": 0,
+      "maxAlpha": 255
+    },
+    {
+      "path": "public/brand/zk17-monogram-32.png",
+      "width": 32,
+      "height": 32,
+      "alpha": true,
+      "minAlpha": 0,
+      "maxAlpha": 255
+    },
+    {
+      "path": "public/brand/zk17-monogram-512-v2.png",
+      "width": 512,
+      "height": 512,
+      "alpha": true,
+      "minAlpha": 0,
+      "maxAlpha": 255
+    },
+    {
+      "path": "public/brand/zk17-monogram-512.png",
+      "width": 512,
+      "height": 512,
+      "alpha": true,
+      "minAlpha": 0,
+      "maxAlpha": 255
+    },
+    {
+      "path": "public/brand/zk17-monogram-64.png",
+      "width": 64,
+      "height": 64,
+      "alpha": true,
+      "minAlpha": 0,
+      "maxAlpha": 255
+    },
+    {
+      "path": "public/brand/zk17-monogram-transparent.png",
+      "width": 1254,
+      "height": 1254,
+      "alpha": true,
+      "minAlpha": 0,
+      "maxAlpha": 255
+    },
+    {
+      "path": "public/apple-touch-icon.png",
+      "width": 180,
+      "height": 180,
+      "alpha": true,
+      "minAlpha": 0,
+      "maxAlpha": 255
+    },
+    {
+      "path": "public/favicon.png",
+      "width": 64,
+      "height": 64,
+      "alpha": true,
+      "minAlpha": 0,
+      "maxAlpha": 255
+    }
+  ]
+}

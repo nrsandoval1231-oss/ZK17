@@ -1,0 +1,41 @@
+{
+  "base": "d7c23540c22d8a4f14d9886c9218c278b07800ce",
+  "lane": "focused",
+  "builder": "gpt-6-luna low named role",
+  "startUtc": "2026-10-25T16:53:08Z",
+  "repairCount": 1,
+  "repairCause": "Dark archive caption child-color overrides failed axe; corrected specific child text colors",
+  "rejectedImageToolAttempts": 2,
+  "rejectionReason": "Generated output altered internal gaps; none used in project",
+  "method": "Code-native SVG luminance mask from exact source JPEG; rasterized derivatives",
+  "sourcePreserved": true,
+  "silhouetteIoU": 0.9999006738894577,
+  "alpha": {
+    "corner": 0,
+    "bladeSlot": 0,
+    "whiteStroke": 255
+  },
+  "halo": 0,
+  "unitTests": 14,
+  "chromium": {
+    "startTime": "2026-10-25T17:04:36.465Z",
+    "duration": 6622.483,
+    "expected": 23,
+    "skipped": 4,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "webkit": {
+    "startTime": "2026-10-25T17:04:44.137Z",
+    "duration": 2922.951,
+    "expected": 7,
+    "skipped": 2,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "finalGatesSeconds": 16.606,
+  "tokens": "UNKNOWN",
+  "planningBuildAuditDuration": "UNKNOWN unless individually recorded",
+  "logs": "Raw .log.gz, normalized text log",
+  "finalPublicRelease": "NOT AUTHORIZED"
+}
