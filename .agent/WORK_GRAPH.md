@@ -8,3 +8,5 @@ Final documentation handoff leaves runtime unchanged. No additional deployment n
 ZK-12 phone-accessible static mockup [DONE: existing source artifact copied, responsive preview deployed, remotehash/browserproof]. Arcade integration not yet approved.
 
 ZK-13 owner-approved arcade integration [DONE at boundedreviewscope: accepted9ef24bc, nativeworkingcontrols, frozenproduction/browsergates andactualpreviewproof]. Originalmockup keptat /concepts/player17/. Missingfavorites arecontentgate, notinvented. FinalpublicremainsOPEN.
+
+ZK-14 [ACTIVE / single Luna]: replace the live arcade title with ZEPHYR KREYE and build an actual quarterback passing game under Gaming. User explicitly authorized on2026-10-25. Dependency frontier: deterministic game rules -> responsive game UI/integration -> validation/review -> review preview. Packet .agent/PACKET-FOOTBALL-GAME.md, plan .agent/PLAN-FOOTBALL-GAME.md. Prior mockup approval is fulfilled by ZK-13; its old not-yet-approved note is historical. Parent owns serialized validation/deployment, no final public promotion.

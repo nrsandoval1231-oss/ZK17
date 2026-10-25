@@ -2,13 +2,12 @@ import { test, expect } from '@playwright/test';
 
 test('arcade selection, start, Escape, and back restore focus', async ({ page }) => {
   await page.goto('/#offfield-personal');
-  const gaming = page.getByRole('radio', { name: 'Gaming' });
-  const movies = page.getByRole('radio', { name: 'Movies' });
-  await gaming.focus();
+  await page.getByRole('radio', { name: 'Gaming' }).focus();
   await page.keyboard.press('ArrowDown');
+  const movies = page.getByRole('radio', { name: 'Movies' });
   await expect(movies).toBeChecked();
   await page.keyboard.press('Enter');
-  await expect(page.getByRole('heading', { name: 'PLAYER 17' })).toBeVisible();
+  await expect(page.locator('#offfield-personal').getByRole('heading', { name: 'ZEPHYR KREYE', exact: true })).toBeVisible();
   await expect(page.getByText('Movies details are coming soon.')).toBeVisible();
   const back = page.getByRole('button', { name: 'BACK TO MENU' });
   await expect(back).toBeFocused();
@@ -21,7 +20,7 @@ test('arcade selection, start, Escape, and back restore focus', async ({ page })
 
 test('each world opens its truthful empty state and returns to selection', async ({ page }) => {
   await page.goto('/#offfield-personal');
-  for (const category of ['Gaming', 'Movies', 'Music']) {
+  for (const category of ['Movies', 'Music']) {
     await page.getByText(category, { exact: true }).click();
     await expect(page.getByRole('radio', { name: category })).toBeChecked();
     await page.getByRole('button', { name: 'PRESS START' }).click();
@@ -30,6 +29,12 @@ test('each world opens its truthful empty state and returns to selection', async
     await expect(page.getByRole('button', { name: 'PRESS START' })).toBeFocused();
     await expect(page.getByRole('radio', { name: category })).toBeChecked();
   }
+  await page.getByText('Gaming', { exact: true }).click();
+  await expect(page.getByRole('radio', { name: 'Gaming' })).toBeChecked();
+  await page.getByRole('button', { name: 'PRESS START' }).click();
+  await expect(page.getByRole('dialog', { name: 'POCKET PASS' })).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.getByRole('button', { name: 'PRESS START' })).toBeFocused();
 });
 
 test('320px arcade stays within the viewport with touch-sized controls', async ({ page }) => {

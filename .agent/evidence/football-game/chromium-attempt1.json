@@ -1,0 +1,2440 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--reporter=json"
+    ],
+    "configFile": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\playwright.config.ts",
+    "rootDir": "C:/Users/nrsan/Documents/Codex/2026-10-25/zk17-master-build-directive-the-official/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/nrsan/Documents/Codex/2026-10-25/zk17-master-build-directive-the-official/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "desktop-chromium",
+        "name": "desktop-chromium",
+        "testDir": "C:/Users/nrsan/Documents/Codex/2026-10-25/zk17-master-build-directive-the-official/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/nrsan/Documents/Codex/2026-10-25/zk17-master-build-directive-the-official/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "mobile-chromium",
+        "name": "mobile-chromium",
+        "testDir": "C:/Users/nrsan/Documents/Codex/2026-10-25/zk17-master-build-directive-the-official/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/nrsan/Documents/Codex/2026-10-25/zk17-master-build-directive-the-official/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "reduced-motion",
+        "name": "reduced-motion",
+        "testDir": "C:/Users/nrsan/Documents/Codex/2026-10-25/zk17-master-build-directive-the-official/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "name": "desktop-chromium",
+        "testDir": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "trace": "retain-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop-chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "name": "mobile-chromium",
+        "testDir": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "trace": "retain-on-failure",
+          "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Mobile Safari/537.36",
+          "viewport": {
+            "width": 412,
+            "height": 839
+          },
+          "screen": {
+            "width": 412,
+            "height": 915
+          },
+          "deviceScaleFactor": 2.625,
+          "isMobile": true,
+          "hasTouch": true,
+          "defaultBrowserType": "chromium",
+          "browserName": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile-chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "name": "reduced-motion",
+        "testDir": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e",
+        "snapshotDir": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:3100",
+          "trace": "retain-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "reducedMotion": "reduce"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "reduced-motion"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 5,
+    "webServer": {
+      "command": "npm run build && node scripts/serve-static.mjs --port 3100",
+      "url": "http://127.0.0.1:3100",
+      "reuseExistingServer": true,
+      "timeout": 180000
+    }
+  },
+  "suites": [
+    {
+      "title": "arcade.spec.ts",
+      "file": "arcade.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "arcade selection, start, Escape, and back restore focus",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6197,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Movies details are coming soon.')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Movies details are coming soon.') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Movies details are coming soon.')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Movies details are coming soon.')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Movies details are coming soon.') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Movies details are coming soon.')\u001b[22m\n\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts:9:67",
+                    "location": {
+                      "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                      "column": 67,
+                      "line": 9
+                    },
+                    "snippet": "   7 |   await page.keyboard.press('Enter');\n   8 |   await expect(page.locator('#offfield-personal').getByRole('heading', { name: 'ZEPHYR KREYE', exact: true })).toBeVisible();\n>  9 |   await expect(page.getByText('Movies details are coming soon.')).toBeVisible();\n     |                                                                   ^\n  10 |   const back = page.getByRole('button', { name: 'BACK TO MENU' });\n  11 |   await expect(back).toBeFocused();\n  12 |   await page.keyboard.press('Escape');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                        "column": 67,
+                        "line": 9
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Movies details are coming soon.')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Movies details are coming soon.') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Movies details are coming soon.')\u001b[22m\n\n\n   7 |   await page.keyboard.press('Enter');\n   8 |   await expect(page.locator('#offfield-personal').getByRole('heading', { name: 'ZEPHYR KREYE', exact: true })).toBeVisible();\n>  9 |   await expect(page.getByText('Movies details are coming soon.')).toBeVisible();\n     |                                                                   ^\n  10 |   const back = page.getByRole('button', { name: 'BACK TO MENU' });\n  11 |   await expect(back).toBeFocused();\n  12 |   await page.keyboard.press('Escape');\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts:9:67"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:33.722Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-arcade-selection-start-Escape-and-back-restore-focus-desktop-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-arcade-selection-start-Escape-and-back-restore-focus-desktop-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                    "column": 67,
+                    "line": 9
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-6fb31ff9693b084655c3",
+          "file": "arcade.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "each world opens its truthful empty state and returns to selection",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "timedOut",
+                  "duration": 30261,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:33.723Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-each-world-opens-it-88849-te-and-returns-to-selection-desktop-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-each-world-opens-it-88849-te-and-returns-to-selection-desktop-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-977c00e179649cf742f1",
+          "file": "arcade.spec.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "320px arcade stays within the viewport with touch-sized controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 860,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:33.717Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-1181c3573dc0d422987e",
+          "file": "arcade.spec.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "reduced-motion desktop arcade stacks its heading and cabinet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 893,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:33.735Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-03314b126b844013ed80",
+          "file": "arcade.spec.ts",
+          "line": 58,
+          "column": 5
+        },
+        {
+          "title": "JavaScript-disabled desktop stacks title and CRT within the viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 1245,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:33.768Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-2e275a72746752ea5147",
+          "file": "arcade.spec.ts",
+          "line": 74,
+          "column": 5
+        },
+        {
+          "title": "arcade selection, start, Escape, and back restore focus",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 5550,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Movies details are coming soon.')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Movies details are coming soon.') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Movies details are coming soon.')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Movies details are coming soon.')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Movies details are coming soon.') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Movies details are coming soon.')\u001b[22m\n\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts:9:67",
+                    "location": {
+                      "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                      "column": 67,
+                      "line": 9
+                    },
+                    "snippet": "   7 |   await page.keyboard.press('Enter');\n   8 |   await expect(page.locator('#offfield-personal').getByRole('heading', { name: 'ZEPHYR KREYE', exact: true })).toBeVisible();\n>  9 |   await expect(page.getByText('Movies details are coming soon.')).toBeVisible();\n     |                                                                   ^\n  10 |   const back = page.getByRole('button', { name: 'BACK TO MENU' });\n  11 |   await expect(back).toBeFocused();\n  12 |   await page.keyboard.press('Escape');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                        "column": 67,
+                        "line": 9
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Movies details are coming soon.')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Movies details are coming soon.') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Movies details are coming soon.')\u001b[22m\n\n\n   7 |   await page.keyboard.press('Enter');\n   8 |   await expect(page.locator('#offfield-personal').getByRole('heading', { name: 'ZEPHYR KREYE', exact: true })).toBeVisible();\n>  9 |   await expect(page.getByText('Movies details are coming soon.')).toBeVisible();\n     |                                                                   ^\n  10 |   const back = page.getByRole('button', { name: 'BACK TO MENU' });\n  11 |   await expect(back).toBeFocused();\n  12 |   await page.keyboard.press('Escape');\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts:9:67"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:39.602Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-arcade-selection-start-Escape-and-back-restore-focus-mobile-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-arcade-selection-start-Escape-and-back-restore-focus-mobile-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                    "column": 67,
+                    "line": 9
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-60bbc8074bd48c733404",
+          "file": "arcade.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "each world opens its truthful empty state and returns to selection",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 2,
+                  "status": "timedOut",
+                  "duration": 30325,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                        "column": 53,
+                        "line": 30
+                      },
+                      "message": "Error: locator.check: Test timeout of 30000ms exceeded.\nBrowser logs:\n\n<launching> C:\\Users\\nrsan\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1248\\chrome-headless-shell-win64\\chrome-headless-shell.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=C:\\Users\\nrsan\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-yTWpd6 --remote-debugging-pipe --no-startup-window\n<launched> pid=31672\n[pid=31672] <gracefully close start>\nCall log:\n\u001b[2m  - waiting for getByRole('radio', { name: 'Gaming' })\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"radio\" value=\"Gaming\" name=\"offfield-world\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <label data-selected=\"false\" class=\"offfield-arcade_choice__csBVn\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <label data-selected=\"false\" class=\"offfield-arcade_choice__csBVn\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    53 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <label data-selected=\"false\" class=\"offfield-arcade_choice__csBVn\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n\n  28 |     await expect(page.getByRole('radio', { name: category })).toBeChecked();\n  29 |   }\n> 30 |   await page.getByRole('radio', { name: 'Gaming' }).check();\n     |                                                     ^\n  31 |   await page.getByRole('button', { name: 'PRESS START' }).click();\n  32 |   await expect(page.getByRole('dialog', { name: 'POCKET PASS' })).toBeVisible();\n  33 |   await page.keyboard.press('Escape');\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts:30:53"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:39.614Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-each-world-opens-it-88849-te-and-returns-to-selection-mobile-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-each-world-opens-it-88849-te-and-returns-to-selection-mobile-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-24e943f1d5c222c2a3ae",
+          "file": "arcade.spec.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "320px arcade stays within the viewport with touch-sized controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 304,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:40.728Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-57f6caaa2d568dc17adf",
+          "file": "arcade.spec.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "reduced-motion desktop arcade stacks its heading and cabinet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                    "line": 59,
+                    "column": 58
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 59,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:41.125Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                        "line": 59,
+                        "column": 58
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-013e52b2ae4b89d53ea9",
+          "file": "arcade.spec.ts",
+          "line": 58,
+          "column": 5
+        },
+        {
+          "title": "JavaScript-disabled desktop stacks title and CRT within the viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                    "line": 75,
+                    "column": 58
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 51,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:41.193Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                        "line": 75,
+                        "column": 58
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-d06a86b53d830934c194",
+          "file": "arcade.spec.ts",
+          "line": 74,
+          "column": 5
+        },
+        {
+          "title": "arcade selection, start, Escape, and back restore focus",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 10,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5402,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Movies details are coming soon.')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Movies details are coming soon.') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Movies details are coming soon.')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Movies details are coming soon.')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Movies details are coming soon.') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Movies details are coming soon.')\u001b[22m\n\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts:9:67",
+                    "location": {
+                      "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                      "column": 67,
+                      "line": 9
+                    },
+                    "snippet": "   7 |   await page.keyboard.press('Enter');\n   8 |   await expect(page.locator('#offfield-personal').getByRole('heading', { name: 'ZEPHYR KREYE', exact: true })).toBeVisible();\n>  9 |   await expect(page.getByText('Movies details are coming soon.')).toBeVisible();\n     |                                                                   ^\n  10 |   const back = page.getByRole('button', { name: 'BACK TO MENU' });\n  11 |   await expect(back).toBeFocused();\n  12 |   await page.keyboard.press('Escape');"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                        "column": 67,
+                        "line": 9
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('Movies details are coming soon.')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByText('Movies details are coming soon.') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText('Movies details are coming soon.')\u001b[22m\n\n\n   7 |   await page.keyboard.press('Enter');\n   8 |   await expect(page.locator('#offfield-personal').getByRole('heading', { name: 'ZEPHYR KREYE', exact: true })).toBeVisible();\n>  9 |   await expect(page.getByText('Movies details are coming soon.')).toBeVisible();\n     |                                                                   ^\n  10 |   const back = page.getByRole('button', { name: 'BACK TO MENU' });\n  11 |   await expect(back).toBeFocused();\n  12 |   await page.keyboard.press('Escape');\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts:9:67"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:48.020Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-arcade-selection-start-Escape-and-back-restore-focus-reduced-motion\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-arcade-selection-start-Escape-and-back-restore-focus-reduced-motion\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                    "column": 67,
+                    "line": 9
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-31a006ab8d45c2f5c5dd",
+          "file": "arcade.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "each world opens its truthful empty state and returns to selection",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 11,
+                  "parallelIndex": 3,
+                  "status": "timedOut",
+                  "duration": 30213,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                        "column": 53,
+                        "line": 30
+                      },
+                      "message": "Error: locator.check: Test timeout of 30000ms exceeded.\nBrowser logs:\n\n<launching> C:\\Users\\nrsan\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1248\\chrome-headless-shell-win64\\chrome-headless-shell.exe --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --user-data-dir=C:\\Users\\nrsan\\AppData\\Local\\Temp\\playwright_chromiumdev_profile-PDg9xG --remote-debugging-pipe --no-startup-window\n<launched> pid=42288\n[pid=42288] <gracefully close start>\nCall log:\n\u001b[2m  - waiting for getByRole('radio', { name: 'Gaming' })\u001b[22m\n\u001b[2m    - locator resolved to <input type=\"radio\" value=\"Gaming\" name=\"offfield-world\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <label data-selected=\"false\" class=\"offfield-arcade_choice__csBVn\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <label data-selected=\"false\" class=\"offfield-arcade_choice__csBVn\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <header class=\"site-header\">…</header> intercepts pointer events\u001b[22m\n\u001b[2m  13 × retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - element is outside of the viewport\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <label data-selected=\"false\" class=\"offfield-arcade_choice__csBVn\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <header class=\"site-header\">…</header> intercepts pointer events\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\u001b[2m       - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is visible, enabled and stable\u001b[22m\n\u001b[2m       - scrolling into view if needed\u001b[22m\n\u001b[2m       - done scrolling\u001b[22m\n\u001b[2m       - <header class=\"site-header\">…</header> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - element is outside of the viewport\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <label data-selected=\"false\" class=\"offfield-arcade_choice__csBVn\">…</label> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\n\n  28 |     await expect(page.getByRole('radio', { name: category })).toBeChecked();\n  29 |   }\n> 30 |   await page.getByRole('radio', { name: 'Gaming' }).check();\n     |                                                     ^\n  31 |   await page.getByRole('button', { name: 'PRESS START' }).click();\n  32 |   await expect(page.getByRole('dialog', { name: 'POCKET PASS' })).toBeVisible();\n  33 |   await page.keyboard.press('Escape');\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts:30:53"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:48.087Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-each-world-opens-it-88849-te-and-returns-to-selection-reduced-motion\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\arcade-each-world-opens-it-88849-te-and-returns-to-selection-reduced-motion\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-dccb2bacde9b998fbd58",
+          "file": "arcade.spec.ts",
+          "line": 19,
+          "column": 5
+        },
+        {
+          "title": "320px arcade stays within the viewport with touch-sized controls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 258,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:50.586Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-ea2b069c69c0b046aad7",
+          "file": "arcade.spec.ts",
+          "line": 37,
+          "column": 5
+        },
+        {
+          "title": "reduced-motion desktop arcade stacks its heading and cabinet",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                    "line": 59,
+                    "column": 58
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 4,
+                  "status": "skipped",
+                  "duration": 47,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:50.928Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                        "line": 59,
+                        "column": 58
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-a1f14e36f1d47014f0ab",
+          "file": "arcade.spec.ts",
+          "line": 58,
+          "column": 5
+        },
+        {
+          "title": "JavaScript-disabled desktop stacks title and CRT within the viewport",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                    "line": 75,
+                    "column": 58
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 4,
+                  "status": "skipped",
+                  "duration": 47,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:50.985Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\arcade.spec.ts",
+                        "line": 75,
+                        "column": 58
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "41922fa1b760a3f76b44-9d8d7d1a2e40b11e51d7",
+          "file": "arcade.spec.ts",
+          "line": 74,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "football-game.spec.ts",
+      "file": "football-game.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "passing game starts, accepts a real throw, advances, pauses, restarts, and exits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 1899,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:34.849Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e39fc1866e2e2c989e54-2a12a26ad0b0421aea01",
+          "file": "football-game.spec.ts",
+          "line": 2,
+          "column": 5
+        },
+        {
+          "title": "phone game controls remain inside the viewport and title is renamed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 1476,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:34.883Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e39fc1866e2e2c989e54-9f1561c3813a2192a7c9",
+          "file": "football-game.spec.ts",
+          "line": 10,
+          "column": 5
+        },
+        {
+          "title": "field keyboard controls, hidden pause, and scroll-lock cleanup work",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "failed",
+                  "duration": 5890,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\nExpected substring: \u001b[32m\"SNAP \u001b[7m2\u001b[27m/12\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7m1ST & 10BALL AT 79\u001b[27mSNAP \u001b[7m1\u001b[27m/12\u001b[7mTD 0 · ARCADE 0\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\u001b[22m\n\u001b[2m    5 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 20SNAP 1/12TD 0 · ARCADE 08s\"\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 79SNAP 1/12TD 0 · ARCADE 0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\nExpected substring: \u001b[32m\"SNAP \u001b[7m2\u001b[27m/12\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7m1ST & 10BALL AT 79\u001b[27mSNAP \u001b[7m1\u001b[27m/12\u001b[7mTD 0 · ARCADE 0\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\u001b[22m\n\u001b[2m    5 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 20SNAP 1/12TD 0 · ARCADE 08s\"\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 79SNAP 1/12TD 0 · ARCADE 0\"\u001b[22m\n\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:16:209",
+                    "location": {
+                      "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
+                      "column": 209,
+                      "line": 16
+                    },
+                    "snippet": "  14 | test('field keyboard controls, hidden pause, and scroll-lock cleanup work',async({page})=>{\n  15 |  await page.goto('/#offfield-personal');await page.getByRole('button',{name:'PRESS START'}).click();const dialog=page.getByRole('dialog',{name:'POCKET PASS'});await dialog.getByRole('button',{name:'START DRIVE'}).click();\n> 16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 2/12');\n     |                                                                                                                                                                                                                 ^\n  17 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n  18 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  19 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
+                        "column": 209,
+                        "line": 16
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\nExpected substring: \u001b[32m\"SNAP \u001b[7m2\u001b[27m/12\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7m1ST & 10BALL AT 79\u001b[27mSNAP \u001b[7m1\u001b[27m/12\u001b[7mTD 0 · ARCADE 0\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\u001b[22m\n\u001b[2m    5 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 20SNAP 1/12TD 0 · ARCADE 08s\"\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 79SNAP 1/12TD 0 · ARCADE 0\"\u001b[22m\n\n\n  14 | test('field keyboard controls, hidden pause, and scroll-lock cleanup work',async({page})=>{\n  15 |  await page.goto('/#offfield-personal');await page.getByRole('button',{name:'PRESS START'}).click();const dialog=page.getByRole('dialog',{name:'POCKET PASS'});await dialog.getByRole('button',{name:'START DRIVE'}).click();\n> 16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 2/12');\n     |                                                                                                                                                                                                                 ^\n  17 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n  18 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  19 | });\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:16:209"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:35.240Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-desktop-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-desktop-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
+                    "column": 209,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e39fc1866e2e2c989e54-d3ebe08116cc70787318",
+          "file": "football-game.spec.ts",
+          "line": 14,
+          "column": 5
+        },
+        {
+          "title": "passing game starts, accepts a real throw, advances, pauses, restarts, and exits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2980,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:41.253Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e39fc1866e2e2c989e54-94106c2887797649aa25",
+          "file": "football-game.spec.ts",
+          "line": 2,
+          "column": 5
+        },
+        {
+          "title": "phone game controls remain inside the viewport and title is renamed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 1328,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:41.718Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e39fc1866e2e2c989e54-59f97325edede34213ee",
+          "file": "football-game.spec.ts",
+          "line": 10,
+          "column": 5
+        },
+        {
+          "title": "field keyboard controls, hidden pause, and scroll-lock cleanup work",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 8,
+                  "parallelIndex": 4,
+                  "status": "failed",
+                  "duration": 6990,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\nExpected substring: \u001b[32m\"SNAP \u001b[7m2\u001b[27m/12\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7m1ST & 10BALL AT 78\u001b[27mSNAP \u001b[7m1\u001b[27m/12\u001b[7mTD 0 · ARCADE 0\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\u001b[22m\n\u001b[2m    5 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 20SNAP 1/12TD 0 · ARCADE 08s\"\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 78SNAP 1/12TD 0 · ARCADE 0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\nExpected substring: \u001b[32m\"SNAP \u001b[7m2\u001b[27m/12\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7m1ST & 10BALL AT 78\u001b[27mSNAP \u001b[7m1\u001b[27m/12\u001b[7mTD 0 · ARCADE 0\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\u001b[22m\n\u001b[2m    5 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 20SNAP 1/12TD 0 · ARCADE 08s\"\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 78SNAP 1/12TD 0 · ARCADE 0\"\u001b[22m\n\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:16:209",
+                    "location": {
+                      "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
+                      "column": 209,
+                      "line": 16
+                    },
+                    "snippet": "  14 | test('field keyboard controls, hidden pause, and scroll-lock cleanup work',async({page})=>{\n  15 |  await page.goto('/#offfield-personal');await page.getByRole('button',{name:'PRESS START'}).click();const dialog=page.getByRole('dialog',{name:'POCKET PASS'});await dialog.getByRole('button',{name:'START DRIVE'}).click();\n> 16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 2/12');\n     |                                                                                                                                                                                                                 ^\n  17 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n  18 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  19 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
+                        "column": 209,
+                        "line": 16
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\nExpected substring: \u001b[32m\"SNAP \u001b[7m2\u001b[27m/12\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7m1ST & 10BALL AT 78\u001b[27mSNAP \u001b[7m1\u001b[27m/12\u001b[7mTD 0 · ARCADE 0\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\u001b[22m\n\u001b[2m    5 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 20SNAP 1/12TD 0 · ARCADE 08s\"\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 78SNAP 1/12TD 0 · ARCADE 0\"\u001b[22m\n\n\n  14 | test('field keyboard controls, hidden pause, and scroll-lock cleanup work',async({page})=>{\n  15 |  await page.goto('/#offfield-personal');await page.getByRole('button',{name:'PRESS START'}).click();const dialog=page.getByRole('dialog',{name:'POCKET PASS'});await dialog.getByRole('button',{name:'START DRIVE'}).click();\n> 16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 2/12');\n     |                                                                                                                                                                                                                 ^\n  17 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n  18 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  19 | });\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:16:209"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:43.143Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-mobile-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-mobile-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
+                    "column": 209,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e39fc1866e2e2c989e54-3ac6f259359623a7e2bc",
+          "file": "football-game.spec.ts",
+          "line": 14,
+          "column": 5
+        },
+        {
+          "title": "passing game starts, accepts a real throw, advances, pauses, restarts, and exits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 1522,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:51.040Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e39fc1866e2e2c989e54-40913c099d47bb442937",
+          "file": "football-game.spec.ts",
+          "line": 2,
+          "column": 5
+        },
+        {
+          "title": "phone game controls remain inside the viewport and title is renamed",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 360,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:52.569Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e39fc1866e2e2c989e54-ed38016f58ac0f6f7adb",
+          "file": "football-game.spec.ts",
+          "line": 10,
+          "column": 5
+        },
+        {
+          "title": "field keyboard controls, hidden pause, and scroll-lock cleanup work",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 12,
+                  "parallelIndex": 4,
+                  "status": "failed",
+                  "duration": 5439,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\nExpected substring: \u001b[32m\"SNAP \u001b[7m2\u001b[27m/12\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7m1ST & 10BALL AT 78\u001b[27mSNAP \u001b[7m1\u001b[27m/12\u001b[7mTD 0 · ARCADE 0\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\u001b[22m\n\u001b[2m    5 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 20SNAP 1/12TD 0 · ARCADE 08s\"\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 78SNAP 1/12TD 0 · ARCADE 0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\nExpected substring: \u001b[32m\"SNAP \u001b[7m2\u001b[27m/12\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7m1ST & 10BALL AT 78\u001b[27mSNAP \u001b[7m1\u001b[27m/12\u001b[7mTD 0 · ARCADE 0\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\u001b[22m\n\u001b[2m    5 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 20SNAP 1/12TD 0 · ARCADE 08s\"\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 78SNAP 1/12TD 0 · ARCADE 0\"\u001b[22m\n\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:16:209",
+                    "location": {
+                      "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
+                      "column": 209,
+                      "line": 16
+                    },
+                    "snippet": "  14 | test('field keyboard controls, hidden pause, and scroll-lock cleanup work',async({page})=>{\n  15 |  await page.goto('/#offfield-personal');await page.getByRole('button',{name:'PRESS START'}).click();const dialog=page.getByRole('dialog',{name:'POCKET PASS'});await dialog.getByRole('button',{name:'START DRIVE'}).click();\n> 16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 2/12');\n     |                                                                                                                                                                                                                 ^\n  17 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n  18 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  19 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
+                        "column": 209,
+                        "line": 16
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\nExpected substring: \u001b[32m\"SNAP \u001b[7m2\u001b[27m/12\"\u001b[39m\nReceived string:    \u001b[31m\"\u001b[7m1ST & 10BALL AT 78\u001b[27mSNAP \u001b[7m1\u001b[27m/12\u001b[7mTD 0 · ARCADE 0\u001b[27m\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('dialog', { name: 'POCKET PASS' }).locator('[class*=\"hud\"]')\u001b[22m\n\u001b[2m    5 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 20SNAP 1/12TD 0 · ARCADE 08s\"\u001b[22m\n\u001b[2m    9 × locator resolved to <div class=\"football-game_hud__mkbFQ\">…</div>\u001b[22m\n\u001b[2m      - unexpected value \"1ST & 10BALL AT 78SNAP 1/12TD 0 · ARCADE 0\"\u001b[22m\n\n\n  14 | test('field keyboard controls, hidden pause, and scroll-lock cleanup work',async({page})=>{\n  15 |  await page.goto('/#offfield-personal');await page.getByRole('button',{name:'PRESS START'}).click();const dialog=page.getByRole('dialog',{name:'POCKET PASS'});await dialog.getByRole('button',{name:'START DRIVE'}).click();\n> 16 |  const field=dialog.getByRole('application',{name:/Football field/});await field.focus();await page.keyboard.press('ArrowUp');await page.keyboard.press('Space');await expect(dialog.locator('[class*=\"hud\"]')).toContainText('SNAP 2/12');\n     |                                                                                                                                                                                                                 ^\n  17 |  await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'))});await expect(dialog.getByText('PAUSED')).toBeVisible();\n  18 |  await dialog.getByRole('button',{name:'EXIT'}).click();await expect(page.locator('body')).not.toHaveCSS('overflow','hidden');await expect(page.getByRole('button',{name:'PRESS START'})).toBeFocused();\n  19 | });\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts:16:209"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:52.935Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-reduced-motion\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\football-game-field-keyboa-dffb8-nd-scroll-lock-cleanup-work-reduced-motion\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\football-game.spec.ts",
+                    "column": 209,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e39fc1866e2e2c989e54-531fa648bdf86cfe18df",
+          "file": "football-game.spec.ts",
+          "line": 14,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "site.spec.ts",
+      "file": "site.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "renders eight scenes, preview labels, and no unverified performance content",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 340,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:36.407Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-8b1e49718015c09237cd",
+          "file": "site.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "main navigation names the six requested destinations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 395,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:36.760Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-f40efa69160a7b3b73fa",
+          "file": "site.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "mobile navigation opens accessibly, traps focus, and closes on Escape",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 728,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:36.859Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-b1e924e59597c85b7c95",
+          "file": "site.spec.ts",
+          "line": 23,
+          "column": 5
+        },
+        {
+          "title": "film dialog explains the empty state and closes with Escape",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 394,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:37.169Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-02213c51d41af4ad286c",
+          "file": "site.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "reduced motion leaves content visible and removes pinned scenes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts",
+                    "line": 62,
+                    "column": 56
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "skipped",
+                  "duration": 86,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:37.572Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts",
+                        "line": 62,
+                        "column": 56
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-79280e9f22ee854b29e9",
+          "file": "site.spec.ts",
+          "line": 61,
+          "column": 5
+        },
+        {
+          "title": "changing to reduced motion removes desktop pin spacers immediately",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 322,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:37.595Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-46b3f8e9fde9e0e24cf4",
+          "file": "site.spec.ts",
+          "line": 69,
+          "column": 5
+        },
+        {
+          "title": "layout has no horizontal overflow and passes automated accessibility checks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 1175,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:37.668Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-50a07d179c2a7efa7b09",
+          "file": "site.spec.ts",
+          "line": 78,
+          "column": 5
+        },
+        {
+          "title": "two-world diptych routes to the existing field and personal content without adding a scene",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 1319,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:37.924Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-c21bd8c260a240ff3013",
+          "file": "site.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "NIL inquiry anchor always works and empty social/contact states contain no outbound links",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chromium",
+              "projectName": "desktop-chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 357,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:38.852Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-de0b18980eacc896fcc8",
+          "file": "site.spec.ts",
+          "line": 99,
+          "column": 5
+        },
+        {
+          "title": "renders eight scenes, preview labels, and no unverified performance content",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 286,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:44.284Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-b3b2307ce97d42275a43",
+          "file": "site.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "main navigation names the six requested destinations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 293,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:44.577Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-103fa142af5c0b4b2074",
+          "file": "site.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "mobile navigation opens accessibly, traps focus, and closes on Escape",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 806,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:44.878Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-c6c6a5712136d1461d82",
+          "file": "site.spec.ts",
+          "line": 23,
+          "column": 5
+        },
+        {
+          "title": "film dialog explains the empty state and closes with Escape",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 368,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:45.696Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-6c71fa5ba1b8bc2ed0fe",
+          "file": "site.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "reduced motion leaves content visible and removes pinned scenes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts",
+                    "line": 62,
+                    "column": 56
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 3,
+                  "status": "skipped",
+                  "duration": 80,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:46.281Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts",
+                        "line": 62,
+                        "column": 56
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-3a0d1a6e0a46dc76d1f7",
+          "file": "site.spec.ts",
+          "line": 61,
+          "column": 5
+        },
+        {
+          "title": "changing to reduced motion removes desktop pin spacers immediately",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts",
+                    "line": 70,
+                    "column": 58
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 87,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:46.071Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts",
+                        "line": 70,
+                        "column": 58
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-cc6fd241edb8bbe1852f",
+          "file": "site.spec.ts",
+          "line": 69,
+          "column": 5
+        },
+        {
+          "title": "layout has no horizontal overflow and passes automated accessibility checks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 967,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:46.169Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-9890e4750a6a5c253008",
+          "file": "site.spec.ts",
+          "line": 78,
+          "column": 5
+        },
+        {
+          "title": "two-world diptych routes to the existing field and personal content without adding a scene",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 9,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 1254,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:46.449Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-962b425ab240282367ce",
+          "file": "site.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "NIL inquiry anchor always works and empty social/contact states contain no outbound links",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chromium",
+              "projectName": "mobile-chromium",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 354,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:47.144Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-26ddb1195cbbd4a7a7b4",
+          "file": "site.spec.ts",
+          "line": 99,
+          "column": 5
+        },
+        {
+          "title": "renders eight scenes, preview labels, and no unverified performance content",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 302,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:53.932Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-ee192cac1e480c12b446",
+          "file": "site.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "main navigation names the six requested destinations",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 265,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:54.316Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-52d1da6467274258d9df",
+          "file": "site.spec.ts",
+          "line": 16,
+          "column": 5
+        },
+        {
+          "title": "mobile navigation opens accessibly, traps focus, and closes on Escape",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 661,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:54.587Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-4c19baebf89d07ca09c8",
+          "file": "site.spec.ts",
+          "line": 23,
+          "column": 5
+        },
+        {
+          "title": "film dialog explains the empty state and closes with Escape",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 352,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:55.254Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-df3feff4e344e3bdc670",
+          "file": "site.spec.ts",
+          "line": 52,
+          "column": 5
+        },
+        {
+          "title": "reduced motion leaves content visible and removes pinned scenes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 13,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 322,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: /Zephyr Kreye/i })\nExpected: visible\nError: strict mode violation: getByRole('heading', { name: /Zephyr Kreye/i }) resolved to 2 elements:\n    1) <h1 id=\"hero-title\" class=\"hero-title\">…</h1> aka getByRole('heading', { name: 'ZEPHYR KREYE.' })\n    2) <h3 class=\"offfield-arcade_pixelTitle__Bv7KC\">ZEPHYR KREYE</h3> aka getByRole('heading', { name: 'ZEPHYR KREYE', exact: true })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: /Zephyr Kreye/i }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: /Zephyr Kreye/i })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: /Zephyr Kreye/i })\nExpected: visible\nError: strict mode violation: getByRole('heading', { name: /Zephyr Kreye/i }) resolved to 2 elements:\n    1) <h1 id=\"hero-title\" class=\"hero-title\">…</h1> aka getByRole('heading', { name: 'ZEPHYR KREYE.' })\n    2) <h3 class=\"offfield-arcade_pixelTitle__Bv7KC\">ZEPHYR KREYE</h3> aka getByRole('heading', { name: 'ZEPHYR KREYE', exact: true })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: /Zephyr Kreye/i }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: /Zephyr Kreye/i })\u001b[22m\n\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts:64:70",
+                    "location": {
+                      "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts",
+                      "column": 70,
+                      "line": 64
+                    },
+                    "snippet": "  62 |   if (testInfo.project.name !== 'reduced-motion') test.skip();\n  63 |   await page.goto('/');\n> 64 |   await expect(page.getByRole('heading', { name: /Zephyr Kreye/i })).toBeVisible();\n     |                                                                      ^\n  65 |   await expect(page.locator('.pin-spacer')).toHaveCount(0);\n  66 |   await expect(page.locator('.hero-title')).toHaveCSS('opacity', '1');\n  67 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts",
+                        "column": 70,
+                        "line": 64
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading', { name: /Zephyr Kreye/i })\nExpected: visible\nError: strict mode violation: getByRole('heading', { name: /Zephyr Kreye/i }) resolved to 2 elements:\n    1) <h1 id=\"hero-title\" class=\"hero-title\">…</h1> aka getByRole('heading', { name: 'ZEPHYR KREYE.' })\n    2) <h3 class=\"offfield-arcade_pixelTitle__Bv7KC\">ZEPHYR KREYE</h3> aka getByRole('heading', { name: 'ZEPHYR KREYE', exact: true })\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('heading', { name: /Zephyr Kreye/i }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: /Zephyr Kreye/i })\u001b[22m\n\n\n  62 |   if (testInfo.project.name !== 'reduced-motion') test.skip();\n  63 |   await page.goto('/');\n> 64 |   await expect(page.getByRole('heading', { name: /Zephyr Kreye/i })).toBeVisible();\n     |                                                                      ^\n  65 |   await expect(page.locator('.pin-spacer')).toHaveCount(0);\n  66 |   await expect(page.locator('.hero-title')).toHaveCSS('opacity', '1');\n  67 | });\n    at C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts:64:70"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:55.613Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\site-reduced-motion-leaves-46394-e-and-removes-pinned-scenes-reduced-motion\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\test-results\\site-reduced-motion-leaves-46394-e-and-removes-pinned-scenes-reduced-motion\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts",
+                    "column": 70,
+                    "line": 64
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-d964527289f72fde4a1a",
+          "file": "site.spec.ts",
+          "line": 61,
+          "column": 5
+        },
+        {
+          "title": "changing to reduced motion removes desktop pin spacers immediately",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "location": {
+                    "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts",
+                    "line": 70,
+                    "column": 58
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 69,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:56.342Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "C:\\Users\\nrsan\\Documents\\Codex\\2026-10-25\\zk17-master-build-directive-the-official\\tests\\e2e\\site.spec.ts",
+                        "line": 70,
+                        "column": 58
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-e6c1e2c2403c46bd3146",
+          "file": "site.spec.ts",
+          "line": 69,
+          "column": 5
+        },
+        {
+          "title": "layout has no horizontal overflow and passes automated accessibility checks",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 837,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:56.491Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-a41e8726151f3104a6f4",
+          "file": "site.spec.ts",
+          "line": 78,
+          "column": 5
+        },
+        {
+          "title": "two-world diptych routes to the existing field and personal content without adding a scene",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 367,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:57.336Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-8f0be0816628be37e34e",
+          "file": "site.spec.ts",
+          "line": 86,
+          "column": 5
+        },
+        {
+          "title": "NIL inquiry anchor always works and empty social/contact states contain no outbound links",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "reduced-motion",
+              "projectName": "reduced-motion",
+              "results": [
+                {
+                  "workerIndex": 14,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 296,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-25T19:30:57.709Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "5c02723ad68c2a0d50c5-d1883f9e462e26019a1e",
+          "file": "site.spec.ts",
+          "line": 99,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-25T19:30:33.280Z",
+    "duration": 45456.181,
+    "expected": 33,
+    "skipped": 8,
+    "unexpected": 10,
+    "flaky": 0
+  }
+}

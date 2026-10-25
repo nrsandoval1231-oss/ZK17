@@ -61,7 +61,7 @@ test('film dialog explains the empty state and closes with Escape', async ({ pag
 test('reduced motion leaves content visible and removes pinned scenes', async ({ page }, testInfo) => {
   if (testInfo.project.name !== 'reduced-motion') test.skip();
   await page.goto('/');
-  await expect(page.getByRole('heading', { name: /Zephyr Kreye/i })).toBeVisible();
+  await expect(page.locator('#hero-title')).toBeVisible();
   await expect(page.locator('.pin-spacer')).toHaveCount(0);
   await expect(page.locator('.hero-title')).toHaveCSS('opacity', '1');
 });

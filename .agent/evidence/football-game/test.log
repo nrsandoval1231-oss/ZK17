@@ -1,0 +1,37 @@
+
+> zk17-official@0.1.0 test
+> tsx --test tests/*.test.ts
+
+▶ public NIL inquiry contact
+  ✔ stays unpublished without a record and fails closed at every approval gate (0.6014ms)
+  ✔ returns an approved email with an encoded NIL inquiry subject (0.5332ms)
+  ✔ accepts only clean HTTPS contact URLs (0.1759ms)
+  ✔ rejects malformed email destinations and control characters (0.1392ms)
+  ✔ renders only a pending message when no public contact or social profiles exist (4.3307ms)
+  ✔ renders every approved social profile as an accessible external link (0.97ms)
+  ✔ renders the approved contact action with its exact safe destination (0.4183ms)
+✔ public NIL inquiry contact (8.0251ms)
+▶ public content eligibility
+  ✔ keeps only source-backed approved media and linked highlights (0.9466ms)
+  ✔ requires source, date, season, and game count before stats appear (0.1448ms)
+  ✔ keeps uncommitted as the only commitment state and holds empty offers/partners/socials (0.1817ms)
+  ✔ uses only source-backed approved photo assignments and prefers them over preview fallbacks (0.2559ms)
+  ✔ keeps commitment content absent by default and renders only an approved enabled record (5.1362ms)
+✔ public content eligibility (7.4406ms)
+✔ clock clamps large deltas and pause freezes the simulation (1.4544ms)
+✔ lead pass can complete and defenders intercept before receivers (0.3396ms)
+✔ downs, first down, failed fourth-down turnover, goal-to-go touchdown, twelve snaps, and restart scoring (0.1852ms)
+✔ real pass path scores a touchdown with position-based contact (0.1459ms)
+✔ default moving routes reward a normal lead and finish a twelve-snap touchdown round (2.3965ms)
+▶ release export media boundary
+  ✔ blocks preview files in public sources and in exported output even when preview mode is disabled (15.1548ms)
+  ✔ fails prebuild when commitment reveal is enabled without a published approved announcement (52.0082ms)
+✔ release export media boundary (67.9633ms)
+ℹ tests 19
+ℹ suites 3
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 206.0321

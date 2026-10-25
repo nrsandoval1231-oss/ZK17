@@ -1,0 +1,2 @@
+# ZK-14 test repair2
+Only remaining three Chromium failures are the same selector ambiguity: hidden handler correctly shows both PAUSED heading and Paused while away status, getByText(PAUSED) default substring resolves2. Luna owns tests/e2e/football-game.spec.ts only: change visibleheading assertion to getByText('PAUSED',{exact:true}) atallpausechecks. Keep status assertion optionalseparate; no runtime or scopechange. Focusedlint/diff. Parent re-runs Chromium/WebKit and finaltype/lint. This is finaldistinct boundedtestrepair; two earlierfailedreports retained.
