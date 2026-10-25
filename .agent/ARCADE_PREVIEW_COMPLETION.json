@@ -1,0 +1,50 @@
+{
+  "objective": "ZK-12 phone-accessible static concept preview",
+  "changed_files": [
+    "public/concepts/player17/index.html",
+    "public/concepts/player17/off-field-v1.png",
+    "public/concepts/player17/off-field-v1.webp",
+    ".agent/ARCADE_PREVIEW_COMPLETION.json"
+  ],
+  "validation": {
+    "png_sha256_matches_source": true,
+    "png_sha256": "FEDF75D6F06487E428E13E7386F03EAAB35A5E314959A9D100638C9594E9A801",
+    "webp_metadata": {
+      "format": "webp",
+      "width": 1024,
+      "height": 1536
+    },
+    "html_references": [
+      {
+        "reference": "off-field-v1.webp",
+        "present": true
+      },
+      {
+        "reference": "off-field-v1.png",
+        "present": true
+      },
+      {
+        "reference": "/favicon.png?v=2",
+        "present": true
+      }
+    ],
+    "viewport_present": true,
+    "noindex_present": true,
+    "fullsize_png_link": true,
+    "responsive_dimensions": true
+  },
+  "commands": [
+    "Copy-Item supplied PNG and compare SHA-256",
+    "node sharp WebP conversion; verify WebP dimensions and format",
+    "PowerShell HTML reference and requirement checks"
+  ],
+  "start_utc": "2026-10-25T18:37:15Z",
+  "finish_utc": "2026-10-25T18:38:47Z",
+  "config_identity": "UNKNOWN",
+  "token_usage": "UNKNOWN",
+  "limitations": [
+    "Static preview artifact only; not homepage integration.",
+    "Remote deployment and phone-browser verification are owned by parent.",
+    "No push, deploy, or production certification performed."
+  ]
+}
