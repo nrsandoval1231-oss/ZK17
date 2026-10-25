@@ -1,4 +1,6 @@
 # Deployment runbook
+
+Delivered review: https://review.zk17-review.pages.dev . Immutable: https://7b983368.zk17-review.pages.dev . Application source ee9877de49b10f7c969c6494a71c959b546b96c3; deployment 7b983368-bbcc-4c99-a927-8ea2dc6d03f8, environment preview/branch review. Actual remote hashes, browser checks and mobile lab results are in .agent/DEPLOYMENT_RECEIPT.json. Final documentation commits leave runtime unchanged. No production promotion performed.
 Target: owner GitHub nrsandoval1231-oss/ZK17 (empty verified 2026-10-25); Cloudflare Pages separate review project `zk17-review` with production branch `owner-approved-release`, deploy branch `review` only.
 Static export: npm ci; npm run typecheck; npm run lint; npm test; npm run build. Upload only out/ . Never upload repository root, docs, .agent, originals, source credentials or unverified data.
 Preview: `npx wrangler pages deploy out --project-name zk17-review --branch review --commit-hash <reviewedSHA>` . Record actual result URL and deployment ID, then test in browser. No final public domain binding or production deployment.

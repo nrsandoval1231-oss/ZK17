@@ -1,5 +1,4 @@
-# Work graph
-ZK-01 reference/design [DONE] -> ZK-02 complete static app + preview media [IMPLEMENTED] -> ZK-03 QA/independent review [REPAIR-02 RUNNING] -> ZK-04 Cloudflare preview + live QA [WAIT].
-ZK-05 owner originals/rights + approved content + final public approval [EXTERNAL].
-One READY repair packet only: PACKET-REPAIR-02.md. No parallel builders. Sol ordinary review1 returned FIX; narrow commitment reconciliation added safe default-disabled actual configuration/render gate.
-Next: deterministic final gates + browser confirmation -> Sol verdict -> preview deploy. A review preview is not final public release.
+# Work graph — final preview state
+ZK-01 reference/design [DONE] -> ZK-02 app/media [DONE] -> ZK-03 QA/review [ACCEPTED at ee9877d] -> ZK-04 deployed preview/live QA [DONE]. ZK-05 originals/rights, approved content and final public approval [EXTERNAL / OPEN].
+
+One metadata handoff node: record evidence, independently verify unchanged runtime, push main and verify remote identity. Next direction: COMPLETE review-preview delivery. Final production readiness remains conditional on owner inputs.

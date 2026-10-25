@@ -1,6 +1,8 @@
 # ZK17 — official site
 
-A static, eight-scene editorial site for Zephyr Kreye. It uses only owner-supplied profile facts and clearly labeled CSS/SVG placeholder artwork while approved original media is unavailable. No statistics, milestones, offers, social links, partnership details, or personal preferences are prefilled.
+A static, eight-scene editorial site for Zephyr Kreye. It uses owner-supplied profile facts, labeled owner-authorized photo crops for review only, and honest empty states where approved content is unavailable. Unverified statistics, offers, social links, partnership details and personal preferences remain unpublished.
+
+Review preview: https://review.zk17-review.pages.dev . Final public release awaits originals/rights, approved content and owner approval. See docs/DEPLOYMENT.md and docs/QA_MATRIX.md.
 
 ## Requirements
 
@@ -27,9 +29,9 @@ npm run e2e
 
 ## Content and evidence
 
-Edit `content/site.ts`. Keep content records typed. An item is publicly eligible only when verified, published, and accompanied by a source and source date. Media additionally requires approved rights and an actual local source. Highlights also require a published media asset. Stats require a positive season and game count. Social destinations must use HTTPS. Empty collections are deliberate until evidence is approved. The commitment model is fixed to `UNCOMMITTED`; do not add private commitment information to public source.
+Edit `content/site.ts`. Keep content records typed. An item is publicly eligible only when verified, published, and accompanied by a source and source date. Media additionally requires approved rights and an actual local source. Highlights also require a published media asset. Stats require a positive season and game count. Social destinations must use HTTPS. Empty collections are deliberate until evidence is approved. The public profile is uncommitted. Commitment reveal is disabled by default; its announcement file stays null until a publicly approved announcement is supplied. Never add private commitment information to public source.
 
-Preview crops are isolated in the `previewPhotos` content model and enabled by `PREVIEW_MEDIA_MODE` (enabled by default for the review build). They are explicitly labeled `PREVIEW CROP · ORIGINAL PENDING` and never pass the rights-approved public media gate. A public build must set `PREVIEW_MEDIA_MODE=false`; the prebuild release check blocks `PUBLIC_RELEASE=true` while preview media is enabled.
+Preview crops are isolated in the `previewPhotos` content model and enabled by `PREVIEW_MEDIA_MODE` (enabled by default for the review build). They are explicitly labeled `PREVIEW CROP · ORIGINAL PENDING` and never pass the rights-approved public media gate. A public build must set `PREVIEW_MEDIA_MODE=false`; the prebuild release check blocks `PUBLIC_RELEASE=true` while preview media is enabled. The postbuild output audit also blocks distribution of preview files even when references are disabled; exclude preview derivatives from public release output.
 
 Use `node scripts/optimize-media.mjs <approved-original-path> <lowercase-slug>` for a local raster photo. It writes AVIF and WebP responsive variants, respects EXIF orientation, preserves aspect ratio, never upscales, and strips source metadata. Rebuild the graphic-only social preview with `node scripts/generate-og.mjs`. Place authorized original assets under `public/media/` and reference the local path. Do not use screenshots, external athlete photography, or generated people. For approved film, add a verified video record with `kind: 'video'`, a local MP4 `src`, approved rights, source metadata, and optional local poster path. The Film Room modal will use the native player and provides keyboard Escape dismissal. Set explicit width/height and useful alt text when adding photos.
 

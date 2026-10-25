@@ -16,6 +16,8 @@ Build environment: SITE_URL=https://review.zk17-review.pages.dev, PUBLIC_RELEASE
 | CUA interactive | Hero film availability dialog opens/closes; Journey anchor changes destination |
 | Real approved athlete video | NOT SUPPLIED; actual playback acceptance remains content-dependent |
 | Physical devices / real Safari | UNKNOWN; WebKit emulation is not physical Safari proof |
-| Deployed runtime / performance | Pending preview deployment |
+| Deployed runtime | PASS: 73 remote assets match export SHA-256; desktop pins, mobile menu/Journey and film dialog verified |
+| Mobile Lighthouse lab | Performance 98 / accessibility 100 / best practices 100; SEO 69 reflects deliberate noindex |
+| Lab timing | FCP 0.9s, LCP 2.1s, TBT 30ms, CLS 0.065; not field measurements |
 
-Screenshots: .impeccable/review/{desktop,mobile,android}.png, corresponding full-page and scene captures. Reduced-motion capture ensures no hidden entry frames; separate tests prove motion cleanup. Final independent review must close visual findings before preview upload.
+Screenshots: .impeccable/review/{desktop,mobile,android}.png, corresponding full-page and scene captures, now from the actual immutable deployment. Reduced-motion capture ensures no hidden entry frames; separate tests prove motion cleanup. Sol closed visual findings at ee9877de49b10f7c969c6494a71c959b546b96c3. See .agent/DEPLOYMENT_RECEIPT.json.

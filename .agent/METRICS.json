@@ -10,11 +10,16 @@
   "planning_start_utc": "UNKNOWN",
   "planning_finish_utc": "UNKNOWN",
   "build_start_utc": "see COMPLETION.json",
-  "build_finish_utc": "PENDING",
-  "validation_duration": "PENDING",
-  "audit_duration": "PENDING",
-  "repair_count": 0,
+  "build_finish_utc": "2026-10-25T14:16:17Z initial handoff; later repairs recorded separately",
+  "validation_start_utc": "2026-10-25T14:53:49.1466549Z",
+  "validation_finish_utc": "2026-10-25T14:54:06.4851110Z",
+  "validation_duration_seconds": 17.3384561,
+  "validation_scope": "Final build/typecheck/lint/unit only; browser report timestamps separate",
+  "audit_duration": "UNKNOWN - not timed contemporaneously",
+  "repair_count": 3,
+  "repair_scope": "Two integrated repair rounds and one narrow film-caption audit correction; failures retained",
   "tokens": "UNKNOWN - no per-agent token meter supplied",
   "config_identity": "role tool declarations; no global config-load claim",
-  "elapsed_to_accepted": "UNKNOWN until independent acceptance"
+  "elapsed_to_accepted": "UNKNOWN - original start was not recorded",
+  "accepted_scope": "Review preview at ee9877de49b10f7c969c6494a71c959b546b96c3; final production release open"
 }
