@@ -1,6 +1,6 @@
 {
-  "origin": "http://127.0.0.1:3100",
-  "checkedUtc": "2026-10-25T19:31:46.031Z",
+  "origin": "https://f148c164.zk17-review.pages.dev",
+  "checkedUtc": "2026-10-25T20:10:52.570Z",
   "method": "Real pointer aim and THROW/Next Play clicks; no injected game state",
   "results": [
     {
@@ -40,7 +40,7 @@
     },
     {
       "snap": 8,
-      "hud": "1ST & 10\nBALL AT 82\nSNAP 8/12\nTD 1 · ARCADE 6",
+      "hud": "1ST & 10\nBALL AT 80\nSNAP 8/12\nTD 1 · ARCADE 6",
       "message": "COMPLETE!"
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "snap": 12,
-      "hud": "1ST & 10\nBALL AT 65\nSNAP 12/12\nTD 3 · ARCADE 18",
+      "hud": "1ST & 10\nBALL AT 66\nSNAP 12/12\nTD 3 · ARCADE 18",
       "message": "ROUND COMPLETE — ARCADE SCORE ONLY."
     }
   ],

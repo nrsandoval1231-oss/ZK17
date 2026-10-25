@@ -1,9 +1,8 @@
-# Review preview - PLAYER17 arcade delivered
+# Review preview - playable football delivered
 
-Preview: https://review.zk17-review.pages.dev/#offfield-personal
-Immutable: https://78c3d475.zk17-review.pages.dev
-Delivery source: 718cc8c2900c9c03c5ec9deea44c4213a22e1c91
-Accepted application: 9ef24bcad6c3ba4bd18f46dcee4aa9404454ed5b
-Deployment: 78c3d475-283d-4a02-855c-20c8d0972fda, preview/review.
+Preview: https://review.zk17-review.pages.dev/?v=pocket-pass#offfield-personal
+Immutable: https://f148c164.zk17-review.pages.dev
+Source: 80aa97505959c07442af0301884f9e8d8ec99635
+Deployment: f148c164-1223-4ebc-b08b-040a6192f291, preview/review.
 
-The final delivery adds a screenshot artifact to the accepted application. All 91 application assets and the additional screenshot match local hashes. Six deployed viewport/engine probes, desktop motion/reduced-motion checks, and actual alias Start/Back/focus checks passed. Noindex is retained. No final public release.
+All91 application assets and two screenshot artifacts match local hashes. Six deployed gameplay/Axe viewport probes pass. A real deployed12-snap round scored18 points with3 touchdowns. The alias was tested for title, aim/throw, Exit/focus and restored scrolling. Metadata-only followup does not change the accepted application. No final public promotion.

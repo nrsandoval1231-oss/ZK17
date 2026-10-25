@@ -1,0 +1,36 @@
+{
+  "origin": "https://f148c164.zk17-review.pages.dev",
+  "checks": 6,
+  "results": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "result": "INCOMPLETE."
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "result": "INCOMPLETE."
+    },
+    {
+      "engine": "chromium",
+      "width": 412,
+      "result": "INCOMPLETE."
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "result": "INCOMPLETE."
+    },
+    {
+      "engine": "chromium",
+      "width": 1280,
+      "result": "INCOMPLETE."
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "result": "INCOMPLETE."
+    }
+  ]
+}

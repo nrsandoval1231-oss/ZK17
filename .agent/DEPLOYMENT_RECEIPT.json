@@ -1,29 +1,30 @@
 {
-  "sourceCandidate": "718cc8c2900c9c03c5ec9deea44c4213a22e1c91",
-  "sourceScope": "Accepted application plus independently reviewed mobile screenshot artifact",
+  "sourceCandidate": "80aa97505959c07442af0301884f9e8d8ec99635",
   "project": "zk17-review",
   "branch": "review",
   "environment": "preview",
-  "previewURL": "https://review.zk17-review.pages.dev/#offfield-personal",
-  "immutableURL": "https://78c3d475.zk17-review.pages.dev",
-  "deploymentID": "78c3d475-283d-4a02-855c-20c8d0972fda",
-  "verifiedUtc": "2026-10-25T19:11:05.581Z",
+  "reservedProductionBranch": "owner-approved-release",
+  "previewURL": "https://review.zk17-review.pages.dev/?v=pocket-pass#offfield-personal",
+  "immutableURL": "https://f148c164.zk17-review.pages.dev",
+  "deploymentID": "f148c164-1223-4ebc-b08b-040a6192f291",
+  "verifiedUtc": "2026-10-25T20:13:29.962Z",
   "status": "success",
   "commitDirty": false,
   "remoteAssetProof": {
     "filesChecked": 91,
     "mismatches": 0,
-    "screenshotAdditionalFiles": 1,
+    "screenshotAdditionalFiles": 2,
     "screenshotMismatches": 0
   },
-  "browserProof": ".agent/evidence/arcade-build/browser.json",
-  "desktopMotionProof": ".agent/evidence/arcade-build/motion.json",
-  "manualAliasProof": "CUA390px live Music/PressStart/comingsoon/Backfocus verified; viewport restored",
-  "snapshot": "public/concepts/player17/live-mobile-v1.webp captured from actualimmutable preview byPlaywright",
-  "indexing": "noindex,nofollow; robotsdisallow",
-  "finalPublicRelease": "NOT AUTHORIZED",
-  "applicationCandidate": "9ef24bcad6c3ba4bd18f46dcee4aa9404454ed5b",
-  "browserProofNote": "Six interaction probes on first immutable b1c08c85; final immutable 78c3d475 has the same verified application assets and adds only the screenshot. Alias manually tested.",
-  "screenshotURL": "https://review.zk17-review.pages.dev/concepts/player17/live-mobile-v1.webp",
-  "screenshotProof": ".agent/evidence/arcade-build/screenshot-proof.json"
+  "browserProof": ".agent/evidence/football-game/browser.json",
+  "realRoundProof": ".agent/evidence/football-game/round.json",
+  "aliasProof": ".agent/evidence/football-game/alias-proof.json",
+  "realRound": {
+    "snaps": 12,
+    "touchdowns": 3,
+    "arcadeScore": 18,
+    "method": "Real pointer aim and Throw/Next Play clicks; no game-state injection"
+  },
+  "indexing": "noindex,nofollow; robots disallow",
+  "finalPublicRelease": "NOT AUTHORIZED"
 }
