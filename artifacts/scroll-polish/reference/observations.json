@@ -1,0 +1,302 @@
+[
+  {
+    "y": 0,
+    "sticky": [
+      {
+        "class": "sticky-item home-hero",
+        "top": 0,
+        "transform": "none"
+      },
+      {
+        "class": "horizontal-track",
+        "top": 2827,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "class": "sticky-item",
+        "top": 5970,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-1",
+        "top": 6054,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-2",
+        "top": 6054,
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "y": 500,
+    "sticky": [
+      {
+        "class": "sticky-item home-hero",
+        "top": 0,
+        "transform": "none"
+      },
+      {
+        "class": "horizontal-track",
+        "top": 2327,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "class": "sticky-item",
+        "top": 5470,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-1",
+        "top": 5554,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-2",
+        "top": 5554,
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "y": 1000,
+    "sticky": [
+      {
+        "class": "sticky-item home-hero",
+        "top": -100,
+        "transform": "none"
+      },
+      {
+        "class": "horizontal-track",
+        "top": 1827,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      {
+        "class": "sticky-item",
+        "top": 4970,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-1",
+        "top": 5054,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-2",
+        "top": 5054,
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "y": 3400,
+    "sticky": [
+      {
+        "class": "sticky-item home-hero",
+        "top": -2500,
+        "transform": "none"
+      },
+      {
+        "class": "horizontal-track",
+        "top": 0,
+        "transform": "matrix(1, 0, 0, 1, -1473, 0)"
+      },
+      {
+        "class": "sticky-item",
+        "top": 2570,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-1",
+        "top": 2654,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-2",
+        "top": 2654,
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "y": 4100,
+    "sticky": [
+      {
+        "class": "sticky-item home-hero",
+        "top": -3200,
+        "transform": "none"
+      },
+      {
+        "class": "horizontal-track",
+        "top": 0,
+        "transform": "matrix(1, 0, 0, 1, -2172.67, 0)"
+      },
+      {
+        "class": "sticky-item",
+        "top": 1870,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-1",
+        "top": 1954,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-2",
+        "top": 1954,
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "y": 5000,
+    "sticky": [
+      {
+        "class": "sticky-item home-hero",
+        "top": -4100,
+        "transform": "none"
+      },
+      {
+        "class": "horizontal-track",
+        "top": 0,
+        "transform": "matrix(1, 0, 0, 1, -3072.68, 0)"
+      },
+      {
+        "class": "sticky-item",
+        "top": 970,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-1",
+        "top": 1054,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-2",
+        "top": 1054,
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "y": 6700,
+    "sticky": [
+      {
+        "class": "sticky-item home-hero",
+        "top": -5800,
+        "transform": "none"
+      },
+      {
+        "class": "horizontal-track",
+        "top": -1630,
+        "transform": "matrix(1, 0, 0, 1, -3142.95, 0)"
+      },
+      {
+        "class": "sticky-item",
+        "top": 0,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-1",
+        "top": 84,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-2",
+        "top": 84,
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "y": 7200,
+    "sticky": [
+      {
+        "class": "sticky-item home-hero",
+        "top": -6300,
+        "transform": "none"
+      },
+      {
+        "class": "horizontal-track",
+        "top": -2130,
+        "transform": "matrix(1, 0, 0, 1, -3143, 0)"
+      },
+      {
+        "class": "sticky-item",
+        "top": -330,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-1",
+        "top": -246,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-2",
+        "top": -246,
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "y": 7800,
+    "sticky": [
+      {
+        "class": "sticky-item home-hero",
+        "top": -6900,
+        "transform": "none"
+      },
+      {
+        "class": "horizontal-track",
+        "top": -2730,
+        "transform": "matrix(1, 0, 0, 1, -3143, 0)"
+      },
+      {
+        "class": "sticky-item",
+        "top": -930,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-1",
+        "top": -846,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-2",
+        "top": -846,
+        "transform": "none"
+      }
+    ]
+  },
+  {
+    "y": 9000,
+    "sticky": [
+      {
+        "class": "sticky-item home-hero",
+        "top": -8100,
+        "transform": "none"
+      },
+      {
+        "class": "horizontal-track",
+        "top": -3930,
+        "transform": "matrix(1, 0, 0, 1, -3143, 0)"
+      },
+      {
+        "class": "sticky-item",
+        "top": -2130,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-1",
+        "top": -2046,
+        "transform": "none"
+      },
+      {
+        "class": "otot-home-img-w is-2",
+        "top": -2046,
+        "transform": "none"
+      }
+    ]
+  }
+]

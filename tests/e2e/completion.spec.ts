@@ -1,0 +1,56 @@
+import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+
+test('snapshot is reachable from recruiting navigation and shares the current route', async ({page, context}) => {
+ await context.grantPermissions(['clipboard-read','clipboard-write']);
+ await page.goto('/');
+ if (page.viewportSize()!.width < 900) await page.getByRole('button',{name:'Menu'}).click();
+ await page.locator('#site-nav').getByRole('link',{name:'Recruiting',exact:true}).click();
+ await expect(page).toHaveURL(/\/recruiting\/?$/);
+ await expect(page.getByRole('heading',{level:1})).toContainText('Zephyr Kreye');
+ await page.getByRole('button',{name:'Copy snapshot link'}).click();
+ await expect(page.getByRole('status')).toContainText('Link copied');
+ expect(await page.evaluate(()=>navigator.clipboard.readText())).toMatch(/\/recruiting\/$/);
+ await expect(page.getByRole('link',{name:'Recruiting contact'})).toHaveAttribute('href','/#nil-inquiries');
+ expect((await new AxeBuilder({page}).analyze()).violations).toEqual([]);
+ await page.goBack();
+ await expect(page.locator('#hero-title')).toBeVisible();
+});
+
+test('film empty state is deep linkable and returns focus to its opener',async({page})=>{
+ await page.goto('/#film=pending');
+ await expect(page.getByRole('dialog')).toBeVisible();
+ await expect(page.getByRole('dialog')).toContainText('No approved film is available yet.');
+ await page.getByRole('button',{name:'Close film room'}).click();
+ await expect(page.getByRole('dialog')).toHaveCount(0);
+ await expect(page).toHaveURL(/#film-room$/);
+ await page.locator('.film-frame').click();
+ await page.keyboard.press('Escape');
+ await expect(page.locator('.film-frame')).toBeFocused();
+});
+
+test('scrolling releases the field pin and responsive motion leaves a readable document',async({page})=>{
+ await page.goto('/');
+ await page.evaluate(()=>document.fonts.ready);
+ await page.locator('#on-field').scrollIntoViewIfNeeded();
+ await page.evaluate(()=>window.scrollBy({top:innerHeight*2,behavior:'instant'}));
+ await expect.poll(()=>page.locator('#on-field').evaluate(e=>e.getBoundingClientRect().bottom)).toBeLessThan(100);
+ await page.emulateMedia({reducedMotion:'reduce'});
+ await expect(page.locator('.pin-spacer')).toHaveCount(0);
+ for(const width of [320,390,768,1440]){
+  await page.setViewportSize({width,height:844});
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ }
+ await expect(page.locator('#field-title')).toHaveCSS('opacity','1');
+});
+
+test('snapshot offers a selectable address when clipboard access is unavailable', async ({page}) => {
+ await page.addInitScript(() => Object.defineProperty(navigator, 'clipboard', {value:{writeText:async()=>{throw new Error('denied');}}}));
+ await page.goto('/recruiting/');
+ await page.getByRole('button',{name:'Copy snapshot link'}).click();
+ await expect(page.getByRole('status')).toContainText('Copy the snapshot address below.');
+ const address = page.getByRole('textbox',{name:'Snapshot address'});
+ await expect(address).toHaveValue(/\/recruiting\/$/);
+ await address.focus();
+ expect(await address.evaluate((el:HTMLInputElement)=>el.selectionEnd! - el.selectionStart!)).toBeGreaterThan(10);
+});
