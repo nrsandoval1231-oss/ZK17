@@ -106,3 +106,5 @@
 .snapshot-footer{border-top:1px solid var(--rule);padding-top:25px;display:flex;justify-content:space-between;align-items:center;gap:20px}
 .snapshot-footer p{color:var(--silver);font-size:8px;line-height:1.8}
 @media(max-width:560px){.recruiting-page{padding:22px 24px 32px}.snapshot-hero{padding-top:65px}.snapshot-hero>.eyebrow{max-width:30ch}.snapshot-facts dl{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}.snapshot-section{grid-template-columns:1fr;gap:10px;margin:65px 0}.snapshot-footer{align-items:flex-start;flex-direction:column}.snapshot-identity{font-size:10px}}
+/* Keep the field's photographic vignette below the editorial lockup. */
+.field-art{isolation:isolate;z-index:0}.field-caption{z-index:4}
