@@ -5,7 +5,7 @@ import type { KeyboardEvent } from 'react';
 import type { OffFieldFeature } from '@/content/site';
 import styles from './offfield-arcade.module.css';
 
-const categories = ['Games', 'Movies', 'TV Shows'] as const;
+const categories = ['Games', 'Movies', 'TV Shows', 'Anime'] as const;
 type Category = (typeof categories)[number];
 
 export default function OffFieldArcade({ features, athleteName }: { features: OffFieldFeature[]; athleteName: string }) {
