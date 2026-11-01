@@ -2,99 +2,126 @@
 > zk17-official@0.1.0 e2e
 > playwright test --workers=3
 
+[WebServer] (node:48839) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48850) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48861) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48873) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:48901) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49131) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49189) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49278) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49280) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49281) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49279) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:49432) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
 
-Running 72 tests using 3 workers
+Running 75 tests using 3 workers
 
-(node:44321) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:49446) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:44320) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:49445) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:44322) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:49444) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ✓   2 [desktop-chromium] › tests/e2e/arcade.spec.ts:43:5 › 320px arcade stays within the viewport with touch-sized controls (993ms)
-  ✓   3 [desktop-chromium] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.5s)
-  ✓   4 [desktop-chromium] › tests/e2e/arcade.spec.ts:64:5 › reduced-motion desktop arcade stacks its heading and cabinet (1.2s)
-  ✓   5 [desktop-chromium] › tests/e2e/arcade.spec.ts:80:5 › JavaScript-disabled desktop stacks title and CRT within the viewport (690ms)
-  ✓   1 [desktop-chromium] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (2.6s)
-  ✓   7 [desktop-chromium] › tests/e2e/completion.spec.ts:20:5 › film empty state is deep linkable and returns focus to its opener (1.7s)
-  ✓   8 [desktop-chromium] › tests/e2e/completion.spec.ts:32:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.8s)
-  ✓   9 [desktop-chromium] › tests/e2e/completion.spec.ts:47:5 › snapshot offers a selectable address when clipboard access is unavailable (650ms)
-  ✓   6 [desktop-chromium] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (3.0s)
+  ✓   1 [desktop-chromium] › tests/e2e/arcade.spec.ts:43:5 › 320px arcade stays within the viewport with touch-sized controls (859ms)
+  ✓   3 [desktop-chromium] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.3s)
+  ✓   4 [desktop-chromium] › tests/e2e/arcade.spec.ts:64:5 › reduced-motion desktop arcade stacks its heading and cabinet (728ms)
+  ✓   5 [desktop-chromium] › tests/e2e/arcade.spec.ts:80:5 › JavaScript-disabled desktop stacks title and CRT within the viewport (485ms)
+  ✓   2 [desktop-chromium] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (2.1s)
+  ✓   7 [desktop-chromium] › tests/e2e/completion.spec.ts:20:5 › film empty state is deep linkable and returns focus to its opener (1.2s)
+  ✓   8 [desktop-chromium] › tests/e2e/completion.spec.ts:32:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.3s)
+  ✓   9 [desktop-chromium] › tests/e2e/completion.spec.ts:47:5 › snapshot offers a selectable address when clipboard access is unavailable (465ms)
+  ✓   6 [desktop-chromium] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (2.3s)
   ✓  12 [desktop-chromium] › tests/e2e/playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (1.1s)
-  ✓  11 [desktop-chromium] › tests/e2e/playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (2.2s)
-  ✓  10 [desktop-chromium] › tests/e2e/playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (2.5s)
-  ✓  15 [desktop-chromium] › tests/e2e/playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF (618ms)
-  ✓  14 [desktop-chromium] › tests/e2e/playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.2s)
-  ✓  16 [desktop-chromium] › tests/e2e/site.spec.ts:4:5 › renders eight scenes, preview labels, and no unverified performance content (786ms)
-  ✓  17 [desktop-chromium] › tests/e2e/site.spec.ts:16:5 › main navigation names the six requested destinations (1.0s)
-  ✓  19 [desktop-chromium] › tests/e2e/site.spec.ts:52:5 › film dialog explains the empty state and closes with Escape (1.1s)
-  -  20 [desktop-chromium] › tests/e2e/site.spec.ts:61:5 › reduced motion leaves content visible and removes pinned scenes
-  ✓  18 [desktop-chromium] › tests/e2e/site.spec.ts:23:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (2.3s)
-  ✓  13 [desktop-chromium] › tests/e2e/playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (4.5s)
-  ✓  21 [desktop-chromium] › tests/e2e/site.spec.ts:69:5 › changing to reduced motion removes desktop pin spacers immediately (754ms)
-  ✓  23 [desktop-chromium] › tests/e2e/site.spec.ts:86:5 › two-world diptych routes to the existing field and personal content without adding a scene (1.2s)
-  ✓  24 [desktop-chromium] › tests/e2e/site.spec.ts:99:5 › NIL inquiry anchor always works and empty social/contact states contain no outbound links (1.1s)
-(node:45400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+  ✓  10 [desktop-chromium] › tests/e2e/playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (2.0s)
+  ✓  11 [desktop-chromium] › tests/e2e/playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (2.5s)
+  ✓  14 [desktop-chromium] › tests/e2e/playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.0s)
+  ✓  15 [desktop-chromium] › tests/e2e/playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF (442ms)
+  ✓  17 [desktop-chromium] › tests/e2e/site.spec.ts:4:5 › renders eight scenes, preview labels, and no unverified performance content (617ms)
+  ✓  16 [desktop-chromium] › tests/e2e/playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (877ms)
+  ✓  18 [desktop-chromium] › tests/e2e/site.spec.ts:16:5 › main navigation names the six requested destinations (792ms)
+  ✓  13 [desktop-chromium] › tests/e2e/playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (3.2s)
+  -  21 [desktop-chromium] › tests/e2e/site.spec.ts:61:5 › reduced motion leaves content visible and removes pinned scenes
+  ✓  20 [desktop-chromium] › tests/e2e/site.spec.ts:52:5 › film dialog explains the empty state and closes with Escape (806ms)
+  ✓  22 [desktop-chromium] › tests/e2e/site.spec.ts:69:5 › changing to reduced motion removes desktop pin spacers immediately (748ms)
+  ✓  19 [desktop-chromium] › tests/e2e/site.spec.ts:23:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (1.8s)
+  ✓  24 [desktop-chromium] › tests/e2e/site.spec.ts:86:5 › two-world diptych routes to the existing field and personal content without adding a scene (1.1s)
+  ✓  25 [desktop-chromium] › tests/e2e/site.spec.ts:99:5 › NIL inquiry anchor always works and empty social/contact states contain no outbound links (935ms)
+(node:50306) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:45407) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:50305) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ✓  22 [desktop-chromium] › tests/e2e/site.spec.ts:78:5 › layout has no horizontal overflow and passes automated accessibility checks (2.2s)
-(node:45577) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+  ✓  23 [desktop-chromium] › tests/e2e/site.spec.ts:78:5 › layout has no horizontal overflow and passes automated accessibility checks (2.2s)
+(node:50479) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ✓  25 [mobile-chromium] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.4s)
-  -  28 [mobile-chromium] › tests/e2e/arcade.spec.ts:64:5 › reduced-motion desktop arcade stacks its heading and cabinet
-  -  29 [mobile-chromium] › tests/e2e/arcade.spec.ts:80:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
-  ✓  27 [mobile-chromium] › tests/e2e/arcade.spec.ts:43:5 › 320px arcade stays within the viewport with touch-sized controls (787ms)
-  ✓  26 [mobile-chromium] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (2.1s)
-  ✓  31 [mobile-chromium] › tests/e2e/completion.spec.ts:20:5 › film empty state is deep linkable and returns focus to its opener (1.5s)
-  ✓  32 [mobile-chromium] › tests/e2e/completion.spec.ts:32:5 › scrolling releases the field pin and responsive motion leaves a readable document (2.0s)
-  ✓  33 [mobile-chromium] › tests/e2e/completion.spec.ts:47:5 › snapshot offers a selectable address when clipboard access is unavailable (833ms)
-  ✓  30 [mobile-chromium] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (3.6s)
-  ✓  36 [mobile-chromium] › tests/e2e/playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (863ms)
-  ✓  35 [mobile-chromium] › tests/e2e/playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (2.6s)
-  ✓  34 [mobile-chromium] › tests/e2e/playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (3.4s)
-  ✓  39 [mobile-chromium] › tests/e2e/playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF (313ms)
-  ✓  38 [mobile-chromium] › tests/e2e/playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.0s)
-  ✓  40 [mobile-chromium] › tests/e2e/site.spec.ts:4:5 › renders eight scenes, preview labels, and no unverified performance content (721ms)
-  ✓  41 [mobile-chromium] › tests/e2e/site.spec.ts:16:5 › main navigation names the six requested destinations (627ms)
-  ✓  37 [mobile-chromium] › tests/e2e/playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (2.9s)
-  -  44 [mobile-chromium] › tests/e2e/site.spec.ts:61:5 › reduced motion leaves content visible and removes pinned scenes
-  -  45 [mobile-chromium] › tests/e2e/site.spec.ts:69:5 › changing to reduced motion removes desktop pin spacers immediately
-  ✓  43 [mobile-chromium] › tests/e2e/site.spec.ts:52:5 › film dialog explains the empty state and closes with Escape (821ms)
-  ✓  42 [mobile-chromium] › tests/e2e/site.spec.ts:23:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (1.9s)
-  ✓  47 [mobile-chromium] › tests/e2e/site.spec.ts:86:5 › two-world diptych routes to the existing field and personal content without adding a scene (987ms)
-  ✓  48 [mobile-chromium] › tests/e2e/site.spec.ts:99:5 › NIL inquiry anchor always works and empty social/contact states contain no outbound links (564ms)
-(node:46334) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+  ✓  27 [mobile-chromium] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.1s)
+  -  29 [mobile-chromium] › tests/e2e/arcade.spec.ts:64:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  -  30 [mobile-chromium] › tests/e2e/arcade.spec.ts:80:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ✓  26 [mobile-chromium] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (1.6s)
+  ✓  28 [mobile-chromium] › tests/e2e/arcade.spec.ts:43:5 › 320px arcade stays within the viewport with touch-sized controls (641ms)
+  ✓  32 [mobile-chromium] › tests/e2e/completion.spec.ts:20:5 › film empty state is deep linkable and returns focus to its opener (934ms)
+  ✓  33 [mobile-chromium] › tests/e2e/completion.spec.ts:32:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.1s)
+  ✓  34 [mobile-chromium] › tests/e2e/completion.spec.ts:47:5 › snapshot offers a selectable address when clipboard access is unavailable (542ms)
+  ✓  31 [mobile-chromium] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (3.1s)
+  ✓  37 [mobile-chromium] › tests/e2e/playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (808ms)
+  ✓  36 [mobile-chromium] › tests/e2e/playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (2.3s)
+  ✓  35 [mobile-chromium] › tests/e2e/playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (2.9s)
+  ✓  40 [mobile-chromium] › tests/e2e/playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF (304ms)
+  ✓  39 [mobile-chromium] › tests/e2e/playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.1s)
+  ✓  41 [mobile-chromium] › tests/e2e/playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (784ms)
+  ✓  42 [mobile-chromium] › tests/e2e/site.spec.ts:4:5 › renders eight scenes, preview labels, and no unverified performance content (567ms)
+  ✓  43 [mobile-chromium] › tests/e2e/site.spec.ts:16:5 › main navigation names the six requested destinations (583ms)
+  ✓  45 [mobile-chromium] › tests/e2e/site.spec.ts:52:5 › film dialog explains the empty state and closes with Escape (735ms)
+  -  46 [mobile-chromium] › tests/e2e/site.spec.ts:61:5 › reduced motion leaves content visible and removes pinned scenes
+  ✓  38 [mobile-chromium] › tests/e2e/playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (3.2s)
+  -  47 [mobile-chromium] › tests/e2e/site.spec.ts:69:5 › changing to reduced motion removes desktop pin spacers immediately
+  ✓  44 [mobile-chromium] › tests/e2e/site.spec.ts:23:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (1.8s)
+  ✓  49 [mobile-chromium] › tests/e2e/site.spec.ts:86:5 › two-world diptych routes to the existing field and personal content without adding a scene (901ms)
+  ✓  50 [mobile-chromium] › tests/e2e/site.spec.ts:99:5 › NIL inquiry anchor always works and empty social/contact states contain no outbound links (658ms)
+(node:51126) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ✓  46 [mobile-chromium] › tests/e2e/site.spec.ts:78:5 › layout has no horizontal overflow and passes automated accessibility checks (2.1s)
-(node:46375) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(node:51133) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:46399) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+  ✓  48 [mobile-chromium] › tests/e2e/site.spec.ts:78:5 › layout has no horizontal overflow and passes automated accessibility checks (2.0s)
+  ✓  51 [reduced-motion] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (872ms)
+  -  53 [reduced-motion] › tests/e2e/arcade.spec.ts:64:5 › reduced-motion desktop arcade stacks its heading and cabinet
+(node:51311) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ✓  49 [reduced-motion] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (921ms)
-  -  52 [reduced-motion] › tests/e2e/arcade.spec.ts:64:5 › reduced-motion desktop arcade stacks its heading and cabinet
-  -  53 [reduced-motion] › tests/e2e/arcade.spec.ts:80:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
-  ✓  51 [reduced-motion] › tests/e2e/arcade.spec.ts:43:5 › 320px arcade stays within the viewport with touch-sized controls (588ms)
-  ✓  50 [reduced-motion] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (1.6s)
-  ✓  55 [reduced-motion] › tests/e2e/completion.spec.ts:20:5 › film empty state is deep linkable and returns focus to its opener (929ms)
-  ✓  57 [reduced-motion] › tests/e2e/completion.spec.ts:47:5 › snapshot offers a selectable address when clipboard access is unavailable (468ms)
-  ✓  56 [reduced-motion] › tests/e2e/completion.spec.ts:32:5 › scrolling releases the field pin and responsive motion leaves a readable document (999ms)
-  ✓  54 [reduced-motion] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (2.0s)
-  ✓  60 [reduced-motion] › tests/e2e/playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (780ms)
-  ✓  58 [reduced-motion] › tests/e2e/playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (1.4s)
-  ✓  59 [reduced-motion] › tests/e2e/playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (1.1s)
-  ✓  63 [reduced-motion] › tests/e2e/playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF (405ms)
-  ✓  64 [reduced-motion] › tests/e2e/site.spec.ts:4:5 › renders eight scenes, preview labels, and no unverified performance content (398ms)
-  ✓  62 [reduced-motion] › tests/e2e/playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.2s)
-  ✓  65 [reduced-motion] › tests/e2e/site.spec.ts:16:5 › main navigation names the six requested destinations (569ms)
-  ✓  67 [reduced-motion] › tests/e2e/site.spec.ts:52:5 › film dialog explains the empty state and closes with Escape (682ms)
-  ✓  68 [reduced-motion] › tests/e2e/site.spec.ts:61:5 › reduced motion leaves content visible and removes pinned scenes (433ms)
-  -  69 [reduced-motion] › tests/e2e/site.spec.ts:69:5 › changing to reduced motion removes desktop pin spacers immediately
-  ✓  61 [reduced-motion] › tests/e2e/playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (3.0s)
-  ✓  66 [reduced-motion] › tests/e2e/site.spec.ts:23:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (1.6s)
-  ✓  72 [reduced-motion] › tests/e2e/site.spec.ts:99:5 › NIL inquiry anchor always works and empty social/contact states contain no outbound links (639ms)
-  ✓  71 [reduced-motion] › tests/e2e/site.spec.ts:86:5 › two-world diptych routes to the existing field and personal content without adding a scene (734ms)
-  ✓  70 [reduced-motion] › tests/e2e/site.spec.ts:78:5 › layout has no horizontal overflow and passes automated accessibility checks (1.6s)
+  -  54 [reduced-motion] › tests/e2e/arcade.spec.ts:80:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ✓  52 [reduced-motion] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (1.2s)
+  ✓  55 [reduced-motion] › tests/e2e/arcade.spec.ts:43:5 › 320px arcade stays within the viewport with touch-sized controls (629ms)
+  ✓  57 [reduced-motion] › tests/e2e/completion.spec.ts:20:5 › film empty state is deep linkable and returns focus to its opener (883ms)
+  ✓  59 [reduced-motion] › tests/e2e/completion.spec.ts:47:5 › snapshot offers a selectable address when clipboard access is unavailable (452ms)
+  ✓  58 [reduced-motion] › tests/e2e/completion.spec.ts:32:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.0s)
+  ✓  56 [reduced-motion] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (2.1s)
+  ✓  62 [reduced-motion] › tests/e2e/playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (903ms)
+  ✓  61 [reduced-motion] › tests/e2e/playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (1.4s)
+  ✓  60 [reduced-motion] › tests/e2e/playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (1.6s)
+  ✓  65 [reduced-motion] › tests/e2e/playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF (423ms)
+  ✓  66 [reduced-motion] › tests/e2e/playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (600ms)
+  ✓  64 [reduced-motion] › tests/e2e/playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.1s)
+  ✓  67 [reduced-motion] › tests/e2e/site.spec.ts:4:5 › renders eight scenes, preview labels, and no unverified performance content (533ms)
+  ✓  68 [reduced-motion] › tests/e2e/site.spec.ts:16:5 › main navigation names the six requested destinations (545ms)
+  ✓  70 [reduced-motion] › tests/e2e/site.spec.ts:52:5 › film dialog explains the empty state and closes with Escape (607ms)
+  ✓  71 [reduced-motion] › tests/e2e/site.spec.ts:61:5 › reduced motion leaves content visible and removes pinned scenes (509ms)
+  ✓  63 [reduced-motion] › tests/e2e/playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (3.1s)
+  -  72 [reduced-motion] › tests/e2e/site.spec.ts:69:5 › changing to reduced motion removes desktop pin spacers immediately
+  ✓  69 [reduced-motion] › tests/e2e/site.spec.ts:23:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (1.7s)
+  ✓  74 [reduced-motion] › tests/e2e/site.spec.ts:86:5 › two-world diptych routes to the existing field and personal content without adding a scene (759ms)
+  ✓  75 [reduced-motion] › tests/e2e/site.spec.ts:99:5 › NIL inquiry anchor always works and empty social/contact states contain no outbound links (502ms)
+  ✓  73 [reduced-motion] › tests/e2e/site.spec.ts:78:5 › layout has no horizontal overflow and passes automated accessibility checks (1.6s)
 
   8 skipped
-  64 passed (33.7s)
+  67 passed (47.6s)

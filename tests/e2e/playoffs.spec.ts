@@ -74,3 +74,16 @@ test('hero avoids downloading a redundant WebP beside the selected AVIF',async({
  expect(images.filter(url=>url.endsWith('.webp'))).toHaveLength(0);
  expect(images.filter(url=>url.endsWith('.avif'))).toHaveLength(1);
 });
+
+test('uses the exact owner coyote logo without inventing Anna bracket placement',async({page})=>{
+ await page.goto('/playoffs/');
+ const logos=page.getByRole('img',{name:'Anna Coyotes logo',exact:true});
+ await expect(logos).toHaveCount(3);
+ for(const logo of await logos.all()){
+  await expect(logo).toHaveAttribute('src','/brand/anna/coyotes-owner-original.jpg');
+  await expect(logo).toHaveAttribute('width','256');await expect(logo).toHaveAttribute('height','276');
+  await expect(logo).toHaveCSS('object-fit','contain');await expect(logo).toHaveCSS('filter','none');
+ }
+ await expect(page.getByText('ORIGINAL LOGO PENDING',{exact:true})).toHaveCount(0);
+ await expect(page.locator('[data-game-card][data-anna]')).toHaveCount(0);
+});

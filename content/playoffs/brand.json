@@ -1,10 +1,10 @@
 {
-  "logo": null,
-  "originalPath": null,
-  "originalSha256": null,
-  "width": null,
-  "height": null,
-  "ownerApproved": false,
+  "logo": "/brand/anna/coyotes-owner-original.jpg",
+  "originalPath": "brand/anna/coyotes-owner-original.jpg",
+  "originalSha256": "f9ade4c4c0d2207e27c29444da79da7a6d7fe457397d1e7b9a458e6faea0fac3",
+  "width": 256,
+  "height": 276,
+  "ownerApproved": true,
   "mockupPath": null,
-  "note": "Exact owner-supplied coyote logo and canonical Road to State mockup were not attached or present in approved project assets. No substitute is permitted."
+  "note": "Exact owner image uploaded 2026-11-01. Original 256\u00d7276 JPEG, opaque white background, preserved byte-for-byte. Lossless WebP was larger, so the 16,843-byte original is served unchanged. Canonical Road to State mockup is still pending."
 }

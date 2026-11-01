@@ -11,4 +11,4 @@
 - `lighthouse-mobile-compressed.json`: last compressed local lab check. The other Lighthouse reports retain exploratory uncompressed runs and intermediate investigations.
 - `compression-check.json`: local transfer compression negotiation/content equivalence.
 
-See [QA](../../docs/PLAYOFFS_QA.md) and [source/update rules](../../docs/PLAYOFFS_DATA.md). Exact owner Anna logo and canonical mockup are missing; visual acceptance remains blocked. Simulated mobile LCP remains above the earlier 2.5s target. No deployment, field-INP or physical-device claim.
+See [QA](../../docs/PLAYOFFS_QA.md) and [source/update rules](../../docs/PLAYOFFS_DATA.md). Exact owner Anna logo is now integrated; the canonical mockup is still missing and final visual-match acceptance remains pending. Simulated mobile LCP remains above the earlier 2.5s target. No deployment, field-INP or physical-device claim.

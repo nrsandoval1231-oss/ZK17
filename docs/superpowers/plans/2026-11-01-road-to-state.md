@@ -17,3 +17,5 @@ Constraints: no invented qualifiers/results, no substituted Anna logo, no homepa
 Review focus: ties/incomplete scores cannot advance; changed results cannot corrupt later games; official conflicts require explicit review; unseeded Anna has no assumed path; modal/hash/back and mobile keyboard controls remain usable.
 
 Visual acceptance remains blocked on the exact owner logo and canonical mockup. The missing-asset investigation and integration hooks are complete; this does not mean the unseen artwork has been implemented. See docs/PLAYOFFS_QA.md.
+
+Owner logo received 2026-11-01 and integrated byte-identically (256×276 JPEG). Exact-logo acceptance now verified; canonical Road to State mockup and production LCP signoff remain pending.
