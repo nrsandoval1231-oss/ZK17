@@ -108,3 +108,10 @@
 @media(max-width:560px){.recruiting-page{padding:22px 24px 32px}.snapshot-hero{padding-top:65px}.snapshot-hero>.eyebrow{max-width:30ch}.snapshot-facts dl{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 18px}.snapshot-section{grid-template-columns:1fr;gap:10px;margin:65px 0}.snapshot-footer{align-items:flex-start;flex-direction:column}.snapshot-identity{font-size:10px}}
 /* Keep the field's photographic vignette below the editorial lockup. */
 .field-art{isolation:isolate;z-index:0}.field-caption{z-index:4}
+
+/* Approved cinematic hero: preserve existing editorial layout and static fallback. */
+.hero-cinematic-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:0;pointer-events:none;filter:brightness(.48) saturate(.85)}
+.hero:has(.hero-cinematic-video) .hero-photo{display:none}
+.hero:has(.hero-cinematic-video) .hero-mark{opacity:.2}
+.hero:has(.hero-cinematic-video) .hero-copy,.hero:has(.hero-cinematic-video) .hero-top,.hero:has(.hero-cinematic-video) .scroll-cue{position:relative;z-index:2}
+@media(prefers-reduced-motion:reduce){.hero-cinematic-video{display:none}.hero:has(.hero-cinematic-video) .hero-photo{display:block}}
