@@ -52,3 +52,18 @@ test('playoffs has no runtime errors or accessibility violations',async({page})=
  await page.locator('[data-game-card]').first().click();
  expect((await new AxeBuilder({page}).analyze()).violations).toEqual([]);
 });
+
+test('late fonts keep the mobile hero layout stable',async({page})=>{
+ await page.setViewportSize({width:412,height:823});
+ await page.addInitScript(()=>{
+  const state=window as Window & {__playoffCLS?:number};state.__playoffCLS=0;
+  new PerformanceObserver(list=>{for(const entry of list.getEntries()){
+   const shift=entry as PerformanceEntry & {hadRecentInput:boolean;value:number};
+   if(!shift.hadRecentInput)state.__playoffCLS!+=shift.value;
+  }}).observe({type:'layout-shift',buffered:true});
+ });
+ await page.route('**/*.woff2',async route=>{await new Promise(resolve=>setTimeout(resolve,700));await route.continue();});
+ await page.goto('/playoffs/');await page.evaluate(()=>document.fonts.ready);
+ await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+ expect(await page.evaluate(()=>(window as Window & {__playoffCLS?:number}).__playoffCLS)).toBeLessThanOrEqual(.1);
+});

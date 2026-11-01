@@ -27,3 +27,5 @@
 @media(max-width:700px){.hqTeams h3{font-size:clamp(27px,7.6vw,36px)}}
 .cardMeta{font-size:8px}.cardMeta>span{font-size:7px;letter-spacing:0}.cardTeam{font-size:12px}.cardFooter{font-size:7px}
 .feedNote>a{display:block;color:var(--white);padding:10px 0;min-height:44px}
+/* Reserve the decorative numeral's box before the condensed font arrives. */
+.heroNumber{width:.52em;height:1em;text-align:left}
