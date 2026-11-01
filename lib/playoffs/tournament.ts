@@ -60,7 +60,7 @@ function validateSource(source:Source) {
  const url=new URL(source.url);assert(url.protocol==='https:','Sources must use HTTPS');
  if(source.authority==='uil')assert(['www.uiltexas.org','uiltexas.org','realignment.uiltexas.org'].includes(url.hostname),'UIL source must belong to UIL');
  assert(['uil','school','secondary'].includes(source.authority),'Invalid source authority');
- assert(source.season===2026&&validDate(source.retrievedAt),'Source season/retrieval timestamp invalid');
+ assert(source.season===2026&&validDate(source.retrievedAt)&&Date.parse(source.retrievedAt)<=Date.now(),'Source season/retrieval timestamp invalid');
 }
 function validateGame(t:Tournament,g:PlayoffGame){
  const teamIds=new Set(t.teams.map(team=>team.id));
@@ -79,7 +79,7 @@ function validateGame(t:Tournament,g:PlayoffGame){
  }else assert(g.winnerTeamId===null,'Only a verified final can have a winner');
  if(!['live','final'].includes(g.status))assert(g.homeScore===null&&g.awayScore===null,'Scores only allowed for live or final games');
  const hasFacts=g.homeTeamId||g.awayTeamId||g.status!=='pending'||g.kickoff||g.venue;
- if(hasFacts&&g.feederIds.length===0||g.status!=='pending'||g.kickoff||g.venue){
+ if((hasFacts&&g.feederIds.length===0)||g.status!=='pending'||g.kickoff||g.venue){
   assert(validDate(g.verifiedAt),'Published facts require verification');assert(t.sources.some(s=>s.id===g.sourceId),'Published facts require a known source');
  }
 }
@@ -107,11 +107,11 @@ export function validateTournament(t:Tournament):void {
 /** Reviewed observations are applied transactionally. Conflicting evidence never overwrites a result. */
 export function applyObservation(t:Tournament,input:Observation):Tournament {
  const source=t.sources.find(item=>item.id===input.sourceId);assert(source,'Unknown source');validateSource(source);
- assert(validDate(input.verifiedAt)&&input.reviewedBy?.trim(),'Observation requires verification and reviewer');
+ assert(validDate(input.verifiedAt)&&Date.parse(input.verifiedAt)<=Date.now()&&input.reviewedBy?.trim(),'Observation requires non-future verification and reviewer');
  assert(Date.parse(input.verifiedAt)>=Date.parse(source.retrievedAt),'Verification predates retrieval');
  const next=structuredClone(t);const game=next.games.find(item=>item.id===input.gameId);assert(game,'Unknown game ID');
- const {gameId:_,reviewedBy:__,...patch}=input; // Only the explicit domain fields below are copied.
- void _;void __;
+ const patch=input; // Only the explicit domain fields below are copied.
+ assert(!game.verifiedAt||Date.parse(input.verifiedAt)>=Date.parse(game.verifiedAt),'Stale verification cannot replace newer evidence');
  const fields=['homeTeamId','awayTeamId','homeScore','awayScore','status','kickoff','venue','winnerTeamId','sourceId','verifiedAt'] as const;
  if(game.status==='final'){
   const same=fields.filter(key=>!['sourceId','verifiedAt'].includes(key)).every(key=>game[key]===patch[key]);
@@ -125,7 +125,7 @@ export function applyObservation(t:Tournament,input:Observation):Tournament {
  if(game.homeTeamId&&input.homeTeamId!==game.homeTeamId||game.awayTeamId&&input.awayTeamId!==game.awayTeamId)throw new Error('Conflicting matchup identity');
  Object.assign(game,Object.fromEntries(fields.map(key=>[key,patch[key]])));
  validateGame(next,game);
- if(game.status==='final'&&game.nextGameId){
+ if(patch.status==='final'&&game.nextGameId){
   const target=next.games.find(item=>item.id===game.nextGameId)!;const slot=game.nextSlot==='home'?'homeTeamId':'awayTeamId';
   assert(target[slot]===null||target[slot]===game.winnerTeamId,'Conflicting advancement destination');target[slot]=game.winnerTeamId;
  }

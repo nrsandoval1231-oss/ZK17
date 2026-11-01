@@ -7,10 +7,10 @@ function fixture(): Tournament {
  tournament.teams = [{id:'anna',name:'Anna Coyotes',aliases:['Anna','Anna High School'],district:4,region:1,logo:null},{id:'fixture-a',name:'Fixture A',aliases:[],district:3,region:1,logo:null}];
  const game=tournament.games.find(g=>g.id==='r1-bi-2')!;
  game.homeTeamId='anna'; game.awayTeamId='fixture-a';
- tournament.sources=[{id:'test-uil',label:'Test official evidence',url:'https://www.uiltexas.org/football/playoff-brackets/5AD2',authority:'uil',season:2026,retrievedAt:'2026-11-14T10:00:00Z'}];
+ tournament.sources=[{id:'test-uil',label:'Test official evidence',url:'https://www.uiltexas.org/football/playoff-brackets/5AD2',authority:'uil',season:2026,retrievedAt:'2026-10-31T10:00:00Z'}];
  return tournament;
 }
-const result: Observation={gameId:'r1-bi-2',homeTeamId:'anna',awayTeamId:'fixture-a',homeScore:28,awayScore:21,status:'final',winnerTeamId:'anna',kickoff:null,venue:null,sourceId:'test-uil',verifiedAt:'2026-11-14T11:00:00Z',reviewedBy:'test reviewer'};
+const result: Observation={gameId:'r1-bi-2',homeTeamId:'anna',awayTeamId:'fixture-a',homeScore:28,awayScore:21,status:'final',winnerTeamId:'anna',kickoff:null,venue:null,sourceId:'test-uil',verifiedAt:'2026-10-31T11:00:00Z',reviewedBy:'test reviewer'};
 describe('2026 UIL tournament',()=>{
  it('represents 64 slots and all 63 games in the exact six-round graph',()=>{
   const t=createBracket(); assert.equal(t.games.length,63); assert.deepEqual([0,1,2,3,4,5].map(r=>t.games.filter(g=>g.round===r).length),[32,16,8,4,2,1]);
@@ -45,6 +45,11 @@ describe('2026 UIL tournament',()=>{
  });
  it('filters complete regions and keeps state rounds accessible',()=>{
   const t=createBracket();assert.equal(filterGames(t,1,null).length,15);assert.equal(filterGames(t,'state',null).length,3);assert.equal(filterGames(t,'all',0).length,32);
+ });
+ it('rejects stale and future verification timestamps',()=>{
+  assert.throws(()=>applyObservation(fixture(),{...result,verifiedAt:'2099-01-01T00:00:00Z'}));
+  const scheduled=applyObservation(fixture(),{...result,status:'scheduled',homeScore:null,awayScore:null,winnerTeamId:null,kickoff:'2026-11-14T19:30:00-06:00'});
+  assert.throws(()=>applyObservation(scheduled,{...result,verifiedAt:'2026-10-31T10:30:00Z'}));
  });
  it('rejects corrupted graph relationships and advancement conflicts',()=>{
   const t=fixture();t.games[0].nextGameId='state-final';assert.throws(()=>validateTournament(t));

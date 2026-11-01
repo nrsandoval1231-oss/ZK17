@@ -7,3 +7,6 @@ out/
 test-results/
 playwright-report/
 .impeccable/review/
+
+# Retrieved public HTML is review evidence, not an application asset.
+artifacts/playoffs/retrieval/*.html

@@ -10,7 +10,10 @@
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
     "e2e": "playwright test",
-    "prebuild": "node scripts/release-check.mjs"
+    "prebuild": "node scripts/release-check.mjs && tsx scripts/update-playoffs.ts validate && node scripts/validate-playoff-assets.mjs",
+    "playoffs:validate": "tsx scripts/update-playoffs.ts validate",
+    "playoffs:update": "tsx scripts/update-playoffs.ts",
+    "playoffs:retrieve": "node scripts/retrieve-playoff-sources.mjs"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.14.0",
