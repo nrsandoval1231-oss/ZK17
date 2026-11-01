@@ -10,7 +10,7 @@ export function usePlayoffMotion(root:RefObject<HTMLElement|null>){
    const context=gsap.context(()=>{
     mm.add('(prefers-reduced-motion: no-preference)',()=>{
      gsap.from('[data-playoff-title]',{y:24,duration:.8,stagger:.09,ease:'power3.out'});
-     gsap.from('[data-playoff-photo]',{y:12,duration:.8,ease:'power3.out'});
+     // Keep the LCP photograph at its server-rendered geometry; type and 17 carry the entrance.
      gsap.to('[data-playoff-depth]',{yPercent:-12,ease:'none',scrollTrigger:{trigger:'[data-playoff-hero]',start:'top top',end:'bottom top',scrub:true}});
      gsap.utils.toArray<HTMLElement>('[data-playoff-reveal]',root.current).forEach(el=>gsap.from(el,{y:16,duration:.65,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 95%',once:true}}));
     });
