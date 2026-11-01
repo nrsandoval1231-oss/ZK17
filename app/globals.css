@@ -115,3 +115,8 @@
 .hero:has(.hero-cinematic-video) .hero-mark{opacity:.2}
 .hero:has(.hero-cinematic-video) .hero-copy,.hero:has(.hero-cinematic-video) .hero-top,.hero:has(.hero-cinematic-video) .scroll-cue{position:relative;z-index:2}
 @media(prefers-reduced-motion:reduce){.hero-cinematic-video{display:none}.hero:has(.hero-cinematic-video) .hero-photo{display:block}}
+
+/* Prominent ZK header mark, responsive and constrained to the navigation bar. */
+.site-header{height:96px}.site-header .brand-logo{width:72px;height:72px}.site-header .brand{flex-shrink:0}
+@media(max-width:899px){.site-header{height:80px}.site-header .brand-logo{width:58px;height:58px}}
+@media(max-width:560px){.site-header{height:76px}.site-header .brand-logo{width:54px;height:54px}}
