@@ -16,11 +16,11 @@ Preserve sword logo, palette, typography, hero, all eight chapters, arcade contr
 - Keyboard navigation must reach gallery, snapshot and arcade without scroll interference.
 
 ## Tasks
-- [ ] Capture reference/browser observations and baseline screenshots, recording and comparable mobile lab measurements. Preserve evidence limits.
-- [ ] Add regression tests for snapshot navigation/copy/contact, pin release/mobile overflow and film deep links. Run against baseline to establish missing behavior.
-- [ ] Extract existing motion into components/use-story-motion.ts. Choreograph hero layers; one bounded On Field timeline; progressive Film Room lines/frame/captions; playful diptych/retain arcade rail; extending journey/milestones; verified stat row reveals; restrained Next Chapter depth. Refresh after fonts/images and data-layout changes; revert on cleanup.
-- [ ] Complete existing recruiting route using shared tokens/editorial typography and reusable verified facts. Add navigation and share/copy with honest fallback. Add film hash links and user-initiated native video with focus restoration.
-- [ ] Run npm ci/typecheck/lint/test/build/e2e plus desktop/mobile/reduced-motion browser QA, console/a11y/layout checks. Capture final screenshots and recordings; comparable lab measurements (no field CWV claim).
-- [ ] Review diff, incremental commits, push existing PR branch only after checking deployment hooks; update draft PR with evidence, tests and remaining media/physical-device limitations.
+- [x] Capture reference/browser observations and baseline screenshots, recording and comparable mobile lab measurements. Preserve evidence limits.
+- [x] Add regression tests for snapshot navigation/copy/contact, pin release/mobile overflow and film deep links. Run against baseline to establish missing behavior.
+- [x] Extract existing motion into components/use-story-motion.ts. Choreograph hero layers; one bounded On Field timeline; progressive Film Room lines/frame/captions; playful diptych/retain arcade rail; extending journey/milestones; verified stat row reveals; restrained Next Chapter depth. Refresh after fonts/images and data-layout changes; revert on cleanup.
+- [x] Complete existing recruiting route using shared tokens/editorial typography and reusable verified facts. Add navigation and share/copy with honest fallback. Add film hash links and user-initiated native video with focus restoration.
+- [x] Run npm ci/typecheck/lint/test/build/e2e plus desktop/mobile/reduced-motion browser QA, console/a11y/layout checks. Capture final screenshots and recordings; comparable lab measurements (no field CWV claim).
+- [x] Review diff, incremental commits, push existing PR branch only after checking deployment hooks; update draft PR with evidence, tests and remaining media/physical-device limitations.
 
 Execution: same session, as explicitly requested by owner; no further design approval round.

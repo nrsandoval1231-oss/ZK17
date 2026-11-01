@@ -33,3 +33,6 @@ Status: In progress. Preserve the existing approved cinematic design. This docum
 - No invented or unverified athlete claims.
 - All automated and manual QA evidence included in PR.
 - Public release blockers stay enforced until approved.
+
+## Implementation update — 2026-11-01
+PR #1 now includes the software implementation and scroll polish, superseding the original documentation-only PR description. Recruiting navigation/share/contact integration, film deep links/on-demand controls, responsive motion and QA are implemented. See `SCROLL_POLISH_QA.md` and `SCROLL_REFERENCE_2026-11-01.md` for measured results and evidence limits. Media/public-release blockers above remain enforced; no public deploy or merge was performed.

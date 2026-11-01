@@ -1,0 +1,82 @@
+
+> zk17-official@0.1.0 e2e
+> playwright test --workers=3
+
+
+Running 54 tests using 3 workers
+
+(node:17771) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17772) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17773) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [desktop-chromium] › tests/e2e/arcade.spec.ts:43:5 › 320px arcade stays within the viewport with touch-sized controls (928ms)
+  ✓   1 [desktop-chromium] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.7s)
+  ✓   4 [desktop-chromium] › tests/e2e/arcade.spec.ts:64:5 › reduced-motion desktop arcade stacks its heading and cabinet (1.2s)
+  ✓   5 [desktop-chromium] › tests/e2e/arcade.spec.ts:80:5 › JavaScript-disabled desktop stacks title and CRT within the viewport (951ms)
+  ✓   2 [desktop-chromium] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (2.8s)
+  ✓   7 [desktop-chromium] › tests/e2e/completion.spec.ts:20:5 › film empty state is deep linkable and returns focus to its opener (1.3s)
+  ✓   8 [desktop-chromium] › tests/e2e/completion.spec.ts:32:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.7s)
+  ✓   9 [desktop-chromium] › tests/e2e/completion.spec.ts:47:5 › snapshot offers a selectable address when clipboard access is unavailable (593ms)
+  ✓   6 [desktop-chromium] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (3.1s)
+  ✓  10 [desktop-chromium] › tests/e2e/site.spec.ts:4:5 › renders eight scenes, preview labels, and no unverified performance content (1.1s)
+  ✓  11 [desktop-chromium] › tests/e2e/site.spec.ts:16:5 › main navigation names the six requested destinations (991ms)
+  -  14 [desktop-chromium] › tests/e2e/site.spec.ts:61:5 › reduced motion leaves content visible and removes pinned scenes
+  ✓  15 [desktop-chromium] › tests/e2e/site.spec.ts:69:5 › changing to reduced motion removes desktop pin spacers immediately (958ms)
+  ✓  13 [desktop-chromium] › tests/e2e/site.spec.ts:52:5 › film dialog explains the empty state and closes with Escape (1.2s)
+  ✓  12 [desktop-chromium] › tests/e2e/site.spec.ts:23:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (2.5s)
+  ✓  18 [desktop-chromium] › tests/e2e/site.spec.ts:99:5 › NIL inquiry anchor always works and empty social/contact states contain no outbound links (1.1s)
+  ✓  17 [desktop-chromium] › tests/e2e/site.spec.ts:86:5 › two-world diptych routes to the existing field and personal content without adding a scene (2.4s)
+  ✓  16 [desktop-chromium] › tests/e2e/site.spec.ts:78:5 › layout has no horizontal overflow and passes automated accessibility checks (2.7s)
+(node:18669) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18675) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:18685) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  19 [mobile-chromium] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.2s)
+  -  22 [mobile-chromium] › tests/e2e/arcade.spec.ts:64:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  -  23 [mobile-chromium] › tests/e2e/arcade.spec.ts:80:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ✓  21 [mobile-chromium] › tests/e2e/arcade.spec.ts:43:5 › 320px arcade stays within the viewport with touch-sized controls (1.1s)
+  ✓  20 [mobile-chromium] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (2.3s)
+  ✓  25 [mobile-chromium] › tests/e2e/completion.spec.ts:20:5 › film empty state is deep linkable and returns focus to its opener (1.2s)
+  ✓  27 [mobile-chromium] › tests/e2e/completion.spec.ts:47:5 › snapshot offers a selectable address when clipboard access is unavailable (835ms)
+  ✓  26 [mobile-chromium] › tests/e2e/completion.spec.ts:32:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.8s)
+  ✓  28 [mobile-chromium] › tests/e2e/site.spec.ts:4:5 › renders eight scenes, preview labels, and no unverified performance content (789ms)
+  ✓  24 [mobile-chromium] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (3.4s)
+  ✓  29 [mobile-chromium] › tests/e2e/site.spec.ts:16:5 › main navigation names the six requested destinations (726ms)
+  -  32 [mobile-chromium] › tests/e2e/site.spec.ts:61:5 › reduced motion leaves content visible and removes pinned scenes
+  -  33 [mobile-chromium] › tests/e2e/site.spec.ts:69:5 › changing to reduced motion removes desktop pin spacers immediately
+  ✓  31 [mobile-chromium] › tests/e2e/site.spec.ts:52:5 › film dialog explains the empty state and closes with Escape (1.0s)
+  ✓  30 [mobile-chromium] › tests/e2e/site.spec.ts:23:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (2.5s)
+  ✓  35 [mobile-chromium] › tests/e2e/site.spec.ts:86:5 › two-world diptych routes to the existing field and personal content without adding a scene (1.3s)
+  ✓  36 [mobile-chromium] › tests/e2e/site.spec.ts:99:5 › NIL inquiry anchor always works and empty social/contact states contain no outbound links (784ms)
+(node:19375) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  34 [mobile-chromium] › tests/e2e/site.spec.ts:78:5 › layout has no horizontal overflow and passes automated accessibility checks (2.9s)
+(node:19396) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19420) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  37 [reduced-motion] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.0s)
+  -  40 [reduced-motion] › tests/e2e/arcade.spec.ts:64:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  -  41 [reduced-motion] › tests/e2e/arcade.spec.ts:80:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ✓  39 [reduced-motion] › tests/e2e/arcade.spec.ts:43:5 › 320px arcade stays within the viewport with touch-sized controls (669ms)
+  ✓  38 [reduced-motion] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (1.8s)
+  ✓  43 [reduced-motion] › tests/e2e/completion.spec.ts:20:5 › film empty state is deep linkable and returns focus to its opener (981ms)
+  ✓  45 [reduced-motion] › tests/e2e/completion.spec.ts:47:5 › snapshot offers a selectable address when clipboard access is unavailable (643ms)
+  ✓  44 [reduced-motion] › tests/e2e/completion.spec.ts:32:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.2s)
+  ✓  42 [reduced-motion] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (2.4s)
+  ✓  46 [reduced-motion] › tests/e2e/site.spec.ts:4:5 › renders eight scenes, preview labels, and no unverified performance content (651ms)
+  ✓  47 [reduced-motion] › tests/e2e/site.spec.ts:16:5 › main navigation names the six requested destinations (620ms)
+  ✓  49 [reduced-motion] › tests/e2e/site.spec.ts:52:5 › film dialog explains the empty state and closes with Escape (809ms)
+  -  51 [reduced-motion] › tests/e2e/site.spec.ts:69:5 › changing to reduced motion removes desktop pin spacers immediately
+  ✓  50 [reduced-motion] › tests/e2e/site.spec.ts:61:5 › reduced motion leaves content visible and removes pinned scenes (736ms)
+  ✓  48 [reduced-motion] › tests/e2e/site.spec.ts:23:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (2.2s)
+  ✓  53 [reduced-motion] › tests/e2e/site.spec.ts:86:5 › two-world diptych routes to the existing field and personal content without adding a scene (944ms)
+  ✓  54 [reduced-motion] › tests/e2e/site.spec.ts:99:5 › NIL inquiry anchor always works and empty social/contact states contain no outbound links (487ms)
+  ✓  52 [reduced-motion] › tests/e2e/site.spec.ts:78:5 › layout has no horizontal overflow and passes automated accessibility checks (1.8s)
+
+  8 skipped
+  46 passed (25.9s)
