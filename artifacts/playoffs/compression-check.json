@@ -1,0 +1,8 @@
+{
+  "sameHTML": true,
+  "acceptsGzip": true,
+  "respectsQZero": true,
+  "identityFallback": true,
+  "uncompressedBytes": 65213,
+  "gzipBytes": 9086
+}

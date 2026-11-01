@@ -1,0 +1,1 @@
+PASS: exact owner image displayed on two verified-fixture Anna matchup cards and Game Center; actual published/review result journal remains empty. Synthetic fixture exists only under /tmp.

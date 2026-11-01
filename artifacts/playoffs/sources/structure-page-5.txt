@@ -1,0 +1,82 @@
+                            Football Conference 2A-5A Division 1 & 2
+     Bidistrict   Area   Regional   Quarterfinals   Semifinals     State Final    Semifinals   Quarterfinals   Regional   Area   Bidistrict
+
+
+W1                                                                                                                                            W9
+
+F2                                                                                                                                            F1 0
+
+R4                                                                                                                                            R12
+
+T3                                                                                                                                            T11
+
+
+W2                                                                                                                                            W10
+
+
+F1                                                                                                                                            F9
+
+R3                                                                                                                                            R11
+
+
+T4                                                                                                                                            T12
+
+
+W3                                                                                                                                            W11
+
+F4                                                                                                                                            F12
+R2                                                                                                                                            R10
+
+T1                                                                                                                                            T9
+
+
+W4                                                                                                                                            W12
+
+
+F3                                                                                                                                            F1 1
+
+R1                                                                                                                                            R9
+
+                                                                 State Champion           Region 3                                            T10
+T2
+                                        Region 1
+W5                                      Region 2                                          Region 4                                            W13
+
+
+F6                                                                                                                                            F1 4
+
+R8                                                                                                                                            R16
+
+T7                                                                                                                                            T15
+
+
+W6                                                                                                                                            W14
+
+
+F5                                                                                                                                            F1 3
+
+R7                                                                                                                                            R15
+
+T8                                                                                                                                            T16
+
+
+W7                                                                                                                                            W15
+
+
+F8                                                                                                                                            F1 6
+
+R6                                                                                                                                            R14
+
+
+T5                                                                                                                                            T13
+
+
+W8                                                                                                                                            W16
+
+
+F7                                                                                                                                            F1 5
+
+R5                                                                                                                                            R13
+
+T6                                                                                                                                            T14
+
