@@ -26,7 +26,8 @@ test('each category opens its owner-supplied top three directly', async ({ page 
   const picks = [
     { category: 'Games', titles: ['Madden', 'GTA 6', 'The Last of Us'] },
     { category: 'Movies', titles: ['A Bronx Tale', 'Interstellar', 'Step Brothers'] },
-    { category: 'TV Shows', titles: ['Berserk', 'Attack on Titan', 'Demon Slayer'] },
+    { category: 'TV Shows', titles: ['The Sopranos', 'Breaking Bad', 'Game of Thrones'] },
+    { category: 'Anime', titles: ['Berserk', 'Attack on Titan', 'Demon Slayer'] },
   ];
   await expect(root.getByRole('button', { name: 'Music', exact: true })).toHaveCount(0);
   for (const { category, titles } of picks) {

@@ -11,7 +11,7 @@ export type Milestone = Verification & { id: string; date: string; title: string
 export type Offer = Verification & { id: string; school: string; date: string };
 export type SocialLink = Verification & { id: string; label: string; url: string };
 export type Partnership = Verification & { id: string; name: string; url?: string };
-export type OffFieldFeature = { label: 'Games' | 'Movies' | 'TV Shows'; verifiedDetails: string[] };
+export type OffFieldFeature = { label: 'Games' | 'Movies' | 'TV Shows' | 'Anime'; verifiedDetails: string[] };
 export const profile: PublicProfile = { name: 'Zephyr Kreye', school: 'Anna High School', location: 'Texas', position: 'Quarterback', number: '17', classYear: 2027, commitment: 'UNCOMMITTED' };
 export const media: MediaAsset[] = [];
 export const highlights: Highlight[] = [];
@@ -24,7 +24,8 @@ export const partnerships: Partnership[] = [];
 export const offFieldFeatures: OffFieldFeature[] = [
  { label: 'Games', verifiedDetails: ['Madden', 'GTA 6', 'The Last of Us'] },
  { label: 'Movies', verifiedDetails: ['A Bronx Tale', 'Interstellar', 'Step Brothers'] },
- { label: 'TV Shows', verifiedDetails: ['Berserk', 'Attack on Titan', 'Demon Slayer'] },
+ { label: 'TV Shows', verifiedDetails: ['The Sopranos', 'Breaking Bad', 'Game of Thrones'] },
+ { label: 'Anime', verifiedDetails: ['Berserk', 'Attack on Titan', 'Demon Slayer'] },
 ];
 export const commitmentAnnouncement = announcementData as CommitmentAnnouncement | null;
 export function publicCommitmentReveal(mode: string | undefined, announcement: CommitmentAnnouncement | null): CommitmentReveal {
