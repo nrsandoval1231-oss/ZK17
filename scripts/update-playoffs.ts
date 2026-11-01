@@ -24,7 +24,7 @@ else if(mode==='apply'){
  const updated=applyObservation(tournament,observation);
  if(updated.history.length===tournament.history.length){console.log('Identical final already recorded. No write.');}
  else{
-  artifact.observations.push(observation);artifact.checkedAt=observation.verifiedAt!;artifact.verificationScope='Reviewed game updates, Anna alignment and UIL bracket structure; check individual game timestamps.';
+  artifact.observations.push(observation);artifact.checkedAt=new Date(Math.max(Date.parse(artifact.checkedAt),Date.parse(observation.verifiedAt!))).toISOString();artifact.verificationScope='Reviewed game updates, Anna alignment and UIL bracket structure; check individual game timestamps.';
   // Atomic replace only after the complete graph passes. Git retains the before/after audit trail.
   const temporary=artifactPath+'.tmp';await writeFile(temporary,JSON.stringify(artifact,null,2)+'\n');await rename(temporary,artifactPath);
   console.log(`Applied ${observation.gameId}; downstream slot updated only for an explicit verified final. Review git diff, run checks, then commit.`);

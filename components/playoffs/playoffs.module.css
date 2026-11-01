@@ -29,3 +29,5 @@
 .feedNote>a{display:block;color:var(--white);padding:10px 0;min-height:44px}
 /* Reserve the decorative numeral's box before the condensed font arrives. */
 .heroNumber{width:.52em;height:1em;text-align:left}
+.scrollTools button{display:grid;place-items:center}.dialogActions svg{flex:none}
+.filmLinks{list-style:none;margin:24px 0;padding:0}.filmLinks a{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--white);font-size:10px;text-decoration:none;border-bottom:1px solid var(--border)}

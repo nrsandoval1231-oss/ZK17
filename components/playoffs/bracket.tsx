@@ -1,6 +1,6 @@
 'use client';
 import {useEffect,useRef} from 'react';
-import {gsap} from 'gsap';
+import {loadPlayoffMotion} from '@/lib/playoffs/motion';
 import {filterGames,rounds,regionNames,type PlayoffGame,type Tournament,type Region,type RoundIndex} from '@/lib/playoffs/tournament';
 import TeamMark from './team-mark';
 import StoryArrow from '@/components/story-arrow';
@@ -30,13 +30,18 @@ function Board({tournament,region,onOpen}:{tournament:Tournament;region:Region|'
 export default function Bracket({tournament,region,round,list,onOpen}:{tournament:Tournament;region:RegionFilter;round:RoundIndex|null;list:boolean;onOpen:(game:PlayoffGame)=>void}){
  const rail=useRef<HTMLDivElement>(null);const motionRoot=useRef<HTMLDivElement>(null);
  useEffect(()=>{
-  const mm=gsap.matchMedia();mm.add('(prefers-reduced-motion: no-preference)',()=>{
-   const context=gsap.context(()=>gsap.from('[data-game-card]',{y:7,duration:.3,stagger:{amount:.12},ease:'power2.out',clearProps:'transform'}),motionRoot);
-   return()=>context.revert();
-  });return()=>mm.revert();
+  let disposed=false;let cleanup=()=>{};
+  const frame=requestAnimationFrame(()=>{void loadPlayoffMotion().then(({gsap})=>{
+   if(disposed)return;const mm=gsap.matchMedia();
+   mm.add('(prefers-reduced-motion: no-preference)',()=>{
+    const context=gsap.context(()=>gsap.from('[data-game-card]',{y:7,duration:.3,stagger:{amount:.12},ease:'power2.out',clearProps:'transform'}),motionRoot);
+    return()=>context.revert();
+   });cleanup=()=>mm.revert();
+  }).catch(()=>{/* Bracket controls remain usable without optional motion. */});});
+  return()=>{disposed=true;cancelAnimationFrame(frame);cleanup();};
  },[region,round,list]);
  const games=filterGames(tournament,region,round);
  if(list||round!==null)return <div ref={motionRoot} className={styles.matchupList} aria-live="polite">{games.length?games.map(game=><MatchupCard list key={game.id} game={game} tournament={tournament} onOpen={onOpen}/>):<p className={styles.pending}>This round belongs to {region==='state'?'a regional bracket':'the state stage'}. Choose All regions to see every game in this round.</p>}</div>;
  const boards: (Region|'state')[]=region==='all'?[1,2,3,4,'state']:[region];
- return <div ref={motionRoot}><div className={styles.scrollTools}><p>FOLLOW THE CONNECTORS <span aria-hidden="true">→</span> Swipe or use arrow keys to explore.</p><div><button onClick={()=>rail.current?.scrollBy({left:-296,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})} aria-label="Scroll bracket left">←</button><button onClick={()=>rail.current?.scrollBy({left:296,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})} aria-label="Scroll bracket right">→</button></div></div><div ref={rail} className={styles.bracketRail} role="region" aria-label="Interactive tournament bracket" tabIndex={0}>{boards.map(r=><Board key={r} tournament={tournament} region={r} onOpen={onOpen}/>)}</div></div>;
+ return <div ref={motionRoot}><div className={styles.scrollTools}><p>FOLLOW THE CONNECTORS <span aria-hidden="true">→</span> Swipe or use arrow keys to explore.</p><div><button onClick={()=>rail.current?.scrollBy({left:-296,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})} aria-label="Scroll bracket left"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" strokeWidth="1.4"/></svg></button><button onClick={()=>rail.current?.scrollBy({left:296,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})} aria-label="Scroll bracket right"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20"><path d="M4 10h12m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" strokeWidth="1.4"/></svg></button></div></div><div ref={rail} className={styles.bracketRail} role="region" aria-label="Interactive tournament bracket" tabIndex={0}>{boards.map(r=><Board key={r} tournament={tournament} region={r} onOpen={onOpen}/>)}</div></div>;
 }
