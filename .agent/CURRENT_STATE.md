@@ -1,3 +1,10 @@
+# Production search indexing — 2026-11-01
+
+Owner explicitly authorized removing noindex/nofollow and deploying to zephyrkreye.com. Scope: production metadata/headers, canonical discovery, robots.txt and sitemap; preserve content/media gates and hosting preview exclusions. Base main 5c10172fab09829a8ba3e24b6d17963da0a5aea3; starting worktree clean. No cinematic preview branch promotion.
+
+Implemented three page robots directives and production canonical URLs, sitemap for homepage/recruiting/playoffs, crawlable robots.txt, and host-specific Pages alias/preview noindex headers. Added scripts/verify-indexing.mjs against exported output. Next build, TypeScript, lint, 29 unit tests and export indexing assertions passed; independent Astra review found no material issues. Next: commit/push main to trigger existing Cloudflare production build, then verify live headers/HTML/robots/sitemap and preview exclusions. This authorization supersedes historical preview-only instructions for indexing configuration only.
+
+---
 # Current task
 
 Owner-supplied top-three update [DONE]. Branch main; deployed application source f24c1a98e3d51d53b797a1ed646834d515a194ed. TV Shows replaces Music; Games, Movies and TV Shows open their ranked lists directly. Owner order retained; Berserk, A Bronx Tale and The Last of Us use normalized title spellings. Native button activation and Back/Escape focus restoration verified.

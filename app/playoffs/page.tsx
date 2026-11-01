@@ -6,8 +6,8 @@ import PlayoffsExperience from '@/components/playoffs/playoffs-experience';
 import {getTournament,verification} from '@/content/playoffs';
 import {media,scenePhotoAssignments,previewPhotos,publicScenePhotos} from '@/content/site';
 import {resolveScenePhoto} from '@/content/scene-photo-selection';
-const canonical=(()=>{try{const url=new URL(process.env.SITE_URL??'');return url.protocol==='https:'&&!/(example|localhost|127\.0\.0\.1)/i.test(url.hostname)?`${url.origin}/playoffs/`:undefined;}catch{return undefined;}})();
-export const metadata:Metadata={title:'Road to State | 2026 Anna Coyotes Playoffs | ZK17',description:'Follow Anna Coyotes football and the complete 2026 UIL 5A Division II playoff bracket. Official sources, verified results and every round on the road to state.',robots:{index:false,follow:false},...(canonical?{alternates:{canonical}}:{})};
+const canonical=(()=>{try{const url=new URL(process.env.SITE_URL??'https://zephyrkreye.com');return url.protocol==='https:'&&!/(example|localhost|127\.0\.0\.1)/i.test(url.hostname)?`${url.origin}/playoffs/`:undefined;}catch{return undefined;}})();
+export const metadata:Metadata={title:'Road to State | 2026 Anna Coyotes Playoffs | ZK17',description:'Follow Anna Coyotes football and the complete 2026 UIL 5A Division II playoff bracket. Official sources, verified results and every round on the road to state.',robots:{index:true,follow:true},...(canonical?{alternates:{canonical}}:{})};
 export default function PlayoffsPage(){
  const tournament=getTournament();
  const films=publicGameFilms(gameFilmAssignments as GameFilmAssignment[],media,new Set(tournament.games.map(game=>game.id)));

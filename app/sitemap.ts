@@ -4,7 +4,7 @@ export const dynamic = 'force-static';
 
 function publicSiteUrl(): string | null {
   try {
-    const url = new URL(process.env.SITE_URL ?? '');
+    const url = new URL(process.env.SITE_URL ?? 'https://zephyrkreye.com');
     if (url.protocol !== 'https:' || !url.hostname.includes('.') || /(example|localhost|127\.0\.0\.1)/i.test(url.hostname)) return null;
     return url.origin;
   } catch {
@@ -14,5 +14,9 @@ function publicSiteUrl(): string | null {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = publicSiteUrl();
-  return base ? [{ url: base, changeFrequency: 'monthly', priority: 1 }] : [];
+  return base ? [
+    { url: `${base}/`, changeFrequency: 'monthly', priority: 1 },
+    { url: `${base}/recruiting/`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/playoffs/`, changeFrequency: 'weekly', priority: 0.8 },
+  ] : [];
 }

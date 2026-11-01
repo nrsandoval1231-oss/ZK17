@@ -8,7 +8,8 @@ import { profile, publicHighlights, publicMedia, publicStats, highlights, media,
 export const metadata: Metadata = {
  title: 'Recruiting Snapshot | Zephyr Kreye',
  description: 'Verified athlete profile and recruiting resources for Zephyr Kreye, quarterback at Anna High School.',
- robots: { index: false, follow: false },
+ robots: { index: true, follow: true },
+ alternates: { canonical: '/recruiting/' },
 };
 
 export default function RecruitingPage() {
