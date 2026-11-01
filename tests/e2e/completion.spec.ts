@@ -43,3 +43,14 @@ test('scrolling releases the field pin and responsive motion leaves a readable d
  }
  await expect(page.locator('#field-title')).toHaveCSS('opacity','1');
 });
+
+test('snapshot offers a selectable address when clipboard access is unavailable', async ({page}) => {
+ await page.addInitScript(() => Object.defineProperty(navigator, 'clipboard', {value:{writeText:async()=>{throw new Error('denied');}}}));
+ await page.goto('/recruiting/');
+ await page.getByRole('button',{name:'Copy snapshot link'}).click();
+ await expect(page.getByRole('status')).toContainText('Copy the snapshot address below.');
+ const address = page.getByRole('textbox',{name:'Snapshot address'});
+ await expect(address).toHaveValue(/\/recruiting\/$/);
+ await address.focus();
+ expect(await address.evaluate((el:HTMLInputElement)=>el.selectionEnd! - el.selectionStart!)).toBeGreaterThan(10);
+});

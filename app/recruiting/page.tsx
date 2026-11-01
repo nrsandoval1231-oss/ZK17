@@ -1,5 +1,8 @@
+import StoryArrow from '@/components/story-arrow';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import BrandLogo from '@/components/brand-logo';
+import SnapshotShare from '@/components/snapshot-share';
 import { profile, publicHighlights, publicMedia, publicStats, highlights, media, stats } from '@/content/site';
 
 export const metadata: Metadata = {
@@ -12,33 +15,27 @@ export default function RecruitingPage() {
  const clips = publicHighlights(highlights, media);
  const approved = publicMedia(media);
  const numbers = publicStats(stats);
- const availableClips = clips.flatMap((clip) => {
-  const asset = approved.find((item) => item.id === clip.assetId && item.kind === 'video');
-  return asset?.src ? [{ ...clip, src: asset.src }] : [];
+ const availableClips = clips.flatMap(clip => {
+  const asset = approved.find(item => item.id === clip.assetId && item.kind === 'video');
+  return asset?.src ? [{ ...clip, src: asset.src, poster: asset.poster }] : [];
  });
- return <main style={{minHeight:'100vh',background:'#09090D',color:'#F5F3F8',fontFamily:'var(--font-dm-sans),Arial,sans-serif',padding:'clamp(24px,5vw,80px)'}}>
-  <nav aria-label="Recruiting page"><Link href="/" style={{color:'#AC7CFF',textDecoration:'none',letterSpacing:2,fontWeight:700}}>← ZK17 / HOME</Link></nav>
-  <header style={{maxWidth:1100,margin:'clamp(65px,10vw,140px) auto 70px'}}>
-   <p style={{color:'#AC7CFF',letterSpacing:4,fontSize:12,fontWeight:700}}>THE RECRUITING SNAPSHOT / VERIFIED INFORMATION</p>
-   <h1 style={{fontSize:'clamp(64px,12vw,170px)',lineHeight:.85,letterSpacing:'-.06em',margin:'24px 0',textTransform:'uppercase',fontFamily:'var(--font-barlow-condensed),Impact,sans-serif'}}>{profile.name}</h1>
-   <p style={{fontSize:'clamp(16px,2.2vw,26px)',color:'#A5A2AE'}}>{profile.position.toUpperCase()} / #{profile.number} / {profile.school.toUpperCase()} / CLASS OF {profile.classYear}</p>
+ return <main className="recruiting-page" id="main">
+  <nav className="snapshot-nav" aria-label="Recruiting page"><Link href="/" aria-label="ZK17 home"><BrandLogo className="header-logo" /></Link><Link href="/">← BACK TO THE STORY</Link></nav>
+  <header className="snapshot-hero">
+   <p className="eyebrow">THE RECRUITING SNAPSHOT <i /> VERIFIED INFORMATION</p>
+   <h1>{profile.name.split(' ').slice(0, -1).join(' ')} <br /><em>{profile.name.split(' ').at(-1)}.</em></h1>
+   <p className="snapshot-identity">{profile.position.toUpperCase()} <b>—</b> #{profile.number}<br />{profile.school.toUpperCase()} · CLASS OF {profile.classYear}</p>
+   <div className="snapshot-actions"><SnapshotShare /><Link className="text-action" href="/#nil-inquiries">Recruiting contact <StoryArrow /></Link></div>
   </header>
-  <section aria-label="Athlete facts" style={{maxWidth:1100,margin:'0 auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(150px,1fr))',gap:1}}>
-   {([['POSITION',profile.position],['NUMBER','#'+profile.number],['CLASS',String(profile.classYear)],['SCHOOL',profile.school]] as const).map(([label,value])=><div key={label} style={{background:'#15141B',padding:'28px 20px'}}><p style={{fontSize:11,letterSpacing:2,color:'#AC7CFF'}}>{label}</p><strong style={{fontSize:'clamp(20px,3vw,36px)',textTransform:'uppercase'}}>{value}</strong></div>)}
-  </section>
-  <section style={{maxWidth:1100,margin:'90px auto'}} aria-labelledby="film-heading">
-   <h2 id="film-heading" style={{fontSize:'clamp(40px,6vw,80px)',letterSpacing:'-.04em'}}>THE FILM.</h2>
-   {availableClips.length ? <ul style={{listStyle:'none',padding:0,display:'grid',gap:20}}>{availableClips.map((clip)=><li key={clip.id}><h3>{clip.title} / {clip.season}</h3><video controls preload="none" style={{width:'100%',maxWidth:850}}><source src={clip.src} type="video/mp4"/>Video unavailable in this browser.</video></li>)}</ul> : <p style={{color:'#A5A2AE'}}>Approved game film will appear here when available. No footage is being represented as verified yet.</p>}
-   <Link href="/#film-room" style={{color:'#AC7CFF',display:'inline-block',marginTop:24}}>EXPLORE THE FILM ROOM →</Link>
-  </section>
-  <section style={{maxWidth:1100,margin:'90px auto'}} aria-labelledby="numbers-heading">
-   <h2 id="numbers-heading" style={{fontSize:'clamp(40px,6vw,80px)',letterSpacing:'-.04em'}}>THE NUMBERS.</h2>
-   {numbers.length ? <ul>{numbers.map((stat)=><li key={stat.id}>{stat.label}: {stat.value} ({stat.season}, {stat.gameCount} games)</li>)}</ul> : <p style={{color:'#A5A2AE'}}>Verified season statistics are pending. Unconfirmed numbers are intentionally not published.</p>}
-   <Link href="/#numbers" style={{color:'#AC7CFF',display:'inline-block',marginTop:24}}>VIEW THE FULL STORY →</Link>
-  </section>
-  <footer style={{maxWidth:1100,margin:'100px auto 0',borderTop:'1px solid #39343F',paddingTop:30,color:'#A5A2AE'}}>
-   <p>Official athlete profile · Verified information only</p>
-   <Link href="/#closing" style={{color:'#AC7CFF'}}>RETURN TO ZK17 →</Link>
-  </footer>
+  <section className="snapshot-facts" aria-label="Athlete facts"><dl>{([['POSITION',profile.position],['NUMBER','#'+profile.number],['CLASS',String(profile.classYear)],['SCHOOL',profile.school],['LOCATION',profile.location],['STATUS',profile.commitment]] as const).map(([label,value])=><div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl></section>
+  <section className="snapshot-section" aria-labelledby="film-heading"><div><p className="eyebrow">01 / IN MOTION</p><h2 id="film-heading">THE <em>FILM.</em></h2></div><div>
+   {availableClips.length ? <ul className="snapshot-clips">{availableClips.map(clip=><li key={clip.id}><h3>{clip.title} / {clip.season}</h3><video controls playsInline preload="none" poster={clip.poster}><source src={clip.src} type="video/mp4"/>Video unavailable in this browser.</video><Link className="text-action" href={`/#film=${encodeURIComponent(clip.assetId)}`}>Open this clip in Film Room <StoryArrow /></Link></li>)}</ul> : <div className="snapshot-empty"><span aria-hidden="true">—</span><p>APPROVED FILM PENDING</p><p>Game film will appear here when an approved source is ready.</p></div>}
+   <Link className="text-action" href="/#film-room">EXPLORE THE FILM ROOM <StoryArrow /></Link>
+  </div></section>
+  <section className="snapshot-section" aria-labelledby="numbers-heading"><div><p className="eyebrow">02 / PROOF IN THE DETAILS</p><h2 id="numbers-heading">THE <em>NUMBERS.</em></h2></div><div>
+   {numbers.length ? <div className="stats-list">{numbers.map(stat=><article className="stat-row" key={stat.id}><span>{stat.label}</span><strong>{stat.value}</strong><small>{stat.season} · {stat.gameCount} GAMES</small></article>)}</div> : <div className="snapshot-empty"><span aria-hidden="true">—</span><p>VERIFIED SEASON DATA PENDING</p><p>The record will appear when the full picture is verified.</p></div>}
+   <Link className="text-action" href="/#numbers">VIEW THE FULL STORY <StoryArrow /></Link>
+  </div></section>
+  <footer className="snapshot-footer"><p>OFFICIAL ATHLETE PROFILE · VERIFIED INFORMATION ONLY</p><Link className="text-action" href="/#closing">RETURN TO ZK17 <StoryArrow /></Link></footer>
  </main>;
 }
