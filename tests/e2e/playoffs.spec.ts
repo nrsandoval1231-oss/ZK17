@@ -80,7 +80,7 @@ test('uses the exact owner coyote logo without inventing Anna bracket placement'
  const logos=page.getByRole('img',{name:'Anna Coyotes logo',exact:true});
  await expect(logos).toHaveCount(3);
  for(const logo of await logos.all()){
-  await expect(logo).toHaveAttribute('src','/brand/anna/coyotes-owner-original.jpg');
+  await expect(logo).toHaveAttribute('src','/brand/anna/coyotes-transparent.png');
   await expect(logo).toHaveAttribute('width','256');await expect(logo).toHaveAttribute('height','276');
   await expect(logo).toHaveCSS('object-fit','contain');await expect(logo).toHaveCSS('filter','none');
  }
