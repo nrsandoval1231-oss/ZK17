@@ -94,6 +94,16 @@ export function validateTournament(t:Tournament):void {
   assert(g.nextGameId===shape.nextGameId&&g.nextSlot===shape.nextSlot&&JSON.stringify(g.feederIds)===JSON.stringify(shape.feederIds),'Invalid advancement relationship');
   assert(JSON.stringify(g.seedLabels)===JSON.stringify(shape.seedLabels),'Seed placement cannot be altered');
   validateGame(t,g);
+  if(g.status==='final'&&g.nextGameId){
+   const target=t.games.find(item=>item.id===g.nextGameId)!;
+   assert(target[g.nextSlot==='home'?'homeTeamId':'awayTeamId']===g.winnerTeamId,'Verified winner must occupy its advancement slot');
+  }
+  if(g.round===0)for(const [index,id] of [g.homeTeamId,g.awayTeamId].entries()){
+   const team=t.teams.find(team=>team.id===id);if(!team)continue;
+   const district=Number(g.seedLabels[index].match(/District (\d+)/)?.[1]);
+   assert(team.district===null||team.district===district,'Team district conflicts with seed placement');
+   assert(team.region===null||team.region===g.region,'Team region conflicts with seed placement');
+  }
   if(g.feederIds.length){
    for(const [index,id] of g.feederIds.entries()){
     const feeder=t.games.find(item=>item.id===id)!;const entrant=index===0?g.homeTeamId:g.awayTeamId;

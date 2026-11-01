@@ -31,6 +31,12 @@ describe('2026 UIL tournament',()=>{
  it('rejects tied, incomplete, negative or unverified finals and winners in live games',()=>{
   for(const patch of [{homeScore:21},{awayScore:null},{homeScore:-1},{winnerTeamId:null},{verifiedAt:null},{reviewedBy:''},{status:'live' as const}])assert.throws(()=>applyObservation(fixture(),{...result,...patch}));
  });
+ it('keeps incomplete live scores provisional and supports postponed/canceled games',()=>{
+  const live=applyObservation(fixture(),{...result,status:'live',awayScore:null,winnerTeamId:null});
+  assert.equal(live.games.find(g=>g.id==='r1-bi-2')!.homeScore,28);assert.equal(live.games.find(g=>g.id==='r1-area-1')!.awayTeamId,null);
+  const tied=applyObservation(fixture(),{...result,status:'live',awayScore:28,winnerTeamId:null});assert.equal(tied.games.find(g=>g.id==='r1-bi-2')!.winnerTeamId,null);
+  for(const status of ['postponed','canceled'] as const){const t=applyObservation(fixture(),{...result,status,homeScore:null,awayScore:null,winnerTeamId:null});assert.equal(t.games.find(g=>g.id==='r1-bi-2')!.status,status);assert.equal(t.games.find(g=>g.id==='r1-area-1')!.awayTeamId,null);}
+ });
  it('rejects unknown or missing opponents and an invalid winner',()=>{
   for(const patch of [{awayTeamId:null},{awayTeamId:'unknown'},{winnerTeamId:'fixture-a'}])assert.throws(()=>applyObservation(fixture(),{...result,...patch}));
  });
@@ -50,6 +56,10 @@ describe('2026 UIL tournament',()=>{
   assert.throws(()=>applyObservation(fixture(),{...result,verifiedAt:'2099-01-01T00:00:00Z'}));
   const scheduled=applyObservation(fixture(),{...result,status:'scheduled',homeScore:null,awayScore:null,winnerTeamId:null,kickoff:'2026-11-14T19:30:00-06:00'});
   assert.throws(()=>applyObservation(scheduled,{...result,verifiedAt:'2026-10-31T10:30:00Z'}));
+ });
+ it('rejects missing propagated winners and placements outside the team district',()=>{
+  const updated=applyObservation(fixture(),result);updated.games.find(g=>g.id==='r1-area-1')!.awayTeamId=null;assert.throws(()=>validateTournament(updated));
+  const wrongDistrict=fixture();wrongDistrict.teams[0].district=7;assert.throws(()=>applyObservation(wrongDistrict,result));
  });
  it('rejects corrupted graph relationships and advancement conflicts',()=>{
   const t=fixture();t.games[0].nextGameId='state-final';assert.throws(()=>validateTournament(t));

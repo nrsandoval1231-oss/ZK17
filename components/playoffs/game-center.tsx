@@ -9,6 +9,7 @@ export default function GameCenter({game,round,tournament,onClose}:{game:Playoff
  const dialog=useRef<HTMLDialogElement>(null);const [copyMessage,setCopyMessage]=useState('');const [fallback,setFallback]=useState('');
  useEffect(()=>{const el=dialog.current;if(!el)return;const before=document.body.style.overflow;el.showModal();document.body.style.overflow='hidden';return()=>{el.close();document.body.style.overflow=before;};},[]);
  const source=tournament.sources.find(source=>source.id===game?.sourceId);
+ const feederSources=[...new Set((game?.feederIds??[]).map(id=>tournament.games.find(item=>item.id===id)?.sourceId).filter(Boolean))].map(id=>tournament.sources.find(source=>source.id===id)).filter(source=>source!==undefined);
  const teams=[game?.homeTeamId,game?.awayTeamId].map(id=>tournament.teams.find(team=>team.id===id));
  async function share(){try{await navigator.clipboard.writeText(location.href);setCopyMessage('Game link copied.');}catch{setCopyMessage('Copy the game address below.');setFallback(location.href);}}
  return <dialog ref={dialog} className={styles.gameDialog} aria-label="Game center" onCancel={event=>{event.preventDefault();onClose();}}>
@@ -20,6 +21,6 @@ export default function GameCenter({game,round,tournament,onClose}:{game:Playoff
   <dl className={styles.detailGrid}><div><dt>DATE & KICKOFF</dt><dd>{formatKickoff(game?.kickoff??null)}</dd></div><div><dt>VENUE</dt><dd>{game?.venue??'Venue pending'}</dd></div><div><dt>LAST VERIFIED</dt><dd>{game?.verifiedAt?formatKickoff(game.verifiedAt):'No game facts verified yet'}</dd></div><div><dt>HIGHLIGHTS</dt><dd>Approved game film pending</dd></div></dl>
   {game?.nextGameId&&<p className={styles.feedNote}>Winner advances to {rounds[Math.min(round+1,5)].name}. This describes the bracket relationship, not a confirmed result.</p>}
   <div className={styles.dialogActions}><a href={source?.url??'https://www.uiltexas.org/football/playoff-brackets/5AD2'} target="_blank" rel="noreferrer">{source?`${source.authority==='secondary'?'Secondary source':'Official source'}: ${source.label}`:'VIEW OFFICIAL UIL BRACKET'} <span aria-hidden="true">↗</span></a><button onClick={share}>COPY GAME LINK</button></div>
-  <p role="status" className={styles.copyStatus}>{copyMessage}</p>{fallback&&<label className={styles.fallback}>Game address<input readOnly value={fallback} onFocus={event=>event.currentTarget.select()}/></label>}
+  {feederSources.length>0&&<div className={styles.feedNote}>Advancement provenance: {feederSources.map(source=><a key={source.id} href={source.url} target="_blank" rel="noreferrer">{source.label}</a>)}</div>}<p role="status" className={styles.copyStatus}>{copyMessage}</p>{fallback&&<label className={styles.fallback}>Game address<input readOnly value={fallback} onFocus={event=>event.currentTarget.select()}/></label>}
  </dialog>;
 }

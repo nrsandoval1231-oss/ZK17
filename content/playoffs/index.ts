@@ -7,7 +7,7 @@ export function getTournament() {
  if(data.schemaVersion!==1||data.season!==2026||data.division!=='5A-DII')throw new Error('Unsupported playoff artifact');
  let tournament=createBracket();
  tournament.sources=data.sources as Source[];
- tournament.teams=(data.teams as Team[]).map(team=>({...team,logo:team.id==='anna'&&playoffBrand.ownerApproved?playoffBrand.logo:team.logo}));
+ tournament.teams=(data.teams as Team[]).map(team=>({...team,logo:team.id==='anna'?(playoffBrand.ownerApproved?playoffBrand.logo:null):team.logo}));
  for(const observation of data.observations as Observation[])tournament=applyObservation(tournament,observation);
  validateTournament(tournament);
  return tournament;

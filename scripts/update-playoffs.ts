@@ -1,6 +1,6 @@
 import {readFile,writeFile,rename} from 'node:fs/promises';
 import {resolve} from 'node:path';
-import {createBracket,applyObservation,validateTournament,type Observation,type Source,type Team} from '../lib/playoffs/tournament';
+import {createBracket,applyObservation,validateTournament,resolveTeam,type Observation,type Source,type Team} from '../lib/playoffs/tournament';
 
 type Artifact={schemaVersion:number;season:number;division:string;checkedAt:string;verificationScope:string;sources:Source[];teams:Team[];observations:Observation[]};
 async function main(){
@@ -14,7 +14,13 @@ const mode=process.argv[2]??'validate';
 if(mode==='validate')console.log(`Validated ${tournament.games.length} games and ${artifact.observations.length} reviewed observations. No results inferred.`);
 else if(mode==='apply'){
  const input=process.argv[3];if(!input)throw new Error('Usage: npm run playoffs:update -- apply path/to/reviewed-observation.json');
- const observation:Observation=JSON.parse(await readFile(resolve(input),'utf8'));
+ const candidate=JSON.parse(await readFile(resolve(input),'utf8')) as Observation & {homeTeamName?:string;awayTeamName?:string};
+ const identify=(name:string|undefined,id:string|null)=>{
+  if(!name)return id;const team=resolveTeam(name,artifact.teams);
+  if(!team)throw new Error(`Unknown team name: ${name}; review the team registry first`);
+  if(id&&id!==team.id)throw new Error('Team name and ID conflict');return team.id;
+ };
+ const observation:Observation={gameId:candidate.gameId,homeTeamId:identify(candidate.homeTeamName,candidate.homeTeamId),awayTeamId:identify(candidate.awayTeamName,candidate.awayTeamId),homeScore:candidate.homeScore,awayScore:candidate.awayScore,status:candidate.status,kickoff:candidate.kickoff,venue:candidate.venue,winnerTeamId:candidate.winnerTeamId,sourceId:candidate.sourceId,verifiedAt:candidate.verifiedAt,reviewedBy:candidate.reviewedBy};
  const updated=applyObservation(tournament,observation);
  if(updated.history.length===tournament.history.length){console.log('Identical final already recorded. No write.');}
  else{
