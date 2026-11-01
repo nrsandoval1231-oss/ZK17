@@ -1,0 +1,1 @@
+PASS: local-only synthetic final score, verified winner, Anna highlight, current next round and sourced game detail render. Fixture data exists only under /tmp; never copied into review artifact.

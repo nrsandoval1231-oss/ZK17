@@ -1,0 +1,50 @@
+[
+  {
+    "id": "uil-alignment",
+    "url": "https://realignment.uiltexas.org/alignments/2026/5AD2FB2026.pdf",
+    "retrievedAt": "2026-11-01T03:44:48.611Z",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "bytes": 48899,
+    "sha256": "98fed52f30750d18961a7a415638a80109dcf5112561c8b029c5e3c26f6f409f",
+    "changed": true,
+    "reviewRequired": true,
+    "automaticPublication": false
+  },
+  {
+    "id": "uil-structure",
+    "url": "https://realignment.uiltexas.org/alignments/2026/FB_BB_VB_Blank_Brackets.pdf",
+    "retrievedAt": "2026-11-01T03:44:50.109Z",
+    "httpStatus": 200,
+    "contentType": "application/pdf",
+    "bytes": 1295769,
+    "sha256": "e8fe769be7d47f8924b1d8cfad759ed5e44e82051eb03a114aff41ed18ff6ef9",
+    "changed": true,
+    "reviewRequired": true,
+    "automaticPublication": false
+  },
+  {
+    "id": "uil-bracket",
+    "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+    "retrievedAt": "2026-11-01T03:44:52.351Z",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 62303,
+    "sha256": "64b26ebc7877973721a41aca16cae1fab0b697269911d037882a16200c731e40",
+    "changed": true,
+    "reviewRequired": true,
+    "automaticPublication": false
+  },
+  {
+    "id": "anna-athletics",
+    "url": "https://www.gocoyoteu.com/sport/football/boys/",
+    "retrievedAt": "2026-11-01T03:44:54.093Z",
+    "httpStatus": 200,
+    "contentType": "text/html; charset=utf-8",
+    "bytes": 161447,
+    "sha256": "72d79efe702295dfccb864b82f46bdd6eb938a65bde46a0545949fe58c222f65",
+    "changed": true,
+    "reviewRequired": true,
+    "automaticPublication": false
+  }
+]

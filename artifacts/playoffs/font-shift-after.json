@@ -1,0 +1,79 @@
+{
+  "total": 0.07877682436438262,
+  "shifts": [
+    {
+      "value": 0.07877682436438262,
+      "nodes": [
+        {
+          "name": "playoffs_hero__6enG8",
+          "previous": {
+            "x": 25,
+            "y": 309.59375,
+            "width": 362,
+            "height": 432.40625,
+            "top": 309.59375,
+            "right": 387,
+            "bottom": 742,
+            "left": 25
+          },
+          "current": {
+            "x": 25,
+            "y": 383.84375,
+            "width": 362,
+            "height": 358.15625,
+            "top": 383.84375,
+            "right": 387,
+            "bottom": 742,
+            "left": 25
+          }
+        },
+        {
+          "name": "playoffs_heroNumber__UAzoq",
+          "previous": {
+            "x": 170.59375,
+            "y": 81.5,
+            "width": 241.40625,
+            "height": 520,
+            "top": 81.5,
+            "right": 412,
+            "bottom": 601.5,
+            "left": 170.59375
+          },
+          "current": {
+            "x": 169.59375,
+            "y": 63.5,
+            "width": 242.40625,
+            "height": 520,
+            "top": 63.5,
+            "right": 412,
+            "bottom": 583.5,
+            "left": 169.59375
+          }
+        },
+        {
+          "name": "playoffs_header__i0Qlr",
+          "previous": {
+            "x": 232.71875,
+            "y": 13.5,
+            "width": 156.5,
+            "height": 44,
+            "top": 13.5,
+            "right": 389.21875,
+            "bottom": 57.5,
+            "left": 232.71875
+          },
+          "current": {
+            "x": 239.765625,
+            "y": 13.5,
+            "width": 149.234375,
+            "height": 44,
+            "top": 13.5,
+            "right": 389,
+            "bottom": 57.5,
+            "left": 239.765625
+          }
+        }
+      ]
+    }
+  ]
+}

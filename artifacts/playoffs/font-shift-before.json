@@ -1,0 +1,107 @@
+{
+  "total": 0.19107191852381988,
+  "shifts": [
+    {
+      "value": 0.00010397500805096982,
+      "nodes": [
+        {
+          "name": "playoffs_heroPhoto__c4bWy",
+          "previous": {
+            "x": 245.453125,
+            "y": 92,
+            "width": 145.953125,
+            "height": 23,
+            "top": 92,
+            "right": 391.40625,
+            "bottom": 115,
+            "left": 245.453125
+          },
+          "current": {
+            "x": 254.09375,
+            "y": 92,
+            "width": 137.3125,
+            "height": 23,
+            "top": 92,
+            "right": 391.40625,
+            "bottom": 115,
+            "left": 254.09375
+          }
+        }
+      ]
+    },
+    {
+      "value": 0.1909679435157689,
+      "nodes": [
+        {
+          "name": "playoffs_heroNumber__UAzoq",
+          "previous": {
+            "x": 0,
+            "y": 81.5,
+            "width": 412,
+            "height": 520,
+            "top": 81.5,
+            "right": 412,
+            "bottom": 601.5,
+            "left": 0
+          },
+          "current": {
+            "x": 175.625,
+            "y": 63.5,
+            "width": 236.375,
+            "height": 520,
+            "top": 63.5,
+            "right": 412,
+            "bottom": 583.5,
+            "left": 175.625
+          }
+        },
+        {
+          "name": "playoffs_hero__6enG8",
+          "previous": {
+            "x": 25,
+            "y": 309.59375,
+            "width": 362,
+            "height": 432.40625,
+            "top": 309.59375,
+            "right": 387,
+            "bottom": 742,
+            "left": 25
+          },
+          "current": {
+            "x": 25,
+            "y": 383.84375,
+            "width": 362,
+            "height": 358.15625,
+            "top": 383.84375,
+            "right": 387,
+            "bottom": 742,
+            "left": 25
+          }
+        },
+        {
+          "name": "playoffs_header__i0Qlr",
+          "previous": {
+            "x": 232.71875,
+            "y": 13.5,
+            "width": 156.5,
+            "height": 44,
+            "top": 13.5,
+            "right": 389.21875,
+            "bottom": 57.5,
+            "left": 232.71875
+          },
+          "current": {
+            "x": 239.765625,
+            "y": 13.5,
+            "width": 149.234375,
+            "height": 44,
+            "top": 13.5,
+            "right": 389,
+            "bottom": 57.5,
+            "left": 239.765625
+          }
+        }
+      ]
+    }
+  ]
+}

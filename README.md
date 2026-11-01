@@ -40,3 +40,9 @@ Fonts are self-hosted via `@fontsource` (Barlow Condensed and DM Sans); their pa
 ## Preview
 
 The app intentionally ships `noindex` metadata and `public/robots.txt` disallowing crawl. Do not remove either until an owner-approved production release configures its canonical host, sitemap, and corresponding allow rule. No deployment is performed by this project build.
+
+## Road to State
+
+`/playoffs/` adds Anna HQ, the six-round road, the complete 64-position/63-game UIL 5A Division II bracket, four regional selectors, state stage, accessible list view and hash-linked Game Center. Unknown teams/results remain pending; Anna's 2026 alignment is verified without implying playoff qualification.
+
+Data: `content/playoffs/verified.json`. Run `npm run playoffs:validate`, `npm run playoffs:retrieve`, or `npm run playoffs:update -- apply /path/to/reviewed-observation.json`. Source retrieval never automatically publishes scores. See [data workflow and source inventory](docs/PLAYOFFS_DATA.md). Exact owner Anna logo/canonical mockup remain required for final visual acceptance and public release; no substitute artwork is used.
