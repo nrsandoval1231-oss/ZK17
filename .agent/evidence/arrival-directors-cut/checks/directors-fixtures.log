@@ -1,0 +1,69 @@
+
+Running 40 tests using 2 workers
+
+(node:177968) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:177969) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   1 [desktop-chromium] › tests/e2e/arrival-directors-cut.spec.ts:45:7 › seven scroll beats progress and reverse on desktop (3.9s)
+  ✓   2 [desktop-chromium] › tests/e2e/arrival-directors-cut.spec.ts:45:7 › seven scroll beats progress and reverse on touch (3.8s)
+  ✓   3 [desktop-chromium] › tests/e2e/arrival-directors-cut.spec.ts:83:5 › reduced motion restores the complete static frame after an active pin (1.2s)
+  ✓   4 [desktop-chromium] › tests/e2e/arrival-directors-cut.spec.ts:98:5 › touch orientation refresh keeps the story scrollable and bounded (2.0s)
+  ✓   5 [desktop-chromium] › tests/e2e/arrival-directors-cut.spec.ts:119:5 › built touch story retains its normalized beat through rotation (2.1s)
+  ✓   6 [desktop-chromium] › tests/e2e/arrival-directors-cut.spec.ts:140:5 › built story can retain progress after rotating at the opening (2.1s)
+  ✓   7 [desktop-chromium] › tests/e2e/arrival-directors-cut.spec.ts:160:5 › smoke drifts during the central story (1.7s)
+  ✓   8 [desktop-chromium] › tests/e2e/arrival-directors-cut.spec.ts:178:5 › action photo uses a bounded, faded frame at desktop and mobile sizes (2.3s)
+  ✓  10 [desktop-chromium] › tests/e2e/arrival-directors-cut.spec.ts:212:5 › failed hero enhancement reverts partial styles to the readable fallback (1.2s)
+  ✓   9 [desktop-chromium] › tests/e2e/arrival-directors-cut.spec.ts:194:5 › rear and white montage fades follow each source image frame (2.7s)
+(node:178412) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:178419) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  12 [mobile-chromium] › tests/e2e/arrival-directors-cut.spec.ts:45:7 › seven scroll beats progress and reverse on touch (3.9s)
+  ✓  11 [mobile-chromium] › tests/e2e/arrival-directors-cut.spec.ts:45:7 › seven scroll beats progress and reverse on desktop (4.7s)
+  ✓  13 [mobile-chromium] › tests/e2e/arrival-directors-cut.spec.ts:83:5 › reduced motion restores the complete static frame after an active pin (1.2s)
+  ✓  14 [mobile-chromium] › tests/e2e/arrival-directors-cut.spec.ts:98:5 › touch orientation refresh keeps the story scrollable and bounded (2.1s)
+  ✓  15 [mobile-chromium] › tests/e2e/arrival-directors-cut.spec.ts:119:5 › built touch story retains its normalized beat through rotation (2.5s)
+  ✓  16 [mobile-chromium] › tests/e2e/arrival-directors-cut.spec.ts:140:5 › built story can retain progress after rotating at the opening (2.0s)
+  ✓  17 [mobile-chromium] › tests/e2e/arrival-directors-cut.spec.ts:160:5 › smoke drifts during the central story (1.4s)
+  ✓  18 [mobile-chromium] › tests/e2e/arrival-directors-cut.spec.ts:178:5 › action photo uses a bounded, faded frame at desktop and mobile sizes (1.9s)
+  ✓  19 [mobile-chromium] › tests/e2e/arrival-directors-cut.spec.ts:194:5 › rear and white montage fades follow each source image frame (1.9s)
+  ✓  20 [mobile-chromium] › tests/e2e/arrival-directors-cut.spec.ts:212:5 › failed hero enhancement reverts partial styles to the readable fallback (735ms)
+(node:178902) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:178909) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  22 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:45:7 › seven scroll beats progress and reverse on touch (13.7s)
+  ✓  23 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:83:5 › reduced motion restores the complete static frame after an active pin (2.4s)
+  ✓  24 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:98:5 › touch orientation refresh keeps the story scrollable and bounded (7.9s)
+  ✓  25 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:119:5 › built touch story retains its normalized beat through rotation (4.9s)
+  ✓  21 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:45:7 › seven scroll beats progress and reverse on desktop (30.9s)
+  ✓  26 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:140:5 › built story can retain progress after rotating at the opening (4.2s)
+  ✓  27 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:160:5 › smoke drifts during the central story (3.4s)
+  ✓  28 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:178:5 › action photo uses a bounded, faded frame at desktop and mobile sizes (4.9s)
+  ✓  30 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:212:5 › failed hero enhancement reverts partial styles to the readable fallback (2.1s)
+  ✓  29 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:194:5 › rear and white montage fades follow each source image frame (6.0s)
+(node:179787) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:179795) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  32 [reduced-motion] › tests/e2e/arrival-directors-cut.spec.ts:45:7 › seven scroll beats progress and reverse on desktop (2.7s)
+  ✓  31 [reduced-motion] › tests/e2e/arrival-directors-cut.spec.ts:45:7 › seven scroll beats progress and reverse on touch (3.2s)
+  ✓  33 [reduced-motion] › tests/e2e/arrival-directors-cut.spec.ts:83:5 › reduced motion restores the complete static frame after an active pin (851ms)
+  ✓  34 [reduced-motion] › tests/e2e/arrival-directors-cut.spec.ts:98:5 › touch orientation refresh keeps the story scrollable and bounded (1.8s)
+  ✓  35 [reduced-motion] › tests/e2e/arrival-directors-cut.spec.ts:119:5 › built touch story retains its normalized beat through rotation (1.8s)
+  ✓  37 [reduced-motion] › tests/e2e/arrival-directors-cut.spec.ts:160:5 › smoke drifts during the central story (1.4s)
+  ✓  36 [reduced-motion] › tests/e2e/arrival-directors-cut.spec.ts:140:5 › built story can retain progress after rotating at the opening (2.0s)
+  ✓  38 [reduced-motion] › tests/e2e/arrival-directors-cut.spec.ts:178:5 › action photo uses a bounded, faded frame at desktop and mobile sizes (2.0s)
+  ✓  39 [reduced-motion] › tests/e2e/arrival-directors-cut.spec.ts:194:5 › rear and white montage fades follow each source image frame (2.0s)
+  ✓  40 [reduced-motion] › tests/e2e/arrival-directors-cut.spec.ts:212:5 › failed hero enhancement reverts partial styles to the readable fallback (771ms)
+
+  40 passed (1.3m)

@@ -1,0 +1,50 @@
+[
+  {
+    "case": "desktop",
+    "path": "videos/page@a7a028b21388a6ee1bb0572c77a7b591.webm",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "vp9",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "format": {
+      "duration": "27.720000"
+    }
+  },
+  {
+    "case": "mobile",
+    "path": "videos/page@1b88612fbb3468fb442f5bf6a003b32f.webm",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "vp9",
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "format": {
+      "duration": "11.600000"
+    }
+  },
+  {
+    "case": "iphone-webkit",
+    "path": "videos/page@6ab45853424eced2babc5b0a08fd22ec.webm",
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "vp9",
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "format": {
+      "duration": "18.440000"
+    }
+  }
+]

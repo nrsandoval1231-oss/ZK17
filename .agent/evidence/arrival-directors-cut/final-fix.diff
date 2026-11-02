@@ -1,0 +1,522 @@
+diff --git a/.agent/evidence/arrival-directors-cut/final-fix-report.md b/.agent/evidence/arrival-directors-cut/final-fix-report.md
+new file mode 100644
+index 0000000..ead070f
+--- /dev/null
++++ b/.agent/evidence/arrival-directors-cut/final-fix-report.md
+@@ -0,0 +1,46 @@
++# Consolidated final fix wave
++
++Base: `f72f858`. Authority: the three Important findings in `final-review.md`, the director’s-cut brief, and the controller’s explicit bounded final-fix assignment. Worker: Codex implementer. No agents spawned, source photo/MP4/logo edits, push, merge, deploy, full build or full suite performed by this worker. The controller built the current candidate, owns final full gates and regenerated canonical captures/metrics, and will obtain the scoped re-review.
++
++## 1. Source-frame fades for rear and white photographs
++
++The generic picture reset left these two images contained inside full-screen frames, so masks around the screen could not dissolve their actual edges. Both now have centered frames with their source aspect ratios (650/1050 and 470/805), mobile width constraints, crossed horizontal/vertical feather masks, and restrained local top/side shading. Their original pixels, helmets/#17 and individual timeline intervals are unchanged. No body cutout, generated subject detail or photo-byte edit was made.
++
++The new source-fixture regression first failed because the rear frame occupied all 1440px of the desktop viewport. After the CSS repair, desktop and mobile bounds/aspect/mask/shading assertions passed in managed Chromium and WebKit. Actual built-page captures include desktop 1440×900 and touch-enabled managed WebKit 390×844 rear/white midpoints and holds. Files and geometry/mask/shade/scroll evidence are in `/tmp/directors-final-wave-visual/`, with eight screenshots and `validation.json`. Inspected the four hold images: the exposed hard source rectangles are feathered, top lettering/backgrounds subdued, and helmet/#17 remain visible. Residual source field/background detail remains, deliberately rather than reconstructing the subject.
++
++## 2. Native WebKit keyboard readiness invariant
++
++The prior fix preserved an anchor only while `activeElement` remained the video. That was insufficient: WebKit’s native shadow-control Tab movement can scroll backwards before the alignment frame runs. The Film Room controls owner could then disable/remove the focused native control, causing a transient BODY focus state; a subsequent active-element check could no longer recover it. The frozen-HEAD full run’s real failure remains recorded in `/tmp/directors-final-browser.log` and its trace; the strong regression was not changed or skipped.
++
++The repair uses an explicit native-keyboard frame token, acquired only by a keyboard control key while the native player is already ready/focused. Film Room’s existing controls owner honors that token so the control cannot disappear during the brief alignment interval. The hook queues alignment independently of pending hash state and tolerates transient BODY shadow-focus states. Tab, Space and native seek/volume arrows preserve readiness. It does not enable the opening aperture’s player before readiness.
++
++Real external HTMLElement focus clears the hold through a document-level focus listener, covering header/skip controls outside the story as well as downstream story controls. That listener does not scroll. Existing Tab-only story recentering remains scoped to actual Tab focus. Pointer/touch, wheel, page-scroll keys, new anchor navigation and cleanup release the token. Thus external programmatic `preventScroll` focus is preserved, and intentional manual reverse scrolling can disable/hide the native controls again as before.
++
++The original full native-player Tab traversal regression is unchanged. A new focused test covers ArrowRight, Space and ArrowUp readiness, external skip-link `preventScroll` focus without scroll movement, reacquiring readiness without pending hash alignment, then actual wheel/manual-touch emulation releasing the hold and reversing readiness. Pointer/programmatic story-focus regressions remain green.
++
++## 3. Pre-hydration darkness with finite readable fallback
++
++SSR defaults intentionally showed the static composition for no-JS/reduced-motion, but on an enabled-JS connection those defaults could paint before the motion hook initialized. A homepage-only head bootstrap now marks normal-motion loading before body paint. Scoped CSS hides the cinematic layers/statement/details while that guard is pending; the header and persistent accessible H1 stay available.
++
++The hero reports readiness only after its timeline, initial dark styles and pin handlers are established. A five-second watchdog releases the guard into the readable static composition if enhancement never arrives. Late enhancement after that fallback does not abruptly hide the already-readable frame. A caught initialization failure reverts partial GSAP styles and also selects the fallback. Reduced motion does not activate the guard; no-JS never executes it. This adds no waiting/loading screen for those modes, and leaves a finite readable fallback when chunks fail.
++
++The delayed-JavaScript test pauses each JS response by 1800ms and takes an immediate computed-style snapshot after 1000ms from navigation commit. It does not retry the initial opacity assertion until hydration. Against the old build it observed statement opacity **1** instead of **0**, reproducing the review. Against the rebuilt candidate it observes every cinematic layer/statement at opacity 0 and no pin at that moment, then verifies normal enhancement becomes ready. A separate blocked-JS test observes the finite timeout and readable fallback; no-JS/reduced-motion tests verify the static frame without a pin. A source fixture deliberately throws during GSAP timeline creation and verifies style reversion/readable fallback without a page error.
++
++## Actual commands and results
++
++Managed Chromium is the default throughout. WebKit uses the existing host libraries with `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu`; this skips host dependency preflight only, not browser cases/assertions.
++
++- Before repairs: `npx playwright test tests/e2e/arrival-loading.spec.ts tests/e2e/arrival-directors-cut.spec.ts --grep 'slow enabled|rear and white' --project=desktop-chromium --workers=1 --output=/tmp/directors-final-wave-red`: two failures. The frame failure was the intended 1440px bound failure. The first draft loading test retried opacity into hydration and failed on absent readiness instead; corrected it to a true immediate initial-paint snapshot.
++- Corrected initial-paint RED: `npx playwright test tests/e2e/arrival-loading.spec.ts --grep 'slow enabled' --project=desktop-chromium --workers=1 --output=/tmp/directors-final-initial-red`: one expected failure, 1000ms statement opacity 1.
++- Source fixtures after repair: `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/arrival-directors-cut.spec.ts --grep 'rear and white|failed hero enhancement' --project=desktop-chromium --project=iphone-webkit --workers=1 --output=/tmp/directors-final-source-green`: **4/4 passed**.
++- Preserved native WebKit regression under concurrent worker load: `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/cinema-framing.spec.ts --grep 'direct film landing lets' --project=iphone-webkit --repeat-each=8 --workers=2 --output=/tmp/directors-final-native-repeat`: **8/8 passed in 26.4s**. Log `/tmp/directors-final-native-repeat.log`. Ran concurrently with the covering suite below; not a physical-device or thermal measurement.
++- Built loading/fallback/native release/story-focus coverage: `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/arrival-loading.spec.ts tests/e2e/cinema-framing.spec.ts tests/e2e/story-focus.spec.ts --grep 'slow enabled|failed JavaScript|no-js keeps|reduced keeps|ready native keyboard|pointer focus|programmatic preventScroll|real Tab' --project=desktop-chromium --project=iphone-webkit --workers=1 --output=/tmp/directors-final-loading-controls`: **16/16 passed in 34.0s**. Log `/tmp/directors-final-loading-controls.log`.
++- Visual capture invocation: `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu node --input-type=module < /tmp/directors-final-wave-visual.mjs`: exit 0, eight actual built desktop/WebKit midpoint/hold screenshots, with settled photo opacity >.95. No fixture timeline forcing; scroll positions are set programmatically and the real DOM is observed. Log `/tmp/directors-final-wave-visual.log`.
++- Scoped ESLint on changed layout/components/browser tests passed. `npm run typecheck` passed after the core product patch; the controller subsequently reported current full lint/typecheck and 56 unit tests passing after the external-focus follow-up. An initial ESLint ref-immutability finding on `element.dataset` assignment was corrected to DOM `setAttribute` calls before the clean scoped run. No rule was disabled.
++- `git diff --check` on owned files passed before commit.
++
++## Controller gates and limits
++
++All product/test source was frozen after the covering passes. The controller has started a new full browser run at `/tmp/directors-release-browser.log`; this report does not predeclare its result. The earlier twelve-case canonical capture passed for `f72f858`, but must be regenerated for these visual/initial-load fixes. Canonical capture/metrics regeneration, asset-hash final checks, scoped independent re-review and preview review remain controller-owned.
++
++Touch-enabled WebKit captures/programmatic scrolling do not prove physical iOS swipes, Safari toolbar behavior, authored playback pacing, hardware/GPU smoothness or thermal performance. The new video regression repetitions establish correctness in the managed browser under the reported test concurrency, not a device-performance guarantee. Existing preview-only media rights/source limitations remain unchanged and block a production-readiness claim; no release safeguard was bypassed.
+diff --git a/app/layout.tsx b/app/layout.tsx
+index 9e30068..382f28a 100644
+--- a/app/layout.tsx
++++ b/app/layout.tsx
+@@ -12,14 +12,26 @@ import { profile } from '@/content/site';
+ const configuredSiteUrl = process.env.SITE_URL ?? 'https://zephyrkreye.com';
+ const publicSiteUrl = (() => { try { const url = new URL(configuredSiteUrl ?? ''); return url.protocol === 'https:' && url.hostname.includes('.') && !/(example|localhost|127\.0\.0\.1)/i.test(url.hostname) ? url.origin : undefined; } catch { return undefined; } })();
+ export const metadata: Metadata = {
+  metadataBase: publicSiteUrl ? new URL(publicSiteUrl) : undefined,
+  alternates: publicSiteUrl ? { canonical: publicSiteUrl } : undefined,
+  title: 'Zephyr Kreye — ZK17', description: 'Quarterback. Anna High School, Texas. Class of 2027.',
+  robots: { index: true, follow: true },
+  openGraph: { title: 'ZK17 — Zephyr Kreye', description: 'Built for the moment. Ready for what’s next.', ...(publicSiteUrl ? { images: ['/og-zk17.png'] } : {}), type: 'website' },
+  icons: { icon: [{ url: '/favicon.png?v=2', type: 'image/png', sizes: '64x64' }], apple: '/apple-touch-icon.png?v=2' },
+ };
++// Runs in the head before body paint; a finite guard leaves blocked/failed
++// enhancement readable. No-JS/reduced-motion documents keep static defaults.
++const arrivalBootstrap = `(function(){
++ if(location.pathname!=='/'||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
++ var root=document.documentElement,timer;
++ var finish=function(state){root.setAttribute('data-arrival-boot',state);clearTimeout(timer);window.removeEventListener('arrival:motion-ready',ready);window.removeEventListener('arrival:motion-failed',failed);};
++ var ready=function(){finish('ready');},failed=function(){finish('fallback');};
++ root.setAttribute('data-arrival-boot','pending');
++ window.addEventListener('arrival:motion-ready',ready);
++ window.addEventListener('arrival:motion-failed',failed);
++ timer=setTimeout(failed,5000);
++})();`;
+ export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const jsonLd = { '@context': 'https://schema.org', '@type': 'Person', name: profile.name, memberOf: { '@type': 'SportsTeam', name: profile.school }, jobTitle: profile.position, description: `Class of ${profile.classYear} ${profile.position} at ${profile.school}, ${profile.location}.` };
+- return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />{children}</body></html>;
++ return <html lang="en" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: arrivalBootstrap }} /></head><body><a className="skip-link" href="#main">Skip to content</a><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />{children}</body></html>;
+ }
+diff --git a/components/arrival-experience.tsx b/components/arrival-experience.tsx
+index 9eac766..6b51ff7 100644
+--- a/components/arrival-experience.tsx
++++ b/components/arrival-experience.tsx
+@@ -39,21 +39,28 @@ export default function ArrivalExperience({ profile, photo, photos, film, onWatc
+         const frame = player.current;
+         const cinema = frame.parentElement!;
+         const coverScale = () => {
+           const ratio = media?.videoWidth && media?.videoHeight ? media.videoWidth / media.videoHeight : 512 / 640;
+           // The final frame is centered below the header. Cover both edges
+           // of the stage from that offset center during the opening crop.
+           const centerY = frame.offsetTop + frame.clientHeight / 2;
+           const coverHeight = 2 * Math.max(centerY, cinema.clientHeight - centerY);
+           return cinemaCoverScale(cinema.clientWidth, coverHeight, frame.clientWidth, frame.clientHeight, ratio);
+         };
+-        const controls = (ready: boolean) => { if (media) { media.controls = ready; media.tabIndex = ready ? 0 : -1; } };
++        const controls = (ready: boolean) => {
++          if (!media) return;
++          // Tab/seek keys may scroll WebKit's native shadow controls backwards
++          // before the story can realign. Never remove a ready focused control
++          // in that interval; manual scrolling/external focus clears the token.
++          const enabled = ready || media.hasAttribute('data-native-keyboard-active');
++          media.controls = enabled; media.tabIndex = enabled ? 0 : -1;
++        };
+         if (isReduce) {
+           gsap.set(overlay.current, { autoAlpha: 0 });
+           gsap.set(filmCopy.current, { autoAlpha: 1, y: 0 });
+           if (media) gsap.set(`.${styles.poster}`, { autoAlpha: 0 });
+           controls(true);
+           return;
+         }
+         controls(false);
+         const transition = gsap.timeline({
+           onUpdate: () => controls(transition.progress() >= .98),
+diff --git a/components/arrival-hero.module.css b/components/arrival-hero.module.css
+index df4f9d8..4c813e2 100644
+--- a/components/arrival-hero.module.css
++++ b/components/arrival-hero.module.css
+@@ -41,10 +41,21 @@
+ .photo .photoFrame picture{display:block;position:absolute;inset:0;width:100%;height:100%;transform:none;mask-image:none}
+ .athlete::before,.montage[data-arrival-layer="running"]::before{content:none}
+ .athlete .photoFrame,.silhouette .photoFrame{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);height:min(100%,129.78vw);width:auto;aspect-ratio:601/780;mask-image:linear-gradient(to right,transparent 0%,#000 31%,#000 48%,transparent 78%)}
+ .athlete .photoFrame::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 18% 21% at 68% 27%,rgba(0,0,0,.88),transparent 100%)}
+ @media(max-width:899px){.montage[data-arrival-layer="running"] .photoFrame{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100%,65svh);height:auto;aspect-ratio:400/450;mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 60%,transparent 96%)}.montage[data-arrival-layer="running"] .photoFrame::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(0,0,0,.9),transparent 38%,transparent 65%,rgba(0,0,0,.9))}}
+ .athlete .photoFrame,.silhouette .photoFrame{mask-image:linear-gradient(to right,transparent 0%,#000 31%,#000 48%,transparent 78%),linear-gradient(to bottom,transparent 0%,#000 20%,#000 70%,transparent 100%);mask-composite:intersect;-webkit-mask-composite:source-in}
+ .montage[data-arrival-layer="running"] img{filter:grayscale(1) brightness(1.12)}
+ /* Fade the action photograph at its own edges at every viewport size. */
+ .montage[data-arrival-layer="running"] .photoFrame{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100%,65svh);height:auto;aspect-ratio:400/450;mask-image:linear-gradient(to right,transparent 0%,#000 28%,#000 72%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 18%,#000 60%,transparent 96%);mask-composite:intersect;-webkit-mask-composite:source-in}
+ .montage[data-arrival-layer="running"] .photoFrame::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(0,0,0,.9),transparent 38%,transparent 65%,rgba(0,0,0,.9))}
++
++/* Supporting photographs dissolve at their source rectangles, not the screen. */
++.montage[data-arrival-layer="rear"] .photoFrame,.montage[data-arrival-layer="white"] .photoFrame{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);height:min(100%,145vw);width:auto;aspect-ratio:650/1050;mask-image:linear-gradient(to right,transparent 0%,#000 20%,#000 78%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 22%,#000 76%,transparent 100%);mask-composite:intersect;-webkit-mask-composite:source-in}
++.montage[data-arrival-layer="white"] .photoFrame{height:min(100%,160vw);aspect-ratio:470/805;mask-image:linear-gradient(to right,transparent 0%,#000 18%,#000 82%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 26%,#000 78%,transparent 100%)}
++.montage[data-arrival-layer="rear"] .photoFrame::after,.montage[data-arrival-layer="white"] .photoFrame::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,.8) 10%,transparent 27%,transparent 72%,#000 100%),linear-gradient(to right,rgba(0,0,0,.65),transparent 26%,transparent 74%,rgba(0,0,0,.7))}
++
++/* A head bootstrap applies this before the enabled-JS document can paint.
++   The finite watchdog removes it if enhancement never becomes ready. */
++@media(prefers-reduced-motion:no-preference){
++ :global(html[data-arrival-boot="pending"]) .hero:not([data-arrival-motion="ready"]) [data-arrival-layer],:global(html[data-arrival-boot="pending"]) .hero:not([data-arrival-motion="ready"]) [data-arrival-statement],:global(html[data-arrival-boot="pending"]) .hero:not([data-arrival-motion="ready"]) [data-arrival-detail]{opacity:0;visibility:hidden}
++}
+diff --git a/components/use-arrival-hero-motion.ts b/components/use-arrival-hero-motion.ts
+index 81d9ce8..6050823 100644
+--- a/components/use-arrival-hero-motion.ts
++++ b/components/use-arrival-hero-motion.ts
+@@ -4,21 +4,22 @@ import { useLayoutEffect, type RefObject } from 'react';
+ import { gsap } from 'gsap';
+ import { ScrollTrigger } from 'gsap/ScrollTrigger';
+ 
+ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
+   useLayoutEffect(() => {
+     const element = root.current;
+     if (!element) return;
+     const container = element.parentElement!;
+     gsap.registerPlugin(ScrollTrigger);
+     const mm = gsap.matchMedia();
+-    mm.add('(prefers-reduced-motion: no-preference)', () => {
++    try { mm.add('(prefers-reduced-motion: no-preference)', () => {
++      if (document.documentElement.dataset.arrivalBoot === 'fallback') return;
+       const layer = (name: string) => element.querySelector<HTMLElement>(`[data-arrival-layer="${name}"]`);
+       const lights = layer('lights')!;
+       const smokeBack = layer('smoke-back')!;
+       const smokeFront = layer('smoke-front')!;
+       const silhouette = layer('silhouette');
+       const athlete = layer('athlete');
+       const running = layer('running');
+       const rear = layer('rear');
+       const white = layer('white');
+       const photos = [silhouette, athlete, running, rear, white].filter(Boolean);
+@@ -83,26 +84,33 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
+         if (pendingProgress === null) stableWidth = window.innerWidth;
+       };
+       window.addEventListener('scroll', rememberProgress, { passive: true });
+       window.addEventListener('orientationchange', queueRotation, true);
+       window.addEventListener('resize', onResize, true);
+       window.addEventListener('wheel', cancelRotation, { passive: true });
+       window.addEventListener('touchstart', cancelRotation, { passive: true });
+       window.addEventListener('pointerdown', cancelRotation, { passive: true });
+       window.addEventListener('keydown', cancelRotation);
+       window.addEventListener('hashchange', cancelRotation);
++      element.setAttribute('data-arrival-motion', 'ready');
++      window.dispatchEvent(new Event('arrival:motion-ready'));
+       return () => {
+         cancelRotation();
+         window.removeEventListener('scroll', rememberProgress);
+         window.removeEventListener('orientationchange', queueRotation, true);
+         window.removeEventListener('resize', onResize, true);
+         window.removeEventListener('wheel', cancelRotation);
+         window.removeEventListener('touchstart', cancelRotation);
+         window.removeEventListener('pointerdown', cancelRotation);
+         window.removeEventListener('keydown', cancelRotation);
+         window.removeEventListener('hashchange', cancelRotation);
+         timeline.kill();
+       };
+-    });
++    }); } catch {
++      mm.revert();
++      element.setAttribute('data-arrival-motion', 'fallback');
++      document.documentElement.dataset.arrivalBoot = 'fallback';
++      window.dispatchEvent(new Event('arrival:motion-failed'));
++    }
+     return () => mm.revert();
+   }, [root]);
+ }
+diff --git a/components/use-story-motion.ts b/components/use-story-motion.ts
+index 2d0fc5b..2a23393 100644
+--- a/components/use-story-motion.ts
++++ b/components/use-story-motion.ts
+@@ -57,66 +57,81 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
+     gsap.from('.next-copy h2', { scale: .97, transformOrigin: 'left center', duration: .9, ease: 'power3.out', scrollTrigger: { trigger: '.next-copy', start: 'top 90%', once: true } });
+     gsap.from('.closing-wordmark', { yPercent: 10, opacity: .9, duration: .8, ease: 'power3.out', scrollTrigger: { trigger: '.closing-wordmark', start: 'top 95%', once: true } });
+    });
+   }, element);
+   // Fonts, late local images and filtered data can change trigger geometry.
+   let disposed = false;
+   let frame = 0;
+   const decodeHash = (value: string) => { try { return decodeURIComponent(value); } catch { return value; } };
+   let pendingAnchor = location.hash.startsWith('#film=') ? null : decodeHash(location.hash.slice(1)) || null;
+   let anchorFrame = 0;
++  let nativeKeyboardFrame = false;
++  const nativeVideo = element.querySelector<HTMLVideoElement>('#film-room video');
+   const reconcileAnchor = () => {
++   if (disposed) return;
++   if (nativeKeyboardFrame) {
++    const cinema = ScrollTrigger.getById('arrival-cinema');
++    if (cinema) window.scrollTo({ top: cinema.end, behavior: 'instant' });
++    return;
++   }
+    const id = pendingAnchor;
+    if (disposed || !id || location.hash !== `#${id}`) return;
+    const target = document.getElementById(id);
+    if (!target) return;
+    const cinema = id === 'film-room' ? ScrollTrigger.getById('arrival-cinema') : undefined;
+    const scrollPadding = Number.parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+    // The full-height film stage must align with the viewport even without a pin.
+    const top = id === 'film-room'
+     ? cinema?.end ?? target.getBoundingClientRect().top + window.scrollY
+     : target.getBoundingClientRect().top + window.scrollY - scrollPadding;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+   };
+   // Late images and pin refreshes can move an anchor after its first landing.
+   // Keep reconciling until the visitor chooses a new scroll position.
+-  const releaseAnchor = () => { pendingAnchor = null; cancelAnimationFrame(anchorFrame); };
++  const releaseAnchor = () => { pendingAnchor = null; nativeKeyboardFrame = false; nativeVideo?.removeAttribute('data-native-keyboard-active'); cancelAnimationFrame(anchorFrame); };
+   let tabIntent = false;
+   let tabIntentFrame = 0;
+   let focusVersion = 0;
+   const clearFocusIntent = () => { tabIntent = false; focusVersion++; cancelAnimationFrame(tabIntentFrame); };
+   const onScrollKey = (event: KeyboardEvent) => {
+    clearFocusIntent();
+    if (event.key === 'Tab') {
+     tabIntent = true;
+     // Native Tab focus follows keydown; unrelated later focus cannot reuse it.
+     tabIntentFrame = requestAnimationFrame(clearFocusIntent);
+    }
+-   const nativePlayerTab = event.key === 'Tab' && pendingAnchor === 'film-room' && document.activeElement === element.querySelector('#film-room video');
+-   // WebKit can scroll a few pixels when Tab moves within native shadow
+-   // controls. Keep their completed film frame until focus actually leaves.
+-   if (!nativePlayerTab && ['Tab', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) releaseAnchor();
++   const nativeControlKey = ['Tab', ' ', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key);
++   const inNativePlayer = document.activeElement === nativeVideo || (nativeKeyboardFrame && document.activeElement === document.body);
++   if (nativeControlKey && inNativePlayer && (nativeKeyboardFrame || (nativeVideo?.controls && nativeVideo.tabIndex === 0))) {
++    nativeKeyboardFrame = true;
++    // Film Room owns controls. This token protects an already-ready player's
++    // focused shadow controls until alignment settles, never its opening.
++    nativeVideo?.setAttribute('data-native-keyboard-active', 'true');
++    queueAnchor();
++   } else if (['Tab', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) releaseAnchor();
+   };
+   const queueAnchor = () => {
+-   if (!pendingAnchor || disposed) return;
++   if ((!pendingAnchor && !nativeKeyboardFrame) || disposed) return;
+    cancelAnimationFrame(anchorFrame);
+    anchorFrame = requestAnimationFrame(() => { reconcileAnchor(); anchorFrame = 0; });
+   };
+   const onAnchorClick = (event: MouseEvent) => {
+    const link = (event.target as Element).closest<HTMLAnchorElement>('a[href^="#"]');
+    if (!link || !element.contains(link)) return;
+    const id = link.hash.slice(1);
+    if (!id || id.startsWith('film=')) return;
++   releaseAnchor();
+    pendingAnchor = decodeHash(id);
+    refresh();
+   };
+   const onHashChange = () => {
++   releaseAnchor();
+    const id = location.hash.slice(1);
+    pendingAnchor = id && !id.startsWith('film=') ? decodeHash(id) : null;
+    if (pendingAnchor) refresh();
+   };
+   const refresh = () => {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+     if (disposed) return;
+     // Pin measurement briefly moves DOM nodes; retain keyboard focus in the arcade.
+     const focused = document.activeElement;
+@@ -125,43 +140,50 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
+     queueAnchor();
+    });
+   };
+   element.addEventListener('click', onAnchorClick, true);
+   window.addEventListener('hashchange', onHashChange);
+   ScrollTrigger.addEventListener('refresh', queueAnchor);
+   window.addEventListener('resize', refresh);
+   // Native video focus may scroll a few pixels after the focus event. Keep an
+   // active direct landing aligned until wheel/touch/key input releases it.
+   const keepNativeFocusFramed = () => {
+-   if (pendingAnchor === 'film-room' && document.activeElement === element.querySelector('#film-room video')) queueAnchor();
++   if (nativeKeyboardFrame || (pendingAnchor === 'film-room' && document.activeElement === nativeVideo)) queueAnchor();
+   };
+   window.addEventListener('scroll', keepNativeFocusFramed, { passive: true });
+   const releaseOnExternalFocus = (event: FocusEvent) => {
+    const target = event.target;
+    const fromTab = tabIntent;
+    tabIntent = false;
+    cancelAnimationFrame(tabIntentFrame);
+    if (!fromTab || !(target instanceof HTMLElement) || target.matches('#film-room video')) return;
+    const version = focusVersion;
+    if (pendingAnchor === 'film-room') releaseAnchor();
+    // Native smooth focus scrolling can be measured before a pin refresh.
+    // Reconcile the actual focused control after that layout has settled.
+    requestAnimationFrame(() => {
+     if (disposed || version !== focusVersion || document.activeElement !== target || !target.getClientRects().length) return;
+     const box = target.getBoundingClientRect();
+     if (box.top < 0 || box.bottom > innerHeight) target.scrollIntoView({ block: 'center', behavior: 'instant' });
+    });
+   };
++  const releaseNativeOnExternalFocus = (event: FocusEvent) => {
++   const target = event.target;
++   // BODY may be a transient native-shadow focus state. A real external
++   // target, including header/skip controls outside this story, ends the hold.
++   if (nativeKeyboardFrame && target instanceof HTMLElement && target !== document.body && target !== nativeVideo) releaseAnchor();
++  };
++  document.addEventListener('focusin', releaseNativeOnExternalFocus);
+   element.addEventListener('focusin', releaseOnExternalFocus);
+   window.addEventListener('wheel', releaseAnchor, { passive: true });
+   const onPointer = () => { clearFocusIntent(); releaseAnchor(); };
+   window.addEventListener('touchstart', onPointer, { passive: true });
+   window.addEventListener('pointerdown', onPointer, { passive: true });
+   window.addEventListener('keydown', onScrollKey);
+   if (pendingAnchor) refresh();
+   void document.fonts.ready.then(refresh);
+   element.addEventListener('load', refresh, true);
+   const observer = new ResizeObserver(refresh);
+   element.querySelectorAll('.approved-gallery, .numbers-content, .verified-milestones').forEach(el => observer.observe(el));
+-  return () => { disposed = true; clearFocusIntent(); cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('resize', refresh); window.removeEventListener('scroll', keepNativeFocusFramed); element.removeEventListener('focusin', releaseOnExternalFocus); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', onPointer); window.removeEventListener('pointerdown', onPointer); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
++  return () => { disposed = true; releaseAnchor(); clearFocusIntent(); cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('resize', refresh); window.removeEventListener('scroll', keepNativeFocusFramed); element.removeEventListener('focusin', releaseOnExternalFocus); document.removeEventListener('focusin', releaseNativeOnExternalFocus); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', onPointer); window.removeEventListener('pointerdown', onPointer); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
+  }, [root]);
+ }
+diff --git a/tests/e2e/arrival-directors-cut.spec.ts b/tests/e2e/arrival-directors-cut.spec.ts
+index 66ab1a0..2d8d64d 100644
+--- a/tests/e2e/arrival-directors-cut.spec.ts
++++ b/tests/e2e/arrival-directors-cut.spec.ts
+@@ -1,20 +1,22 @@
+ import { expect, test, type Page } from '@playwright/test';
+ import { build } from 'esbuild';
+ import { readFile } from 'node:fs/promises';
+ 
+ type FixtureWindow = Window & { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number; progress: number; animation: { progress: () => number } } } };
+ 
+-async function openHero(page: Page) {
++async function openHero(page: Page, failEnhancement = false) {
+   const bundle = await build({ stdin: { contents: `import React from 'react';
+     import { createRoot } from 'react-dom/client';
+     import { ScrollTrigger } from 'gsap/ScrollTrigger';
++    import { gsap } from 'gsap';
++    if (${failEnhancement}) gsap.timeline = () => { throw new Error('Deliberate enhancement failure'); };
+     (window as any).fixtureScrollTrigger = ScrollTrigger;
+     import Hero from './components/arrival-hero';
+     import { profile, previewPhotos } from './content/site';
+     import { arrivalCampaignPhotos } from './content/arrival-campaign';
+     import './app/globals.css';
+     createRoot(document.getElementById('root')).render(<main style={{paddingTop:96}}><Hero profile={profile} photos={[...arrivalCampaignPhotos,...previewPhotos]} onWatch={()=>{}}/><section id="film-room" style={{height:'100vh'}}>Film Room</section></main>);`, resolveDir: process.cwd(), sourcefile: 'directors-fixture.tsx', loader: 'tsx' }, bundle: true, external: ['/media/*'], write: false, outdir: '/tmp/directors-fixture', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' }, loader: { '.woff2': 'dataurl' }, conditions: ['style'] });
+   await page.route('**/directors-fixture*', async route => {
+     const path = new URL(route.request().url()).pathname;
+     if (path.endsWith('.js') || path.endsWith('.css')) {
+       const file = bundle.outputFiles!.find(f => f.path.endsWith(path.endsWith('.js') ? '.js' : '.css'))!;
+@@ -181,10 +183,41 @@ test('action photo uses a bounded, faded frame at desktop and mobile sizes', asy
+     const frame = page.locator('[data-arrival-layer="running"] picture').locator('..');
+     const box = (await frame.boundingBox())!;
+     expect(box.width).toBeLessThanOrEqual(Math.min(width, height * .7));
+     expect(box.height / box.width).toBeCloseTo(450 / 400, 1);
+     await expect(frame).toHaveCSS('mask-image', /linear-gradient/);
+     const shade = await frame.evaluate(el => getComputedStyle(el, '::after').backgroundImage);
+     expect(shade).toContain('gradient');
+     await context.close();
+   }
+ });
++
++test('rear and white montage fades follow each source image frame', async ({ browser }) => {
++ for(const [width,height] of [[1440,900],[390,844]]) {
++  const context=await browser.newContext({viewport:{width,height},reducedMotion:'reduce'});
++  const page=await context.newPage();
++  await openHero(page);
++  for(const [layer,ratio] of [['rear',650/1050],['white',470/805]] as const) {
++   const frame=page.locator(`[data-arrival-layer="${layer}"] picture`).locator('..');
++   const box=(await frame.boundingBox())!;
++   expect(box.width).toBeLessThan(width*.95);
++   expect(box.width/box.height).toBeCloseTo(ratio,2);
++   await expect(frame).toHaveCSS('mask-image',/linear-gradient.*linear-gradient/);
++   expect(await frame.evaluate(el=>getComputedStyle(el,'::after').backgroundImage)).toContain('gradient');
++  }
++  await context.close();
++ }
++});
++
++
++test('failed hero enhancement reverts partial styles to the readable fallback', async ({ page }) => {
++ const errors: string[]=[];
++ page.on('pageerror',error=>errors.push(error.message));
++ await page.emulateMedia({reducedMotion:'no-preference'});
++ await openHero(page,true);
++ await expect(page.locator('#arrival')).toHaveAttribute('data-arrival-motion','fallback');
++ await expect(page.locator('#hero-title')).toBeVisible();
++ await expect(page.locator('[data-arrival-statement]')).toHaveCSS('opacity','1');
++ await expect(page.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity','0.8');
++ expect(await page.locator('#arrival').evaluate(el=>el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
++ expect(errors).toEqual([]);
++});
+diff --git a/tests/e2e/arrival-loading.spec.ts b/tests/e2e/arrival-loading.spec.ts
+new file mode 100644
+index 0000000..1ca25a9
+--- /dev/null
++++ b/tests/e2e/arrival-loading.spec.ts
+@@ -0,0 +1,42 @@
++import { test, expect } from '@playwright/test';
++
++test('slow enabled JavaScript paints darkness before hydration without spoiling the statement', async ({ page }) => {
++ await page.emulateMedia({reducedMotion:'no-preference'});
++ await page.setViewportSize({width:1440,height:900});
++ await page.route(/\.js(?:\?|$)/, async route => { await new Promise(resolve=>setTimeout(resolve,1800)); await route.continue(); });
++ await page.goto('/',{waitUntil:'commit'});
++ await page.waitForTimeout(1000);
++ const hero=page.locator('#arrival');
++ const opening=await hero.evaluate(el=>({statement:Number(getComputedStyle(el.querySelector('[data-arrival-statement]')!).opacity),layers:[...el.querySelectorAll('[data-arrival-layer]')].map(node=>Number(getComputedStyle(node).opacity)),pinned:el.parentElement?.classList.contains('pin-spacer')}));
++ // A snapshot assertion must inspect the 1000ms paint, never retry into hydration.
++ expect(opening.statement).toBe(0);
++ expect(opening.layers.every(opacity=>opacity===0)).toBe(true);
++ expect(opening.pinned).toBe(false);
++ await expect(page.locator('.site-header')).toBeVisible();
++ await expect(hero.getByRole('heading',{level:1})).toHaveText(/MAKE THEM REMEMBER/);
++ await page.waitForLoadState('load');
++ await expect.poll(()=>hero.evaluate(el=>el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
++ await expect(hero).toHaveAttribute('data-arrival-motion','ready');
++});
++
++test('failed JavaScript loading releases the finite opening guard into a readable fallback', async ({ page }) => {
++ await page.emulateMedia({reducedMotion:'no-preference'});
++ await page.route(/\.js(?:\?|$)/, route=>route.abort());
++ await page.goto('/');
++ const hero=page.locator('#arrival');
++ await expect(page.locator('html')).toHaveAttribute('data-arrival-boot','fallback',{timeout:8000});
++ await expect(hero.locator('#hero-title')).toBeVisible();
++ await expect(hero.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity','0.8');
++ await expect(hero.locator('a[href="#film-room"]')).toBeVisible();
++ expect(await hero.evaluate(el=>el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
++});
++
++for(const mode of ['no-js','reduced'] as const)test(`${mode} keeps a complete readable composition without an opening guard`,async({browser})=>{
++ const context=await browser.newContext({viewport:{width:390,height:844},javaScriptEnabled:mode!=='no-js',reducedMotion:mode==='reduced'?'reduce':'no-preference'});
++ const page=await context.newPage();
++ await page.goto('/');
++ await expect(page.locator('#hero-title')).toBeVisible();
++ await expect(page.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity','0.8');
++ expect(await page.locator('#arrival').evaluate(el=>el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
++ await context.close();
++});
+diff --git a/tests/e2e/cinema-framing.spec.ts b/tests/e2e/cinema-framing.spec.ts
+index 4da9af2..36eabe9 100644
+--- a/tests/e2e/cinema-framing.spec.ts
++++ b/tests/e2e/cinema-framing.spec.ts
+@@ -161,10 +161,47 @@ test('direct film landing lets keyboard focus leave the native player and scroll
+   }
+   const target = page.getByRole('link', { name: /NIL.*BUSINESS INQUIRIES/i }).first();
+   await expect(target).toBeFocused();
+   await expect.poll(() => target.evaluate(el => { const box = el.getBoundingClientRect(); return box.top >= 0 && box.bottom <= innerHeight; })).toBe(true);
+   expect(await page.evaluate(() => scrollY)).toBeGreaterThan(anchored + 100);
+   const keyboardScroll = await page.evaluate(() => scrollY);
+   await page.evaluate(() => dispatchEvent(new Event('resize')));
+   await page.waitForTimeout(500);
+   expect(Math.abs(await page.evaluate(() => scrollY) - keyboardScroll)).toBeLessThan(10);
+ });
++
++
++test('ready native keyboard controls survive seek keys and yield to manual scrolling', async ({ page, hasTouch }) => {
++ await page.setViewportSize({width:1024,height:360});
++ await page.goto('/#film-room');
++ const video=page.locator('#film-room video');
++ await expect(video).toHaveAttribute('tabindex','0');
++ await expect.poll(()=>video.evaluate(el=>getComputedStyle(el).transform)).toMatch(/^(none|matrix\(1, 0, 0, 1, 0, 0\))$/);
++ await video.focus();
++ for(const key of ['ArrowRight','Space','ArrowUp']) {
++  await page.keyboard.press(key);
++  await expect(video).toHaveAttribute('data-native-keyboard-active','true');
++  await expect(video).toBeFocused();
++  await expect(video).toHaveJSProperty('controls',true);
++  await expect(video).toHaveJSProperty('tabIndex',0);
++ }
++ const anchored=await page.evaluate(()=>scrollY);
++ await page.getByRole('link',{name:'Skip to content'}).evaluate((el: HTMLElement)=>el.focus({preventScroll:true}));
++ await expect(video).not.toHaveAttribute('data-native-keyboard-active','true');
++ await page.waitForTimeout(150);
++ expect(await page.evaluate(()=>scrollY)).toBe(anchored);
++ // A ready player reached without a pending hash alignment can hold again.
++ await video.evaluate((el: HTMLVideoElement)=>el.focus({preventScroll:true}));
++ await page.keyboard.press('ArrowRight');
++ await expect(video).toHaveAttribute('data-native-keyboard-active','true');
++ if(hasTouch) {
++  await page.touchscreen.tap(5,100);
++  await page.evaluate(()=>scrollBy({top:-180,behavior:'instant'}));
++ } else {
++  await page.mouse.move(5,100);
++  await page.mouse.wheel(0,-180);
++ }
++ await expect(video).not.toHaveAttribute('data-native-keyboard-active','true');
++ await expect.poll(()=>page.evaluate(()=>scrollY)).toBeLessThan(anchored-100);
++ await expect(video).toHaveJSProperty('controls',false);
++ await expect(video).toHaveJSProperty('tabIndex',-1);
++});

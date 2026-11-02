@@ -1,0 +1,82 @@
+[
+  {
+    "id": "directors-action",
+    "sourceSha256": "b3bec17cb19b621053014813d55d8bc495f0c8aaa151108e6e0a9606260c9a15",
+    "uploadedArchiveAndEntry": [
+      "Zpics.zip",
+      "ChatGPT Image Nov 2, 2026, 07_33_18 AM.jpg"
+    ],
+    "derivatives": [
+      {
+        "path": "/media/arrival-directors-cut/directors-action-480.webp",
+        "sha256": "6785f6ee3fe0fe641decb5eba1ec6568b9ef9bbf486dded120449a3602f0e070",
+        "bytes": 17146
+      },
+      {
+        "path": "/media/arrival-directors-cut/directors-action-960.webp",
+        "sha256": "6785f6ee3fe0fe641decb5eba1ec6568b9ef9bbf486dded120449a3602f0e070",
+        "bytes": 17146
+      }
+    ]
+  },
+  {
+    "id": "directors-standing",
+    "sourceSha256": "9cee838def18c6fa5da905210375d81012e3a8f8d2bce72bd692376f7516118e",
+    "uploadedArchiveAndEntry": [
+      "Zpics_Cinematic_BW (2).zip",
+      "zephyr_cinematic_bw_09.png"
+    ],
+    "derivatives": [
+      {
+        "path": "/media/arrival-directors-cut/directors-standing-480.webp",
+        "sha256": "bb361ddd61e37f3f718c3f85a183f57688b9a4d07a719873ae127bf4b93e1453",
+        "bytes": 33006
+      },
+      {
+        "path": "/media/arrival-directors-cut/directors-standing-960.webp",
+        "sha256": "e3d8b19104c874cc48765001faa7bde105104f1c584d79864912c2e25ab2cdd4",
+        "bytes": 47354
+      }
+    ]
+  },
+  {
+    "id": "directors-rear",
+    "sourceSha256": "6b0d75f6cc9346ac8ce4856448641aeccd80ae8b1b7a5235574d24a0cbd29d09",
+    "uploadedArchiveAndEntry": [
+      "Zpics_Cinematic_BW (2).zip",
+      "zephyr_cinematic_bw_03.png"
+    ],
+    "derivatives": [
+      {
+        "path": "/media/arrival-directors-cut/directors-rear-480.webp",
+        "sha256": "5581fe7c00294779d4f8588d832a382259e6d339227b1f8a3a836bfbaa1d18a8",
+        "bytes": 95958
+      },
+      {
+        "path": "/media/arrival-directors-cut/directors-rear-960.webp",
+        "sha256": "fc39a2f8872c81ddeb3386fe4c77d7957c7cfdeec7e37ee38f68abcead0d9362",
+        "bytes": 171154
+      }
+    ]
+  },
+  {
+    "id": "directors-white",
+    "sourceSha256": "1e014c150e30e057fe44d20e14f4578113aca1a6f685c26d78670630f1ce5b7a",
+    "uploadedArchiveAndEntry": [
+      "Zpics_Cinematic_BW (2).zip",
+      "zephyr_cinematic_bw_08.png"
+    ],
+    "derivatives": [
+      {
+        "path": "/media/arrival-directors-cut/directors-white-480.webp",
+        "sha256": "a1768ed110e7380984cb84351eb18e9ec484f453edab9db56bd9c28303358ac9",
+        "bytes": 31126
+      },
+      {
+        "path": "/media/arrival-directors-cut/directors-white-960.webp",
+        "sha256": "a1768ed110e7380984cb84351eb18e9ec484f453edab9db56bd9c28303358ac9",
+        "bytes": 31126
+      }
+    ]
+  }
+]

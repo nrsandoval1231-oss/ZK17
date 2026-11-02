@@ -1,0 +1,27 @@
+
+Running 16 tests using 1 worker
+
+(node:149514) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   1 [desktop-chromium] › tests/e2e/arrival-loading.spec.ts:3:5 › slow enabled JavaScript paints darkness before hydration without spoiling the statement (2.6s)
+  ✓   2 [desktop-chromium] › tests/e2e/arrival-loading.spec.ts:22:5 › failed JavaScript loading releases the finite opening guard into a readable fallback (5.7s)
+  ✓   3 [desktop-chromium] › tests/e2e/arrival-loading.spec.ts:34:52 › no-js keeps a complete readable composition without an opening guard (594ms)
+  ✓   4 [desktop-chromium] › tests/e2e/arrival-loading.spec.ts:34:52 › reduced keeps a complete readable composition without an opening guard (916ms)
+  ✓   5 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:173:5 › ready native keyboard controls survive seek keys and yield to manual scrolling (1.6s)
+  ✓   6 [desktop-chromium] › tests/e2e/story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story (764ms)
+  ✓   7 [desktop-chromium] › tests/e2e/story-focus.spec.ts:22:5 › programmatic preventScroll is preserved and Tab intent is consumed (896ms)
+  ✓   8 [desktop-chromium] › tests/e2e/story-focus.spec.ts:36:5 › real Tab navigation keeps the focused story control fully visible (820ms)
+(node:150155) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   9 [iphone-webkit] › tests/e2e/arrival-loading.spec.ts:3:5 › slow enabled JavaScript paints darkness before hydration without spoiling the statement (3.1s)
+  ✓  10 [iphone-webkit] › tests/e2e/arrival-loading.spec.ts:22:5 › failed JavaScript loading releases the finite opening guard into a readable fallback (5.9s)
+  ✓  11 [iphone-webkit] › tests/e2e/arrival-loading.spec.ts:34:52 › no-js keeps a complete readable composition without an opening guard (1.6s)
+  ✓  12 [iphone-webkit] › tests/e2e/arrival-loading.spec.ts:34:52 › reduced keeps a complete readable composition without an opening guard (1.7s)
+  ✓  13 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:173:5 › ready native keyboard controls survive seek keys and yield to manual scrolling (3.5s)
+  ✓  14 [iphone-webkit] › tests/e2e/story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story (843ms)
+  ✓  15 [iphone-webkit] › tests/e2e/story-focus.spec.ts:22:5 › programmatic preventScroll is preserved and Tab intent is consumed (774ms)
+  ✓  16 [iphone-webkit] › tests/e2e/story-focus.spec.ts:36:5 › real Tab navigation keeps the focused story control fully visible (549ms)
+
+  16 passed (34.0s)

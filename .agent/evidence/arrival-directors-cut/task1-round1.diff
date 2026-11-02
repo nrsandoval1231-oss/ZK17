@@ -1,0 +1,403 @@
+diff --git a/.agent/evidence/arrival-directors-cut/task1-report.md b/.agent/evidence/arrival-directors-cut/task1-report.md
+index 65a824f..61a2c8a 100644
+--- a/.agent/evidence/arrival-directors-cut/task1-report.md
++++ b/.agent/evidence/arrival-directors-cut/task1-report.md
+@@ -9,10 +9,24 @@ Implemented a scroll-scrubbed hero with approximately 15 stable viewport heights
+ The directory guard now enumerates both campaign photo directories, covering all 480 and 960 derivatives. A temporary unlisted photo caused `npx tsx --test tests/arrival-campaign-media.test.ts` to fail with the expected unprotected-photo assertion; after removing it the same test passed 1/1.
+ 
+ ## Focused verification
+ 
+ - Current-source esbuild fixture red: previous desktop pin was 2.74 viewport heights and touch had no pin. After implementation, `npx playwright test tests/e2e/arrival-directors-cut.spec.ts --project=desktop-chromium --workers=1 --output=/tmp/directors-chromium-final2` passed 4/4: desktop and touch contexts progress/reverse, image bounds, reduced-motion cleanup, orientation refresh and overflow.
+ - `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/arrival-directors-cut.spec.ts --project=iphone-webkit --workers=1 --output=/tmp/directors-webkit-final3` passed 4/4. Host-preflight bypass was necessary for the existing local GLES library; the managed WebKit browser and assertions ran. These fixture interactions set scroll position programmatically in a touch-enabled WebKit context; they do not prove a physical swipe, iOS browser-toolbar behavior, or device performance.
+ - Scoped ESLint and `npm run typecheck` passed. This worker did not rebuild the shared export or run the integrated suite; controller owns those checks.
+ - Source-fixture screenshots: `/tmp/directors-final-captures/desktop-{lights,smoke,hero,action,title}.png` and corresponding `mobile-*`. Those predate the last mobile action bounds fix. The revised action was recaptured and inspected at `/tmp/directors-final-captures/mobile-action-faded.png`; face and ball remain visible and the image edge fades. The fixture lacks the application font imports, so it is not evidence for final typography. Some photo-edge and secondary-player visibility remains for independent visual review. The controller must capture the built application and inspect all beats, no-JS/reduced motion, film transition, real font, and responsive framing.
+ 
+ Old hero-only tests were updated for the new darkness, touch pin and photo source; header tests remain. An independent review and controller integration remain necessary before claiming the full brief is complete.
++
++## Independent review repair — round 1
++
++- Orientation: the hero records its normalized scroll position while the visitor is in the sequence, captures it before orientation/width refreshes, and restores it against the refreshed pin. Restoration is canceled on user input or hash changes and is limited to the hero sequence. Width bookkeeping also updates when rotation occurs at the opening or a pending restore is canceled. Existing story focus handling was not changed.
++- Smoke planes are overscanned and edge-faded, and their distinct scroll-linked movements continue throughout silhouette, portrait and montage beats. A source-fixture test confirms overscan and changed transform between 50% and 62%.
++- Photo treatment follows the actual source-image frame with horizontal and vertical soft fades and local dark shading over the secondary subject. No person is synthesized or automatically cut out. Captures of the rebuilt application were inspected at `/tmp/directors-r1-final/{desktop,mobile}-{smoke,hero,action}.png`; #17 remains legible and the teammate is dimmer. The game action remains a carrying pose, with limited source detail and some residual background figures. The controller's independent review remains the final visual gate.
++- The four photo-free fixture failures were caused by the smoke texture matching a broad photo-request regex; the assertion now matches the protected photo paths. Four obsolete identity-coordinate assertions now check visible ordering and non-overlap, and the tablet pin test explicitly requests motion. The separate null-film fixture now marks `/media/*` external to esbuild; film source was not edited.
++
++Validation:
++
++- On the pre-fix built app, the new midpoint rotation regression failed with normalized progress 0 instead of .5; the new smoke regression failed because its transform did not change.
++- On the rebuilt app, `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/arrival-directors-cut.spec.ts --grep 'built touch story|built story can' --project=desktop-chromium --project=iphone-webkit --workers=1 --output=/tmp/directors-r1-built-settled` passed 4/4. Both tests wait for the new pin distance, then recheck normalized progress after 400ms. One covers rotation at the opening followed by a second rotation mid-story. These use touch-enabled emulation and programmatic scroll, not a physical swipe.
++- The three affected integration cases passed 12/12 across the four configured projects (`/tmp/directors-r1-integrated`). The null-film fallback passed 4/4 (`/tmp/directors-r1-film-fallback`). The source-fixture smoke and sequence checks passed in Chromium and WebKit; the final WebKit focused run passed 3/3 (`/tmp/directors-r1-webkit-final3`). An earlier WebKit desktop-context fixture run intermittently failed on an opacity assertion placed near a transition; the final run seeks closer to the middle of each hold. The exact source of that timing variability was not independently established.
++- Scoped ESLint and `npm run typecheck` passed. The parent performed the production build and retains responsibility for the complete suite and final review. Physical iOS address-bar and hardware behavior are still unverified.
+diff --git a/components/arrival-hero.module.css b/components/arrival-hero.module.css
+index 1df1650..a74bfce 100644
+--- a/components/arrival-hero.module.css
++++ b/components/arrival-hero.module.css
+@@ -16,10 +16,32 @@
+ @media(max-width:560px){.hero{height:calc(100svh - 76px)}.identity,.school,.footer,.scroll{font-size:8px}.scroll{bottom:9%}}
+ @media(max-height:650px){.copy{bottom:16%}.copy h1{font-size:clamp(40px,8vw,78px)}.identity{margin-bottom:8px}.school{margin:10px 0}.watch{padding:9px 12px}.footer{bottom:3%}}
+ @media(max-height:450px) and (orientation:landscape){.copy{bottom:15%;left:5%}.copy h1{font-size:clamp(34px,6vw,52px);line-height:.8}.identity{margin-bottom:5px}.school{margin:5px 0}.watch{padding:6px 10px;font-size:8px}.footer{bottom:3%;left:5%}.scroll{bottom:3%;left:auto;right:5%}}
+ 
+ .smokeFront::after{content:'';position:absolute;inset:35% -15% -10%;background:url('/media/arrival-directors-smoke.png') center bottom/140% 75% no-repeat;opacity:.65}
+ @media(max-width:899px){.photo picture{mask-image:radial-gradient(ellipse 65% 90% at 50% 45%,#000 35%,transparent 100%)}.montage[data-arrival-layer="running"] picture{mask-image:radial-gradient(ellipse 48% 47% at 50% 65%,#000 20%,transparent 100%)}}
+ 
+ @media(max-width:899px){.montage img{object-fit:contain}}
+ .montage::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,#000 8%,transparent 48%);pointer-events:none}
+ @media(max-width:899px){.montage[data-arrival-layer="running"] picture{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100%,65svh);height:auto;aspect-ratio:400/450;mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 60%,transparent 96%)}}
++
++/* Overscanned haze has no visible texture boundary as it drifts. */
++.smokeBack,.smokeFront{inset:-20%;mask-image:radial-gradient(ellipse at center,#000 45%,transparent 78%)}
++.smokeBack{background-image:url('/media/arrival-directors-smoke.png');background-size:140% 100%;background-position:center;background-repeat:no-repeat}
++.smokeFront{background:radial-gradient(ellipse at 50% 95%,rgba(140,130,150,.2),transparent 65%)}
++.smokeFront::after{inset:0;background-size:140% 100%;opacity:.7}
++
++/* A softened, dim copy of the source supports a sharp center; no silhouette is cut out. */
++.athlete::before,.montage[data-arrival-layer="running"]::before{content:'';position:absolute;inset:0;background-image:var(--photo-url);background-size:contain;background-position:center;background-repeat:no-repeat;filter:grayscale(1) brightness(.16) blur(9px);mask-image:radial-gradient(ellipse at center,#000 25%,transparent 70%)}
++.athlete picture,.silhouette picture{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);height:min(100%,129.78vw);width:auto;aspect-ratio:601/780;mask-image:radial-gradient(ellipse 68% 78% at 46% 39%,#000 32%,transparent 100%)}
++.athlete picture::after,.montage[data-arrival-layer="running"] picture::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 42% 67% at 46% 39%,transparent 30%,rgba(0,0,0,.88) 100%)}
++.athlete picture img,.silhouette picture img{object-fit:contain}
++@media(max-width:899px){.montage[data-arrival-layer="running"] picture::after{background:radial-gradient(ellipse 40% 70% at 53% 42%,transparent 30%,rgba(0,0,0,.88) 100%)}}
++/* The fades and local shading follow the image rectangle, not the viewport. */
++.photoFrame{position:absolute;inset:0}
++.photo .photoFrame picture{display:block;position:absolute;inset:0;width:100%;height:100%;transform:none;mask-image:none}
++.athlete::before,.montage[data-arrival-layer="running"]::before{content:none}
++.athlete .photoFrame,.silhouette .photoFrame{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);height:min(100%,129.78vw);width:auto;aspect-ratio:601/780;mask-image:linear-gradient(to right,transparent 0%,#000 31%,#000 48%,transparent 78%)}
++.athlete .photoFrame::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 18% 21% at 68% 27%,rgba(0,0,0,.88),transparent 100%)}
++@media(max-width:899px){.montage[data-arrival-layer="running"] .photoFrame{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100%,65svh);height:auto;aspect-ratio:400/450;mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 60%,transparent 96%)}.montage[data-arrival-layer="running"] .photoFrame::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(0,0,0,.9),transparent 38%,transparent 65%,rgba(0,0,0,.9))}}
++.athlete .photoFrame,.silhouette .photoFrame{mask-image:linear-gradient(to right,transparent 0%,#000 31%,#000 48%,transparent 78%),linear-gradient(to bottom,transparent 0%,#000 20%,#000 70%,transparent 100%);mask-composite:intersect;-webkit-mask-composite:source-in}
++.montage[data-arrival-layer="running"] img{filter:grayscale(1) brightness(1.12)}
+diff --git a/components/arrival-hero.tsx b/components/arrival-hero.tsx
+index 6863893..7d6faa1 100644
+--- a/components/arrival-hero.tsx
++++ b/components/arrival-hero.tsx
+@@ -1,29 +1,29 @@
+ 'use client';
+ 
+ import Image from 'next/image';
+-import { useRef } from 'react';
++import { useRef, type CSSProperties } from 'react';
+ import type { PreviewPhoto, PublicProfile, ScenePhoto } from '@/content/site';
+ import { useArrivalHeroMotion } from './use-arrival-hero-motion';
+ import styles from './arrival-hero.module.css';
+ 
+ type Photo = PreviewPhoto | ScenePhoto;
+ type Props = { profile: PublicProfile; photo?: Photo; photos?: Photo[]; onWatch: (button: HTMLButtonElement) => void };
+ 
+ function PhotoLayer({ photo, layer, className, decorative = true }: { photo?: Photo; layer: string; className: string; decorative?: boolean }) {
+   if (!photo) return null;
+   const directors = photo.kind === 'preview' && photo.id.startsWith('directors-');
+   const focal = photo.kind === 'preview' ? photo.focal : photo.focalPoint;
+-  return <div className={`${styles.photo} ${className}`} data-arrival-layer={layer} aria-hidden={decorative || undefined}>
+-    <picture>{directors && <source srcSet={`${photo.src.replace('-960.webp', '-480.webp')} 480w, ${photo.src} 960w`} sizes="(max-width: 700px) 100vw, 60vw" />}
++  return <div className={`${styles.photo} ${className}`} data-arrival-layer={layer} aria-hidden={decorative || undefined} style={{ '--photo-url': `url("${photo.src}")` } as CSSProperties}>
++    <div className={styles.photoFrame}><picture>{directors && <source srcSet={`${photo.src.replace('-960.webp', '-480.webp')} 480w, ${photo.src} 960w`} sizes="(max-width: 700px) 100vw, 60vw" />}
+       <Image src={photo.src} alt={decorative ? '' : photo.alt} width={photo.width} height={photo.height} loading="lazy" unoptimized style={{ objectPosition: focal }} />
+-    </picture>
++    </picture></div>
+   </div>;
+ }
+ 
+ export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Props) {
+   const root = useRef<HTMLElement>(null);
+   useArrivalHeroMotion(root);
+   const find = (id: string) => photos.find(item => item.id === id);
+   const athlete = find('directors-standing') ?? photo ?? find('arrival');
+   const rear = find('directors-rear');
+   const white = find('directors-white');
+diff --git a/components/use-arrival-hero-motion.ts b/components/use-arrival-hero-motion.ts
+index cc7e1de..81d9ce8 100644
+--- a/components/use-arrival-hero-motion.ts
++++ b/components/use-arrival-hero-motion.ts
+@@ -30,28 +30,79 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
+         id: 'arrival-hero', trigger: element,
+         start: () => `top ${parseFloat(getComputedStyle(container).paddingTop) || 0}px`,
+         end: () => `+=${(element.offsetHeight + (parseFloat(getComputedStyle(container).paddingTop) || 0)) * 15}`, scrub: .35, pin: true, invalidateOnRefresh: true,
+       } });
+       // Durations express relative scroll distance, not autoplay time.
+       timeline.to({}, { duration: 2 })
+         .to(lights, { opacity: .8, duration: 1.5 }, 2)
+         .fromTo(lights.children, { opacity: .08 }, { opacity: 1, stagger: .25, duration: .7 }, 2)
+         .to(smokeBack, { opacity: .9, xPercent: 4, duration: 2 }, 4)
+         .to(smokeFront, { opacity: .8, xPercent: -4, duration: 2 }, 4)
++        .to(smokeBack, { xPercent: -3, yPercent: -2, duration: 8 }, 6)
++        .to(smokeFront, { xPercent: 5, yPercent: -1, duration: 8 }, 6)
+         .to({}, { duration: 10 }, 6);
+       if (silhouette) timeline.to(silhouette, { opacity: .85, scale: 1.03, duration: 1.4 }, 6);
+       if (athlete) timeline.to(athlete, { opacity: .95, scale: 1.05, duration: 2 }, 8);
+       if (silhouette) timeline.to(silhouette, { opacity: 0, duration: 1 }, 8.5);
+       if (athlete && running) timeline.to(athlete, { opacity: 0, duration: .6 }, 10.5).to(running, { opacity: 1, scale: 1.04, duration: .7 }, 10.5);
+       if (running && rear) timeline.to(running, { opacity: 0, duration: .6 }, 11.8).to(rear, { opacity: 1, scale: 1.04, duration: .7 }, 11.8);
+       if (rear && white) timeline.to(rear, { opacity: 0, duration: .6 }, 13).to(white, { opacity: 1, scale: 1.04, duration: .7 }, 13);
+       if (white) timeline.to(white, { opacity: 0, duration: .7 }, 14);
+       if (athlete) timeline.to(athlete, { opacity: .7, scale: .98, duration: 1.3 }, 14);
+       timeline.to([copy, ...details], { autoAlpha: 1, duration: .8 }, 14.2)
+         .to(smokeFront, { opacity: .3, xPercent: 5, duration: 1.5 }, 14);
+-      const refresh = () => ScrollTrigger.refresh();
+-      window.addEventListener('orientationchange', refresh);
+-      return () => { window.removeEventListener('orientationchange', refresh); timeline.kill(); };
++      // Capture progress before a rotation lets competing pin refreshes temporarily
++      // reset scroll. Only restore when the visitor was inside this story.
++      let stableWidth = window.innerWidth;
++      let lastProgress = 0;
++      let pendingProgress: number | null = null;
++      let rotationTimer: ReturnType<typeof setTimeout> | undefined;
++      const rememberProgress = () => {
++        const trigger = timeline.scrollTrigger;
++        if (!trigger || pendingProgress !== null || window.innerWidth !== stableWidth) return;
++        lastProgress = gsap.utils.clamp(0, 1, (window.scrollY - trigger.start) / (trigger.end - trigger.start));
++      };
++      const cancelRotation = () => { pendingProgress = null; clearTimeout(rotationTimer); stableWidth = window.innerWidth; lastProgress = 0; };
++      const queueRotation = () => {
++        if (pendingProgress === null && lastProgress > .001 && lastProgress < .999 && (!location.hash || location.hash === '#arrival')) pendingProgress = lastProgress;
++        if (pendingProgress === null) return;
++        clearTimeout(rotationTimer);
++        rotationTimer = setTimeout(() => {
++          const progress = pendingProgress;
++          pendingProgress = null;
++          stableWidth = window.innerWidth;
++          if (progress === null) return;
++          lastProgress = progress;
++          ScrollTrigger.refresh();
++          const trigger = timeline.scrollTrigger;
++          if (trigger) window.scrollTo({ top: trigger.start + (trigger.end - trigger.start) * progress, behavior: 'instant' });
++        }, 180);
++      };
++      const onResize = () => {
++        if (window.innerWidth === stableWidth) return;
++        queueRotation();
++        if (pendingProgress === null) stableWidth = window.innerWidth;
++      };
++      window.addEventListener('scroll', rememberProgress, { passive: true });
++      window.addEventListener('orientationchange', queueRotation, true);
++      window.addEventListener('resize', onResize, true);
++      window.addEventListener('wheel', cancelRotation, { passive: true });
++      window.addEventListener('touchstart', cancelRotation, { passive: true });
++      window.addEventListener('pointerdown', cancelRotation, { passive: true });
++      window.addEventListener('keydown', cancelRotation);
++      window.addEventListener('hashchange', cancelRotation);
++      return () => {
++        cancelRotation();
++        window.removeEventListener('scroll', rememberProgress);
++        window.removeEventListener('orientationchange', queueRotation, true);
++        window.removeEventListener('resize', onResize, true);
++        window.removeEventListener('wheel', cancelRotation);
++        window.removeEventListener('touchstart', cancelRotation);
++        window.removeEventListener('pointerdown', cancelRotation);
++        window.removeEventListener('keydown', cancelRotation);
++        window.removeEventListener('hashchange', cancelRotation);
++        timeline.kill();
++      };
+     });
+     return () => mm.revert();
+   }, [root]);
+ }
+diff --git a/tests/e2e/arrival-campaign.spec.ts b/tests/e2e/arrival-campaign.spec.ts
+index d9639dc..951dd06 100644
+--- a/tests/e2e/arrival-campaign.spec.ts
++++ b/tests/e2e/arrival-campaign.spec.ts
+@@ -60,21 +60,21 @@ test('mobile final frame and small no-JS frame fit the viewport', async ({ brows
+     await withinViewport(hero.locator('[data-arrival-layer="athlete"]'), height);
+     await expect(hero.locator('[data-arrival-layer="athlete"] img')).toHaveAttribute('alt', /number 17/i);
+     await expect(hero.locator('#hero-title span').first()).toHaveCSS('opacity', '1');
+     await expect(hero.locator('#hero-title span').last()).toHaveCSS('opacity', '1');
+     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+     await context.close();
+   }
+ });
+ 
+ test('touch tablet participates in the extended hero pin', async ({ browser }) => {
+-  const context = await browser.newContext({ viewport: { width: 1024, height: 768 }, isMobile: true, hasTouch: true });
++  const context = await browser.newContext({ viewport: { width: 1024, height: 768 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
+   const page = await context.newPage();
+   await page.goto('/');
+   await page.evaluate(() => scrollTo(0, 300));
+   await expect.poll(() => page.locator('#arrival').evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
+   const spacer = (await page.locator('#arrival').locator('..').boundingBox())!;
+   expect(spacer.height).toBeGreaterThan(14 * 768);
+   await context.close();
+ });
+ 
+ test('desktop enhancement begins in darkness without an early title', async ({ browser }) => {
+@@ -87,21 +87,21 @@ test('desktop enhancement begins in darkness without an early title', async ({ b
+   expect(await opacity('[data-arrival-layer="lights"]')).toBe(0);
+   expect(await opacity('[data-arrival-layer="athlete"]')).toBe(0);
+   expect(await opacity('[data-arrival-statement]')).toBe(0);
+   await context.close();
+ });
+ 
+ 
+ test('unpublished photo fixture makes no preview image requests', async ({ page }) => {
+   const bundle = await build({ entryPoints: ['tests/e2e/arrival-fixture.tsx'], bundle: true, external: ['/media/*'], write: false, outdir: '/tmp/arrival-fixture', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' } });
+   const requests: string[] = [];
+-  page.on('request', request => { if (/\/media\/(arrival-campaign\/|arrival-directors-cut\/|(?:arrival|portrait|throwing|running|on-field)-)/.test(request.url())) requests.push(request.url()); });
++  page.on('request', request => { if (/\/media\/(?:arrival-campaign\/|arrival-directors-cut\/|arrival-(?:360|540|706)\.|(?:portrait|throwing|running|on-field)-)/.test(request.url())) requests.push(request.url()); });
+   await page.route('**/arrival-fixture*', async route => {
+     const path = new URL(route.request().url()).pathname;
+     if (path.endsWith('.js') || path.endsWith('.css')) {
+       const file = bundle.outputFiles!.find(file => file.path.endsWith(path.endsWith('.js') ? '.js' : '.css'))!;
+       await route.fulfill({ contentType: path.endsWith('.js') ? 'text/javascript' : 'text/css', body: Buffer.from(file.contents) });
+     } else await route.fulfill({ contentType: 'text/html', body: '<!doctype html><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/arrival-fixture.css"><div id="root"></div><script src="/arrival-fixture.js"></script>' });
+   });
+   await page.goto('/arrival-fixture');
+   await expect(page.locator('#hero-title')).toHaveText(/MAKE THEM/);
+   await expect(page.locator('#arrival img')).toHaveCount(0);
+@@ -286,21 +286,24 @@ test('desktop static statement emphasizes the second line and keeps editorial co
+   const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, reducedMotion: 'reduce' });
+   const page = await context.newPage();
+   await openCurrentHeroFixture(page);
+   const hero = page.locator('#arrival');
+   const lines = hero.locator('#hero-title span');
+   const sizes = await lines.evaluateAll(els => els.map(el => parseFloat(getComputedStyle(el).fontSize)));
+   expect(sizes[1] / sizes[0]).toBeGreaterThanOrEqual(1.2);
+   const identity = (await hero.getByText(/ZEPHYR KREYE/).boundingBox())!;
+   const footer = (await hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/).boundingBox())!;
+   const watch = (await hero.getByRole('button', { name: /watch.*film/i }).boundingBox())!;
+-  expect(identity.y).toBeLessThan(520);
++  const title = (await hero.locator('#hero-title').boundingBox())!;
++  expect(identity.y).toBeGreaterThanOrEqual(0);
++  expect(identity.y + identity.height).toBeLessThanOrEqual(title.y);
++  expect(title.y + title.height).toBeLessThanOrEqual(watch.y);
+   expect(footer.y).toBeLessThan(1024);
+   expect(watch.y + watch.height).toBeLessThanOrEqual(footer.y);
+   await expect(hero.getByRole('button', { name: /watch.*film/i })).toBeVisible();
+   await page.setViewportSize({ width: 900, height: 700 });
+   await expect.poll(async () => {
+     const shortWatch = (await hero.getByRole('button', { name: /watch.*film/i }).boundingBox())!;
+     const shortFooter = (await hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/).boundingBox())!;
+     return shortWatch.y + shortWatch.height <= shortFooter.y;
+   }).toBe(true);
+   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(900);
+diff --git a/tests/e2e/arrival-directors-cut.spec.ts b/tests/e2e/arrival-directors-cut.spec.ts
+index 9f8e329..2e5a2eb 100644
+--- a/tests/e2e/arrival-directors-cut.spec.ts
++++ b/tests/e2e/arrival-directors-cut.spec.ts
+@@ -39,32 +39,32 @@ for (const touch of [false, true]) {
+     const hero = page.locator('#arrival');
+     await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
+     const spacer = (await hero.locator('..').boundingBox())!;
+     const heroHeight = (await hero.boundingBox())!.height;
+     const distance = spacer.height - heroHeight;
+     expect(distance / (touch ? 844 : 900)).toBeGreaterThan(14);
+     await expect(hero.locator('[data-arrival-layer="mark"]')).toHaveCount(0);
+     const opacity = (layer: string) => hero.locator(`[data-arrival-layer="${layer}"]`).evaluate(el => Number(getComputedStyle(el).opacity));
+     expect(await opacity('lights')).toBeLessThan(.01);
+     expect(await opacity('athlete')).toBeLessThan(.01);
+-    const scrollBeat = (fraction: number) => page.evaluate(value => { const trigger = (window as unknown as { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number } } }).fixtureScrollTrigger.getById('arrival-hero'); scrollTo(0, trigger.start + (trigger.end - trigger.start) * value); }, fraction);
++    const scrollBeat = (fraction: number) => page.evaluate(value => { const trigger = (window as unknown as { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number } } }).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: trigger.start + (trigger.end - trigger.start) * value, behavior: 'instant' }); }, fraction);
+     await scrollBeat(.22);
+     await expect.poll(() => opacity('lights')).toBeGreaterThan(.2);
+-    await scrollBeat(.55);
++    await scrollBeat(.58);
+     await expect.poll(() => opacity('athlete')).toBeGreaterThan(.3);
+     const photoHeight = (await hero.locator('[data-arrival-layer="athlete"] img').boundingBox())!.height;
+     expect(photoHeight).toBeLessThan(heroHeight * 1.1);
+-    await scrollBeat(.70);
++    await scrollBeat(.71);
+     await expect.poll(() => opacity('running')).toBeGreaterThan(.35);
+-    await scrollBeat(.79);
++    await scrollBeat(.80);
+     await expect.poll(() => opacity('rear')).toBeGreaterThan(.35);
+-    await scrollBeat(.86);
++    await scrollBeat(.87);
+     await expect.poll(() => opacity('white')).toBeGreaterThan(.35);
+     await scrollBeat(.97);
+     await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
+     await page.evaluate(() => scrollTo(0, 0));
+     await expect.poll(() => opacity('lights')).toBeLessThan(.01);
+     await context.close();
+   });
+ }
+ 
+ 
+@@ -93,10 +93,69 @@ test('touch orientation refresh keeps the story scrollable and bounded', async (
+   await page.evaluate(() => dispatchEvent(new Event('orientationchange')));
+   await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
+   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+   const spacer = (await hero.locator('..').boundingBox())!;
+   const height = (await hero.boundingBox())!.height;
+   expect(spacer.height - height).toBeGreaterThan(14 * 390);
+   await page.evaluate(y => scrollTo(0, y), (spacer.height - height) * .97);
+   await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
+   await context.close();
+ });
++
++test('built touch story retains its normalized beat through rotation', async ({ browser }) => {
++  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
++  const page = await context.newPage();
++  await page.goto('/');
++  const hero = page.locator('#arrival');
++  await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
++  const distance = () => hero.evaluate(el => parseFloat(el.parentElement!.style.paddingBottom));
++  await page.touchscreen.tap(10, 400);
++  await page.evaluate(y => scrollTo({ top: y, behavior: 'instant' }), (await distance()) * .5);
++  await expect.poll(async () => (await page.evaluate(() => scrollY)) / await distance()).toBeCloseTo(.5, 1);
++  await expect.poll(() => hero.locator('[data-arrival-layer="silhouette"]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.1);
++  await page.setViewportSize({ width: 844, height: 390 });
++  await expect.poll(distance).toBeCloseTo(5850, 0);
++  await expect.poll(async () => (await page.evaluate(() => scrollY)) / await distance(), { timeout: 6000 }).toBeCloseTo(.5, 1);
++  await page.waitForTimeout(400);
++  expect((await page.evaluate(() => scrollY)) / await distance()).toBeCloseTo(.5, 1);
++  await expect(hero.locator('[data-arrival-layer="silhouette"]')).toHaveCSS('opacity', /^(0\.[1-9]|1)/);
++  await context.close();
++});
++
++
++test('built story can retain progress after rotating at the opening', async ({ browser }) => {
++  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
++  const page = await context.newPage();
++  await page.goto('/');
++  const hero = page.locator('#arrival');
++  await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
++  const distance = () => hero.evaluate(el => parseFloat(el.parentElement!.style.paddingBottom));
++  await page.setViewportSize({ width: 844, height: 390 });
++  await expect.poll(distance).toBeCloseTo(5850, 0);
++  await page.touchscreen.tap(10, 200);
++  await page.evaluate(y => scrollTo({ top: y, behavior: 'instant' }), (await distance()) * .5);
++  await expect.poll(() => hero.locator('[data-arrival-layer="silhouette"]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.1);
++  await page.setViewportSize({ width: 390, height: 844 });
++  await expect.poll(distance).toBeCloseTo(12660, 0);
++  await expect.poll(async () => (await page.evaluate(() => scrollY)) / await distance(), { timeout: 6000 }).toBeCloseTo(.5, 1);
++  await page.waitForTimeout(400);
++  expect((await page.evaluate(() => scrollY)) / await distance()).toBeCloseTo(.5, 1);
++  await context.close();
++});
++
++test('smoke drifts during the central story', async ({ browser }) => {
++  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
++  const page = await context.newPage();
++  await openHero(page);
++  const smoke = page.locator('[data-arrival-layer="smoke-back"]');
++  const bounds = (await smoke.boundingBox())!;
++  expect(bounds.x).toBeLessThan(0);
++  expect(bounds.x + bounds.width).toBeGreaterThan(390);
++  const seek = (fraction: number) => page.evaluate(value => { const t = (window as unknown as { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number } } }).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: t.start + (t.end - t.start) * value, behavior: 'instant' }); }, fraction);
++  await seek(.5);
++  await expect.poll(() => smoke.evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.8);
++  await page.waitForTimeout(500);
++  const before = await smoke.evaluate(el => getComputedStyle(el).transform);
++  await seek(.62);
++  await expect.poll(() => smoke.evaluate(el => getComputedStyle(el).transform)).not.toBe(before);
++  await context.close();
++});
+diff --git a/tests/e2e/arrival-fallback.spec.ts b/tests/e2e/arrival-fallback.spec.ts
+index ac43e20..49d196d 100644
+--- a/tests/e2e/arrival-fallback.spec.ts
++++ b/tests/e2e/arrival-fallback.spec.ts
+@@ -1,18 +1,18 @@
+ import { test, expect } from '@playwright/test';
+ import { build } from 'esbuild';
+ 
+ // Mount the real component with the supported unpublished-film prop, without
+ // adding a test route or publication override to the production application.
+ test('an unpublished film still reveals its fallback and reverses the aperture', async ({ page }) => {
+   const bundle = await build({
+-    entryPoints: ['tests/e2e/arrival-fixture.tsx'], bundle: true, write: false,
++    entryPoints: ['tests/e2e/arrival-fixture.tsx'], bundle: true, external: ['/media/*'], write: false,
+     outdir: '/tmp/arrival-fixture', jsx: 'automatic',
+     define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}'  },
+   });
+   await page.route('**/arrival-fixture*', async route => {
+     const path = new URL(route.request().url()).pathname;
+     if (path.endsWith('.js') || path.endsWith('.css')) {
+       const file = bundle.outputFiles!.find(file => file.path.endsWith(path.endsWith('.js') ? '.js' : '.css'))!;
+       await route.fulfill({ contentType: path.endsWith('.js') ? 'text/javascript' : 'text/css', body: Buffer.from(file.contents) });
+     } else await route.fulfill({ contentType: 'text/html', body: '<!doctype html><meta name="viewport" content="width=device-width, initial-scale=1"><style>body{margin:0}</style><link rel="stylesheet" href="/arrival-fixture.css"><div id="root"></div><script src="/arrival-fixture.js"></script>' });
+   });

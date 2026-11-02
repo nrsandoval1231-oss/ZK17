@@ -1,0 +1,50 @@
+diff --git a/.agent/evidence/arrival-directors-cut/final-fix-report.md b/.agent/evidence/arrival-directors-cut/final-fix-report.md
+index 1a4fbbc..93384d9 100644
+--- a/.agent/evidence/arrival-directors-cut/final-fix-report.md
++++ b/.agent/evidence/arrival-directors-cut/final-fix-report.md
+@@ -59,10 +59,18 @@ A new current-source reduced-motion fixture changes both preceding-layout and fi
+ 
+ Actual verification after the controller’s settled-layout build:
+ 
+ - `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/story-focus.spec.ts --grep 'reduced film anchor' --project=desktop-chromium --project=iphone-webkit --workers=1 --output=/tmp/directors-reduced-layout-source-final`: **2/2 passed**. Log `/tmp/directors-reduced-layout-source-final.log`.
+ - `node --input-type=module < /tmp/directors-reduced-resize-debug.mjs > /tmp/directors-reduced-resize-fixed.log 2>&1`: **six of six** fast reduced-motion loads/resizes had scrollY 600, stage top 0, video top 96 and native tabIndex 0, with no Tab input.
+ - First complete cinema run after the product patch: 33 passed, two existing conditional skips and one private-token assertion failure described above; retained at `/tmp/directors-reduced-completion-cinema.log`.
+ - Final observable-behavior coverage: `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/cinema-framing.spec.ts --workers=2 --output=/tmp/directors-reduced-completion-cinema-final`: **34 passed, two existing desktop-layout skips, zero failures**, across all four configured projects. Log `/tmp/directors-reduced-completion-cinema-final.log`. This includes preserved native Tab traversal, short-player focus, forward/reverse aperture, both resize guarantees, mode-correct manual release and Playoffs placement.
+ - Scoped ESLint and TypeScript passed; the controller also reported 56 unit tests/full lint/typecheck passing on the settled-layout candidate. Owned-file diff whitespace check passed before the amendment commit.
+ 
+ Product/test source was frozen after these passes. The controller’s fresh full run is now `/tmp/directors-complete-browser.log`; its result, final captures/metrics and the scoped final re-review remain controller-owned and are not predeclared here. The prior eight-repeat WebKit evidence remains historical for the first wave candidate; the latest six-line product completion is covered by the complete four-project cinema run above.
++
++## Reverse fixture harness completion — product remains `e1acea9`
++
++The latest complete controller run recorded **269 passed, 18 existing skips, one failure**, with no native-player/product failures. The remaining managed WebKit desktop-sized source-fixture failure was the reverse check in the seven-beat test: forward seeks used `seekFixture` to request an explicit instant scroll and observe trigger/scrub convergence, but reverse still called raw `scrollTo(0,0)` and immediately started ordinary five-second opacity polling. The trace at `/tmp/directors-complete-browser/arrival-directors-cut-seve-fd559-ress-and-reverse-on-desktop-iphone-webkit/trace.zip` confirms that raw reverse call and lights opacity .8 at failure; an HTML snapshot retained inline `scroll-behavior:smooth`. It did not record actual trigger/animation progress at that failing moment, so the relative contribution of browser scroll behavior versus previously observed headless WebKit scrub lag is not claimed as conclusively measured.
++
++The only code change is replacing that reverse call with `await seekFixture(page, 0)`. This reuses the forward helper’s explicit instant scroll and bounded 15-second observation of both trigger and animation progress. It does not force either state. All eight layer opacity assertions remain `<.01`, and statement opacity must still equal 0. No timeout, opacity limit, product file or capture script was otherwise changed.
++
++`PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/arrival-directors-cut.spec.ts --workers=2 --output=/tmp/directors-final-reverse-fixture` passed **40/40 across all four projects in 1.3 minutes**, zero skips/failures. Log `/tmp/directors-final-reverse-fixture.log`. Scoped ESLint and owned-file diff whitespace checks passed. This is a test-harness completion only; the controller retains the complete-run history and owns final canonical capture/metrics/preview evidence. Product source stays frozen at `e1acea9`.
+diff --git a/tests/e2e/arrival-directors-cut.spec.ts b/tests/e2e/arrival-directors-cut.spec.ts
+index 2d8d64d..8b7838c 100644
+--- a/tests/e2e/arrival-directors-cut.spec.ts
++++ b/tests/e2e/arrival-directors-cut.spec.ts
+@@ -65,21 +65,21 @@ for (const touch of [false, true]) {
+     const photoHeight = (await hero.locator('[data-arrival-layer="athlete"] img').boundingBox())!.height;
+     expect(photoHeight).toBeLessThan(heroHeight * 1.1);
+     await scrollBeat(.71);
+     await expect.poll(() => opacity('running')).toBeGreaterThan(.35);
+     await scrollBeat(.80);
+     await expect.poll(() => opacity('rear')).toBeGreaterThan(.35);
+     await scrollBeat(.87);
+     await expect.poll(() => opacity('white')).toBeGreaterThan(.35);
+     await scrollBeat(.97);
+     await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
+-    await page.evaluate(() => scrollTo(0, 0));
++    await seekFixture(page, 0);
+     for (const layer of ['lights', 'smoke-back', 'smoke-front', 'silhouette', 'athlete', 'running', 'rear', 'white']) await expect.poll(() => opacity(layer)).toBeLessThan(.01);
+     await expect(hero.locator('[data-arrival-statement]')).toHaveCSS('opacity', '0');
+     await context.close();
+   });
+ }
+ 
+ 
+ test('reduced motion restores the complete static frame after an active pin', async ({ browser }) => {
+   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
+   const page = await context.newPage();
