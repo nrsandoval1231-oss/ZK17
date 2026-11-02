@@ -52,4 +52,4 @@
 - [x] Capture initial/mid/final/reverse/resize hero and preserved film at desktop/tablet/mobile, reduced motion and no JS; inspect images against owner reference.
 - [x] Record actual LCP/CLS, image transfers and console/accessibility results with limitations.
 - [x] Independent whole-branch review and address actionable issues.
-- [ ] Commit, push feature branch, open new review PR with measured evidence and authentic-photo fidelity limitation. No merge/deploy.
+- [x] Commit, push feature branch, open new review PR with measured evidence and authentic-photo fidelity limitation. No merge/deploy.

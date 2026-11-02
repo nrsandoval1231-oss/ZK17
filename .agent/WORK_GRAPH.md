@@ -22,3 +22,5 @@ ZK-ARRIVAL [LOCAL ACCEPTED]: independent ARRIVAL_FINAL_REVIEW.md PASS; preview p
 ZK-ARRIVAL [PREVIEW DELIVERED]:91c43688 immutable, original media hash matched, remote browser checks pass. OWNER VISUAL / PHYSICAL IPHONE pending. No merge/production.
 
 ZK-ARRIVAL-CAMPAIGN [IN PROGRESS 2026-11-02]: owner-approved MAKE THEM REMEMBER photographic campaign. Base merged PR8, branch feat/arrival-campaign-hero. Task1 independently accepted after motion/responsive/photo-compositing repairs. Task2 reference-aligned header active. Full integrated QA, independent whole-branch critic and new PR pending. Zpics.zip authentic assets behind review-only gates. No merge/deploy authorized.
+
+ZK-ARRIVAL-CAMPAIGN [PR REVIEW DELIVERED]: PR9 open, productd46943f;51unit/194browserpass18existingconditional skips;lint/typecheck/build and12capture scenariospass. Finalcriticvisualfindingsfixed, keyboardfindingcontrollerrepaired/verified; sourceocclusion/mediarelease limitations documented. No campaignmerge/deploy.
