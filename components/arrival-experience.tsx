@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import type { MediaAsset, PreviewPhoto, PublicProfile, ScenePhoto } from '@/content/site';
 import { brand } from '@/content/brand';
@@ -30,7 +29,7 @@ export default function ArrivalExperience({ profile, photo, photos, film, onWatc
   <section className={styles.cinema} id="film-room" aria-labelledby="film-title">
    <div className={styles.cinemaVideo}>{film?.src && <video ref={video} className={styles.video} src={film.src} controls muted loop playsInline preload="none" poster="/media/zephyr-cinematic-poster.webp" aria-label="Cinematic football footage featuring Zephyr Kreye" />}</div>
    <div className={styles.blackLogo}><Image src={brand.monogram.src} alt={brand.monogram.alt} width={100} height={100} unoptimized /></div>
-   <div className={styles.filmCopy}><p>ZEPHYR KREYE / 17</p><h2 id="film-title">EVERY<br />SECOND<br />COUNTS.</h2><Link href="/film/">EXPLORE THE FILM ↗</Link></div>
+   <div className={styles.filmCopy}><p>ZEPHYR KREYE / 17</p><h2 id="film-title">EVERY<br />SECOND<br />COUNTS.</h2></div>
   </section>
  </div>;
 }
