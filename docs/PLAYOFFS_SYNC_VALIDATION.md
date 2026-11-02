@@ -5,7 +5,7 @@ Implemented against main `6fe5f24` on `feat/playoff-source-sync`.
 ## Verified outcomes
 
 - Locked installation: `npm ci --ignore-scripts --no-audit --no-fund` passed.
-- Entire unit/regression suite: `node --import tsx --test tests/*.test.ts` — **45 passed, 0 failed**.
+- Entire unit/regression suite: `node --import tsx --test tests/*.test.ts` — **48 passed, 0 failed**.
 - `npm run typecheck`, `npm run lint` and `git diff --check` passed.
 - Release preflight, existing journal validation and Anna asset provenance checks passed.
 - Static production build/export passed using `npm run --ignore-scripts build`, after running each prebuild gate explicitly. Routes include `/playoffs`; no UI, Anna artwork or deployment configuration changed.
@@ -25,3 +25,7 @@ Independent review found a manual-retrieval metadata regression and calendar-dat
 ## Publication boundary
 
 The implementation must be merged before the scheduled workflow changes become active. The workflow maintains one data-only review PR; merging it follows the existing live deployment path. It never commits to main, invents playoff qualifiers, auto-merges or changes credentials. Actions must be permitted to create PRs; otherwise the job reports the failure and leaves the validated branch available for a manual PR. Venues, unsupported game statuses and genuine conflicting corrections retain the existing reviewed manual fallback.
+
+## Pre-merge PR review follow-up
+
+All three remote review findings were reproduced and fixed before merge. Normalization now reads the evolving validated transaction, preserving winners advanced earlier in the same poll when a downstream source slot is blank. Late detail pages retain immutable final kickoff facts and emit a warning rather than blocking unrelated results. Both workflow file guards capture Git failures explicitly and use exact Bash case patterns; unavailable filter commands cannot bypass the allowlist. Three additional regression tests cover these paths, including both actual workflow guards. The full suite now passes 48 tests.
