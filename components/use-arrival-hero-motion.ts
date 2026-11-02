@@ -20,17 +20,17 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       // Initialize all children together; staggered tweens alone leave later lines visible.
       gsap.set(portraits, { opacity: 0, yPercent: 3 });
       gsap.set(lines, { opacity: 0, yPercent: 10 });
-      gsap.set(details, { opacity: 0 });
+      gsap.set(details, { autoAlpha: 0 });
       gsap.set(mark, { opacity: rear ? 0 : .15, scale: 1.08 });
       if (rear) gsap.set(rear, { opacity: .65, xPercent: -8 });
       const timeline = gsap.timeline({ scrollTrigger: {
-        id: 'arrival-hero', trigger: element, start: 'top top', end: '+=185%',
+        id: 'arrival-hero', trigger: element, start: () => `top ${parseFloat(getComputedStyle(element.parentElement!).paddingTop)}px`, end: '+=185%',
         scrub: .6, pin: true, invalidateOnRefresh: true,
       } });
       if (rear) timeline.to(rear, { opacity: .75, xPercent: 0, duration: 1 }, 0);
       timeline.to(mark, { opacity: .9, scale: 1, duration: 1 }, .5)
         .to(portraits, { opacity: 1, yPercent: 0, stagger: .12, duration: 1 }, 1)
-        .to(details, { opacity: 1, duration: .5 }, 1.5)
+        .to(details, { autoAlpha: 1, duration: .5 }, 1.5)
         .to(lines, { opacity: 1, yPercent: 0, stagger: .3, duration: .7 }, 1.6)
         .to(element.querySelectorAll('[data-arrival-layer]'), { scale: .98, duration: .8 }, 2.7);
       return () => timeline.kill();

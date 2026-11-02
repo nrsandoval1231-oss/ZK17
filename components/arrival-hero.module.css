@@ -11,3 +11,17 @@
 @media(max-width:899px){.hero{height:calc(100svh - 80px)}.left{width:58%;height:40%}.rear{left:3%;top:13%;width:36%;height:34%}.mark{left:9%;top:1%;width:81%;height:48%}.athlete{left:24%;top:0;width:68%}.right{right:-9%;top:12%;width:38%;height:38%}.action{display:none}.copy{left:6%;top:55%;width:90%}.copy h1{font-size:clamp(54px,12.2vw,100px)}.footer{left:6%;bottom:4%}.scroll{left:auto;right:6%;bottom:4%}.preview{bottom:1%;font-size:6px}}
 @media(max-width:560px){.hero{height:calc(100svh - 76px)}.left{opacity:.35}.rear{opacity:.5}.right{display:none}.athlete{left:18%;width:78%}.mark{left:5%;width:87%}.identity,.school,.footer,.scroll{font-size:8px}.scroll{bottom:9%}.footer{bottom:4%}}
 @media(max-height:650px){.copy{top:49%}.copy h1{font-size:clamp(48px,10vw,84px)}.identity{margin-bottom:8px}.school{margin:10px 0}.watch{padding:9px 12px}.athlete{width:min(60%, 48vh);left:35%}.footer{bottom:3%}}
+/* Supplied campaign SVGs contain only original photo pixels and transparent cutouts. */
+.layer[data-campaign-photo]{mask-image:none;clip-path:none;filter:none}
+.layer[data-campaign-photo] img{object-fit:contain;object-position:center!important;transform:none}
+.left[data-campaign-photo]{left:-2%;top:3%;width:38%;height:47%;opacity:.52;filter:brightness(.65)}
+.rear[data-campaign-photo]{left:25%;top:18%;width:22%;height:44%;filter:brightness(.7)}
+.athlete[data-campaign-photo]{left:48%;top:2%;width:25%;height:91%;aspect-ratio:auto}
+.right[data-campaign-photo]{right:2%;top:17%;width:23%;height:49%;filter:brightness(.8)}
+.copy{top:auto;bottom:15%}
+.footer,.scroll,.preview{pointer-events:none}.scroll{pointer-events:auto}
+@media(max-width:899px){.left[data-campaign-photo]{width:48%;height:38%}.rear[data-campaign-photo]{left:1%;top:13%;width:30%;height:38%}.athlete[data-campaign-photo]{left:25%;top:1%;width:52%;height:55%}.right[data-campaign-photo]{right:-5%;top:11%;width:30%;height:36%}.copy{top:auto;bottom:18%}}
+@media(max-width:560px){.athlete[data-campaign-photo]{left:22%;width:58%;height:55%}.copy{bottom:18%}}
+@media(max-height:650px){.copy{top:auto;bottom:16%}.copy h1{font-size:clamp(44px,8vw,78px)}}
+@media(max-height:650px) and (min-width:700px){.athlete[data-campaign-photo]{left:51%;top:2%;width:23%;height:90%}}
+@media(max-height:450px) and (orientation:landscape){.copy{bottom:15%;left:5%}.copy h1{font-size:clamp(36px,6vw,52px);line-height:.8}.identity{margin-bottom:5px}.school{margin:5px 0}.watch{padding:6px 10px;font-size:8px}.footer{bottom:3%;left:5%}.scroll{bottom:3%;left:auto;right:5%}.preview{display:none}.athlete[data-campaign-photo]{left:53%;width:22%;height:90%}}
