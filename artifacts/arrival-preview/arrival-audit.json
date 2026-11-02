@@ -1,0 +1,125 @@
+{
+  "baseURL": "https://91c43688.zk17-review.pages.dev/",
+  "results": [
+    {
+      "engine": "chromium",
+      "device": "desktop",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "cinemaPin": true,
+        "video": [
+          {
+            "src": "https://91c43688.zk17-review.pages.dev/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false,
+            "currentTime": 1.56218,
+            "playbackAdvanced": true
+          }
+        ]
+      },
+      "videoRequestsBeforeApproach": 0,
+      "videoRequests": [
+        "https://91c43688.zk17-review.pages.dev/media/zephyr-cinematic.mp4"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "device": "mobile",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "cinemaPin": false,
+        "video": [
+          {
+            "src": "https://91c43688.zk17-review.pages.dev/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false,
+            "currentTime": 1.526493,
+            "playbackAdvanced": true
+          }
+        ]
+      },
+      "videoRequestsBeforeApproach": 0,
+      "videoRequests": [
+        "https://91c43688.zk17-review.pages.dev/media/zephyr-cinematic.mp4"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "device": "desktop",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "cinemaPin": true,
+        "video": [
+          {
+            "src": "https://91c43688.zk17-review.pages.dev/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false,
+            "currentTime": 1.7199585,
+            "playbackAdvanced": true
+          }
+        ]
+      },
+      "videoRequestsBeforeApproach": 0,
+      "videoRequests": []
+    },
+    {
+      "engine": "webkit",
+      "device": "mobile",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "cinemaPin": false,
+        "video": [
+          {
+            "src": "https://91c43688.zk17-review.pages.dev/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false,
+            "currentTime": 1.163271,
+            "playbackAdvanced": true
+          }
+        ]
+      },
+      "videoRequestsBeforeApproach": 0,
+      "videoRequests": []
+    }
+  ]
+}

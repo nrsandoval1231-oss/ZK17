@@ -2,7 +2,7 @@
   "auditDurationSeconds": null,
   "tokens": "UNKNOWN",
   "playwrightFinalSeconds": 42.7,
-  "result": "local candidate independently accepted; preview publication next",
+  "result": "independent local acceptance PASS; immutable preview published and controller-verified; owner physical iPhone review pending",
   "validationDurationSeconds": null,
   "planningDurationSeconds": null,
   "objective": "THE ARRIVAL PR5 preview candidate",

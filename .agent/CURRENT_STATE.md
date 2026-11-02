@@ -1,9 +1,12 @@
-# THE ARRIVAL — local candidate accepted, preview next
+# THE ARRIVAL — preview delivered, owner visual review next
 
-Branch `feature/athlete-showcase-every-second-20261101`; base PR #5 `4ca5d0d`. Scope/acceptance: [packet](PACKET-ARRIVAL.md), [QA](../docs/ARRIVAL_QA.md), [graph](WORK_GRAPH.md). Prior state retained unchanged in evidence/arrival/prior-state.md.
+PR #5: https://github.com/nrsandoval1231-oss/ZK17/pull/5 (draft).
+Branch feature/athlete-showcase-every-second-20261101. Implementation62d77511bde03fae91576bd6c2ceb09b610cc415. Immutable review preview https://91c43688.zk17-review.pages.dev; deployment91c43688-6ae2-42fb-a691-c27468d81aed. Current follow-up changes are evidence/documentation only.
 
-Implemented authentic portrait opening, GSAP sweep/depth, responsive SVG17 portal, original muted film, native sound dialog, athlete-first sequence, retained secondary routes and evidence gates. Original MP4 SHA256 a783dcb56f3a11684a3253ddc8c0768035bb8c9d390e0061a29935c20af8965f unchanged. Three Luna low builders, one Astra root-cause escalation, separate independent Astra final review.
+Canonical references: PACKET-ARRIVAL.md, WORK_GRAPH.md, ../docs/ARRIVAL_QA.md, ARRIVAL_FINAL_REVIEW.md. Replaced state retained in evidence/arrival/prior-state.md and Git history. Three Luna low builders, Astra escalation and a separate independent Astra final critic.
 
-Exact final local checks: build-final2, typecheck-final2, lint-reviewed,29 unit tests pass; e2e-final2:96pass16intentional skips0fail. Four final capture audits:0axe/overflow/runtime errors, advancing muted footage and0preapproach video requests. Screenshots artifacts/arrival-approved. Independent review [PASS](ARRIVAL_FINAL_REVIEW.md) tied to evidence/arrival/critic-source-manifest.json. Initial failures/repairs retained in earlier logs and screenshot sets.
+Local build/typecheck/lint/29units passed; final Playwright96pass16intentional skips0fail. Independent final review PASS with product hashes in evidence/arrival/critic-source-manifest.json. Source video hash unchanged. Earlier failures/repairs retained honestly.
 
-Next: commit/push feature branch, verify Cloudflare immutable preview content/assets/playback and update PR #5. No merge or production promotion. Physical iPhone smoothness, Low Power Mode, thermal behavior and owner visual approval remain UNKNOWN. Existing preview-photo/rights/social/contact content gates persist. Detailed timing/token counts UNKNOWN where not measured; metrics in evidence/arrival/metrics.json.
+Published preview verified: homepage/recruiting/playoffs200+noindex; original MP4/portrait/mark hashes match; native dialog/focus/Playoffs journeys pass touch-mobile Chromium/WebKit. Four remote capture audits show actual advancing muted playback,0preapproach requests,0axe,0overflow,0runtime errors. Receipt evidence/arrival/PREVIEW_RECEIPT.json; screenshots ../artifacts/arrival-preview/. Remote main remained6fe5f24; no merge/production promotion.
+
+Next: owner reviews actual scroll sequence on physical iPhone before merge. Physical Safari smoothness/Low Power Mode/thermal behavior and owner creative approval UNKNOWN. Existing photo-rights/content gates remain; no unverified statistics/contact/commitment claims introduced. Timing/tokens UNKNOWN where not measured; metrics in evidence/arrival/metrics.json.
