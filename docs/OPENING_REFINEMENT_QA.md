@@ -32,3 +32,5 @@ Windows Chromium and WebKit browser emulation are local evidence. Physical iPhon
 ## Final integrated result
 
 Final serialized suite:173 passed,7 existing conditional skips,0 failures (full-e2e-accepted.log). Focus/resize harness repairs independently reviewed by the separate critic; isolated focus16/16 and cinema8/8 pass. Earlier failed/concurrent runs are retained as debugging evidence, not presented as final results. Final lint and typecheck exit0 without warnings; unit62/62. Product build passed after final product edits. No physical iPhone test or performance baseline comparison is claimed.
+
+Independent Astra review accepted product commit ccaab62e193b570bd3ac52db9af848124b32540a with no remaining material findings; review.md contains the exact source blob identities and evidence. The delivery-only head uses Cloudflare's [CF-Pages-Skip] commit prefix to suppress automatic branch deployment, per https://developers.cloudflare.com/pages/configuration/git-integration/github-integration/. This does not skip or replace the recorded local tests.
