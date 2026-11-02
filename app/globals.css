@@ -120,3 +120,16 @@
 .site-header{height:96px}.site-header .brand-logo{width:72px;height:72px}.site-header .brand{flex-shrink:0}
 @media(max-width:899px){.site-header{height:80px}.site-header .brand-logo{width:58px;height:58px}}
 @media(max-width:560px){.site-header{height:76px}.site-header .brand-logo{width:54px;height:54px}}
+
+/* Athlete showcase film: full-bleed editorial cinematic chapter. */
+.showcase-film{display:block;min-height:0;padding:0;background:#08080c}
+.showcase-film-stage{position:relative;min-height: min(92svh,900px);overflow:hidden;isolation:isolate;background:#101017}
+.showcase-film-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
+.showcase-film-shade{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,5,9,.75),rgba(5,5,9,.12) 80%),linear-gradient(0deg,rgba(5,5,9,.5),transparent 40%)}
+.showcase-film-copy{position:relative;z-index:2;min-height:inherit;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:110px clamp(24px,8vw,140px);pointer-events:none}
+.showcase-film-copy h2{font-family:var(--display);font-size:clamp(82px,13vw,220px);line-height:.8;letter-spacing:-.035em;margin:28px 0 36px}
+.showcase-film-copy h2 em{font-style:normal;color:var(--lavender)}
+.showcase-film-play{pointer-events:auto;border:1px solid rgba(255,255,255,.5);background:rgba(10,10,15,.45);padding:15px 20px;display:flex;align-items:center;gap:20px;font-size:12px;letter-spacing:.12em;cursor:pointer}
+.showcase-film .feature-list{padding:90px clamp(24px,8vw,140px)}
+@media(max-width:560px){.showcase-film-stage{min-height:75svh}.showcase-film-copy{padding:85px 24px}.showcase-film-copy h2{font-size:clamp(70px,19vw,112px)}.showcase-film-video{object-position:60% center}.showcase-film .feature-list{padding:55px 24px}}
+@media(prefers-reduced-motion:reduce){.showcase-film-video{display:none}}
