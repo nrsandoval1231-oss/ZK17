@@ -4,10 +4,12 @@ import { readFile } from 'node:fs/promises';
 
 type FixtureWindow = Window & { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number; progress: number; animation: { progress: () => number } } } };
 
-async function openHero(page: Page) {
+async function openHero(page: Page, failEnhancement = false) {
   const bundle = await build({ stdin: { contents: `import React from 'react';
     import { createRoot } from 'react-dom/client';
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    import { gsap } from 'gsap';
+    if (${failEnhancement}) gsap.timeline = () => { throw new Error('Deliberate enhancement failure'); };
     (window as any).fixtureScrollTrigger = ScrollTrigger;
     import Hero from './components/arrival-hero';
     import { profile, previewPhotos } from './content/site';
@@ -187,4 +189,35 @@ test('action photo uses a bounded, faded frame at desktop and mobile sizes', asy
     expect(shade).toContain('gradient');
     await context.close();
   }
+});
+
+test('rear and white montage fades follow each source image frame', async ({ browser }) => {
+ for(const [width,height] of [[1440,900],[390,844]]) {
+  const context=await browser.newContext({viewport:{width,height},reducedMotion:'reduce'});
+  const page=await context.newPage();
+  await openHero(page);
+  for(const [layer,ratio] of [['rear',650/1050],['white',470/805]] as const) {
+   const frame=page.locator(`[data-arrival-layer="${layer}"] picture`).locator('..');
+   const box=(await frame.boundingBox())!;
+   expect(box.width).toBeLessThan(width*.95);
+   expect(box.width/box.height).toBeCloseTo(ratio,2);
+   await expect(frame).toHaveCSS('mask-image',/linear-gradient.*linear-gradient/);
+   expect(await frame.evaluate(el=>getComputedStyle(el,'::after').backgroundImage)).toContain('gradient');
+  }
+  await context.close();
+ }
+});
+
+
+test('failed hero enhancement reverts partial styles to the readable fallback', async ({ page }) => {
+ const errors: string[]=[];
+ page.on('pageerror',error=>errors.push(error.message));
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ await openHero(page,true);
+ await expect(page.locator('#arrival')).toHaveAttribute('data-arrival-motion','fallback');
+ await expect(page.locator('#hero-title')).toBeVisible();
+ await expect(page.locator('[data-arrival-statement]')).toHaveCSS('opacity','1');
+ await expect(page.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity','0.8');
+ expect(await page.locator('#arrival').evaluate(el=>el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
+ expect(errors).toEqual([]);
 });

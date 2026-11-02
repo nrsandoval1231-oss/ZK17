@@ -46,7 +46,14 @@ export default function ArrivalExperience({ profile, photo, photos, film, onWatc
           const coverHeight = 2 * Math.max(centerY, cinema.clientHeight - centerY);
           return cinemaCoverScale(cinema.clientWidth, coverHeight, frame.clientWidth, frame.clientHeight, ratio);
         };
-        const controls = (ready: boolean) => { if (media) { media.controls = ready; media.tabIndex = ready ? 0 : -1; } };
+        const controls = (ready: boolean) => {
+          if (!media) return;
+          // Tab/seek keys may scroll WebKit's native shadow controls backwards
+          // before the story can realign. Never remove a ready focused control
+          // in that interval; manual scrolling/external focus clears the token.
+          const enabled = ready || media.hasAttribute('data-native-keyboard-active');
+          media.controls = enabled; media.tabIndex = enabled ? 0 : -1;
+        };
         if (isReduce) {
           gsap.set(overlay.current, { autoAlpha: 0 });
           gsap.set(filmCopy.current, { autoAlpha: 1, y: 0 });

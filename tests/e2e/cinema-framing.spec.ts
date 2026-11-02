@@ -168,3 +168,40 @@ test('direct film landing lets keyboard focus leave the native player and scroll
   await page.waitForTimeout(500);
   expect(Math.abs(await page.evaluate(() => scrollY) - keyboardScroll)).toBeLessThan(10);
 });
+
+
+test('ready native keyboard controls survive seek keys and yield to manual scrolling', async ({ page, hasTouch }) => {
+ await page.setViewportSize({width:1024,height:360});
+ await page.goto('/#film-room');
+ const video=page.locator('#film-room video');
+ await expect(video).toHaveAttribute('tabindex','0');
+ await expect.poll(()=>video.evaluate(el=>getComputedStyle(el).transform)).toMatch(/^(none|matrix\(1, 0, 0, 1, 0, 0\))$/);
+ await video.focus();
+ for(const key of ['ArrowRight','Space','ArrowUp']) {
+  await page.keyboard.press(key);
+  await expect(video).toHaveAttribute('data-native-keyboard-active','true');
+  await expect(video).toBeFocused();
+  await expect(video).toHaveJSProperty('controls',true);
+  await expect(video).toHaveJSProperty('tabIndex',0);
+ }
+ const anchored=await page.evaluate(()=>scrollY);
+ await page.getByRole('link',{name:'Skip to content'}).evaluate((el: HTMLElement)=>el.focus({preventScroll:true}));
+ await expect(video).not.toHaveAttribute('data-native-keyboard-active','true');
+ await page.waitForTimeout(150);
+ expect(await page.evaluate(()=>scrollY)).toBe(anchored);
+ // A ready player reached without a pending hash alignment can hold again.
+ await video.evaluate((el: HTMLVideoElement)=>el.focus({preventScroll:true}));
+ await page.keyboard.press('ArrowRight');
+ await expect(video).toHaveAttribute('data-native-keyboard-active','true');
+ if(hasTouch) {
+  await page.touchscreen.tap(5,100);
+  await page.evaluate(()=>scrollBy({top:-180,behavior:'instant'}));
+ } else {
+  await page.mouse.move(5,100);
+  await page.mouse.wheel(0,-180);
+ }
+ await expect(video).not.toHaveAttribute('data-native-keyboard-active','true');
+ await expect.poll(()=>page.evaluate(()=>scrollY)).toBeLessThan(anchored-100);
+ await expect(video).toHaveJSProperty('controls',false);
+ await expect(video).toHaveJSProperty('tabIndex',-1);
+});

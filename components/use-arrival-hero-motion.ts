@@ -11,7 +11,8 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
     const container = element.parentElement!;
     gsap.registerPlugin(ScrollTrigger);
     const mm = gsap.matchMedia();
-    mm.add('(prefers-reduced-motion: no-preference)', () => {
+    try { mm.add('(prefers-reduced-motion: no-preference)', () => {
+      if (document.documentElement.dataset.arrivalBoot === 'fallback') return;
       const layer = (name: string) => element.querySelector<HTMLElement>(`[data-arrival-layer="${name}"]`);
       const lights = layer('lights')!;
       const smokeBack = layer('smoke-back')!;
@@ -90,6 +91,8 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       window.addEventListener('pointerdown', cancelRotation, { passive: true });
       window.addEventListener('keydown', cancelRotation);
       window.addEventListener('hashchange', cancelRotation);
+      element.setAttribute('data-arrival-motion', 'ready');
+      window.dispatchEvent(new Event('arrival:motion-ready'));
       return () => {
         cancelRotation();
         window.removeEventListener('scroll', rememberProgress);
@@ -102,7 +105,12 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
         window.removeEventListener('hashchange', cancelRotation);
         timeline.kill();
       };
-    });
+    }); } catch {
+      mm.revert();
+      element.setAttribute('data-arrival-motion', 'fallback');
+      document.documentElement.dataset.arrivalBoot = 'fallback';
+      window.dispatchEvent(new Event('arrival:motion-failed'));
+    }
     return () => mm.revert();
   }, [root]);
 }
