@@ -1,0 +1,125 @@
+{
+  "baseURL": "http://127.0.0.1:3100/",
+  "results": [
+    {
+      "engine": "chromium",
+      "device": "desktop",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "cinemaPin": true,
+        "video": [
+          {
+            "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false,
+            "currentTime": 1.691061,
+            "playbackAdvanced": true
+          }
+        ]
+      },
+      "videoRequestsBeforeApproach": 0,
+      "videoRequests": [
+        "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "device": "mobile",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "cinemaPin": false,
+        "video": [
+          {
+            "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false,
+            "currentTime": 1.628587,
+            "playbackAdvanced": true
+          }
+        ]
+      },
+      "videoRequestsBeforeApproach": 0,
+      "videoRequests": [
+        "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "device": "desktop",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "cinemaPin": true,
+        "video": [
+          {
+            "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false,
+            "currentTime": 2.5618128,
+            "playbackAdvanced": true
+          }
+        ]
+      },
+      "videoRequestsBeforeApproach": 0,
+      "videoRequests": []
+    },
+    {
+      "engine": "webkit",
+      "device": "mobile",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "cinemaPin": false,
+        "video": [
+          {
+            "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false,
+            "currentTime": 1.5306668,
+            "playbackAdvanced": true
+          }
+        ]
+      },
+      "videoRequestsBeforeApproach": 0,
+      "videoRequests": []
+    }
+  ]
+}

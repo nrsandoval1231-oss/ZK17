@@ -1,0 +1,13 @@
+{
+  "task": "ZK-ARRIVAL integration",
+  "owner": "integration builder",
+  "files": ["components/site-experience.tsx", "components/use-story-motion.ts", "app/globals.css"],
+  "status": "implementation complete",
+  "completed_at_utc": "2026-11-02T00:44:57Z",
+  "checks": {
+    "typecheck": "passed",
+    "scoped_eslint": "passed",
+    "git_diff_check": "passed"
+  },
+  "blockers": ["Full build remains subject to the parallel arrival component repair/review."]
+}

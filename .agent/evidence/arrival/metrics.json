@@ -1,0 +1,28 @@
+{
+  "auditDurationSeconds": null,
+  "tokens": "UNKNOWN",
+  "playwrightFinalSeconds": 42.7,
+  "result": "independent local acceptance PASS; immutable preview published and controller-verified; owner physical iPhone review pending",
+  "validationDurationSeconds": null,
+  "planningDurationSeconds": null,
+  "objective": "THE ARRIVAL PR5 preview candidate",
+  "finalChecksUtc": "2026-11-02T01:49:05.422444Z",
+  "elapsedToAcceptedSeconds": null,
+  "roles": {
+    "builders": "3 independent gpt-6-luna low",
+    "finalCritic": "separate gpt-6-astra high",
+    "leadRuntimeModel": "not independently introspected",
+    "escalation": "gpt-6-astra high"
+  },
+  "startUtc": null,
+  "lane": "full",
+  "base": "4ca5d0d3c26ee01f16d8eb0c0f67189412133f2f",
+  "repairHistory": [
+    "first component pass rejected before acceptance",
+    "two bounded builder repairs; remaining rootcause escalated once to Astra",
+    "controller integrated explicit opener and anchor repairs; final CSS centering repaired from independent screenshot finding"
+  ],
+  "physicalIPhone": "UNKNOWN",
+  "videoSha256": "a783dcb56f3a11684a3253ddc8c0768035bb8c9d390e0061a29935c20af8965f",
+  "buildDurationSeconds": null
+}

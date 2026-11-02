@@ -1,0 +1,4 @@
+# THE ARRIVAL — owner-directed implementation
+Base PR #5 4ca5d0d; branch feature/athlete-showcase-every-second-20261101. Full lane. Owner brief is design authority. Preserve shield, original MP4 bytes, media gates, secondary routes and approved interests. No merge/production deployment. Preview only after independent review.
+READY ZK-ARRIVAL: modular portrait hero, scoped GSAP stadium/depth/17 portal, staged mobile fallback, actual film, athlete-first order. Acceptance: type/lint/unit/build/e2e, desktop/WebKit iPhone/reduced motion, axe, sound dialog, screenshots hero/midpoint/film. Physical iPhone smoothness remains UNKNOWN until owner review.
+Plan: three Luna low builders with nonoverlapping files; Sol integration and deterministic checks; separate Astra high review. Model choices confirmed from runtime model list. Tokens UNKNOWN. Record timings honestly. Original video hash before/after required. Next: dispatch bounded builders.

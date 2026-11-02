@@ -7,6 +7,7 @@ export default defineConfig({
   projects: [
     { name: 'desktop-chromium', use: { ...devices['Desktop Chrome'] } },
     { name: 'mobile-chromium', use: { ...devices['Pixel 7'], browserName: 'chromium' } },
+    { name: 'iphone-webkit', use: { ...devices['iPhone 13'], browserName: 'webkit' } },
     { name: 'reduced-motion', use: { ...devices['Desktop Chrome'], reducedMotion: 'reduce' } },
   ],
   webServer: { command: 'npm run build && node scripts/serve-static.mjs --port 3100', url: 'http://127.0.0.1:3100', reuseExistingServer: !process.env.CI, timeout: 180_000 },

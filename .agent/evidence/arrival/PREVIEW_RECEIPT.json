@@ -1,0 +1,64 @@
+{
+  "base": "https://91c43688.zk17-review.pages.dev",
+  "sourceCommit": "62d77511bde03fae91576bd6c2ceb09b610cc415",
+  "verifiedUtc": "2026-11-02T01:51:55.514Z",
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "noindex": true,
+      "arrival": true
+    },
+    {
+      "path": "/playoffs/",
+      "status": 200,
+      "noindex": true
+    },
+    {
+      "path": "/recruiting/",
+      "status": 200,
+      "noindex": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "/media/zephyr-cinematic.mp4",
+      "status": 200,
+      "bytes": 18368268,
+      "sha256": "a783dcb56f3a11684a3253ddc8c0768035bb8c9d390e0061a29935c20af8965f",
+      "matchesLocal": true
+    },
+    {
+      "path": "/media/arrival-706.webp",
+      "status": 200,
+      "bytes": 50658,
+      "sha256": "39376befe8b4addb049b40b33eef9961487d7a88dea004046672e733dcc37712",
+      "matchesLocal": true
+    },
+    {
+      "path": "/brand/zk17-monogram-512-v2.png",
+      "status": 200,
+      "bytes": 7471,
+      "sha256": "8db76a9993ca32755d1e87a083b2371aa91ef5bd203765b694bae9e881b73593",
+      "matchesLocal": true
+    }
+  ],
+  "browsers": [
+    {
+      "engine": "chromium",
+      "touchMobile": true,
+      "nativeDialog": true,
+      "openerFocus": true,
+      "playoffsNavigation": true,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "touchMobile": true,
+      "nativeDialog": true,
+      "openerFocus": true,
+      "playoffsNavigation": true,
+      "errors": []
+    }
+  ]
+}
