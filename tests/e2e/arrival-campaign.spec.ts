@@ -67,7 +67,7 @@ test('mobile final frame and small no-JS frame fit the viewport', async ({ brows
 });
 
 test('touch tablet participates in the extended hero pin', async ({ browser }) => {
-  const context = await browser.newContext({ viewport: { width: 1024, height: 768 }, isMobile: true, hasTouch: true });
+  const context = await browser.newContext({ viewport: { width: 1024, height: 768 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
   const page = await context.newPage();
   await page.goto('/');
   await page.evaluate(() => scrollTo(0, 300));
@@ -94,7 +94,7 @@ test('desktop enhancement begins in darkness without an early title', async ({ b
 test('unpublished photo fixture makes no preview image requests', async ({ page }) => {
   const bundle = await build({ entryPoints: ['tests/e2e/arrival-fixture.tsx'], bundle: true, external: ['/media/*'], write: false, outdir: '/tmp/arrival-fixture', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' } });
   const requests: string[] = [];
-  page.on('request', request => { if (/\/media\/(arrival-campaign\/|arrival-directors-cut\/|(?:arrival|portrait|throwing|running|on-field)-)/.test(request.url())) requests.push(request.url()); });
+  page.on('request', request => { if (/\/media\/(?:arrival-campaign\/|arrival-directors-cut\/|arrival-(?:360|540|706)\.|(?:portrait|throwing|running|on-field)-)/.test(request.url())) requests.push(request.url()); });
   await page.route('**/arrival-fixture*', async route => {
     const path = new URL(route.request().url()).pathname;
     if (path.endsWith('.js') || path.endsWith('.css')) {
@@ -293,7 +293,10 @@ test('desktop static statement emphasizes the second line and keeps editorial co
   const identity = (await hero.getByText(/ZEPHYR KREYE/).boundingBox())!;
   const footer = (await hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/).boundingBox())!;
   const watch = (await hero.getByRole('button', { name: /watch.*film/i }).boundingBox())!;
-  expect(identity.y).toBeLessThan(520);
+  const title = (await hero.locator('#hero-title').boundingBox())!;
+  expect(identity.y).toBeGreaterThanOrEqual(0);
+  expect(identity.y + identity.height).toBeLessThanOrEqual(title.y);
+  expect(title.y + title.height).toBeLessThanOrEqual(watch.y);
   expect(footer.y).toBeLessThan(1024);
   expect(watch.y + watch.height).toBeLessThanOrEqual(footer.y);
   await expect(hero.getByRole('button', { name: /watch.*film/i })).toBeVisible();

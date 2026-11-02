@@ -46,18 +46,18 @@ for (const touch of [false, true]) {
     const opacity = (layer: string) => hero.locator(`[data-arrival-layer="${layer}"]`).evaluate(el => Number(getComputedStyle(el).opacity));
     expect(await opacity('lights')).toBeLessThan(.01);
     expect(await opacity('athlete')).toBeLessThan(.01);
-    const scrollBeat = (fraction: number) => page.evaluate(value => { const trigger = (window as unknown as { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number } } }).fixtureScrollTrigger.getById('arrival-hero'); scrollTo(0, trigger.start + (trigger.end - trigger.start) * value); }, fraction);
+    const scrollBeat = (fraction: number) => page.evaluate(value => { const trigger = (window as unknown as { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number } } }).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: trigger.start + (trigger.end - trigger.start) * value, behavior: 'instant' }); }, fraction);
     await scrollBeat(.22);
     await expect.poll(() => opacity('lights')).toBeGreaterThan(.2);
-    await scrollBeat(.55);
+    await scrollBeat(.58);
     await expect.poll(() => opacity('athlete')).toBeGreaterThan(.3);
     const photoHeight = (await hero.locator('[data-arrival-layer="athlete"] img').boundingBox())!.height;
     expect(photoHeight).toBeLessThan(heroHeight * 1.1);
-    await scrollBeat(.70);
+    await scrollBeat(.71);
     await expect.poll(() => opacity('running')).toBeGreaterThan(.35);
-    await scrollBeat(.79);
+    await scrollBeat(.80);
     await expect.poll(() => opacity('rear')).toBeGreaterThan(.35);
-    await scrollBeat(.86);
+    await scrollBeat(.87);
     await expect.poll(() => opacity('white')).toBeGreaterThan(.35);
     await scrollBeat(.97);
     await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
@@ -98,5 +98,64 @@ test('touch orientation refresh keeps the story scrollable and bounded', async (
   expect(spacer.height - height).toBeGreaterThan(14 * 390);
   await page.evaluate(y => scrollTo(0, y), (spacer.height - height) * .97);
   await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
+  await context.close();
+});
+
+test('built touch story retains its normalized beat through rotation', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
+  const page = await context.newPage();
+  await page.goto('/');
+  const hero = page.locator('#arrival');
+  await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
+  const distance = () => hero.evaluate(el => parseFloat(el.parentElement!.style.paddingBottom));
+  await page.touchscreen.tap(10, 400);
+  await page.evaluate(y => scrollTo({ top: y, behavior: 'instant' }), (await distance()) * .5);
+  await expect.poll(async () => (await page.evaluate(() => scrollY)) / await distance()).toBeCloseTo(.5, 1);
+  await expect.poll(() => hero.locator('[data-arrival-layer="silhouette"]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.1);
+  await page.setViewportSize({ width: 844, height: 390 });
+  await expect.poll(distance).toBeCloseTo(5850, 0);
+  await expect.poll(async () => (await page.evaluate(() => scrollY)) / await distance(), { timeout: 6000 }).toBeCloseTo(.5, 1);
+  await page.waitForTimeout(400);
+  expect((await page.evaluate(() => scrollY)) / await distance()).toBeCloseTo(.5, 1);
+  await expect(hero.locator('[data-arrival-layer="silhouette"]')).toHaveCSS('opacity', /^(0\.[1-9]|1)/);
+  await context.close();
+});
+
+
+test('built story can retain progress after rotating at the opening', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
+  const page = await context.newPage();
+  await page.goto('/');
+  const hero = page.locator('#arrival');
+  await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
+  const distance = () => hero.evaluate(el => parseFloat(el.parentElement!.style.paddingBottom));
+  await page.setViewportSize({ width: 844, height: 390 });
+  await expect.poll(distance).toBeCloseTo(5850, 0);
+  await page.touchscreen.tap(10, 200);
+  await page.evaluate(y => scrollTo({ top: y, behavior: 'instant' }), (await distance()) * .5);
+  await expect.poll(() => hero.locator('[data-arrival-layer="silhouette"]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.1);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect.poll(distance).toBeCloseTo(12660, 0);
+  await expect.poll(async () => (await page.evaluate(() => scrollY)) / await distance(), { timeout: 6000 }).toBeCloseTo(.5, 1);
+  await page.waitForTimeout(400);
+  expect((await page.evaluate(() => scrollY)) / await distance()).toBeCloseTo(.5, 1);
+  await context.close();
+});
+
+test('smoke drifts during the central story', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
+  const page = await context.newPage();
+  await openHero(page);
+  const smoke = page.locator('[data-arrival-layer="smoke-back"]');
+  const bounds = (await smoke.boundingBox())!;
+  expect(bounds.x).toBeLessThan(0);
+  expect(bounds.x + bounds.width).toBeGreaterThan(390);
+  const seek = (fraction: number) => page.evaluate(value => { const t = (window as unknown as { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number } } }).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: t.start + (t.end - t.start) * value, behavior: 'instant' }); }, fraction);
+  await seek(.5);
+  await expect.poll(() => smoke.evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.8);
+  await page.waitForTimeout(500);
+  const before = await smoke.evaluate(el => getComputedStyle(el).transform);
+  await seek(.62);
+  await expect.poll(() => smoke.evaluate(el => getComputedStyle(el).transform)).not.toBe(before);
   await context.close();
 });

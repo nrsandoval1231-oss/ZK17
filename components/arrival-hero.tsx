@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef } from 'react';
+import { useRef, type CSSProperties } from 'react';
 import type { PreviewPhoto, PublicProfile, ScenePhoto } from '@/content/site';
 import { useArrivalHeroMotion } from './use-arrival-hero-motion';
 import styles from './arrival-hero.module.css';
@@ -13,10 +13,10 @@ function PhotoLayer({ photo, layer, className, decorative = true }: { photo?: Ph
   if (!photo) return null;
   const directors = photo.kind === 'preview' && photo.id.startsWith('directors-');
   const focal = photo.kind === 'preview' ? photo.focal : photo.focalPoint;
-  return <div className={`${styles.photo} ${className}`} data-arrival-layer={layer} aria-hidden={decorative || undefined}>
-    <picture>{directors && <source srcSet={`${photo.src.replace('-960.webp', '-480.webp')} 480w, ${photo.src} 960w`} sizes="(max-width: 700px) 100vw, 60vw" />}
+  return <div className={`${styles.photo} ${className}`} data-arrival-layer={layer} aria-hidden={decorative || undefined} style={{ '--photo-url': `url("${photo.src}")` } as CSSProperties}>
+    <div className={styles.photoFrame}><picture>{directors && <source srcSet={`${photo.src.replace('-960.webp', '-480.webp')} 480w, ${photo.src} 960w`} sizes="(max-width: 700px) 100vw, 60vw" />}
       <Image src={photo.src} alt={decorative ? '' : photo.alt} width={photo.width} height={photo.height} loading="lazy" unoptimized style={{ objectPosition: focal }} />
-    </picture>
+    </picture></div>
   </div>;
 }
 

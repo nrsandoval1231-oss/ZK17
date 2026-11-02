@@ -5,7 +5,7 @@ import { build } from 'esbuild';
 // adding a test route or publication override to the production application.
 test('an unpublished film still reveals its fallback and reverses the aperture', async ({ page }) => {
   const bundle = await build({
-    entryPoints: ['tests/e2e/arrival-fixture.tsx'], bundle: true, write: false,
+    entryPoints: ['tests/e2e/arrival-fixture.tsx'], bundle: true, external: ['/media/*'], write: false,
     outdir: '/tmp/arrival-fixture', jsx: 'automatic',
     define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}'  },
   });

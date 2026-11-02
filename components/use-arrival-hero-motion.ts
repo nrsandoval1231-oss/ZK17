@@ -37,6 +37,8 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
         .fromTo(lights.children, { opacity: .08 }, { opacity: 1, stagger: .25, duration: .7 }, 2)
         .to(smokeBack, { opacity: .9, xPercent: 4, duration: 2 }, 4)
         .to(smokeFront, { opacity: .8, xPercent: -4, duration: 2 }, 4)
+        .to(smokeBack, { xPercent: -3, yPercent: -2, duration: 8 }, 6)
+        .to(smokeFront, { xPercent: 5, yPercent: -1, duration: 8 }, 6)
         .to({}, { duration: 10 }, 6);
       if (silhouette) timeline.to(silhouette, { opacity: .85, scale: 1.03, duration: 1.4 }, 6);
       if (athlete) timeline.to(athlete, { opacity: .95, scale: 1.05, duration: 2 }, 8);
@@ -48,9 +50,58 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       if (athlete) timeline.to(athlete, { opacity: .7, scale: .98, duration: 1.3 }, 14);
       timeline.to([copy, ...details], { autoAlpha: 1, duration: .8 }, 14.2)
         .to(smokeFront, { opacity: .3, xPercent: 5, duration: 1.5 }, 14);
-      const refresh = () => ScrollTrigger.refresh();
-      window.addEventListener('orientationchange', refresh);
-      return () => { window.removeEventListener('orientationchange', refresh); timeline.kill(); };
+      // Capture progress before a rotation lets competing pin refreshes temporarily
+      // reset scroll. Only restore when the visitor was inside this story.
+      let stableWidth = window.innerWidth;
+      let lastProgress = 0;
+      let pendingProgress: number | null = null;
+      let rotationTimer: ReturnType<typeof setTimeout> | undefined;
+      const rememberProgress = () => {
+        const trigger = timeline.scrollTrigger;
+        if (!trigger || pendingProgress !== null || window.innerWidth !== stableWidth) return;
+        lastProgress = gsap.utils.clamp(0, 1, (window.scrollY - trigger.start) / (trigger.end - trigger.start));
+      };
+      const cancelRotation = () => { pendingProgress = null; clearTimeout(rotationTimer); stableWidth = window.innerWidth; lastProgress = 0; };
+      const queueRotation = () => {
+        if (pendingProgress === null && lastProgress > .001 && lastProgress < .999 && (!location.hash || location.hash === '#arrival')) pendingProgress = lastProgress;
+        if (pendingProgress === null) return;
+        clearTimeout(rotationTimer);
+        rotationTimer = setTimeout(() => {
+          const progress = pendingProgress;
+          pendingProgress = null;
+          stableWidth = window.innerWidth;
+          if (progress === null) return;
+          lastProgress = progress;
+          ScrollTrigger.refresh();
+          const trigger = timeline.scrollTrigger;
+          if (trigger) window.scrollTo({ top: trigger.start + (trigger.end - trigger.start) * progress, behavior: 'instant' });
+        }, 180);
+      };
+      const onResize = () => {
+        if (window.innerWidth === stableWidth) return;
+        queueRotation();
+        if (pendingProgress === null) stableWidth = window.innerWidth;
+      };
+      window.addEventListener('scroll', rememberProgress, { passive: true });
+      window.addEventListener('orientationchange', queueRotation, true);
+      window.addEventListener('resize', onResize, true);
+      window.addEventListener('wheel', cancelRotation, { passive: true });
+      window.addEventListener('touchstart', cancelRotation, { passive: true });
+      window.addEventListener('pointerdown', cancelRotation, { passive: true });
+      window.addEventListener('keydown', cancelRotation);
+      window.addEventListener('hashchange', cancelRotation);
+      return () => {
+        cancelRotation();
+        window.removeEventListener('scroll', rememberProgress);
+        window.removeEventListener('orientationchange', queueRotation, true);
+        window.removeEventListener('resize', onResize, true);
+        window.removeEventListener('wheel', cancelRotation);
+        window.removeEventListener('touchstart', cancelRotation);
+        window.removeEventListener('pointerdown', cancelRotation);
+        window.removeEventListener('keydown', cancelRotation);
+        window.removeEventListener('hashchange', cancelRotation);
+        timeline.kill();
+      };
     });
     return () => mm.revert();
   }, [root]);
