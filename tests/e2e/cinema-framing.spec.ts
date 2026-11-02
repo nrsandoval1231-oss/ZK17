@@ -139,3 +139,32 @@ test('a direct film anchor stays framed through resize and yields to manual scro
   await page.waitForTimeout(500);
   expect(Math.abs(await page.evaluate(() => scrollY) - manual)).toBeLessThan(10);
 });
+
+
+test('direct film landing lets keyboard focus leave the native player and scroll to its destination', async ({ page }) => {
+  await page.setViewportSize({ width: 1024, height: 180 });
+  await page.goto('/#film-room');
+  const video = page.locator('#film-room video');
+  await expect(video).toHaveJSProperty('controls', true);
+  await video.focus();
+  await page.waitForTimeout(200);
+  const anchored = await page.evaluate(() => scrollY);
+  // Native control tab stops vary by browser; follow real Tab navigation until
+  // it reaches the next story link rather than prescribing their count.
+  for (let index = 0; index < 20; index++) {
+    await page.keyboard.press('Tab');
+    if (await video.evaluate(el => document.activeElement === el)) {
+      await expect(video).toHaveJSProperty('controls', true);
+      await expect(video).toHaveJSProperty('tabIndex', 0);
+    }
+    if (await page.evaluate(() => document.activeElement?.matches('a[href="#nil-inquiries"]'))) break;
+  }
+  const target = page.getByRole('link', { name: /NIL.*BUSINESS INQUIRIES/i }).first();
+  await expect(target).toBeFocused();
+  await expect.poll(() => target.evaluate(el => { const box = el.getBoundingClientRect(); return box.top >= 0 && box.bottom <= innerHeight; })).toBe(true);
+  expect(await page.evaluate(() => scrollY)).toBeGreaterThan(anchored + 100);
+  const keyboardScroll = await page.evaluate(() => scrollY);
+  await page.evaluate(() => dispatchEvent(new Event('resize')));
+  await page.waitForTimeout(500);
+  expect(Math.abs(await page.evaluate(() => scrollY) - keyboardScroll)).toBeLessThan(10);
+});

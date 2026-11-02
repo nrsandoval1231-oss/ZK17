@@ -33,15 +33,17 @@ function Header({ onWatch }: { onWatch: (opener: HTMLButtonElement) => void }) {
  const nav=useRef<HTMLElement>(null); const trigger=useRef<HTMLButtonElement>(null); const restoreTriggerFocus=()=>{let attempts=0;const restore=()=>{const button=trigger.current;if(!button)return;if(getComputedStyle(button).visibility==='visible'&&button.getClientRects().length>0)button.focus();else if(window.innerWidth<900&&attempts++<10)requestAnimationFrame(restore);};requestAnimationFrame(restore);};
  useLayoutEffect(()=>{if(!open)return;const priorOverflow=document.body.style.overflow;const content=document.querySelector<HTMLElement>('.site-content');const priorInert=content?.inert??false;document.body.style.overflow='hidden';if(content)content.inert=true;let focusFrame=0;const focusWhenVisible=()=>{const closeButton=nav.current?.querySelector<HTMLButtonElement>('.nav-close');if(closeButton&&getComputedStyle(closeButton).visibility==='visible'&&closeButton.getClientRects().length>0)closeButton.focus();else focusFrame=requestAnimationFrame(focusWhenVisible);};focusFrame=requestAnimationFrame(focusWhenVisible);const onKey=(event:KeyboardEvent)=>{if(event.key==='Escape'){setOpen(false);restoreTriggerFocus();return;}if(event.key==='Tab'&&nav.current){const items=[...nav.current.querySelectorAll<HTMLElement>('a,button:not([disabled])')];if(event.shiftKey&&document.activeElement===items[0]){event.preventDefault();items.at(-1)?.focus();}else if(!event.shiftKey&&document.activeElement===items.at(-1)){event.preventDefault();items[0]?.focus();}}};document.addEventListener('keydown',onKey);return()=>{cancelAnimationFrame(focusFrame);document.removeEventListener('keydown',onKey);document.body.style.overflow=priorOverflow;if(content)content.inert=priorInert;};},[open]);
    const close = () => {setOpen(false);restoreTriggerFocus();};
- useEffect(() => {
+ useLayoutEffect(() => {
   const desktop = window.matchMedia('(min-width: 900px)');
   const releaseMenu = () => {
    if (!desktop.matches || !open) return;
    setOpen(false);
-   requestAnimationFrame(() => {
+   // Finish CSS breakpoint changes and the shared pin refresh before focusing.
+   requestAnimationFrame(() => requestAnimationFrame(() => {
     if (desktop.matches) nav.current?.querySelector<HTMLAnchorElement>('a')?.focus({ preventScroll: true });
-   });
+   }));
   };
+  releaseMenu();
   desktop.addEventListener('change', releaseMenu);
   return () => desktop.removeEventListener('change', releaseMenu);
  }, [open]);

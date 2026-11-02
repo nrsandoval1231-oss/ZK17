@@ -318,9 +318,11 @@ test('desktop static statement emphasizes the second line and keeps editorial co
   expect(watch.y + watch.height).toBeLessThanOrEqual(footer.y);
   await expect(hero.getByRole('button', { name: /watch.*film/i })).toBeVisible();
   await page.setViewportSize({ width: 900, height: 700 });
-  const shortWatch = (await hero.getByRole('button', { name: /watch.*film/i }).boundingBox())!;
-  const shortFooter = (await hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/).boundingBox())!;
-  expect(shortWatch.y + shortWatch.height).toBeLessThanOrEqual(shortFooter.y);
+  await expect.poll(async () => {
+    const shortWatch = (await hero.getByRole('button', { name: /watch.*film/i }).boundingBox())!;
+    const shortFooter = (await hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/).boundingBox())!;
+    return shortWatch.y + shortWatch.height <= shortFooter.y;
+  }).toBe(true);
   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(900);
   await context.close();
 });

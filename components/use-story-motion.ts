@@ -81,7 +81,7 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   // Keep reconciling until the visitor chooses a new scroll position.
   const releaseAnchor = () => { pendingAnchor = null; cancelAnimationFrame(anchorFrame); };
   const onScrollKey = (event: KeyboardEvent) => {
-   if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) releaseAnchor();
+   if (['Tab', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) releaseAnchor();
   };
   const queueAnchor = () => {
    if (!pendingAnchor || disposed) return;
@@ -118,7 +118,23 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   window.addEventListener('resize', refresh);
   // Native video focus may scroll a few pixels after the focus event. Keep an
   // active direct landing aligned until wheel/touch/key input releases it.
-  window.addEventListener('scroll', queueAnchor, { passive: true });
+  const keepNativeFocusFramed = () => {
+   if (pendingAnchor === 'film-room' && document.activeElement === element.querySelector('#film-room video')) queueAnchor();
+  };
+  window.addEventListener('scroll', keepNativeFocusFramed, { passive: true });
+  const releaseOnExternalFocus = (event: FocusEvent) => {
+   const target = event.target;
+   if (!(target instanceof HTMLElement) || target.matches('#film-room video')) return;
+   if (pendingAnchor === 'film-room') releaseAnchor();
+   // Native smooth focus scrolling can be measured before a pin refresh.
+   // Reconcile the actual focused control after that layout has settled.
+   requestAnimationFrame(() => {
+    if (disposed || document.activeElement !== target || !target.getClientRects().length) return;
+    const box = target.getBoundingClientRect();
+    if (box.top < 0 || box.bottom > innerHeight) target.scrollIntoView({ block: 'center', behavior: 'instant' });
+   });
+  };
+  element.addEventListener('focusin', releaseOnExternalFocus);
   window.addEventListener('wheel', releaseAnchor, { passive: true });
   window.addEventListener('touchstart', releaseAnchor, { passive: true });
   window.addEventListener('pointerdown', releaseAnchor, { passive: true });
@@ -128,6 +144,6 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   element.addEventListener('load', refresh, true);
   const observer = new ResizeObserver(refresh);
   element.querySelectorAll('.approved-gallery, .numbers-content, .verified-milestones').forEach(el => observer.observe(el));
-  return () => { disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('resize', refresh); window.removeEventListener('scroll', queueAnchor); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', releaseAnchor); window.removeEventListener('pointerdown', releaseAnchor); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
+  return () => { disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('resize', refresh); window.removeEventListener('scroll', keepNativeFocusFramed); element.removeEventListener('focusin', releaseOnExternalFocus); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', releaseAnchor); window.removeEventListener('pointerdown', releaseAnchor); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
  }, [root]);
 }
