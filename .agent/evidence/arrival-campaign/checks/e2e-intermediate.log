@@ -1,0 +1,557 @@
+
+> zk17-official@0.1.0 e2e
+> playwright test --workers=2
+
+
+Running 208 tests using 2 workers
+
+(node:67829) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:67830) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓    1 [desktop-chromium] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (2.2s)
+  ✓    3 [desktop-chromium] › tests/e2e/arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (866ms)
+  ✓    2 [desktop-chromium] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (3.1s)
+  ✓    4 [desktop-chromium] › tests/e2e/arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet (540ms)
+  ✓    5 [desktop-chromium] › tests/e2e/arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport (1.1s)
+  ✓    6 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:5:5 › campaign hero presents its statement, identity and watch action (1.7s)
+  ✓    7 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:23:5 › hero stays within the viewport and responds to motion preference changes (1.2s)
+  ✓    9 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:54:5 › mobile final frame and small no-JS frame fit the viewport (1.7s)
+  ✓    8 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:38:5 › active desktop pin reverts all reveal styles when motion is reduced (1.8s)
+  ✓   10 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:71:5 › touch tablet scrolls naturally without a hero pin (1.4s)
+  ✓   11 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:81:5 › desktop enhancement begins with rear silhouette and both headline lines initialized (1.6s)
+  ✓   12 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:95:5 › unpublished photo fixture makes no preview image requests (645ms)
+  ✓   13 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:113:5 › short landscape keeps copy and watch action visible and separate (751ms)
+  ✓   14 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:127:5 › keyboard focus never lands on a visually hidden hero control (2.2s)
+  ✓   16 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:162:5 › header watch opens native Film Room and restores its opener focus (1.3s)
+  ✓   15 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:145:5 › watch action is unobstructed in static responsive frames (4.8s)
+  ✓   17 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:177:5 › header keeps all nine destinations within desktop widths (4.8s)
+  ✓   19 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:254:5 › header home name includes the visible athlete wordmark (1.3s)
+  ✓   20 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:286:5 › stadium reveals subtly, reverses and restores its static state on reduced motion (2.6s)
+  ✘   18 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:205:5 › header mobile controls fit and menu preserves keyboard, inert and scroll behavior (7.3s)
+(node:68968) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✘   21 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:305:5 › desktop static statement emphasizes the second line and keeps editorial controls together (944ms)
+  ✓   22 [desktop-chromium] › tests/e2e/arrival-fallback.spec.ts:6:5 › an unpublished film still reveals its fallback and reverses the aperture (741ms)
+(node:69056) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   23 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:21:5 › Playoffs desktop places official Anna mark left of copy (693ms)
+  ✓   24 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:3:5 › film resolves to an uncropped native player in the second story scene (2.0s)
+  ✓   25 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player (1.5s)
+  ✓   26 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 240px viewport retains a finite, usable player (1.4s)
+  ✓   27 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 360px viewport retains a finite, usable player (1.4s)
+  ✓   29 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:120:5 › a direct film anchor stays framed through resize and yields to manual scrolling (3.5s)
+  ✓   30 [desktop-chromium] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (2.8s)
+  ✓   28 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:55:5 › cinema reverses its reveal and recomputes framing after a height and width resize (7.4s)
+  ✓   31 [desktop-chromium] › tests/e2e/completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (1.2s)
+  ✓   33 [desktop-chromium] › tests/e2e/completion.spec.ts:52:5 › snapshot offers a selectable address when clipboard access is unavailable (675ms)
+  ✓   32 [desktop-chromium] › tests/e2e/completion.spec.ts:37:5 › scrolling releases the field pin and responsive motion leaves a readable document (2.3s)
+  ✓   34 [desktop-chromium] › tests/e2e/playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (2.5s)
+  ✓   36 [desktop-chromium] › tests/e2e/playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (728ms)
+  ✓   35 [desktop-chromium] › tests/e2e/playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (2.5s)
+  ✓   38 [desktop-chromium] › tests/e2e/playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.0s)
+  ✓   39 [desktop-chromium] › tests/e2e/playoffs.spec.ts:71:5 › hero downloads exactly one browser-supported responsive image source (404ms)
+  ✓   40 [desktop-chromium] › tests/e2e/playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (964ms)
+  ✓   37 [desktop-chromium] › tests/e2e/playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (3.4s)
+  ✓   41 [desktop-chromium] › tests/e2e/site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (2.2s)
+  -   43 [desktop-chromium] › tests/e2e/site.spec.ts:38:5 › reduced motion removes pinning and keeps film unloaded
+  ✓   42 [desktop-chromium] › tests/e2e/site.spec.ts:29:5 › navigation remains usable while the arrival experience is scrolled (2.1s)
+  -   45 [desktop-chromium] › tests/e2e/site.spec.ts:58:5 › normal-motion iPhone does not request film before the cinema is near
+  ✓   44 [desktop-chromium] › tests/e2e/site.spec.ts:49:5 › switching to reduced motion removes an active desktop pin (1.0s)
+  ✓   46 [desktop-chromium] › tests/e2e/site.spec.ts:67:5 › current navigation keeps the media gallery and story destinations reachable (1.0s)
+  ✓   47 [desktop-chromium] › tests/e2e/site.spec.ts:84:5 › direct film, journey, and off-field anchors resolve to visible viewport bounds (1.9s)
+  ✓   48 [desktop-chromium] › tests/e2e/site.spec.ts:108:5 › two-worlds links still reach field and personal content (1.9s)
+  ✓   49 [desktop-chromium] › tests/e2e/site.spec.ts:117:5 › NIL inquiry anchor remains reachable and contains no invented contact links (1.4s)
+  ✓   51 [desktop-chromium] › tests/e2e/site.spec.ts:133:5 › recruiting and playoffs remain directly navigable (673ms)
+  ✓   52 [desktop-chromium] › tests/e2e/site.spec.ts:140:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (769ms)
+  ✓   50 [desktop-chromium] › tests/e2e/site.spec.ts:126:5 › layout has no horizontal overflow and the arrival page passes axe (2.7s)
+(node:70438) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:70445) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   53 [mobile-chromium] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.3s)
+  ✓   55 [mobile-chromium] › tests/e2e/arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (651ms)
+  ✓   54 [mobile-chromium] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (2.0s)
+  -   56 [mobile-chromium] › tests/e2e/arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  -   57 [mobile-chromium] › tests/e2e/arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ✓   59 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:23:5 › hero stays within the viewport and responds to motion preference changes (729ms)
+  ✓   58 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:5:5 › campaign hero presents its statement, identity and watch action (1.2s)
+  ✓   60 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:38:5 › active desktop pin reverts all reveal styles when motion is reduced (1.8s)
+  ✓   61 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:54:5 › mobile final frame and small no-JS frame fit the viewport (1.7s)
+  ✓   62 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:71:5 › touch tablet scrolls naturally without a hero pin (1.1s)
+  ✓   64 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:95:5 › unpublished photo fixture makes no preview image requests (936ms)
+  ✓   63 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:81:5 › desktop enhancement begins with rear silhouette and both headline lines initialized (1.8s)
+  ✓   65 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:113:5 › short landscape keeps copy and watch action visible and separate (1.2s)
+  ✓   66 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:127:5 › keyboard focus never lands on a visually hidden hero control (2.5s)
+  ✓   68 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:162:5 › header watch opens native Film Room and restores its opener focus (1.3s)
+  ✓   67 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:145:5 › watch action is unobstructed in static responsive frames (5.5s)
+  ✓   69 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:177:5 › header keeps all nine destinations within desktop widths (5.9s)
+  ✓   70 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:205:5 › header mobile controls fit and menu preserves keyboard, inert and scroll behavior (3.3s)
+  ✓   71 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:254:5 › header home name includes the visible athlete wordmark (1.2s)
+  ✓   73 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:305:5 › desktop static statement emphasizes the second line and keeps editorial controls together (1.8s)
+  ✓   72 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:286:5 › stadium reveals subtly, reverses and restores its static state on reduced motion (3.0s)
+  ✓   74 [mobile-chromium] › tests/e2e/arrival-fallback.spec.ts:6:5 › an unpublished film still reveals its fallback and reverses the aperture (719ms)
+  -   76 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:21:5 › Playoffs desktop places official Anna mark left of copy
+  ✓   75 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:3:5 › film resolves to an uncropped native player in the second story scene (1.1s)
+  ✓   77 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player (1.3s)
+  ✓   78 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 240px viewport retains a finite, usable player (1.3s)
+  ✓   79 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 360px viewport retains a finite, usable player (1.4s)
+  ✓   81 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:120:5 › a direct film anchor stays framed through resize and yields to manual scrolling (1.6s)
+  ✓   82 [mobile-chromium] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (3.2s)
+  ✓   80 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:55:5 › cinema reverses its reveal and recomputes framing after a height and width resize (5.9s)
+  ✓   83 [mobile-chromium] › tests/e2e/completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (1.1s)
+  ✓   85 [mobile-chromium] › tests/e2e/completion.spec.ts:52:5 › snapshot offers a selectable address when clipboard access is unavailable (458ms)
+  ✓   84 [mobile-chromium] › tests/e2e/completion.spec.ts:37:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.6s)
+  ✓   87 [mobile-chromium] › tests/e2e/playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (2.1s)
+  ✓   88 [mobile-chromium] › tests/e2e/playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (690ms)
+  ✓   86 [mobile-chromium] › tests/e2e/playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (3.3s)
+  ✓   90 [mobile-chromium] › tests/e2e/playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (971ms)
+  ✓   91 [mobile-chromium] › tests/e2e/playoffs.spec.ts:71:5 › hero downloads exactly one browser-supported responsive image source (353ms)
+  ✓   92 [mobile-chromium] › tests/e2e/playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (750ms)
+  ✓   89 [mobile-chromium] › tests/e2e/playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (2.8s)
+  ✓   93 [mobile-chromium] › tests/e2e/site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (1.3s)
+  -   95 [mobile-chromium] › tests/e2e/site.spec.ts:38:5 › reduced motion removes pinning and keeps film unloaded
+  -   96 [mobile-chromium] › tests/e2e/site.spec.ts:49:5 › switching to reduced motion removes an active desktop pin
+  -   97 [mobile-chromium] › tests/e2e/site.spec.ts:58:5 › normal-motion iPhone does not request film before the cinema is near
+  ✓   94 [mobile-chromium] › tests/e2e/site.spec.ts:29:5 › navigation remains usable while the arrival experience is scrolled (1.8s)
+  ✓   98 [mobile-chromium] › tests/e2e/site.spec.ts:67:5 › current navigation keeps the media gallery and story destinations reachable (887ms)
+  ✓   99 [mobile-chromium] › tests/e2e/site.spec.ts:84:5 › direct film, journey, and off-field anchors resolve to visible viewport bounds (1.4s)
+  ✓  100 [mobile-chromium] › tests/e2e/site.spec.ts:108:5 › two-worlds links still reach field and personal content (1.9s)
+  ✓  101 [mobile-chromium] › tests/e2e/site.spec.ts:117:5 › NIL inquiry anchor remains reachable and contains no invented contact links (1.2s)
+  ✓  103 [mobile-chromium] › tests/e2e/site.spec.ts:133:5 › recruiting and playoffs remain directly navigable (632ms)
+  ✓  104 [mobile-chromium] › tests/e2e/site.spec.ts:140:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (727ms)
+  ✓  102 [mobile-chromium] › tests/e2e/site.spec.ts:126:5 › layout has no horizontal overflow and the arrival page passes axe (2.3s)
+(node:73272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:73282) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  105 [iphone-webkit] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (2.3s)
+  ✓  107 [iphone-webkit] › tests/e2e/arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (1.7s)
+  -  108 [iphone-webkit] › tests/e2e/arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  -  109 [iphone-webkit] › tests/e2e/arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ✓  106 [iphone-webkit] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (4.7s)
+  ✓  111 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:23:5 › hero stays within the viewport and responds to motion preference changes (2.0s)
+  ✓  110 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:5:5 › campaign hero presents its statement, identity and watch action (3.6s)
+  ✓  112 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:38:5 › active desktop pin reverts all reveal styles when motion is reduced (4.7s)
+  ✓  113 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:54:5 › mobile final frame and small no-JS frame fit the viewport (4.8s)
+  ✓  114 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:71:5 › touch tablet scrolls naturally without a hero pin (3.4s)
+  ✓  116 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:95:5 › unpublished photo fixture makes no preview image requests (1.3s)
+  ✓  115 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:81:5 › desktop enhancement begins with rear silhouette and both headline lines initialized (3.8s)
+  ✓  117 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:113:5 › short landscape keeps copy and watch action visible and separate (2.2s)
+  ✓  118 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:127:5 › keyboard focus never lands on a visually hidden hero control (4.9s)
+  ✓  120 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:162:5 › header watch opens native Film Room and restores its opener focus (4.4s)
+  ✓  119 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:145:5 › watch action is unobstructed in static responsive frames (16.0s)
+  ✓  122 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:205:5 › header mobile controls fit and menu preserves keyboard, inert and scroll behavior (9.8s)
+  ✓  121 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:177:5 › header keeps all nine destinations within desktop widths (19.1s)
+  ✓  123 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:254:5 › header home name includes the visible athlete wordmark (3.7s)
+  ✓  125 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:305:5 › desktop static statement emphasizes the second line and keeps editorial controls together (2.4s)
+  ✓  126 [iphone-webkit] › tests/e2e/arrival-fallback.spec.ts:6:5 › an unpublished film still reveals its fallback and reverses the aperture (1.9s)
+  ✓  124 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:286:5 › stadium reveals subtly, reverses and restores its static state on reduced motion (8.3s)
+  -  128 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:21:5 › Playoffs desktop places official Anna mark left of copy
+  ✓  127 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:3:5 › film resolves to an uncropped native player in the second story scene (5.8s)
+  ✓  129 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player (5.8s)
+  ✓  130 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:33:7 › short 240px viewport retains a finite, usable player (5.0s)
+  ✓  131 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:33:7 › short 360px viewport retains a finite, usable player (5.1s)
+  ✓  133 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:120:5 › a direct film anchor stays framed through resize and yields to manual scrolling (7.7s)
+  -  134 [iphone-webkit] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route
+  ✓  135 [iphone-webkit] › tests/e2e/completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (3.5s)
+  ✓  132 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:55:5 › cinema reverses its reveal and recomputes framing after a height and width resize (16.4s)
+  ✓  136 [iphone-webkit] › tests/e2e/completion.spec.ts:37:5 › scrolling releases the field pin and responsive motion leaves a readable document (3.8s)
+  ✓  137 [iphone-webkit] › tests/e2e/completion.spec.ts:52:5 › snapshot offers a selectable address when clipboard access is unavailable (1.3s)
+  ✓  139 [iphone-webkit] › tests/e2e/playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (2.7s)
+  ✓  140 [iphone-webkit] › tests/e2e/playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (2.2s)
+  ✓  138 [iphone-webkit] › tests/e2e/playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (6.8s)
+  ✓  142 [iphone-webkit] › tests/e2e/playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (2.1s)
+  ✓  143 [iphone-webkit] › tests/e2e/playoffs.spec.ts:71:5 › hero downloads exactly one browser-supported responsive image source (1.1s)
+  ✓  141 [iphone-webkit] › tests/e2e/playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (4.7s)
+  ✓  144 [iphone-webkit] › tests/e2e/playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (2.0s)
+  ✓  145 [iphone-webkit] › tests/e2e/site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (4.6s)
+  -  147 [iphone-webkit] › tests/e2e/site.spec.ts:38:5 › reduced motion removes pinning and keeps film unloaded
+  -  148 [iphone-webkit] › tests/e2e/site.spec.ts:49:5 › switching to reduced motion removes an active desktop pin
+  ✓  146 [iphone-webkit] › tests/e2e/site.spec.ts:29:5 › navigation remains usable while the arrival experience is scrolled (5.4s)
+  ✓  149 [iphone-webkit] › tests/e2e/site.spec.ts:58:5 › normal-motion iPhone does not request film before the cinema is near (2.1s)
+  ✓  150 [iphone-webkit] › tests/e2e/site.spec.ts:67:5 › current navigation keeps the media gallery and story destinations reachable (3.5s)
+  ✓  151 [iphone-webkit] › tests/e2e/site.spec.ts:84:5 › direct film, journey, and off-field anchors resolve to visible viewport bounds (4.7s)
+  ✓  153 [iphone-webkit] › tests/e2e/site.spec.ts:117:5 › NIL inquiry anchor remains reachable and contains no invented contact links (3.0s)
+  ✓  154 [iphone-webkit] › tests/e2e/site.spec.ts:126:5 › layout has no horizontal overflow and the arrival page passes axe (3.1s)
+  ✓  155 [iphone-webkit] › tests/e2e/site.spec.ts:133:5 › recruiting and playoffs remain directly navigable (1.2s)
+  ✓  156 [iphone-webkit] › tests/e2e/site.spec.ts:140:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (3.0s)
+(node:76883) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  157 [reduced-motion] › tests/e2e/arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (730ms)
+  ✓  158 [reduced-motion] › tests/e2e/arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (1.1s)
+  ✓  159 [reduced-motion] › tests/e2e/arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (393ms)
+  -  160 [reduced-motion] › tests/e2e/arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  -  161 [reduced-motion] › tests/e2e/arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ✓  162 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:5:5 › campaign hero presents its statement, identity and watch action (944ms)
+  ✓  163 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:23:5 › hero stays within the viewport and responds to motion preference changes (832ms)
+  ✓  164 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:38:5 › active desktop pin reverts all reveal styles when motion is reduced (1.4s)
+  ✓  165 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:54:5 › mobile final frame and small no-JS frame fit the viewport (1.0s)
+  ✓  166 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:71:5 › touch tablet scrolls naturally without a hero pin (689ms)
+  ✓  167 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:81:5 › desktop enhancement begins with rear silhouette and both headline lines initialized (917ms)
+  ✓  168 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:95:5 › unpublished photo fixture makes no preview image requests (364ms)
+  ✓  169 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:113:5 › short landscape keeps copy and watch action visible and separate (449ms)
+  ✓  170 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:127:5 › keyboard focus never lands on a visually hidden hero control (1.2s)
+  ✓  171 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:145:5 › watch action is unobstructed in static responsive frames (2.9s)
+  ✓  172 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:162:5 › header watch opens native Film Room and restores its opener focus (919ms)
+  ✓  173 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:177:5 › header keeps all nine destinations within desktop widths (3.5s)
+  ✘  152 [iphone-webkit] › tests/e2e/site.spec.ts:108:5 › two-worlds links still reach field and personal content (31.0s)
+(node:77556) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  175 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:254:5 › header home name includes the visible athlete wordmark (1.3s)
+  ✓  176 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:286:5 › stadium reveals subtly, reverses and restores its static state on reduced motion (2.6s)
+  ✘  174 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:205:5 › header mobile controls fit and menu preserves keyboard, inert and scroll behavior (6.8s)
+  ✓  177 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:305:5 › desktop static statement emphasizes the second line and keeps editorial controls together (1.2s)
+(node:77827) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  178 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:3:5 › film resolves to an uncropped native player in the second story scene (786ms)
+  ✓  180 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:21:5 › Playoffs desktop places official Anna mark left of copy (453ms)
+  ✓  179 [reduced-motion] › tests/e2e/arrival-fallback.spec.ts:6:5 › an unpublished film still reveals its fallback and reverses the aperture (520ms)
+  ✓  181 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player (911ms)
+  ✓  182 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:33:7 › short 240px viewport retains a finite, usable player (907ms)
+  ✓  183 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:33:7 › short 360px viewport retains a finite, usable player (887ms)
+  ✓  184 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:55:5 › cinema reverses its reveal and recomputes framing after a height and width resize (1.9s)
+  ✓  185 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:120:5 › a direct film anchor stays framed through resize and yields to manual scrolling (1.6s)
+  ✓  187 [reduced-motion] › tests/e2e/completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (1.3s)
+  ✓  186 [reduced-motion] › tests/e2e/completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (2.4s)
+  ✓  189 [reduced-motion] › tests/e2e/completion.spec.ts:52:5 › snapshot offers a selectable address when clipboard access is unavailable (521ms)
+  ✓  188 [reduced-motion] › tests/e2e/completion.spec.ts:37:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.3s)
+  ✓  191 [reduced-motion] › tests/e2e/playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (1.1s)
+  ✓  190 [reduced-motion] › tests/e2e/playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (1.5s)
+  ✓  192 [reduced-motion] › tests/e2e/playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (758ms)
+  ✓  194 [reduced-motion] › tests/e2e/playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (974ms)
+  ✓  195 [reduced-motion] › tests/e2e/playoffs.spec.ts:71:5 › hero downloads exactly one browser-supported responsive image source (340ms)
+  ✓  196 [reduced-motion] › tests/e2e/playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (607ms)
+  ✓  193 [reduced-motion] › tests/e2e/playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (2.8s)
+  ✓  197 [reduced-motion] › tests/e2e/site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (1.5s)
+  ✓  198 [reduced-motion] › tests/e2e/site.spec.ts:29:5 › navigation remains usable while the arrival experience is scrolled (1.6s)
+  -  200 [reduced-motion] › tests/e2e/site.spec.ts:49:5 › switching to reduced motion removes an active desktop pin
+  -  201 [reduced-motion] › tests/e2e/site.spec.ts:58:5 › normal-motion iPhone does not request film before the cinema is near
+  ✓  199 [reduced-motion] › tests/e2e/site.spec.ts:38:5 › reduced motion removes pinning and keeps film unloaded (893ms)
+  ✓  202 [reduced-motion] › tests/e2e/site.spec.ts:67:5 › current navigation keeps the media gallery and story destinations reachable (905ms)
+  ✓  203 [reduced-motion] › tests/e2e/site.spec.ts:84:5 › direct film, journey, and off-field anchors resolve to visible viewport bounds (938ms)
+  ✓  204 [reduced-motion] › tests/e2e/site.spec.ts:108:5 › two-worlds links still reach field and personal content (1.0s)
+  ✓  205 [reduced-motion] › tests/e2e/site.spec.ts:117:5 › NIL inquiry anchor remains reachable and contains no invented contact links (981ms)
+  ✓  207 [reduced-motion] › tests/e2e/site.spec.ts:133:5 › recruiting and playoffs remain directly navigable (642ms)
+  ✓  208 [reduced-motion] › tests/e2e/site.spec.ts:140:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (768ms)
+  ✓  206 [reduced-motion] › tests/e2e/site.spec.ts:126:5 › layout has no horizontal overflow and the arrival page passes axe (2.1s)
+
+
+  1) [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:205:5 › header mobile controls fit and menu preserves keyboard, inert and scroll behavior
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true }) with timeout 5000ms
+      - waiting for getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true })
+        14 × locator resolved to <a href="#arrival" aria-label="Home">…</a>
+           - unexpected value "inactive"
+
+
+      242 |   await expect(page.locator('.site-content')).toHaveJSProperty('inert', false);
+      243 |   await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
+    > 244 |   await expect(page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true })).toBeFocused();
+          |                                                                                                                            ^
+      245 |   await page.setViewportSize({ width: 390, height: 568 });
+      246 |   const watch = page.locator('.header-watch');
+      247 |   await watch.focus();
+        at /workspace/ZK17/tests/e2e/arrival-campaign.spec.ts:244:124
+
+    Error Context: test-results/arrival-campaign-header-mo-cd37a-d-inert-and-scroll-behavior-desktop-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/arrival-campaign-header-mo-cd37a-d-inert-and-scroll-behavior-desktop-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/arrival-campaign-header-mo-cd37a-d-inert-and-scroll-behavior-desktop-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:305:5 › desktop static statement emphasizes the second line and keeps editorial controls together
+
+    Error: expect(received).toBeLessThanOrEqual(expected)
+
+    Expected: <= 601.453125
+    Received:    819.84375
+
+      321 |   const shortWatch = (await hero.getByRole('button', { name: /watch.*film/i }).boundingBox())!;
+      322 |   const shortFooter = (await hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/).boundingBox())!;
+    > 323 |   expect(shortWatch.y + shortWatch.height).toBeLessThanOrEqual(shortFooter.y);
+          |                                            ^
+      324 |   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(900);
+      325 |   await context.close();
+      326 | });
+        at /workspace/ZK17/tests/e2e/arrival-campaign.spec.ts:323:44
+
+    Error Context: test-results/arrival-campaign-desktop-s-22c41-editorial-controls-together-desktop-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/arrival-campaign-desktop-s-22c41-editorial-controls-together-desktop-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/arrival-campaign-desktop-s-22c41-editorial-controls-together-desktop-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [iphone-webkit] › tests/e2e/site.spec.ts:108:5 › two-worlds links still reach field and personal content
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Browser logs:
+
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err]
+    [pid=73294][err] ** (MiniBrowser:73300): CRITICAL **: 14:48:38.788: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+    [pid=73294][err]
+    [pid=73294][err] ** (WPEWebProcess:75310): WARNING **: 14:48:41.196: Unable to get session D-Bus address: Cannot autolaunch D-Bus without X11 $DISPLAY
+    [pid=73294][err]
+    [pid=73294][err] ** (WPEWebProcess:75310): WARNING **: 14:48:41.318: WebKit wasn't able to find the GL video sink dependencies. Hardware-accelerated zero-copy video rendering can't be enabled without this plugin.
+    [pid=73294][err] [W][14:48:41.347406] pw.conf      | [          conf.c: 1182 try_load_conf()] can't load config client.conf: No such file or directory
+    [pid=73294][err] [E][14:48:41.347431] pw.conf      | [          conf.c: 1215 pw_conf_load_conf_for_context()] can't load config client.conf: No such file or directory
+    [pid=73294][err] [ALSOFT] (EE) Failed to create PipeWire event context (errno: 2)
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err]
+    [pid=73294][err] ** (MiniBrowser:73300): CRITICAL **: 14:48:46.474: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+    [pid=73294][err]
+    [pid=73294][err] ** (MiniBrowser:73300): CRITICAL **: 14:48:46.783: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+    [pid=73294][err]
+    [pid=73294][err] ** (WPEWebProcess:75460): WARNING **: 14:48:50.153: Unable to get session D-Bus address: Cannot autolaunch D-Bus without X11 $DISPLAY
+    [pid=73294][err]
+    [pid=73294][err] ** (WPEWebProcess:75460): WARNING **: 14:48:50.164: WebKit wasn't able to find the GL video sink dependencies. Hardware-accelerated zero-copy video rendering can't be enabled without this plugin.
+    [pid=73294][err]
+    [pid=73294][err] ** (MiniBrowser:73300): CRITICAL **: 14:48:50.280: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+    [pid=73294][err]
+    [pid=73294][err] ** (MiniBrowser:73300): CRITICAL **: 14:48:54.152: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+    [pid=73294][err]
+    [pid=73294][err] ** (MiniBrowser:73300): CRITICAL **: 14:49:00.989: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+    [pid=73294][err]
+    [pid=73294][err] ** (MiniBrowser:73300): CRITICAL **: 14:49:03.145: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+    [pid=73294][err]
+    [pid=73294][err] ** (MiniBrowser:73300): CRITICAL **: 14:49:04.311: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+    [pid=73294][err]
+    [pid=73294][err] ** (MiniBrowser:73300): CRITICAL **: 14:49:06.364: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+    [pid=73294][err]
+    [pid=73294][err] ** (WPEWebProcess:76179): WARNING **: 14:49:08.546: Unable to get session D-Bus address: Cannot autolaunch D-Bus without X11 $DISPLAY
+    [pid=73294][err]
+    [pid=73294][err] ** (WPEWebProcess:76179): WARNING **: 14:49:08.759: WebKit wasn't able to find the GL video sink dependencies. Hardware-accelerated zero-copy video rendering can't be enabled without this plugin.
+    [pid=73294][err] [W][14:49:08.790336] pw.conf      | [          conf.c: 1182 try_load_conf()] can't load config client.conf: No such file or directory
+    [pid=73294][err] [E][14:49:08.790360] pw.conf      | [          conf.c: 1215 pw_conf_load_conf_for_context()] can't load config client.conf: No such file or directory
+    [pid=73294][err] [ALSOFT] (EE) Failed to create PipeWire event context (errno: 2)
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294][err]
+    [pid=73294][err] ** (MiniBrowser:73300): CRITICAL **: 14:49:11.821: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+    [pid=73294][err]
+    [pid=73294][err] ** (MiniBrowser:73300): CRITICAL **: 14:49:15.294: WebKitWebView is-controlled-by-automation set but automation is not allowed in the context, falling back to default session.
+    [pid=73294][err]
+    [pid=73294][err] ** (WPEWebProcess:76543): WARNING **: 14:49:18.590: Unable to get session D-Bus address: Cannot autolaunch D-Bus without X11 $DISPLAY
+    [pid=73294][err]
+    [pid=73294][err] ** (WPEWebProcess:76543): WARNING **: 14:49:18.629: WebKit wasn't able to find the GL video sink dependencies. Hardware-accelerated zero-copy video rendering can't be enabled without this plugin.
+    [pid=73294][err] [W][14:49:18.651304] pw.conf      | [          conf.c: 1182 try_load_conf()] can't load config client.conf: No such file or directory
+    [pid=73294][err] [E][14:49:18.651329] pw.conf      | [          conf.c: 1215 pw_conf_load_conf_for_context()] can't load config client.conf: No such file or directory
+    [pid=73294][err] [ALSOFT] (EE) Failed to create PipeWire event context (errno: 2)
+    [pid=73294][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=73294][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=73294][err] ALSA lib conf.c:5205:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=73294][err] ALSA lib conf.c:5728:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=73294][err] ALSA lib pcm.c:2722:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=73294] <gracefully close start>
+    [pid=73294] <process did exit: exitCode=0, signal=null>
+    [pid=73294] starting temporary directories cleanup
+    Call log:
+      - waiting for getByRole('link', { name: 'EXPLORE PERSONAL' })
+        - locator resolved to <a href="#offfield-personal">EXPLORE PERSONAL</a>
+      - attempting click action
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - element is outside of the viewport
+        - retrying click action
+        - waiting 20ms
+        2 × waiting for element to be visible, enabled and stable
+          - element is visible, enabled and stable
+          - scrolling into view if needed
+          - done scrolling
+          - element is outside of the viewport
+        - retrying click action
+          - waiting 100ms
+        50 × waiting for element to be visible, enabled and stable
+           - element is visible, enabled and stable
+           - scrolling into view if needed
+           - done scrolling
+           - element is outside of the viewport
+         - retrying click action
+           - waiting 500ms
+        - waiting for element to be visible, enabled and stable
+
+
+      111 |   await page.getByRole('link', { name: 'SEE HIM ON FIELD' }).click();
+      112 |   await expect(page).toHaveURL(/#on-field$/);
+    > 113 |   await page.getByRole('link', { name: 'EXPLORE PERSONAL' }).click();
+          |                                                              ^
+      114 |   await expect(page).toHaveURL(/#offfield-personal$/);
+      115 | });
+      116 |
+        at /workspace/ZK17/tests/e2e/site.spec.ts:113:62
+
+    Error Context: test-results/site-two-worlds-links-still-reach-field-and-personal-content-iphone-webkit/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/site-two-worlds-links-still-reach-field-and-personal-content-iphone-webkit/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/site-two-worlds-links-still-reach-field-and-personal-content-iphone-webkit/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:205:5 › header mobile controls fit and menu preserves keyboard, inert and scroll behavior
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true }) with timeout 5000ms
+      - waiting for getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true })
+        14 × locator resolved to <a href="#arrival" aria-label="Home">…</a>
+           - unexpected value "inactive"
+
+
+      242 |   await expect(page.locator('.site-content')).toHaveJSProperty('inert', false);
+      243 |   await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
+    > 244 |   await expect(page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true })).toBeFocused();
+          |                                                                                                                            ^
+      245 |   await page.setViewportSize({ width: 390, height: 568 });
+      246 |   const watch = page.locator('.header-watch');
+      247 |   await watch.focus();
+        at /workspace/ZK17/tests/e2e/arrival-campaign.spec.ts:244:124
+
+    Error Context: test-results/arrival-campaign-header-mo-cd37a-d-inert-and-scroll-behavior-reduced-motion/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/arrival-campaign-header-mo-cd37a-d-inert-and-scroll-behavior-reduced-motion/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/arrival-campaign-header-mo-cd37a-d-inert-and-scroll-behavior-reduced-motion/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:205:5 › header mobile controls fit and menu preserves keyboard, inert and scroll behavior
+    [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:305:5 › desktop static statement emphasizes the second line and keeps editorial controls together
+    [iphone-webkit] › tests/e2e/site.spec.ts:108:5 › two-worlds links still reach field and personal content
+    [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:205:5 › header mobile controls fit and menu preserves keyboard, inert and scroll behavior
+  18 skipped
+  186 passed (4.2m)

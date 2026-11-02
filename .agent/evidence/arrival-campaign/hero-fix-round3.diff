@@ -1,0 +1,82 @@
+diff --git a/.agent/evidence/arrival-campaign/hero-report.md b/.agent/evidence/arrival-campaign/hero-report.md
+index b129d8f..face91d 100644
+--- a/.agent/evidence/arrival-campaign/hero-report.md
++++ b/.agent/evidence/arrival-campaign/hero-report.md
+@@ -19,10 +19,16 @@ Read all six Important findings in `hero-task-review.md`. Replaced the mobile/to
+
+ Regression evidence: before repairs, `npx playwright test tests/e2e/arrival-campaign.spec.ts --project=desktop-chromium --workers=1` against the controller's febf184 build failed as expected for mobile viewport fit (footer bottom 874.25 at 844px), touch tablet pin, and initial rear/portrait opacity; three other tests passed. Added active-pin-to-reduced cleanup, mobile/no-JS viewport bounds, touch tablet, initial sequence and disabled-photo fixture checks. After repairs, `npx playwright test tests/e2e/arrival-campaign.spec.ts --project=desktop-chromium --grep 'unpublished photo fixture' --workers=1` passed using a freshly bundled real component, confirming no preview photo requests. `npx tsc --noEmit` and scoped eslint (same files as above) passed. The remaining new browser regressions require the controller's rebuilt server for green verification; no post-repair integrated green is claimed here. Visual crop and mark legibility also require controller review after rebuild.
+
+ ## Repair round 2 and owner source photographs
+
+ Read `hero-task-rereview-round1.md` and the controller's targeted round 1 log. Added short-landscape and real Tab regressions; both failed against d9bae81 (landscape copy exceeded viewport and Tab focused an opacity-zero control). Existing controller run also exposed six failures: watch interaction overlapped in desktop/reduced layouts and desktop contexts inherited touch in mobile/WebKit projects. Desktop contexts now explicitly request non-touch input; watch tests use a static reduced-motion frame, with additional unobstructed watch checks across desktop, mobile, 320px and short landscape.
+
+ The owner supplied authentic full-body and other photographs via `content/arrival-campaign.ts`. `app/page.tsx` passes them only when preview media is enabled. The hero selects front, rear white jersey, close-up and profile campaign assets, with responsive 320/640 SVG source selection; the existing photo still supplies the film poster. The SVGs preserve supplied photo pixels and retain transparent areas obscured in the original upload. Generic legacy/approved fallback photos remain supported. The full-body front is displayed at native aspect; campaign cutouts do not use the earlier coarse polygon or rectangular fading masks. Identity, school, and footer now use the requested literal separators. Copy is bottom-aligned with a compact short-landscape arrangement, and the hero pin starts below the actual wrapper header clearance. GSAP autoAlpha removes hidden controls from keyboard focus until their reveal.
+
+ Validation: `npx tsc --noEmit` and scoped eslint including `app/page.tsx` passed. The freshly bundled unpublished-photo fixture passed and checks both old review crops and campaign paths for requests. Post-repair integrated browser tests and visual inspection await the controller rebuild; the asset module and files are controller-owned and were not included in this commit. The controller should verify picture choice, exact crop and mark legibility at all sizes, plus keyboard/pin cleanup and watch interaction.
++
++## Repair round 3
++
++Read `hero-task-rereview-round2.md`. The original full-body upload has repost UI covering parts of the lower legs. The central image now fades between 54% and 65% of its presentation, before the first source occlusion; lower legs and boots are deliberately hidden rather than reconstructed. A radial fade blends the left close-up into the surrounding scene. The gated `campaign-stadium` source is a decorative background with a subdued grayscale treatment and responsive 320/640 source selection; there is no hardcoded review path or photo in public fallback mode.
++
++Visual inspection: a freshly bundled component fixture produced `/tmp/arrival-r3-1536.png` and `/tmp/arrival-r3-390.png` with the owner sources. The knee holes and detached boots are concealed, face/#17 remain visible, and stadium texture and ground show behind the collage. These are isolated fixture screenshots with fallback Arial and no site header, not final integration screenshots; controller should verify real fonts, pin and header after rebuilding. `npx tsc --noEmit` and scoped eslint passed; `npx playwright test tests/e2e/arrival-campaign.spec.ts --project=desktop-chromium --grep 'unpublished photo fixture' --workers=1` passed. Controller owns the integrated 40-check rerun and visual review.
+diff --git a/components/arrival-hero.module.css b/components/arrival-hero.module.css
+index 7ce781a..17b3979 100644
+--- a/components/arrival-hero.module.css
++++ b/components/arrival-hero.module.css
+@@ -18,10 +18,16 @@
+ .rear[data-campaign-photo]{left:25%;top:18%;width:22%;height:44%;filter:brightness(.7)}
+ .athlete[data-campaign-photo]{left:48%;top:2%;width:25%;height:91%;aspect-ratio:auto}
+ .right[data-campaign-photo]{right:2%;top:17%;width:23%;height:49%;filter:brightness(.8)}
+ .copy{top:auto;bottom:15%}
+ .footer,.scroll,.preview{pointer-events:none}.scroll{pointer-events:auto}
+ @media(max-width:899px){.left[data-campaign-photo]{width:48%;height:38%}.rear[data-campaign-photo]{left:1%;top:13%;width:30%;height:38%}.athlete[data-campaign-photo]{left:25%;top:1%;width:52%;height:55%}.right[data-campaign-photo]{right:-5%;top:11%;width:30%;height:36%}.copy{top:auto;bottom:18%}}
+ @media(max-width:560px){.athlete[data-campaign-photo]{left:22%;width:58%;height:55%}.copy{bottom:18%}}
+ @media(max-height:650px){.copy{top:auto;bottom:16%}.copy h1{font-size:clamp(44px,8vw,78px)}}
+ @media(max-height:650px) and (min-width:700px){.athlete[data-campaign-photo]{left:51%;top:2%;width:23%;height:90%}}
+ @media(max-height:450px) and (orientation:landscape){.copy{bottom:15%;left:5%}.copy h1{font-size:clamp(36px,6vw,52px);line-height:.8}.identity{margin-bottom:5px}.school{margin:5px 0}.watch{padding:6px 10px;font-size:8px}.footer{bottom:3%;left:5%}.scroll{bottom:3%;left:auto;right:5%}.preview{display:none}.athlete[data-campaign-photo]{left:53%;width:22%;height:90%}}
++
++/* Fade before the source upload's UI occlusions; no missing body detail is reconstructed. */
++.athlete[data-campaign-photo]{mask-image:linear-gradient(to bottom,#000 54%,transparent 65%)}
++.left[data-campaign-photo]{mask-image:radial-gradient(ellipse at 50% 42%,#000 28%,transparent 72%)}
++.stadium[data-campaign-photo]{inset:0;opacity:.32;filter:grayscale(1) brightness(.55);mask-image:linear-gradient(to bottom,transparent 0%,#000 22%,#000 100%)}
++.stadium[data-campaign-photo] img{object-fit:cover;object-position:center bottom!important}
+diff --git a/components/arrival-hero.tsx b/components/arrival-hero.tsx
+index ac2fe7f..6ccbf8d 100644
+--- a/components/arrival-hero.tsx
++++ b/components/arrival-hero.tsx
+@@ -10,33 +10,34 @@ import styles from './arrival-hero.module.css';
+ type Photo = PreviewPhoto | ScenePhoto;
+ type Props = { profile: PublicProfile; photo?: Photo; photos?: Photo[]; onWatch: (button: HTMLButtonElement) => void };
+
+ function Layer({ photo, layer, className, decorative = true }: { photo?: Photo; layer: string; className: string; decorative?: boolean }) {
+   if (!photo) return null;
+   const base = photo.kind === 'preview' && /-706\.webp$/.test(photo.src) ? photo.src.replace(/-706\.webp$/, '') : null;
+   const campaign = photo.kind === 'preview' && photo.id.startsWith('campaign-');
+   const campaignBase = campaign ? photo.src.replace(/-640\.svg$/, '') : null;
+   const focal = photo.kind === 'preview' ? photo.focal : photo.focalPoint;
+   return <div className={`${styles.layer} ${className} ${layer === 'athlete' && photo.kind === 'preview' && photo.id === 'arrival' ? styles.arrivalCutout : ''}`} data-arrival-layer={layer} data-campaign-photo={campaign || undefined}>
+-    <picture>{campaignBase && <source srcSet={`${campaignBase}-320.svg 320w, ${campaignBase}-640.svg 640w`} sizes={layer === 'athlete' ? '(max-width: 700px) 48vw, 25vw' : '(max-width: 700px) 25vw, 30vw'} />} {base && <source type="image/avif" srcSet={[360, 540, 706].map(width => `${base}-${width}.avif ${width}w`).join(', ')} sizes="(max-width: 700px) 80vw, 45vw" />}
++    <picture>{campaignBase && <source srcSet={`${campaignBase}-320.svg 320w, ${campaignBase}-640.svg 640w`} sizes={layer === 'stadium' ? '100vw' : layer === 'athlete' ? '(max-width: 700px) 48vw, 25vw' : '(max-width: 700px) 25vw, 30vw'} />} {base && <source type="image/avif" srcSet={[360, 540, 706].map(width => `${base}-${width}.avif ${width}w`).join(', ')} sizes="(max-width: 700px) 80vw, 45vw" />}
+       <Image src={photo.src} alt={decorative ? '' : photo.alt} width={photo.width} height={photo.height} loading={layer === 'athlete' ? 'eager' : 'lazy'} fetchPriority={layer === 'athlete' ? 'high' : 'auto'} unoptimized style={{ objectPosition: focal }} />
+     </picture>
+   </div>;
+ }
+
+ export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Props) {
+   const root = useRef<HTMLElement>(null);
+   useArrivalHeroMotion(root);
+   const find = (id: string) => photos.find(item => item.id === id);
+   const athlete = find('campaign-front') ?? photo ?? find('arrival');
+   return <section ref={root} id="arrival" data-arrival-hero className={styles.hero} aria-labelledby="hero-title">
+     <div className={styles.atmosphere} aria-hidden="true" />
++    <Layer photo={find('campaign-stadium')} layer="stadium" className={styles.stadium} />
+     <Layer photo={find('campaign-closeup') ?? athlete} layer="portrait-left" className={styles.left} />
+     <Layer photo={find('campaign-rear') ?? find('throwing')} layer="rear" className={styles.rear} />
+     <div className={styles.mark} data-arrival-layer="mark" aria-hidden="true" style={{ maskImage: `url(${brand.monogram.src})`, WebkitMaskImage: `url(${brand.monogram.src})` }} />
+     <Layer photo={athlete} layer="athlete" className={styles.athlete} decorative={false} />
+     <Layer photo={find('campaign-profile') ?? find('portrait')} layer="portrait-right" className={styles.right} />
+     <Layer photo={find('running') ?? find('on-field')} layer="action" className={styles.action} />
+     <div className={styles.copy} data-arrival-statement>
+       <p data-arrival-detail className={styles.identity}>{profile.name.toUpperCase()} / QB {profile.number}</p>
+       <h1 id="hero-title"><span>MAKE THEM</span>{" "}<span>REMEMBER.</span></h1>
+       <p data-arrival-detail className={styles.school}>ANNA COYOTES / {profile.position.toUpperCase()}</p>

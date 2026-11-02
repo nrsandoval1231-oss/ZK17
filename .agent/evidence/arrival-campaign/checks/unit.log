@@ -1,0 +1,71 @@
+
+> zk17-official@0.1.0 test
+> tsx --test tests/*.test.ts
+
+✔ every distributed campaign photo is included in the preview-only release boundary (51.686558ms)
+✔ cover scale fills the cinema using the contained video dimensions (1.29483ms)
+✔ unmeasured or invalid dimensions never produce an unsafe video transform (0.332934ms)
+▶ public NIL inquiry contact
+  ✔ stays unpublished without a record and fails closed at every approval gate (1.368583ms)
+  ✔ returns an approved email with an encoded NIL inquiry subject (1.112844ms)
+  ✔ accepts only clean HTTPS contact URLs (0.64409ms)
+  ✔ rejects malformed email destinations and control characters (0.290298ms)
+  ✔ renders only a pending message when no public contact or social profiles exist (7.586917ms)
+  ✔ renders every approved social profile as an accessible external link (1.325947ms)
+  ✔ renders the approved contact action with its exact safe destination (0.866786ms)
+✔ public NIL inquiry contact (15.056594ms)
+▶ public content eligibility
+  ✔ keeps only source-backed approved media and linked highlights (2.425169ms)
+  ✔ requires source, date, season, and game count before stats appear (0.425776ms)
+  ✔ keeps uncommitted as the only commitment state and holds empty offers/partners/socials (0.530219ms)
+  ✔ uses only source-backed approved photo assignments and prefers them over preview fallbacks (1.34377ms)
+  ✔ keeps commitment content absent by default and renders only an approved enabled record (13.993008ms)
+✔ public content eligibility (20.812567ms)
+✔ uses the exact owner upload for Anna while preserving its dimensions and artwork with an exterior alpha mask (148.298178ms)
+✔ still blocks public release when the original logo is missing (12.762526ms)
+✔ shows only verified game relationships backed by rights-approved public film (3.164565ms)
+✔ recognizes the captured 2026 placeholder page without publishing or touching timestamps (66.882442ms)
+✔ imports explicit qualifiers including a one-sided pair and does not invent a kickoff (54.059841ms)
+✔ uses stable school identities, imports explicit winners and advances through the existing graph (39.924001ms)
+✔ repeated pending or final polls are semantic no-ops (100.744505ms)
+✔ rejects conflicting finals atomically and does not mutate its input (52.065944ms)
+✔ rejects wrong season, division, missing nodes, changed seeds, broken edges and spoofed UIL link (45.170957ms)
+✔ does not turn numeric scores without an explicit winner into finals (50.994588ms)
+✔ rejects changed identity, unknown partial markup, and duplicate schools (202.565389ms)
+✔ accepts only linked game JSON-LD with matching identities and explicit timezone (158.277118ms)
+✔ the CLI dry-run, atomic apply, replay, repeat and conflict path use isolated artifacts (1961.927457ms)
+✔ imports a controlled complete 64-team, 63-final fixture through the championship (839.519815ms)
+✔ retrieval permits only an explicitly inventoried same-host canonical redirect (6.776776ms)
+✔ rejects conflicting kickoff times from two linked game details in one source snapshot (30.430099ms)
+✔ the existing manual retriever retains successful metadata and detects repeated snapshots (586.701858ms)
+✔ semantic duplicate detection still validates source and verification metadata (55.109834ms)
+✔ an identical secondary qualifier does not replace official evidence or block unrelated facts (68.956492ms)
+✔ preserves both winners advanced in a batch when the next matchup names only one participant (36.260212ms)
+✔ late game details preserve an immutable final and do not stall subsequent polls (55.971951ms)
+✔ both workflow file guards reject unexpected paths and Git failures without external filters (636.089633ms)
+▶ 2026 UIL tournament
+  ✔ represents 64 slots and all 63 games in the exact six-round graph (11.493961ms)
+  ✔ normalizes known aliases without fuzzy merging other schools (2.291141ms)
+  ✔ advances only an explicitly verified final winner and leaves unrelated games untouched (10.833166ms)
+  ✔ rejects tied, incomplete, negative or unverified finals and winners in live games (27.494889ms)
+  ✔ keeps incomplete live scores provisional and supports postponed/canceled games (18.514409ms)
+  ✔ rejects unknown or missing opponents and an invalid winner (3.661413ms)
+  ✔ rejects conflicting evidence without silently replacing an official result (2.925205ms)
+  ✔ does not seed Anna on alignment alone and never assumes later advancement (3.790015ms)
+  ✔ filters complete regions and keeps state rounds accessible (0.512243ms)
+  ✔ rejects stale and future verification timestamps (2.6643ms)
+  ✔ rejects missing propagated winners and placements outside the team district (3.360508ms)
+  ✔ rejects corrupted graph relationships and advancement conflicts (3.54351ms)
+✔ 2026 UIL tournament (99.831355ms)
+▶ release export media boundary
+  ✔ blocks preview files in public sources and in exported output even when preview mode is disabled (31.264898ms)
+  ✔ fails prebuild when commitment reveal is enabled without a published approved announcement (152.894563ms)
+✔ release export media boundary (185.901904ms)
+ℹ tests 51
+ℹ suites 4
+ℹ pass 51
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6735.913332

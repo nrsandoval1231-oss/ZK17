@@ -1,0 +1,267 @@
+diff --git a/.agent/evidence/arrival-campaign/hero-report.md b/.agent/evidence/arrival-campaign/hero-report.md
+index a5415ef..1ab25ce 100644
+--- a/.agent/evidence/arrival-campaign/hero-report.md
++++ b/.agent/evidence/arrival-campaign/hero-report.md
+@@ -5,10 +5,16 @@ Owner: Task 1 implementer (Codex). Base: current feature branch at task start. T
+ Files: `components/arrival-hero.tsx`, `components/arrival-hero.module.css`, `components/use-arrival-hero-motion.ts`, hero replacement in `components/arrival-experience.tsx`, gated photo prop in `components/site-experience.tsx`, `tests/e2e/arrival-campaign.spec.ts`, and headline assertion in `tests/e2e/site.spec.ts`.
+
+ Decision: retain original authentic 706px review crops and use source-preserving masks; no full-body black-uniform source was accessible. The center therefore remains a waist-up portrait, a material fidelity limitation. The collection is passed from the existing preview/approved media gate and accepts replacement sources later. The mark masks the existing approved monogram. Primary image uses eager fetch priority without Next's picture fallback preload, avoiding a redundant preload candidate. Hero animation is an isolated GSAP matchMedia timeline, with a 185% desktop pin and natural mobile/short-viewport scrolling; cleanup responds to motion and viewport changes. Film code remains unchanged except removal of old hero-specific animation and markup.
+
+ Validation:
+ - `npx playwright test tests/e2e/arrival-campaign.spec.ts --project=desktop-chromium --workers=1` before implementation: expected red, old headline was `ZEPHYRKREYE`; the motion/overflow test passed. The server at port 3100 still served the old static build after implementation, so no post-change browser result is claimed. Controller will rebuild and validate.
+ - `npx tsc --noEmit` passed after implementation.
+ - `npx eslint components/arrival-hero.tsx components/use-arrival-hero-motion.ts components/arrival-experience.tsx components/site-experience.tsx tests/e2e/arrival-campaign.spec.ts tests/e2e/site.spec.ts` passed after implementation.
+
+ Remaining: integrated browser checks, visual evaluation, motion/pin transitions and rights-gated public mode verification are controller-owned. No production build, full suite, push, merge or deploy performed by this worker.
++
++## Repair round 1
++
++Read all six Important findings in `hero-task-review.md`. Replaced the mobile/touch scrub with the complete static frame and require both hover and a fine pointer for desktop pinning. Hero height now accounts for the existing wrapper's responsive header padding, including 320×568. The enhanced desktop frame initializes every portrait, detail and headline line before the scrub timeline; the first frame emphasizes the rear crop. GSAP matchMedia restores styles and pin when preferences or input/viewport conditions change. Radial masks soften secondary crop edges, the approved mark has more unobstructed space, and a source-coordinate polygon isolates the authentic arrival crop while preserving original pixels. Other approved photos use a generic soft mask rather than an arrival-specific polygon.
++
++Regression evidence: before repairs, `npx playwright test tests/e2e/arrival-campaign.spec.ts --project=desktop-chromium --workers=1` against the controller's febf184 build failed as expected for mobile viewport fit (footer bottom 874.25 at 844px), touch tablet pin, and initial rear/portrait opacity; three other tests passed. Added active-pin-to-reduced cleanup, mobile/no-JS viewport bounds, touch tablet, initial sequence and disabled-photo fixture checks. After repairs, `npx playwright test tests/e2e/arrival-campaign.spec.ts --project=desktop-chromium --grep 'unpublished photo fixture' --workers=1` passed using a freshly bundled real component, confirming no preview photo requests. `npx tsc --noEmit` and scoped eslint (same files as above) passed. The remaining new browser regressions require the controller's rebuilt server for green verification; no post-repair integrated green is claimed here. Visual crop and mark legibility also require controller review after rebuild.
+diff --git a/components/arrival-hero.module.css b/components/arrival-hero.module.css
+index 5586fc9..4a0986a 100644
+--- a/components/arrival-hero.module.css
++++ b/components/arrival-hero.module.css
+@@ -1,13 +1,13 @@
+-.hero{position:relative;isolation:isolate;overflow:hidden;min-height:720px;height:100svh;background:#09090d;color:#f4f3f3}
+-.atmosphere{position:absolute;inset:0;background:radial-gradient(ellipse at 56% 35%,#47395c 0,transparent 40%),radial-gradient(ellipse at 98% 80%,#301a40,transparent 40%),#09090d}
+-.layer{position:absolute;overflow:hidden;pointer-events:none}.layer picture,.layer img{display:block;width:100%;height:100%}.layer img{object-fit:cover}.layer:after{content:'';position:absolute;inset:0;pointer-events:none}
+-.left{left:-4%;top:8%;width:39%;height:45%;opacity:.58;filter:grayscale(1) brightness(.62);mask-image:linear-gradient(90deg,#000 50%,transparent),linear-gradient(#000 45%,transparent);mask-composite:intersect}.left img{object-position:40% 20%!important;transform:scale(1.45)}
+-.rear{left:25%;top:25%;width:23%;height:36%;filter:brightness(.68) saturate(.7);mask-image:linear-gradient(90deg,transparent,#000 20%,#000 75%,transparent),linear-gradient(#000 55%,transparent);mask-composite:intersect}
+-.mark{position:absolute;z-index:1;left:35%;top:12%;width:54%;height:56%;background:linear-gradient(155deg,#fafafa 4%,#55535b 25%,#e6e3e7 38%,#727078 48%,#fcfcfd 57%,#37343e 79%,#bab9c0);mask-size:contain;mask-position:center;mask-repeat:no-repeat;filter:drop-shadow(10px 18px 10px #000);opacity:.8}
+-.athlete{z-index:3;left:46%;top:10%;width:27%;height:80%;mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent),linear-gradient(#000 65%,transparent);mask-composite:intersect}.athlete img{object-position:43% 28%!important}
+-.right{z-index:2;right:1%;top:22%;width:25%;height:46%;filter:brightness(.75);mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent),linear-gradient(#000 65%,transparent);mask-composite:intersect}
+-.action{z-index:4;right:4%;top:57%;width:23%;height:30%;filter:brightness(.8);mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent),linear-gradient(transparent,#000 20%,#000 70%,transparent);mask-composite:intersect}
+-.copy{position:absolute;z-index:5;left:7%;top:49%;width:52%;text-shadow:0 3px 20px #000}.identity,.school,.footer,.scroll,.preview{font:700 10px/1.4 var(--body);letter-spacing:.18em}.identity i,.school i,.footer i{display:inline-block;width:5px;height:5px;margin:0 9px 2px;background:#9e63fa;transform:rotate(45deg)}.identity{margin:0 0 16px}.copy h1{margin:0;font:900 clamp(70px,9.1vw,150px)/.77 var(--display);letter-spacing:-.035em}.copy h1 span{display:block;white-space:nowrap}.school{margin:22px 0}.watch{border:1px solid #aaa;background:#101015b8;color:#fff;padding:13px 17px;font:700 10px var(--body);letter-spacing:.12em;cursor:pointer}.watch span{margin-left:18px;color:#b087ff}.footer{position:absolute;z-index:5;bottom:5%;left:7%;margin:0}.scroll{position:absolute;z-index:5;bottom:5%;left:50%;color:#ddd;text-decoration:none}.scroll span{margin-left:8px}.preview{position:absolute;z-index:5;right:3%;bottom:5%;font-size:7px;color:#aaa}
+-@media(max-width:899px){.hero{height:850px;min-height:100svh}.left{width:58%;height:36%}.rear{left:3%;top:20%;width:33%;height:31%}.mark{left:22%;top:10%;width:75%;height:45%}.athlete{left:32%;top:10%;width:53%;height:53%}.right{right:-9%;top:20%;width:34%;height:36%}.action{display:none}.copy{left:6%;top:59%;width:90%}.copy h1{font-size:clamp(58px,12.2vw,100px)}.footer{left:6%;bottom:4%}.scroll{left:auto;right:6%;bottom:4%}.preview{bottom:1%;font-size:6px}}
+-@media(max-width:500px){.hero{height:780px}.left{opacity:.35}.rear{opacity:.5}.right{display:none}.athlete{left:23%;width:70%;top:9%;height:53%}.mark{left:13%;width:88%}.copy{top:58%}.copy h1{font-size:clamp(54px,12.1vw,70px)}.identity,.school,.footer,.scroll{font-size:8px}.scroll{bottom:8%}.footer{bottom:4%}}
+-@media(max-height:649px) and (min-width:900px){.hero{height:700px}}
++.hero{position:relative;isolation:isolate;overflow:hidden;height:calc(100svh - 96px);min-height:0;background:#09090d;color:#f4f3f3}
++.atmosphere{position:absolute;inset:0;background:radial-gradient(ellipse at 56% 35%,#332b40 0,transparent 40%),radial-gradient(ellipse at 98% 80%,#24152f,transparent 40%),#09090d}
++.layer{position:absolute;overflow:hidden;pointer-events:none}.layer picture,.layer img{display:block;width:100%;height:100%}.layer img{object-fit:cover}
++.left{left:-4%;top:0;width:39%;height:49%;opacity:.58;filter:grayscale(1) brightness(.62);mask-image:radial-gradient(ellipse at 40% 42%,#000 20%,transparent 72%)}.left img{object-position:40% 20%!important;transform:scale(1.45)}
++.rear{left:25%;top:18%;width:25%;height:43%;filter:brightness(.68) saturate(.7);mask-image:radial-gradient(ellipse at 50% 48%,#000 20%,transparent 72%)}
++.mark{position:absolute;z-index:1;left:26%;top:8%;width:57%;height:58%;background:linear-gradient(155deg,#fafafa 4%,#55535b 25%,#e6e3e7 38%,#727078 48%,#fcfcfd 57%,#37343e 79%,#bab9c0);mask-size:contain;mask-position:center;mask-repeat:no-repeat;filter:drop-shadow(10px 18px 10px #000);opacity:.9}
++.athlete{z-index:3;left:48%;top:5%;width:34%;height:auto;aspect-ratio:706/690;mask-image:radial-gradient(ellipse at center,#000 35%,transparent 75%)}.arrivalCutout{clip-path:polygon(35% 25%,40% 20%,45% 19%,50% 21%,55% 27%,57% 36%,67% 40%,73% 54%,76% 72%,73% 100%,22% 100%,19% 72%,22% 52%,27% 40%,34% 36%);mask-image:linear-gradient(#000 77%,transparent)}.athlete img{object-fit:fill}
++.right{z-index:2;right:0;top:16%;width:27%;height:53%;filter:brightness(.75);mask-image:radial-gradient(ellipse at 50% 45%,#000 20%,transparent 72%)}
++.action{z-index:4;right:3%;top:52%;width:25%;height:35%;filter:brightness(.8);mask-image:radial-gradient(ellipse at center,#000 12%,transparent 72%)}
++.copy{position:absolute;z-index:5;left:7%;top:49%;width:52%;text-shadow:0 3px 20px #000}.identity,.school,.footer,.scroll,.preview{font:700 10px/1.4 var(--body);letter-spacing:.18em}.identity i,.school i,.footer i{display:inline-block;width:5px;height:5px;margin:0 9px 2px;background:#9e63fa;transform:rotate(45deg)}.identity{margin:0 0 16px}.copy h1{margin:0;font:900 clamp(70px,9.1vw,150px)/.77 var(--display);letter-spacing:-.035em}.copy h1 span{display:block;white-space:nowrap}.school{margin:22px 0}.watch{border:1px solid #aaa;background:#101015b8;color:#fff;padding:13px 17px;font:700 10px var(--body);letter-spacing:.12em;cursor:pointer}.watch span{margin-left:18px;color:#b087ff}.footer{position:absolute;z-index:5;bottom:4%;left:7%;margin:0}.scroll{position:absolute;z-index:5;bottom:4%;left:50%;color:#ddd;text-decoration:none}.scroll span{margin-left:8px}.preview{position:absolute;z-index:5;right:3%;bottom:4%;font-size:7px;color:#aaa}
++@media(max-width:899px){.hero{height:calc(100svh - 80px)}.left{width:58%;height:40%}.rear{left:3%;top:13%;width:36%;height:34%}.mark{left:9%;top:1%;width:81%;height:48%}.athlete{left:24%;top:0;width:68%}.right{right:-9%;top:12%;width:38%;height:38%}.action{display:none}.copy{left:6%;top:55%;width:90%}.copy h1{font-size:clamp(54px,12.2vw,100px)}.footer{left:6%;bottom:4%}.scroll{left:auto;right:6%;bottom:4%}.preview{bottom:1%;font-size:6px}}
++@media(max-width:560px){.hero{height:calc(100svh - 76px)}.left{opacity:.35}.rear{opacity:.5}.right{display:none}.athlete{left:18%;width:78%}.mark{left:5%;width:87%}.identity,.school,.footer,.scroll{font-size:8px}.scroll{bottom:9%}.footer{bottom:4%}}
++@media(max-height:650px){.copy{top:49%}.copy h1{font-size:clamp(48px,10vw,84px)}.identity{margin-bottom:8px}.school{margin:10px 0}.watch{padding:9px 12px}.athlete{width:min(60%, 48vh);left:35%}.footer{bottom:3%}}
+diff --git a/components/arrival-hero.tsx b/components/arrival-hero.tsx
+index 6f151ba..889ae05 100644
+--- a/components/arrival-hero.tsx
++++ b/components/arrival-hero.tsx
+@@ -7,41 +7,41 @@ import { brand } from '@/content/brand';
+ import { useArrivalHeroMotion } from './use-arrival-hero-motion';
+ import styles from './arrival-hero.module.css';
+
+ type Photo = PreviewPhoto | ScenePhoto;
+ type Props = { profile: PublicProfile; photo?: Photo; photos?: Photo[]; onWatch: (button: HTMLButtonElement) => void };
+
+ function Layer({ photo, layer, className, decorative = true }: { photo?: Photo; layer: string; className: string; decorative?: boolean }) {
+   if (!photo) return null;
+   const base = photo.kind === 'preview' ? photo.src.replace(/-706\.webp$/, '') : null;
+   const focal = photo.kind === 'preview' ? photo.focal : photo.focalPoint;
+-  return <div className={`${styles.layer} ${className}`} data-arrival-layer={layer}>
++  return <div className={`${styles.layer} ${className} ${layer === 'athlete' && photo.kind === 'preview' && photo.id === 'arrival' ? styles.arrivalCutout : ''}`} data-arrival-layer={layer}>
+     <picture>{base && <source type="image/avif" srcSet={[360, 540, 706].map(width => `${base}-${width}.avif ${width}w`).join(', ')} sizes="(max-width: 700px) 80vw, 45vw" />}
+       <Image src={photo.src} alt={decorative ? '' : photo.alt} width={photo.width} height={photo.height} loading={layer === 'athlete' ? 'eager' : 'lazy'} fetchPriority={layer === 'athlete' ? 'high' : 'auto'} unoptimized style={{ objectPosition: focal }} />
+     </picture>
+   </div>;
+ }
+
+ export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Props) {
+   const root = useRef<HTMLElement>(null);
+   useArrivalHeroMotion(root);
+   const find = (id: string) => photos.find(item => item.id === id);
+   const athlete = photo ?? find('arrival');
+   return <section ref={root} id="arrival" data-arrival-hero className={styles.hero} aria-labelledby="hero-title">
+     <div className={styles.atmosphere} aria-hidden="true" />
+     <Layer photo={athlete} layer="portrait-left" className={styles.left} />
+     <Layer photo={find('throwing')} layer="rear" className={styles.rear} />
+     <div className={styles.mark} data-arrival-layer="mark" aria-hidden="true" style={{ maskImage: `url(${brand.monogram.src})`, WebkitMaskImage: `url(${brand.monogram.src})` }} />
+     <Layer photo={athlete} layer="athlete" className={styles.athlete} decorative={false} />
+     <Layer photo={find('portrait')} layer="portrait-right" className={styles.right} />
+     <Layer photo={find('running') ?? find('on-field')} layer="action" className={styles.action} />
+     <div className={styles.copy} data-arrival-statement>
+-      <p className={styles.identity}>{profile.name.toUpperCase()} <i /> QB {profile.number}</p>
++      <p data-arrival-detail className={styles.identity}>{profile.name.toUpperCase()} <i /> QB {profile.number}</p>
+       <h1 id="hero-title"><span>MAKE THEM</span>{" "}<span>REMEMBER.</span></h1>
+-      <p className={styles.school}>ANNA COYOTES <i /> {profile.position.toUpperCase()}</p>
+-      <button className={styles.watch} type="button" onClick={event => onWatch(event.currentTarget)}>WATCH THE FILM <span aria-hidden="true">↗</span></button>
++      <p data-arrival-detail className={styles.school}>ANNA COYOTES <i /> {profile.position.toUpperCase()}</p>
++      <button data-arrival-detail className={styles.watch} type="button" onClick={event => onWatch(event.currentTarget)}>WATCH THE FILM <span aria-hidden="true">↗</span></button>
+     </div>
+-    <p className={styles.footer}>PREPARATION <i /> DISCIPLINE <i /> RESULTS</p>
+-    <a className={styles.scroll} href="#film-room">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+-    {athlete?.kind === 'preview' && <span className={styles.preview}>PREVIEW CROP · ORIGINAL PENDING</span>}
++    <p data-arrival-detail className={styles.footer}>PREPARATION <i /> DISCIPLINE <i /> RESULTS</p>
++    <a data-arrival-detail className={styles.scroll} href="#film-room">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
++    {athlete?.kind === 'preview' && <span data-arrival-detail className={styles.preview}>PREVIEW CROP · ORIGINAL PENDING</span>}
+   </section>;
+ }
+diff --git a/components/use-arrival-hero-motion.ts b/components/use-arrival-hero-motion.ts
+index 5a1d0ef..24d5e0f 100644
+--- a/components/use-arrival-hero-motion.ts
++++ b/components/use-arrival-hero-motion.ts
+@@ -3,30 +3,38 @@
+ import { useLayoutEffect, type RefObject } from 'react';
+ import { gsap } from 'gsap';
+ import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
+   useLayoutEffect(() => {
+     const element = root.current;
+     if (!element) return;
+     gsap.registerPlugin(ScrollTrigger);
+     const mm = gsap.matchMedia();
+-    mm.add({ motion: '(prefers-reduced-motion: no-preference)', desktop: '(min-width: 900px) and (min-height: 650px)' }, context => {
+-      if (!context.conditions?.motion) return;
+-      const desktop = Boolean(context.conditions.desktop);
++    mm.add('(prefers-reduced-motion: no-preference) and (min-width: 900px) and (min-height: 650px) and (hover: hover) and (pointer: fine)', () => {
+       const layer = (name: string) => element.querySelector(`[data-arrival-layer="${name}"]`);
++      const rear = layer('rear');
++      const mark = layer('mark');
++      const portraits = ['athlete', 'portrait-left', 'portrait-right', 'action'].map(layer).filter(Boolean);
+       const lines = element.querySelectorAll('#hero-title span');
++      const details = element.querySelectorAll('[data-arrival-detail]');
++      // Initialize all children together; staggered tweens alone leave later lines visible.
++      gsap.set(portraits, { opacity: 0, yPercent: 3 });
++      gsap.set(lines, { opacity: 0, yPercent: 10 });
++      gsap.set(details, { opacity: 0 });
++      gsap.set(mark, { opacity: rear ? 0 : .15, scale: 1.08 });
++      if (rear) gsap.set(rear, { opacity: .65, xPercent: -8 });
+       const timeline = gsap.timeline({ scrollTrigger: {
+-        id: 'arrival-hero', trigger: element, start: 'top top', end: desktop ? '+=185%' : 'bottom top',
+-        scrub: .6, pin: desktop, invalidateOnRefresh: true,
++        id: 'arrival-hero', trigger: element, start: 'top top', end: '+=185%',
++        scrub: .6, pin: true, invalidateOnRefresh: true,
+       } });
+-      const rear = layer('rear');
+-      if (rear) timeline.fromTo(rear, { opacity: .15, xPercent: -8 }, { opacity: .7, xPercent: 0, duration: 1 }, 0);
+-      timeline.fromTo(layer('mark'), { opacity: .2, scale: 1.08 }, { opacity: .8, scale: 1, duration: 1 }, .5)
+-        .fromTo([layer('athlete'), layer('portrait-left'), layer('portrait-right'), layer('action')].filter(Boolean), { opacity: .35, yPercent: 3 }, { opacity: 1, yPercent: 0, stagger: .12, duration: 1 }, 1)
+-        .fromTo(lines, { opacity: .55, yPercent: 10 }, { opacity: 1, yPercent: 0, stagger: .3, duration: .7 }, 1.6)
++      if (rear) timeline.to(rear, { opacity: .75, xPercent: 0, duration: 1 }, 0);
++      timeline.to(mark, { opacity: .9, scale: 1, duration: 1 }, .5)
++        .to(portraits, { opacity: 1, yPercent: 0, stagger: .12, duration: 1 }, 1)
++        .to(details, { opacity: 1, duration: .5 }, 1.5)
++        .to(lines, { opacity: 1, yPercent: 0, stagger: .3, duration: .7 }, 1.6)
+         .to(element.querySelectorAll('[data-arrival-layer]'), { scale: .98, duration: .8 }, 2.7);
+       return () => timeline.kill();
+     });
+     return () => mm.revert();
+   }, [root]);
+ }
+diff --git a/tests/e2e/arrival-campaign.spec.ts b/tests/e2e/arrival-campaign.spec.ts
+index 7bf5dc5..ce5e309 100644
+--- a/tests/e2e/arrival-campaign.spec.ts
++++ b/tests/e2e/arrival-campaign.spec.ts
+@@ -1,11 +1,12 @@
+ import { expect, test } from '@playwright/test';
++import { build } from 'esbuild';
+
+ test('campaign hero presents its statement, identity and watch action', async ({ page }) => {
+   await page.goto('/#arrival');
+   const hero = page.locator('#arrival');
+   await expect(hero.locator('#hero-title')).toHaveText(/MAKE THEM\s*REMEMBER\./);
+   await expect(hero).toContainText('ZEPHYR KREYE');
+   await expect(hero).toContainText('ANNA COYOTES');
+   await expect(hero).toContainText('PREPARATION');
+   await expect(hero.locator('[data-arrival-layer="mark"]')).toBeVisible();
+   if (await page.locator('main').getAttribute('data-preview-media') === 'enabled') {
+@@ -17,10 +18,91 @@ test('campaign hero presents its statement, identity and watch action', async ({
+   await expect(hero.getByRole('button', { name: /watch.*film/i })).toBeFocused();
+ });
+
+ test('hero stays within the viewport and responds to motion preference changes', async ({ page }) => {
+   await page.goto('/#arrival');
+   await page.emulateMedia({ reducedMotion: 'reduce' });
+   await expect(page.locator('#hero-title')).toBeVisible();
+   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+   await expect.poll(() => page.locator('#arrival').evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
+ });
++
++async function withinViewport(locator: import('@playwright/test').Locator, height: number) {
++  const box = await locator.boundingBox();
++  expect(box).not.toBeNull();
++  expect(box!.y).toBeGreaterThanOrEqual(0);
++  expect(box!.y + box!.height).toBeLessThanOrEqual(height + 1);
++}
++
++test('active desktop pin reverts all reveal styles when motion is reduced', async ({ browser }) => {
++  const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, reducedMotion: 'no-preference' });
++  const page = await context.newPage();
++  await page.goto('/');
++  await page.evaluate(() => scrollTo(0, 400));
++  const hero = page.locator('#arrival');
++  await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
++  await page.emulateMedia({ reducedMotion: 'reduce' });
++  await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
++  for (const el of await hero.locator('#hero-title span, [data-arrival-layer="athlete"]').all()) {
++    await expect(el).toHaveCSS('opacity', '1');
++    await expect(el).toHaveCSS('transform', 'none');
++  }
++  await context.close();
++});
++
++test('mobile final frame and small no-JS frame fit the viewport', async ({ browser }) => {
++  for (const [width, height, javaScriptEnabled] of [[390, 844, true], [320, 568, false]] as const) {
++    const context = await browser.newContext({ viewport: { width, height }, isMobile: true, hasTouch: true, javaScriptEnabled });
++    const page = await context.newPage();
++    await page.goto('/#arrival');
++    const hero = page.locator('#arrival');
++    await withinViewport(hero.locator('#hero-title'), height);
++    await withinViewport(hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/), height);
++    await withinViewport(hero.locator('[data-arrival-layer="athlete"]'), height);
++    await expect(hero.locator('[data-arrival-layer="athlete"] img')).toHaveAttribute('alt', /number 17/i);
++    await expect(hero.locator('#hero-title span').first()).toHaveCSS('opacity', '1');
++    await expect(hero.locator('#hero-title span').last()).toHaveCSS('opacity', '1');
++    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
++    await context.close();
++  }
++});
++
++test('touch tablet scrolls naturally without a hero pin', async ({ browser }) => {
++  const context = await browser.newContext({ viewport: { width: 1024, height: 768 }, isMobile: true, hasTouch: true });
++  const page = await context.newPage();
++  await page.goto('/');
++  await page.evaluate(() => scrollTo(0, 300));
++  await expect(page.locator('#arrival')).not.toHaveClass(/pin-spacer/);
++  await expect.poll(() => page.locator('#arrival').evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
++  await context.close();
++});
++
++test('desktop enhancement begins with rear silhouette and both headline lines initialized', async ({ browser }) => {
++  const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, reducedMotion: 'no-preference' });
++  const page = await context.newPage();
++  await page.goto('/');
++  const hero = page.locator('#arrival');
++  await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
++  const opacity = (selector: string) => hero.locator(selector).evaluate(el => Number(getComputedStyle(el).opacity));
++  expect(await opacity('[data-arrival-layer="rear"]')).toBeGreaterThan(await opacity('[data-arrival-layer="athlete"]'));
++  expect(await opacity('#hero-title span:first-child')).toBe(0);
++  expect(await opacity('#hero-title span:last-child')).toBe(0);
++  await context.close();
++});
++
++
++test('unpublished photo fixture makes no preview image requests', async ({ page }) => {
++  const bundle = await build({ entryPoints: ['tests/e2e/arrival-fixture.tsx'], bundle: true, write: false, outdir: '/tmp/arrival-fixture', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' } });
++  const requests: string[] = [];
++  page.on('request', request => { if (/\/media\/(arrival|portrait|throwing|running|on-field)-/.test(request.url())) requests.push(request.url()); });
++  await page.route('**/arrival-fixture*', async route => {
++    const path = new URL(route.request().url()).pathname;
++    if (path.endsWith('.js') || path.endsWith('.css')) {
++      const file = bundle.outputFiles!.find(file => file.path.endsWith(path.endsWith('.js') ? '.js' : '.css'))!;
++      await route.fulfill({ contentType: path.endsWith('.js') ? 'text/javascript' : 'text/css', body: Buffer.from(file.contents) });
++    } else await route.fulfill({ contentType: 'text/html', body: '<!doctype html><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/arrival-fixture.css"><div id="root"></div><script src="/arrival-fixture.js"></script>' });
++  });
++  await page.goto('/arrival-fixture');
++  await expect(page.locator('#hero-title')).toHaveText(/MAKE THEM/);
++  await expect(page.locator('#arrival img')).toHaveCount(0);
++  expect(requests).toEqual([]);
++});

@@ -1,6 +1,6 @@
 # THE ARRIVAL Campaign Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Implement the owner's approved photographic campaign hero and cinematic scroll reveal without changing the approved second film scene.
 **Architecture:** New isolated hero component/style/motion owner mounted by ArrivalExperience. Existing static export, photo gates, and film timeline remain authoritative. Repo `.agent` task packets and independent review provide the requested harness; controller owns evidence and integration.
@@ -29,27 +29,27 @@
 
 **Files:** new `components/arrival-hero.tsx`, `components/arrival-hero.module.css`, `components/use-arrival-hero-motion.ts`; modify `components/arrival-experience.tsx`, `components/site-experience.tsx` only the gated props/interface needed for hero; new `tests/e2e/arrival-campaign.spec.ts`; update stale hero-title assertions in existing site tests only as necessary.
 **Interfaces:** `ArrivalHero({profile:PublicProfile,photo?:PreviewPhoto|ScenePhoto,photos?:Array<PreviewPhoto|ScenePhoto>,onWatch:(button:HTMLButtonElement)=>void})`. Existing ArrivalExperience film props unchanged except optional photos collection.
-- [ ] Write browser regressions for statement and identity, authentic image sources, responsive bounds/face/#17, static reduced motion, dynamic pin removal, direct #arrival, and native watch action.
-- [ ] Demonstrate relevant assertions fail against current output.
-- [ ] Implement layered photographic composition and responsive dedicated mobile arrangement using source-preserving CSS masks.
-- [ ] Implement isolated five-beat motion with responsive cleanup and static fallback.
-- [ ] Keep all PR #8 film logic intact; run targeted lint/typecheck and report.
-- [ ] Independent task review: spec and quality; repair important findings.
+- [x] Write browser regressions for statement and identity, authentic image sources, responsive bounds/face/#17, static reduced motion, dynamic pin removal, direct #arrival, and native watch action.
+- [x] Demonstrate relevant assertions fail against current output.
+- [x] Implement layered photographic composition and responsive dedicated mobile arrangement using source-preserving CSS masks.
+- [x] Implement isolated five-beat motion with responsive cleanup and static fallback.
+- [x] Keep all PR #8 film logic intact; run targeted lint/typecheck and report.
+- [x] Independent task review: spec and quality; repair important findings.
 
 ### Task 2: Reference-aligned header integration
 
 **Files:** `components/site-experience.tsx` Header only, `app/globals.css` scoped header rules, relevant navigation tests. Preserve Task1 photo plumbing.
 **Interfaces:** Header accepts onWatch callback; `onWatch` opens existing native Film Room dialog and returns focus to real opener. Keep all original scene links plus recruiting/playoffs; add athlete wordmark and outlined WATCH FILM action. No invented reference-only About/Academics routes.
-- [ ] Add behavior checks for header watch action and preserved nav/menu focus.
-- [ ] Implement responsive header on the existing component, maintaining mobile inert/Escape/focus handling and short viewport header behavior.
-- [ ] Run scoped lint/typecheck/tests, then independent task review.
+- [x] Add behavior checks for header watch action and preserved nav/menu focus.
+- [x] Implement responsive header on the existing component, maintaining mobile inert/Escape/focus handling and short viewport header behavior.
+- [x] Run scoped lint/typecheck/tests, then independent task review.
 
 ### Task 3: Integrated validation, visual inspection and PR
 
 **Files:** controller-owned capture/performance script, `.agent/evidence/arrival-campaign/`, `artifacts/arrival-campaign/`, docs and PR.
-- [ ] Freeze source and check video/logo hashes against recorded baseline.
-- [ ] Run unit suite, lint, typecheck, production build and full browser suite; repair failures, never skip to obtain green.
-- [ ] Capture initial/mid/final/reverse/resize hero and preserved film at desktop/tablet/mobile, reduced motion and no JS; inspect images against owner reference.
-- [ ] Record actual LCP/CLS, image transfers and console/accessibility results with limitations.
-- [ ] Independent whole-branch review and address actionable issues.
+- [x] Freeze source and check video/logo hashes against recorded baseline.
+- [x] Run unit suite, lint, typecheck, production build and full browser suite; repair failures, never skip to obtain green.
+- [x] Capture initial/mid/final/reverse/resize hero and preserved film at desktop/tablet/mobile, reduced motion and no JS; inspect images against owner reference.
+- [x] Record actual LCP/CLS, image transfers and console/accessibility results with limitations.
+- [x] Independent whole-branch review and address actionable issues.
 - [ ] Commit, push feature branch, open new review PR with measured evidence and authentic-photo fidelity limitation. No merge/deploy.

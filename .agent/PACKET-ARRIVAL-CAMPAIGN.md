@@ -6,4 +6,4 @@ Harness: parent controller owns planning, source hashes, integration/QA, evidenc
 Ruling: implement the owner's already-approved mockup directly; do not reopen ideation/approval menus. Existing 706px authentic review crops are the best available alternative to missing full-body/studio source photos, as allowed in the brief. Preserve photo rights gates; document fidelity limitation. Never create missing athlete detail. Canonical sword monogram beats reference's different stylized mark.
 Baseline film SHA256 a783dcb56f3a11684a3253ddc8c0768035bb8c9d390e0061a29935c20af8965f.
 Baseline canonical logo SHA256 8db76a9993ca32755d1e87a083b2371aa91ef5bd203765b694bae9e881b73593.
-Task 1 READY. Task 2 WAITING. Integrated QA WAITING. Final critic WAITING.
+Task1/Task2 independently reviewed and repaired. Final critic visual findings repaired; scoped keyboard finding repaired by controller and actual four-project regression passes. Productd46943f frozen; final fullsuite and PR pending. See currentstate/QA/ledger.

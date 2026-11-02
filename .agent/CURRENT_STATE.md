@@ -1,12 +1,7 @@
-# THE ARRIVAL — preview delivered, owner visual review next
+# THE ARRIVAL campaign — final verification
 
-PR #5: https://github.com/nrsandoval1231-oss/ZK17/pull/5 (draft).
-Branch feature/athlete-showcase-every-second-20261101. Implementation62d77511bde03fae91576bd6c2ceb09b610cc415. Immutable review preview https://91c43688.zk17-review.pages.dev; deployment91c43688-6ae2-42fb-a691-c27468d81aed. Current follow-up changes are evidence/documentation only.
-
-Canonical references: PACKET-ARRIVAL.md, WORK_GRAPH.md, ../docs/ARRIVAL_QA.md, ARRIVAL_FINAL_REVIEW.md. Replaced state retained in evidence/arrival/prior-state.md and Git history. Three Luna low builders, Astra escalation and a separate independent Astra final critic.
-
-Local build/typecheck/lint/29units passed; final Playwright96pass16intentional skips0fail. Independent final review PASS with product hashes in evidence/arrival/critic-source-manifest.json. Source video hash unchanged. Earlier failures/repairs retained honestly.
-
-Published preview verified: homepage/recruiting/playoffs200+noindex; original MP4/portrait/mark hashes match; native dialog/focus/Playoffs journeys pass touch-mobile Chromium/WebKit. Four remote capture audits show actual advancing muted playback,0preapproach requests,0axe,0overflow,0runtime errors. Receipt evidence/arrival/PREVIEW_RECEIPT.json; screenshots ../artifacts/arrival-preview/. Remote main remained6fe5f24; no merge/production promotion.
-
-Next: owner reviews actual scroll sequence on physical iPhone before merge. Physical Safari smoothness/Low Power Mode/thermal behavior and owner creative approval UNKNOWN. Existing photo-rights/content gates remain; no unverified statistics/contact/commitment claims introduced. Timing/tokens UNKNOWN where not measured; metrics in evidence/arrival/metrics.json.
+Owner task: approved cinematic reference and campaign brief; authentic Zpics.zip sources. Branch feat/arrival-campaign-hero, base merged PR8 910bfa5. Product frozen at d46943f.
+Harness: .agent/PACKET-ARRIVAL-CAMPAIGN.md; sequential bounded hero/header implementers, independent task reviews, separate whole-branch critic, one visual fix agent and scoped re-review, controller integration repairs/verification. Existing user authorization is new review PR; no campaign merge/deploy.
+Hero/header task reviews pass. Final critic accepted visual fixes but caught keyboard scrolling; bounded controller repair and actual four-project keyboard regression pass. Controller adjudication and all failed/repair reports preserved. Full final suite194pass18existingconditional skips0fail; unit51/lint/typecheck/build pass. Twelve fresh capture scenarios pass; controller inspected desktop/mobile hero, film controls/framing and Playoffs logo placement. Seven original asset hashes unchanged.
+Source01 lower legs contain repost UI; presentation fades before occlusion, no reconstruction. Source resolution and authentic sword mark differ from canonical reference. New campaign assets are preview-only behind render and physical distribution gates. No generated athlete is included. Public-mode runtime validation b32ee35 has0heroimages/no campaignrequests; releaseaudit rejects84preview-only files.
+Evidence: docs/ARRIVAL_CAMPAIGN_QA.md, artifacts/arrival-campaign/, .agent/evidence/arrival-campaign/progress.md. Current captures and final logs replace earlier attempts only where explicitly labeled; failed evidence is retained. Physical device/thermal/field performance not verified. Final performance refresh and PR push/open pending; frozen product fully verified.
