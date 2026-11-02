@@ -72,7 +72,7 @@ for (const touch of [false, true]) {
     await expect.poll(() => opacity('white')).toBeGreaterThan(.35);
     await scrollBeat(.97);
     await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
-    await page.evaluate(() => scrollTo(0, 0));
+    await seekFixture(page, 0);
     for (const layer of ['lights', 'smoke-back', 'smoke-front', 'silhouette', 'athlete', 'running', 'rear', 'white']) await expect.poll(() => opacity(layer)).toBeLessThan(.01);
     await expect(hero.locator('[data-arrival-statement]')).toHaveCSS('opacity', '0');
     await context.close();
