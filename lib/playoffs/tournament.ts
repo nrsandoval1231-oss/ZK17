@@ -2,7 +2,7 @@ export type Region = 1 | 2 | 3 | 4;
 export type RoundIndex = 0 | 1 | 2 | 3 | 4 | 5;
 export type GameStatus = 'pending' | 'scheduled' | 'live' | 'final' | 'postponed' | 'canceled';
 export type Team = { id: string; name: string; aliases: string[]; district: number | null; region: Region | null; logo: string | null };
-export type Source = { id: string; label: string; url: string; authority: 'uil' | 'school' | 'secondary'; season: number; retrievedAt: string };
+export type Source = { id: string; label: string; url: string; authority: 'uil' | 'school' | 'secondary'; season: number; retrievedAt: string; evidence?: {url:string;sha256:string}[] };
 export type PlayoffGame = {
  id: string; season: number; division: '5A-DII'; region: Region | null; round: RoundIndex;
  homeTeamId: string | null; awayTeamId: string | null; homeScore: number | null; awayScore: number | null;
@@ -61,6 +61,7 @@ function validateSource(source:Source) {
  if(source.authority==='uil')assert(['www.uiltexas.org','uiltexas.org','realignment.uiltexas.org'].includes(url.hostname),'UIL source must belong to UIL');
  assert(['uil','school','secondary'].includes(source.authority),'Invalid source authority');
  assert(source.season===2026&&validDate(source.retrievedAt)&&Date.parse(source.retrievedAt)<=Date.now(),'Source season/retrieval timestamp invalid');
+ for(const evidence of source.evidence??[])assert(new URL(evidence.url).protocol==='https:'&&/^[a-f0-9]{64}$/.test(evidence.sha256),'Invalid source evidence URL/hash');
 }
 function validateGame(t:Tournament,g:PlayoffGame){
  const teamIds=new Set(t.teams.map(team=>team.id));
@@ -123,11 +124,13 @@ export function applyObservation(t:Tournament,input:Observation):Tournament {
  const patch=input; // Only the explicit domain fields below are copied.
  assert(!game.verifiedAt||Date.parse(input.verifiedAt)>=Date.parse(game.verifiedAt),'Stale verification cannot replace newer evidence');
  const fields=['homeTeamId','awayTeamId','homeScore','awayScore','status','kickoff','venue','winnerTeamId','sourceId','verifiedAt'] as const;
+ const same=fields.filter(key=>!['sourceId','verifiedAt'].includes(key)).every(key=>game[key]===patch[key]);
  if(game.status==='final'){
-  const same=fields.filter(key=>!['sourceId','verifiedAt'].includes(key)).every(key=>game[key]===patch[key]);
   assert(same,'Conflicting final result: explicit correction review required');
   return next;
  }
+ // Metadata is validated above; identical facts neither replace evidence nor add history.
+ if(same)return next;
  if(game.sourceId&&game.sourceId!==source.id){
   const prior=next.sources.find(s=>s.id===game.sourceId)!;
   assert(!(prior.authority!=='secondary'&&source.authority==='secondary'),'Secondary source cannot replace official evidence');

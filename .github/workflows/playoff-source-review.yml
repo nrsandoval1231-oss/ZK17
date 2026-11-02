@@ -1,27 +1,86 @@
-name: Retrieve official playoff sources for review
+name: Sync source-backed 2026 playoff data
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 */6 * * *'
+    # Four short polls per day only in playoff months; the gate below expires this season.
+    - cron: '17 */6 * 11,12 *'
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
 concurrency:
   group: playoff-source-review
   cancel-in-progress: false
 jobs:
   source-snapshot:
+    if: github.event_name == 'workflow_dispatch' || (github.event.schedule != '' && github.repository == 'nrsandoval1231-oss/ZK17')
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
+      - name: Limit scheduled polling to the 2026 playoff window
+        id: season
+        run: |
+          today=$(date -u +%Y%m%d)
+          if [ "${{ github.event_name }}" = workflow_dispatch ] || { [ "$today" -ge 20261101 ] && [ "$today" -le 20261220 ]; }; then
+            echo 'active=true' >> "$GITHUB_OUTPUT"
+          fi
       - uses: actions/checkout@v4
+        if: steps.season.outputs.active == 'true'
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Reuse the single data-review branch
+        if: steps.season.outputs.active == 'true'
+        run: |
+          git config user.name 'zk17-playoff-data'
+          git config user.email 'zk17-playoff-data@users.noreply.github.com'
+          if git ls-remote --exit-code --heads origin automation/playoff-data-2026; then
+            git fetch origin automation/playoff-data-2026
+            git switch -c automation/playoff-data-2026 origin/automation/playoff-data-2026
+            git merge origin/main --no-edit
+          else
+            git switch -c automation/playoff-data-2026
+          fi
+          # Validate the reused branch before executing any code from it.
+          unexpected=$(git diff --name-only origin/main | rg -v '^content/playoffs/(verified.json|evidence/latest-sync.json)$' || true)
+          test -z "$unexpected" || { echo 'Unexpected files on data branch; review required'; exit 1; }
       - uses: actions/setup-node@v4
+        if: steps.season.outputs.active == 'true'
         with:
           node-version: 22
-      - name: Retrieve allowlisted official documents without publishing results
-        run: node scripts/retrieve-playoff-sources.mjs
+          cache: npm
+      - name: Install locked dependencies
+        if: steps.season.outputs.active == 'true'
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Retrieve, normalize and transactionally validate published facts
+        if: steps.season.outputs.active == 'true'
+        run: |
+          npm run playoffs:sync -- --apply
+          node --import tsx scripts/update-playoffs.ts validate
+          node --import tsx --test tests/playoffs.test.ts tests/playoff-sync.test.ts
+      - name: Publish a data-only review PR when facts changed
+        if: steps.season.outputs.active == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! git diff --quiet -- content/playoffs/verified.json; then
+            mkdir -p content/playoffs/evidence
+            cp artifacts/playoffs/sync/report.json content/playoffs/evidence/latest-sync.json
+            git add content/playoffs/verified.json content/playoffs/evidence/latest-sync.json
+            git commit -m 'data: sync verified 2026 UIL-linked playoff facts'
+          fi
+          if ! git diff --quiet origin/main -- content/playoffs/verified.json; then
+            # Refuse unexpected changes in a reused automation branch.
+            unexpected=$(git diff --name-only origin/main | rg -v '^content/playoffs/(verified.json|evidence/latest-sync.json)$' || true)
+            test -z "$unexpected" || { echo 'Unexpected files on data branch; review required'; exit 1; }
+            git push origin HEAD:automation/playoff-data-2026
+            count=$(gh pr list --repo "$GITHUB_REPOSITORY" --base main --head automation/playoff-data-2026 --state open --json number --jq length)
+            if [ "$count" = 0 ]; then
+              gh pr create --repo "$GITHUB_REPOSITORY" --base main --head automation/playoff-data-2026 --title 'Update verified 2026 playoff bracket data' --body 'Source-backed playoff facts validated against the complete tournament graph. Evidence hashes, URLs, retrieval times and observations are retained in content/playoffs/evidence/latest-sync.json. Conflicts stop publication. Merge this data-only PR to use the existing deployment path. Automated token PRs may require checks to be run manually; GitHub must allow Actions to create pull requests.'
+            fi
+          fi
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: always() && steps.season.outputs.active == 'true'
         with:
           name: official-playoff-source-review
-          path: artifacts/playoffs/retrieval/
+          path: artifacts/playoffs/sync/
           retention-days: 14
