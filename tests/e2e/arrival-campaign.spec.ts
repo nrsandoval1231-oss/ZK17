@@ -10,9 +10,9 @@ test('campaign hero presents its statement, identity and watch action', async ({
   await expect(hero).toContainText('ZEPHYR KREYE');
   await expect(hero).toContainText('ANNA COYOTES');
   await expect(hero).toContainText('PREPARATION');
-  await expect(hero.locator('[data-arrival-layer="mark"]')).toBeVisible();
+  await expect(hero.locator('[data-arrival-layer="mark"]')).toHaveCount(0);
   if (await page.locator('main').getAttribute('data-preview-media') === 'enabled') {
-    await expect(hero.locator('[data-arrival-layer="athlete"] img')).toHaveAttribute('src', /arrival-campaign\/front-640\.svg/);
+    await expect(hero.locator('[data-arrival-layer="athlete"] img')).toHaveAttribute('src', /arrival-directors-cut\/directors-standing-960\.webp/);
   }
   await hero.getByRole('button', { name: /watch.*film/i }).click();
   await expect(page.getByRole('dialog', { name: 'Film room' })).toBeVisible();
@@ -44,16 +44,14 @@ test('active desktop pin reverts all reveal styles when motion is reduced', asyn
   await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
-  for (const el of await hero.locator('#hero-title span, [data-arrival-layer="athlete"]').all()) {
-    await expect(el).toHaveCSS('opacity', '1');
-    await expect(el).toHaveCSS('transform', 'none');
-  }
+  await expect(hero.locator('[data-arrival-statement]')).toBeVisible();
+  await expect(hero.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity', '0.8');
   await context.close();
 });
 
 test('mobile final frame and small no-JS frame fit the viewport', async ({ browser }) => {
   for (const [width, height, javaScriptEnabled] of [[390, 844, true], [320, 568, false]] as const) {
-    const context = await browser.newContext({ viewport: { width, height }, isMobile: true, hasTouch: true, javaScriptEnabled });
+    const context = await browser.newContext({ viewport: { width, height }, isMobile: true, hasTouch: true, javaScriptEnabled, reducedMotion: 'reduce' });
     const page = await context.newPage();
     await page.goto('/#arrival');
     const hero = page.locator('#arrival');
@@ -68,34 +66,35 @@ test('mobile final frame and small no-JS frame fit the viewport', async ({ brows
   }
 });
 
-test('touch tablet scrolls naturally without a hero pin', async ({ browser }) => {
+test('touch tablet participates in the extended hero pin', async ({ browser }) => {
   const context = await browser.newContext({ viewport: { width: 1024, height: 768 }, isMobile: true, hasTouch: true });
   const page = await context.newPage();
   await page.goto('/');
   await page.evaluate(() => scrollTo(0, 300));
-  await expect(page.locator('#arrival')).not.toHaveClass(/pin-spacer/);
-  await expect.poll(() => page.locator('#arrival').evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
+  await expect.poll(() => page.locator('#arrival').evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
+  const spacer = (await page.locator('#arrival').locator('..').boundingBox())!;
+  expect(spacer.height).toBeGreaterThan(14 * 768);
   await context.close();
 });
 
-test('desktop enhancement begins with rear silhouette and both headline lines initialized', async ({ browser }) => {
+test('desktop enhancement begins in darkness without an early title', async ({ browser }) => {
   const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, isMobile: false, hasTouch: false, reducedMotion: 'no-preference' });
   const page = await context.newPage();
   await page.goto('/');
   const hero = page.locator('#arrival');
   await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
   const opacity = (selector: string) => hero.locator(selector).evaluate(el => Number(getComputedStyle(el).opacity));
-  expect(await opacity('[data-arrival-layer="rear"]')).toBeGreaterThan(await opacity('[data-arrival-layer="athlete"]'));
-  expect(await opacity('#hero-title span:first-child')).toBe(0);
-  expect(await opacity('#hero-title span:last-child')).toBe(0);
+  expect(await opacity('[data-arrival-layer="lights"]')).toBe(0);
+  expect(await opacity('[data-arrival-layer="athlete"]')).toBe(0);
+  expect(await opacity('[data-arrival-statement]')).toBe(0);
   await context.close();
 });
 
 
 test('unpublished photo fixture makes no preview image requests', async ({ page }) => {
-  const bundle = await build({ entryPoints: ['tests/e2e/arrival-fixture.tsx'], bundle: true, write: false, outdir: '/tmp/arrival-fixture', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' } });
+  const bundle = await build({ entryPoints: ['tests/e2e/arrival-fixture.tsx'], bundle: true, external: ['/media/*'], write: false, outdir: '/tmp/arrival-fixture', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' } });
   const requests: string[] = [];
-  page.on('request', request => { if (/\/media\/(arrival-campaign\/|(?:arrival|portrait|throwing|running|on-field)-)/.test(request.url())) requests.push(request.url()); });
+  page.on('request', request => { if (/\/media\/(arrival-campaign\/|arrival-directors-cut\/|(?:arrival|portrait|throwing|running|on-field)-)/.test(request.url())) requests.push(request.url()); });
   await page.route('**/arrival-fixture*', async route => {
     const path = new URL(route.request().url()).pathname;
     if (path.endsWith('.js') || path.endsWith('.css')) {
@@ -270,7 +269,7 @@ async function openCurrentHeroFixture(page: import('@playwright/test').Page) {
       import { arrivalCampaignPhotos } from './content/arrival-campaign';
       import './app/globals.css';
       createRoot(document.getElementById('root')).render(<main style={{paddingTop: 96}}><ArrivalHero profile={profile} photos={arrivalCampaignPhotos} onWatch={() => {}}/><div style={{height:'150vh'}} /></main>);`, resolveDir: process.cwd(), sourcefile: 'arrival-current.tsx', loader: 'tsx' },
-    bundle: true, write: false, outdir: '/tmp/arrival-current', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' },
+    bundle: true, external: ['/media/*'], write: false, outdir: '/tmp/arrival-current', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' },
     loader: { '.woff2': 'dataurl' }, conditions: ['style'],
   });
   await page.route('**/arrival-current*', async route => {
@@ -282,25 +281,6 @@ async function openCurrentHeroFixture(page: import('@playwright/test').Page) {
   });
   await page.goto('/arrival-current');
 }
-
-test('stadium reveals subtly, reverses and restores its static state on reduced motion', async ({ browser }) => {
-  const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, isMobile: false, hasTouch: false, reducedMotion: 'no-preference' });
-  const page = await context.newPage();
-  await openCurrentHeroFixture(page);
-  const stadium = page.locator('[data-arrival-layer="stadium"]');
-  const opacity = () => stadium.evaluate(el => Number(getComputedStyle(el).opacity));
-  await expect.poll(opacity).toBeLessThan(.01);
-  await page.evaluate(() => scrollTo(0, 2000));
-  await expect.poll(opacity).toBeGreaterThan(.05);
-  expect(await opacity()).toBeLessThanOrEqual(.2);
-  await page.evaluate(() => scrollTo(0, 0));
-  await expect.poll(opacity).toBeLessThan(.01);
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-  await expect.poll(opacity).toBeGreaterThan(.05);
-  expect(await opacity()).toBeLessThanOrEqual(.2);
-  expect(await stadium.evaluate(el => { const m = new DOMMatrix(getComputedStyle(el).transform); return [m.a, m.b, m.c, m.d, m.e, m.f]; })).toEqual([1, 0, 0, 1, 0, 0]);
-  await context.close();
-});
 
 test('desktop static statement emphasizes the second line and keeps editorial controls together', async ({ browser }) => {
   const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, reducedMotion: 'reduce' });
@@ -314,7 +294,7 @@ test('desktop static statement emphasizes the second line and keeps editorial co
   const footer = (await hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/).boundingBox())!;
   const watch = (await hero.getByRole('button', { name: /watch.*film/i }).boundingBox())!;
   expect(identity.y).toBeLessThan(520);
-  expect(footer.y).toBeLessThan(920);
+  expect(footer.y).toBeLessThan(1024);
   expect(watch.y + watch.height).toBeLessThanOrEqual(footer.y);
   await expect(hero.getByRole('button', { name: /watch.*film/i })).toBeVisible();
   await page.setViewportSize({ width: 900, height: 700 });

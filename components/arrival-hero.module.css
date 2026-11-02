@@ -1,36 +1,25 @@
-.hero{position:relative;isolation:isolate;overflow:hidden;height:calc(100svh - 96px);min-height:0;background:#09090d;color:#f4f3f3}
-.atmosphere{position:absolute;inset:0;background:radial-gradient(ellipse at 56% 35%,#332b40 0,transparent 40%),radial-gradient(ellipse at 98% 80%,#24152f,transparent 40%),#09090d}
-.layer{position:absolute;overflow:hidden;pointer-events:none}.layer picture,.layer img{display:block;width:100%;height:100%}.layer img{object-fit:cover}
-.left{left:-4%;top:0;width:39%;height:49%;opacity:.58;filter:grayscale(1) brightness(.62);mask-image:radial-gradient(ellipse at 40% 42%,#000 20%,transparent 72%)}.left img{object-position:40% 20%!important;transform:scale(1.45)}
-.rear{left:25%;top:18%;width:25%;height:43%;filter:brightness(.68) saturate(.7);mask-image:radial-gradient(ellipse at 50% 48%,#000 20%,transparent 72%)}
-.mark{position:absolute;z-index:1;left:26%;top:8%;width:57%;height:58%;background:linear-gradient(155deg,#fafafa 4%,#55535b 25%,#e6e3e7 38%,#727078 48%,#fcfcfd 57%,#37343e 79%,#bab9c0);mask-size:contain;mask-position:center;mask-repeat:no-repeat;filter:drop-shadow(10px 18px 10px #000);opacity:.9}
-.athlete{z-index:3;left:48%;top:5%;width:34%;height:auto;aspect-ratio:706/690;mask-image:radial-gradient(ellipse at center,#000 35%,transparent 75%)}.arrivalCutout{clip-path:polygon(35% 25%,40% 20%,45% 19%,50% 21%,55% 27%,57% 36%,67% 40%,73% 54%,76% 72%,73% 100%,22% 100%,19% 72%,22% 52%,27% 40%,34% 36%);mask-image:linear-gradient(#000 77%,transparent)}.athlete img{object-fit:fill}
-.right{z-index:2;right:0;top:16%;width:27%;height:53%;filter:brightness(.75);mask-image:radial-gradient(ellipse at 50% 45%,#000 20%,transparent 72%)}
-.action{z-index:4;right:3%;top:52%;width:25%;height:35%;filter:brightness(.8);mask-image:radial-gradient(ellipse at center,#000 12%,transparent 72%)}
-.copy{position:absolute;z-index:5;left:7%;top:49%;width:52%;text-shadow:0 3px 20px #000}.identity,.school,.footer,.scroll,.preview{font:700 10px/1.4 var(--body);letter-spacing:.18em}.identity i,.school i,.footer i{display:inline-block;width:5px;height:5px;margin:0 9px 2px;background:#9e63fa;transform:rotate(45deg)}.identity{margin:0 0 16px}.copy h1{margin:0;font:900 clamp(70px,9.1vw,150px)/.77 var(--display);letter-spacing:-.035em}.copy h1 span{display:block;white-space:nowrap}.school{margin:22px 0}.watch{border:1px solid #aaa;background:#101015b8;color:#fff;padding:13px 17px;font:700 10px var(--body);letter-spacing:.12em;cursor:pointer}.watch span{margin-left:18px;color:#b087ff}.footer{position:absolute;z-index:5;bottom:4%;left:7%;margin:0}.scroll{position:absolute;z-index:5;bottom:4%;left:50%;color:#ddd;text-decoration:none}.scroll span{margin-left:8px}.preview{position:absolute;z-index:5;right:3%;bottom:4%;font-size:7px;color:#aaa}
-@media(max-width:899px){.hero{height:calc(100svh - 80px)}.left{width:58%;height:40%}.rear{left:3%;top:13%;width:36%;height:34%}.mark{left:9%;top:1%;width:81%;height:48%}.athlete{left:24%;top:0;width:68%}.right{right:-9%;top:12%;width:38%;height:38%}.action{display:none}.copy{left:6%;top:55%;width:90%}.copy h1{font-size:clamp(54px,12.2vw,100px)}.footer{left:6%;bottom:4%}.scroll{left:auto;right:6%;bottom:4%}.preview{bottom:1%;font-size:6px}}
-@media(max-width:560px){.hero{height:calc(100svh - 76px)}.left{opacity:.35}.rear{opacity:.5}.right{display:none}.athlete{left:18%;width:78%}.mark{left:5%;width:87%}.identity,.school,.footer,.scroll{font-size:8px}.scroll{bottom:9%}.footer{bottom:4%}}
-@media(max-height:650px){.copy{top:49%}.copy h1{font-size:clamp(48px,10vw,84px)}.identity{margin-bottom:8px}.school{margin:10px 0}.watch{padding:9px 12px}.athlete{width:min(60%, 48vh);left:35%}.footer{bottom:3%}}
-/* Supplied campaign SVGs contain only original photo pixels and transparent cutouts. */
-.layer[data-campaign-photo]{mask-image:none;clip-path:none;filter:none}
-.layer[data-campaign-photo] img{object-fit:contain;object-position:center!important;transform:none}
-.left[data-campaign-photo]{left:-2%;top:3%;width:38%;height:47%;opacity:.52;filter:brightness(.65)}
-.rear[data-campaign-photo]{left:25%;top:18%;width:22%;height:44%;filter:brightness(.7)}
-.athlete[data-campaign-photo]{left:48%;top:2%;width:25%;height:91%;aspect-ratio:auto}
-.right[data-campaign-photo]{right:2%;top:17%;width:23%;height:49%;filter:brightness(.8)}
-.copy{top:auto;bottom:15%}
-.footer,.scroll,.preview{pointer-events:none}.scroll{pointer-events:auto}
-@media(max-width:899px){.left[data-campaign-photo]{width:48%;height:38%}.rear[data-campaign-photo]{left:1%;top:13%;width:30%;height:38%}.athlete[data-campaign-photo]{left:25%;top:1%;width:52%;height:55%}.right[data-campaign-photo]{right:-5%;top:11%;width:30%;height:36%}.copy{top:auto;bottom:18%}}
-@media(max-width:560px){.athlete[data-campaign-photo]{left:22%;width:58%;height:55%}.copy{bottom:18%}}
-@media(max-height:650px){.copy{top:auto;bottom:16%}.copy h1{font-size:clamp(44px,8vw,78px)}}
-@media(max-height:650px) and (min-width:700px){.athlete[data-campaign-photo]{left:51%;top:2%;width:23%;height:90%}}
-@media(max-height:450px) and (orientation:landscape){.copy{bottom:15%;left:5%}.copy h1{font-size:clamp(36px,6vw,52px);line-height:.8}.identity{margin-bottom:5px}.school{margin:5px 0}.watch{padding:6px 10px;font-size:8px}.footer{bottom:3%;left:5%}.scroll{bottom:3%;left:auto;right:5%}.preview{display:none}.athlete[data-campaign-photo]{left:53%;width:22%;height:90%}}
+.hero{position:relative;isolation:isolate;overflow:hidden;height:calc(100svh - 96px);min-height:0;background:#000;color:#f4f3f3}
+.lights,.smokeBack,.smokeFront,.grain,.photo{position:absolute;inset:0;pointer-events:none}
+.lights{opacity:.28;background:radial-gradient(ellipse at 50% 0%,rgba(168,157,190,.18),transparent 55%)}
+.beam{position:absolute;top:-5%;width:30%;height:85%;transform-origin:50% 0;opacity:.7;filter:blur(10px);background:linear-gradient(to bottom,rgba(255,255,255,.6),rgba(190,185,215,.08) 27%,transparent 90%);mask-image:linear-gradient(to right,transparent 0%,#000 45%,#000 55%,transparent 100%)}
+.beam:before{content:'';position:absolute;top:4%;left:45%;width:10%;height:2%;background:#fff;box-shadow:0 0 16px 9px #fff,0 0 60px 24px rgba(205,196,230,.65)}
+.beam:nth-child(1){left:2%;transform:rotate(-14deg)}.beam:nth-child(2){left:25%;transform:rotate(-5deg)}.beam:nth-child(3){right:25%;transform:rotate(5deg)}.beam:nth-child(4){right:2%;transform:rotate(14deg)}
+.smokeBack,.smokeFront{background:radial-gradient(ellipse at 17% 75%,rgba(151,147,159,.38),transparent 38%),radial-gradient(ellipse at 72% 80%,rgba(145,137,157,.32),transparent 42%),radial-gradient(ellipse at 55% 100%,rgba(130,120,145,.32),transparent 48%)}
+.smokeBack{opacity:.5;background-image:url('/media/arrival-directors-smoke.png'),radial-gradient(ellipse at 50% 95%,rgba(130,120,145,.22),transparent 65%);background-size:180% 42%,100% 100%;background-position:center 85%,center;background-repeat:no-repeat}.smokeFront{z-index:3;opacity:.5;transform:scale(1.2);background-image:url('/media/arrival-directors-smoke.png');background-size:100% 50%;background-position:center bottom;background-repeat:no-repeat;background-color:transparent;mask-image:linear-gradient(to bottom,transparent 28%,#000 100%);background-blend-mode:screen;/* foreground haze */ background:radial-gradient(ellipse at 0% 88%,rgba(169,160,181,.22),transparent 38%),radial-gradient(ellipse at 100% 94%,rgba(151,144,161,.2),transparent 40%),linear-gradient(to top,#000 0%,transparent 25%)}
+.grain{z-index:4;opacity:.08;background-image:repeating-radial-gradient(circle at 30% 40%,#fff 0 0.5px,transparent 1px 4px);background-size:7px 7px;mix-blend-mode:soft-light}
+.photo{z-index:2;mask-image:linear-gradient(to bottom,transparent 0%,#000 13%,#000 66%,transparent 96%)}
+.photo picture{position:absolute;inset:0;mask-image:radial-gradient(ellipse 28% 95% at 50% 48%,#000 40%,transparent 100%)}.photo img{display:block;width:100%;height:100%}.photo img{object-fit:contain;filter:grayscale(1);}
+.silhouette{opacity:0}.silhouette img{filter:grayscale(1) brightness(.13)}
+.athlete{opacity:.8}.montage{opacity:0}.montage img{object-fit:contain}.montage[data-arrival-layer="running"] picture{mask-image:radial-gradient(ellipse 27% 46% at 50% 67%,#000 14%,transparent 100%)}
+.copy{position:absolute;z-index:5;left:7%;bottom:17%;width:65%;text-shadow:0 3px 24px #000}.identity,.school,.footer,.scroll{font:700 10px/1.4 var(--body);letter-spacing:.18em}.identity{margin:0 0 16px}.copy h1{margin:0;font:900 clamp(70px,7.4vw,120px)/.77 var(--display);letter-spacing:-.035em}.copy h1 span{display:block;white-space:nowrap}.copy h1 span:last-child{font-size:1.25em}.school{margin:22px 0}.watch{border:1px solid #aaa;background:#101015b8;color:#fff;padding:13px 17px;font:700 10px var(--body);letter-spacing:.12em;cursor:pointer}.watch span{margin-left:18px;color:#b087ff}.footer{position:absolute;z-index:5;bottom:6%;left:7%;margin:0}.scroll{position:absolute;z-index:5;bottom:6%;left:50%;color:#ddd;text-decoration:none}.scroll span{margin-left:8px}
+@media(max-width:899px){.hero{height:calc(100svh - 80px)}.copy{left:6%;bottom:18%;width:90%}.copy h1{font-size:clamp(48px,11vw,95px)}.copy h1 span:last-child{font-size:1em}.footer{left:6%;bottom:4%}.scroll{left:auto;right:6%;bottom:4%}.photo img{object-fit:cover}.photo{mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 60%,transparent 82%)}.beam{width:45%;filter:blur(5px)}}
+@media(max-width:560px){.hero{height:calc(100svh - 76px)}.identity,.school,.footer,.scroll{font-size:8px}.scroll{bottom:9%}}
+@media(max-height:650px){.copy{bottom:16%}.copy h1{font-size:clamp(40px,8vw,78px)}.identity{margin-bottom:8px}.school{margin:10px 0}.watch{padding:9px 12px}.footer{bottom:3%}}
+@media(max-height:450px) and (orientation:landscape){.copy{bottom:15%;left:5%}.copy h1{font-size:clamp(34px,6vw,52px);line-height:.8}.identity{margin-bottom:5px}.school{margin:5px 0}.watch{padding:6px 10px;font-size:8px}.footer{bottom:3%;left:5%}.scroll{bottom:3%;left:auto;right:5%}}
 
-/* Fade before the source upload's UI occlusions; no missing body detail is reconstructed. */
-.athlete[data-campaign-photo]{mask-image:linear-gradient(to bottom,#000 54%,transparent 65%)}
-.left[data-campaign-photo]{mask-image:radial-gradient(ellipse at 50% 42%,#000 28%,transparent 72%)}
-.stadium[data-campaign-photo]{inset:0;opacity:.14;filter:grayscale(1) brightness(.4);mask-image:linear-gradient(to bottom,transparent 0%,#000 22%,#000 100%)}
-.stadium[data-campaign-photo] img{object-fit:cover;object-position:center bottom!important}
+.smokeFront::after{content:'';position:absolute;inset:35% -15% -10%;background:url('/media/arrival-directors-smoke.png') center bottom/140% 75% no-repeat;opacity:.65}
+@media(max-width:899px){.photo picture{mask-image:radial-gradient(ellipse 65% 90% at 50% 45%,#000 35%,transparent 100%)}.montage[data-arrival-layer="running"] picture{mask-image:radial-gradient(ellipse 48% 47% at 50% 65%,#000 20%,transparent 100%)}}
 
-/* Desktop editorial hierarchy follows the approved composition; shorter screens retain their fitting layout. */
-@media(min-width:900px) and (min-height:651px){.copy{bottom:22%}.copy h1{font-size:clamp(70px,7.4vw,120px)}.copy h1 span:last-child{font-size:1.25em}.footer{bottom:14%}}
+@media(max-width:899px){.montage img{object-fit:contain}}
+.montage::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,#000 8%,transparent 48%);pointer-events:none}
+@media(max-width:899px){.montage[data-arrival-layer="running"] picture{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100%,65svh);height:auto;aspect-ratio:400/450;mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 60%,transparent 96%)}}

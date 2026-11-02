@@ -8,35 +8,49 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
   useLayoutEffect(() => {
     const element = root.current;
     if (!element) return;
+    const container = element.parentElement!;
     gsap.registerPlugin(ScrollTrigger);
     const mm = gsap.matchMedia();
-    mm.add('(prefers-reduced-motion: no-preference) and (min-width: 900px) and (min-height: 650px) and (hover: hover) and (pointer: fine)', () => {
-      const layer = (name: string) => element.querySelector(`[data-arrival-layer="${name}"]`);
+    mm.add('(prefers-reduced-motion: no-preference)', () => {
+      const layer = (name: string) => element.querySelector<HTMLElement>(`[data-arrival-layer="${name}"]`);
+      const lights = layer('lights')!;
+      const smokeBack = layer('smoke-back')!;
+      const smokeFront = layer('smoke-front')!;
+      const silhouette = layer('silhouette');
+      const athlete = layer('athlete');
+      const running = layer('running');
       const rear = layer('rear');
-      const stadium = layer('stadium');
-      const mark = layer('mark');
-      const portraits = ['athlete', 'portrait-left', 'portrait-right', 'action'].map(layer).filter(Boolean);
-      const lines = element.querySelectorAll('#hero-title span');
+      const white = layer('white');
+      const photos = [silhouette, athlete, running, rear, white].filter(Boolean);
+      const copy = element.querySelector('[data-arrival-statement]');
       const details = element.querySelectorAll('[data-arrival-detail]');
-      // Initialize all children together; staggered tweens alone leave later lines visible.
-      if (stadium) gsap.set(stadium, { opacity: 0 });
-      gsap.set(portraits, { opacity: 0, yPercent: 3 });
-      gsap.set(lines, { opacity: 0, yPercent: 10 });
-      gsap.set(details, { autoAlpha: 0 });
-      gsap.set(mark, { opacity: rear ? 0 : .15, scale: 1.08 });
-      if (rear) gsap.set(rear, { opacity: .65, xPercent: -8 });
-      const timeline = gsap.timeline({ scrollTrigger: {
-        id: 'arrival-hero', trigger: element, start: () => `top ${parseFloat(getComputedStyle(element.parentElement!).paddingTop)}px`, end: '+=185%',
-        scrub: .6, pin: true, invalidateOnRefresh: true,
+      gsap.set([lights, smokeBack, smokeFront, ...photos], { opacity: 0 });
+      gsap.set([copy, ...details], { autoAlpha: 0 });
+      const timeline = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+        id: 'arrival-hero', trigger: element,
+        start: () => `top ${parseFloat(getComputedStyle(container).paddingTop) || 0}px`,
+        end: () => `+=${(element.offsetHeight + (parseFloat(getComputedStyle(container).paddingTop) || 0)) * 15}`, scrub: .35, pin: true, invalidateOnRefresh: true,
       } });
-      if (rear) timeline.to(rear, { opacity: .75, xPercent: 0, duration: 1 }, 0);
-      timeline.to(mark, { opacity: .9, scale: 1, duration: 1 }, .5)
-        .to(portraits, { opacity: 1, yPercent: 0, stagger: .12, duration: 1 }, 1)
-        .to(details, { autoAlpha: 1, duration: .5 }, 1.5)
-        .to(lines, { opacity: 1, yPercent: 0, stagger: .3, duration: .7 }, 1.6)
-        .to(element.querySelectorAll('[data-arrival-layer]'), { scale: .98, duration: .8 }, 2.7);
-      if (stadium) timeline.to(stadium, { opacity: .14, duration: 1 }, 1);
-      return () => timeline.kill();
+      // Durations express relative scroll distance, not autoplay time.
+      timeline.to({}, { duration: 2 })
+        .to(lights, { opacity: .8, duration: 1.5 }, 2)
+        .fromTo(lights.children, { opacity: .08 }, { opacity: 1, stagger: .25, duration: .7 }, 2)
+        .to(smokeBack, { opacity: .9, xPercent: 4, duration: 2 }, 4)
+        .to(smokeFront, { opacity: .8, xPercent: -4, duration: 2 }, 4)
+        .to({}, { duration: 10 }, 6);
+      if (silhouette) timeline.to(silhouette, { opacity: .85, scale: 1.03, duration: 1.4 }, 6);
+      if (athlete) timeline.to(athlete, { opacity: .95, scale: 1.05, duration: 2 }, 8);
+      if (silhouette) timeline.to(silhouette, { opacity: 0, duration: 1 }, 8.5);
+      if (athlete && running) timeline.to(athlete, { opacity: 0, duration: .6 }, 10.5).to(running, { opacity: 1, scale: 1.04, duration: .7 }, 10.5);
+      if (running && rear) timeline.to(running, { opacity: 0, duration: .6 }, 11.8).to(rear, { opacity: 1, scale: 1.04, duration: .7 }, 11.8);
+      if (rear && white) timeline.to(rear, { opacity: 0, duration: .6 }, 13).to(white, { opacity: 1, scale: 1.04, duration: .7 }, 13);
+      if (white) timeline.to(white, { opacity: 0, duration: .7 }, 14);
+      if (athlete) timeline.to(athlete, { opacity: .7, scale: .98, duration: 1.3 }, 14);
+      timeline.to([copy, ...details], { autoAlpha: 1, duration: .8 }, 14.2)
+        .to(smokeFront, { opacity: .3, xPercent: 5, duration: 1.5 }, 14);
+      const refresh = () => ScrollTrigger.refresh();
+      window.addEventListener('orientationchange', refresh);
+      return () => { window.removeEventListener('orientationchange', refresh); timeline.kill(); };
     });
     return () => mm.revert();
   }, [root]);
