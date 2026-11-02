@@ -1,0 +1,726 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "beats": [
+      {
+        "progress": 0,
+        "x": -0.5133056640625,
+        "y": -450.63470458984375,
+        "width": 1441.010986328125,
+        "height": 1801.25390625,
+        "transform": "matrix(2.5442, 0, 0, 2.5442, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 0.957216,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.3,
+        "x": -0.5133056640625,
+        "y": -450.63470458984375,
+        "width": 1441.010986328125,
+        "height": 1801.25390625,
+        "transform": "matrix(2.5442, 0, 0, 2.5442, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 2.210432,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.54,
+        "x": -0.5133056640625,
+        "y": -450.63470458984375,
+        "width": 1441.010986328125,
+        "height": 1801.25390625,
+        "transform": "matrix(2.5442, 0, 0, 2.5442, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 3.955161,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.7,
+        "x": 398.1407165527344,
+        "y": 47.6800537109375,
+        "width": 643.702880859375,
+        "height": 804.624267578125,
+        "transform": "matrix(1.1365, 0, 0, 1.1365, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 5.545947,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.9,
+        "x": 436.796875,
+        "y": 96,
+        "width": 566.390625,
+        "height": 707.984375,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 7.285762,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 1,
+        "x": 436.796875,
+        "y": 96,
+        "width": 566.390625,
+        "height": 707.984375,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "fit": "contain",
+        "controls": true,
+        "time": 9.078687,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      }
+    ],
+    "headerBottom": 96,
+    "released": {
+      "x": 436.796875,
+      "y": 95,
+      "width": 566.390625,
+      "height": 707.984375
+    },
+    "resizedViewport": {
+      "width": 1430,
+      "height": 760
+    },
+    "resized": {
+      "x": 487.796875,
+      "y": 96,
+      "width": 454.390625,
+      "height": 567.984375,
+      "stageWidth": 1430,
+      "stageHeight": 760,
+      "controls": true,
+      "tabIndex": 0,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "headerBottom": 96,
+      "stageX": 0,
+      "stageY": 0,
+      "maskOpacity": "0",
+      "maskTransform": "matrix(5, 0, 0, 5, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 12.393542
+    },
+    "reversed": {
+      "x": -0.62762451171875,
+      "y": -514.5264282226562,
+      "width": 1431.23974609375,
+      "height": 1789.037109375,
+      "stageWidth": 1430,
+      "stageHeight": 760,
+      "controls": false,
+      "tabIndex": -1,
+      "transform": "matrix(3.1498, 0, 0, 3.1498, 0, 0)",
+      "headerBottom": 96,
+      "stageX": 0,
+      "stageY": 0,
+      "maskOpacity": "1",
+      "maskTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 13.692631
+    },
+    "restored": {
+      "x": 436.796875,
+      "y": 96,
+      "width": 566.390625,
+      "height": 707.984375,
+      "stageWidth": 1440,
+      "stageHeight": 900,
+      "controls": true,
+      "tabIndex": 0,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "headerBottom": 96,
+      "stageX": 0,
+      "stageY": 0,
+      "maskOpacity": "0",
+      "maskTransform": "matrix(5, 0, 0, 5, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 15.882431
+    },
+    "logo": {
+      "x": 115.1875,
+      "y": 367.828125,
+      "width": 201.59375,
+      "height": 217.328125
+    },
+    "title": {
+      "x": 477.484375,
+      "y": 322.921875,
+      "width": 847.328125,
+      "height": 243.9375
+    },
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 1920,
+    "height": 1080,
+    "beats": [
+      {
+        "progress": 0,
+        "x": -0.5269775390625,
+        "y": -660.6514892578125,
+        "width": 1921.038330078125,
+        "height": 2401.287353515625,
+        "transform": "matrix(2.7042, 0, 0, 2.7042, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 0.797536,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.3,
+        "x": -0.5269775390625,
+        "y": -660.6514892578125,
+        "width": 1921.038330078125,
+        "height": 2401.287353515625,
+        "transform": "matrix(2.7042, 0, 0, 2.7042, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 2.205222,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.54,
+        "x": -0.5269775390625,
+        "y": -660.6514892578125,
+        "width": 1921.038330078125,
+        "height": 2401.287353515625,
+        "transform": "matrix(2.7042, 0, 0, 2.7042, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 3.634681,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.7,
+        "x": 551.162353515625,
+        "y": 28.957183837890625,
+        "width": 817.65966796875,
+        "height": 1022.070068359375,
+        "transform": "matrix(1.151, 0, 0, 1.151, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 5.126749,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.9,
+        "x": 604.796875,
+        "y": 96,
+        "width": 710.390625,
+        "height": 887.984375,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 6.700428,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 1,
+        "x": 604.796875,
+        "y": 96,
+        "width": 710.390625,
+        "height": 887.984375,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "fit": "contain",
+        "controls": true,
+        "time": 8.177154,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      }
+    ],
+    "headerBottom": 96,
+    "released": {
+      "x": 604.796875,
+      "y": 95,
+      "width": 710.390625,
+      "height": 887.984375
+    },
+    "resizedViewport": {
+      "width": 1910,
+      "height": 940
+    },
+    "resized": {
+      "x": 655.796875,
+      "y": 96,
+      "width": 598.390625,
+      "height": 747.984375,
+      "stageWidth": 1910,
+      "stageHeight": 940,
+      "controls": true,
+      "tabIndex": 0,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "headerBottom": 96,
+      "stageX": 0,
+      "stageY": 0,
+      "maskOpacity": "0",
+      "maskTransform": "matrix(5, 0, 0, 5, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 11.530852
+    },
+    "reversed": {
+      "x": -0.63763427734375,
+      "y": -724.538818359375,
+      "width": 1911.259765625,
+      "height": 2389.06201171875,
+      "stageWidth": 1910,
+      "stageHeight": 940,
+      "controls": false,
+      "tabIndex": -1,
+      "transform": "matrix(3.194, 0, 0, 3.194, 0, 0)",
+      "headerBottom": 96,
+      "stageX": 0,
+      "stageY": 0,
+      "maskOpacity": "1",
+      "maskTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 12.865808
+    },
+    "restored": {
+      "x": 604.796875,
+      "y": 96,
+      "width": 710.390625,
+      "height": 887.984375,
+      "stageWidth": 1920,
+      "stageHeight": 1080,
+      "controls": true,
+      "tabIndex": 0,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "headerBottom": 96,
+      "stageX": 0,
+      "stageY": 0,
+      "maskOpacity": "0",
+      "maskTransform": "matrix(5, 0, 0, 5, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 15.068079
+    },
+    "logo": {
+      "x": 260,
+      "y": 366.625,
+      "width": 240,
+      "height": 258.75
+    },
+    "title": {
+      "x": 692,
+      "y": 318.09375,
+      "width": 968,
+      "height": 292.59375
+    },
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "beats": [
+      {
+        "progress": 0,
+        "x": -32.234375,
+        "y": 853.7113647460938,
+        "width": 832.453125,
+        "height": 1040.5615234375,
+        "transform": "matrix(1.2271, 0, 0, 1.2271, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 0.887492,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.3,
+        "x": -32.234375,
+        "y": 592.7113647460938,
+        "width": 832.453125,
+        "height": 1040.5615234375,
+        "transform": "matrix(1.2271, 0, 0, 1.2271, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 2.173827,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.54,
+        "x": -32.234375,
+        "y": 383.71136474609375,
+        "width": 832.453125,
+        "height": 1040.5615234375,
+        "transform": "matrix(1.2271, 0, 0, 1.2271, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 3.434455,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.7,
+        "x": 37.94512939453125,
+        "y": 332.43536376953125,
+        "width": 692.0941162109375,
+        "height": 865.1137084960938,
+        "transform": "matrix(1.0202, 0, 0, 1.0202, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 4.716003,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.9,
+        "x": 44.796875,
+        "y": 167,
+        "width": 678.390625,
+        "height": 847.984375,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 6.086258,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 1,
+        "x": 44.796875,
+        "y": 80,
+        "width": 678.390625,
+        "height": 847.984375,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "fit": "contain",
+        "controls": true,
+        "time": 7.470971,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      }
+    ],
+    "headerBottom": 80,
+    "released": {
+      "x": 44.796875,
+      "y": 79,
+      "width": 678.390625,
+      "height": 847.984375
+    },
+    "resizedViewport": {
+      "width": 758,
+      "height": 884
+    },
+    "resized": {
+      "x": 95.796875,
+      "y": 80,
+      "width": 566.390625,
+      "height": 707.984375,
+      "stageWidth": 758,
+      "stageHeight": 884,
+      "controls": true,
+      "tabIndex": 0,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "headerBottom": 80,
+      "stageX": 0,
+      "stageY": 0,
+      "maskOpacity": "0",
+      "maskTransform": "matrix(5, 0, 0, 5, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 10.689654
+    },
+    "reversed": {
+      "x": -0.262969970703125,
+      "y": 710.9258422851562,
+      "width": 758.51025390625,
+      "height": 948.1327514648438,
+      "stageWidth": 758,
+      "stageHeight": 884,
+      "controls": false,
+      "tabIndex": -1,
+      "transform": "matrix(1.3392, 0, 0, 1.3392, 0, 0)",
+      "headerBottom": 80,
+      "stageX": 0,
+      "stageY": 751,
+      "maskOpacity": "1",
+      "maskTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 12.045715
+    },
+    "restored": {
+      "x": 44.796875,
+      "y": 80,
+      "width": 678.390625,
+      "height": 847.984375,
+      "stageWidth": 768,
+      "stageHeight": 1024,
+      "controls": true,
+      "tabIndex": 0,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "headerBottom": 80,
+      "stageX": 0,
+      "stageY": 0,
+      "maskOpacity": "0",
+      "maskTransform": "matrix(5, 0, 0, 5, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 14.266323
+    },
+    "logo": {
+      "x": 61.4375,
+      "y": 436.703125,
+      "width": 110,
+      "height": 118.59375
+    },
+    "title": {
+      "x": 254.65625,
+      "y": 367.78125,
+      "width": 451.90625,
+      "height": 132.4375
+    },
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "beats": [
+      {
+        "progress": 0,
+        "x": -150.59527587890625,
+        "y": 697.005859375,
+        "width": 691.1905517578125,
+        "height": 863.98828125,
+        "transform": "matrix(1.9307, 0, 0, 1.9307, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 0.970742,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.3,
+        "x": -150.59527587890625,
+        "y": 482.0058898925781,
+        "width": 691.1905517578125,
+        "height": 863.98828125,
+        "transform": "matrix(1.9307, 0, 0, 1.9307, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 2.180793,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.54,
+        "x": -150.59527587890625,
+        "y": 310.0058898925781,
+        "width": 691.1905517578125,
+        "height": 863.98828125,
+        "transform": "matrix(1.9307, 0, 0, 1.9307, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 3.428342,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.7,
+        "x": 1.214599609375,
+        "y": 384.76824951171875,
+        "width": 387.57080078125,
+        "height": 484.4635009765625,
+        "transform": "matrix(1.0826, 0, 0, 1.0826, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 4.684175,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 0.9,
+        "x": 16,
+        "y": 260.25,
+        "width": 358,
+        "height": 447.5,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "fit": "contain",
+        "controls": false,
+        "time": 6.011257,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      {
+        "progress": 1,
+        "x": 16,
+        "y": 188.25,
+        "width": 358,
+        "height": 447.5,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "fit": "contain",
+        "controls": true,
+        "time": 7.266473,
+        "native": [
+          512,
+          640
+        ],
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      }
+    ],
+    "headerBottom": 76,
+    "released": {
+      "x": 16,
+      "y": 187.25,
+      "width": 358,
+      "height": 447.5
+    },
+    "resizedViewport": {
+      "width": 380,
+      "height": 704
+    },
+    "resized": {
+      "x": 16,
+      "y": 124.5,
+      "width": 348,
+      "height": 435,
+      "stageWidth": 380,
+      "stageHeight": 704,
+      "controls": true,
+      "tabIndex": 0,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "headerBottom": 76,
+      "stageX": 0,
+      "stageY": 0,
+      "maskOpacity": "0",
+      "maskTransform": "matrix(5, 0, 0, 5, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 10.378313
+    },
+    "reversed": {
+      "x": -99.20538330078125,
+      "y": 578.4932861328125,
+      "width": 578.4107666015625,
+      "height": 723.013427734375,
+      "stageWidth": 380,
+      "stageHeight": 704,
+      "controls": false,
+      "tabIndex": -1,
+      "transform": "matrix(1.6621, 0, 0, 1.6621, 0, 0)",
+      "headerBottom": 76,
+      "stageX": 0,
+      "stageY": 598,
+      "maskOpacity": "1",
+      "maskTransform": "matrix(1, 0, 0, 1, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 11.622775
+    },
+    "restored": {
+      "x": 16,
+      "y": 188.25,
+      "width": 358,
+      "height": 447.5,
+      "stageWidth": 390,
+      "stageHeight": 844,
+      "controls": true,
+      "tabIndex": 0,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "headerBottom": 76,
+      "stageX": 0,
+      "stageY": 0,
+      "maskOpacity": "0",
+      "maskTransform": "matrix(5, 0, 0, 5, 0, 0)",
+      "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+      "time": 13.825584
+    },
+    "logo": {
+      "x": 25,
+      "y": 120,
+      "width": 70,
+      "height": 75.46875
+    },
+    "title": {
+      "x": 25,
+      "y": 416.640625,
+      "width": 340,
+      "height": 148.5
+    },
+    "overflow": false,
+    "errors": []
+  }
+]

@@ -114,3 +114,6 @@
 
 
 .media-gallery{position:relative;padding:90px clamp(24px,8vw,140px);background:#08080c;color:var(--white);scroll-margin-top:96px}.media-gallery .feature-list{margin:0;padding-top:0;border:0}.media-gallery .feature-list h2{margin:0 0 24px;font:600 clamp(34px,5vw,64px)/.9 var(--display)}
+
+/* Let short home viewports devote their height to the film player. */
+@media(max-height:480px){body:has(#arrival) .site-header{position:absolute}}

@@ -1,0 +1,42 @@
+
+Running 2 tests using 1 worker
+
+(node:13336) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  1 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:3:5 › film resolves to an uncropped native player in the second story scene (860ms)
+  ✘  2 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player (4.6s)
+
+
+  1) [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      41 |         box.x >= 0 && box.right <= innerWidth && box.y >= Math.max(0, document.querySelector('.site-header')!.getBoundingClientRect().bottom) - 1 && box.bottom <= innerHeight + 1 &&
+      42 |         !/NaN|Infinity/.test(getComputedStyle(el).transform);
+    > 43 |     })).toBe(true);
+         |         ^
+      44 |   });
+      45 | }
+      46 |
+        at /workspace/ZK17/tests/e2e/cinema-framing.spec.ts:43:9
+
+    Error Context: test-results/cinema-framing-short-180px-431ed-ains-a-finite-usable-player-desktop-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/cinema-framing-short-180px-431ed-ains-a-finite-usable-player-desktop-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/cinema-framing-short-180px-431ed-ains-a-finite-usable-player-desktop-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player
+  1 passed (6.6s)

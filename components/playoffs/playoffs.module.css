@@ -31,3 +31,12 @@
 .heroNumber{width:.52em;height:1em;text-align:left}
 .scrollTools button{display:grid;place-items:center}.dialogActions svg{flex:none}
 .filmLinks{list-style:none;margin:24px 0;padding:0}.filmLinks a{display:inline-flex;align-items:center;gap:12px;min-height:44px;color:var(--white);font-size:10px;text-decoration:none;border-bottom:1px solid var(--border)}
+/* Targeted desktop correction: official team mark left, all hero copy right. */
+@media(min-width:701px){
+ .hero{display:grid;grid-template-columns:minmax(130px,24%) minmax(0,1fr);align-items:center;column-gap:clamp(32px,5vw,96px)}
+ .heroTeam{position:relative;inset:auto;grid-column:1;grid-row:1;text-align:center}
+ .heroTeam .largeLogo{width:clamp(110px,14vw,240px);max-height:280px}
+ .heroCopy{grid-column:2;grid-row:1;min-width:0}
+ .hero h1{max-width:100%;font-size:clamp(86px,11vw,190px)}
+ .heroBottom{max-width:100%;flex-wrap:wrap;gap:20px}
+}

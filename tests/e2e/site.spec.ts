@@ -83,10 +83,14 @@ test('current navigation keeps the media gallery and story destinations reachabl
 
 test('direct film, journey, and off-field anchors resolve to visible viewport bounds', async ({ page }) => {
   for (const id of ['film-room', 'journey', 'off-field']) {
-    await page.goto(`/#${id}`, { waitUntil: 'networkidle' });
+    // Autoplay media can keep networkidle pending for most of the test timeout.
+    // Navigation readiness is the anchor's geometry, including late pin refresh.
+    await page.goto(`/#${id}`, { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
-    await page.evaluate(() => window.dispatchEvent(new Event('resize')));
-    await page.waitForTimeout(250);
+    await expect.poll(() => page.locator(`#${id}`).evaluate(element => {
+      const rect = element.getBoundingClientRect();
+      return rect.top < innerHeight && rect.bottom > 0;
+    }), { message: `${id} should land inside the viewport` }).toBe(true);
     const bounds = await page.locator(`#${id}`).evaluate(element => {
       const rect = element.getBoundingClientRect();
       return { x: rect.x, y: rect.y, width: rect.width, height: rect.height, viewportWidth: innerWidth, viewportHeight: innerHeight };
