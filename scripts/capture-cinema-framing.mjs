@@ -5,6 +5,16 @@ const output = 'artifacts/cinema-framing';
 await mkdir(output, { recursive: true });
 const browser = await chromium.launch(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH } : {});
 const results = [];
+// Locator.hover() scrolls partly clipped elements into view, which can reverse
+// a scroll-driven timeline. Move the pointer without changing the scroll beat.
+const showControls = async page => {
+ const video = page.locator('#film-room video');
+ await video.evaluate(el=>el.pause());
+ const box = await video.boundingBox();
+ await page.mouse.move(box.x + box.width / 2, box.y + box.height - 20);
+ await page.waitForTimeout(500);
+ assert.equal(await video.evaluate(el=>el.controls),true);
+};
 for (const [width, height] of [[1440,900],[1920,1080],[768,1024],[390,844]]) {
  const page = await browser.newPage({ viewport: { width, height } });
  const errors=[]; page.on('pageerror', e=>errors.push(e.message));
@@ -77,9 +87,7 @@ for (const [width, height] of [[1440,900],[1920,1080],[768,1024],[390,844]]) {
  const restored=await state();
  assert(Math.abs(restored.width-last.width)<1);assert.equal(restored.controls,true);
  assert.equal(restored.transform,'matrix(1, 0, 0, 1, 0, 0)');
- await page.locator('#film-room video').evaluate(el=>el.pause());
- await page.locator('#film-room video').hover();
- await page.waitForTimeout(500);
+ await showControls(page);
  await page.screenshot({path:`${output}/${width}-final-controls.png`});
  await page.goto('http://127.0.0.1:3100/playoffs/',{waitUntil:'networkidle'});
  await page.evaluate(()=>document.fonts.ready);
@@ -103,8 +111,7 @@ for(const height of [180,240,360]){
  });
  assert(state.width>=120&&state.height>0&&state.y>=Math.max(0,state.headerBottom)-1&&state.bottom<=height+1);
  assert.equal(state.controls,true);assert.equal(state.transform,'matrix(1, 0, 0, 1, 0, 0)');
- await page.locator('#film-room video').evaluate(el=>el.pause());await page.locator('#film-room video').hover();
- await page.waitForTimeout(500);
+ await showControls(page);
  await page.screenshot({path:`${output}/1024x${height}-final-controls.png`});
  shortViewports.push({viewport:{width:1024,height},...state});await page.close();
 }

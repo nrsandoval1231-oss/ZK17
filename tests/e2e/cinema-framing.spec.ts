@@ -41,6 +41,9 @@ for (const height of [180, 240, 360]) {
         box.x >= 0 && box.right <= innerWidth && box.y >= Math.max(0, document.querySelector('.site-header')!.getBoundingClientRect().bottom) - 1 && box.bottom <= innerHeight + 1 &&
         !/NaN|Infinity/.test(getComputedStyle(el).transform);
     })).toBe(true);
+    await video.focus();
+    await expect(video).toHaveJSProperty('controls', true);
+    await expect(video).toHaveJSProperty('tabIndex', 0);
   });
 }
 

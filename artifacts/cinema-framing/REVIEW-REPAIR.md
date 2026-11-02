@@ -53,6 +53,8 @@ For each regular width:
 - `WIDTH-resized-final.png` / `WIDTH-resized-reverse.png`: changed viewport and reverse reveal.
 - `WIDTH-playoffs.png`: official logo and hero copy arrangement.
 
+The capture helper moves the pointer without calling `Locator.hover()`, whose automatic scroll-into-view can change a scroll-driven reveal beat. It asserts that native controls remain enabled after positioning the pointer. Short-screen browser tests also focus the actual video and check controls and keyboard tab order.
+
 Short-screen controls captures are named `1024xHEIGHT-final-controls.png`.
 
 ## Final checks
@@ -71,6 +73,8 @@ The direct-anchor test and every new regression run in desktop Chromium, mobile 
 An independent code review found the header occlusion during the first capture pass; after the framing and footer corrections it reported no actionable findings. No merge or deployment was performed.
 
 ## Visual inspection
+
+Key captures: [desktop film](1440-final-controls.png), [mobile film](390-final-controls.png), [desktop Playoffs](1440-playoffs.png), [mobile Playoffs](390-playoffs.png), and [180px-tall native controls](1024x180-final-controls.png).
 
 Inspected the final video and native-control captures at desktop, tablet, and mobile sizes, desktop/mobile Playoffs captures, and the 180px-tall controls capture. Video uses `object-fit:contain`, preserves its 4:5 ratio, clears the header, and does not overlap the sound button. At 180px height the frame remains about 130×162px; native play, seek, and overflow controls are available. On desktop/tablet the official Anna logo sits to the left of the heading; on mobile it remains above the hero copy. Playoffs has no horizontal overflow.
 
