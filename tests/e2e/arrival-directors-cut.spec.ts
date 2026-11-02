@@ -33,6 +33,12 @@ async function openHero(page: Page) {
   await page.evaluate(() => document.fonts.ready);
 }
 
+async function seekFixture(page: Page, fraction: number) {
+  await page.evaluate(value => { const trigger = (window as unknown as FixtureWindow).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: trigger.start + (trigger.end - trigger.start) * value, behavior: 'instant' }); }, fraction);
+  // Observe both trigger and scrub convergence; never force animation state.
+  await expect.poll(() => page.evaluate(value => { const trigger = (window as unknown as FixtureWindow).fixtureScrollTrigger.getById('arrival-hero'); return Math.max(Math.abs(trigger.progress - value), Math.abs(trigger.animation.progress() - trigger.progress)); }, fraction), { timeout: 15_000 }).toBeLessThan(.035);
+}
+
 for (const touch of [false, true]) {
   test(`seven scroll beats progress and reverse on ${touch ? 'touch' : 'desktop'}`, async ({ browser }) => {
     test.setTimeout(90_000);
@@ -49,12 +55,7 @@ for (const touch of [false, true]) {
     const opacity = (layer: string) => hero.locator(`[data-arrival-layer="${layer}"]`).evaluate(el => Number(getComputedStyle(el).opacity));
     expect(await opacity('lights')).toBeLessThan(.01);
     expect(await opacity('athlete')).toBeLessThan(.01);
-    const scrollBeat = async (fraction: number) => {
-      await page.evaluate(value => { const trigger = (window as unknown as FixtureWindow).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: trigger.start + (trigger.end - trigger.start) * value, behavior: 'instant' }); }, fraction);
-      // WebKit's headless compositor can lag the scroll-linked scrub; observe
-      // convergence before inspecting pixels without forcing timeline state.
-      await expect.poll(() => page.evaluate(value => { const trigger = (window as unknown as FixtureWindow).fixtureScrollTrigger.getById('arrival-hero'); return Math.max(Math.abs(trigger.progress - value), Math.abs(trigger.animation.progress() - trigger.progress)); }, fraction), { timeout: 15_000 }).toBeLessThan(.035);
-    };
+    const scrollBeat = (fraction: number) => seekFixture(page, fraction);
     await scrollBeat(.22);
     await expect.poll(() => opacity('lights')).toBeGreaterThan(.2);
     await scrollBeat(.58);
@@ -70,7 +71,8 @@ for (const touch of [false, true]) {
     await scrollBeat(.97);
     await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
     await page.evaluate(() => scrollTo(0, 0));
-    await expect.poll(() => opacity('lights')).toBeLessThan(.01);
+    for (const layer of ['lights', 'smoke-back', 'smoke-front', 'silhouette', 'athlete', 'running', 'rear', 'white']) await expect.poll(() => opacity(layer)).toBeLessThan(.01);
+    await expect(hero.locator('[data-arrival-statement]')).toHaveCSS('opacity', '0');
     await context.close();
   });
 }
@@ -107,7 +109,7 @@ test('touch orientation refresh keeps the story scrollable and bounded', async (
   expect(spacer.height - height).toBeGreaterThan(14 * 390);
   await expect.poll(() => hero.evaluate(el => parseFloat(el.parentElement!.style.paddingBottom))).toBeCloseTo((height + 96) * 15, 0);
   await page.waitForTimeout(400);
-  await page.evaluate(() => { const trigger = (window as unknown as FixtureWindow).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: trigger.start + (trigger.end - trigger.start) * .97, behavior: 'instant' }); });
+  await seekFixture(page, .97);
   await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
   await context.close();
 });

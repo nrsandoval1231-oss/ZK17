@@ -28,7 +28,8 @@ export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Pr
   const rear = find('directors-rear');
   const white = find('directors-white');
   const running = find('directors-action');
-  return <section ref={root} id="arrival" data-arrival-hero className={styles.hero} aria-labelledby="hero-title">
+  return <section ref={root} id="arrival" data-arrival-hero className={styles.hero} aria-labelledby="arrival-heading">
+    <h1 id="arrival-heading" className="sr-only">MAKE THEM REMEMBER.</h1>
     <div className={styles.lights} data-arrival-layer="lights" aria-hidden="true">
       <div className={styles.beam} /><div className={styles.beam} /><div className={styles.beam} /><div className={styles.beam} />
     </div>
@@ -42,7 +43,7 @@ export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Pr
     <div className={styles.grain} aria-hidden="true" />
     <div className={styles.copy} data-arrival-statement>
       <p data-arrival-detail className={styles.identity}>{profile.name.toUpperCase()} / QB {profile.number}</p>
-      <h1 id="hero-title"><span>MAKE THEM</span>{' '}<span>REMEMBER.</span></h1>
+      <h1 id="hero-title" aria-hidden="true"><span>MAKE THEM</span>{' '}<span>REMEMBER.</span></h1>
       <p data-arrival-detail className={styles.school}>ANNA COYOTES / {profile.position.toUpperCase()}</p>
       <button data-arrival-detail className={styles.watch} type="button" onClick={event => onWatch(event.currentTarget)}>WATCH THE FILM <span aria-hidden="true">↗</span></button>
     </div>

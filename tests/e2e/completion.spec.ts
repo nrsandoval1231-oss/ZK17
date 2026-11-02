@@ -16,7 +16,9 @@ test('snapshot is reachable from recruiting navigation and shares the current ro
  await expect(page.getByRole('link',{name:'Recruiting contact'})).toHaveAttribute('href','/#nil-inquiries');
  expect((await new AxeBuilder({page}).analyze()).violations).toEqual([]);
  await page.goBack();
- await expect(page.locator('#hero-title')).toBeVisible();
+ await expect(page).toHaveURL(/\/$/);
+ await expect(page.locator('#arrival[data-arrival-hero]')).toBeVisible();
+ await expect(page.locator('.site-header').getByRole('link',{name:/Zephyr Kreye.*home/i})).toBeVisible();
 });
 
 test('pending film deep link remains closable while approved film uses native controls',async({page})=>{
