@@ -5,7 +5,7 @@ test('dedicated routes load directly without runtime errors or public implementa
  const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
  for(const path of ['/','/film/','/about/','/nil-recruiting/','/recruiting/','/playoffs/']){
   const response=await page.goto(path);expect(response?.status()).toBe(200);await expect(page.locator('main')).toBeVisible();
-  expect(await page.locator('body').innerText()).not.toMatch(/PREVIEW CROP|Original files pending|WATCH WITH SOUND|PHOTO NEEDED/);
+  expect(await page.locator('body').innerText()).not.toMatch(/PREVIEW CROP|Original files pending|WATCH WITH SOUND|PHOTO NEEDED|original\s+(?:photo\s+)?pending/i);
  }
  expect(errors).toEqual([]);
 });

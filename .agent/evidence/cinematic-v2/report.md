@@ -22,9 +22,9 @@ Preserved prior asset SHA-256: `a783dcb56f3a11684a3253ddc8c0768035bb8c9d390e0061
 
 Poster is extracted from the approved monochrome upload. Hero and Film playback use the same complete approved source, with CSS grayscale as an additional presentation safeguard. No professional new edit or longer cut is claimed. Existing public-asset delivery conventions were retained (9.1MB source).
 
-## Validation
+## Initial validation at `b3b279f`
 
-Final validation against the complete current implementation:
+Validation before independent review; the correction validation below supersedes these counts:
 
 | Check | Result |
 | --- | --- |
@@ -59,3 +59,37 @@ All 24 required desktop/iPhone/iPad screenshots were inspected, including the th
 
 - `0e4365e` — `[CF-Pages-Skip] Build persistent cinematic reveal, routed showcase and full monochrome film` (implementation, tests, approved media, original-source preservation and final visual/browser/build evidence).
 - This report is recorded in a following documentation-only `[CF-Pages-Skip]` commit; see branch `git log` for its exact hash. No push, merge, or deployment.
+
+## Independent-review corrections (after `b3b279f`)
+
+Addressed all three findings recorded in `review.md`:
+
+- **P1, Home client entry and motion activation:** the Home motion owner now initializes `data-arrival-boot` and completion state itself before animation setup, sets ready directly when setup succeeds, and clears its state on media deactivation/unmount. It no longer depends on a document-only head script listener to hide the Home header. Existing finite loading/failure and reduced-motion fallbacks remain. New browser regressions enter Home through client links from both Film and About, assert hidden header and descendants through mid-intro, and verify completion/skip restores navigation. Another regression exercises reduced → normal twice, checking readable reduced-motion state between activations.
+- **P2, About media boundary:** About obtains eligible approved photographs through the existing `publicScenePhotos` selector, deduplicates an asset assigned to multiple scenes, and uses review-only fallback photos only when preview mode permits it. Empty galleries are omitted. Actual About render-output tests cover preview on/off, approved replacements in both modes, and duplicate scene assignments.
+- **P2, missing-photo cleanup:** TwoWorlds omits a missing photo card and omits the whole module when neither photograph exists. No visual or accessible original-pending placeholder is emitted. Render-output coverage checks both fully absent and partially available photographs; public text cleanup checks now match `original pending` / `original photo pending` case-insensitively.
+
+Targeted checks ran **before** final broad validation:
+
+- `npx tsx --test tests/cinematic-media-gates.test.ts` — **3 passed**, covering actual render output.
+- `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/intro-entry.spec.ts --workers=4` — **12 passed** across all four browser projects (23.1 seconds).
+
+Inspected additional `screenshots/desktop-client-home-opening.png` and `screenshots/iphone-client-home-opening.png`, captured after client navigation from Film. Both show black opening with only Skip intro, `data-arrival-boot=ready`, and computed header visibility `hidden`. Existing 24 visual states retain the same composition/content; the review corrections change state ownership and unavailable-media branches.
+
+The first broad correction run finished with **162 passed, 3 failed, 7 skipped** (172 checks). That diagnostic log is retained as `review-initial-e2e.log`. Two multi-step WebKit collage checks exhausted the original 30-second test budget under parallel load; those tests now allow 60 seconds while retaining all visual assertions and per-stage convergence checks. The other finding was a direct `/#film-room` initialization/refresh state: the explicitly initialized completion flag could remain false when the trigger was already complete. Completion now synchronizes from the trigger’s actual progress both after setup and on every refresh; no animation progress is forced. Added a dedicated direct Film hash regression checking navigation, native controls, containment and refresh alignment.
+
+Before another complete matrix, reran the affected files with `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/arrival-directors-cut.spec.ts tests/e2e/playoffs.spec.ts tests/e2e/intro-entry.spec.ts --project=iphone-webkit --workers=1` — **15 passed** (1.4 minutes). See `review-recheck-webkit.log`. Then used two workers for the final complete matrix to reduce contention, retaining the same browser projects and all checks.
+
+### Final correction validation
+
+| Check | Result |
+| --- | --- |
+| `npm run lint` | Passed |
+| `npm run typecheck` | Passed |
+| `npm test` | **62 passed, 0 failed** |
+| `npm run build` | Passed; full static export and existing release/playoff provenance checks passed |
+| Full browser matrix: `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npm run e2e -- --workers=2` | **169 passed, 0 failed, 7 existing expected skips** (176 checks; 3.1 minutes) |
+| `git diff --check` | Passed |
+
+Final broad log: `review-e2e-final.log`. Supporting final logs: `review-unit.log`, `review-build.log`, `review-lint.log`, `review-typecheck.log`. The initial failing diagnostic log remains separate and is not represented as final validation. Additional client-entry screenshots are reproducible with the same WebKit environment variables and `node .agent/evidence/cinematic-v2/capture-client-entry.cjs`.
+
+Corrections are committed after base `b3b279f` with the `[CF-Pages-Skip]` prefix for scoped independent re-review. No push, merge, PR publication or deployment was performed.

@@ -1,0 +1,47 @@
+
+Running 12 tests using 4 workers
+
+(node:242564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:242571) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:242565) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:242563) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   1 [desktop-chromium] › tests/e2e/intro-entry.spec.ts:18:46 › client navigation /about/ to Home owns intro header state (2.9s)
+  ✓   2 [mobile-chromium] › tests/e2e/intro-entry.spec.ts:18:46 › client navigation /film/ to Home owns intro header state (3.1s)
+  ✓   4 [desktop-chromium] › tests/e2e/intro-entry.spec.ts:18:46 › client navigation /film/ to Home owns intro header state (3.2s)
+(node:242960) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:242984) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   3 [desktop-chromium] › tests/e2e/intro-entry.spec.ts:25:5 › reduced motion to normal starts a hidden-header intro on each activation (5.1s)
+(node:243150) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [mobile-chromium] › tests/e2e/intro-entry.spec.ts:25:5 › reduced motion to normal starts a hidden-header intro on each activation (3.2s)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   6 [mobile-chromium] › tests/e2e/intro-entry.spec.ts:18:46 › client navigation /about/ to Home owns intro header state (2.6s)
+(node:243210) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:243265) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  10 [reduced-motion] › tests/e2e/intro-entry.spec.ts:18:46 › client navigation /film/ to Home owns intro header state (3.3s)
+  ✓   7 [iphone-webkit] › tests/e2e/intro-entry.spec.ts:18:46 › client navigation /film/ to Home owns intro header state (7.8s)
+  ✓   8 [iphone-webkit] › tests/e2e/intro-entry.spec.ts:18:46 › client navigation /about/ to Home owns intro header state (6.5s)
+  ✓  11 [reduced-motion] › tests/e2e/intro-entry.spec.ts:18:46 › client navigation /about/ to Home owns intro header state (2.5s)
+(node:243546) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  12 [reduced-motion] › tests/e2e/intro-entry.spec.ts:25:5 › reduced motion to normal starts a hidden-header intro on each activation (3.1s)
+  ✓   9 [iphone-webkit] › tests/e2e/intro-entry.spec.ts:25:5 › reduced motion to normal starts a hidden-header intro on each activation (14.1s)
+
+  12 passed (23.1s)

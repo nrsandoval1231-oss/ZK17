@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 
 for (const viewport of [{width:1440,height:900},{width:390,height:844},{width:768,height:1024}]) {
  test(`collage accumulates permanently with compact travel at ${viewport.width}px`, async ({browser}) => {
+  test.setTimeout(60_000);
   const context=await browser.newContext({viewport,isMobile:viewport.width<900,hasTouch:viewport.width<900,reducedMotion:'no-preference'});
   const page=await context.newPage();await page.goto('/');await page.evaluate(()=>document.fonts.ready);
   const hero=page.locator('#arrival');

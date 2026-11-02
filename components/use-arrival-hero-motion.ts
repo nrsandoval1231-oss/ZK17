@@ -12,6 +12,10 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
     const mm = gsap.matchMedia();
     try { mm.add('(prefers-reduced-motion: no-preference)', () => {
       if (document.documentElement.dataset.arrivalBoot === 'fallback') return;
+      // The head bootstrap only runs on a document load. Own state on every
+      // Home mount and motion activation, including client route transitions.
+      document.documentElement.dataset.arrivalBoot = 'pending';
+      document.documentElement.dataset.introComplete = 'false';
       const layer = (name: string) => element.querySelector<HTMLElement>(`[data-arrival-layer="${name}"]`);
       const lights = layer('lights')!;
       const smokeBack = layer('smoke-back')!;
@@ -33,6 +37,7 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
         end: () => `+=${window.innerHeight * (window.innerWidth >= 900 ? 2.4 : 1.6)}`,
         scrub: .18, pin: true, invalidateOnRefresh: true,
         onUpdate: self => complete(self.progress >= 1),
+        onRefresh: self => complete(self.progress >= 1),
         onLeave: () => complete(true), onEnterBack: () => complete(false),
       } });
       timeline.to(lights, { opacity: .65, duration: .1 }, .025)
@@ -97,11 +102,15 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       window.addEventListener('pointerdown', cancelRotation, { passive: true });
       window.addEventListener('keydown', cancelRotation);
       window.addEventListener('hashchange', cancelRotation);
+      complete((timeline.scrollTrigger?.progress ?? 0) >= 1);
+      document.documentElement.dataset.arrivalBoot = 'ready';
       element.setAttribute('data-arrival-motion', 'ready');
       window.dispatchEvent(new Event('arrival:motion-ready'));
       return () => {
         skip?.removeEventListener('click', skipIntro);
         delete document.documentElement.dataset.introComplete;
+        delete document.documentElement.dataset.arrivalBoot;
+        element.setAttribute('data-arrival-motion', 'static');
         cancelRotation();
         window.removeEventListener('scroll', rememberProgress);
         window.removeEventListener('orientationchange', queueRotation, true);
@@ -119,6 +128,10 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       document.documentElement.dataset.arrivalBoot = 'fallback';
       window.dispatchEvent(new Event('arrival:motion-failed'));
     }
-    return () => mm.revert();
+    return () => {
+      mm.revert();
+      delete document.documentElement.dataset.arrivalBoot;
+      delete document.documentElement.dataset.introComplete;
+    };
   }, [root]);
 }
