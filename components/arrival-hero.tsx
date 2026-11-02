@@ -17,7 +17,7 @@ function Layer({ photo, layer, className, decorative = true }: { photo?: Photo; 
   const campaignBase = campaign ? photo.src.replace(/-640\.svg$/, '') : null;
   const focal = photo.kind === 'preview' ? photo.focal : photo.focalPoint;
   return <div className={`${styles.layer} ${className} ${layer === 'athlete' && photo.kind === 'preview' && photo.id === 'arrival' ? styles.arrivalCutout : ''}`} data-arrival-layer={layer} data-campaign-photo={campaign || undefined}>
-    <picture>{campaignBase && <source srcSet={`${campaignBase}-320.svg 320w, ${campaignBase}-640.svg 640w`} sizes={layer === 'athlete' ? '(max-width: 700px) 48vw, 25vw' : '(max-width: 700px) 25vw, 30vw'} />} {base && <source type="image/avif" srcSet={[360, 540, 706].map(width => `${base}-${width}.avif ${width}w`).join(', ')} sizes="(max-width: 700px) 80vw, 45vw" />}
+    <picture>{campaignBase && <source srcSet={`${campaignBase}-320.svg 320w, ${campaignBase}-640.svg 640w`} sizes={layer === 'stadium' ? '100vw' : layer === 'athlete' ? '(max-width: 700px) 48vw, 25vw' : '(max-width: 700px) 25vw, 30vw'} />} {base && <source type="image/avif" srcSet={[360, 540, 706].map(width => `${base}-${width}.avif ${width}w`).join(', ')} sizes="(max-width: 700px) 80vw, 45vw" />}
       <Image src={photo.src} alt={decorative ? '' : photo.alt} width={photo.width} height={photo.height} loading={layer === 'athlete' ? 'eager' : 'lazy'} fetchPriority={layer === 'athlete' ? 'high' : 'auto'} unoptimized style={{ objectPosition: focal }} />
     </picture>
   </div>;
@@ -30,6 +30,7 @@ export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Pr
   const athlete = find('campaign-front') ?? photo ?? find('arrival');
   return <section ref={root} id="arrival" data-arrival-hero className={styles.hero} aria-labelledby="hero-title">
     <div className={styles.atmosphere} aria-hidden="true" />
+    <Layer photo={find('campaign-stadium')} layer="stadium" className={styles.stadium} />
     <Layer photo={find('campaign-closeup') ?? athlete} layer="portrait-left" className={styles.left} />
     <Layer photo={find('campaign-rear') ?? find('throwing')} layer="rear" className={styles.rear} />
     <div className={styles.mark} data-arrival-layer="mark" aria-hidden="true" style={{ maskImage: `url(${brand.monogram.src})`, WebkitMaskImage: `url(${brand.monogram.src})` }} />

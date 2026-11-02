@@ -25,3 +25,9 @@
 @media(max-height:650px){.copy{top:auto;bottom:16%}.copy h1{font-size:clamp(44px,8vw,78px)}}
 @media(max-height:650px) and (min-width:700px){.athlete[data-campaign-photo]{left:51%;top:2%;width:23%;height:90%}}
 @media(max-height:450px) and (orientation:landscape){.copy{bottom:15%;left:5%}.copy h1{font-size:clamp(36px,6vw,52px);line-height:.8}.identity{margin-bottom:5px}.school{margin:5px 0}.watch{padding:6px 10px;font-size:8px}.footer{bottom:3%;left:5%}.scroll{bottom:3%;left:auto;right:5%}.preview{display:none}.athlete[data-campaign-photo]{left:53%;width:22%;height:90%}}
+
+/* Fade before the source upload's UI occlusions; no missing body detail is reconstructed. */
+.athlete[data-campaign-photo]{mask-image:linear-gradient(to bottom,#000 54%,transparent 65%)}
+.left[data-campaign-photo]{mask-image:radial-gradient(ellipse at 50% 42%,#000 28%,transparent 72%)}
+.stadium[data-campaign-photo]{inset:0;opacity:.32;filter:grayscale(1) brightness(.55);mask-image:linear-gradient(to bottom,transparent 0%,#000 22%,#000 100%)}
+.stadium[data-campaign-photo] img{object-fit:cover;object-position:center bottom!important}
