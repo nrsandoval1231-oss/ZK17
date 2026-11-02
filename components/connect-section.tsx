@@ -12,7 +12,7 @@ export default function ConnectSection({ socials, nilContact }: { socials: Socia
         <h2 id="connect-nil-title">LET’S TALK<br /><em>NIL.</em></h2>
         {nilContact ? (
           <a className="connect-action" href={nilContact.href} target={nilContact.kind === 'url' ? '_blank' : undefined} rel={nilContact.kind === 'url' ? 'noopener noreferrer' : undefined}>
-            {nilContact.kind === 'email' ? 'EMAIL REPRESENTATIVE' : 'NIL CONTACT PAGE'}<Arrow />
+            {nilContact.kind === 'email' ? 'EMAIL INQUIRY' : 'NIL CONTACT PAGE'}<Arrow />
           </a>
         ) : (
           <p className="connect-pending">Representative contact details coming soon.</p>

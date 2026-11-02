@@ -19,7 +19,19 @@ export const metadata: Metadata = {
  openGraph: { title: 'ZK17 — Zephyr Kreye', description: 'Built for the moment. Ready for what’s next.', ...(publicSiteUrl ? { images: ['/og-zk17.png'] } : {}), type: 'website' },
  icons: { icon: [{ url: '/favicon.png?v=2', type: 'image/png', sizes: '64x64' }], apple: '/apple-touch-icon.png?v=2' },
 };
+// Runs in the head before body paint; a finite guard leaves blocked/failed
+// enhancement readable. No-JS/reduced-motion documents keep static defaults.
+const arrivalBootstrap = `(function(){
+ if(location.pathname!=='/'||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var root=document.documentElement,timer;
+ var finish=function(state){root.setAttribute('data-arrival-boot',state);clearTimeout(timer);window.removeEventListener('arrival:motion-ready',ready);window.removeEventListener('arrival:motion-failed',failed);};
+ var ready=function(){finish('ready');},failed=function(){finish('fallback');};
+ root.setAttribute('data-arrival-boot','pending');
+ window.addEventListener('arrival:motion-ready',ready);
+ window.addEventListener('arrival:motion-failed',failed);
+ timer=setTimeout(failed,5000);
+})();`;
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
  const jsonLd = { '@context': 'https://schema.org', '@type': 'Person', name: profile.name, memberOf: { '@type': 'SportsTeam', name: profile.school }, jobTitle: profile.position, description: `Class of ${profile.classYear} ${profile.position} at ${profile.school}, ${profile.location}.` };
- return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />{children}</body></html>;
+ return <html lang="en" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: arrivalBootstrap }} /></head><body><a className="skip-link" href="#main">Skip to content</a><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />{children}</body></html>;
 }

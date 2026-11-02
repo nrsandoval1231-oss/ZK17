@@ -1,0 +1,37 @@
+
+Running 8 tests using 2 workers
+
+(node:149339) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:149338) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  2 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (4.0s)
+(node:149641) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  1 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (6.0s)
+(node:149732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  3 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (5.5s)
+(node:149882) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  4 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (6.0s)
+(node:150003) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  5 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (6.1s)
+(node:150247) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  6 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (6.1s)
+(node:150352) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  7 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (5.6s)
+  ✓  8 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (4.8s)
+
+  8 passed (26.4s)

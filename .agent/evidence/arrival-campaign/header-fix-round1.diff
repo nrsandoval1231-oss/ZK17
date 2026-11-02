@@ -1,0 +1,119 @@
+diff --git a/.agent/evidence/arrival-campaign/header-report.md b/.agent/evidence/arrival-campaign/header-report.md
+index 57cb0ae..bf9e5de 100644
+--- a/.agent/evidence/arrival-campaign/header-report.md
++++ b/.agent/evidence/arrival-campaign/header-report.md
+@@ -18,10 +18,27 @@ Date: 2026-11-02. Worker: Codex header implementer (inherited runtime model iden
+ - Final same targeted Playwright command against unchanged old production output: all 3 expected failures (missing wordmark; existing 25px navigation targets; mobile control count 2 instead of 3). No implementation browser-green claim.
+ - `npx eslint components/site-experience.tsx tests/e2e/arrival-campaign.spec.ts`: passed twice, exit 0, no lint output.
+ - `npm run typecheck`: passed twice, exit 0 (`tsc --noEmit`).
+ - `git diff --check -- components/site-experience.tsx app/globals.css tests/e2e/arrival-campaign.spec.ts`: passed, exit 0.
+
+ ## Assumptions and limits
+
+ - Wordmark suppression at intermediate desktop widths and icon-only mobile film action follow the explicit packet allowances. Existing route labels and hrefs take precedence over reference-only links.
+ - Production browser green, screenshot inspection, full build and full suite are controller-owned and remain pending against rebuilt output. This worker did not rebuild, alter/restart the server, run full suites, modify film/hero/photo code, add assets/dependencies, spawn agents, push, merge or deploy.
+ - Reusing the stale production server can demonstrate expected red only; it cannot establish that the new implementation passes browser checks. No visual/behavior green or physical-device result is claimed.
++
++## Repair round 1 — controller integration findings
++
++Read `.agent/PACKET-ARRIVAL-HEADER.md` again and applied receiving-code-review/systematic-debugging guidance. Controller evidence `/tmp/zk17-campaign-header-targeted.log` records 50 passes and 2 failures: the mobile menu resize Home focus assertion on mobile Chromium and iPhone WebKit. `/tmp/zk17-campaign-capture-smoke.log` records axe `label-content-name-mismatch` for the header home link.
++
++Diagnosis: the old resize callback checked whether the Close control remained focused after CSS hid it. Browser blur timing makes that conditional unreliable. A separate Chromium instrumentation run happened to preserve/focus Home, demonstrating the intermittent/browser-sensitive nature rather than disproving the controller failures. The listener now captures current `open` state through `[open]`, handles only an actually open menu, and schedules `Home.focus({ preventScroll: true })` in the next animation frame after closing it. Existing inert and scroll-lock cleanup remains in place. Closed-menu resize leaves existing focus alone, with an added assertion covering that case.
++
++The header home link's accessible name is now `Zephyr Kreye — ZK17 home`, containing its visible wordmark and retaining brand/home intent. This resolves the conflict between preserving the former exact label and WCAG label-in-name requirements; footer naming is outside this header task. A fourth header regression checks the actual accessible name and runs axe's `label-content-name-mismatch` rule against the header. No axe rule is disabled. The original ten hero test bodies remain unchanged.
++
++Actual checks:
++
++- Before implementation: `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test tests/e2e/arrival-campaign.spec.ts --project=desktop-chromium --grep 'header home name' --workers=1 --timeout=15000` failed as expected: accessible name was `ZK17 home` and lacked the visible wordmark. The controller's two resize failures were read and retained without weakening the assertion.
++- After implementation: `npx eslint components/site-experience.tsx tests/e2e/arrival-campaign.spec.ts`, `npm run typecheck`, and `git diff --check -- components/site-experience.tsx tests/e2e/arrival-campaign.spec.ts` passed with exit 0.
++- Fresh source fixture: extracted the current Header function and scene list in memory, bundled the actual BrandLogo with esbuild, and served current header/global CSS through Playwright route fulfillment on the existing server origin. No build, files served by the production server, or server process were changed. The fixture stubs only `onWatch`, because this repair concerns name/focus/menu behavior; full production film integration remains covered by the existing regression/controller rebuild.
++- Initial fixture run passed system mobile Chromium but could not launch WebKit due to this shell's missing `libGLESv2.so.2`. Reused the controller's existing libraries and managed browsers, without installing or editing dependencies: `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu node --input-type=module < /tmp/zk17-header-repair-fixture.mjs` passed, exit 0, in both managed mobile Chromium and managed mobile WebKit. Each actually executed accessible-name and axe label checks, open-menu resize Home focus, inert/scroll release, and closed-menu focus retention. The skip flag bypassed host dependency preflight only; neither browser scenario nor assertion was skipped.
++
++Rebuilt production checks remain controller-owned and pending for this repair. No build/full suite/server mutation, hero/film/assets edit, agent spawn, push, merge or deployment performed.
+diff --git a/components/site-experience.tsx b/components/site-experience.tsx
+index 62214d0..7e1a6ba 100644
+--- a/components/site-experience.tsx
++++ b/components/site-experience.tsx
+@@ -29,30 +29,32 @@ function VideoDialog({ source, poster, onClose }: { source: string | null; poste
+  return <dialog ref={dialog} className="film-dialog" aria-label="Film room" onCancel={event => { event.preventDefault(); onClose(); }}><button className="dialog-close" onClick={onClose} aria-label="Close film room">Close <span>×</span></button>{source ? <video controls playsInline preload="none" poster={poster}><source src={source} type="video/mp4" />Your browser does not support video playback.</video> : <div className="film-unavailable"><span className="section-rule" /><p className="eyebrow">FILM ROOM</p><h2>Film arrives<br />when it’s ready.</h2><p>No approved film is available yet.</p><button className="text-action" onClick={onClose}>Return to the story <Arrow /></button></div>}</dialog>;
+ }
+ function Header({ onWatch }: { onWatch: (opener: HTMLButtonElement) => void }) {
+  const [open, setOpen] = useState(false);
+  const nav=useRef<HTMLElement>(null); const trigger=useRef<HTMLButtonElement>(null); const restoreTriggerFocus=()=>{let attempts=0;const restore=()=>{const button=trigger.current;if(!button)return;if(getComputedStyle(button).visibility==='visible'&&button.getClientRects().length>0)button.focus();else if(window.innerWidth<900&&attempts++<10)requestAnimationFrame(restore);};requestAnimationFrame(restore);};
+  useLayoutEffect(()=>{if(!open)return;const priorOverflow=document.body.style.overflow;const content=document.querySelector<HTMLElement>('.site-content');const priorInert=content?.inert??false;document.body.style.overflow='hidden';if(content)content.inert=true;let focusFrame=0;const focusWhenVisible=()=>{const closeButton=nav.current?.querySelector<HTMLButtonElement>('.nav-close');if(closeButton&&getComputedStyle(closeButton).visibility==='visible'&&closeButton.getClientRects().length>0)closeButton.focus();else focusFrame=requestAnimationFrame(focusWhenVisible);};focusFrame=requestAnimationFrame(focusWhenVisible);const onKey=(event:KeyboardEvent)=>{if(event.key==='Escape'){setOpen(false);restoreTriggerFocus();return;}if(event.key==='Tab'&&nav.current){const items=[...nav.current.querySelectorAll<HTMLElement>('a,button:not([disabled])')];if(event.shiftKey&&document.activeElement===items[0]){event.preventDefault();items.at(-1)?.focus();}else if(!event.shiftKey&&document.activeElement===items.at(-1)){event.preventDefault();items[0]?.focus();}}};document.addEventListener('keydown',onKey);return()=>{cancelAnimationFrame(focusFrame);document.removeEventListener('keydown',onKey);document.body.style.overflow=priorOverflow;if(content)content.inert=priorInert;};},[open]);
+    const close = () => {setOpen(false);restoreTriggerFocus();};
+  useEffect(() => {
+   const desktop = window.matchMedia('(min-width: 900px)');
+   const releaseMenu = () => {
+-   if (!desktop.matches) return;
++   if (!desktop.matches || !open) return;
+    setOpen(false);
+-   if (document.activeElement === nav.current?.querySelector('.nav-close')) nav.current?.querySelector<HTMLAnchorElement>('a')?.focus();
++   requestAnimationFrame(() => {
++    if (desktop.matches) nav.current?.querySelector<HTMLAnchorElement>('a')?.focus({ preventScroll: true });
++   });
+   };
+   desktop.addEventListener('change', releaseMenu);
+   return () => desktop.removeEventListener('change', releaseMenu);
+- }, []);
++ }, [open]);
+  return <>
+   <header className="site-header">
+-   <a className="brand" href="#arrival" aria-label="ZK17 home" onClick={()=>setOpen(false)}>
++   <a className="brand" href="#arrival" aria-label="Zephyr Kreye — ZK17 home" onClick={()=>setOpen(false)}>
+     <BrandLogo className="header-logo"/>
+     <span className="header-wordmark" aria-hidden="true">ZEPHYR KREYE</span>
+    </a>
+    <nav ref={nav} id="site-nav" className={"site-nav "+(open?"nav-open":"")} aria-label="Main navigation">
+     <button className="nav-close" onClick={close}>Close <span>×</span></button>
+     {scenes.map(([id, name], index) => <a key={id} href={"#"+id} aria-label={name} onClick={close}><span>0{index + 1}</span>{name}</a>)}
+     <a href="/recruiting/" aria-label="Recruiting" onClick={close}><span>08</span>Recruiting</a>
+     <a href="/playoffs/" aria-label="Playoffs" onClick={close}><span>09</span>Playoffs</a>
+    </nav>
+    <button className="header-watch" aria-label="WATCH FILM" onClick={event => onWatch(event.currentTarget)}>
+diff --git a/tests/e2e/arrival-campaign.spec.ts b/tests/e2e/arrival-campaign.spec.ts
+index 883cd73..b0b4c3c 100644
+--- a/tests/e2e/arrival-campaign.spec.ts
++++ b/tests/e2e/arrival-campaign.spec.ts
+@@ -1,12 +1,13 @@
+ import { expect, test } from '@playwright/test';
+ import { build } from 'esbuild';
++import AxeBuilder from '@axe-core/playwright';
+
+ test('campaign hero presents its statement, identity and watch action', async ({ page }) => {
+   await page.emulateMedia({ reducedMotion: 'reduce' });
+   await page.goto('/#arrival');
+   const hero = page.locator('#arrival');
+   await expect(hero.locator('#hero-title')).toHaveText(/MAKE THEM\s*REMEMBER\./);
+   await expect(hero).toContainText('ZEPHYR KREYE');
+   await expect(hero).toContainText('ANNA COYOTES');
+   await expect(hero).toContainText('PREPARATION');
+   await expect(hero.locator('[data-arrival-layer="mark"]')).toBeVisible();
+@@ -234,12 +235,27 @@ test('header mobile controls fit and menu preserves keyboard, inert and scroll b
+     await expect(toggle).toBeFocused();
+     await expect(page.locator('.site-content')).toHaveJSProperty('inert', false);
+     await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
+   }
+   await page.getByRole('button', { name: 'Menu', exact: true }).click();
+   await expect(page.locator('.site-content')).toHaveJSProperty('inert', true);
+   await page.setViewportSize({ width: 1024, height: 768 });
+   await expect(page.locator('.site-content')).toHaveJSProperty('inert', false);
+   await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
+   await expect(page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true })).toBeFocused();
++  await page.setViewportSize({ width: 390, height: 568 });
++  const watch = page.locator('.header-watch');
++  await watch.focus();
++  await page.setViewportSize({ width: 1024, height: 768 });
++  await expect(watch).toBeFocused();
+   await context.close();
+ });
++
++
++test('header home name includes the visible athlete wordmark', async ({ page }) => {
++  await page.emulateMedia({ reducedMotion: 'reduce' });
++  await page.goto('/#arrival');
++  const home = page.locator('.site-header .brand');
++  await expect(home).toHaveAccessibleName(/ZEPHYR KREYE.*ZK17 home/i);
++  const accessibility = await new AxeBuilder({ page }).include('.site-header').withRules(['label-content-name-mismatch']).analyze();
++  expect(accessibility.violations).toEqual([]);
++});

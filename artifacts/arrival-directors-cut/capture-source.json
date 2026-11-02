@@ -1,0 +1,8 @@
+{
+  "productCommit": "e1acea9d70429719bf0cccea5e57f977b0a151dc",
+  "testHarnessCommit": "bbd4f6b",
+  "cases": 12,
+  "samplesPerMotionCase": 18,
+  "motionCases": 8,
+  "physicalDeviceEvidence": false
+}

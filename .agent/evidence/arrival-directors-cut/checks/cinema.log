@@ -1,0 +1,66 @@
+
+Running 36 tests using 2 workers
+
+(node:165773) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:165774) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   2 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:21:5 › Playoffs desktop places official Anna mark left of copy (683ms)
+  ✓   1 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:3:5 › film resolves to an uncropped native player in the second story scene (1.3s)
+  ✓   3 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player (1.2s)
+  ✓   4 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 240px viewport retains a finite, usable player (1.1s)
+  ✓   5 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 360px viewport retains a finite, usable player (1.0s)
+  ✓   7 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:120:5 › a direct film anchor stays framed through resize and yields to manual scrolling (2.4s)
+  ✓   8 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (1.7s)
+  ✓   9 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:173:5 › ready native keyboard controls survive seek keys and yield to manual scrolling (1.3s)
+  ✓   6 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:55:5 › cinema reverses its reveal and recomputes framing after a height and width resize (6.4s)
+(node:166139) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:166148) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  -  11 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:21:5 › Playoffs desktop places official Anna mark left of copy
+  ✓  10 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:3:5 › film resolves to an uncropped native player in the second story scene (1.1s)
+  ✓  12 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player (1.3s)
+  ✓  13 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 240px viewport retains a finite, usable player (1.0s)
+  ✓  14 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 360px viewport retains a finite, usable player (1.1s)
+  ✓  16 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:120:5 › a direct film anchor stays framed through resize and yields to manual scrolling (1.6s)
+  ✓  17 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (1.6s)
+  ✓  18 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:173:5 › ready native keyboard controls survive seek keys and yield to manual scrolling (1.1s)
+(node:166515) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  15 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:55:5 › cinema reverses its reveal and recomputes framing after a height and width resize (5.7s)
+(node:166537) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  -  20 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:21:5 › Playoffs desktop places official Anna mark left of copy
+  ✓  19 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:3:5 › film resolves to an uncropped native player in the second story scene (3.9s)
+  ✓  21 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player (3.6s)
+  ✓  22 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:33:7 › short 240px viewport retains a finite, usable player (3.7s)
+  ✓  23 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:33:7 › short 360px viewport retains a finite, usable player (3.8s)
+  ✓  25 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:120:5 › a direct film anchor stays framed through resize and yields to manual scrolling (3.9s)
+  ✓  26 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (5.3s)
+  ✓  27 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:173:5 › ready native keyboard controls survive seek keys and yield to manual scrolling (5.4s)
+(node:167227) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  28 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:3:5 › film resolves to an uncropped native player in the second story scene (989ms)
+  ✓  24 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:55:5 › cinema reverses its reveal and recomputes framing after a height and width resize (17.4s)
+  ✓  29 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:21:5 › Playoffs desktop places official Anna mark left of copy (468ms)
+(node:167334) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  30 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:33:7 › short 240px viewport retains a finite, usable player (888ms)
+  ✓  31 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player (956ms)
+  ✓  32 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:33:7 › short 360px viewport retains a finite, usable player (931ms)
+  ✓  34 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:120:5 › a direct film anchor stays framed through resize and yields to manual scrolling (1.6s)
+  ✓  33 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:55:5 › cinema reverses its reveal and recomputes framing after a height and width resize (1.9s)
+  ✓  36 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:173:5 › ready native keyboard controls survive seek keys and yield to manual scrolling (1.2s)
+  ✓  35 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (1.6s)
+
+  2 skipped
+  34 passed (48.1s)

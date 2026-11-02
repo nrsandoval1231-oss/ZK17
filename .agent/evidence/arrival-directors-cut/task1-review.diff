@@ -1,0 +1,795 @@
+diff --git a/.agent/evidence/arrival-directors-cut/task1-report.md b/.agent/evidence/arrival-directors-cut/task1-report.md
+new file mode 100644
+index 0000000..65a824f
+--- /dev/null
++++ b/.agent/evidence/arrival-directors-cut/task1-report.md
+@@ -0,0 +1,18 @@
++# Director's cut — Task 1 implementation report
++
++Implemented a scroll-scrubbed hero with approximately 15 stable viewport heights of pin distance on desktop and touch, with darkness, sequential lamps, layered smoke, a dark photo silhouette, standing portrait, individual game-action/rear/white-jersey photographs, and a final statement hold. The cinematic sword was removed; the header and film implementation were not edited. The pin uses the hero's small-viewport height plus header padding for distance rather than the dynamic `innerHeight`, and refreshes on orientation change. Reduced motion and the unenhanced document retain the complete static composition. Visual effects use transform/opacity, gradients, and a deterministic small raster smoke texture; no athlete or anatomy was generated.
++
++## Photographs and release boundary
++
++`docs/PREVIEW_MEDIA_MANIFEST.json` records source SHA-256, crop coordinates and both WebP outputs. New crops come from BW archive #01 (standing), #03 (rear), #08 (white #17 rear), and original archive source-11.jpg (game action). The standing image contains a teammate behind Zephyr and source overlays lower down; the crop and fade conceal the overlays without reconstructing anatomy. The action shot is a walking/carrying pose, not a verified running photo; the supplied running reference remains a visual benchmark, not a production likeness asset. A dim secondary player remains visible in the action crop. Original photos and archive bytes are unchanged. The derivative files remain preview-only with rights pending; no public-release safeguard was bypassed. A verified running original and a clean standing original would remove those fidelity limitations.
++
++The directory guard now enumerates both campaign photo directories, covering all 480 and 960 derivatives. A temporary unlisted photo caused `npx tsx --test tests/arrival-campaign-media.test.ts` to fail with the expected unprotected-photo assertion; after removing it the same test passed 1/1.
++
++## Focused verification
++
++- Current-source esbuild fixture red: previous desktop pin was 2.74 viewport heights and touch had no pin. After implementation, `npx playwright test tests/e2e/arrival-directors-cut.spec.ts --project=desktop-chromium --workers=1 --output=/tmp/directors-chromium-final2` passed 4/4: desktop and touch contexts progress/reverse, image bounds, reduced-motion cleanup, orientation refresh and overflow.
++- `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/arrival-directors-cut.spec.ts --project=iphone-webkit --workers=1 --output=/tmp/directors-webkit-final3` passed 4/4. Host-preflight bypass was necessary for the existing local GLES library; the managed WebKit browser and assertions ran. These fixture interactions set scroll position programmatically in a touch-enabled WebKit context; they do not prove a physical swipe, iOS browser-toolbar behavior, or device performance.
++- Scoped ESLint and `npm run typecheck` passed. This worker did not rebuild the shared export or run the integrated suite; controller owns those checks.
++- Source-fixture screenshots: `/tmp/directors-final-captures/desktop-{lights,smoke,hero,action,title}.png` and corresponding `mobile-*`. Those predate the last mobile action bounds fix. The revised action was recaptured and inspected at `/tmp/directors-final-captures/mobile-action-faded.png`; face and ball remain visible and the image edge fades. The fixture lacks the application font imports, so it is not evidence for final typography. Some photo-edge and secondary-player visibility remains for independent visual review. The controller must capture the built application and inspect all beats, no-JS/reduced motion, film transition, real font, and responsive framing.
++
++Old hero-only tests were updated for the new darkness, touch pin and photo source; header tests remain. An independent review and controller integration remain necessary before claiming the full brief is complete.
+diff --git a/components/arrival-hero.module.css b/components/arrival-hero.module.css
+index 205d019..1df1650 100644
+--- a/components/arrival-hero.module.css
++++ b/components/arrival-hero.module.css
+@@ -1,36 +1,25 @@
+-.hero{position:relative;isolation:isolate;overflow:hidden;height:calc(100svh - 96px);min-height:0;background:#09090d;color:#f4f3f3}
+-.atmosphere{position:absolute;inset:0;background:radial-gradient(ellipse at 56% 35%,#332b40 0,transparent 40%),radial-gradient(ellipse at 98% 80%,#24152f,transparent 40%),#09090d}
+-.layer{position:absolute;overflow:hidden;pointer-events:none}.layer picture,.layer img{display:block;width:100%;height:100%}.layer img{object-fit:cover}
+-.left{left:-4%;top:0;width:39%;height:49%;opacity:.58;filter:grayscale(1) brightness(.62);mask-image:radial-gradient(ellipse at 40% 42%,#000 20%,transparent 72%)}.left img{object-position:40% 20%!important;transform:scale(1.45)}
+-.rear{left:25%;top:18%;width:25%;height:43%;filter:brightness(.68) saturate(.7);mask-image:radial-gradient(ellipse at 50% 48%,#000 20%,transparent 72%)}
+-.mark{position:absolute;z-index:1;left:26%;top:8%;width:57%;height:58%;background:linear-gradient(155deg,#fafafa 4%,#55535b 25%,#e6e3e7 38%,#727078 48%,#fcfcfd 57%,#37343e 79%,#bab9c0);mask-size:contain;mask-position:center;mask-repeat:no-repeat;filter:drop-shadow(10px 18px 10px #000);opacity:.9}
+-.athlete{z-index:3;left:48%;top:5%;width:34%;height:auto;aspect-ratio:706/690;mask-image:radial-gradient(ellipse at center,#000 35%,transparent 75%)}.arrivalCutout{clip-path:polygon(35% 25%,40% 20%,45% 19%,50% 21%,55% 27%,57% 36%,67% 40%,73% 54%,76% 72%,73% 100%,22% 100%,19% 72%,22% 52%,27% 40%,34% 36%);mask-image:linear-gradient(#000 77%,transparent)}.athlete img{object-fit:fill}
+-.right{z-index:2;right:0;top:16%;width:27%;height:53%;filter:brightness(.75);mask-image:radial-gradient(ellipse at 50% 45%,#000 20%,transparent 72%)}
+-.action{z-index:4;right:3%;top:52%;width:25%;height:35%;filter:brightness(.8);mask-image:radial-gradient(ellipse at center,#000 12%,transparent 72%)}
+-.copy{position:absolute;z-index:5;left:7%;top:49%;width:52%;text-shadow:0 3px 20px #000}.identity,.school,.footer,.scroll,.preview{font:700 10px/1.4 var(--body);letter-spacing:.18em}.identity i,.school i,.footer i{display:inline-block;width:5px;height:5px;margin:0 9px 2px;background:#9e63fa;transform:rotate(45deg)}.identity{margin:0 0 16px}.copy h1{margin:0;font:900 clamp(70px,9.1vw,150px)/.77 var(--display);letter-spacing:-.035em}.copy h1 span{display:block;white-space:nowrap}.school{margin:22px 0}.watch{border:1px solid #aaa;background:#101015b8;color:#fff;padding:13px 17px;font:700 10px var(--body);letter-spacing:.12em;cursor:pointer}.watch span{margin-left:18px;color:#b087ff}.footer{position:absolute;z-index:5;bottom:4%;left:7%;margin:0}.scroll{position:absolute;z-index:5;bottom:4%;left:50%;color:#ddd;text-decoration:none}.scroll span{margin-left:8px}.preview{position:absolute;z-index:5;right:3%;bottom:4%;font-size:7px;color:#aaa}
+-@media(max-width:899px){.hero{height:calc(100svh - 80px)}.left{width:58%;height:40%}.rear{left:3%;top:13%;width:36%;height:34%}.mark{left:9%;top:1%;width:81%;height:48%}.athlete{left:24%;top:0;width:68%}.right{right:-9%;top:12%;width:38%;height:38%}.action{display:none}.copy{left:6%;top:55%;width:90%}.copy h1{font-size:clamp(54px,12.2vw,100px)}.footer{left:6%;bottom:4%}.scroll{left:auto;right:6%;bottom:4%}.preview{bottom:1%;font-size:6px}}
+-@media(max-width:560px){.hero{height:calc(100svh - 76px)}.left{opacity:.35}.rear{opacity:.5}.right{display:none}.athlete{left:18%;width:78%}.mark{left:5%;width:87%}.identity,.school,.footer,.scroll{font-size:8px}.scroll{bottom:9%}.footer{bottom:4%}}
+-@media(max-height:650px){.copy{top:49%}.copy h1{font-size:clamp(48px,10vw,84px)}.identity{margin-bottom:8px}.school{margin:10px 0}.watch{padding:9px 12px}.athlete{width:min(60%, 48vh);left:35%}.footer{bottom:3%}}
+-/* Supplied campaign SVGs contain only original photo pixels and transparent cutouts. */
+-.layer[data-campaign-photo]{mask-image:none;clip-path:none;filter:none}
+-.layer[data-campaign-photo] img{object-fit:contain;object-position:center!important;transform:none}
+-.left[data-campaign-photo]{left:-2%;top:3%;width:38%;height:47%;opacity:.52;filter:brightness(.65)}
+-.rear[data-campaign-photo]{left:25%;top:18%;width:22%;height:44%;filter:brightness(.7)}
+-.athlete[data-campaign-photo]{left:48%;top:2%;width:25%;height:91%;aspect-ratio:auto}
+-.right[data-campaign-photo]{right:2%;top:17%;width:23%;height:49%;filter:brightness(.8)}
+-.copy{top:auto;bottom:15%}
+-.footer,.scroll,.preview{pointer-events:none}.scroll{pointer-events:auto}
+-@media(max-width:899px){.left[data-campaign-photo]{width:48%;height:38%}.rear[data-campaign-photo]{left:1%;top:13%;width:30%;height:38%}.athlete[data-campaign-photo]{left:25%;top:1%;width:52%;height:55%}.right[data-campaign-photo]{right:-5%;top:11%;width:30%;height:36%}.copy{top:auto;bottom:18%}}
+-@media(max-width:560px){.athlete[data-campaign-photo]{left:22%;width:58%;height:55%}.copy{bottom:18%}}
+-@media(max-height:650px){.copy{top:auto;bottom:16%}.copy h1{font-size:clamp(44px,8vw,78px)}}
+-@media(max-height:650px) and (min-width:700px){.athlete[data-campaign-photo]{left:51%;top:2%;width:23%;height:90%}}
+-@media(max-height:450px) and (orientation:landscape){.copy{bottom:15%;left:5%}.copy h1{font-size:clamp(36px,6vw,52px);line-height:.8}.identity{margin-bottom:5px}.school{margin:5px 0}.watch{padding:6px 10px;font-size:8px}.footer{bottom:3%;left:5%}.scroll{bottom:3%;left:auto;right:5%}.preview{display:none}.athlete[data-campaign-photo]{left:53%;width:22%;height:90%}}
++.hero{position:relative;isolation:isolate;overflow:hidden;height:calc(100svh - 96px);min-height:0;background:#000;color:#f4f3f3}
++.lights,.smokeBack,.smokeFront,.grain,.photo{position:absolute;inset:0;pointer-events:none}
++.lights{opacity:.28;background:radial-gradient(ellipse at 50% 0%,rgba(168,157,190,.18),transparent 55%)}
++.beam{position:absolute;top:-5%;width:30%;height:85%;transform-origin:50% 0;opacity:.7;filter:blur(10px);background:linear-gradient(to bottom,rgba(255,255,255,.6),rgba(190,185,215,.08) 27%,transparent 90%);mask-image:linear-gradient(to right,transparent 0%,#000 45%,#000 55%,transparent 100%)}
++.beam:before{content:'';position:absolute;top:4%;left:45%;width:10%;height:2%;background:#fff;box-shadow:0 0 16px 9px #fff,0 0 60px 24px rgba(205,196,230,.65)}
++.beam:nth-child(1){left:2%;transform:rotate(-14deg)}.beam:nth-child(2){left:25%;transform:rotate(-5deg)}.beam:nth-child(3){right:25%;transform:rotate(5deg)}.beam:nth-child(4){right:2%;transform:rotate(14deg)}
++.smokeBack,.smokeFront{background:radial-gradient(ellipse at 17% 75%,rgba(151,147,159,.38),transparent 38%),radial-gradient(ellipse at 72% 80%,rgba(145,137,157,.32),transparent 42%),radial-gradient(ellipse at 55% 100%,rgba(130,120,145,.32),transparent 48%)}
++.smokeBack{opacity:.5;background-image:url('/media/arrival-directors-smoke.png'),radial-gradient(ellipse at 50% 95%,rgba(130,120,145,.22),transparent 65%);background-size:180% 42%,100% 100%;background-position:center 85%,center;background-repeat:no-repeat}.smokeFront{z-index:3;opacity:.5;transform:scale(1.2);background-image:url('/media/arrival-directors-smoke.png');background-size:100% 50%;background-position:center bottom;background-repeat:no-repeat;background-color:transparent;mask-image:linear-gradient(to bottom,transparent 28%,#000 100%);background-blend-mode:screen;/* foreground haze */ background:radial-gradient(ellipse at 0% 88%,rgba(169,160,181,.22),transparent 38%),radial-gradient(ellipse at 100% 94%,rgba(151,144,161,.2),transparent 40%),linear-gradient(to top,#000 0%,transparent 25%)}
++.grain{z-index:4;opacity:.08;background-image:repeating-radial-gradient(circle at 30% 40%,#fff 0 0.5px,transparent 1px 4px);background-size:7px 7px;mix-blend-mode:soft-light}
++.photo{z-index:2;mask-image:linear-gradient(to bottom,transparent 0%,#000 13%,#000 66%,transparent 96%)}
++.photo picture{position:absolute;inset:0;mask-image:radial-gradient(ellipse 28% 95% at 50% 48%,#000 40%,transparent 100%)}.photo img{display:block;width:100%;height:100%}.photo img{object-fit:contain;filter:grayscale(1);}
++.silhouette{opacity:0}.silhouette img{filter:grayscale(1) brightness(.13)}
++.athlete{opacity:.8}.montage{opacity:0}.montage img{object-fit:contain}.montage[data-arrival-layer="running"] picture{mask-image:radial-gradient(ellipse 27% 46% at 50% 67%,#000 14%,transparent 100%)}
++.copy{position:absolute;z-index:5;left:7%;bottom:17%;width:65%;text-shadow:0 3px 24px #000}.identity,.school,.footer,.scroll{font:700 10px/1.4 var(--body);letter-spacing:.18em}.identity{margin:0 0 16px}.copy h1{margin:0;font:900 clamp(70px,7.4vw,120px)/.77 var(--display);letter-spacing:-.035em}.copy h1 span{display:block;white-space:nowrap}.copy h1 span:last-child{font-size:1.25em}.school{margin:22px 0}.watch{border:1px solid #aaa;background:#101015b8;color:#fff;padding:13px 17px;font:700 10px var(--body);letter-spacing:.12em;cursor:pointer}.watch span{margin-left:18px;color:#b087ff}.footer{position:absolute;z-index:5;bottom:6%;left:7%;margin:0}.scroll{position:absolute;z-index:5;bottom:6%;left:50%;color:#ddd;text-decoration:none}.scroll span{margin-left:8px}
++@media(max-width:899px){.hero{height:calc(100svh - 80px)}.copy{left:6%;bottom:18%;width:90%}.copy h1{font-size:clamp(48px,11vw,95px)}.copy h1 span:last-child{font-size:1em}.footer{left:6%;bottom:4%}.scroll{left:auto;right:6%;bottom:4%}.photo img{object-fit:cover}.photo{mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 60%,transparent 82%)}.beam{width:45%;filter:blur(5px)}}
++@media(max-width:560px){.hero{height:calc(100svh - 76px)}.identity,.school,.footer,.scroll{font-size:8px}.scroll{bottom:9%}}
++@media(max-height:650px){.copy{bottom:16%}.copy h1{font-size:clamp(40px,8vw,78px)}.identity{margin-bottom:8px}.school{margin:10px 0}.watch{padding:9px 12px}.footer{bottom:3%}}
++@media(max-height:450px) and (orientation:landscape){.copy{bottom:15%;left:5%}.copy h1{font-size:clamp(34px,6vw,52px);line-height:.8}.identity{margin-bottom:5px}.school{margin:5px 0}.watch{padding:6px 10px;font-size:8px}.footer{bottom:3%;left:5%}.scroll{bottom:3%;left:auto;right:5%}}
+ 
+-/* Fade before the source upload's UI occlusions; no missing body detail is reconstructed. */
+-.athlete[data-campaign-photo]{mask-image:linear-gradient(to bottom,#000 54%,transparent 65%)}
+-.left[data-campaign-photo]{mask-image:radial-gradient(ellipse at 50% 42%,#000 28%,transparent 72%)}
+-.stadium[data-campaign-photo]{inset:0;opacity:.14;filter:grayscale(1) brightness(.4);mask-image:linear-gradient(to bottom,transparent 0%,#000 22%,#000 100%)}
+-.stadium[data-campaign-photo] img{object-fit:cover;object-position:center bottom!important}
++.smokeFront::after{content:'';position:absolute;inset:35% -15% -10%;background:url('/media/arrival-directors-smoke.png') center bottom/140% 75% no-repeat;opacity:.65}
++@media(max-width:899px){.photo picture{mask-image:radial-gradient(ellipse 65% 90% at 50% 45%,#000 35%,transparent 100%)}.montage[data-arrival-layer="running"] picture{mask-image:radial-gradient(ellipse 48% 47% at 50% 65%,#000 20%,transparent 100%)}}
+ 
+-/* Desktop editorial hierarchy follows the approved composition; shorter screens retain their fitting layout. */
+-@media(min-width:900px) and (min-height:651px){.copy{bottom:22%}.copy h1{font-size:clamp(70px,7.4vw,120px)}.copy h1 span:last-child{font-size:1.25em}.footer{bottom:14%}}
++@media(max-width:899px){.montage img{object-fit:contain}}
++.montage::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,#000 8%,transparent 48%);pointer-events:none}
++@media(max-width:899px){.montage[data-arrival-layer="running"] picture{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100%,65svh);height:auto;aspect-ratio:400/450;mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 60%,transparent 96%)}}
+diff --git a/components/arrival-hero.tsx b/components/arrival-hero.tsx
+index 6ccbf8d..6863893 100644
+--- a/components/arrival-hero.tsx
++++ b/components/arrival-hero.tsx
+@@ -1,50 +1,52 @@
+ 'use client';
+ 
+ import Image from 'next/image';
+ import { useRef } from 'react';
+ import type { PreviewPhoto, PublicProfile, ScenePhoto } from '@/content/site';
+-import { brand } from '@/content/brand';
+ import { useArrivalHeroMotion } from './use-arrival-hero-motion';
+ import styles from './arrival-hero.module.css';
+ 
+ type Photo = PreviewPhoto | ScenePhoto;
+ type Props = { profile: PublicProfile; photo?: Photo; photos?: Photo[]; onWatch: (button: HTMLButtonElement) => void };
+ 
+-function Layer({ photo, layer, className, decorative = true }: { photo?: Photo; layer: string; className: string; decorative?: boolean }) {
++function PhotoLayer({ photo, layer, className, decorative = true }: { photo?: Photo; layer: string; className: string; decorative?: boolean }) {
+   if (!photo) return null;
+-  const base = photo.kind === 'preview' && /-706\.webp$/.test(photo.src) ? photo.src.replace(/-706\.webp$/, '') : null;
+-  const campaign = photo.kind === 'preview' && photo.id.startsWith('campaign-');
+-  const campaignBase = campaign ? photo.src.replace(/-640\.svg$/, '') : null;
++  const directors = photo.kind === 'preview' && photo.id.startsWith('directors-');
+   const focal = photo.kind === 'preview' ? photo.focal : photo.focalPoint;
+-  return <div className={`${styles.layer} ${className} ${layer === 'athlete' && photo.kind === 'preview' && photo.id === 'arrival' ? styles.arrivalCutout : ''}`} data-arrival-layer={layer} data-campaign-photo={campaign || undefined}>
+-    <picture>{campaignBase && <source srcSet={`${campaignBase}-320.svg 320w, ${campaignBase}-640.svg 640w`} sizes={layer === 'stadium' ? '100vw' : layer === 'athlete' ? '(max-width: 700px) 48vw, 25vw' : '(max-width: 700px) 25vw, 30vw'} />} {base && <source type="image/avif" srcSet={[360, 540, 706].map(width => `${base}-${width}.avif ${width}w`).join(', ')} sizes="(max-width: 700px) 80vw, 45vw" />}
+-      <Image src={photo.src} alt={decorative ? '' : photo.alt} width={photo.width} height={photo.height} loading={layer === 'athlete' ? 'eager' : 'lazy'} fetchPriority={layer === 'athlete' ? 'high' : 'auto'} unoptimized style={{ objectPosition: focal }} />
++  return <div className={`${styles.photo} ${className}`} data-arrival-layer={layer} aria-hidden={decorative || undefined}>
++    <picture>{directors && <source srcSet={`${photo.src.replace('-960.webp', '-480.webp')} 480w, ${photo.src} 960w`} sizes="(max-width: 700px) 100vw, 60vw" />}
++      <Image src={photo.src} alt={decorative ? '' : photo.alt} width={photo.width} height={photo.height} loading="lazy" unoptimized style={{ objectPosition: focal }} />
+     </picture>
+   </div>;
+ }
+ 
+ export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Props) {
+   const root = useRef<HTMLElement>(null);
+   useArrivalHeroMotion(root);
+   const find = (id: string) => photos.find(item => item.id === id);
+-  const athlete = find('campaign-front') ?? photo ?? find('arrival');
++  const athlete = find('directors-standing') ?? photo ?? find('arrival');
++  const rear = find('directors-rear');
++  const white = find('directors-white');
++  const running = find('directors-action');
+   return <section ref={root} id="arrival" data-arrival-hero className={styles.hero} aria-labelledby="hero-title">
+-    <div className={styles.atmosphere} aria-hidden="true" />
+-    <Layer photo={find('campaign-stadium')} layer="stadium" className={styles.stadium} />
+-    <Layer photo={find('campaign-closeup') ?? athlete} layer="portrait-left" className={styles.left} />
+-    <Layer photo={find('campaign-rear') ?? find('throwing')} layer="rear" className={styles.rear} />
+-    <div className={styles.mark} data-arrival-layer="mark" aria-hidden="true" style={{ maskImage: `url(${brand.monogram.src})`, WebkitMaskImage: `url(${brand.monogram.src})` }} />
+-    <Layer photo={athlete} layer="athlete" className={styles.athlete} decorative={false} />
+-    <Layer photo={find('campaign-profile') ?? find('portrait')} layer="portrait-right" className={styles.right} />
+-    <Layer photo={find('running') ?? find('on-field')} layer="action" className={styles.action} />
++    <div className={styles.lights} data-arrival-layer="lights" aria-hidden="true">
++      <div className={styles.beam} /><div className={styles.beam} /><div className={styles.beam} /><div className={styles.beam} />
++    </div>
++    <div className={styles.smokeBack} data-arrival-layer="smoke-back" aria-hidden="true" />
++    <PhotoLayer photo={athlete} layer="silhouette" className={styles.silhouette} />
++    <PhotoLayer photo={athlete} layer="athlete" className={styles.athlete} decorative={false} />
++    <PhotoLayer photo={running} layer="running" className={styles.montage} />
++    <PhotoLayer photo={rear} layer="rear" className={styles.montage} />
++    <PhotoLayer photo={white} layer="white" className={styles.montage} />
++    <div className={styles.smokeFront} data-arrival-layer="smoke-front" aria-hidden="true" />
++    <div className={styles.grain} aria-hidden="true" />
+     <div className={styles.copy} data-arrival-statement>
+       <p data-arrival-detail className={styles.identity}>{profile.name.toUpperCase()} / QB {profile.number}</p>
+-      <h1 id="hero-title"><span>MAKE THEM</span>{" "}<span>REMEMBER.</span></h1>
++      <h1 id="hero-title"><span>MAKE THEM</span>{' '}<span>REMEMBER.</span></h1>
+       <p data-arrival-detail className={styles.school}>ANNA COYOTES / {profile.position.toUpperCase()}</p>
+       <button data-arrival-detail className={styles.watch} type="button" onClick={event => onWatch(event.currentTarget)}>WATCH THE FILM <span aria-hidden="true">↗</span></button>
+     </div>
+     <p data-arrival-detail className={styles.footer}>PREPARATION | DISCIPLINE | RESULTS</p>
+     <a data-arrival-detail className={styles.scroll} href="#film-room">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+-    {athlete?.kind === 'preview' && <span data-arrival-detail className={styles.preview}>PREVIEW CROP · ORIGINAL PENDING</span>}
+   </section>;
+ }
+diff --git a/components/use-arrival-hero-motion.ts b/components/use-arrival-hero-motion.ts
+index 824af79..cc7e1de 100644
+--- a/components/use-arrival-hero-motion.ts
++++ b/components/use-arrival-hero-motion.ts
+@@ -1,43 +1,57 @@
+ 'use client';
+ 
+ import { useLayoutEffect, type RefObject } from 'react';
+ import { gsap } from 'gsap';
+ import { ScrollTrigger } from 'gsap/ScrollTrigger';
+ 
+ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
+   useLayoutEffect(() => {
+     const element = root.current;
+     if (!element) return;
++    const container = element.parentElement!;
+     gsap.registerPlugin(ScrollTrigger);
+     const mm = gsap.matchMedia();
+-    mm.add('(prefers-reduced-motion: no-preference) and (min-width: 900px) and (min-height: 650px) and (hover: hover) and (pointer: fine)', () => {
+-      const layer = (name: string) => element.querySelector(`[data-arrival-layer="${name}"]`);
++    mm.add('(prefers-reduced-motion: no-preference)', () => {
++      const layer = (name: string) => element.querySelector<HTMLElement>(`[data-arrival-layer="${name}"]`);
++      const lights = layer('lights')!;
++      const smokeBack = layer('smoke-back')!;
++      const smokeFront = layer('smoke-front')!;
++      const silhouette = layer('silhouette');
++      const athlete = layer('athlete');
++      const running = layer('running');
+       const rear = layer('rear');
+-      const stadium = layer('stadium');
+-      const mark = layer('mark');
+-      const portraits = ['athlete', 'portrait-left', 'portrait-right', 'action'].map(layer).filter(Boolean);
+-      const lines = element.querySelectorAll('#hero-title span');
++      const white = layer('white');
++      const photos = [silhouette, athlete, running, rear, white].filter(Boolean);
++      const copy = element.querySelector('[data-arrival-statement]');
+       const details = element.querySelectorAll('[data-arrival-detail]');
+-      // Initialize all children together; staggered tweens alone leave later lines visible.
+-      if (stadium) gsap.set(stadium, { opacity: 0 });
+-      gsap.set(portraits, { opacity: 0, yPercent: 3 });
+-      gsap.set(lines, { opacity: 0, yPercent: 10 });
+-      gsap.set(details, { autoAlpha: 0 });
+-      gsap.set(mark, { opacity: rear ? 0 : .15, scale: 1.08 });
+-      if (rear) gsap.set(rear, { opacity: .65, xPercent: -8 });
+-      const timeline = gsap.timeline({ scrollTrigger: {
+-        id: 'arrival-hero', trigger: element, start: () => `top ${parseFloat(getComputedStyle(element.parentElement!).paddingTop)}px`, end: '+=185%',
+-        scrub: .6, pin: true, invalidateOnRefresh: true,
++      gsap.set([lights, smokeBack, smokeFront, ...photos], { opacity: 0 });
++      gsap.set([copy, ...details], { autoAlpha: 0 });
++      const timeline = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
++        id: 'arrival-hero', trigger: element,
++        start: () => `top ${parseFloat(getComputedStyle(container).paddingTop) || 0}px`,
++        end: () => `+=${(element.offsetHeight + (parseFloat(getComputedStyle(container).paddingTop) || 0)) * 15}`, scrub: .35, pin: true, invalidateOnRefresh: true,
+       } });
+-      if (rear) timeline.to(rear, { opacity: .75, xPercent: 0, duration: 1 }, 0);
+-      timeline.to(mark, { opacity: .9, scale: 1, duration: 1 }, .5)
+-        .to(portraits, { opacity: 1, yPercent: 0, stagger: .12, duration: 1 }, 1)
+-        .to(details, { autoAlpha: 1, duration: .5 }, 1.5)
+-        .to(lines, { opacity: 1, yPercent: 0, stagger: .3, duration: .7 }, 1.6)
+-        .to(element.querySelectorAll('[data-arrival-layer]'), { scale: .98, duration: .8 }, 2.7);
+-      if (stadium) timeline.to(stadium, { opacity: .14, duration: 1 }, 1);
+-      return () => timeline.kill();
++      // Durations express relative scroll distance, not autoplay time.
++      timeline.to({}, { duration: 2 })
++        .to(lights, { opacity: .8, duration: 1.5 }, 2)
++        .fromTo(lights.children, { opacity: .08 }, { opacity: 1, stagger: .25, duration: .7 }, 2)
++        .to(smokeBack, { opacity: .9, xPercent: 4, duration: 2 }, 4)
++        .to(smokeFront, { opacity: .8, xPercent: -4, duration: 2 }, 4)
++        .to({}, { duration: 10 }, 6);
++      if (silhouette) timeline.to(silhouette, { opacity: .85, scale: 1.03, duration: 1.4 }, 6);
++      if (athlete) timeline.to(athlete, { opacity: .95, scale: 1.05, duration: 2 }, 8);
++      if (silhouette) timeline.to(silhouette, { opacity: 0, duration: 1 }, 8.5);
++      if (athlete && running) timeline.to(athlete, { opacity: 0, duration: .6 }, 10.5).to(running, { opacity: 1, scale: 1.04, duration: .7 }, 10.5);
++      if (running && rear) timeline.to(running, { opacity: 0, duration: .6 }, 11.8).to(rear, { opacity: 1, scale: 1.04, duration: .7 }, 11.8);
++      if (rear && white) timeline.to(rear, { opacity: 0, duration: .6 }, 13).to(white, { opacity: 1, scale: 1.04, duration: .7 }, 13);
++      if (white) timeline.to(white, { opacity: 0, duration: .7 }, 14);
++      if (athlete) timeline.to(athlete, { opacity: .7, scale: .98, duration: 1.3 }, 14);
++      timeline.to([copy, ...details], { autoAlpha: 1, duration: .8 }, 14.2)
++        .to(smokeFront, { opacity: .3, xPercent: 5, duration: 1.5 }, 14);
++      const refresh = () => ScrollTrigger.refresh();
++      window.addEventListener('orientationchange', refresh);
++      return () => { window.removeEventListener('orientationchange', refresh); timeline.kill(); };
+     });
+     return () => mm.revert();
+   }, [root]);
+ }
+diff --git a/content/arrival-campaign.ts b/content/arrival-campaign.ts
+index 1537d1a..33482cd 100644
+--- a/content/arrival-campaign.ts
++++ b/content/arrival-campaign.ts
+@@ -1,13 +1,23 @@
+ import type { PreviewPhoto } from './site';
+ 
+ /** Owner-uploaded Zpics.zip photos, available for review only until rights approval.
+  * SVG presentations preserve the photograph and use coordinate clipping; regions
+  * hidden by source UI are transparent rather than synthesized. */
+-export const arrivalCampaignPhotos: PreviewPhoto[] = [
++const legacyArrivalPhotos: PreviewPhoto[] = [
+   { kind:'preview', id:'campaign-stadium', src:'/media/arrival-campaign/stadium-640.svg', width:706, height:650, alt:'Anna football night-game stadium and field.', focal:'50% 100%', label:'PREVIEW CROP · ORIGINAL PENDING' },
+   { kind:'preview', id:'campaign-front', src:'/media/arrival-campaign/front-640.svg', width:330, height:945, alt:'Zephyr Kreye walking in his black number 17 Anna Coyotes uniform and helmet.', focal:'50% 50%', label:'PREVIEW CROP · ORIGINAL PENDING' },
+   { kind:'preview', id:'campaign-rear', src:'/media/arrival-campaign/rear-640.svg', width:400, height:730, alt:'Rear view of Zephyr Kreye wearing his white number 17 Anna uniform and purple helmet.', focal:'50% 50%', label:'PREVIEW CROP · ORIGINAL PENDING' },
+   { kind:'preview', id:'campaign-back', src:'/media/arrival-campaign/back-640.svg', width:270, height:875, alt:'Zephyr Kreye standing on the sideline in his black number 17 uniform, viewed from behind.', focal:'50% 50%', label:'PREVIEW CROP · ORIGINAL PENDING' },
+   { kind:'preview', id:'campaign-closeup', src:'/media/arrival-campaign/closeup-640.svg', width:180, height:220, alt:'Close-up of Zephyr Kreye in his football helmet.', focal:'50% 50%', label:'PREVIEW CROP · ORIGINAL PENDING' },
+   { kind:'preview', id:'campaign-profile', src:'/media/arrival-campaign/profile-640.svg', width:260, height:415, alt:'Zephyr Kreye in profile wearing his purple helmet and black Anna uniform.', focal:'50% 50%', label:'PREVIEW CROP · ORIGINAL PENDING' },
+ ];
++
++/** Source-preserving director's-cut crops, review only until rights approval. */
++export const arrivalDirectorsPhotos: PreviewPhoto[] = [
++  { kind: 'preview', id: 'directors-action', src: '/media/arrival-directors-cut/directors-action-960.webp', width: 400, height: 450, alt: 'Zephyr Kreye carrying a football on the field.', focal: '50% 45%', label: 'PREVIEW CROP · ORIGINAL PENDING' },
++  { kind: 'preview', id: 'directors-standing', src: '/media/arrival-directors-cut/directors-standing-960.webp', width: 601, height: 780, alt: 'Zephyr Kreye standing in his black number 17 uniform.', focal: '50% 35%', label: 'PREVIEW CROP · ORIGINAL PENDING' },
++  { kind: 'preview', id: 'directors-rear', src: '/media/arrival-directors-cut/directors-rear-960.webp', width: 650, height: 1050, alt: 'Zephyr Kreye seen from behind in his number 17 uniform.', focal: '50% 40%', label: 'PREVIEW CROP · ORIGINAL PENDING' },
++  { kind: 'preview', id: 'directors-white', src: '/media/arrival-directors-cut/directors-white-960.webp', width: 470, height: 805, alt: 'Zephyr Kreye seen from behind in his white number 17 uniform.', focal: '50% 40%', label: 'PREVIEW CROP · ORIGINAL PENDING' },
++];
++
++export const arrivalCampaignPhotos: PreviewPhoto[] = [...arrivalDirectorsPhotos, ...legacyArrivalPhotos];
+diff --git a/docs/PREVIEW_MEDIA_MANIFEST.json b/docs/PREVIEW_MEDIA_MANIFEST.json
+index 7ab358e..2bf7edf 100644
+--- a/docs/PREVIEW_MEDIA_MANIFEST.json
++++ b/docs/PREVIEW_MEDIA_MANIFEST.json
+@@ -231,12 +231,92 @@
+       395,
+       180,
+       220
+     ],
+     "note": "Authentic close-up. Original source resolution is limited; no artificial face detail added.",
+     "outputs": [
+       "/media/arrival-campaign/closeup-320.svg",
+       "/media/arrival-campaign/closeup-640.svg"
+     ],
+     "campaign": "arrival-2026-11-02"
++  },
++  {
++    "id": "directors-action",
++    "sourceName": "source-11.jpg",
++    "sourceSha256": "b3bec17cb19b621053014813d55d8bc495f0c8aaa151108e6e0a9606260c9a15",
++    "crop": {
++      "left": 120,
++      "top": 450,
++      "width": 400,
++      "height": 450
++    },
++    "alt": "Zephyr Kreye carrying a football on the field.",
++    "usage": "preview-only",
++    "rights": "pending",
++    "encoding": "WebP, crop and resize only",
++    "outputs": [
++      "/media/arrival-directors-cut/directors-action-480.webp",
++      "/media/arrival-directors-cut/directors-action-960.webp"
++    ],
++    "campaign": "arrival-directors-cut"
++  },
++  {
++    "id": "directors-standing",
++    "sourceName": "zephyr_cinematic_bw_01.png",
++    "sourceSha256": "9cee838def18c6fa5da905210375d81012e3a8f8d2bce72bd692376f7516118e",
++    "crop": {
++      "left": 0,
++      "top": 0,
++      "width": 601,
++      "height": 780
++    },
++    "alt": "Zephyr Kreye standing in his black number 17 uniform.",
++    "usage": "preview-only",
++    "rights": "pending",
++    "encoding": "WebP, crop and resize only",
++    "outputs": [
++      "/media/arrival-directors-cut/directors-standing-480.webp",
++      "/media/arrival-directors-cut/directors-standing-960.webp"
++    ],
++    "campaign": "arrival-directors-cut"
++  },
++  {
++    "id": "directors-rear",
++    "sourceName": "zephyr_cinematic_bw_03.png",
++    "sourceSha256": "6b0d75f6cc9346ac8ce4856448641aeccd80ae8b1b7a5235574d24a0cbd29d09",
++    "crop": {
++      "left": 250,
++      "top": 200,
++      "width": 650,
++      "height": 1050
++    },
++    "alt": "Zephyr Kreye seen from behind in his number 17 uniform.",
++    "usage": "preview-only",
++    "rights": "pending",
++    "encoding": "WebP, crop and resize only",
++    "outputs": [
++      "/media/arrival-directors-cut/directors-rear-480.webp",
++      "/media/arrival-directors-cut/directors-rear-960.webp"
++    ],
++    "campaign": "arrival-directors-cut"
++  },
++  {
++    "id": "directors-white",
++    "sourceName": "zephyr_cinematic_bw_08.png",
++    "sourceSha256": "1e014c150e30e057fe44d20e14f4578113aca1a6f685c26d78670630f1ce5b7a",
++    "crop": {
++      "left": 115,
++      "top": 330,
++      "width": 470,
++      "height": 805
++    },
++    "alt": "Zephyr Kreye seen from behind in his white number 17 uniform.",
++    "usage": "preview-only",
++    "rights": "pending",
++    "encoding": "WebP, crop and resize only",
++    "outputs": [
++      "/media/arrival-directors-cut/directors-white-480.webp",
++      "/media/arrival-directors-cut/directors-white-960.webp"
++    ],
++    "campaign": "arrival-directors-cut"
+   }
+ ]
+diff --git a/public/media/arrival-directors-cut/directors-action-480.webp b/public/media/arrival-directors-cut/directors-action-480.webp
+new file mode 100644
+index 0000000..d659862
+Binary files /dev/null and b/public/media/arrival-directors-cut/directors-action-480.webp differ
+diff --git a/public/media/arrival-directors-cut/directors-action-960.webp b/public/media/arrival-directors-cut/directors-action-960.webp
+new file mode 100644
+index 0000000..d659862
+Binary files /dev/null and b/public/media/arrival-directors-cut/directors-action-960.webp differ
+diff --git a/public/media/arrival-directors-cut/directors-rear-480.webp b/public/media/arrival-directors-cut/directors-rear-480.webp
+new file mode 100644
+index 0000000..8ef7f5d
+Binary files /dev/null and b/public/media/arrival-directors-cut/directors-rear-480.webp differ
+diff --git a/public/media/arrival-directors-cut/directors-rear-960.webp b/public/media/arrival-directors-cut/directors-rear-960.webp
+new file mode 100644
+index 0000000..fae0330
+Binary files /dev/null and b/public/media/arrival-directors-cut/directors-rear-960.webp differ
+diff --git a/public/media/arrival-directors-cut/directors-standing-480.webp b/public/media/arrival-directors-cut/directors-standing-480.webp
+new file mode 100644
+index 0000000..dcc0b1d
+Binary files /dev/null and b/public/media/arrival-directors-cut/directors-standing-480.webp differ
+diff --git a/public/media/arrival-directors-cut/directors-standing-960.webp b/public/media/arrival-directors-cut/directors-standing-960.webp
+new file mode 100644
+index 0000000..201c2e4
+Binary files /dev/null and b/public/media/arrival-directors-cut/directors-standing-960.webp differ
+diff --git a/public/media/arrival-directors-cut/directors-white-480.webp b/public/media/arrival-directors-cut/directors-white-480.webp
+new file mode 100644
+index 0000000..5ecb280
+Binary files /dev/null and b/public/media/arrival-directors-cut/directors-white-480.webp differ
+diff --git a/public/media/arrival-directors-cut/directors-white-960.webp b/public/media/arrival-directors-cut/directors-white-960.webp
+new file mode 100644
+index 0000000..5ecb280
+Binary files /dev/null and b/public/media/arrival-directors-cut/directors-white-960.webp differ
+diff --git a/public/media/arrival-directors-smoke.png b/public/media/arrival-directors-smoke.png
+new file mode 100644
+index 0000000..c684bdd
+Binary files /dev/null and b/public/media/arrival-directors-smoke.png differ
+diff --git a/scripts/prepare-arrival-directors-assets.mjs b/scripts/prepare-arrival-directors-assets.mjs
+new file mode 100644
+index 0000000..c5b59eb
+--- /dev/null
++++ b/scripts/prepare-arrival-directors-assets.mjs
+@@ -0,0 +1,31 @@
++import sharp from 'sharp';
++import { createHash } from 'node:crypto';
++import { mkdir, readFile, writeFile } from 'node:fs/promises';
++import { resolve } from 'node:path';
++
++// Source photographs are cropped and encoded only; no subject reconstruction.
++const source = process.argv[2];
++const originalSource = process.argv[3];
++if (!source || !originalSource) throw new Error('Pass the extracted black-and-white and original source directories');
++const items = [
++  { id: 'directors-action', file: 'source-11.jpg', original: true, crop: { left: 120, top: 450, width: 400, height: 450 }, alt: 'Zephyr Kreye carrying a football on the field.' },
++  { id: 'directors-standing', file: 'zephyr_cinematic_bw_01.png', crop: { left: 0, top: 0, width: 601, height: 780 }, alt: 'Zephyr Kreye standing in his black number 17 uniform.' },
++  { id: 'directors-rear', file: 'zephyr_cinematic_bw_03.png', crop: { left: 250, top: 200, width: 650, height: 1050 }, alt: 'Zephyr Kreye seen from behind in his number 17 uniform.' },
++  { id: 'directors-white', file: 'zephyr_cinematic_bw_08.png', crop: { left: 115, top: 330, width: 470, height: 805 }, alt: 'Zephyr Kreye seen from behind in his white number 17 uniform.' },
++];
++await mkdir('public/media/arrival-directors-cut', { recursive: true });
++const rows = [];
++for (const item of items) {
++  const input = await readFile(resolve(item.original ? originalSource : source, item.file));
++  const outputs = [];
++  for (const width of [480, 960]) {
++    const path = `/media/arrival-directors-cut/${item.id}-${width}.webp`;
++    await sharp(input).extract(item.crop).resize({ width, withoutEnlargement: true }).webp({ quality: 82 }).toFile(`public${path}`);
++    outputs.push(path);
++  }
++  rows.push({ id: item.id, sourceName: item.file, sourceSha256: createHash('sha256').update(input).digest('hex'), crop: item.crop, alt: item.alt, usage: 'preview-only', rights: 'pending', encoding: 'WebP, crop and resize only', outputs, campaign: 'arrival-directors-cut' });
++}
++const manifestPath = 'docs/PREVIEW_MEDIA_MANIFEST.json';
++const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
++await writeFile(manifestPath, JSON.stringify([...manifest.filter(row => row.campaign !== 'arrival-directors-cut'), ...rows], null, 2) + '\n');
++console.log('Prepared preview-only director’s cut crops.');
+diff --git a/scripts/prepare-arrival-smoke.py b/scripts/prepare-arrival-smoke.py
+new file mode 100644
+index 0000000..efc411a
+--- /dev/null
++++ b/scripts/prepare-arrival-smoke.py
+@@ -0,0 +1,23 @@
++"""Make a small, deterministic atmospheric texture; no photographic pixels."""
++from PIL import Image, ImageFilter
++import math
++import random
++
++rng = random.Random(1726)
++size = (512, 256)
++fields = []
++for dimensions in [(8, 4), (16, 8), (32, 16)]:
++    field = Image.new('L', dimensions)
++    field.putdata([rng.randrange(256) for _ in range(dimensions[0] * dimensions[1])])
++    fields.append(field.resize(size, Image.Resampling.BICUBIC))
++alpha = Image.new('L', size)
++values = []
++for y in range(size[1]):
++    for x in range(size[0]):
++        noise = sum(field.getpixel((x, y)) * weight for field, weight in zip(fields, (.55, .3, .15)))
++        envelope = math.sin(math.pi * x / (size[0] - 1)) ** .45 * math.sin(math.pi * y / (size[1] - 1)) ** .65
++        values.append(round(max(0, noise - 70) * envelope * .8))
++alpha.putdata(values)
++texture = Image.new('RGBA', size, (192, 185, 201, 0))
++texture.putalpha(alpha.filter(ImageFilter.GaussianBlur(2)))
++texture.save('public/media/arrival-directors-smoke.png', optimize=True)
+diff --git a/tests/arrival-campaign-media.test.ts b/tests/arrival-campaign-media.test.ts
+index 2cda660..991259c 100644
+--- a/tests/arrival-campaign-media.test.ts
++++ b/tests/arrival-campaign-media.test.ts
+@@ -1,15 +1,17 @@
+ import test from 'node:test';
+ import assert from 'node:assert/strict';
+ import { readdir, readFile } from 'node:fs/promises';
+ import { auditPreviewDistribution } from '../scripts/audit-export.mjs';
+ import { arrivalCampaignPhotos } from '../content/arrival-campaign';
+ 
+ test('every distributed campaign photo is included in the preview-only release boundary', async () => {
+   const manifest = JSON.parse(await readFile('docs/PREVIEW_MEDIA_MANIFEST.json', 'utf8'));
+   const guarded = new Set<string>(manifest.filter((row: {usage:string}) => row.usage === 'preview-only').flatMap((row: {outputs:string[]}) => row.outputs));
+-  const files = await readdir('public/media/arrival-campaign');
+-  assert.ok(files.length >= 8);
+-  for (const file of files) assert.ok(guarded.has(`/media/arrival-campaign/${file}`), `Unprotected review photograph: ${file}`);
++  for (const directory of ['arrival-campaign', 'arrival-directors-cut']) {
++    const files = await readdir(`public/media/${directory}`);
++    assert.ok(files.length >= 8);
++    for (const file of files) assert.ok(guarded.has(`/media/${directory}/${file}`), `Unprotected review photograph: ${directory}/${file}`);
++  }
+   for (const photo of arrivalCampaignPhotos) assert.ok(guarded.has(photo.src));
+   await assert.rejects(auditPreviewDistribution({ previewOutputs: [...guarded], publicRelease:true }), /preview-only media file/);
+ });
+diff --git a/tests/e2e/arrival-campaign.spec.ts b/tests/e2e/arrival-campaign.spec.ts
+index efdc0bd..d9639dc 100644
+--- a/tests/e2e/arrival-campaign.spec.ts
++++ b/tests/e2e/arrival-campaign.spec.ts
+@@ -3,23 +3,23 @@ import { build } from 'esbuild';
+ import AxeBuilder from '@axe-core/playwright';
+ 
+ test('campaign hero presents its statement, identity and watch action', async ({ page }) => {
+   await page.emulateMedia({ reducedMotion: 'reduce' });
+   await page.goto('/#arrival');
+   const hero = page.locator('#arrival');
+   await expect(hero.locator('#hero-title')).toHaveText(/MAKE THEM\s*REMEMBER\./);
+   await expect(hero).toContainText('ZEPHYR KREYE');
+   await expect(hero).toContainText('ANNA COYOTES');
+   await expect(hero).toContainText('PREPARATION');
+-  await expect(hero.locator('[data-arrival-layer="mark"]')).toBeVisible();
++  await expect(hero.locator('[data-arrival-layer="mark"]')).toHaveCount(0);
+   if (await page.locator('main').getAttribute('data-preview-media') === 'enabled') {
+-    await expect(hero.locator('[data-arrival-layer="athlete"] img')).toHaveAttribute('src', /arrival-campaign\/front-640\.svg/);
++    await expect(hero.locator('[data-arrival-layer="athlete"] img')).toHaveAttribute('src', /arrival-directors-cut\/directors-standing-960\.webp/);
+   }
+   await hero.getByRole('button', { name: /watch.*film/i }).click();
+   await expect(page.getByRole('dialog', { name: 'Film room' })).toBeVisible();
+   await page.getByRole('button', { name: 'Close film room' }).click();
+   await expect(hero.getByRole('button', { name: /watch.*film/i })).toBeFocused();
+ });
+ 
+ test('hero stays within the viewport and responds to motion preference changes', async ({ page }) => {
+   await page.goto('/#arrival');
+   await page.emulateMedia({ reducedMotion: 'reduce' });
+@@ -37,72 +37,71 @@ async function withinViewport(locator: import('@playwright/test').Locator, heigh
+ 
+ test('active desktop pin reverts all reveal styles when motion is reduced', async ({ browser }) => {
+   const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, isMobile: false, hasTouch: false, reducedMotion: 'no-preference' });
+   const page = await context.newPage();
+   await page.goto('/');
+   await page.evaluate(() => scrollTo(0, 400));
+   const hero = page.locator('#arrival');
+   await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
+   await page.emulateMedia({ reducedMotion: 'reduce' });
+   await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
+-  for (const el of await hero.locator('#hero-title span, [data-arrival-layer="athlete"]').all()) {
+-    await expect(el).toHaveCSS('opacity', '1');
+-    await expect(el).toHaveCSS('transform', 'none');
+-  }
++  await expect(hero.locator('[data-arrival-statement]')).toBeVisible();
++  await expect(hero.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity', '0.8');
+   await context.close();
+ });
+ 
+ test('mobile final frame and small no-JS frame fit the viewport', async ({ browser }) => {
+   for (const [width, height, javaScriptEnabled] of [[390, 844, true], [320, 568, false]] as const) {
+-    const context = await browser.newContext({ viewport: { width, height }, isMobile: true, hasTouch: true, javaScriptEnabled });
++    const context = await browser.newContext({ viewport: { width, height }, isMobile: true, hasTouch: true, javaScriptEnabled, reducedMotion: 'reduce' });
+     const page = await context.newPage();
+     await page.goto('/#arrival');
+     const hero = page.locator('#arrival');
+     await withinViewport(hero.locator('#hero-title'), height);
+     await withinViewport(hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/), height);
+     await withinViewport(hero.locator('[data-arrival-layer="athlete"]'), height);
+     await expect(hero.locator('[data-arrival-layer="athlete"] img')).toHaveAttribute('alt', /number 17/i);
+     await expect(hero.locator('#hero-title span').first()).toHaveCSS('opacity', '1');
+     await expect(hero.locator('#hero-title span').last()).toHaveCSS('opacity', '1');
+     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+     await context.close();
+   }
+ });
+ 
+-test('touch tablet scrolls naturally without a hero pin', async ({ browser }) => {
++test('touch tablet participates in the extended hero pin', async ({ browser }) => {
+   const context = await browser.newContext({ viewport: { width: 1024, height: 768 }, isMobile: true, hasTouch: true });
+   const page = await context.newPage();
+   await page.goto('/');
+   await page.evaluate(() => scrollTo(0, 300));
+-  await expect(page.locator('#arrival')).not.toHaveClass(/pin-spacer/);
+-  await expect.poll(() => page.locator('#arrival').evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
++  await expect.poll(() => page.locator('#arrival').evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
++  const spacer = (await page.locator('#arrival').locator('..').boundingBox())!;
++  expect(spacer.height).toBeGreaterThan(14 * 768);
+   await context.close();
+ });
+ 
+-test('desktop enhancement begins with rear silhouette and both headline lines initialized', async ({ browser }) => {
++test('desktop enhancement begins in darkness without an early title', async ({ browser }) => {
+   const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, isMobile: false, hasTouch: false, reducedMotion: 'no-preference' });
+   const page = await context.newPage();
+   await page.goto('/');
+   const hero = page.locator('#arrival');
+   await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
+   const opacity = (selector: string) => hero.locator(selector).evaluate(el => Number(getComputedStyle(el).opacity));
+-  expect(await opacity('[data-arrival-layer="rear"]')).toBeGreaterThan(await opacity('[data-arrival-layer="athlete"]'));
+-  expect(await opacity('#hero-title span:first-child')).toBe(0);
+-  expect(await opacity('#hero-title span:last-child')).toBe(0);
++  expect(await opacity('[data-arrival-layer="lights"]')).toBe(0);
++  expect(await opacity('[data-arrival-layer="athlete"]')).toBe(0);
++  expect(await opacity('[data-arrival-statement]')).toBe(0);
+   await context.close();
+ });
+ 
+ 
+ test('unpublished photo fixture makes no preview image requests', async ({ page }) => {
+-  const bundle = await build({ entryPoints: ['tests/e2e/arrival-fixture.tsx'], bundle: true, write: false, outdir: '/tmp/arrival-fixture', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' } });
++  const bundle = await build({ entryPoints: ['tests/e2e/arrival-fixture.tsx'], bundle: true, external: ['/media/*'], write: false, outdir: '/tmp/arrival-fixture', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' } });
+   const requests: string[] = [];
+-  page.on('request', request => { if (/\/media\/(arrival-campaign\/|(?:arrival|portrait|throwing|running|on-field)-)/.test(request.url())) requests.push(request.url()); });
++  page.on('request', request => { if (/\/media\/(arrival-campaign\/|arrival-directors-cut\/|(?:arrival|portrait|throwing|running|on-field)-)/.test(request.url())) requests.push(request.url()); });
+   await page.route('**/arrival-fixture*', async route => {
+     const path = new URL(route.request().url()).pathname;
+     if (path.endsWith('.js') || path.endsWith('.css')) {
+       const file = bundle.outputFiles!.find(file => file.path.endsWith(path.endsWith('.js') ? '.js' : '.css'))!;
+       await route.fulfill({ contentType: path.endsWith('.js') ? 'text/javascript' : 'text/css', body: Buffer.from(file.contents) });
+     } else await route.fulfill({ contentType: 'text/html', body: '<!doctype html><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/arrival-fixture.css"><div id="root"></div><script src="/arrival-fixture.js"></script>' });
+   });
+   await page.goto('/arrival-fixture');
+   await expect(page.locator('#hero-title')).toHaveText(/MAKE THEM/);
+   await expect(page.locator('#arrival img')).toHaveCount(0);
+@@ -263,65 +262,46 @@ test('header home name includes the visible athlete wordmark', async ({ page })
+ // Bundle the current source independently of the controller's running export.
+ async function openCurrentHeroFixture(page: import('@playwright/test').Page) {
+   const bundle = await build({
+     stdin: { contents: `import React from 'react';
+       import { createRoot } from 'react-dom/client';
+       import ArrivalHero from './components/arrival-hero';
+       import { profile } from './content/site';
+       import { arrivalCampaignPhotos } from './content/arrival-campaign';
+       import './app/globals.css';
+       createRoot(document.getElementById('root')).render(<main style={{paddingTop: 96}}><ArrivalHero profile={profile} photos={arrivalCampaignPhotos} onWatch={() => {}}/><div style={{height:'150vh'}} /></main>);`, resolveDir: process.cwd(), sourcefile: 'arrival-current.tsx', loader: 'tsx' },
+-    bundle: true, write: false, outdir: '/tmp/arrival-current', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' },
++    bundle: true, external: ['/media/*'], write: false, outdir: '/tmp/arrival-current', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' },
+     loader: { '.woff2': 'dataurl' }, conditions: ['style'],
+   });
+   await page.route('**/arrival-current*', async route => {
+     const path = new URL(route.request().url()).pathname;
+     if (path.endsWith('.js') || path.endsWith('.css')) {
+       const file = bundle.outputFiles!.find(file => file.path.endsWith(path.endsWith('.js') ? '.js' : '.css'))!;
+       await route.fulfill({ contentType: path.endsWith('.js') ? 'text/javascript' : 'text/css', body: Buffer.from(file.contents) });
+     } else await route.fulfill({ contentType: 'text/html', body: '<!doctype html><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/arrival-current.css"><div id="root"></div><script src="/arrival-current.js"></script>' });
+   });
+   await page.goto('/arrival-current');
+ }
+ 
+-test('stadium reveals subtly, reverses and restores its static state on reduced motion', async ({ browser }) => {
+-  const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, isMobile: false, hasTouch: false, reducedMotion: 'no-preference' });
+-  const page = await context.newPage();
+-  await openCurrentHeroFixture(page);
+-  const stadium = page.locator('[data-arrival-layer="stadium"]');
+-  const opacity = () => stadium.evaluate(el => Number(getComputedStyle(el).opacity));
+-  await expect.poll(opacity).toBeLessThan(.01);
+-  await page.evaluate(() => scrollTo(0, 2000));
+-  await expect.poll(opacity).toBeGreaterThan(.05);
+-  expect(await opacity()).toBeLessThanOrEqual(.2);
+-  await page.evaluate(() => scrollTo(0, 0));
+-  await expect.poll(opacity).toBeLessThan(.01);
+-  await page.emulateMedia({ reducedMotion: 'reduce' });
+-  await expect.poll(opacity).toBeGreaterThan(.05);
+-  expect(await opacity()).toBeLessThanOrEqual(.2);
+-  expect(await stadium.evaluate(el => { const m = new DOMMatrix(getComputedStyle(el).transform); return [m.a, m.b, m.c, m.d, m.e, m.f]; })).toEqual([1, 0, 0, 1, 0, 0]);
+-  await context.close();
+-});
+-
+ test('desktop static statement emphasizes the second line and keeps editorial controls together', async ({ browser }) => {
+   const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, reducedMotion: 'reduce' });
+   const page = await context.newPage();
+   await openCurrentHeroFixture(page);
+   const hero = page.locator('#arrival');
+   const lines = hero.locator('#hero-title span');
+   const sizes = await lines.evaluateAll(els => els.map(el => parseFloat(getComputedStyle(el).fontSize)));
+   expect(sizes[1] / sizes[0]).toBeGreaterThanOrEqual(1.2);
+   const identity = (await hero.getByText(/ZEPHYR KREYE/).boundingBox())!;
+   const footer = (await hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/).boundingBox())!;
+   const watch = (await hero.getByRole('button', { name: /watch.*film/i }).boundingBox())!;
+   expect(identity.y).toBeLessThan(520);
+-  expect(footer.y).toBeLessThan(920);
++  expect(footer.y).toBeLessThan(1024);
+   expect(watch.y + watch.height).toBeLessThanOrEqual(footer.y);
+   await expect(hero.getByRole('button', { name: /watch.*film/i })).toBeVisible();
+   await page.setViewportSize({ width: 900, height: 700 });
+   await expect.poll(async () => {
+     const shortWatch = (await hero.getByRole('button', { name: /watch.*film/i }).boundingBox())!;
+     const shortFooter = (await hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/).boundingBox())!;
+     return shortWatch.y + shortWatch.height <= shortFooter.y;
+   }).toBe(true);
+   expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(900);
+   await context.close();
+diff --git a/tests/e2e/arrival-directors-cut.spec.ts b/tests/e2e/arrival-directors-cut.spec.ts
+new file mode 100644
+index 0000000..9f8e329
+--- /dev/null
++++ b/tests/e2e/arrival-directors-cut.spec.ts
+@@ -0,0 +1,102 @@
++import { expect, test, type Page } from '@playwright/test';
++import { build } from 'esbuild';
++import { readFile } from 'node:fs/promises';
++
++async function openHero(page: Page) {
++  const bundle = await build({ stdin: { contents: `import React from 'react';
++    import { createRoot } from 'react-dom/client';
++    import { ScrollTrigger } from 'gsap/ScrollTrigger';
++    (window as any).fixtureScrollTrigger = ScrollTrigger;
++    import Hero from './components/arrival-hero';
++    import { profile, previewPhotos } from './content/site';
++    import { arrivalCampaignPhotos } from './content/arrival-campaign';
++    import './app/globals.css';
++    createRoot(document.getElementById('root')).render(<main style={{paddingTop:96}}><Hero profile={profile} photos={[...arrivalCampaignPhotos,...previewPhotos]} onWatch={()=>{}}/><section id="film-room" style={{height:'100vh'}}>Film Room</section></main>);`, resolveDir: process.cwd(), sourcefile: 'directors-fixture.tsx', loader: 'tsx' }, bundle: true, external: ['/media/*'], write: false, outdir: '/tmp/directors-fixture', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' }, loader: { '.woff2': 'dataurl' }, conditions: ['style'] });
++  await page.route('**/directors-fixture*', async route => {
++    const path = new URL(route.request().url()).pathname;
++    if (path.endsWith('.js') || path.endsWith('.css')) {
++      const file = bundle.outputFiles!.find(f => f.path.endsWith(path.endsWith('.js') ? '.js' : '.css'))!;
++      await route.fulfill({ contentType: path.endsWith('.js') ? 'text/javascript' : 'text/css', body: Buffer.from(file.contents) });
++    } else await route.fulfill({ contentType: 'text/html', body: '<!doctype html><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/directors-fixture.css"><div id="root"></div><script src="/directors-fixture.js"></script>' });
++  });
++  await page.route('**/media/arrival-directors-cut/*.webp', async route => {
++    const path = new URL(route.request().url()).pathname;
++    await route.fulfill({ contentType: 'image/webp', body: await readFile(`public${path}`) });
++  });
++  await page.route('**/media/arrival-directors-smoke.png', async route => {
++    await route.fulfill({ contentType: 'image/png', body: await readFile('public/media/arrival-directors-smoke.png') });
++  });
++  await page.goto('/directors-fixture');
++  await page.addStyleTag({ content: 'html { scroll-behavior: auto !important; }' });
++  await page.evaluate(() => document.fonts.ready);
++}
++
++for (const touch of [false, true]) {
++  test(`seven scroll beats progress and reverse on ${touch ? 'touch' : 'desktop'}`, async ({ browser }) => {
++    const context = await browser.newContext({ viewport: touch ? { width: 390, height: 844 } : { width: 1440, height: 900 }, isMobile: touch, hasTouch: touch, reducedMotion: 'no-preference' });
++    const page = await context.newPage();
++    await openHero(page);
++    const hero = page.locator('#arrival');
++    await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
++    const spacer = (await hero.locator('..').boundingBox())!;
++    const heroHeight = (await hero.boundingBox())!.height;
++    const distance = spacer.height - heroHeight;
++    expect(distance / (touch ? 844 : 900)).toBeGreaterThan(14);
++    await expect(hero.locator('[data-arrival-layer="mark"]')).toHaveCount(0);
++    const opacity = (layer: string) => hero.locator(`[data-arrival-layer="${layer}"]`).evaluate(el => Number(getComputedStyle(el).opacity));
++    expect(await opacity('lights')).toBeLessThan(.01);
++    expect(await opacity('athlete')).toBeLessThan(.01);
++    const scrollBeat = (fraction: number) => page.evaluate(value => { const trigger = (window as unknown as { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number } } }).fixtureScrollTrigger.getById('arrival-hero'); scrollTo(0, trigger.start + (trigger.end - trigger.start) * value); }, fraction);
++    await scrollBeat(.22);
++    await expect.poll(() => opacity('lights')).toBeGreaterThan(.2);
++    await scrollBeat(.55);
++    await expect.poll(() => opacity('athlete')).toBeGreaterThan(.3);
++    const photoHeight = (await hero.locator('[data-arrival-layer="athlete"] img').boundingBox())!.height;
++    expect(photoHeight).toBeLessThan(heroHeight * 1.1);
++    await scrollBeat(.70);
++    await expect.poll(() => opacity('running')).toBeGreaterThan(.35);
++    await scrollBeat(.79);
++    await expect.poll(() => opacity('rear')).toBeGreaterThan(.35);
++    await scrollBeat(.86);
++    await expect.poll(() => opacity('white')).toBeGreaterThan(.35);
++    await scrollBeat(.97);
++    await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
++    await page.evaluate(() => scrollTo(0, 0));
++    await expect.poll(() => opacity('lights')).toBeLessThan(.01);
++    await context.close();
++  });
++}
++
++
++test('reduced motion restores the complete static frame after an active pin', async ({ browser }) => {
++  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
++  const page = await context.newPage();
++  await openHero(page);
++  const hero = page.locator('#arrival');
++  await page.evaluate(() => scrollTo(0, 3500));
++  await page.emulateMedia({ reducedMotion: 'reduce' });
++  await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
++  await expect(hero.locator('#hero-title')).toBeVisible();
++  await expect(hero.getByRole('button', { name: /watch.*film/i })).toBeVisible();
++  await expect.poll(() => hero.locator('[data-arrival-layer="athlete"] img').evaluate((el: HTMLImageElement) => el.naturalWidth)).toBeGreaterThan(0);
++  await context.close();
++});
++
++
++test('touch orientation refresh keeps the story scrollable and bounded', async ({ browser }) => {
++  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
++  const page = await context.newPage();
++  await openHero(page);
++  const hero = page.locator('#arrival');
++  await page.evaluate(() => scrollTo(0, 4000));
++  await page.setViewportSize({ width: 844, height: 390 });
++  await page.evaluate(() => dispatchEvent(new Event('orientationchange')));
++  await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
++  await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
++  const spacer = (await hero.locator('..').boundingBox())!;
++  const height = (await hero.boundingBox())!.height;
++  expect(spacer.height - height).toBeGreaterThan(14 * 390);
++  await page.evaluate(y => scrollTo(0, y), (spacer.height - height) * .97);
++  await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
++  await context.close();
++});

@@ -1,0 +1,13 @@
+
+Running 2 tests using 1 worker
+
+(node:165379) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  1 [desktop-chromium] › tests/e2e/story-focus.spec.ts:44:5 › reduced film anchor observes layout that settles after the window resize frame (836ms)
+(node:165484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  2 [iphone-webkit] › tests/e2e/story-focus.spec.ts:44:5 › reduced film anchor observes layout that settles after the window resize frame (1.5s)
+
+  2 passed (4.4s)

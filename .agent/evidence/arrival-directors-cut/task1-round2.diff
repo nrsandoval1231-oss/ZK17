@@ -1,0 +1,164 @@
+diff --git a/.agent/evidence/arrival-directors-cut/task1-report.md b/.agent/evidence/arrival-directors-cut/task1-report.md
+index 61a2c8a..6e8e199 100644
+--- a/.agent/evidence/arrival-directors-cut/task1-report.md
++++ b/.agent/evidence/arrival-directors-cut/task1-report.md
+@@ -23,10 +23,20 @@ Old hero-only tests were updated for the new darkness, touch pin and photo sourc
+ - Smoke planes are overscanned and edge-faded, and their distinct scroll-linked movements continue throughout silhouette, portrait and montage beats. A source-fixture test confirms overscan and changed transform between 50% and 62%.
+ - Photo treatment follows the actual source-image frame with horizontal and vertical soft fades and local dark shading over the secondary subject. No person is synthesized or automatically cut out. Captures of the rebuilt application were inspected at `/tmp/directors-r1-final/{desktop,mobile}-{smoke,hero,action}.png`; #17 remains legible and the teammate is dimmer. The game action remains a carrying pose, with limited source detail and some residual background figures. The controller's independent review remains the final visual gate.
+ - The four photo-free fixture failures were caused by the smoke texture matching a broad photo-request regex; the assertion now matches the protected photo paths. Four obsolete identity-coordinate assertions now check visible ordering and non-overlap, and the tablet pin test explicitly requests motion. The separate null-film fixture now marks `/media/*` external to esbuild; film source was not edited.
+ 
+ Validation:
+ 
+ - On the pre-fix built app, the new midpoint rotation regression failed with normalized progress 0 instead of .5; the new smoke regression failed because its transform did not change.
+ - On the rebuilt app, `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/arrival-directors-cut.spec.ts --grep 'built touch story|built story can' --project=desktop-chromium --project=iphone-webkit --workers=1 --output=/tmp/directors-r1-built-settled` passed 4/4. Both tests wait for the new pin distance, then recheck normalized progress after 400ms. One covers rotation at the opening followed by a second rotation mid-story. These use touch-enabled emulation and programmatic scroll, not a physical swipe.
+ - The three affected integration cases passed 12/12 across the four configured projects (`/tmp/directors-r1-integrated`). The null-film fallback passed 4/4 (`/tmp/directors-r1-film-fallback`). The source-fixture smoke and sequence checks passed in Chromium and WebKit; the final WebKit focused run passed 3/3 (`/tmp/directors-r1-webkit-final3`). An earlier WebKit desktop-context fixture run intermittently failed on an opacity assertion placed near a transition; the final run seeks closer to the middle of each hold. The exact source of that timing variability was not independently established.
+ - Scoped ESLint and `npm run typecheck` passed. The parent performed the production build and retains responsibility for the complete suite and final review. Physical iOS address-bar and hardware behavior are still unverified.
++
++## Independent review repair — round 2
++
++The action photo now uses an aspect-correct frame at all viewport sizes, with horizontal and vertical fades and local side shading applied to the actual photograph bounds. This addresses the desktop panel and competing players without altering the original pixels or revisiting the approved standing image, smoke or orientation implementation. Current rebuilt-page captures were inspected at `/tmp/directors-r2-built/desktop-action.png` and `/tmp/directors-r2-built/mobile-action.png`: the panel edge fades and background players are subdued. The original carrying pose and rights limitations remain.
++
++A new source-fixture assertion failed before the fix because the desktop photo frame was 1440px wide (limit 630px), then passed after the bounded frame and masks were applied. The four orientation-fixture failures in the controller's earlier suite were a race: an immediate programmatic final seek competed with the queued orientation restore. The fixture now waits for the refreshed pin geometry, issues touch input to cancel any pending restore, waits beyond the debounce, then seeks the final beat; it retains the separate built-app normalized-progress regressions.
++
++The intermittent desktop-sized headless WebKit fixture was investigated rather than hidden: after seeking, actual scrollY was 7829 and ScrollTrigger progress .5799, while the scrubbed animation was only at .3916 after 900ms and the athlete still invisible. It subsequently converged; three diagnostic runs passed in 11.6s, 15.6s and 11.6s. The test now polls for actual trigger and animation convergence with a 15-second bound per seek, without forcing timeline state, before checking visual opacity. Hardware smoothness remains unverified.
++
++`PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=1 LD_LIBRARY_PATH=/tmp/zk17-libs/usr/lib/x86_64-linux-gnu npx playwright test tests/e2e/arrival-directors-cut.spec.ts --workers=2 --output=/tmp/directors-r2-suite` passed 32/32 across all four configured projects in 52.7s. The parent performed the rebuild. Scoped `npx eslint tests/e2e/arrival-directors-cut.spec.ts` and `npm run typecheck` passed. Physical iOS swipes and browser-toolbar behavior remain unverified; final independent review and the controller's full suite remain outstanding.
+diff --git a/components/arrival-hero.module.css b/components/arrival-hero.module.css
+index a74bfce..df4f9d8 100644
+--- a/components/arrival-hero.module.css
++++ b/components/arrival-hero.module.css
+@@ -38,10 +38,13 @@
+ @media(max-width:899px){.montage[data-arrival-layer="running"] picture::after{background:radial-gradient(ellipse 40% 70% at 53% 42%,transparent 30%,rgba(0,0,0,.88) 100%)}}
+ /* The fades and local shading follow the image rectangle, not the viewport. */
+ .photoFrame{position:absolute;inset:0}
+ .photo .photoFrame picture{display:block;position:absolute;inset:0;width:100%;height:100%;transform:none;mask-image:none}
+ .athlete::before,.montage[data-arrival-layer="running"]::before{content:none}
+ .athlete .photoFrame,.silhouette .photoFrame{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);height:min(100%,129.78vw);width:auto;aspect-ratio:601/780;mask-image:linear-gradient(to right,transparent 0%,#000 31%,#000 48%,transparent 78%)}
+ .athlete .photoFrame::after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 18% 21% at 68% 27%,rgba(0,0,0,.88),transparent 100%)}
+ @media(max-width:899px){.montage[data-arrival-layer="running"] .photoFrame{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100%,65svh);height:auto;aspect-ratio:400/450;mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 60%,transparent 96%)}.montage[data-arrival-layer="running"] .photoFrame::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(0,0,0,.9),transparent 38%,transparent 65%,rgba(0,0,0,.9))}}
+ .athlete .photoFrame,.silhouette .photoFrame{mask-image:linear-gradient(to right,transparent 0%,#000 31%,#000 48%,transparent 78%),linear-gradient(to bottom,transparent 0%,#000 20%,#000 70%,transparent 100%);mask-composite:intersect;-webkit-mask-composite:source-in}
+ .montage[data-arrival-layer="running"] img{filter:grayscale(1) brightness(1.12)}
++/* Fade the action photograph at its own edges at every viewport size. */
++.montage[data-arrival-layer="running"] .photoFrame{inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);width:min(100%,65svh);height:auto;aspect-ratio:400/450;mask-image:linear-gradient(to right,transparent 0%,#000 28%,#000 72%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 18%,#000 60%,transparent 96%);mask-composite:intersect;-webkit-mask-composite:source-in}
++.montage[data-arrival-layer="running"] .photoFrame::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,rgba(0,0,0,.9),transparent 38%,transparent 65%,rgba(0,0,0,.9))}
+diff --git a/tests/e2e/arrival-directors-cut.spec.ts b/tests/e2e/arrival-directors-cut.spec.ts
+index 2e5a2eb..3c3c94e 100644
+--- a/tests/e2e/arrival-directors-cut.spec.ts
++++ b/tests/e2e/arrival-directors-cut.spec.ts
+@@ -1,14 +1,16 @@
+ import { expect, test, type Page } from '@playwright/test';
+ import { build } from 'esbuild';
+ import { readFile } from 'node:fs/promises';
+ 
++type FixtureWindow = Window & { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number; progress: number; animation: { progress: () => number } } } };
++
+ async function openHero(page: Page) {
+   const bundle = await build({ stdin: { contents: `import React from 'react';
+     import { createRoot } from 'react-dom/client';
+     import { ScrollTrigger } from 'gsap/ScrollTrigger';
+     (window as any).fixtureScrollTrigger = ScrollTrigger;
+     import Hero from './components/arrival-hero';
+     import { profile, previewPhotos } from './content/site';
+     import { arrivalCampaignPhotos } from './content/arrival-campaign';
+     import './app/globals.css';
+     createRoot(document.getElementById('root')).render(<main style={{paddingTop:96}}><Hero profile={profile} photos={[...arrivalCampaignPhotos,...previewPhotos]} onWatch={()=>{}}/><section id="film-room" style={{height:'100vh'}}>Film Room</section></main>);`, resolveDir: process.cwd(), sourcefile: 'directors-fixture.tsx', loader: 'tsx' }, bundle: true, external: ['/media/*'], write: false, outdir: '/tmp/directors-fixture', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' }, loader: { '.woff2': 'dataurl' }, conditions: ['style'] });
+@@ -26,34 +28,40 @@ async function openHero(page: Page) {
+   await page.route('**/media/arrival-directors-smoke.png', async route => {
+     await route.fulfill({ contentType: 'image/png', body: await readFile('public/media/arrival-directors-smoke.png') });
+   });
+   await page.goto('/directors-fixture');
+   await page.addStyleTag({ content: 'html { scroll-behavior: auto !important; }' });
+   await page.evaluate(() => document.fonts.ready);
+ }
+ 
+ for (const touch of [false, true]) {
+   test(`seven scroll beats progress and reverse on ${touch ? 'touch' : 'desktop'}`, async ({ browser }) => {
++    test.setTimeout(90_000);
+     const context = await browser.newContext({ viewport: touch ? { width: 390, height: 844 } : { width: 1440, height: 900 }, isMobile: touch, hasTouch: touch, reducedMotion: 'no-preference' });
+     const page = await context.newPage();
+     await openHero(page);
+     const hero = page.locator('#arrival');
+     await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
+     const spacer = (await hero.locator('..').boundingBox())!;
+     const heroHeight = (await hero.boundingBox())!.height;
+     const distance = spacer.height - heroHeight;
+     expect(distance / (touch ? 844 : 900)).toBeGreaterThan(14);
+     await expect(hero.locator('[data-arrival-layer="mark"]')).toHaveCount(0);
+     const opacity = (layer: string) => hero.locator(`[data-arrival-layer="${layer}"]`).evaluate(el => Number(getComputedStyle(el).opacity));
+     expect(await opacity('lights')).toBeLessThan(.01);
+     expect(await opacity('athlete')).toBeLessThan(.01);
+-    const scrollBeat = (fraction: number) => page.evaluate(value => { const trigger = (window as unknown as { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number } } }).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: trigger.start + (trigger.end - trigger.start) * value, behavior: 'instant' }); }, fraction);
++    const scrollBeat = async (fraction: number) => {
++      await page.evaluate(value => { const trigger = (window as unknown as FixtureWindow).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: trigger.start + (trigger.end - trigger.start) * value, behavior: 'instant' }); }, fraction);
++      // WebKit's headless compositor can lag the scroll-linked scrub; observe
++      // convergence before inspecting pixels without forcing timeline state.
++      await expect.poll(() => page.evaluate(value => { const trigger = (window as unknown as FixtureWindow).fixtureScrollTrigger.getById('arrival-hero'); return Math.max(Math.abs(trigger.progress - value), Math.abs(trigger.animation.progress() - trigger.progress)); }, fraction), { timeout: 15_000 }).toBeLessThan(.035);
++    };
+     await scrollBeat(.22);
+     await expect.poll(() => opacity('lights')).toBeGreaterThan(.2);
+     await scrollBeat(.58);
+     await expect.poll(() => opacity('athlete')).toBeGreaterThan(.3);
+     const photoHeight = (await hero.locator('[data-arrival-layer="athlete"] img').boundingBox())!.height;
+     expect(photoHeight).toBeLessThan(heroHeight * 1.1);
+     await scrollBeat(.71);
+     await expect.poll(() => opacity('running')).toBeGreaterThan(.35);
+     await scrollBeat(.80);
+     await expect.poll(() => opacity('rear')).toBeGreaterThan(.35);
+@@ -84,26 +92,29 @@ test('reduced motion restores the complete static frame after an active pin', as
+ 
+ 
+ test('touch orientation refresh keeps the story scrollable and bounded', async ({ browser }) => {
+   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
+   const page = await context.newPage();
+   await openHero(page);
+   const hero = page.locator('#arrival');
+   await page.evaluate(() => scrollTo(0, 4000));
+   await page.setViewportSize({ width: 844, height: 390 });
+   await page.evaluate(() => dispatchEvent(new Event('orientationchange')));
++  await page.touchscreen.tap(10, 10); // New user input cancels any queued orientation restoration.
+   await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
+   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+   const spacer = (await hero.locator('..').boundingBox())!;
+   const height = (await hero.boundingBox())!.height;
+   expect(spacer.height - height).toBeGreaterThan(14 * 390);
+-  await page.evaluate(y => scrollTo(0, y), (spacer.height - height) * .97);
++  await expect.poll(() => hero.evaluate(el => parseFloat(el.parentElement!.style.paddingBottom))).toBeCloseTo((height + 96) * 15, 0);
++  await page.waitForTimeout(400);
++  await page.evaluate(() => { const trigger = (window as unknown as FixtureWindow).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: trigger.start + (trigger.end - trigger.start) * .97, behavior: 'instant' }); });
+   await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
+   await context.close();
+ });
+ 
+ test('built touch story retains its normalized beat through rotation', async ({ browser }) => {
+   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, reducedMotion: 'no-preference' });
+   const page = await context.newPage();
+   await page.goto('/');
+   const hero = page.locator('#arrival');
+   await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
+@@ -152,10 +163,26 @@ test('smoke drifts during the central story', async ({ browser }) => {
+   expect(bounds.x + bounds.width).toBeGreaterThan(390);
+   const seek = (fraction: number) => page.evaluate(value => { const t = (window as unknown as { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number } } }).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: t.start + (t.end - t.start) * value, behavior: 'instant' }); }, fraction);
+   await seek(.5);
+   await expect.poll(() => smoke.evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.8);
+   await page.waitForTimeout(500);
+   const before = await smoke.evaluate(el => getComputedStyle(el).transform);
+   await seek(.62);
+   await expect.poll(() => smoke.evaluate(el => getComputedStyle(el).transform)).not.toBe(before);
+   await context.close();
+ });
++
++test('action photo uses a bounded, faded frame at desktop and mobile sizes', async ({ browser }) => {
++  for (const [width, height, touch] of [[1440, 900, false], [390, 844, true]] as const) {
++    const context = await browser.newContext({ viewport: { width, height }, isMobile: touch, hasTouch: touch, reducedMotion: 'reduce' });
++    const page = await context.newPage();
++    await openHero(page);
++    const frame = page.locator('[data-arrival-layer="running"] picture').locator('..');
++    const box = (await frame.boundingBox())!;
++    expect(box.width).toBeLessThanOrEqual(Math.min(width, height * .7));
++    expect(box.height / box.width).toBeCloseTo(450 / 400, 1);
++    await expect(frame).toHaveCSS('mask-image', /linear-gradient/);
++    const shade = await frame.evaluate(el => getComputedStyle(el, '::after').backgroundImage);
++    expect(shade).toContain('gradient');
++    await context.close();
++  }
++});

@@ -18,13 +18,27 @@ createServer(async (request, response) => {
     if ((await stat(file).catch(() => null))?.isDirectory()) file = resolve(file, 'index.html');
     const body = await readFile(file);
     const contentType = types[extname(file)] ?? 'application/octet-stream';
+    // Browsers (especially Safari) seek MP4 through byte-range requests.
+    // Match static-host behavior so local regression checks exercise real playback.
+    if (request.headers.range && contentType === 'video/mp4') {
+      const match = /^bytes=(\d*)-(\d*)$/.exec(request.headers.range);
+      let start = match?.[1] ? Number(match[1]) : 0;
+      let end = match?.[2] ? Number(match[2]) : body.length - 1;
+      if (match && !match[1] && match[2]) { start = Math.max(0, body.length - Number(match[2])); end = body.length - 1; }
+      if (!match || start > end || start >= body.length) {
+        response.writeHead(416, { 'Content-Range': `bytes */${body.length}` }); response.end(); return;
+      }
+      end = Math.min(end, body.length - 1);
+      response.writeHead(206, { 'Content-Type': contentType, 'Accept-Ranges': 'bytes', 'Content-Range': `bytes ${start}-${end}/${body.length}`, 'Content-Length': end - start + 1 });
+      response.end(body.subarray(start, end + 1)); return;
+    }
     const canCompress = compress && body.length > 1024 && /^(text\/|application\/json|image\/svg)/.test(contentType);
     const gzipPreference = String(request.headers['accept-encoding'] ?? '').split(',').find(value => value.trim().split(';')[0] === 'gzip');
     const useGzip = canCompress && gzipPreference && !/;\s*q=0(?:\.0+)?\s*(?:;|$)/.test(gzipPreference);
-    response.writeHead(200, { 'Content-Type': contentType, 'X-Content-Type-Options': 'nosniff', ...(canCompress ? { Vary: 'Accept-Encoding' } : {}), ...(useGzip ? { 'Content-Encoding': 'gzip' } : {}) });
+    response.writeHead(200, { 'Content-Type': contentType, 'X-Content-Type-Options': 'nosniff', 'Accept-Ranges': 'bytes', ...(canCompress ? { Vary: 'Accept-Encoding' } : {}), ...(useGzip ? { 'Content-Encoding': 'gzip' } : {}) });
     response.end(useGzip ? gzipSync(body) : body);
   } catch {
     response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
     response.end('Not found');
   }
-}).listen(port, '127.0.0.1', () => console.log(`Static export at http://127.0.0.1:${port}`));
+}).listen(port, '127.0.0.1', function () { console.log(`Static export at http://127.0.0.1:${this.address().port}`); });

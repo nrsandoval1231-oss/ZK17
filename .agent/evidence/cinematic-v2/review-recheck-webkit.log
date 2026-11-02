@@ -1,0 +1,23 @@
+
+Running 15 tests using 1 worker
+
+(node:252753) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   1 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (14.3s)
+  ✓   2 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (10.4s)
+  ✓   3 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (8.1s)
+  ✓   4 [iphone-webkit] › tests/e2e/arrival-directors-cut.spec.ts:34:5 › rotation preserves normalized intro progress and reduced motion releases the pin (2.6s)
+  ✓   5 [iphone-webkit] › tests/e2e/intro-entry.spec.ts:18:46 › client navigation /film/ to Home owns intro header state (3.1s)
+  ✓   6 [iphone-webkit] › tests/e2e/intro-entry.spec.ts:18:46 › client navigation /about/ to Home owns intro header state (2.9s)
+  ✓   7 [iphone-webkit] › tests/e2e/intro-entry.spec.ts:25:5 › reduced motion to normal starts a hidden-header intro on each activation (9.3s)
+  ✓   8 [iphone-webkit] › tests/e2e/intro-entry.spec.ts:35:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (7.7s)
+  ✓   9 [iphone-webkit] › tests/e2e/playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (9.3s)
+  ✓  10 [iphone-webkit] › tests/e2e/playoffs.spec.ts:23:5 › game center supports direct links, Escape, focus and back navigation (2.5s)
+  ✓  11 [iphone-webkit] › tests/e2e/playoffs.spec.ts:35:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (1.7s)
+  ✓  12 [iphone-webkit] › tests/e2e/playoffs.spec.ts:48:5 › playoffs has no runtime errors or accessibility violations (3.7s)
+  ✓  13 [iphone-webkit] › tests/e2e/playoffs.spec.ts:57:5 › late fonts keep the mobile hero layout stable (1.6s)
+  ✓  14 [iphone-webkit] › tests/e2e/playoffs.spec.ts:72:5 › hero downloads exactly one browser-supported responsive image source (806ms)
+  ✓  15 [iphone-webkit] › tests/e2e/playoffs.spec.ts:79:5 › uses the exact owner coyote logo without inventing Anna bracket placement (2.2s)
+
+  15 passed (1.4m)

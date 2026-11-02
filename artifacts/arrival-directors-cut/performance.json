@@ -1,0 +1,167 @@
+{
+  "url": "http://127.0.0.1:3100",
+  "conditions": "Managed headless Chromium; cold isolated contexts; DPR1; no CPU/network throttling; observation 2200ms after fonts, no scrolling. CLS is largest session window (<1s gap, <5s duration), excluding recent input. The intentional dark opening does not define a completed-story LCP: candidates may include header/logo, the initial SSR static fallback, or other visible content. This is not sequence-completion or hero-photo LCP, field/device/thermal performance, or a physical Safari toolbar test. Story progress and light opacity identify the sampled frame.",
+  "results": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": 200,
+      "elapsedMs": 2673,
+      "metrics": {
+        "lcp": 188,
+        "cls": 0.0012600836441186557,
+        "lcpElement": "image"
+      },
+      "nav": [
+        {
+          "domContentLoaded": 131.10000000149012,
+          "load": 275.3999999985099
+        }
+      ],
+      "images": [
+        {
+          "url": "/brand/zk17-monogram-512-v2.png",
+          "bytes": 7471,
+          "transfer": 7771
+        },
+        {
+          "url": "/media/arrival-706.webp",
+          "bytes": 50658,
+          "transfer": 50958
+        },
+        {
+          "url": "/media/arrival-706.avif",
+          "bytes": 31288,
+          "transfer": 31588
+        },
+        {
+          "url": "/media/arrival-directors-smoke.png",
+          "bytes": 28049,
+          "transfer": 28349
+        },
+        {
+          "url": "/media/arrival-directors-cut/directors-standing-960.webp",
+          "bytes": 47354,
+          "transfer": 47654
+        },
+        {
+          "url": "/media/arrival-directors-cut/directors-action-960.webp",
+          "bytes": 17146,
+          "transfer": 17446
+        },
+        {
+          "url": "/media/arrival-directors-cut/directors-rear-960.webp",
+          "bytes": 171154,
+          "transfer": 171454
+        },
+        {
+          "url": "/media/arrival-directors-cut/directors-white-960.webp",
+          "bytes": 31126,
+          "transfer": 31426
+        },
+        {
+          "url": "/media/on-field-706.avif",
+          "bytes": 46590,
+          "transfer": 46890
+        }
+      ],
+      "overflow": false,
+      "story": {
+        "scrollY": 0,
+        "distance": 13500,
+        "normalizedProgress": 0,
+        "lightsOpacity": 0
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "elapsedMs": 2533,
+      "metrics": {
+        "lcp": 128,
+        "cls": 0,
+        "lcpElement": "image"
+      },
+      "nav": [
+        {
+          "domContentLoaded": 113,
+          "load": 212.79999999701977
+        }
+      ],
+      "images": [
+        {
+          "url": "/brand/zk17-monogram-512-v2.png",
+          "bytes": 7471,
+          "transfer": 7771
+        },
+        {
+          "url": "/media/arrival-706.webp",
+          "bytes": 50658,
+          "transfer": 50958
+        },
+        {
+          "url": "/media/arrival-360.avif",
+          "bytes": 10234,
+          "transfer": 10534
+        },
+        {
+          "url": "/media/arrival-directors-smoke.png",
+          "bytes": 28049,
+          "transfer": 28349
+        },
+        {
+          "url": "/media/arrival-directors-cut/directors-standing-960.webp",
+          "bytes": 47354,
+          "transfer": 47654
+        },
+        {
+          "url": "/media/arrival-directors-cut/directors-action-960.webp",
+          "bytes": 17146,
+          "transfer": 17446
+        },
+        {
+          "url": "/media/arrival-directors-cut/directors-standing-480.webp",
+          "bytes": 33006,
+          "transfer": 33306
+        },
+        {
+          "url": "/media/arrival-directors-cut/directors-action-480.webp",
+          "bytes": 17146,
+          "transfer": 17446
+        },
+        {
+          "url": "/media/arrival-directors-cut/directors-rear-480.webp",
+          "bytes": 95958,
+          "transfer": 96258
+        },
+        {
+          "url": "/media/arrival-directors-cut/directors-white-480.webp",
+          "bytes": 31126,
+          "transfer": 31426
+        },
+        {
+          "url": "/media/on-field-360.avif",
+          "bytes": 16842,
+          "transfer": 17142
+        },
+        {
+          "url": "/media/portrait-360.avif",
+          "bytes": 12928,
+          "transfer": 13228
+        }
+      ],
+      "overflow": false,
+      "story": {
+        "scrollY": 0,
+        "distance": 12660,
+        "normalizedProgress": 0,
+        "lightsOpacity": 0
+      }
+    }
+  ]
+}

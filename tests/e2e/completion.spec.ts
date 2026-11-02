@@ -4,19 +4,19 @@ import AxeBuilder from '@axe-core/playwright';
 test('snapshot is reachable from recruiting navigation and shares the current route', async ({page, context}, testInfo) => {
  if (testInfo.project.use.browserName === 'webkit') test.skip();
  await context.grantPermissions(['clipboard-read','clipboard-write']);
- await page.goto('/');
- if (page.viewportSize()!.width < 900) await page.getByRole('button',{name:'Menu'}).click();
- await page.locator('#site-nav').getByRole('link',{name:'Recruiting',exact:true}).click();
+ await page.goto('/nil-recruiting/');
+ await page.getByRole('link',{name:'VIEW RECRUITING SNAPSHOT'}).click();
  await expect(page).toHaveURL(/\/recruiting\/?$/);
  await waitForHydration(page, '.snapshot-share button');
  await expect(page.getByRole('heading',{level:1})).toContainText('Zephyr Kreye');
  await page.getByRole('button',{name:'Copy snapshot link'}).click();
  await expect(page.getByRole('status')).toContainText('Link copied');
  expect(await page.evaluate(()=>navigator.clipboard.readText())).toMatch(/\/recruiting\/$/);
- await expect(page.getByRole('link',{name:'Recruiting contact'})).toHaveAttribute('href','/#nil-inquiries');
+ await expect(page.getByRole('link',{name:'Recruiting contact'})).toHaveAttribute('href','/nil-recruiting/');
  expect((await new AxeBuilder({page}).analyze()).violations).toEqual([]);
  await page.goBack();
- await expect(page.locator('#hero-title')).toBeVisible();
+ await expect(page).toHaveURL(/\/nil-recruiting\/$/);
+ await expect(page.locator('.site-header').getByRole('link',{name:/Zephyr Kreye.*home/i})).toBeVisible();
 });
 
 test('pending film deep link remains closable while approved film uses native controls',async({page})=>{
@@ -26,10 +26,12 @@ test('pending film deep link remains closable while approved film uses native co
  await page.getByRole('button',{name:'Close film room'}).click();
  await expect(page.getByRole('dialog')).toHaveCount(0);
  await expect(page).toHaveURL(/#film-room$/);
- await page.getByRole('button',{name:'WATCH THE FILM'}).click();
+ await page.goto('/#film-room');
+ await expect(page.locator('.site-header')).toBeVisible();
+ await page.locator('.site-header').getByRole('button',{name:'WATCH FILM',exact:true}).click();
  const dialog=page.getByRole('dialog',{name:'Film room'});
  await expect(dialog.locator('video')).toHaveAttribute('controls','');
- await expect(dialog.locator('video source')).toHaveAttribute('src','/media/zephyr-cinematic.mp4');
+ await expect(dialog.locator('video source')).toHaveAttribute('src','/media/zephyr-monochrome-full.mp4');
  await page.keyboard.press('Escape');
  await expect(dialog).toHaveCount(0);
 });

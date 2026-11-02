@@ -1,0 +1,90 @@
+{
+  "conditions": "Managed headless Chromium, local static HTTP, cold isolated browser contexts, deviceScaleFactor1, no network/CPU throttling. LCP/CLS observed for2200ms after fonts. Lab measurements only.",
+  "results": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "elapsedMs": 2504,
+      "metrics": {
+        "lcp": 208,
+        "cls": 0.132139672767838
+      },
+      "nav": [
+        {
+          "domContentLoaded": 22.5,
+          "load": 271.90000000037253
+        }
+      ],
+      "images": [
+        {
+          "url": "/brand/zk17-monogram-512-v2.png",
+          "bytes": 7471,
+          "transfer": 7771
+        },
+        {
+          "url": "/media/arrival-706.webp",
+          "bytes": 50658,
+          "transfer": 50958
+        },
+        {
+          "url": "/media/arrival-706.avif",
+          "bytes": 31288,
+          "transfer": 31588
+        },
+        {
+          "url": "/media/on-field-706.avif",
+          "bytes": 46590,
+          "transfer": 46890
+        }
+      ],
+      "overflow": false
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "elapsedMs": 2463,
+      "metrics": {
+        "lcp": 152,
+        "cls": 0.08074939759413449
+      },
+      "nav": [
+        {
+          "domContentLoaded": 31.5,
+          "load": 239.5
+        }
+      ],
+      "images": [
+        {
+          "url": "/brand/zk17-monogram-512-v2.png",
+          "bytes": 7471,
+          "transfer": 7771
+        },
+        {
+          "url": "/media/arrival-360.avif",
+          "bytes": 10234,
+          "transfer": 10534
+        },
+        {
+          "url": "/media/arrival-706.webp",
+          "bytes": 50658,
+          "transfer": 50958
+        },
+        {
+          "url": "/media/on-field-360.avif",
+          "bytes": 16842,
+          "transfer": 17142
+        },
+        {
+          "url": "/media/portrait-360.avif",
+          "bytes": 12928,
+          "transfer": 13228
+        }
+      ],
+      "overflow": false
+    }
+  ]
+}

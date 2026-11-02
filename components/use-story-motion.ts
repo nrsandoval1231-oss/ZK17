@@ -64,7 +64,17 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   const decodeHash = (value: string) => { try { return decodeURIComponent(value); } catch { return value; } };
   let pendingAnchor = location.hash.startsWith('#film=') ? null : decodeHash(location.hash.slice(1)) || null;
   let anchorFrame = 0;
+  let nativeKeyboardFrame = false;
+  const nativeVideo = element.querySelector<HTMLVideoElement>('#film-room video');
   const reconcileAnchor = () => {
+   if (disposed) return;
+   if (nativeKeyboardFrame) {
+    const cinema = ScrollTrigger.getById('arrival-cinema');
+    const stage = document.getElementById('film-room');
+    const top = cinema?.end ?? (stage ? stage.getBoundingClientRect().top + window.scrollY : null);
+    if (top !== null) window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+    return;
+   }
    const id = pendingAnchor;
    if (disposed || !id || location.hash !== `#${id}`) return;
    const target = document.getElementById(id);
@@ -79,12 +89,30 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   };
   // Late images and pin refreshes can move an anchor after its first landing.
   // Keep reconciling until the visitor chooses a new scroll position.
-  const releaseAnchor = () => { pendingAnchor = null; cancelAnimationFrame(anchorFrame); };
+  const releaseAnchor = () => { pendingAnchor = null; nativeKeyboardFrame = false; nativeVideo?.removeAttribute('data-native-keyboard-active'); cancelAnimationFrame(anchorFrame); };
+  let tabIntent = false;
+  let tabIntentFrame = 0;
+  let focusVersion = 0;
+  const clearFocusIntent = () => { tabIntent = false; focusVersion++; cancelAnimationFrame(tabIntentFrame); };
   const onScrollKey = (event: KeyboardEvent) => {
-   if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) releaseAnchor();
+   clearFocusIntent();
+   if (event.key === 'Tab') {
+    tabIntent = true;
+    // Native Tab focus follows keydown; unrelated later focus cannot reuse it.
+    tabIntentFrame = requestAnimationFrame(clearFocusIntent);
+   }
+   const nativeControlKey = ['Tab', ' ', 'ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key);
+   const inNativePlayer = document.activeElement === nativeVideo || (nativeKeyboardFrame && document.activeElement === document.body);
+   if (nativeControlKey && inNativePlayer && (nativeKeyboardFrame || (nativeVideo?.controls && nativeVideo.tabIndex === 0))) {
+    nativeKeyboardFrame = true;
+    // Film Room owns controls. This token protects an already-ready player's
+    // focused shadow controls until alignment settles, never its opening.
+    nativeVideo?.setAttribute('data-native-keyboard-active', 'true');
+    queueAnchor();
+   } else if (['Tab', 'ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) releaseAnchor();
   };
   const queueAnchor = () => {
-   if (!pendingAnchor || disposed) return;
+   if ((!pendingAnchor && !nativeKeyboardFrame) || disposed) return;
    cancelAnimationFrame(anchorFrame);
    anchorFrame = requestAnimationFrame(() => { reconcileAnchor(); anchorFrame = 0; });
   };
@@ -93,10 +121,12 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
    if (!link || !element.contains(link)) return;
    const id = link.hash.slice(1);
    if (!id || id.startsWith('film=')) return;
+   releaseAnchor();
    pendingAnchor = decodeHash(id);
    refresh();
   };
   const onHashChange = () => {
+   releaseAnchor();
    const id = location.hash.slice(1);
    pendingAnchor = id && !id.startsWith('film=') ? decodeHash(id) : null;
    if (pendingAnchor) refresh();
@@ -115,15 +145,47 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   element.addEventListener('click', onAnchorClick, true);
   window.addEventListener('hashchange', onHashChange);
   ScrollTrigger.addEventListener('refresh', queueAnchor);
+  window.addEventListener('resize', refresh);
+  // Native video focus may scroll a few pixels after the focus event. Keep an
+  // active direct landing aligned until wheel/touch/key input releases it.
+  const keepNativeFocusFramed = () => {
+   if (nativeKeyboardFrame || (pendingAnchor === 'film-room' && document.activeElement === nativeVideo)) queueAnchor();
+  };
+  window.addEventListener('scroll', keepNativeFocusFramed, { passive: true });
+  const releaseOnExternalFocus = (event: FocusEvent) => {
+   const target = event.target;
+   const fromTab = tabIntent;
+   tabIntent = false;
+   cancelAnimationFrame(tabIntentFrame);
+   if (!fromTab || !(target instanceof HTMLElement) || target.matches('#film-room video')) return;
+   const version = focusVersion;
+   if (pendingAnchor === 'film-room') releaseAnchor();
+   // Native smooth focus scrolling can be measured before a pin refresh.
+   // Reconcile the actual focused control after that layout has settled.
+   requestAnimationFrame(() => {
+    if (disposed || version !== focusVersion || document.activeElement !== target || !target.getClientRects().length) return;
+    const box = target.getBoundingClientRect();
+    if (box.top < 0 || box.bottom > innerHeight) target.scrollIntoView({ block: 'center', behavior: 'instant' });
+   });
+  };
+  const releaseNativeOnExternalFocus = (event: FocusEvent) => {
+   const target = event.target;
+   // BODY may be a transient native-shadow focus state. A real external
+   // target, including header/skip controls outside this story, ends the hold.
+   if (nativeKeyboardFrame && target instanceof HTMLElement && target !== document.body && target !== nativeVideo) releaseAnchor();
+  };
+  document.addEventListener('focusin', releaseNativeOnExternalFocus);
+  element.addEventListener('focusin', releaseOnExternalFocus);
   window.addEventListener('wheel', releaseAnchor, { passive: true });
-  window.addEventListener('touchstart', releaseAnchor, { passive: true });
-  window.addEventListener('pointerdown', releaseAnchor, { passive: true });
+  const onPointer = () => { clearFocusIntent(); releaseAnchor(); };
+  window.addEventListener('touchstart', onPointer, { passive: true });
+  window.addEventListener('pointerdown', onPointer, { passive: true });
   window.addEventListener('keydown', onScrollKey);
   if (pendingAnchor) refresh();
   void document.fonts.ready.then(refresh);
   element.addEventListener('load', refresh, true);
   const observer = new ResizeObserver(refresh);
-  element.querySelectorAll('.approved-gallery, .numbers-content, .verified-milestones').forEach(el => observer.observe(el));
-  return () => { disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', releaseAnchor); window.removeEventListener('pointerdown', releaseAnchor); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
+  element.querySelectorAll('#film-room, .approved-gallery, .numbers-content, .verified-milestones').forEach(el => observer.observe(el));
+  return () => { disposed = true; releaseAnchor(); clearFocusIntent(); cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('resize', refresh); window.removeEventListener('scroll', keepNativeFocusFramed); element.removeEventListener('focusin', releaseOnExternalFocus); document.removeEventListener('focusin', releaseNativeOnExternalFocus); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', onPointer); window.removeEventListener('pointerdown', onPointer); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
  }, [root]);
 }

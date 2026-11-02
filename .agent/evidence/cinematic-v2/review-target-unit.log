@@ -1,0 +1,11 @@
+✔ About suppresses review-only photographs and an empty gallery when preview mode is disabled (18.056952ms)
+✔ About uses source-backed approved scene photographs in either mode (2.143286ms)
+✔ TwoWorlds omits missing photographs without visual or accessible original-pending labels (1.582651ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 449.374139

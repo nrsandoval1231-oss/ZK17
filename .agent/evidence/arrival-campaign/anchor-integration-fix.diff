@@ -1,0 +1,61 @@
+diff --git a/components/use-story-motion.ts b/components/use-story-motion.ts
+index 12d0137..91ad3f8 100644
+--- a/components/use-story-motion.ts
++++ b/components/use-story-motion.ts
+@@ -115,6 +115,10 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
+   element.addEventListener('click', onAnchorClick, true);
+   window.addEventListener('hashchange', onHashChange);
+   ScrollTrigger.addEventListener('refresh', queueAnchor);
++  window.addEventListener('resize', refresh);
++  // Native video focus may scroll a few pixels after the focus event. Keep an
++  // active direct landing aligned until wheel/touch/key input releases it.
++  window.addEventListener('scroll', queueAnchor, { passive: true });
+   window.addEventListener('wheel', releaseAnchor, { passive: true });
+   window.addEventListener('touchstart', releaseAnchor, { passive: true });
+   window.addEventListener('pointerdown', releaseAnchor, { passive: true });
+@@ -124,6 +128,6 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
+   element.addEventListener('load', refresh, true);
+   const observer = new ResizeObserver(refresh);
+   element.querySelectorAll('.approved-gallery, .numbers-content, .verified-milestones').forEach(el => observer.observe(el));
+-  return () => { disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', releaseAnchor); window.removeEventListener('pointerdown', releaseAnchor); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
++  return () => { disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('resize', refresh); window.removeEventListener('scroll', queueAnchor); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', releaseAnchor); window.removeEventListener('pointerdown', releaseAnchor); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
+  }, [root]);
+ }
+diff --git a/tests/e2e/cinema-framing.spec.ts b/tests/e2e/cinema-framing.spec.ts
+index ea92906..d96ccda 100644
+--- a/tests/e2e/cinema-framing.spec.ts
++++ b/tests/e2e/cinema-framing.spec.ts
+@@ -15,7 +15,7 @@ test('film resolves to an uncropped native player in the second story scene', as
+   expect(box!.x + box!.width).toBeLessThan(viewport.width);
+   expect(box!.y).toBeGreaterThanOrEqual(Math.max(0, (await page.locator('.site-header').boundingBox())!.y + (await page.locator('.site-header').boundingBox())!.height) - 1);
+   expect(box!.y + box!.height).toBeLessThanOrEqual(viewport.height);
+-  expect(await page.locator('#arrival').evaluate(el => el.parentElement?.querySelectorAll('section')[1]?.id)).toBe('film-room');
++  expect(await page.locator('.site-content section').evaluateAll(sections => sections.slice(0, 2).map(section => section.id))).toEqual(['arrival', 'film-room']);
+ });
+
+ test('Playoffs desktop places official Anna mark left of copy', async ({ page }) => {
+@@ -44,6 +44,11 @@ for (const height of [180, 240, 360]) {
+     await video.focus();
+     await expect(video).toHaveJSProperty('controls', true);
+     await expect(video).toHaveJSProperty('tabIndex', 0);
++    // Browser native-focus scrolling can arrive after the focus event.
++    await page.waitForTimeout(200);
++    await expect(video).toBeFocused();
++    await expect(video).toHaveJSProperty('controls', true);
++    await expect(video).toHaveJSProperty('tabIndex', 0);
+   });
+ }
+
+diff --git a/tests/e2e/completion.spec.ts b/tests/e2e/completion.spec.ts
+index d6955b1..ecb917f 100644
+--- a/tests/e2e/completion.spec.ts
++++ b/tests/e2e/completion.spec.ts
+@@ -26,7 +26,7 @@ test('pending film deep link remains closable while approved film uses native co
+  await page.getByRole('button',{name:'Close film room'}).click();
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+  await expect(page).toHaveURL(/#film-room$/);
+- await page.getByRole('button',{name:'WATCH THE FILM'}).click();
++ await page.locator('.site-header').getByRole('button',{name:'WATCH FILM',exact:true}).click();
+  const dialog=page.getByRole('dialog',{name:'Film room'});
+  await expect(dialog.locator('video')).toHaveAttribute('controls','');
+  await expect(dialog.locator('video source')).toHaveAttribute('src','/media/zephyr-cinematic.mp4');

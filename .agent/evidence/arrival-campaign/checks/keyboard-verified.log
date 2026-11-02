@@ -1,0 +1,25 @@
+
+> zk17-official@0.1.0 e2e
+> playwright test tests/e2e/cinema-framing.spec.ts --grep keyboard focus --workers=2 --output=/tmp/zk17-final4-keyboard
+
+
+Running 4 tests using 2 workers
+
+(node:82934) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:82935) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  1 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (2.9s)
+  ✓  2 [mobile-chromium] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (3.0s)
+(node:83306) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:83313) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  4 [reduced-motion] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (1.9s)
+  ✓  3 [iphone-webkit] › tests/e2e/cinema-framing.spec.ts:144:5 › direct film landing lets keyboard focus leave the native player and scroll to its destination (4.7s)
+
+  4 passed (9.5s)

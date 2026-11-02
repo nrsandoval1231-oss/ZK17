@@ -118,5 +118,205 @@
       "/media/running-706.avif",
       "/media/running-706.webp"
     ]
+  },
+  {
+    "id": "stadium",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_33_20 AM.jpg",
+    "sourceSha256": "51ed28df516f43ddcde9de9305eaedb41116582377c5be9bda45d7ce158d86e6",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      0,
+      330,
+      706,
+      650
+    ],
+    "note": "Authentic night-game stadium context. Vector viewport excludes all screenshot interface, no stadium is generated.",
+    "outputs": [
+      "/media/arrival-campaign/stadium-320.svg",
+      "/media/arrival-campaign/stadium-640.svg"
+    ],
+    "campaign": "arrival-2026-11-02"
+  },
+  {
+    "id": "front",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_32_52 AM.jpg",
+    "sourceSha256": "138b330ea44f4e1b91121579feda7d25cdf6ca3fb466cab9e29f05d6596383df",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      120,
+      125,
+      330,
+      945
+    ],
+    "note": "Existing repost circles obscure parts of the lower legs. Those regions are transparent, never reconstructed.",
+    "outputs": [
+      "/media/arrival-campaign/front-320.svg",
+      "/media/arrival-campaign/front-640.svg"
+    ],
+    "campaign": "arrival-2026-11-02"
+  },
+  {
+    "id": "rear",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_33_14 AM.jpg",
+    "sourceSha256": "ef495d62e509a4eadd6d8f0a1499315950fa9cf9edca619f26fa51a067fd6adc",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      170,
+      445,
+      400,
+      730
+    ],
+    "note": "Rear white #17 portrait. Screenshot UI falls outside the athlete silhouette.",
+    "outputs": [
+      "/media/arrival-campaign/rear-320.svg",
+      "/media/arrival-campaign/rear-640.svg"
+    ],
+    "campaign": "arrival-2026-11-02"
+  },
+  {
+    "id": "back",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_33_03 AM.jpg",
+    "sourceSha256": "dc785b292576d5a123405ed98174564f1a7f14b899ab8ecf842765e6e00b6b08",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      375,
+      335,
+      270,
+      875
+    ],
+    "note": "Original rear black #17 sideline photograph. No interface occlusion.",
+    "outputs": [
+      "/media/arrival-campaign/back-320.svg",
+      "/media/arrival-campaign/back-640.svg"
+    ],
+    "campaign": "arrival-2026-11-02"
+  },
+  {
+    "id": "profile",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_33_17 AM.jpg",
+    "sourceSha256": "6e6dfd72c70ad0f7ab694e14094f28e3f3c09edfc0779b6ab6540bec5595f3c8",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      210,
+      545,
+      260,
+      415
+    ],
+    "note": "Authentic black-uniform helmet profile. UI and surrounding players excluded.",
+    "outputs": [
+      "/media/arrival-campaign/profile-320.svg",
+      "/media/arrival-campaign/profile-640.svg"
+    ],
+    "campaign": "arrival-2026-11-02"
+  },
+  {
+    "id": "closeup",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_32_58 AM.jpg",
+    "sourceSha256": "5de6276caeeea218773811bb62a8e2400b00130fdae2cb4a13033799b233833e",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      235,
+      395,
+      180,
+      220
+    ],
+    "note": "Authentic close-up. Original source resolution is limited; no artificial face detail added.",
+    "outputs": [
+      "/media/arrival-campaign/closeup-320.svg",
+      "/media/arrival-campaign/closeup-640.svg"
+    ],
+    "campaign": "arrival-2026-11-02"
+  },
+  {
+    "id": "directors-action",
+    "sourceName": "source-11.jpg",
+    "sourceSha256": "b3bec17cb19b621053014813d55d8bc495f0c8aaa151108e6e0a9606260c9a15",
+    "crop": {
+      "left": 120,
+      "top": 450,
+      "width": 400,
+      "height": 450
+    },
+    "alt": "Zephyr Kreye carrying a football on the field.",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "WebP, crop and resize only",
+    "outputs": [
+      "/media/arrival-directors-cut/directors-action-480.webp",
+      "/media/arrival-directors-cut/directors-action-960.webp"
+    ],
+    "campaign": "arrival-directors-cut"
+  },
+  {
+    "id": "directors-standing",
+    "sourceName": "zephyr_cinematic_bw_01.png",
+    "sourceSha256": "9cee838def18c6fa5da905210375d81012e3a8f8d2bce72bd692376f7516118e",
+    "crop": {
+      "left": 0,
+      "top": 0,
+      "width": 601,
+      "height": 780
+    },
+    "alt": "Zephyr Kreye standing in his black number 17 uniform.",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "WebP, crop and resize only",
+    "outputs": [
+      "/media/arrival-directors-cut/directors-standing-480.webp",
+      "/media/arrival-directors-cut/directors-standing-960.webp"
+    ],
+    "campaign": "arrival-directors-cut"
+  },
+  {
+    "id": "directors-rear",
+    "sourceName": "zephyr_cinematic_bw_03.png",
+    "sourceSha256": "6b0d75f6cc9346ac8ce4856448641aeccd80ae8b1b7a5235574d24a0cbd29d09",
+    "crop": {
+      "left": 250,
+      "top": 200,
+      "width": 650,
+      "height": 1050
+    },
+    "alt": "Zephyr Kreye seen from behind in his number 17 uniform.",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "WebP, crop and resize only",
+    "outputs": [
+      "/media/arrival-directors-cut/directors-rear-480.webp",
+      "/media/arrival-directors-cut/directors-rear-960.webp"
+    ],
+    "campaign": "arrival-directors-cut"
+  },
+  {
+    "id": "directors-white",
+    "sourceName": "zephyr_cinematic_bw_08.png",
+    "sourceSha256": "1e014c150e30e057fe44d20e14f4578113aca1a6f685c26d78670630f1ce5b7a",
+    "crop": {
+      "left": 115,
+      "top": 330,
+      "width": 470,
+      "height": 805
+    },
+    "alt": "Zephyr Kreye seen from behind in his white number 17 uniform.",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "WebP, crop and resize only",
+    "outputs": [
+      "/media/arrival-directors-cut/directors-white-480.webp",
+      "/media/arrival-directors-cut/directors-white-960.webp"
+    ],
+    "campaign": "arrival-directors-cut"
   }
 ]
