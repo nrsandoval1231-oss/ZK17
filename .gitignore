@@ -10,3 +10,6 @@ playwright-report/
 
 # Retrieved public HTML is review evidence, not an application asset.
 artifacts/playoffs/retrieval/*.html
+
+# Raw sync evidence is retained as a workflow artifact, never shipped.
+artifacts/playoffs/sync/

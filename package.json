@@ -13,7 +13,8 @@
     "prebuild": "node scripts/release-check.mjs && tsx scripts/update-playoffs.ts validate && node scripts/validate-playoff-assets.mjs",
     "playoffs:validate": "tsx scripts/update-playoffs.ts validate",
     "playoffs:update": "tsx scripts/update-playoffs.ts",
-    "playoffs:retrieve": "node scripts/retrieve-playoff-sources.mjs"
+    "playoffs:retrieve": "node scripts/retrieve-playoff-sources.mjs",
+    "playoffs:sync": "node --import tsx scripts/sync-playoffs.ts"
   },
   "dependencies": {
     "@axe-core/playwright": "^4.14.0",
@@ -32,6 +33,7 @@
     "@types/node": "^22.18.6",
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
+    "cheerio": "1.1.2",
     "eslint": "^9.37.0",
     "eslint-config-next": "^16.4.3",
     "sharp": "^0.35.5",

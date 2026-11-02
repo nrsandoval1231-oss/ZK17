@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "season": 2026,
+  "division": "5A-DII",
+  "checkedAt": "2026-11-01T03:47:20.741058Z",
+  "verificationScope": "Anna alignment and UIL tournament structure only; no 2026 playoff matchup or result has been verified.",
+  "sources": [
+    {
+      "id": "uil-alignment",
+      "label": "UIL 2026\u201328 5A Division II alignment",
+      "url": "https://realignment.uiltexas.org/alignments/2026/5AD2FB2026.pdf",
+      "authority": "uil",
+      "season": 2026,
+      "retrievedAt": "2026-11-01T03:44:48.611Z"
+    },
+    {
+      "id": "uil-structure",
+      "label": "UIL 2026 blank football bracket \u00b7 2A\u20135A D1/D2",
+      "url": "https://realignment.uiltexas.org/alignments/2026/FB_BB_VB_Blank_Brackets.pdf",
+      "authority": "uil",
+      "season": 2026,
+      "retrievedAt": "2026-11-01T03:44:50.109Z"
+    },
+    {
+      "id": "uil-bracket",
+      "label": "UIL official 5A Division II playoff bracket",
+      "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+      "authority": "uil",
+      "season": 2026,
+      "retrievedAt": "2026-11-01T03:44:52.351Z"
+    },
+    {
+      "id": "anna-athletics",
+      "label": "Official Anna Coyotes football",
+      "url": "https://www.gocoyoteu.com/sport/football/boys/",
+      "authority": "school",
+      "season": 2026,
+      "retrievedAt": "2026-11-01T03:44:54.093Z"
+    }
+  ],
+  "teams": [
+    {
+      "id": "anna",
+      "name": "Anna Coyotes",
+      "aliases": [
+        "Anna",
+        "Anna High School"
+      ],
+      "district": 4,
+      "region": 1,
+      "logo": null
+    }
+  ],
+  "observations": []
+}

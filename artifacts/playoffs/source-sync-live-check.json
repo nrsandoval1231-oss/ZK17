@@ -1,0 +1,34 @@
+{
+  "adapter": "maxpreps-v1",
+  "uilSha256": "f6828e73e9165cd9ee1748f598200b951698896e1d82a263e95e226cd23ab1cc",
+  "bracketSha256": "e4495011b7d4b647e0ae1262a874b3aacd97524fa45bf954382537faeee46b07",
+  "bracketURL": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+  "retrievedAt": "2026-11-02T00:43:54.161Z",
+  "mode": "apply",
+  "added": 0,
+  "warnings": [],
+  "retrievals": [
+    {
+      "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+      "retrievedAt": "2026-11-02T00:43:43.123Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "redirectURL": "",
+      "bytes": 62303,
+      "sha256": "f6828e73e9165cd9ee1748f598200b951698896e1d82a263e95e226cd23ab1cc"
+    },
+    {
+      "url": "https://www.maxpreps.com/tournament/T9IzeuJN60OqN3mH1cM0qw/tLjwFS0ZCEKCjE8m85zmqA/football-26/2026-uil-texas-football-state-championships-2026-football-conference-5a-d2.htm",
+      "retrievedAt": "2026-11-02T00:43:50.194Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "redirectURL": "",
+      "bytes": 170253,
+      "sha256": "e4495011b7d4b647e0ae1262a874b3aacd97524fa45bf954382537faeee46b07",
+      "originalURL": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8"
+    }
+  ],
+  "details": [],
+  "observations": [],
+  "error": null
+}
