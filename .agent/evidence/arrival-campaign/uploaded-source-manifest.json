@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_32_52 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-01.jpg",
+    "bytes": 172409,
+    "sha256": "138b330ea44f4e1b91121579feda7d25cdf6ca3fb466cab9e29f05d6596383df"
+  },
+  {
+    "id": 2,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_32_58 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-02.jpg",
+    "bytes": 258252,
+    "sha256": "5de6276caeeea218773811bb62a8e2400b00130fdae2cb4a13033799b233833e"
+  },
+  {
+    "id": 3,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_33_03 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-03.jpg",
+    "bytes": 902851,
+    "sha256": "dc785b292576d5a123405ed98174564f1a7f14b899ab8ecf842765e6e00b6b08"
+  },
+  {
+    "id": 4,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_33_09 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-04.jpg",
+    "bytes": 286546,
+    "sha256": "8fe304b4892f21a8dbcee451f2b078d1d4d972a7478739d134c53acc969828b8"
+  },
+  {
+    "id": 5,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_33_10 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-05.jpg",
+    "bytes": 270056,
+    "sha256": "53edafab6b35412fb0361d10beb2279b8c1b66d9efbbfb67c17599c30fc564fa"
+  },
+  {
+    "id": 6,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_33_12 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-06.jpg",
+    "bytes": 252342,
+    "sha256": "7fcb0d9424b46375543e92bbae5968370262711980aef76877b09c71ca637b0f"
+  },
+  {
+    "id": 7,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_33_13 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-07.jpg",
+    "bytes": 259174,
+    "sha256": "1ab35e53a60ab832669ec2002b7a77eb7a353a14b85991b60701ca1727fe4e3a"
+  },
+  {
+    "id": 8,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_33_14 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-08.jpg",
+    "bytes": 213930,
+    "sha256": "ef495d62e509a4eadd6d8f0a1499315950fa9cf9edca619f26fa51a067fd6adc"
+  },
+  {
+    "id": 9,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_33_16 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-09.jpg",
+    "bytes": 172409,
+    "sha256": "138b330ea44f4e1b91121579feda7d25cdf6ca3fb466cab9e29f05d6596383df"
+  },
+  {
+    "id": 10,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_33_17 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-10.jpg",
+    "bytes": 259661,
+    "sha256": "6e6dfd72c70ad0f7ab694e14094f28e3f3c09edfc0779b6ab6540bec5595f3c8"
+  },
+  {
+    "id": 11,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_33_18 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-11.jpg",
+    "bytes": 254893,
+    "sha256": "b3bec17cb19b621053014813d55d8bc495f0c8aaa151108e6e0a9606260c9a15"
+  },
+  {
+    "id": 12,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_33_20 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-12.jpg",
+    "bytes": 281839,
+    "sha256": "51ed28df516f43ddcde9de9305eaedb41116582377c5be9bda45d7ce158d86e6"
+  },
+  {
+    "id": 13,
+    "originalName": "ChatGPT Image Nov 2, 2026, 07_33_21 AM.jpg",
+    "localPath": "/workspace/arrival-source-photos/source-13.jpg",
+    "bytes": 261814,
+    "sha256": "2d99edc59d1814fe2ccb68c6d09034f971785aba0443ba9fb3e7e5006c31b9dc"
+  }
+]

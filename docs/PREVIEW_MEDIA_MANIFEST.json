@@ -118,5 +118,105 @@
       "/media/running-706.avif",
       "/media/running-706.webp"
     ]
+  },
+  {
+    "id": "front",
+    "sourceName": "source-01.jpg",
+    "sourceSha256": "138b330ea44f4e1b91121579feda7d25cdf6ca3fb466cab9e29f05d6596383df",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      120,
+      125,
+      330,
+      945
+    ],
+    "note": "Existing repost circles obscure parts of the lower legs. Those regions are transparent, never reconstructed.",
+    "outputs": [
+      "/media/arrival-campaign/front-320.svg",
+      "/media/arrival-campaign/front-640.svg"
+    ],
+    "campaign": "arrival-2026-11-02"
+  },
+  {
+    "id": "rear",
+    "sourceName": "source-08.jpg",
+    "sourceSha256": "ef495d62e509a4eadd6d8f0a1499315950fa9cf9edca619f26fa51a067fd6adc",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      170,
+      445,
+      400,
+      730
+    ],
+    "note": "Rear white #17 portrait. Screenshot UI falls outside the athlete silhouette.",
+    "outputs": [
+      "/media/arrival-campaign/rear-320.svg",
+      "/media/arrival-campaign/rear-640.svg"
+    ],
+    "campaign": "arrival-2026-11-02"
+  },
+  {
+    "id": "back",
+    "sourceName": "source-03.jpg",
+    "sourceSha256": "dc785b292576d5a123405ed98174564f1a7f14b899ab8ecf842765e6e00b6b08",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      375,
+      335,
+      270,
+      875
+    ],
+    "note": "Original rear black #17 sideline photograph. No interface occlusion.",
+    "outputs": [
+      "/media/arrival-campaign/back-320.svg",
+      "/media/arrival-campaign/back-640.svg"
+    ],
+    "campaign": "arrival-2026-11-02"
+  },
+  {
+    "id": "profile",
+    "sourceName": "source-10.jpg",
+    "sourceSha256": "6e6dfd72c70ad0f7ab694e14094f28e3f3c09edfc0779b6ab6540bec5595f3c8",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      210,
+      545,
+      260,
+      415
+    ],
+    "note": "Authentic black-uniform helmet profile. UI and surrounding players excluded.",
+    "outputs": [
+      "/media/arrival-campaign/profile-320.svg",
+      "/media/arrival-campaign/profile-640.svg"
+    ],
+    "campaign": "arrival-2026-11-02"
+  },
+  {
+    "id": "closeup",
+    "sourceName": "source-02.jpg",
+    "sourceSha256": "5de6276caeeea218773811bb62a8e2400b00130fdae2cb4a13033799b233833e",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      235,
+      395,
+      180,
+      220
+    ],
+    "note": "Authentic close-up. Original source resolution is limited; no artificial face detail added.",
+    "outputs": [
+      "/media/arrival-campaign/closeup-320.svg",
+      "/media/arrival-campaign/closeup-640.svg"
+    ],
+    "campaign": "arrival-2026-11-02"
   }
 ]
