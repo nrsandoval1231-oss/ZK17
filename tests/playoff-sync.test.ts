@@ -109,3 +109,33 @@ it('an identical secondary qualifier does not replace official evidence or block
  const $=load(populated());const team=$('.matchup-container').eq(0).find('ul.teams > li.team').eq(0);team.attr('data-school-id','33333333-3333-4333-8333-333333333333').find('.name').html('<a href="/tx/fixture/fixture-c/football/26-27/schedule/">Fixture C</a>');
  const result=run($.html(),official);assert.equal(result.added,1);assert.deepEqual(result.artifact.observations[0],official.observations[0]);assert.equal(replayArtifact(result.artifact).games.find(g=>g.id==='r1-bi-1')!.homeTeamId,'mp-33333333-3333-4333-8333-333333333333');
 });
+
+it('preserves both winners advanced in a batch when the next matchup names only one participant',()=>{
+ const $=load(populated({final:true}));const feeder=$('.matchup-container').eq(0);const players=feeder.find('ul.teams > li.team');
+ const names=['Fixture C','Fixture D'];const uuids=['33333333-3333-4333-8333-333333333333','44444444-4444-4444-8444-444444444444'];
+ players.each((i,e)=>{$(e).attr('data-school-id',uuids[i]).addClass(i===0?'matchwinner':'matchloser').find('.name').html(`<a href="/tx/fixture/fixture-${i}/football/26-27/schedule/">${names[i]}</a>`);$(e).append(`<a class="result">${i===0?28:14}</a>`);});feeder.addClass('has-result').attr('data-result-length','2');
+ const parent=$(`#matchup_${feeder.attr('data-winners-next-matchup-id')}`).find('ul.teams > li.team');parent.eq(0).attr('data-school-id',uuids[0]).find('.name').html('<a href="/tx/fixture/fixture-0/football/26-27/schedule/">Fixture C</a>');
+ const result=run($.html());const game=replayArtifact(result.artifact).games.find(g=>g.id==='r1-area-1')!;assert.equal(game.homeTeamId,'mp-'+uuids[0]);assert.equal(game.awayTeamId,'anna');assert.equal(result.added,2);
+});
+
+it('late game details preserve an immutable final and do not stall subsequent polls',()=>{
+ const first=run(populated({final:true}));const $=load(populated({final:true}));const url='https://www.maxpreps.com/tx/football/game/anna-vs-fixture/11-13-2026/?c=fixture';$('.matchup-container').eq(1).find('.contest-header').append(`<a href="${url}">Game</a>`);
+ const event={'@type':'SportsEvent',sport:'Football',url,homeTeam:{url:'https://www.maxpreps.com/tx/anna/anna-coyotes/football/26-27/schedule/'},awayTeam:{url:'https://www.maxpreps.com/tx/fixture/fixture-b/football/26-27/schedule/'},startDate:'2026-11-14T01:30:00Z'};
+ const result=run($.html(),first.artifact,{[url]:`<script type="application/ld+json">${JSON.stringify(event)}</script>`});assert.equal(result.added,0);assert.deepEqual(result.artifact,first.artifact);
+});
+
+it('both workflow file guards reject unexpected paths and Git failures without external filters',async()=>{
+ const {mkdtemp,writeFile,rm}=await import('node:fs/promises');const {tmpdir}=await import('node:os');const {join}=await import('node:path');const {execFileSync}=await import('node:child_process');
+ const workflow=readFileSync('.github/workflows/playoff-source-review.yml','utf8');const guards=workflow.match(/ +changed=\$\(git diff --name-only origin\/main\)[\s\S]*?done <<< "\$changed"/g)??[];assert.equal(guards.length,2);
+ const dir=await mkdtemp(join(tmpdir(),'zk17-guard-'));
+ try{
+  await writeFile(join(dir,'git'),`#!/usr/bin/env node
+if(process.env.ZK17_GIT_FAILURE==='true')process.exit(128);process.stdout.write(process.env.ZK17_CHANGED_PATHS??'');\n`,{mode:0o755});
+  for(const guard of guards){
+   const execute=(paths:string,fail=false)=>execFileSync('bash',['-e','-c',guard],{encoding:'utf8',stdio:'pipe',env:{...process.env,PATH:dir+':'+process.env.PATH,ZK17_CHANGED_PATHS:paths,ZK17_GIT_FAILURE:String(fail)}});
+   execute('');execute('content/playoffs/verified.json\ncontent/playoffs/evidence/latest-sync.json\n');
+   for(const paths of ['scripts/evil.ts\n','content/playoffs/verifiedXjson\n','content/playoffs/verified.json\nscripts/evil.ts\n'])assert.throws(()=>execute(paths));
+   assert.throws(()=>execute('',true));
+  }
+ }finally{await rm(dir,{recursive:true,force:true});}
+});

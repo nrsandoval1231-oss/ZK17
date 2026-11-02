@@ -2,7 +2,7 @@
 import {load} from 'cheerio';
 import {createHash} from 'node:crypto';
 import {applyBatch,replayArtifact,type Artifact} from './artifact';
-import {createBracket,resolveTeam,normalizeTeamName,type Observation,type PlayoffGame} from './tournament';
+import {applyObservation,createBracket,resolveTeam,normalizeTeamName,type Observation,type PlayoffGame} from './tournament';
 export const BRACKET_ID='15f0b8b4-192d-4208-828c-4f26f39ce6a8';
 export const BRACKET_URL=`https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=${BRACKET_ID}`;
 export const CANONICAL_BRACKET_URL='https://www.maxpreps.com/tournament/T9IzeuJN60OqN3mH1cM0qw/tLjwFS0ZCEKCjE8m85zmqA/football-26/2026-uil-texas-football-state-championships-2026-football-conference-5a-d2.htm';
@@ -31,7 +31,7 @@ export function linkedGames(html:string){
 type Snapshot={uilHtml:string;bracketHtml:string;url:string;retrievedAt:string;details:Record<string,string>};
 export function normalizeSnapshot(artifact:Artifact,snapshot:Snapshot){
  check(trustedURL(snapshot.url,'bracket')===discoverBracket(snapshot.uilHtml),'Bracket must be linked by the current UIL page');
- const current=replayArtifact(artifact);const teams=structuredClone(artifact.teams);const sources=structuredClone(artifact.sources);const warnings:string[]=[];
+ let current=replayArtifact(artifact);const teams=structuredClone(artifact.teams);const sources=structuredClone(artifact.sources);const warnings:string[]=[];
  const $=load(snapshot.bracketHtml);const bracket=$(`#bracket_${BRACKET_ID}`);
  check(bracket.length===1&&bracket.attr('data-size')==='64'&&clean(bracket.find('h2.bracket-name').text())==='2026 Football Conference 5A D2','Wrong season/division/bracket structure');
  const nodes=bracket.find('li.matchup-container').toArray();check(nodes.length===63,'Expected all 63 bracket nodes');
@@ -110,13 +110,16 @@ export function normalizeSnapshot(artifact:Artifact,snapshot:Snapshot){
     const parts=/^2026-(\d\d)-(\d\d)T([01]\d|2[0-3]):[0-5]\d:[0-5]\d(?:\.\d{1,7})?(?:Z|[+-](?:[01]\d|2[0-3]):[0-5]\d)$/.exec(event.startDate);
     check(parts&&new Date(Date.UTC(2026,Number(parts[1])-1,Number(parts[2]))).getUTCMonth()===Number(parts[1])-1,'Invalid kickoff calendar date');
     const time=Date.parse(event.startDate);check(time>=Date.parse('2026-11-12T00:00:00Z')&&time<Date.parse('2026-12-21T00:00:00Z'),'Kickoff outside playoff season');
-    verifiedKickoffs.add(new Date(time).toISOString());kickoff=event.startDate;
+    verifiedKickoffs.add(new Date(time).toISOString());
+    if(old.status!=='final')kickoff=event.startDate;
+    else if(old.kickoff!==event.startDate)warnings.push(`${game.id}: final kickoff retained; late detail requires manual review`);
     // A school's postal address is not proof of the stadium; venue remains pending unless manually verified.
     const detailHash=sha(snapshot.details[url]);const detailId=`maxpreps-game-${sha(bracketHash+detailHash).slice(0,16)}`;addSource(detailId,url,'UIL-linked MaxPreps game detail and bracket',[{url,sha256:detailHash}]);observationSource=detailId;
    }catch(error){warnings.push(`${game.id}: ${error instanceof Error?error.message:'Invalid game detail'}`);}
   }
   check(verifiedKickoffs.size<=1,'Conflicting kickoff evidence; review required');
   const observation:Observation={gameId:game.id,homeTeamId:ids[0]??old.homeTeamId,awayTeamId:ids[1]??old.awayTeamId,homeScore:final?Number(results[0]):old.homeScore,awayScore:final?Number(results[1]):old.awayScore,status:final?'final':old.status==='pending'&&kickoff&&ids.every(Boolean)?'scheduled':old.status, winnerTeamId:final?ids[winners.indexOf(true)]:old.winnerTeamId,kickoff,venue,sourceId:observationSource,verifiedAt:snapshot.retrievedAt,reviewedBy:'source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)'};
+  current.teams=teams;current.sources=sources;current=applyObservation(current,observation);
   observations.push(observation);
  }
  const result=applyBatch(artifact,observations,teams,sources);
