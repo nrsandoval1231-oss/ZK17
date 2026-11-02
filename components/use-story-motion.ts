@@ -70,7 +70,9 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
    if (disposed) return;
    if (nativeKeyboardFrame) {
     const cinema = ScrollTrigger.getById('arrival-cinema');
-    if (cinema) window.scrollTo({ top: cinema.end, behavior: 'instant' });
+    const stage = document.getElementById('film-room');
+    const top = cinema?.end ?? (stage ? stage.getBoundingClientRect().top + window.scrollY : null);
+    if (top !== null) window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
     return;
    }
    const id = pendingAnchor;
@@ -183,7 +185,7 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   void document.fonts.ready.then(refresh);
   element.addEventListener('load', refresh, true);
   const observer = new ResizeObserver(refresh);
-  element.querySelectorAll('.approved-gallery, .numbers-content, .verified-milestones').forEach(el => observer.observe(el));
+  element.querySelectorAll('#film-room, .approved-gallery, .numbers-content, .verified-milestones').forEach(el => observer.observe(el));
   return () => { disposed = true; releaseAnchor(); clearFocusIntent(); cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('resize', refresh); window.removeEventListener('scroll', keepNativeFocusFramed); element.removeEventListener('focusin', releaseOnExternalFocus); document.removeEventListener('focusin', releaseNativeOnExternalFocus); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', onPointer); window.removeEventListener('pointerdown', onPointer); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
  }, [root]);
 }

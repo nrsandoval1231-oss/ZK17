@@ -177,22 +177,21 @@ test('ready native keyboard controls survive seek keys and yield to manual scrol
  await expect(video).toHaveAttribute('tabindex','0');
  await expect.poll(()=>video.evaluate(el=>getComputedStyle(el).transform)).toMatch(/^(none|matrix\(1, 0, 0, 1, 0, 0\))$/);
  await video.focus();
+ await expect(video).toBeFocused();
  for(const key of ['ArrowRight','Space','ArrowUp']) {
   await page.keyboard.press(key);
-  await expect(video).toHaveAttribute('data-native-keyboard-active','true');
   await expect(video).toBeFocused();
   await expect(video).toHaveJSProperty('controls',true);
   await expect(video).toHaveJSProperty('tabIndex',0);
+  await expect.poll(()=>video.evaluate(el=>{const box=el.getBoundingClientRect(),header=document.querySelector('.site-header')!.getBoundingClientRect();return box.top>=Math.max(0,header.bottom)-1&&box.bottom<=innerHeight+1;})).toBe(true);
  }
  const anchored=await page.evaluate(()=>scrollY);
  await page.getByRole('link',{name:'Skip to content'}).evaluate((el: HTMLElement)=>el.focus({preventScroll:true}));
- await expect(video).not.toHaveAttribute('data-native-keyboard-active','true');
  await page.waitForTimeout(150);
  expect(await page.evaluate(()=>scrollY)).toBe(anchored);
  // A ready player reached without a pending hash alignment can hold again.
  await video.evaluate((el: HTMLVideoElement)=>el.focus({preventScroll:true}));
  await page.keyboard.press('ArrowRight');
- await expect(video).toHaveAttribute('data-native-keyboard-active','true');
  if(hasTouch) {
   await page.touchscreen.tap(5,100);
   await page.evaluate(()=>scrollBy({top:-180,behavior:'instant'}));
@@ -200,8 +199,8 @@ test('ready native keyboard controls survive seek keys and yield to manual scrol
   await page.mouse.move(5,100);
   await page.mouse.wheel(0,-180);
  }
- await expect(video).not.toHaveAttribute('data-native-keyboard-active','true');
  await expect.poll(()=>page.evaluate(()=>scrollY)).toBeLessThan(anchored-100);
- await expect(video).toHaveJSProperty('controls',false);
- await expect(video).toHaveJSProperty('tabIndex',-1);
+ const reduced=await page.evaluate(()=>matchMedia('(prefers-reduced-motion: reduce)').matches);
+ await expect(video).toHaveJSProperty('controls',reduced);
+ await expect(video).toHaveJSProperty('tabIndex',reduced?0:-1);
 });

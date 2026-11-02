@@ -40,3 +40,23 @@ test('real Tab navigation keeps the focused story control fully visible', async 
  await expect(page.locator('#target')).toBeFocused();
  await expect.poll(() => page.locator('#target').evaluate(el => { const box = el.getBoundingClientRect(); return box.top >= 0 && box.bottom <= innerHeight; })).toBe(true);
 });
+
+test('reduced film anchor observes layout that settles after the window resize frame', async ({ page }) => {
+ await page.emulateMedia({reducedMotion:'reduce'});
+ const bundle=await build({stdin:{contents:`import React,{useRef}from'react';import{createRoot}from'react-dom/client';import{useStoryMotion}from'./components/use-story-motion';function Fixture(){const root=useRef(null);useStoryMotion(root);return <main ref={root}><div id="before-film" style={{height:720}}/><section id="film-room" style={{height:720,position:'relative'}}><video controls style={{position:'absolute',top:96,height:200,width:160}}/></section><div style={{height:1200}}/></main>}createRoot(document.getElementById('root')).render(<Fixture/>);`,resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,jsx:'automatic',define:{'process.env.NODE_ENV':'"production"'}});
+ await page.route('**/late-film-layout',route=>route.fulfill({contentType:'text/html',body:`<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><style>html{scroll-behavior:auto}body{margin:0}</style><div id="root"></div><script>${bundle.outputFiles![0].text}</script>`}));
+ await page.goto('/late-film-layout#film-room');
+ const stage=page.locator('#film-room');
+ await expect.poll(()=>stage.evaluate(el=>el.getBoundingClientRect().top)).toBeCloseTo(0,0);
+ await page.evaluate(()=>new Promise<void>(resolve=>{
+  dispatchEvent(new Event('resize'));
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+   document.querySelector<HTMLElement>('#before-film')!.style.height='600px';
+   document.querySelector<HTMLElement>('#film-room')!.style.height='600px';
+   resolve();
+  }));
+ }));
+ await expect(stage).toHaveCSS('height','600px');
+ await expect.poll(()=>stage.evaluate(el=>el.getBoundingClientRect().top)).toBeCloseTo(0,0);
+ await expect.poll(()=>stage.locator('video').evaluate(el=>el.getBoundingClientRect().top)).toBeCloseTo(96,0);
+});
