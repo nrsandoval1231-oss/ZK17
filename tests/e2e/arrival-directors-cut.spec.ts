@@ -2,6 +2,8 @@ import { expect, test, type Page } from '@playwright/test';
 import { build } from 'esbuild';
 import { readFile } from 'node:fs/promises';
 
+type FixtureWindow = Window & { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number; progress: number; animation: { progress: () => number } } } };
+
 async function openHero(page: Page) {
   const bundle = await build({ stdin: { contents: `import React from 'react';
     import { createRoot } from 'react-dom/client';
@@ -33,6 +35,7 @@ async function openHero(page: Page) {
 
 for (const touch of [false, true]) {
   test(`seven scroll beats progress and reverse on ${touch ? 'touch' : 'desktop'}`, async ({ browser }) => {
+    test.setTimeout(90_000);
     const context = await browser.newContext({ viewport: touch ? { width: 390, height: 844 } : { width: 1440, height: 900 }, isMobile: touch, hasTouch: touch, reducedMotion: 'no-preference' });
     const page = await context.newPage();
     await openHero(page);
@@ -46,7 +49,12 @@ for (const touch of [false, true]) {
     const opacity = (layer: string) => hero.locator(`[data-arrival-layer="${layer}"]`).evaluate(el => Number(getComputedStyle(el).opacity));
     expect(await opacity('lights')).toBeLessThan(.01);
     expect(await opacity('athlete')).toBeLessThan(.01);
-    const scrollBeat = (fraction: number) => page.evaluate(value => { const trigger = (window as unknown as { fixtureScrollTrigger: { getById: (id: string) => { start: number; end: number } } }).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: trigger.start + (trigger.end - trigger.start) * value, behavior: 'instant' }); }, fraction);
+    const scrollBeat = async (fraction: number) => {
+      await page.evaluate(value => { const trigger = (window as unknown as FixtureWindow).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: trigger.start + (trigger.end - trigger.start) * value, behavior: 'instant' }); }, fraction);
+      // WebKit's headless compositor can lag the scroll-linked scrub; observe
+      // convergence before inspecting pixels without forcing timeline state.
+      await expect.poll(() => page.evaluate(value => { const trigger = (window as unknown as FixtureWindow).fixtureScrollTrigger.getById('arrival-hero'); return Math.max(Math.abs(trigger.progress - value), Math.abs(trigger.animation.progress() - trigger.progress)); }, fraction), { timeout: 15_000 }).toBeLessThan(.035);
+    };
     await scrollBeat(.22);
     await expect.poll(() => opacity('lights')).toBeGreaterThan(.2);
     await scrollBeat(.58);
@@ -91,12 +99,15 @@ test('touch orientation refresh keeps the story scrollable and bounded', async (
   await page.evaluate(() => scrollTo(0, 4000));
   await page.setViewportSize({ width: 844, height: 390 });
   await page.evaluate(() => dispatchEvent(new Event('orientationchange')));
+  await page.touchscreen.tap(10, 10); // New user input cancels any queued orientation restoration.
   await expect.poll(() => hero.evaluate(el => el.parentElement?.classList.contains('pin-spacer'))).toBe(true);
   await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   const spacer = (await hero.locator('..').boundingBox())!;
   const height = (await hero.boundingBox())!.height;
   expect(spacer.height - height).toBeGreaterThan(14 * 390);
-  await page.evaluate(y => scrollTo(0, y), (spacer.height - height) * .97);
+  await expect.poll(() => hero.evaluate(el => parseFloat(el.parentElement!.style.paddingBottom))).toBeCloseTo((height + 96) * 15, 0);
+  await page.waitForTimeout(400);
+  await page.evaluate(() => { const trigger = (window as unknown as FixtureWindow).fixtureScrollTrigger.getById('arrival-hero'); scrollTo({ top: trigger.start + (trigger.end - trigger.start) * .97, behavior: 'instant' }); });
   await expect.poll(() => hero.locator('[data-arrival-statement]').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.9);
   await context.close();
 });
@@ -158,4 +169,20 @@ test('smoke drifts during the central story', async ({ browser }) => {
   await seek(.62);
   await expect.poll(() => smoke.evaluate(el => getComputedStyle(el).transform)).not.toBe(before);
   await context.close();
+});
+
+test('action photo uses a bounded, faded frame at desktop and mobile sizes', async ({ browser }) => {
+  for (const [width, height, touch] of [[1440, 900, false], [390, 844, true]] as const) {
+    const context = await browser.newContext({ viewport: { width, height }, isMobile: touch, hasTouch: touch, reducedMotion: 'reduce' });
+    const page = await context.newPage();
+    await openHero(page);
+    const frame = page.locator('[data-arrival-layer="running"] picture').locator('..');
+    const box = (await frame.boundingBox())!;
+    expect(box.width).toBeLessThanOrEqual(Math.min(width, height * .7));
+    expect(box.height / box.width).toBeCloseTo(450 / 400, 1);
+    await expect(frame).toHaveCSS('mask-image', /linear-gradient/);
+    const shade = await frame.evaluate(el => getComputedStyle(el, '::after').backgroundImage);
+    expect(shade).toContain('gradient');
+    await context.close();
+  }
 });
