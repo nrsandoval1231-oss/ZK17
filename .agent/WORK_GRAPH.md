@@ -26,3 +26,5 @@ ZK-ARRIVAL-CAMPAIGN [IN PROGRESS 2026-11-02]: owner-approved MAKE THEM REMEMBER 
 ZK-ARRIVAL-CAMPAIGN [PR REVIEW DELIVERED]: PR9 open, productd46943f;51unit/194browserpass18existingconditional skips;lint/typecheck/build and12capture scenariospass. Finalcriticvisualfindingsfixed, keyboardfindingcontrollerrepaired/verified; sourceocclusion/mediarelease limitations documented. No campaignmerge/deploy.
 
 ZK-ARRIVAL-DIRECTORS-CUT [LOCAL VERIFIED 2026-11-02]: producte1acea9/testbbd4f6b;sevenbeatdesktop/touchstory;56unit,270browserpass18existingconditional skips;lint/type/build;12capturecases/144motion samples;independentreviewsPASS. ExistingPR9previewdeliverypending. No mergeproduction;media rights/physicaldevice review remain open.
+
+DIRECTORS CUT PREVIEW DELIVERED: https://c9641529.zk17-review.pages.dev, c9e0e89. Two-engine live state/layout checks and 11 media hashes PASS. Remote captures inspected; WebKit black media surface limits decoded-playback evidence. All five review threads resolved. Documentation/evidence-only follow-up; product unchanged.

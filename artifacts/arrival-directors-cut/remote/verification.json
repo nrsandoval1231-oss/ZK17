@@ -1,0 +1,175 @@
+{
+  "url": "https://c9641529.zk17-review.pages.dev",
+  "conditions": "Live review preview; managed Chromium and touch-enabled WebKit; programmatic scroll; not physical device testing",
+  "results": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "geometry": {
+        "start": 0,
+        "distance": 13500
+      },
+      "film": {
+        "x": 436.796875,
+        "y": 96,
+        "width": 566.390625,
+        "height": 707.984375
+      },
+      "logo": {
+        "x": 115.1875,
+        "y": 367.828125,
+        "width": 201.59375,
+        "height": 217.328125
+      },
+      "heading": {
+        "x": 477.484375,
+        "y": 322.921875,
+        "width": 847.328125,
+        "height": 243.9375
+      },
+      "headers": {
+        "access-control-allow-origin": "*",
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-ray": "a54506dcfd4f4cbc-MSP",
+        "content-encoding": "br",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Mon, 02 Nov 2026 17:58:21 GMT",
+        "link": "</brand/zk17-monogram-512-v2.png>; rel=\"preload\"; as=image",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=CIeDtP9MqQgXX99JWU%2BT1xRJMXwvLA1JXK6sbx0HRXyJku%2BQ5Q2r6W1ghI46p9k8JWImrjy2YJvBR6jhLS%2F%2FPuu8apmpdsCnah7b31rXGXYLq5iLDiKbn4OF2UklhXgUw%2FeWQjrdN3%2FkSQe3VcO0F%2Bc%3D\"}]}",
+        "server": "envoy",
+        "x-content-type-options": "nosniff",
+        "x-envoy-upstream-service-time": "188",
+        "x-frame-options": "DENY",
+        "x-robots-tag": "noindex, nofollow"
+      },
+      "errors": [],
+      "failed": []
+    },
+    {
+      "name": "iphone-webkit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "geometry": {
+        "start": 0,
+        "distance": 12660.001
+      },
+      "film": {
+        "x": 16,
+        "y": 188.25,
+        "width": 358,
+        "height": 447.5
+      },
+      "logo": {
+        "x": 25,
+        "y": 120,
+        "width": 70,
+        "height": 75.46875
+      },
+      "heading": {
+        "x": 25,
+        "y": 416.640625,
+        "width": 340,
+        "height": 148.5
+      },
+      "headers": {
+        "date": "Mon, 02 Nov 2026 17:58:24 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "access-control-allow-origin": "*",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "link": "</brand/zk17-monogram-512-v2.png>; rel=\"preload\"; as=image",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY",
+        "content-encoding": "br",
+        "transfer-encoding": "chunked",
+        "report-to": "{\"group\":\"cf-nel\", \"max_age\":604800, \"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=phhXDHBzBcwo073tC4xXvslRBnpptZZq9QNyqVygYkSjsvZ%2FbqUTFyDMN0Rn66QKGvt%2BkZNKZ%2BfLqX9gXVAQRR3x2g4g48pznS5wg39e9iQ3pM63eR%2FuTnEbo%2Fp9gMwyEGz1ksNK5y2E9QDqA3x6XPI%3D\"}]}",
+        "server": "envoy",
+        "nel": "{\"report_to\":\"cf-nel\", \"success_fraction\":0.0, \"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "x-robots-tag": "noindex, nofollow",
+        "cf-ray": "a54506f2aec71ccd-MSP",
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "x-envoy-upstream-service-time": "123"
+      },
+      "errors": [],
+      "failed": []
+    }
+  ],
+  "assets": [
+    {
+      "path": "/media/zephyr-cinematic.mp4",
+      "status": 200,
+      "bytes": 18368268,
+      "sha256": "a783dcb56f3a11684a3253ddc8c0768035bb8c9d390e0061a29935c20af8965f"
+    },
+    {
+      "path": "/brand/zk17-monogram-512-v2.png",
+      "status": 200,
+      "bytes": 7471,
+      "sha256": "8db76a9993ca32755d1e87a083b2371aa91ef5bd203765b694bae9e881b73593"
+    },
+    {
+      "path": "/media/arrival-directors-smoke.png",
+      "status": 200,
+      "bytes": 28049,
+      "sha256": "ac7051de5f78955e796fb58ef1fa80e9842e1050801690db11fa0e9828b78029"
+    },
+    {
+      "path": "/media/arrival-directors-cut/directors-action-480.webp",
+      "status": 200,
+      "bytes": 17146,
+      "sha256": "6785f6ee3fe0fe641decb5eba1ec6568b9ef9bbf486dded120449a3602f0e070"
+    },
+    {
+      "path": "/media/arrival-directors-cut/directors-action-960.webp",
+      "status": 200,
+      "bytes": 17146,
+      "sha256": "6785f6ee3fe0fe641decb5eba1ec6568b9ef9bbf486dded120449a3602f0e070"
+    },
+    {
+      "path": "/media/arrival-directors-cut/directors-standing-480.webp",
+      "status": 200,
+      "bytes": 33006,
+      "sha256": "bb361ddd61e37f3f718c3f85a183f57688b9a4d07a719873ae127bf4b93e1453"
+    },
+    {
+      "path": "/media/arrival-directors-cut/directors-standing-960.webp",
+      "status": 200,
+      "bytes": 47354,
+      "sha256": "e3d8b19104c874cc48765001faa7bde105104f1c584d79864912c2e25ab2cdd4"
+    },
+    {
+      "path": "/media/arrival-directors-cut/directors-rear-480.webp",
+      "status": 200,
+      "bytes": 95958,
+      "sha256": "5581fe7c00294779d4f8588d832a382259e6d339227b1f8a3a836bfbaa1d18a8"
+    },
+    {
+      "path": "/media/arrival-directors-cut/directors-rear-960.webp",
+      "status": 200,
+      "bytes": 171154,
+      "sha256": "fc39a2f8872c81ddeb3386fe4c77d7957c7cfdeec7e37ee38f68abcead0d9362"
+    },
+    {
+      "path": "/media/arrival-directors-cut/directors-white-480.webp",
+      "status": 200,
+      "bytes": 31126,
+      "sha256": "a1768ed110e7380984cb84351eb18e9ec484f453edab9db56bd9c28303358ac9"
+    },
+    {
+      "path": "/media/arrival-directors-cut/directors-white-960.webp",
+      "status": 200,
+      "bytes": 31126,
+      "sha256": "a1768ed110e7380984cb84351eb18e9ec484f453edab9db56bd9c28303358ac9"
+    }
+  ]
+}
