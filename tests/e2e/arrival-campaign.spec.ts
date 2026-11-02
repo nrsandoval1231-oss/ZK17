@@ -259,3 +259,68 @@ test('header home name includes the visible athlete wordmark', async ({ page }) 
   const accessibility = await new AxeBuilder({ page }).include('.site-header').withRules(['label-content-name-mismatch']).analyze();
   expect(accessibility.violations).toEqual([]);
 });
+
+// Bundle the current source independently of the controller's running export.
+async function openCurrentHeroFixture(page: import('@playwright/test').Page) {
+  const bundle = await build({
+    stdin: { contents: `import React from 'react';
+      import { createRoot } from 'react-dom/client';
+      import ArrivalHero from './components/arrival-hero';
+      import { profile } from './content/site';
+      import { arrivalCampaignPhotos } from './content/arrival-campaign';
+      import './app/globals.css';
+      createRoot(document.getElementById('root')).render(<main style={{paddingTop: 96}}><ArrivalHero profile={profile} photos={arrivalCampaignPhotos} onWatch={() => {}}/><div style={{height:'150vh'}} /></main>);`, resolveDir: process.cwd(), sourcefile: 'arrival-current.tsx', loader: 'tsx' },
+    bundle: true, write: false, outdir: '/tmp/arrival-current', jsx: 'automatic', define: { 'process.env.NODE_ENV': '"production"', 'process.env': '{}' },
+    loader: { '.woff2': 'dataurl' }, conditions: ['style'],
+  });
+  await page.route('**/arrival-current*', async route => {
+    const path = new URL(route.request().url()).pathname;
+    if (path.endsWith('.js') || path.endsWith('.css')) {
+      const file = bundle.outputFiles!.find(file => file.path.endsWith(path.endsWith('.js') ? '.js' : '.css'))!;
+      await route.fulfill({ contentType: path.endsWith('.js') ? 'text/javascript' : 'text/css', body: Buffer.from(file.contents) });
+    } else await route.fulfill({ contentType: 'text/html', body: '<!doctype html><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/arrival-current.css"><div id="root"></div><script src="/arrival-current.js"></script>' });
+  });
+  await page.goto('/arrival-current');
+}
+
+test('stadium reveals subtly, reverses and restores its static state on reduced motion', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, isMobile: false, hasTouch: false, reducedMotion: 'no-preference' });
+  const page = await context.newPage();
+  await openCurrentHeroFixture(page);
+  const stadium = page.locator('[data-arrival-layer="stadium"]');
+  const opacity = () => stadium.evaluate(el => Number(getComputedStyle(el).opacity));
+  await expect.poll(opacity).toBeLessThan(.01);
+  await page.evaluate(() => scrollTo(0, 2000));
+  await expect.poll(opacity).toBeGreaterThan(.05);
+  expect(await opacity()).toBeLessThanOrEqual(.2);
+  await page.evaluate(() => scrollTo(0, 0));
+  await expect.poll(opacity).toBeLessThan(.01);
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await expect.poll(opacity).toBeGreaterThan(.05);
+  expect(await opacity()).toBeLessThanOrEqual(.2);
+  expect(await stadium.evaluate(el => { const m = new DOMMatrix(getComputedStyle(el).transform); return [m.a, m.b, m.c, m.d, m.e, m.f]; })).toEqual([1, 0, 0, 1, 0, 0]);
+  await context.close();
+});
+
+test('desktop static statement emphasizes the second line and keeps editorial controls together', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 1536, height: 1024 }, reducedMotion: 'reduce' });
+  const page = await context.newPage();
+  await openCurrentHeroFixture(page);
+  const hero = page.locator('#arrival');
+  const lines = hero.locator('#hero-title span');
+  const sizes = await lines.evaluateAll(els => els.map(el => parseFloat(getComputedStyle(el).fontSize)));
+  expect(sizes[1] / sizes[0]).toBeGreaterThanOrEqual(1.2);
+  const identity = (await hero.getByText(/ZEPHYR KREYE/).boundingBox())!;
+  const footer = (await hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/).boundingBox())!;
+  const watch = (await hero.getByRole('button', { name: /watch.*film/i }).boundingBox())!;
+  expect(identity.y).toBeLessThan(520);
+  expect(footer.y).toBeLessThan(920);
+  expect(watch.y + watch.height).toBeLessThanOrEqual(footer.y);
+  await expect(hero.getByRole('button', { name: /watch.*film/i })).toBeVisible();
+  await page.setViewportSize({ width: 900, height: 700 });
+  const shortWatch = (await hero.getByRole('button', { name: /watch.*film/i }).boundingBox())!;
+  const shortFooter = (await hero.getByText(/PREPARATION.*DISCIPLINE.*RESULTS/).boundingBox())!;
+  expect(shortWatch.y + shortWatch.height).toBeLessThanOrEqual(shortFooter.y);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(900);
+  await context.close();
+});

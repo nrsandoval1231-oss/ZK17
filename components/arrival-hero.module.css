@@ -29,5 +29,8 @@
 /* Fade before the source upload's UI occlusions; no missing body detail is reconstructed. */
 .athlete[data-campaign-photo]{mask-image:linear-gradient(to bottom,#000 54%,transparent 65%)}
 .left[data-campaign-photo]{mask-image:radial-gradient(ellipse at 50% 42%,#000 28%,transparent 72%)}
-.stadium[data-campaign-photo]{inset:0;opacity:.32;filter:grayscale(1) brightness(.55);mask-image:linear-gradient(to bottom,transparent 0%,#000 22%,#000 100%)}
+.stadium[data-campaign-photo]{inset:0;opacity:.14;filter:grayscale(1) brightness(.4);mask-image:linear-gradient(to bottom,transparent 0%,#000 22%,#000 100%)}
 .stadium[data-campaign-photo] img{object-fit:cover;object-position:center bottom!important}
+
+/* Desktop editorial hierarchy follows the approved composition; shorter screens retain their fitting layout. */
+@media(min-width:900px) and (min-height:651px){.copy{bottom:22%}.copy h1{font-size:clamp(70px,7.4vw,120px)}.copy h1 span:last-child{font-size:1.25em}.footer{bottom:14%}}

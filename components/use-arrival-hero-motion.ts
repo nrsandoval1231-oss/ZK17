@@ -13,11 +13,13 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
     mm.add('(prefers-reduced-motion: no-preference) and (min-width: 900px) and (min-height: 650px) and (hover: hover) and (pointer: fine)', () => {
       const layer = (name: string) => element.querySelector(`[data-arrival-layer="${name}"]`);
       const rear = layer('rear');
+      const stadium = layer('stadium');
       const mark = layer('mark');
       const portraits = ['athlete', 'portrait-left', 'portrait-right', 'action'].map(layer).filter(Boolean);
       const lines = element.querySelectorAll('#hero-title span');
       const details = element.querySelectorAll('[data-arrival-detail]');
       // Initialize all children together; staggered tweens alone leave later lines visible.
+      if (stadium) gsap.set(stadium, { opacity: 0 });
       gsap.set(portraits, { opacity: 0, yPercent: 3 });
       gsap.set(lines, { opacity: 0, yPercent: 10 });
       gsap.set(details, { autoAlpha: 0 });
@@ -33,6 +35,7 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
         .to(details, { autoAlpha: 1, duration: .5 }, 1.5)
         .to(lines, { opacity: 1, yPercent: 0, stagger: .3, duration: .7 }, 1.6)
         .to(element.querySelectorAll('[data-arrival-layer]'), { scale: .98, duration: .8 }, 2.7);
+      if (stadium) timeline.to(stadium, { opacity: .14, duration: 1 }, 1);
       return () => timeline.kill();
     });
     return () => mm.revert();
