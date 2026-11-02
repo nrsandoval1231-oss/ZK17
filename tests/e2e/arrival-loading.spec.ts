@@ -3,15 +3,25 @@ import { test, expect } from '@playwright/test';
 test('slow enabled JavaScript paints darkness before hydration without spoiling the statement', async ({ page }) => {
  await page.emulateMedia({reducedMotion:'no-preference'});
  await page.setViewportSize({width:1440,height:900});
- await page.route(/\.js(?:\?|$)/, async route => { await new Promise(resolve=>setTimeout(resolve,1800)); await route.continue(); });
+ await page.route(/\.js(?:\?|$)/, async route => { await new Promise(resolve=>setTimeout(resolve,3000)); await route.continue(); });
  await page.goto('/',{waitUntil:'commit'});
  await page.waitForTimeout(1000);
  const hero=page.locator('#arrival');
- const opening=await hero.evaluate(el=>({statement:Number(getComputedStyle(el.querySelector('[data-arrival-statement]')!).opacity),layers:[...el.querySelectorAll('[data-arrival-layer]')].map(node=>Number(getComputedStyle(node).opacity)),pinned:el.parentElement?.classList.contains('pin-spacer')}));
+ const opening=await hero.evaluate(el=>({statement:Number(getComputedStyle(el.querySelector('[data-arrival-statement]')!).opacity),layers:[...el.querySelectorAll<HTMLElement>('[data-arrival-layer]')].map(node=>[node.dataset.arrivalLayer,Number(getComputedStyle(node).opacity)] as const),pinned:el.parentElement?.classList.contains('pin-spacer')}));
  // A snapshot assertion must inspect the 1000ms paint, never retry into hydration.
  expect(opening.statement).toBe(0);
- expect(opening.layers.every(opacity=>opacity===0)).toBe(true);
+ expect(Number(await hero.locator('[data-arrival-layer="cold-logo"]').evaluate(el=>getComputedStyle(el).opacity))).toBeCloseTo(.9,1);
+ expect(Number(await hero.locator('[data-arrival-layer="smoke-back"]').evaluate(el=>getComputedStyle(el).opacity))).toBeCloseTo(.25,1);
+ expect(opening.layers.filter(([name])=>!['cold-logo','smoke-back','smoke-front'].includes(name!)).every(([,opacity])=>opacity===0)).toBe(true);
  expect(opening.pinned).toBe(false);
+ await expect(page.locator('html')).toHaveAttribute('data-arrival-boot','pending');
+ const smoke=hero.locator('[data-arrival-layer="smoke-back"]');
+ const transformBefore=await smoke.evaluate(el=>getComputedStyle(el).transform);
+ await page.waitForTimeout(900);
+ const transformAfter=await smoke.evaluate(el=>getComputedStyle(el).transform);
+ expect(transformAfter).not.toBe(transformBefore);
+ await expect(page.locator('html')).toHaveAttribute('data-arrival-boot','pending');
+ expect(await hero.evaluate(el=>el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
  await expect(page.locator('.site-header')).toBeHidden();
  await expect(hero.getByRole('heading',{level:1})).toHaveText(/MAKE THEM REMEMBER/);
  await page.waitForLoadState('load');

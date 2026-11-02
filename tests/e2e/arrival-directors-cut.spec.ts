@@ -12,9 +12,11 @@ for (const viewport of [{width:1440,height:900},{width:390,height:844},{width:76
   const opacity=(name:string)=>hero.locator(`[data-arrival-layer="${name}"]`).evaluate(el=>Number(getComputedStyle(el).opacity));
   await expect(page.locator('.site-header')).toBeHidden();
   await expect(page.locator('.site-header nav a').first()).toBeHidden();
-  for(const name of ['lights','stadium','closeup','rear','white','running','athlete','monogram']) expect(await opacity(name)).toBe(0);
+  for(const name of ['lights','stadium','closeup','rear','white','running','athlete','monogram','stadium-color']) expect(await opacity(name)).toBe(0);
+  expect(await opacity('cold-logo')).toBeCloseTo(.9,1);
+  expect(await opacity('smoke-back')).toBeCloseTo(.25,1);
   const revealed:string[]=[];
-  for(const [fraction,name] of [[.33,'closeup'],[.44,'rear'],[.55,'white'],[.66,'running'],[.78,'athlete']] as const){
+  for(const [fraction,name] of [[.59,'athlete'],[.67,'closeup'],[.74,'rear'],[.80,'white'],[.86,'running']] as const){
    await page.evaluate(y=>scrollTo({top:y,behavior:'instant'}),distance*fraction);
    revealed.push(name);
    for(const present of revealed) await expect.poll(()=>opacity(present),{timeout:10000}).toBeGreaterThan(.65);

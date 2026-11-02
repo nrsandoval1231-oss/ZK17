@@ -1,0 +1,30 @@
+
+Running 16 tests using 1 worker
+
+(node:6912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop-chromium] › tests\e2e\story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story (500ms)
+  ok  2 [desktop-chromium] › tests\e2e\story-focus.spec.ts:28:5 › programmatic preventScroll is preserved and Tab intent is consumed (404ms)
+  ok  3 [desktop-chromium] › tests\e2e\story-focus.spec.ts:42:5 › real Tab navigation keeps the focused story control fully visible (222ms)
+  ok  4 [desktop-chromium] › tests\e2e\story-focus.spec.ts:50:5 › reduced film anchor observes layout that settles after the window resize frame (359ms)
+(node:31108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  5 [mobile-chromium] › tests\e2e\story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story (545ms)
+  ok  6 [mobile-chromium] › tests\e2e\story-focus.spec.ts:28:5 › programmatic preventScroll is preserved and Tab intent is consumed (427ms)
+  ok  7 [mobile-chromium] › tests\e2e\story-focus.spec.ts:42:5 › real Tab navigation keeps the focused story control fully visible (233ms)
+  ok  8 [mobile-chromium] › tests\e2e\story-focus.spec.ts:50:5 › reduced film anchor observes layout that settles after the window resize frame (375ms)
+(node:34436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  9 [iphone-webkit] › tests\e2e\story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story (720ms)
+  ok 10 [iphone-webkit] › tests\e2e\story-focus.spec.ts:28:5 › programmatic preventScroll is preserved and Tab intent is consumed (613ms)
+  ok 11 [iphone-webkit] › tests\e2e\story-focus.spec.ts:42:5 › real Tab navigation keeps the focused story control fully visible (373ms)
+  ok 12 [iphone-webkit] › tests\e2e\story-focus.spec.ts:50:5 › reduced film anchor observes layout that settles after the window resize frame (522ms)
+(node:57496) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 13 [reduced-motion] › tests\e2e\story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story (522ms)
+  ok 14 [reduced-motion] › tests\e2e\story-focus.spec.ts:28:5 › programmatic preventScroll is preserved and Tab intent is consumed (588ms)
+  ok 15 [reduced-motion] › tests\e2e\story-focus.spec.ts:42:5 › real Tab navigation keeps the focused story control fully visible (258ms)
+  ok 16 [reduced-motion] › tests\e2e\story-focus.spec.ts:50:5 › reduced film anchor observes layout that settles after the window resize frame (513ms)
+
+  16 passed (9.2s)
+story-focus exit code: 0

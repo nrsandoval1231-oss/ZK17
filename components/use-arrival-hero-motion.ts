@@ -18,40 +18,72 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       document.documentElement.dataset.introComplete = 'false';
       const layer = (name: string) => element.querySelector<HTMLElement>(`[data-arrival-layer="${name}"]`);
       const lights = layer('lights')!;
+      const beams = lights.querySelectorAll<HTMLElement>('[data-arrival-beam]');
       const smokeBack = layer('smoke-back')!;
       const smokeFront = layer('smoke-front')!;
-      const photoNames = ['closeup', 'rear', 'white', 'running', 'athlete'];
+      const photoNames = ['athlete', 'closeup', 'rear', 'white', 'running'];
       const photos = photoNames.map(name => layer(name)).filter((item): item is HTMLElement => Boolean(item));
+      const coldLogo = layer('cold-logo');
       const stadium = layer('stadium');
+      const stadiumColor = layer('stadium-color');
       const monogram = layer('monogram');
       const grain = layer('grain');
       const copy = element.querySelector('[data-arrival-statement]');
       const details = element.querySelectorAll('[data-arrival-detail]');
-      gsap.set([lights, smokeBack, smokeFront, stadium, monogram, grain, ...photos].filter(Boolean), { opacity: 0 });
+      gsap.set([coldLogo, lights, smokeBack, smokeFront, stadium, stadiumColor, monogram, grain, ...photos].filter(Boolean), { opacity: 0 });
+      gsap.set(photos, { y: 0, scale: 1.02 });
+      gsap.set(beams, { opacity: 0 });
+      gsap.set(smokeBack, { opacity: .25 });
+      gsap.set(smokeFront, { opacity: .12 });
+      gsap.set(coldLogo, { opacity: .9 });
       gsap.set([copy, ...details], { autoAlpha: 0 });
       const complete = (value: boolean) => {
         document.documentElement.dataset.introComplete = String(value);
+      };
+      const setActive = (value: boolean) => {
+        if (value && !document.hidden) element.setAttribute('data-arrival-active', 'true');
+        else element.removeAttribute('data-arrival-active');
+      };
+      const syncActive = () => {
+        const trigger = ScrollTrigger.getById('arrival-hero');
+        if (!trigger) return setActive(false);
+        setActive(trigger.isActive || (window.scrollY <= trigger.start && window.scrollY < trigger.end));
       };
       const timeline = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
         id: 'arrival-hero', trigger: element, start: 'top top',
         end: () => `+=${window.innerHeight * (window.innerWidth >= 900 ? 2.4 : 1.6)}`,
         scrub: .18, pin: true, invalidateOnRefresh: true,
-        onUpdate: self => complete(self.progress >= 1),
-        onRefresh: self => complete(self.progress >= 1),
+        onUpdate: self => { complete(self.progress >= 1); syncActive(); },
+        onRefresh: self => { complete(self.progress >= 1); syncActive(); },
+        onToggle: () => syncActive(),
         onLeave: () => complete(true), onEnterBack: () => complete(false),
       } });
-      timeline.to(lights, { opacity: .65, duration: .1 }, .025)
+      timeline.to(coldLogo, { opacity: 0, duration: .10 }, .04)
+        .to(beams, { opacity: .65, stagger: .035, duration: .12 }, .06)
+        .to(lights, { opacity: .65, duration: .12 }, .06)
         .to(grain, { opacity: .008, duration: .1 }, .06)
-        .to(stadium, { opacity: .2, duration: .13 }, .06)
-        .to(smokeBack, { opacity: .35, xPercent: 3, duration: .8 }, .08)
-        .to(smokeFront, { opacity: .2, xPercent: -3, duration: .8 }, .08)
-        .to(monogram, { opacity: .29, duration: .16 }, .18);
-      photoNames.forEach((name, index) => {
+        .to(smokeBack, { opacity: .25, duration: .12 }, 0)
+        .to(smokeFront, { opacity: .12, duration: .12 }, 0)
+        .to(stadium, { opacity: .8, scale: 1.035, duration: .12 }, .15)
+        .to(stadium, { opacity: .8, duration: .13 }, .27)
+        .to(stadium, { opacity: .22, scale: 1.035, duration: .15 }, .40)
+        .to(stadiumColor, { opacity: .25, duration: .09 }, .27)
+        .to(monogram, { opacity: .29, duration: .16 }, .60);
+      // Keep smoke drift in its CSS-owned animation so GSAP never competes for
+      // its transform.
+      const reveal = (name: string, at: number, duration: number, opacity: number, scale: number) => {
         const photo = layer(name);
-        if (photo) timeline.fromTo(photo, { opacity: 0, y: 10 }, { opacity: name === 'athlete' ? 1 : .72, y: 0, duration: .14 }, .16 + index * .11);
-      });
-      timeline.to([copy, ...details], { autoAlpha: 1, duration: .1 }, .79)
-        .to({}, { duration: .11 }, .89);
+        if (!photo) return;
+        timeline.to(photo, { opacity, scale, duration }, at);
+      };
+      reveal('athlete', .40, .09, .4, 1.01);
+      reveal('athlete', .49, .09, 1, 1);
+      reveal('closeup', .57, .09, .72, 1);
+      reveal('rear', .64, .09, .72, 1);
+      reveal('white', .70, .09, .72, 1);
+      reveal('running', .76, .09, .72, 1);
+      timeline.to([copy, ...details], { autoAlpha: 1, duration: .08 }, .86)
+        .to({}, { duration: .06 }, .94);
       const skip = element.querySelector<HTMLAnchorElement>('a[href="#film-room"]');
       const skipIntro = (event: Event) => {
         event.preventDefault();
@@ -68,6 +100,31 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       let lastProgress = 0;
       let pendingProgress: number | null = null;
       let rotationTimer: ReturnType<typeof setTimeout> | undefined;
+      let imageRefreshFrame = 0;
+      let disposed = false;
+      const queueImageRefresh = () => {
+        if (disposed || imageRefreshFrame || pendingProgress !== null || window.innerWidth !== stableWidth) return;
+        imageRefreshFrame = requestAnimationFrame(() => {
+          imageRefreshFrame = 0;
+          if (disposed || pendingProgress !== null || window.innerWidth !== stableWidth) return;
+          const trigger = timeline.scrollTrigger;
+          const progress = trigger?.isActive
+            ? gsap.utils.clamp(0, 1, (window.scrollY - trigger.start) / (trigger.end - trigger.start))
+            : null;
+          ScrollTrigger.refresh();
+          const refreshed = timeline.scrollTrigger;
+          if (progress !== null && refreshed) {
+            window.scrollTo({ top: refreshed.start + (refreshed.end - refreshed.start) * progress, behavior: 'instant' });
+          }
+        });
+      };
+      const imageElements = Array.from(element.querySelectorAll<HTMLImageElement>('img'));
+      const onImageLoad = () => queueImageRefresh();
+      imageElements.forEach(image => {
+        image.addEventListener('load', onImageLoad);
+        if (image.complete && image.naturalWidth > 0) queueImageRefresh();
+        else if (typeof image.decode === 'function') void image.decode().then(queueImageRefresh, () => undefined);
+      });
       const rememberProgress = () => {
         const trigger = timeline.scrollTrigger;
         if (!trigger || pendingProgress !== null || window.innerWidth !== stableWidth) return;
@@ -102,6 +159,8 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       window.addEventListener('pointerdown', cancelRotation, { passive: true });
       window.addEventListener('keydown', cancelRotation);
       window.addEventListener('hashchange', cancelRotation);
+      document.addEventListener('visibilitychange', syncActive);
+      syncActive();
       complete((timeline.scrollTrigger?.progress ?? 0) >= 1);
       document.documentElement.dataset.arrivalBoot = 'ready';
       element.setAttribute('data-arrival-motion', 'ready');
@@ -112,6 +171,10 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
         delete document.documentElement.dataset.arrivalBoot;
         element.setAttribute('data-arrival-motion', 'static');
         cancelRotation();
+        disposed = true;
+        if (imageRefreshFrame) cancelAnimationFrame(imageRefreshFrame);
+        imageElements.forEach(image => image.removeEventListener('load', onImageLoad));
+        setActive(false);
         window.removeEventListener('scroll', rememberProgress);
         window.removeEventListener('orientationchange', queueRotation, true);
         window.removeEventListener('resize', onResize, true);
@@ -120,6 +183,7 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
         window.removeEventListener('pointerdown', cancelRotation);
         window.removeEventListener('keydown', cancelRotation);
         window.removeEventListener('hashchange', cancelRotation);
+        document.removeEventListener('visibilitychange', syncActive);
         timeline.kill();
       };
     }); } catch {

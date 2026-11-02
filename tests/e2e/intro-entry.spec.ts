@@ -8,7 +8,7 @@ async function assertAnimatedOpening(page:Page){
  await expect(page.locator('.site-header nav a').first()).toBeHidden();
  await expect(hero.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity','0');
  const distance=await hero.evaluate(el=>parseFloat(el.parentElement!.style.paddingBottom));
- await page.evaluate(y=>scrollTo({top:y,behavior:'instant'}),distance*.5);
+ await page.evaluate(y=>scrollTo({top:y,behavior:'instant'}),distance*.70);
  await expect.poll(()=>hero.locator('[data-arrival-layer="closeup"]').evaluate(el=>Number(getComputedStyle(el).opacity))).toBeGreaterThan(.65);
  await expect(page.locator('.site-header nav a').first()).toBeHidden();
  await page.getByRole('link',{name:'Skip intro'}).click();

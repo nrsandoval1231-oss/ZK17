@@ -7,6 +7,10 @@ test('Act II always contains full monochrome film with accessible native control
  await expect(video).toHaveJSProperty('controls',true);await expect(video).toHaveCSS('object-fit','contain');await expect(video).toHaveCSS('filter','grayscale(1)');
  for(const size of [{width:1440,height:900},{width:390,height:844},{width:844,height:390}]){
   await page.setViewportSize(size);await page.locator('#film-room').evaluate(el=>el.scrollIntoView({behavior:'instant'}));
+  await expect.poll(async()=>{
+   const box=await video.boundingBox();
+   return Boolean(box&&box.width<=size.width&&box.height<=Math.max(size.height,500));
+  }).toBe(true);
   const box=(await video.boundingBox())!;expect(box.width).toBeLessThanOrEqual(size.width);expect(box.height).toBeLessThanOrEqual(Math.max(size.height,500));
   await expect(video).toHaveCSS('transform','none');
  }
