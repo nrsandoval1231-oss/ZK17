@@ -1,3 +1,4 @@
+import RouteHeader from '@/components/route-header';
 import type {Metadata} from 'next';
 import {preload} from 'react-dom';
 import gameFilmAssignments from '@/content/playoffs/game-films.json';
@@ -16,5 +17,5 @@ export default function PlayoffsPage(){
   const base=photo.src.replace(/-706\.webp$/,'');
   preload(`${base}-706.avif`,{as:'image',type:'image/avif',imageSrcSet:`${base}-360.avif 360w, ${base}-540.avif 540w, ${base}-706.avif 706w`,imageSizes:'(max-width:700px) 75vw, 50vw',fetchPriority:'high'});
  }else if(photo)preload(photo.src,{as:'image',fetchPriority:'high'});
- return <PlayoffsExperience tournament={tournament} films={films} checkedAt={verification.checkedAt} verificationScope={verification.scope} photo={photo??null}/>;
+ return <><RouteHeader /><PlayoffsExperience tournament={tournament} films={films} checkedAt={verification.checkedAt} verificationScope={verification.scope} photo={photo??null}/></>;
 }

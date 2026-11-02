@@ -5,6 +5,7 @@ import { useRef, type CSSProperties } from 'react';
 import type { PreviewPhoto, PublicProfile, ScenePhoto } from '@/content/site';
 import { useArrivalHeroMotion } from './use-arrival-hero-motion';
 import styles from './arrival-hero.module.css';
+import { brand } from '@/content/brand';
 
 type Photo = PreviewPhoto | ScenePhoto;
 type Props = { profile: PublicProfile; photo?: Photo; photos?: Photo[]; onWatch: (button: HTMLButtonElement) => void };
@@ -34,19 +35,22 @@ export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Pr
       <div className={styles.beam} /><div className={styles.beam} /><div className={styles.beam} /><div className={styles.beam} />
     </div>
     <div className={styles.smokeBack} data-arrival-layer="smoke-back" aria-hidden="true" />
-    <PhotoLayer photo={athlete} layer="silhouette" className={styles.silhouette} />
+    <div className={styles.stadium} data-arrival-layer="stadium" aria-hidden="true" />
+    <div className={styles.monogram} data-arrival-layer="monogram" aria-hidden="true"><Image src={brand.monogram.src} alt="" fill unoptimized sizes="85vw" /></div>
+    <PhotoLayer photo={find('campaign-closeup') ?? photo} layer="closeup" className={styles.closeup} />
     <PhotoLayer photo={athlete} layer="athlete" className={styles.athlete} decorative={false} />
     <PhotoLayer photo={running} layer="running" className={styles.montage} />
     <PhotoLayer photo={rear} layer="rear" className={styles.montage} />
     <PhotoLayer photo={white} layer="white" className={styles.montage} />
     <div className={styles.smokeFront} data-arrival-layer="smoke-front" aria-hidden="true" />
-    <div className={styles.grain} aria-hidden="true" />
+    <div className={styles.grain} data-arrival-layer="grain" aria-hidden="true" />
     <div className={styles.copy} data-arrival-statement>
       <p data-arrival-detail className={styles.identity}>{profile.name.toUpperCase()} / QB {profile.number}</p>
       <h1 id="hero-title" aria-hidden="true"><span>MAKE THEM</span>{' '}<span>REMEMBER.</span></h1>
       <p data-arrival-detail className={styles.school}>ANNA COYOTES / {profile.position.toUpperCase()}</p>
       <button data-arrival-detail className={styles.watch} type="button" onClick={event => onWatch(event.currentTarget)}>WATCH THE FILM <span aria-hidden="true">↗</span></button>
     </div>
+    <a className={styles.skip} href="#film-room">Skip intro ↓</a>
     <p data-arrival-detail className={styles.footer}>PREPARATION | DISCIPLINE | RESULTS</p>
     <a data-arrival-detail className={styles.scroll} href="#film-room">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
   </section>;

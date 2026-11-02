@@ -2,12 +2,13 @@ import {test,expect} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 test('playoffs navigation, complete bracket and region/round filters work',async({page})=>{
- await page.goto('/');
+ await page.goto('/#film-room');
+ await expect(page.locator('.site-header')).toBeVisible();
  if(page.viewportSize()!.width<900)await page.getByRole('button',{name:'Menu'}).click();
- await page.locator('#site-nav').getByRole('link',{name:'Playoffs',exact:true}).click();
+ await page.locator('#site-nav').getByRole('link',{name:'PLAYOFFS',exact:true}).click();
  await expect(page).toHaveURL(/\/playoffs\/$/);
  await expect(page.getByRole('heading',{level:1})).toContainText('ROAD TO STATE.');
- await expect(page.getByRole('link',{name:'Playoffs',exact:true})).toHaveAttribute('aria-current','page');
+ await expect(page.locator('.site-header nav a[href="/playoffs/"]')).toHaveAttribute('aria-current','page');
  await page.getByRole('button',{name:'All regions',exact:true}).click();
  await expect(page.locator('[data-game-card]')).toHaveCount(63);
  await page.getByRole('button',{name:'Region III',exact:true}).click();

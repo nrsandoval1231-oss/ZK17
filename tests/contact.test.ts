@@ -71,7 +71,16 @@ describe('public NIL inquiry contact', () => {
     const contact = publicNilContact(approvedEmail);
     assert.ok(contact);
     const markup = renderToStaticMarkup(ConnectSection({ socials: [], nilContact: contact }));
-    assert.match(markup, /EMAIL REPRESENTATIVE/);
+    assert.match(markup, /EMAIL INQUIRY/);
     assert.match(markup, /mailto:representative@example\.test\?subject=NIL%20inquiry%20for%20Zephyr%20Kreye/);
   });
+});
+
+it('publishes only the owner-approved inquiry destinations with distinct intents', async () => {
+ const {nilContactRecord,inquiryPageRecord,recruitingInquiryHref}=await import('../content/contact');
+ const email=publicNilContact(nilContactRecord);
+ assert.ok(email);
+ assert.equal(email.href,'mailto:info@teamsportsagency.com?subject=NIL%20inquiry%20for%20Zephyr%20Kreye');
+ assert.equal(recruitingInquiryHref(email),'mailto:info@teamsportsagency.com?subject=Recruiting%20inquiry%20for%20Zephyr%20Kreye');
+ assert.equal(publicNilContact(inquiryPageRecord)?.href,'https://www.teamsportsagency.com/contact-us');
 });

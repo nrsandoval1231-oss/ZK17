@@ -26,7 +26,7 @@ function WorldCard({
       {photo ? (
         <figure className="world-photo">
           {base ? <picture><source type="image/avif" srcSet={variants('avif')} sizes="(max-width: 560px) 46vw, (max-width: 900px) 42vw, 38vw" /><source type="image/webp" srcSet={variants('webp')} sizes="(max-width: 560px) 46vw, (max-width: 900px) 42vw, 38vw" /><Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} unoptimized style={{ objectPosition: focal }} /></picture> : <Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} unoptimized style={{ objectPosition: focal }} />}
-          <figcaption>{photo.kind === 'preview' ? photo.label : 'ORIGINAL PHOTO'}</figcaption>
+
         </figure>
       ) : (
         <div className="world-photo world-photo-pending" role="img" aria-label={`${isOn ? 'Game-day' : 'Sideline'} original photo pending`}>

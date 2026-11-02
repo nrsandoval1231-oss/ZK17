@@ -14,7 +14,21 @@ export type NilContactRecord = {
 
 export type PublicNilContact = { kind: ContactDestination['kind']; href: string };
 
-export const nilContactRecord: NilContactRecord | null = null;
+/** Public destinations explicitly approved by the owner on 2026-11-02.
+ * These are inquiry routes, not a claim of representation. */
+export const nilContactRecord: NilContactRecord = {
+  verified: true, published: true, ownerApproved: true,
+  source: 'Owner-approved public inquiry destination: https://www.teamsportsagency.com/contact-us',
+  sourceDate: '2026-11-02',
+  destination: { kind: 'email', value: 'info@teamsportsagency.com' },
+};
+export const inquiryPageRecord: NilContactRecord = {
+  ...nilContactRecord,
+  destination: { kind: 'url', value: 'https://www.teamsportsagency.com/contact-us' },
+};
+export function recruitingInquiryHref(contact: PublicNilContact): string {
+  return contact.kind === 'email' ? `${contact.href.split('?')[0]}?subject=${encodeURIComponent('Recruiting inquiry for Zephyr Kreye')}` : contact.href;
+}
 
 const hasControlCharacters = /[\u0000-\u001f\u007f]/;
 const emailAddress = /^[A-Z0-9._+-]+@[A-Z0-9-]+(?:\.[A-Z0-9-]+)+$/i;
