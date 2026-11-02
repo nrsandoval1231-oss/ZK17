@@ -28,12 +28,41 @@ function VideoDialog({ source, poster, onClose }: { source: string | null; poste
  useEffect(() => { const el = dialog.current; if (!el) return; el.showModal(); const priorOverflow = document.body.style.overflow; document.body.style.overflow = 'hidden'; return () => { if (el.open) el.close(); document.body.style.overflow = priorOverflow; }; }, [onClose]);
  return <dialog ref={dialog} className="film-dialog" aria-label="Film room" onCancel={event => { event.preventDefault(); onClose(); }}><button className="dialog-close" onClick={onClose} aria-label="Close film room">Close <span>×</span></button>{source ? <video controls playsInline preload="none" poster={poster}><source src={source} type="video/mp4" />Your browser does not support video playback.</video> : <div className="film-unavailable"><span className="section-rule" /><p className="eyebrow">FILM ROOM</p><h2>Film arrives<br />when it’s ready.</h2><p>No approved film is available yet.</p><button className="text-action" onClick={onClose}>Return to the story <Arrow /></button></div>}</dialog>;
 }
-function Header() {
+function Header({ onWatch }: { onWatch: (opener: HTMLButtonElement) => void }) {
  const [open, setOpen] = useState(false);
  const nav=useRef<HTMLElement>(null); const trigger=useRef<HTMLButtonElement>(null); const restoreTriggerFocus=()=>{let attempts=0;const restore=()=>{const button=trigger.current;if(!button)return;if(getComputedStyle(button).visibility==='visible'&&button.getClientRects().length>0)button.focus();else if(window.innerWidth<900&&attempts++<10)requestAnimationFrame(restore);};requestAnimationFrame(restore);};
  useLayoutEffect(()=>{if(!open)return;const priorOverflow=document.body.style.overflow;const content=document.querySelector<HTMLElement>('.site-content');const priorInert=content?.inert??false;document.body.style.overflow='hidden';if(content)content.inert=true;let focusFrame=0;const focusWhenVisible=()=>{const closeButton=nav.current?.querySelector<HTMLButtonElement>('.nav-close');if(closeButton&&getComputedStyle(closeButton).visibility==='visible'&&closeButton.getClientRects().length>0)closeButton.focus();else focusFrame=requestAnimationFrame(focusWhenVisible);};focusFrame=requestAnimationFrame(focusWhenVisible);const onKey=(event:KeyboardEvent)=>{if(event.key==='Escape'){setOpen(false);restoreTriggerFocus();return;}if(event.key==='Tab'&&nav.current){const items=[...nav.current.querySelectorAll<HTMLElement>('a,button:not([disabled])')];if(event.shiftKey&&document.activeElement===items[0]){event.preventDefault();items.at(-1)?.focus();}else if(!event.shiftKey&&document.activeElement===items.at(-1)){event.preventDefault();items[0]?.focus();}}};document.addEventListener('keydown',onKey);return()=>{cancelAnimationFrame(focusFrame);document.removeEventListener('keydown',onKey);document.body.style.overflow=priorOverflow;if(content)content.inert=priorInert;};},[open]);
    const close = () => {setOpen(false);restoreTriggerFocus();};
- return <><header className="site-header"><a className="brand" href="#arrival" aria-label="ZK17 home" onClick={()=>setOpen(false)}><BrandLogo className="header-logo"/></a><span className="header-location">ZK17 <i /> ANNA, TEXAS</span><button ref={trigger} aria-expanded={open} aria-controls="site-nav" className={"menu-toggle "+(open?"is-open":"")} onClick={() => setOpen(!open)}><span>{open ? "Close" : "Menu"}</span><svg aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path d="M2 6h16" /><path d="M2 14h16" /></svg></button><nav ref={nav} id="site-nav" className={"site-nav "+(open?"nav-open":"")} aria-label="Main navigation"><button className="nav-close" onClick={close}>Close <span>×</span></button>{scenes.map(([id, name], index) => <a key={id} href={"#"+id} aria-label={name} onClick={close}><span>0{index + 1}</span>{name}</a>)}<a href="/recruiting/" aria-label="Recruiting" onClick={close}><span>08</span>Recruiting</a><a href="/playoffs/" aria-label="Playoffs" onClick={close}><span>09</span>Playoffs</a></nav></header>{open && <button className="nav-backdrop" aria-label="Close navigation menu" onClick={close} />}</>;
+ useEffect(() => {
+  const desktop = window.matchMedia('(min-width: 900px)');
+  const releaseMenu = () => {
+   if (!desktop.matches) return;
+   setOpen(false);
+   if (document.activeElement === nav.current?.querySelector('.nav-close')) nav.current?.querySelector<HTMLAnchorElement>('a')?.focus();
+  };
+  desktop.addEventListener('change', releaseMenu);
+  return () => desktop.removeEventListener('change', releaseMenu);
+ }, []);
+ return <>
+  <header className="site-header">
+   <a className="brand" href="#arrival" aria-label="ZK17 home" onClick={()=>setOpen(false)}>
+    <BrandLogo className="header-logo"/>
+    <span className="header-wordmark" aria-hidden="true">ZEPHYR KREYE</span>
+   </a>
+   <nav ref={nav} id="site-nav" className={"site-nav "+(open?"nav-open":"")} aria-label="Main navigation">
+    <button className="nav-close" onClick={close}>Close <span>×</span></button>
+    {scenes.map(([id, name], index) => <a key={id} href={"#"+id} aria-label={name} onClick={close}><span>0{index + 1}</span>{name}</a>)}
+    <a href="/recruiting/" aria-label="Recruiting" onClick={close}><span>08</span>Recruiting</a>
+    <a href="/playoffs/" aria-label="Playoffs" onClick={close}><span>09</span>Playoffs</a>
+   </nav>
+   <button className="header-watch" aria-label="WATCH FILM" onClick={event => onWatch(event.currentTarget)}>
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 12 12"><path d="M3 1.5 10 6 3 10.5Z"/></svg>
+    <span>WATCH FILM</span>
+   </button>
+   <button ref={trigger} aria-expanded={open} aria-controls="site-nav" className={"menu-toggle "+(open?"is-open":"")} onClick={() => setOpen(!open)}><span>{open ? "Close" : "Menu"}</span><svg aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path d="M2 6h16" /><path d="M2 14h16" /></svg></button>
+  </header>
+  {open && <button className="nav-backdrop" aria-label="Close navigation menu" onClick={close} />}
+ </>;
 }
 export default function SiteExperience({ profileData, film, highlights, stats, milestones, features, commitmentReveal, assets, socials, nilContact, previewPhotos, scenePhotos, campaignPhotos = [], previewMediaMode }: { profileData: PublicProfile; film: MediaAsset | null; highlights: Highlight[]; assets: MediaAsset[]; socials: SocialLink[]; nilContact: PublicNilContact | null; previewPhotos: PreviewPhoto[]; campaignPhotos?: PreviewPhoto[]; scenePhotos: ScenePhoto[]; previewMediaMode: boolean; stats: StatLine[]; milestones: Milestone[]; features: OffFieldFeature[]; commitmentReveal: CommitmentReveal }) {
  const root = useRef<HTMLElement>(null); const [filmOpen, setFilmOpen] = useState(false); const [selectedFilm, setSelectedFilm] = useState<MediaAsset | null>(null); const [season, setSeason] = useState<number | 'all'>('all'); const [filmSeason, setFilmSeason] = useState<number | 'all'>('all');
@@ -70,7 +99,7 @@ export default function SiteExperience({ profileData, film, highlights, stats, m
   requestAnimationFrame(() => (filmOpener.current ?? root.current?.querySelector<HTMLElement>('.arrival-watch, #film-room button'))?.focus({ preventScroll: true }));
  }, []);
  return <main ref={root} id="main" data-preview-media={previewMediaMode ? 'enabled' : 'disabled'}>
-  <Header />
+  <Header onWatch={(opener) => openFilm(approvedFilm, opener)} />
   <div className="site-content">
   <ArrivalExperience profile={profileData} photo={arrivalPhoto} photos={previewMediaMode ? [...campaignPhotos, ...scenePhotos, ...previewPhotos] : scenePhotos} film={approvedFilm} onWatch={(opener) => openFilm(approvedFilm, opener)} />
   <section className="scene on-field" id="on-field" aria-labelledby="field-title"><span id="field-story" className="field-story-anchor" aria-hidden="true"/><div className="field-art">{fieldPhoto&&<ResponsivePhoto item={fieldPhoto} className="field-photo"/>}<div className="field-lines" /><span className="field-mark" aria-hidden="true">{profileData.number}</span><div className="field-caption"><span>FIG. 01</span><span>{fieldPhoto?.kind==='preview'?'PREVIEW CROP · ORIGINAL PENDING':fieldPhoto?'APPROVED ORIGINAL':'PHOTO NEEDED'}</span><span>{profileData.location.toUpperCase()}</span></div></div><div className="field-lockup"><p className="eyebrow"><i /> ON THE FIELD</p><h2 id="field-title">ON THE FIELD</h2><div className="field-base"><span>{profileData.position.toUpperCase()} <b>{profileData.number}</b></span><p>{profileData.school}.<br />Class of {profileData.classYear}.</p></div></div><span className="scene-edge">ON FIELD <i /> 01 / 08</span></section>

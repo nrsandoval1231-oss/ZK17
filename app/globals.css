@@ -117,3 +117,36 @@
 
 /* Let short home viewports devote their height to the film player. */
 @media(max-height:480px){body:has(#arrival) .site-header{position:absolute}}
+
+/* Campaign header: preserve the existing logo geometry, heights and pin framing. */
+.site-header{gap:16px}
+.site-header .header-wordmark{font:600 22px/1 var(--display);letter-spacing:.035em}
+.site-header .header-watch{display:inline-flex;align-items:center;justify-content:center;gap:9px;flex:none;min-width:44px;min-height:44px;padding:0 15px;border:1px solid rgba(245,243,248,.5);background:transparent;color:var(--white);font:600 9px/1 var(--body);letter-spacing:.1em;white-space:nowrap;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.site-header .header-watch svg{width:12px;height:12px;fill:currentColor;flex:none}
+.site-header .header-watch:hover{border-color:var(--lavender);background:rgba(172,124,255,.1);color:var(--lavender)}
+.site-header .site-nav a:hover{color:var(--lavender)}
+@media(min-width:900px){
+ .site-header .site-nav{flex:1;min-width:0;gap:clamp(9px,1.25vw,24px);align-items:center}
+ .site-header .site-nav a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;white-space:nowrap;letter-spacing:.07em}
+}
+@media(min-width:900px) and (max-width:1279px){
+ .site-header{gap:12px;padding-inline:3vw}
+ .site-header .header-wordmark{display:none}
+ .site-header .site-nav{gap:10px}
+ .site-header .header-watch{padding-inline:12px}
+}
+@media(max-width:899px){
+ .site-header{gap:14px}
+ .site-header .header-wordmark{font-size:20px}
+ .site-header .header-watch{margin-left:auto}
+ .site-header .site-nav{padding:96px 8vw 24px;justify-content:flex-start;overflow-y:auto;overscroll-behavior:contain}
+ .site-header .site-nav a{display:flex;align-items:center;flex-shrink:0;min-height:44px;padding:8px 0;font-size:clamp(24px,4.8dvh,44px)}
+ .site-header .nav-close{top:20px;min-width:44px;min-height:44px}
+}
+@media(max-width:560px){
+ .site-header{gap:8px}
+ .site-header .header-wordmark{font-size:14px;letter-spacing:.02em}
+ .site-header .header-watch{width:44px;padding:0}
+ .site-header .header-watch span{display:none}
+ .site-header .menu-toggle{gap:6px;letter-spacing:.03em}
+}

@@ -155,3 +155,91 @@ test('watch action is unobstructed in static responsive frames', async ({ browse
     await context.close();
   }
 });
+
+const headerDestinations = ['#arrival', '#on-field', '#journey', '#off-field', '#numbers', '#film-room', '#media', '/recruiting/', '/playoffs/'];
+
+test('header watch opens native Film Room and restores its opener focus', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/#arrival');
+  const header = page.locator('.site-header');
+  await expect(header).toContainText('ZEPHYR KREYE');
+  const watch = header.getByRole('button', { name: 'WATCH FILM', exact: true });
+  await watch.click();
+  const dialog = page.getByRole('dialog', { name: 'Film room' });
+  await expect(dialog).toBeVisible();
+  await expect(dialog.locator('video')).toHaveAttribute('controls', '');
+  await page.getByRole('button', { name: 'Close film room' }).click();
+  await expect(dialog).not.toBeVisible();
+  await expect(watch).toBeFocused();
+});
+
+test('header keeps all nine destinations within desktop widths', async ({ browser }) => {
+  const context = await browser.newContext({ reducedMotion: 'reduce' });
+  const page = await context.newPage();
+  for (const width of [1024, 1280, 1440, 1536, 1920]) {
+    await page.setViewportSize({ width, height: 1024 });
+    await page.goto('/#arrival');
+    const nav = page.getByRole('navigation', { name: 'Main navigation' });
+    expect(await nav.locator('a').evaluateAll(links => links.map(link => link.getAttribute('href')))).toEqual(headerDestinations);
+    const controls = page.locator('.site-header .brand, .site-header .header-watch, .site-header .site-nav a');
+    let right = 0;
+    for (const control of await controls.all()) {
+      await expect(control).toBeVisible();
+      const box = (await control.boundingBox())!;
+      expect(box.x).toBeGreaterThanOrEqual(0);
+      expect(box.x + box.width).toBeLessThanOrEqual(width);
+      expect(box.height).toBeGreaterThanOrEqual(44);
+      expect(box.width).toBeGreaterThanOrEqual(44);
+    }
+    // Separate horizontal regions must fit without overlapping.
+    for (const region of [page.locator('.site-header .brand'), nav, page.locator('.header-watch')]) {
+      const box = (await region.boundingBox())!;
+      expect(box.x).toBeGreaterThanOrEqual(right);
+      right = box.x + box.width;
+    }
+  }
+  await context.close();
+});
+
+test('header mobile controls fit and menu preserves keyboard, inert and scroll behavior', async ({ browser }) => {
+  const context = await browser.newContext({ viewport: { width: 320, height: 568 }, isMobile: true, hasTouch: true, reducedMotion: 'reduce' });
+  const page = await context.newPage();
+  for (const width of [320, 390]) {
+    await page.setViewportSize({ width, height: 568 });
+    await page.goto('/#arrival');
+    const controls = page.locator('.site-header .brand, .header-watch, .menu-toggle');
+    await expect(controls).toHaveCount(3);
+    for (const control of await controls.all()) {
+      await expect(control).toBeVisible();
+      const box = (await control.boundingBox())!;
+      expect(box.x).toBeGreaterThanOrEqual(0);
+      expect(box.x + box.width).toBeLessThanOrEqual(width);
+      expect(box.height).toBeGreaterThanOrEqual(44);
+      expect(box.width).toBeGreaterThanOrEqual(44);
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+    const toggle = page.getByRole('button', { name: 'Menu', exact: true });
+    await toggle.click();
+    const nav = page.getByRole('navigation', { name: 'Main navigation' });
+    const close = nav.getByRole('button', { name: /Close/ });
+    await expect(close).toBeFocused();
+    expect(await nav.locator('a').evaluateAll(links => links.map(link => link.getAttribute('href')))).toEqual(headerDestinations);
+    await expect(page.locator('.site-content')).toHaveJSProperty('inert', true);
+    await expect(page.locator('body')).toHaveCSS('overflow', 'hidden');
+    await page.keyboard.press('Shift+Tab');
+    await expect(nav.getByRole('link', { name: 'Playoffs' })).toBeFocused();
+    await page.keyboard.press('Tab');
+    await expect(close).toBeFocused();
+    await page.keyboard.press('Escape');
+    await expect(toggle).toBeFocused();
+    await expect(page.locator('.site-content')).toHaveJSProperty('inert', false);
+    await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
+  }
+  await page.getByRole('button', { name: 'Menu', exact: true }).click();
+  await expect(page.locator('.site-content')).toHaveJSProperty('inert', true);
+  await page.setViewportSize({ width: 1024, height: 768 });
+  await expect(page.locator('.site-content')).toHaveJSProperty('inert', false);
+  await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
+  await expect(page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true })).toBeFocused();
+  await context.close();
+});
