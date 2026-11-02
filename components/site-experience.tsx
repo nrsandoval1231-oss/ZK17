@@ -36,16 +36,18 @@ function Header({ onWatch }: { onWatch: (opener: HTMLButtonElement) => void }) {
  useEffect(() => {
   const desktop = window.matchMedia('(min-width: 900px)');
   const releaseMenu = () => {
-   if (!desktop.matches) return;
+   if (!desktop.matches || !open) return;
    setOpen(false);
-   if (document.activeElement === nav.current?.querySelector('.nav-close')) nav.current?.querySelector<HTMLAnchorElement>('a')?.focus();
+   requestAnimationFrame(() => {
+    if (desktop.matches) nav.current?.querySelector<HTMLAnchorElement>('a')?.focus({ preventScroll: true });
+   });
   };
   desktop.addEventListener('change', releaseMenu);
   return () => desktop.removeEventListener('change', releaseMenu);
- }, []);
+ }, [open]);
  return <>
   <header className="site-header">
-   <a className="brand" href="#arrival" aria-label="ZK17 home" onClick={()=>setOpen(false)}>
+   <a className="brand" href="#arrival" aria-label="Zephyr Kreye — ZK17 home" onClick={()=>setOpen(false)}>
     <BrandLogo className="header-logo"/>
     <span className="header-wordmark" aria-hidden="true">ZEPHYR KREYE</span>
    </a>

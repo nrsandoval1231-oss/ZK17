@@ -1,5 +1,6 @@
 import { expect, test } from '@playwright/test';
 import { build } from 'esbuild';
+import AxeBuilder from '@axe-core/playwright';
 
 test('campaign hero presents its statement, identity and watch action', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
@@ -241,5 +242,20 @@ test('header mobile controls fit and menu preserves keyboard, inert and scroll b
   await expect(page.locator('.site-content')).toHaveJSProperty('inert', false);
   await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
   await expect(page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Home', exact: true })).toBeFocused();
+  await page.setViewportSize({ width: 390, height: 568 });
+  const watch = page.locator('.header-watch');
+  await watch.focus();
+  await page.setViewportSize({ width: 1024, height: 768 });
+  await expect(watch).toBeFocused();
   await context.close();
+});
+
+
+test('header home name includes the visible athlete wordmark', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/#arrival');
+  const home = page.locator('.site-header .brand');
+  await expect(home).toHaveAccessibleName(/ZEPHYR KREYE.*ZK17 home/i);
+  const accessibility = await new AxeBuilder({ page }).include('.site-header').withRules(['label-content-name-mismatch']).analyze();
+  expect(accessibility.violations).toEqual([]);
 });
