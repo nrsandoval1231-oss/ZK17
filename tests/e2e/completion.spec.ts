@@ -26,7 +26,7 @@ test('pending film deep link remains closable while approved film uses native co
  await page.getByRole('button',{name:'Close film room'}).click();
  await expect(page.getByRole('dialog')).toHaveCount(0);
  await expect(page).toHaveURL(/#film-room$/);
- await page.getByRole('button',{name:'WATCH THE FILM'}).click();
+ await page.locator('.site-header').getByRole('button',{name:'WATCH FILM',exact:true}).click();
  const dialog=page.getByRole('dialog',{name:'Film room'});
  await expect(dialog.locator('video')).toHaveAttribute('controls','');
  await expect(dialog.locator('video source')).toHaveAttribute('src','/media/zephyr-cinematic.mp4');

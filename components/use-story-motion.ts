@@ -115,6 +115,10 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   element.addEventListener('click', onAnchorClick, true);
   window.addEventListener('hashchange', onHashChange);
   ScrollTrigger.addEventListener('refresh', queueAnchor);
+  window.addEventListener('resize', refresh);
+  // Native video focus may scroll a few pixels after the focus event. Keep an
+  // active direct landing aligned until wheel/touch/key input releases it.
+  window.addEventListener('scroll', queueAnchor, { passive: true });
   window.addEventListener('wheel', releaseAnchor, { passive: true });
   window.addEventListener('touchstart', releaseAnchor, { passive: true });
   window.addEventListener('pointerdown', releaseAnchor, { passive: true });
@@ -124,6 +128,6 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   element.addEventListener('load', refresh, true);
   const observer = new ResizeObserver(refresh);
   element.querySelectorAll('.approved-gallery, .numbers-content, .verified-milestones').forEach(el => observer.observe(el));
-  return () => { disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', releaseAnchor); window.removeEventListener('pointerdown', releaseAnchor); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
+  return () => { disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('resize', refresh); window.removeEventListener('scroll', queueAnchor); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', releaseAnchor); window.removeEventListener('pointerdown', releaseAnchor); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
  }, [root]);
 }

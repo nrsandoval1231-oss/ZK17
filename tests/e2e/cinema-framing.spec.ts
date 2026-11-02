@@ -15,7 +15,7 @@ test('film resolves to an uncropped native player in the second story scene', as
   expect(box!.x + box!.width).toBeLessThan(viewport.width);
   expect(box!.y).toBeGreaterThanOrEqual(Math.max(0, (await page.locator('.site-header').boundingBox())!.y + (await page.locator('.site-header').boundingBox())!.height) - 1);
   expect(box!.y + box!.height).toBeLessThanOrEqual(viewport.height);
-  expect(await page.locator('#arrival').evaluate(el => el.parentElement?.querySelectorAll('section')[1]?.id)).toBe('film-room');
+  expect(await page.locator('.site-content section').evaluateAll(sections => sections.slice(0, 2).map(section => section.id))).toEqual(['arrival', 'film-room']);
 });
 
 test('Playoffs desktop places official Anna mark left of copy', async ({ page }) => {
@@ -42,6 +42,11 @@ for (const height of [180, 240, 360]) {
         !/NaN|Infinity/.test(getComputedStyle(el).transform);
     })).toBe(true);
     await video.focus();
+    await expect(video).toHaveJSProperty('controls', true);
+    await expect(video).toHaveJSProperty('tabIndex', 0);
+    // Browser native-focus scrolling can arrive after the focus event.
+    await page.waitForTimeout(200);
+    await expect(video).toBeFocused();
     await expect(video).toHaveJSProperty('controls', true);
     await expect(video).toHaveJSProperty('tabIndex', 0);
   });
