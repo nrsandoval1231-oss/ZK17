@@ -71,9 +71,22 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
    if (!target) return;
    const cinema = id === 'film-room' ? ScrollTrigger.getById('arrival-cinema') : undefined;
    const scrollPadding = Number.parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
-   const top = cinema ? cinema.end : target.getBoundingClientRect().top + window.scrollY - scrollPadding;
+   // The full-height film stage must align with the viewport even without a pin.
+   const top = id === 'film-room'
+    ? cinema?.end ?? target.getBoundingClientRect().top + window.scrollY
+    : target.getBoundingClientRect().top + window.scrollY - scrollPadding;
    window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
-   pendingAnchor = null;
+  };
+  // Late images and pin refreshes can move an anchor after its first landing.
+  // Keep reconciling until the visitor chooses a new scroll position.
+  const releaseAnchor = () => { pendingAnchor = null; cancelAnimationFrame(anchorFrame); };
+  const onScrollKey = (event: KeyboardEvent) => {
+   if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) releaseAnchor();
+  };
+  const queueAnchor = () => {
+   if (!pendingAnchor || disposed) return;
+   cancelAnimationFrame(anchorFrame);
+   anchorFrame = requestAnimationFrame(() => { reconcileAnchor(); anchorFrame = 0; });
   };
   const onAnchorClick = (event: MouseEvent) => {
    const link = (event.target as Element).closest<HTMLAnchorElement>('a[href^="#"]');
@@ -96,22 +109,21 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
     const focused = document.activeElement;
     ScrollTrigger.refresh();
     if (focused instanceof HTMLElement && focused !== document.body && focused.isConnected && document.activeElement !== focused) focused.focus({ preventScroll: true });
-    if (pendingAnchor) {
-     cancelAnimationFrame(anchorFrame);
-     anchorFrame = requestAnimationFrame(() => {
-      reconcileAnchor();
-      anchorFrame = 0;
-     });
-    }
+    queueAnchor();
    });
   };
   element.addEventListener('click', onAnchorClick, true);
   window.addEventListener('hashchange', onHashChange);
+  ScrollTrigger.addEventListener('refresh', queueAnchor);
+  window.addEventListener('wheel', releaseAnchor, { passive: true });
+  window.addEventListener('touchstart', releaseAnchor, { passive: true });
+  window.addEventListener('pointerdown', releaseAnchor, { passive: true });
+  window.addEventListener('keydown', onScrollKey);
   if (pendingAnchor) refresh();
   void document.fonts.ready.then(refresh);
   element.addEventListener('load', refresh, true);
   const observer = new ResizeObserver(refresh);
   element.querySelectorAll('.approved-gallery, .numbers-content, .verified-milestones').forEach(el => observer.observe(el));
-  return () => { disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); mm.revert(); context.revert(); };
+  return () => { disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', releaseAnchor); window.removeEventListener('pointerdown', releaseAnchor); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
  }, [root]);
 }

@@ -1,0 +1,41 @@
+
+Running 1 test using 1 worker
+
+(node:3366) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop-chromium] › tests/e2e/arrival-fallback.spec.ts:6:5 › an unpublished film still reveals its fallback and reverses the aperture (5.6s)
+
+
+  1) [desktop-chromium] › tests/e2e/arrival-fallback.spec.ts:6:5 › an unpublished film still reveals its fallback and reverses the aperture
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('#film-room').locator('svg').first()
+    Expected: "0"
+    Received: "1"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('#film-room').locator('svg').first() with timeout 5000ms
+      - waiting for locator('#film-room').locator('svg').first()
+        14 × locator resolved to <svg aria-hidden="true" class="arrival_mask">…</svg>
+           - unexpected value "1"
+
+
+      27 |     await stage.evaluate(el => scrollTo({ top: el.getBoundingClientRect().top + scrollY + innerHeight * 1.85, behavior: 'instant' }));
+      28 |   }
+    > 29 |   await expect(mask).toHaveCSS('opacity', '0');
+         |                      ^
+      30 |   if (!reduced) {
+      31 |     await page.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
+      32 |     await expect(mask).toHaveCSS('opacity', '1');
+        at /workspace/ZK17/tests/e2e/arrival-fallback.spec.ts:29:22
+
+    Error: apiRequestContext._wrapApiCall: ENOENT: no such file or directory, copyfile '/workspace/ZK17/test-results/.playwright-artifacts-0/traces/b7ed314cb56dbda7d7e8-51b840da87e6c79176f3-recording1.network' -> '/workspace/ZK17/test-results/.playwright-artifacts-0/traces/b7ed314cb56dbda7d7e8-51b840da87e6c79176f3-recording1-pwnetcopy-1.network'
+
+    Error: browserContext._wrapApiCall: ENOENT: no such file or directory, open '/workspace/ZK17/test-results/.playwright-artifacts-0/traces/b7ed314cb56dbda7d7e8-51b840da87e6c79176f3.trace'
+
+    Error: ENOENT: no such file or directory, open '/workspace/ZK17/test-results/.playwright-artifacts-0/573337bfcb57da54fb76603dbf46a89b.zip'
+
+  1 failed
+    [desktop-chromium] › tests/e2e/arrival-fallback.spec.ts:6:5 › an unpublished film still reveals its fallback and reverses the aperture

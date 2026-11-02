@@ -1,0 +1,110 @@
+
+Running 6 tests using 2 workers
+
+(node:2262) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2261) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:3:5 › film resolves to an uncropped native player in the second story scene (757ms)
+  ✓  3 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:21:5 › Playoffs desktop places official Anna mark left of copy (410ms)
+  ✘  4 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player (4.6s)
+(node:2490) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  5 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 240px viewport retains a finite, usable player (4.8s)
+(node:2632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  6 [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 360px viewport retains a finite, usable player (566ms)
+  ✘  2 [desktop-chromium] › tests/e2e/arrival-fallback.spec.ts:6:5 › an unpublished film still reveals its fallback and reverses the aperture (30.2s)
+
+
+  1) [desktop-chromium] › tests/e2e/arrival-fallback.spec.ts:6:5 › an unpublished film still reveals its fallback and reverses the aperture
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "http://127.0.0.1:3100/arrival-fixture", waiting until "load"
+
+
+      17 |     } else await route.fulfill({ contentType: 'text/html', body: '<link rel="stylesheet" href="/arrival-fixture.css"><div id="root"></div><script src="/arrival-fixture.js"></script>' });
+      18 |   });
+    > 19 |   await page.goto('/arrival-fixture');
+         |              ^
+      20 |   const stage = page.locator('#film-room');
+      21 |   const mask = stage.locator('svg').first();
+      22 |   await expect(stage).toContainText('ZK17');
+        at /workspace/ZK17/tests/e2e/arrival-fallback.spec.ts:19:14
+
+    Error Context: test-results/arrival-fallback-an-unpubl-d45b1-k-and-reverses-the-aperture-desktop-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/arrival-fallback-an-unpubl-d45b1-k-and-reverses-the-aperture-desktop-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/arrival-fallback-an-unpubl-d45b1-k-and-reverses-the-aperture-desktop-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      41 |         box.x >= 0 && box.right <= innerWidth && box.y >= -1 && box.bottom <= innerHeight + 1 &&
+      42 |         !/NaN|Infinity/.test(getComputedStyle(el).transform);
+    > 43 |     })).toBe(true);
+         |         ^
+      44 |   });
+      45 | }
+      46 |
+        at /workspace/ZK17/tests/e2e/cinema-framing.spec.ts:43:9
+
+    Error Context: test-results/cinema-framing-short-180px-431ed-ains-a-finite-usable-player-desktop-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/cinema-framing-short-180px-431ed-ains-a-finite-usable-player-desktop-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/cinema-framing-short-180px-431ed-ains-a-finite-usable-player-desktop-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 240px viewport retains a finite, usable player
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      41 |         box.x >= 0 && box.right <= innerWidth && box.y >= -1 && box.bottom <= innerHeight + 1 &&
+      42 |         !/NaN|Infinity/.test(getComputedStyle(el).transform);
+    > 43 |     })).toBe(true);
+         |         ^
+      44 |   });
+      45 | }
+      46 |
+        at /workspace/ZK17/tests/e2e/cinema-framing.spec.ts:43:9
+
+    Error Context: test-results/cinema-framing-short-240px-a2825-ains-a-finite-usable-player-desktop-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/cinema-framing-short-240px-a2825-ains-a-finite-usable-player-desktop-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/cinema-framing-short-240px-a2825-ains-a-finite-usable-player-desktop-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [desktop-chromium] › tests/e2e/arrival-fallback.spec.ts:6:5 › an unpublished film still reveals its fallback and reverses the aperture
+    [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 180px viewport retains a finite, usable player
+    [desktop-chromium] › tests/e2e/cinema-framing.spec.ts:33:7 › short 240px viewport retains a finite, usable player
+  3 passed (31.1s)

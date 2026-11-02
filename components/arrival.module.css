@@ -8,11 +8,13 @@
 @media(max-width:899px){.number{top:10svh;right:-8px;font-size:80vw;-webkit-text-stroke-color:rgba(172,124,255,.14)}}
 /* The reserved native 4:5 player stays in place through pin release. Only its
    video scales for the opening crop; the final beat returns to identity. */
-.cinema{min-height:0;height:100svh}
-.cinemaVideo{inset:0;position:absolute;margin:auto;width:min(calc(100% - 48px),calc((100svh - 192px)*.8));height:auto;aspect-ratio:4/5;background:#090909}
+.cinema{--cinema-clearance:96px;--cinema-footer:96px;min-height:0;height:100svh}
+.cinemaVideo{inset:var(--cinema-clearance) 0 var(--cinema-footer);position:absolute;margin:auto;width:min(calc(100% - 48px),calc((100svh - var(--cinema-clearance) - var(--cinema-footer))*.8));height:auto;aspect-ratio:4/5;background:#090909}
 .video{object-fit:contain;transform-origin:center;filter:none}
 .poster{pointer-events:none}
 .filmCopy{pointer-events:none}
 .filmCopy button{pointer-events:auto}
-@media(max-width:899px){.cinemaVideo{height:auto;width:min(calc(100% - 32px),calc((100svh - 192px)*.8))}}
+@media(max-width:899px){.cinema{--cinema-clearance:80px}.cinemaVideo{height:auto;width:min(calc(100% - 32px),calc((100svh - var(--cinema-clearance) - var(--cinema-footer))*.8))}}
+@media(max-width:560px){.cinema{--cinema-clearance:76px}}
+@media(max-height:480px){.cinema{--cinema-clearance:0px;--cinema-footer:10svh}}
 @media(prefers-reduced-motion:reduce){.filmCopy{opacity:1!important;visibility:visible!important;top:auto;bottom:40px;left:auto;right:24px}.filmCopy>p,.filmCopy h2{display:none}.filmCopy button{margin:0}.video{transform:none!important;filter:none!important}.poster{visibility:hidden}}

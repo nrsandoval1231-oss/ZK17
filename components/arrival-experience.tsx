@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import type { MediaAsset, PreviewPhoto, PublicProfile, ScenePhoto } from '@/content/site';
 import styles from './arrival.module.css';
 import { brand } from '@/content/brand';
+import { cinemaCoverScale } from '@/lib/cinema-geometry';
 
 type Props = {
   profile: PublicProfile;
@@ -57,21 +58,23 @@ export default function ArrivalExperience({ profile, photo, film, onWatch }: Pro
           gsap.fromTo(`.${styles.lightSweep}`, { xPercent: -140 }, { xPercent: 140, duration: 1.7, ease: 'power2.out' });
           gsap.to(`.${styles.heroMain}`, { yPercent: -8, scale: .97, ease: 'none', scrollTrigger: { trigger: `.${styles.hero}`, start: 'top top', end: 'bottom top', scrub: .6 } });
         }
-        if (!overlay.current || !filmCopy.current || !video.current || !player.current) return;
+        if (!overlay.current || !filmCopy.current || !player.current) return;
         const media = video.current;
         const frame = player.current;
         const cinema = frame.parentElement!;
         const coverScale = () => {
-          const ratio = media.videoWidth && media.videoHeight ? media.videoWidth / media.videoHeight : 512 / 640;
-          const width = Math.min(frame.clientWidth, frame.clientHeight * ratio);
-          const height = width / ratio;
-          return Math.max(cinema.clientWidth / width, cinema.clientHeight / height);
+          const ratio = media?.videoWidth && media?.videoHeight ? media.videoWidth / media.videoHeight : 512 / 640;
+          // The final frame is centered below the header. Cover both edges
+          // of the stage from that offset center during the opening crop.
+          const centerY = frame.offsetTop + frame.clientHeight / 2;
+          const coverHeight = 2 * Math.max(centerY, cinema.clientHeight - centerY);
+          return cinemaCoverScale(cinema.clientWidth, coverHeight, frame.clientWidth, frame.clientHeight, ratio);
         };
-        const controls = (ready: boolean) => { media.controls = ready; media.tabIndex = ready ? 0 : -1; };
+        const controls = (ready: boolean) => { if (media) { media.controls = ready; media.tabIndex = ready ? 0 : -1; } };
         if (isReduce) {
           gsap.set(overlay.current, { autoAlpha: 0 });
           gsap.set(filmCopy.current, { autoAlpha: 1, y: 0 });
-          gsap.set(`.${styles.poster}`, { autoAlpha: 0 });
+          if (media) gsap.set(`.${styles.poster}`, { autoAlpha: 0 });
           controls(true);
           return;
         }
@@ -87,8 +90,8 @@ export default function ArrivalExperience({ profile, photo, film, onWatch }: Pro
         });
         transition.fromTo(overlay.current, { scale: 1, autoAlpha: 1 }, { scale: 5, autoAlpha: 1, ease: 'none', duration: .82 }, 0)
           .to(overlay.current, { autoAlpha: 0, ease: 'none', duration: .18 }, .82)
-          .fromTo(filmCopy.current, { y: 35, autoAlpha: 0 }, { y: 0, autoAlpha: 1, ease: 'none', duration: .48 }, .5)
-          .to(filmCopy.current.querySelectorAll('p, h2'), { autoAlpha: 0, duration: .2 }, 1)
+          .fromTo(filmCopy.current, { y: 35, autoAlpha: 0 }, { y: 0, autoAlpha: 1, ease: 'none', duration: .48 }, .5);
+        if (media) transition.to(filmCopy.current.querySelectorAll('p, h2'), { autoAlpha: 0, duration: .2 }, 1)
           .to(filmCopy.current.querySelector('button'), {
             y: () => {
               const button = filmCopy.current!.querySelector('button')!;
