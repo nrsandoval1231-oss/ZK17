@@ -4,7 +4,7 @@ import AxeBuilder from '@axe-core/playwright';
 test('arrival resolves from athlete hero through portal to the film room', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('#arrival')).toBeVisible();
-  await expect(page.locator('#hero-title')).toHaveText(/ZEPHYR\s*KREYE/);
+  await expect(page.locator('#hero-title')).toHaveText(/MAKE THEM\s*REMEMBER\./);
   await expect(page.locator('#film-room')).toContainText(/EVERY\s*SECOND\s*COUNTS/i);
   await expect(page.locator('#media')).toBeAttached();
   await revealFilmCopy(page);
