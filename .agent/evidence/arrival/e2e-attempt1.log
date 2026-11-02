@@ -1,0 +1,433 @@
+
+Running 104 tests using 4 workers
+
+(node:28268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:51632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:2784) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:30472) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   4 [desktop-chromium] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (762ms)
+  ok   1 [desktop-chromium] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet (843ms)
+  ok   5 [desktop-chromium] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport (554ms)
+  ok   6 [desktop-chromium] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (2.2s)
+  ok   8 [desktop-chromium] › tests\e2e\completion.spec.ts:35:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.4s)
+  ok   9 [desktop-chromium] › tests\e2e\completion.spec.ts:50:5 › snapshot offers a selectable address when clipboard access is unavailable (985ms)
+  ok  10 [desktop-chromium] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (2.7s)
+  ok   3 [desktop-chromium] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (9.9s)
+  ok  11 [desktop-chromium] › tests\e2e\playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (3.1s)
+  ok  12 [desktop-chromium] › tests\e2e\playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (5.4s)
+  ok   2 [desktop-chromium] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (16.9s)
+  ok  14 [desktop-chromium] › tests\e2e\playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (2.6s)
+  ok  15 [desktop-chromium] › tests\e2e\playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF (2.0s)
+  ok  16 [desktop-chromium] › tests\e2e\playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (1.1s)
+  ok  13 [desktop-chromium] › tests\e2e\playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (8.5s)
+  -   19 [desktop-chromium] › tests\e2e\site.spec.ts:32:5 › reduced motion removes pinning and keeps film unloaded
+  -   20 [desktop-chromium] › tests\e2e\site.spec.ts:43:5 › normal-motion iPhone does not request film before the cinema is near
+  ok  17 [desktop-chromium] › tests\e2e\site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (2.3s)
+  ok  21 [desktop-chromium] › tests\e2e\site.spec.ts:52:5 › current navigation keeps the media gallery and story destinations reachable (1.8s)
+  ok  22 [desktop-chromium] › tests\e2e\site.spec.ts:61:5 › two-worlds links still reach field and personal content (1.7s)
+  ok  23 [desktop-chromium] › tests\e2e\site.spec.ts:70:5 › NIL inquiry anchor remains reachable and contains no invented contact links (1.4s)
+  ok  25 [desktop-chromium] › tests\e2e\site.spec.ts:85:5 › recruiting and playoffs remain directly navigable (781ms)
+  ok  26 [desktop-chromium] › tests\e2e\site.spec.ts:92:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (1.5s)
+  ok  24 [desktop-chromium] › tests\e2e\site.spec.ts:78:5 › layout has no horizontal overflow and the arrival page passes axe (3.2s)
+(node:18188) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  27 [mobile-chromium] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (1.0s)
+  ok  28 [mobile-chromium] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (381ms)
+  -   29 [mobile-chromium] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  -   30 [mobile-chromium] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ok  31 [mobile-chromium] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (3.2s)
+(node:47496) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   18 [desktop-chromium] › tests\e2e\site.spec.ts:23:5 › navigation remains usable while the arrival experience is scrolled (10.8s)
+(node:41776) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  34 [mobile-chromium] › tests\e2e\completion.spec.ts:35:5 › scrolling releases the field pin and responsive motion leaves a readable document (907ms)
+  ok  33 [mobile-chromium] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (4.7s)
+  ok  35 [mobile-chromium] › tests\e2e\completion.spec.ts:50:5 › snapshot offers a selectable address when clipboard access is unavailable (412ms)
+  ok  37 [mobile-chromium] › tests\e2e\playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (2.6s)
+  ok  36 [mobile-chromium] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (3.5s)
+  ok  38 [mobile-chromium] › tests\e2e\playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (1.0s)
+  ok  40 [mobile-chromium] › tests\e2e\playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.3s)
+  x    7 [desktop-chromium] › tests\e2e\completion.spec.ts:20:5 › pending film deep link remains closable while approved film uses native controls (32.4s)
+  ok  41 [mobile-chromium] › tests\e2e\playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF (373ms)
+(node:57532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  43 [mobile-chromium] › tests\e2e\playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (781ms)
+  ok  42 [mobile-chromium] › tests\e2e\site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (2.3s)
+  -   45 [mobile-chromium] › tests\e2e\site.spec.ts:32:5 › reduced motion removes pinning and keeps film unloaded
+  ok  39 [mobile-chromium] › tests\e2e\playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (4.4s)
+  -   46 [mobile-chromium] › tests\e2e\site.spec.ts:43:5 › normal-motion iPhone does not request film before the cinema is near
+  ok  47 [mobile-chromium] › tests\e2e\site.spec.ts:52:5 › current navigation keeps the media gallery and story destinations reachable (974ms)
+  ok  44 [mobile-chromium] › tests\e2e\site.spec.ts:23:5 › navigation remains usable while the arrival experience is scrolled (2.7s)
+  ok  49 [mobile-chromium] › tests\e2e\site.spec.ts:70:5 › NIL inquiry anchor remains reachable and contains no invented contact links (1.1s)
+  ok  48 [mobile-chromium] › tests\e2e\site.spec.ts:61:5 › two-worlds links still reach field and personal content (2.6s)
+  ok  51 [mobile-chromium] › tests\e2e\site.spec.ts:85:5 › recruiting and playoffs remain directly navigable (1.4s)
+  ok  52 [mobile-chromium] › tests\e2e\site.spec.ts:92:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (1.1s)
+  ok  50 [mobile-chromium] › tests\e2e\site.spec.ts:78:5 › layout has no horizontal overflow and the arrival page passes axe (3.2s)
+(node:64080) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  53 [iphone-webkit] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.3s)
+  -   54 [iphone-webkit] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  -   55 [iphone-webkit] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+(node:37052) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x   56 [iphone-webkit] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (192ms)
+(node:32668) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:62820) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  57 [iphone-webkit] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (517ms)
+  ok  60 [iphone-webkit] › tests\e2e\completion.spec.ts:35:5 › scrolling releases the field pin and responsive motion leaves a readable document (10.8s)
+  x   32 [mobile-chromium] › tests\e2e\completion.spec.ts:20:5 › pending film deep link remains closable while approved film uses native controls (33.0s)
+(node:50092) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  58 [iphone-webkit] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (15.6s)
+  ok  62 [iphone-webkit] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (5.0s)
+  ok  64 [iphone-webkit] › tests\e2e\playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (2.0s)
+  x   63 [iphone-webkit] › tests\e2e\playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (7.8s)
+(node:12472) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  65 [iphone-webkit] › tests\e2e\playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (4.1s)
+  ok  66 [iphone-webkit] › tests\e2e\playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.2s)
+  ok  68 [iphone-webkit] › tests\e2e\playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (668ms)
+  x   67 [iphone-webkit] › tests\e2e\playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF (1.8s)
+(node:49556) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  70 [iphone-webkit] › tests\e2e\site.spec.ts:23:5 › navigation remains usable while the arrival experience is scrolled (2.5s)
+  -   71 [iphone-webkit] › tests\e2e\site.spec.ts:32:5 › reduced motion removes pinning and keeps film unloaded
+  ok  72 [iphone-webkit] › tests\e2e\site.spec.ts:43:5 › normal-motion iPhone does not request film before the cinema is near (2.3s)
+  x   59 [iphone-webkit] › tests\e2e\completion.spec.ts:20:5 › pending film deep link remains closable while approved film uses native controls (33.5s)
+(node:3972) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  73 [iphone-webkit] › tests\e2e\site.spec.ts:52:5 › current navigation keeps the media gallery and story destinations reachable (7.7s)
+  ok  74 [iphone-webkit] › tests\e2e\site.spec.ts:61:5 › two-worlds links still reach field and personal content (4.3s)
+  x   61 [iphone-webkit] › tests\e2e\completion.spec.ts:50:5 › snapshot offers a selectable address when clipboard access is unavailable (33.4s)
+(node:64548) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  77 [iphone-webkit] › tests\e2e\site.spec.ts:85:5 › recruiting and playoffs remain directly navigable (992ms)
+  x   69 [iphone-webkit] › tests\e2e\site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (17.3s)
+  ok  75 [iphone-webkit] › tests\e2e\site.spec.ts:70:5 › NIL inquiry anchor remains reachable and contains no invented contact links (6.8s)
+(node:7900) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28492) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  79 [reduced-motion] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.4s)
+  ok  76 [iphone-webkit] › tests\e2e\site.spec.ts:78:5 › layout has no horizontal overflow and the arrival page passes axe (8.1s)
+  ok  81 [reduced-motion] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (430ms)
+  ok  78 [iphone-webkit] › tests\e2e\site.spec.ts:92:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (3.8s)
+  -   82 [reduced-motion] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+(node:57620) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26496) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  -   84 [reduced-motion] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  ok  83 [reduced-motion] › tests\e2e\completion.spec.ts:20:5 › pending film deep link remains closable while approved film uses native controls (874ms)
+  ok  86 [reduced-motion] › tests\e2e\completion.spec.ts:35:5 › scrolling releases the field pin and responsive motion leaves a readable document (839ms)
+  ok  87 [reduced-motion] › tests\e2e\completion.spec.ts:50:5 › snapshot offers a selectable address when clipboard access is unavailable (881ms)
+  ok  85 [reduced-motion] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (1.7s)
+  ok  88 [reduced-motion] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (835ms)
+  ok  89 [reduced-motion] › tests\e2e\playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (1.1s)
+  ok  90 [reduced-motion] › tests\e2e\playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (682ms)
+  ok  80 [reduced-motion] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (4.6s)
+  ok  94 [reduced-motion] › tests\e2e\playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (669ms)
+  ok  92 [reduced-motion] › tests\e2e\playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.3s)
+  ok  91 [reduced-motion] › tests\e2e\playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (2.8s)
+  ok  96 [reduced-motion] › tests\e2e\site.spec.ts:23:5 › navigation remains usable while the arrival experience is scrolled (1.3s)
+  ok  95 [reduced-motion] › tests\e2e\site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (1.5s)
+  -   98 [reduced-motion] › tests\e2e\site.spec.ts:43:5 › normal-motion iPhone does not request film before the cinema is near
+  ok  93 [reduced-motion] › tests\e2e\playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF (2.9s)
+  ok  97 [reduced-motion] › tests\e2e\site.spec.ts:32:5 › reduced motion removes pinning and keeps film unloaded (855ms)
+  ok  99 [reduced-motion] › tests\e2e\site.spec.ts:52:5 › current navigation keeps the media gallery and story destinations reachable (1.0s)
+  ok 100 [reduced-motion] › tests\e2e\site.spec.ts:61:5 › two-worlds links still reach field and personal content (854ms)
+  ok 101 [reduced-motion] › tests\e2e\site.spec.ts:70:5 › NIL inquiry anchor remains reachable and contains no invented contact links (1.2s)
+  ok 104 [reduced-motion] › tests\e2e\site.spec.ts:92:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (1.0s)
+  ok 103 [reduced-motion] › tests\e2e\site.spec.ts:85:5 › recruiting and playoffs remain directly navigable (1.1s)
+  ok 102 [reduced-motion] › tests\e2e\site.spec.ts:78:5 › layout has no horizontal overflow and the arrival page passes axe (2.5s)
+
+
+  1) [desktop-chromium] › tests\e2e\completion.spec.ts:20:5 › pending film deep link remains closable while approved film uses native controls 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: /WATCH WITH SOUND/i })
+
+
+      25 |  await expect(page.getByRole('dialog')).toHaveCount(0);
+      26 |  await expect(page).toHaveURL(/#film-room$/);
+    > 27 |  await page.getByRole('button',{name:/WATCH WITH SOUND/i}).click();
+         |                                                            ^
+      28 |  const dialog=page.getByRole('dialog',{name:'Film room'});
+      29 |  await expect(dialog.locator('video')).toHaveAttribute('controls','');
+      30 |  await expect(dialog.locator('video source')).toHaveAttribute('src','/media/zephyr-cinematic.mp4');
+        at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\tests\e2e\completion.spec.ts:27:60
+
+    Error Context: test-results\completion-pending-film-de-7b22c-d-film-uses-native-controls-desktop-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\completion-pending-film-de-7b22c-d-film-uses-native-controls-desktop-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\completion-pending-film-de-7b22c-d-film-uses-native-controls-desktop-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [desktop-chromium] › tests\e2e\site.spec.ts:23:5 › navigation remains usable while the arrival experience is scrolled 
+
+    Error: expect(locator).toBeInViewport() failed
+
+    Locator:  locator('#off-field')
+    Expected: in viewport
+    Received: viewport ratio 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeInViewport" locator('#off-field') with timeout 5000ms
+      - waiting for locator('#off-field')
+        13 × locator resolved to <section id="off-field" class="scene off-field" aria-labelledby="off-title">…</section>
+           - unexpected value "viewport ratio 0"
+
+
+      27 |   await page.locator('#site-nav').getByRole('link', { name: 'Off Field', exact: true }).click();
+      28 |   await expect(page).toHaveURL(/#off-field$/);
+    > 29 |   await expect(page.locator('#off-field')).toBeInViewport();
+         |                                            ^
+      30 | });
+      31 |
+      32 | test('reduced motion removes pinning and keeps film unloaded', async ({ page }, testInfo) => {
+        at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\tests\e2e\site.spec.ts:29:44
+
+    Error Context: test-results\site-navigation-remains-us-e217e-ival-experience-is-scrolled-desktop-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-navigation-remains-us-e217e-ival-experience-is-scrolled-desktop-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-navigation-remains-us-e217e-ival-experience-is-scrolled-desktop-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [mobile-chromium] › tests\e2e\completion.spec.ts:20:5 › pending film deep link remains closable while approved film uses native controls 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: /WATCH WITH SOUND/i })
+
+
+      25 |  await expect(page.getByRole('dialog')).toHaveCount(0);
+      26 |  await expect(page).toHaveURL(/#film-room$/);
+    > 27 |  await page.getByRole('button',{name:/WATCH WITH SOUND/i}).click();
+         |                                                            ^
+      28 |  const dialog=page.getByRole('dialog',{name:'Film room'});
+      29 |  await expect(dialog.locator('video')).toHaveAttribute('controls','');
+      30 |  await expect(dialog.locator('video source')).toHaveAttribute('src','/media/zephyr-cinematic.mp4');
+        at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\tests\e2e\completion.spec.ts:27:60
+
+    Error Context: test-results\completion-pending-film-de-7b22c-d-film-uses-native-controls-mobile-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\completion-pending-film-de-7b22c-d-film-uses-native-controls-mobile-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\completion-pending-film-de-7b22c-d-film-uses-native-controls-mobile-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [iphone-webkit] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route 
+
+    Error: browserContext.grantPermissions: Unknown permission: clipboard-write
+
+      3 |
+      4 | test('snapshot is reachable from recruiting navigation and shares the current route', async ({page, context}) => {
+    > 5 |  await context.grantPermissions(['clipboard-read','clipboard-write']);
+        |                ^
+      6 |  await page.goto('/');
+      7 |  if (page.viewportSize()!.width < 900) await page.getByRole('button',{name:'Menu'}).click();
+      8 |  await page.locator('#site-nav').getByRole('link',{name:'Recruiting',exact:true}).click();
+        at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\tests\e2e\completion.spec.ts:5:16
+
+    Error Context: test-results\completion-snapshot-is-rea-2dda2-nd-shares-the-current-route-iphone-webkit\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\completion-snapshot-is-rea-2dda2-nd-shares-the-current-route-iphone-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\completion-snapshot-is-rea-2dda2-nd-shares-the-current-route-iphone-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [iphone-webkit] › tests\e2e\completion.spec.ts:20:5 › pending film deep link remains closable while approved film uses native controls 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: /WATCH WITH SOUND/i })
+
+
+      25 |  await expect(page.getByRole('dialog')).toHaveCount(0);
+      26 |  await expect(page).toHaveURL(/#film-room$/);
+    > 27 |  await page.getByRole('button',{name:/WATCH WITH SOUND/i}).click();
+         |                                                            ^
+      28 |  const dialog=page.getByRole('dialog',{name:'Film room'});
+      29 |  await expect(dialog.locator('video')).toHaveAttribute('controls','');
+      30 |  await expect(dialog.locator('video source')).toHaveAttribute('src','/media/zephyr-cinematic.mp4');
+        at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\tests\e2e\completion.spec.ts:27:60
+
+    Error Context: test-results\completion-pending-film-de-7b22c-d-film-uses-native-controls-iphone-webkit\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\completion-pending-film-de-7b22c-d-film-uses-native-controls-iphone-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\completion-pending-film-de-7b22c-d-film-uses-native-controls-iphone-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [iphone-webkit] › tests\e2e\completion.spec.ts:50:5 › snapshot offers a selectable address when clipboard access is unavailable 
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('button', { name: 'Copy snapshot link' })
+        - locator resolved to <button class="text-action">…</button>
+      - attempting click action
+        - waiting for element to be visible, enabled and stable
+
+
+      51 |  await page.addInitScript(() => Object.defineProperty(navigator, 'clipboard', {value:{writeText:async()=>{throw new Error('denied');}}}));
+      52 |  await page.goto('/recruiting/');
+    > 53 |  await page.getByRole('button',{name:'Copy snapshot link'}).click();
+         |                                                             ^
+      54 |  await expect(page.getByRole('status')).toContainText('Copy the snapshot address below.');
+      55 |  const address = page.getByRole('textbox',{name:'Snapshot address'});
+      56 |  await expect(address).toHaveValue(/\/recruiting\/$/);
+        at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\tests\e2e\completion.spec.ts:53:61
+
+    Error Context: test-results\completion-snapshot-offers-e3691-board-access-is-unavailable-iphone-webkit\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\completion-snapshot-offers-e3691-board-access-is-unavailable-iphone-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\completion-snapshot-offers-e3691-board-access-is-unavailable-iphone-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [iphone-webkit] › tests\e2e\playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('[data-game-card]').first()
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('[data-game-card]').first() with timeout 5000ms
+      - waiting for locator('[data-game-card]').first()
+        13 × locator resolved to <button data-game-card="true" class="playoffs_matchupCard__Xw0zQ ">…</button>
+           - unexpected value "inactive"
+
+
+      28 |  await expect(dialog).toHaveCount(0);
+      29 |  const card=page.locator('[data-game-card]').first();await card.click();
+    > 30 |  await expect(dialog).toBeVisible();await page.keyboard.press('Escape');await expect(card).toBeFocused();
+         |                                                                                            ^
+      31 |  await card.click();await page.goBack();await expect(dialog).toHaveCount(0);
+      32 | });
+      33 |
+        at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\tests\e2e\playoffs.spec.ts:30:92
+
+    Error Context: test-results\playoffs-game-center-suppo-9b177-e-focus-and-back-navigation-iphone-webkit\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\playoffs-game-center-suppo-9b177-e-focus-and-back-navigation-iphone-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\playoffs-game-center-suppo-9b177-e-focus-and-back-navigation-iphone-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [iphone-webkit] › tests\e2e\playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF 
+
+    Error: expect(received).toHaveLength(expected)
+
+    Expected length: 0
+    Received length: 1
+    Received array:  ["http://127.0.0.1:3100/media/on-field-706.webp"]
+
+      72 |  const images:string[]=[];page.on('request',request=>{if(/\/media\/on-field-.*\.(avif|webp)$/.test(request.url()))images.push(request.url());});
+      73 |  await page.goto('/playoffs/');await page.evaluate(()=>document.fonts.ready);
+    > 74 |  expect(images.filter(url=>url.endsWith('.webp'))).toHaveLength(0);
+         |                                                    ^
+      75 |  expect(images.filter(url=>url.endsWith('.avif'))).toHaveLength(1);
+      76 | });
+      77 |
+        at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\tests\e2e\playoffs.spec.ts:74:52
+
+    Error Context: test-results\playoffs-hero-avoids-downl-6e310-bP-beside-the-selected-AVIF-iphone-webkit\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\playoffs-hero-avoids-downl-6e310-bP-beside-the-selected-AVIF-iphone-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\playoffs-hero-avoids-downl-6e310-bP-beside-the-selected-AVIF-iphone-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [iphone-webkit] › tests\e2e\site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  getByRole('button', { name: /WATCH WITH SOUND/i })
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" getByRole('button', { name: /WATCH WITH SOUND/i }) with timeout 5000ms
+      - waiting for getByRole('button', { name: /WATCH WITH SOUND/i })
+        10 × locator resolved to <button type="button">…</button>
+           - unexpected value "inactive"
+
+
+      18 |   await page.keyboard.press('Escape');
+      19 |   await expect(dialog).toHaveCount(0);
+    > 20 |   await expect(page.getByRole('button', { name: /WATCH WITH SOUND/i })).toBeFocused();
+         |                                                                         ^
+      21 | });
+      22 |
+      23 | test('navigation remains usable while the arrival experience is scrolled', async ({ page }) => {
+        at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\tests\e2e\site.spec.ts:20:73
+
+    Error Context: test-results\site-arrival-resolves-from-f7b10-ugh-portal-to-the-film-room-iphone-webkit\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-arrival-resolves-from-f7b10-ugh-portal-to-the-film-room-iphone-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-arrival-resolves-from-f7b10-ugh-portal-to-the-film-room-iphone-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9 failed
+    [desktop-chromium] › tests\e2e\completion.spec.ts:20:5 › pending film deep link remains closable while approved film uses native controls 
+    [desktop-chromium] › tests\e2e\site.spec.ts:23:5 › navigation remains usable while the arrival experience is scrolled 
+    [mobile-chromium] › tests\e2e\completion.spec.ts:20:5 › pending film deep link remains closable while approved film uses native controls 
+    [iphone-webkit] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route 
+    [iphone-webkit] › tests\e2e\completion.spec.ts:20:5 › pending film deep link remains closable while approved film uses native controls 
+    [iphone-webkit] › tests\e2e\completion.spec.ts:50:5 › snapshot offers a selectable address when clipboard access is unavailable 
+    [iphone-webkit] › tests\e2e\playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation 
+    [iphone-webkit] › tests\e2e\playoffs.spec.ts:71:5 › hero avoids downloading a redundant WebP beside the selected AVIF 
+    [iphone-webkit] › tests\e2e\site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room 
+  12 skipped
+  83 passed (2.9m)

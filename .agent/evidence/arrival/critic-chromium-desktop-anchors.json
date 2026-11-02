@@ -1,0 +1,26 @@
+[
+  {
+    "id": "film-room",
+    "top": 0,
+    "bottom": 900,
+    "scroll": 1800,
+    "height": 900,
+    "filmCopyVisible": true
+  },
+  {
+    "id": "journey",
+    "top": 72,
+    "bottom": 1015.453125,
+    "scroll": 4113,
+    "height": 900,
+    "filmCopyVisible": true
+  },
+  {
+    "id": "off-field",
+    "top": 72.453125,
+    "bottom": 2546.671875,
+    "scroll": 5056,
+    "height": 900,
+    "filmCopyVisible": true
+  }
+]

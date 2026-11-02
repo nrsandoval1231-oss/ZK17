@@ -1,0 +1,109 @@
+{
+  "baseURL": "http://127.0.0.1:3100/",
+  "results": [
+    {
+      "engine": "chromium",
+      "device": "desktop",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "video": [
+          {
+            "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false
+          }
+        ]
+      },
+      "videoRequests": [
+        "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "device": "mobile",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "video": [
+          {
+            "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false
+          }
+        ]
+      },
+      "videoRequests": [
+        "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "device": "desktop",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 1440,
+        "document": 1440,
+        "video": [
+          {
+            "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false
+          }
+        ]
+      },
+      "videoRequests": []
+    },
+    {
+      "engine": "webkit",
+      "device": "mobile",
+      "screenshots": [
+        "hero",
+        "cinema-midpoint",
+        "cinema-end"
+      ],
+      "errors": [],
+      "axeViolations": [],
+      "horizontalOverflow": false,
+      "layout": {
+        "viewport": 390,
+        "document": 390,
+        "video": [
+          {
+            "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4",
+            "preload": "none",
+            "muted": true,
+            "controls": false
+          }
+        ]
+      },
+      "videoRequests": []
+    }
+  ]
+}

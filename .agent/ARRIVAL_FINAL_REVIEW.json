@@ -1,0 +1,42 @@
+{
+  "verdict": "PASS",
+  "scope": "local preview candidate only",
+  "reviewer": "independent Astra critic",
+  "productAuthored": false,
+  "base": "4ca5d0d3c26ee01f16d8eb0c0f67189412133f2f",
+  "branch": "feature/athlete-showcase-every-second-20261101",
+  "candidateState": "integrated uncommitted worktree",
+  "sourceManifest": ".agent/evidence/arrival/critic-source-manifest.json",
+  "openMaterialFindings": [],
+  "resolvedFindings": [
+    {
+      "severity": "P1",
+      "finding": "Desktop film sound action clipped below viewport due to CSS/GSAP centering conflict",
+      "repair": "Controller replaced translate centering with inset flex centering",
+      "verified": "Fresh Chromium and WebKit desktop sound action y650.4375 through698.4375, clickable, focus restored"
+    }
+  ],
+  "verification": {
+    "typecheck": "PASS independently run exit0",
+    "lint": "PASS independently run exit0",
+    "unitTests": 29,
+    "buildLog": ".agent/evidence/arrival/build-final2.log",
+    "browserLog": ".agent/evidence/arrival/e2e-final2.log",
+    "browserPassed": 96,
+    "browserSkipped": 16,
+    "browserFailed": 0,
+    "independentRuntime": ".agent/evidence/arrival/critic-runtime.json",
+    "fallback": ".agent/evidence/arrival/critic-fallback.json",
+    "routes": ".agent/evidence/arrival/critic-routes.json",
+    "screenshots": "artifacts/arrival-approved",
+    "axeViolations": 0,
+    "originalMp4Sha256": "A783DCB56F3A11684A3253DDC8C0768035BB8C9D390E0061A29935C20AF8965F"
+  },
+  "limitations": [
+    "Physical iPhone Safari and owner visual acceptance UNKNOWN",
+    "No frame-rate performance or thermal/battery claims",
+    "Route DOM cleanup verified, not heap leak profiling",
+    "Remote preview parity not reviewed",
+    "No merge or production deployment certification"
+  ]
+}

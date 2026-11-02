@@ -1,0 +1,220 @@
+
+Running 108 tests using 4 workers
+
+(node:24912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:39560) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:60100) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:59252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   2 [desktop-chromium] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (633ms)
+  ok   3 [desktop-chromium] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet (602ms)
+  ok   1 [desktop-chromium] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (828ms)
+  ok   4 [desktop-chromium] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (1.2s)
+  ok   5 [desktop-chromium] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport (773ms)
+  ok   9 [desktop-chromium] › tests\e2e\completion.spec.ts:52:5 › snapshot offers a selectable address when clipboard access is unavailable (352ms)
+  ok   7 [desktop-chromium] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (969ms)
+  ok   8 [desktop-chromium] › tests\e2e\completion.spec.ts:37:5 › scrolling releases the field pin and responsive motion leaves a readable document (790ms)
+  ok   6 [desktop-chromium] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (1.6s)
+  ok  12 [desktop-chromium] › tests\e2e\playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (566ms)
+  ok  10 [desktop-chromium] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (1.7s)
+  ok  11 [desktop-chromium] › tests\e2e\playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (1.9s)
+  ok  14 [desktop-chromium] › tests\e2e\playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (988ms)
+  ok  15 [desktop-chromium] › tests\e2e\playoffs.spec.ts:71:5 › hero downloads exactly one browser-supported responsive image source (279ms)
+  ok  13 [desktop-chromium] › tests\e2e\playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (1.9s)
+  ok  16 [desktop-chromium] › tests\e2e\playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (491ms)
+  -   19 [desktop-chromium] › tests\e2e\site.spec.ts:31:5 › reduced motion removes pinning and keeps film unloaded
+  -   21 [desktop-chromium] › tests\e2e\site.spec.ts:51:5 › normal-motion iPhone does not request film before the cinema is near
+  ok  20 [desktop-chromium] › tests\e2e\site.spec.ts:42:5 › switching to reduced motion removes an active desktop pin (523ms)
+  ok  17 [desktop-chromium] › tests\e2e\site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (1.3s)
+  ok  18 [desktop-chromium] › tests\e2e\site.spec.ts:22:5 › navigation remains usable while the arrival experience is scrolled (1.2s)
+  ok  22 [desktop-chromium] › tests\e2e\site.spec.ts:60:5 › current navigation keeps the media gallery and story destinations reachable (603ms)
+  ok  23 [desktop-chromium] › tests\e2e\site.spec.ts:75:5 › two-worlds links still reach field and personal content (561ms)
+  ok  26 [desktop-chromium] › tests\e2e\site.spec.ts:100:5 › recruiting and playoffs remain directly navigable (461ms)
+  ok  24 [desktop-chromium] › tests\e2e\site.spec.ts:84:5 › NIL inquiry anchor remains reachable and contains no invented contact links (741ms)
+  ok  27 [desktop-chromium] › tests\e2e\site.spec.ts:107:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (535ms)
+  ok  25 [desktop-chromium] › tests\e2e\site.spec.ts:93:5 › layout has no horizontal overflow and the arrival page passes axe (1.2s)
+(node:21596) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:16884) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:15688) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:47992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  28 [mobile-chromium] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (463ms)
+  -   31 [mobile-chromium] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ok  30 [mobile-chromium] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (727ms)
+  -   32 [mobile-chromium] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  ok  29 [mobile-chromium] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (1.0s)
+  ok  34 [mobile-chromium] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (596ms)
+  ok  36 [mobile-chromium] › tests\e2e\completion.spec.ts:52:5 › snapshot offers a selectable address when clipboard access is unavailable (402ms)
+  ok  35 [mobile-chromium] › tests\e2e\completion.spec.ts:37:5 › scrolling releases the field pin and responsive motion leaves a readable document (631ms)
+  ok  39 [mobile-chromium] › tests\e2e\playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (596ms)
+  ok  33 [mobile-chromium] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (2.2s)
+  ok  41 [mobile-chromium] › tests\e2e\playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.0s)
+  ok  38 [mobile-chromium] › tests\e2e\playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (2.4s)
+  ok  40 [mobile-chromium] › tests\e2e\playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (1.8s)
+  ok  42 [mobile-chromium] › tests\e2e\playoffs.spec.ts:71:5 › hero downloads exactly one browser-supported responsive image source (334ms)
+  ok  43 [mobile-chromium] › tests\e2e\playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (533ms)
+  ok  37 [mobile-chromium] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (3.0s)
+  -   46 [mobile-chromium] › tests\e2e\site.spec.ts:31:5 › reduced motion removes pinning and keeps film unloaded
+  -   47 [mobile-chromium] › tests\e2e\site.spec.ts:42:5 › switching to reduced motion removes an active desktop pin
+  -   48 [mobile-chromium] › tests\e2e\site.spec.ts:51:5 › normal-motion iPhone does not request film before the cinema is near
+  ok  50 [mobile-chromium] › tests\e2e\site.spec.ts:75:5 › two-worlds links still reach field and personal content (458ms)
+  ok  44 [mobile-chromium] › tests\e2e\site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (1.1s)
+  ok  51 [mobile-chromium] › tests\e2e\site.spec.ts:84:5 › NIL inquiry anchor remains reachable and contains no invented contact links (382ms)
+  ok  53 [mobile-chromium] › tests\e2e\site.spec.ts:100:5 › recruiting and playoffs remain directly navigable (344ms)
+  ok  45 [mobile-chromium] › tests\e2e\site.spec.ts:22:5 › navigation remains usable while the arrival experience is scrolled (2.0s)
+  ok  52 [mobile-chromium] › tests\e2e\site.spec.ts:93:5 › layout has no horizontal overflow and the arrival page passes axe (1.1s)
+  ok  54 [mobile-chromium] › tests\e2e\site.spec.ts:107:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (450ms)
+(node:17492) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34768) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37376) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  55 [iphone-webkit] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (685ms)
+  -   58 [iphone-webkit] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  -   59 [iphone-webkit] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ok  56 [iphone-webkit] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.3s)
+  -   60 [iphone-webkit] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route
+  ok  62 [iphone-webkit] › tests\e2e\completion.spec.ts:37:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.3s)
+  x   49 [mobile-chromium] › tests\e2e\site.spec.ts:60:5 › current navigation keeps the media gallery and story destinations reachable (5.4s)
+  ok  63 [iphone-webkit] › tests\e2e\completion.spec.ts:52:5 › snapshot offers a selectable address when clipboard access is unavailable (659ms)
+(node:51676) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  61 [iphone-webkit] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (2.8s)
+  ok  57 [iphone-webkit] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (4.2s)
+  ok  66 [iphone-webkit] › tests\e2e\playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (1.4s)
+  ok  64 [iphone-webkit] › tests\e2e\playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (2.5s)
+  ok  69 [iphone-webkit] › tests\e2e\playoffs.spec.ts:71:5 › hero downloads exactly one browser-supported responsive image source (546ms)
+  ok  68 [iphone-webkit] › tests\e2e\playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (1.5s)
+  ok  67 [iphone-webkit] › tests\e2e\playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (3.3s)
+  ok  70 [iphone-webkit] › tests\e2e\playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (1.3s)
+  -   73 [iphone-webkit] › tests\e2e\site.spec.ts:31:5 › reduced motion removes pinning and keeps film unloaded
+  -   74 [iphone-webkit] › tests\e2e\site.spec.ts:42:5 › switching to reduced motion removes an active desktop pin
+  ok  75 [iphone-webkit] › tests\e2e\site.spec.ts:51:5 › normal-motion iPhone does not request film before the cinema is near (420ms)
+  ok  65 [iphone-webkit] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (4.8s)
+  ok  71 [iphone-webkit] › tests\e2e\site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (2.9s)
+  ok  77 [iphone-webkit] › tests\e2e\site.spec.ts:75:5 › two-worlds links still reach field and personal content (2.7s)
+  ok  78 [iphone-webkit] › tests\e2e\site.spec.ts:84:5 › NIL inquiry anchor remains reachable and contains no invented contact links (1.6s)
+  ok  72 [iphone-webkit] › tests\e2e\site.spec.ts:22:5 › navigation remains usable while the arrival experience is scrolled (4.0s)
+  ok  80 [iphone-webkit] › tests\e2e\site.spec.ts:100:5 › recruiting and playoffs remain directly navigable (576ms)
+(node:29796) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  81 [iphone-webkit] › tests\e2e\site.spec.ts:107:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (1.4s)
+  ok  82 [reduced-motion] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (441ms)
+  ok  79 [iphone-webkit] › tests\e2e\site.spec.ts:93:5 › layout has no horizontal overflow and the arrival page passes axe (1.7s)
+  ok  83 [reduced-motion] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (285ms)
+(node:41836) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  -   84 [reduced-motion] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+(node:14080) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  -   87 [reduced-motion] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  ok  85 [reduced-motion] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (923ms)
+  ok  88 [reduced-motion] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (505ms)
+  x   76 [iphone-webkit] › tests\e2e\site.spec.ts:60:5 › current navigation keeps the media gallery and story destinations reachable (5.7s)
+  ok  86 [reduced-motion] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (1.2s)
+  ok  89 [reduced-motion] › tests\e2e\completion.spec.ts:52:5 › snapshot offers a selectable address when clipboard access is unavailable (374ms)
+  ok  90 [reduced-motion] › tests\e2e\completion.spec.ts:37:5 › scrolling releases the field pin and responsive motion leaves a readable document (561ms)
+  ok  91 [reduced-motion] › tests\e2e\playoffs.spec.ts:22:5 › game center supports direct links, Escape, focus and back navigation (538ms)
+(node:41660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  92 [reduced-motion] › tests\e2e\playoffs.spec.ts:34:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (541ms)
+  ok  95 [reduced-motion] › tests\e2e\playoffs.spec.ts:71:5 › hero downloads exactly one browser-supported responsive image source (248ms)
+  ok  97 [reduced-motion] › tests\e2e\playoffs.spec.ts:78:5 › uses the exact owner coyote logo without inventing Anna bracket placement (381ms)
+  ok  94 [reduced-motion] › tests\e2e\playoffs.spec.ts:56:5 › late fonts keep the mobile hero layout stable (996ms)
+  ok  96 [reduced-motion] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (834ms)
+  ok 100 [reduced-motion] › tests\e2e\site.spec.ts:31:5 › reduced motion removes pinning and keeps film unloaded (383ms)
+  -  101 [reduced-motion] › tests\e2e\site.spec.ts:42:5 › switching to reduced motion removes an active desktop pin
+  -  102 [reduced-motion] › tests\e2e\site.spec.ts:51:5 › normal-motion iPhone does not request film before the cinema is near
+  ok  93 [reduced-motion] › tests\e2e\playoffs.spec.ts:47:5 › playoffs has no runtime errors or accessibility violations (1.9s)
+  ok  98 [reduced-motion] › tests\e2e\site.spec.ts:4:5 › arrival resolves from athlete hero through portal to the film room (987ms)
+  ok  99 [reduced-motion] › tests\e2e\site.spec.ts:22:5 › navigation remains usable while the arrival experience is scrolled (1.1s)
+  ok 103 [reduced-motion] › tests\e2e\site.spec.ts:60:5 › current navigation keeps the media gallery and story destinations reachable (400ms)
+  ok 104 [reduced-motion] › tests\e2e\site.spec.ts:75:5 › two-worlds links still reach field and personal content (452ms)
+  ok 105 [reduced-motion] › tests\e2e\site.spec.ts:84:5 › NIL inquiry anchor remains reachable and contains no invented contact links (372ms)
+  ok 107 [reduced-motion] › tests\e2e\site.spec.ts:100:5 › recruiting and playoffs remain directly navigable (428ms)
+  ok 108 [reduced-motion] › tests\e2e\site.spec.ts:107:5 › mobile navigation opens accessibly, traps focus, and closes on Escape (565ms)
+  ok 106 [reduced-motion] › tests\e2e\site.spec.ts:93:5 › layout has no horizontal overflow and the arrival page passes axe (1.1s)
+
+
+  1) [mobile-chromium] › tests\e2e\site.spec.ts:60:5 › current navigation keeps the media gallery and story destinations reachable 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('#site-nav').getByRole('link', { name: 'Home', exact: true })
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('#site-nav').getByRole('link', { name: 'Home', exact: true }) with timeout 5000ms
+      - waiting for locator('#site-nav').getByRole('link', { name: 'Home', exact: true })
+        14 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      61 |   await page.goto('/');
+      62 |   for (const label of ['Home', 'On Field', 'Off Field', 'The Journey', 'Numbers', 'Film Room', 'Media']) {
+    > 63 |     await expect(page.locator('#site-nav').getByRole('link', { name: label, exact: true })).toHaveCount(1);
+         |                                                                                             ^
+      64 |   }
+      65 |   await expect(page.locator('#media')).toContainText('THE STORY, IN FRAMES.');
+      66 |   await expect(page.locator('main')).toHaveAttribute('data-preview-media', 'enabled');
+        at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\tests\e2e\site.spec.ts:63:93
+
+    Error Context: test-results\site-current-navigation-ke-79b7a-tory-destinations-reachable-mobile-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-current-navigation-ke-79b7a-tory-destinations-reachable-mobile-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-current-navigation-ke-79b7a-tory-destinations-reachable-mobile-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [iphone-webkit] › tests\e2e\site.spec.ts:60:5 › current navigation keeps the media gallery and story destinations reachable 
+
+    Error: expect(locator).toHaveCount(expected) failed
+
+    Locator:  locator('#site-nav').getByRole('link', { name: 'Home', exact: true })
+    Expected: 1
+    Received: 0
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCount" locator('#site-nav').getByRole('link', { name: 'Home', exact: true }) with timeout 5000ms
+      - waiting for locator('#site-nav').getByRole('link', { name: 'Home', exact: true })
+        13 × locator resolved to 0 elements
+           - unexpected value "0"
+
+
+      61 |   await page.goto('/');
+      62 |   for (const label of ['Home', 'On Field', 'Off Field', 'The Journey', 'Numbers', 'Film Room', 'Media']) {
+    > 63 |     await expect(page.locator('#site-nav').getByRole('link', { name: label, exact: true })).toHaveCount(1);
+         |                                                                                             ^
+      64 |   }
+      65 |   await expect(page.locator('#media')).toContainText('THE STORY, IN FRAMES.');
+      66 |   await expect(page.locator('main')).toHaveAttribute('data-preview-media', 'enabled');
+        at C:\Users\nrsan\Documents\Codex\2026-10-25\zk17-master-build-directive-the-official\tests\e2e\site.spec.ts:63:93
+
+    Error Context: test-results\site-current-navigation-ke-79b7a-tory-destinations-reachable-iphone-webkit\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\site-current-navigation-ke-79b7a-tory-destinations-reachable-iphone-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\site-current-navigation-ke-79b7a-tory-destinations-reachable-iphone-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    [mobile-chromium] › tests\e2e\site.spec.ts:60:5 › current navigation keeps the media gallery and story destinations reachable 
+    [iphone-webkit] › tests\e2e\site.spec.ts:60:5 › current navigation keeps the media gallery and story destinations reachable 
+  16 skipped
+  90 passed (33.0s)

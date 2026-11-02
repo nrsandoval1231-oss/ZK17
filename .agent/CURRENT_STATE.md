@@ -1,17 +1,9 @@
-# Production search indexing — 2026-11-01
+# THE ARRIVAL — local candidate accepted, preview next
 
-Owner explicitly authorized removing noindex/nofollow and deploying to zephyrkreye.com. Scope: production metadata/headers, canonical discovery, robots.txt and sitemap; preserve content/media gates and hosting preview exclusions. Base main 5c10172fab09829a8ba3e24b6d17963da0a5aea3; starting worktree clean. No cinematic preview branch promotion.
+Branch `feature/athlete-showcase-every-second-20261101`; base PR #5 `4ca5d0d`. Scope/acceptance: [packet](PACKET-ARRIVAL.md), [QA](../docs/ARRIVAL_QA.md), [graph](WORK_GRAPH.md). Prior state retained unchanged in evidence/arrival/prior-state.md.
 
-Implemented three page robots directives and production canonical URLs, sitemap for homepage/recruiting/playoffs, crawlable robots.txt, and host-specific Pages alias/preview noindex headers. Added scripts/verify-indexing.mjs against exported output. Next build, TypeScript, lint, 29 unit tests and export indexing assertions passed; independent Astra review found no material issues. Next: commit/push main to trigger existing Cloudflare production build, then verify live headers/HTML/robots/sitemap and preview exclusions. This authorization supersedes historical preview-only instructions for indexing configuration only.
+Implemented authentic portrait opening, GSAP sweep/depth, responsive SVG17 portal, original muted film, native sound dialog, athlete-first sequence, retained secondary routes and evidence gates. Original MP4 SHA256 a783dcb56f3a11684a3253ddc8c0768035bb8c9d390e0061a29935c20af8965f unchanged. Three Luna low builders, one Astra root-cause escalation, separate independent Astra final review.
 
----
-# Current task
+Exact final local checks: build-final2, typecheck-final2, lint-reviewed,29 unit tests pass; e2e-final2:96pass16intentional skips0fail. Four final capture audits:0axe/overflow/runtime errors, advancing muted footage and0preapproach video requests. Screenshots artifacts/arrival-approved. Independent review [PASS](ARRIVAL_FINAL_REVIEW.md) tied to evidence/arrival/critic-source-manifest.json. Initial failures/repairs retained in earlier logs and screenshot sets.
 
-Owner-supplied top-three update [DONE]. Branch main; deployed application source f24c1a98e3d51d53b797a1ed646834d515a194ed. TV Shows replaces Music; Games, Movies and TV Shows open their ranked lists directly. Owner order retained; Berserk, A Bronx Tale and The Last of Us use normalized title spellings. Native button activation and Back/Escape focus restoration verified.
-
-Production build, TypeScript, lint and 14 unit tests pass. Chromium 34 and WebKit 10 browser tests pass, with 12 intentional project skips. Local and deployed six-viewport checks pass for all 18 category views, with no Axe violations, overflow or runtime errors. All 91 deployed assets match local hashes. Small reversible update handled directly with self-review; no independent critic claim.
-
-Review preview: https://02aac211.zk17-review.pages.dev/#offfield-personal
-Evidence: .agent/evidence/interests/receipt.json
-
-Remaining owner gates: original photography and usage rights, approved social and representative destinations, film, verified statistics, domain and final public approval. No final public promotion. Application deployment stays frozen; subsequent receipt-only commits do not require redeployment.
+Next: commit/push feature branch, verify Cloudflare immutable preview content/assets/playback and update PR #5. No merge or production promotion. Physical iPhone smoothness, Low Power Mode, thermal behavior and owner visual approval remain UNKNOWN. Existing preview-photo/rights/social/contact content gates persist. Detailed timing/token counts UNKNOWN where not measured; metrics in evidence/arrival/metrics.json.

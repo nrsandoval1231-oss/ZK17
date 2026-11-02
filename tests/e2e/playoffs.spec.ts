@@ -68,11 +68,11 @@ test('late fonts keep the mobile hero layout stable',async({page})=>{
  expect(await page.evaluate(()=>(window as Window & {__playoffCLS?:number}).__playoffCLS)).toBeLessThanOrEqual(.1);
 });
 
-test('hero avoids downloading a redundant WebP beside the selected AVIF',async({page})=>{
+test('hero downloads exactly one browser-supported responsive image source',async({page})=>{
  const images:string[]=[];page.on('request',request=>{if(/\/media\/on-field-.*\.(avif|webp)$/.test(request.url()))images.push(request.url());});
  await page.goto('/playoffs/');await page.evaluate(()=>document.fonts.ready);
- expect(images.filter(url=>url.endsWith('.webp'))).toHaveLength(0);
- expect(images.filter(url=>url.endsWith('.avif'))).toHaveLength(1);
+ expect(images).toHaveLength(1);
+ expect(images[0]).toMatch(/\.(avif|webp)$/);
 });
 
 test('uses the exact owner coyote logo without inventing Anna bracket placement',async({page})=>{

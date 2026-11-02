@@ -1,0 +1,24 @@
+[
+  {
+    "engine": "chromium",
+    "initial": 3,
+    "away": {
+      "url": "http://127.0.0.1:3100/recruiting/",
+      "pins": 0,
+      "arrivalVideos": 0
+    },
+    "returned": 3,
+    "errors": []
+  },
+  {
+    "engine": "webkit",
+    "initial": 3,
+    "away": {
+      "url": "http://127.0.0.1:3100/recruiting/",
+      "pins": 0,
+      "arrivalVideos": 0
+    },
+    "returned": 3,
+    "errors": []
+  }
+]

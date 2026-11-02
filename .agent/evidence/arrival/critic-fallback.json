@@ -1,0 +1,66 @@
+[
+  {
+    "engine": "chromium",
+    "width": 390,
+    "noJavaScript": true,
+    "hero": true,
+    "film": true,
+    "sound": true,
+    "videoSrc": null,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "width": 1280,
+    "noJavaScript": true,
+    "hero": true,
+    "film": true,
+    "sound": true,
+    "videoSrc": null,
+    "overflow": false
+  },
+  {
+    "engine": "chromium",
+    "initialVideoSrc": null,
+    "playing": {
+      "time": 1.6819,
+      "paused": false
+    },
+    "offscreen": {
+      "src": null,
+      "paused": true
+    }
+  },
+  {
+    "engine": "webkit",
+    "width": 390,
+    "noJavaScript": true,
+    "hero": true,
+    "film": true,
+    "sound": true,
+    "videoSrc": null,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "width": 1280,
+    "noJavaScript": true,
+    "hero": true,
+    "film": true,
+    "sound": true,
+    "videoSrc": null,
+    "overflow": false
+  },
+  {
+    "engine": "webkit",
+    "initialVideoSrc": null,
+    "playing": {
+      "time": 0.8374167,
+      "paused": false
+    },
+    "offscreen": {
+      "src": null,
+      "paused": true
+    }
+  }
+]

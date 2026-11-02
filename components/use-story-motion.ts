@@ -17,18 +17,9 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
     if (!media.conditions?.motion) return;
     const desktop = media.conditions.desktop;
     const select = gsap.utils.selector(element);
+    // The arrival component owns its own entrance and portal motion.
     const entrance = gsap.timeline({ defaults: { ease: 'power3.out', duration: .65 } });
-    // Opacity stays readable: the hero never waits behind a loader or a fade from zero.
-    entrance.from('.header-logo', { y: -8, opacity: .9 }, 0)
-     .from('.hero-title > span', { yPercent: 16, opacity: .9, stagger: .08 }, .06)
-     .from('.hero-photo img', { scale: 1.045, duration: .85 }, .12)
-     .from('.hero-foot, .hero-coord', { y: 10, opacity: .9 }, .22)
-     .from('.scroll-cue', { y: -6, opacity: .9 }, .32);
-
-    const hero = gsap.timeline({ scrollTrigger: { trigger: '#arrival', start: 'top top', end: 'bottom top', scrub: true }, defaults: { ease: 'none' } });
-    hero.to('.hero-photo', { yPercent: desktop ? 22 : 8 }, 0)
-     .to('.hero-title', { xPercent: desktop ? -3 : -1, yPercent: -5 }, 0)
-     .to('.hero-mark', { yPercent: -16, xPercent: 4 }, 0);
+    entrance.from('.header-logo', { y: -8, opacity: .9 }, 0);
 
     // A single bounded timeline owns every field layer; no competing scrub triggers.
     const field = select('#on-field')[0];
@@ -39,16 +30,13 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
     } });
     story.fromTo('.field-photo img', { scale: 1.025 }, { scale: desktop ? 1.14 : 1.06, duration: 1 }, 0)
      .fromTo('.field-mark', { xPercent: 10, yPercent: 3 }, { xPercent: -9, yPercent: -4, duration: 1 }, 0)
-     .fromTo('.field-title-line', { yPercent: 30, opacity: .9 }, { yPercent: 0, opacity: 1, stagger: .12, duration: .48 }, .05)
+     .fromTo('.field-lockup h2', { yPercent: 12, opacity: .9 }, { yPercent: 0, opacity: 1, duration: .48 }, .05)
      .fromTo('.field-base, .field-caption', { y: 12, opacity: .9 }, { y: 0, opacity: 1, duration: .35 }, .5);
 
     gsap.utils.toArray<HTMLElement>('[data-reveal]', element).forEach(el => {
      // Never hide content on a direct anchor landing or on a fast scroll.
      gsap.from(el, { y: desktop ? 24 : 12, opacity: .9, duration: .65, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 94%', once: true } });
     });
-    gsap.from('.film-title-line', { yPercent: 24, opacity: .9, stagger: .1, duration: .7, ease: 'power3.out', scrollTrigger: { trigger: '.film-copy', start: 'top 88%', once: true } });
-    gsap.from('.film-frame', { scale: .96, y: desktop ? 36 : 14, duration: .85, ease: 'power3.out', scrollTrigger: { trigger: '.film-frame', start: 'top 92%', once: true } });
-    gsap.from('.film-copy .section-note, .film-copy .text-action', { y: 10, opacity: .9, stagger: .12, duration: .55, scrollTrigger: { trigger: '.film-copy', start: 'top 75%', once: true } });
     gsap.utils.toArray<HTMLElement>('.approved-gallery > figure', element).forEach(el => {
      gsap.from(el, { y: 18, scale: .98, opacity: .9, duration: .65, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 94%', once: true } });
     });
@@ -73,6 +61,33 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   // Fonts, late local images and filtered data can change trigger geometry.
   let disposed = false;
   let frame = 0;
+  const decodeHash = (value: string) => { try { return decodeURIComponent(value); } catch { return value; } };
+  let pendingAnchor = location.hash.startsWith('#film=') ? null : decodeHash(location.hash.slice(1)) || null;
+  let anchorFrame = 0;
+  const reconcileAnchor = () => {
+   const id = pendingAnchor;
+   if (disposed || !id || location.hash !== `#${id}`) return;
+   const target = document.getElementById(id);
+   if (!target) return;
+   const cinema = id === 'film-room' ? ScrollTrigger.getById('arrival-cinema') : undefined;
+   const scrollPadding = Number.parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+   const top = cinema ? cinema.end : target.getBoundingClientRect().top + window.scrollY - scrollPadding;
+   window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
+   pendingAnchor = null;
+  };
+  const onAnchorClick = (event: MouseEvent) => {
+   const link = (event.target as Element).closest<HTMLAnchorElement>('a[href^="#"]');
+   if (!link || !element.contains(link)) return;
+   const id = link.hash.slice(1);
+   if (!id || id.startsWith('film=')) return;
+   pendingAnchor = decodeHash(id);
+   refresh();
+  };
+  const onHashChange = () => {
+   const id = location.hash.slice(1);
+   pendingAnchor = id && !id.startsWith('film=') ? decodeHash(id) : null;
+   if (pendingAnchor) refresh();
+  };
   const refresh = () => {
    cancelAnimationFrame(frame);
    frame = requestAnimationFrame(() => {
@@ -81,12 +96,22 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
     const focused = document.activeElement;
     ScrollTrigger.refresh();
     if (focused instanceof HTMLElement && focused !== document.body && focused.isConnected && document.activeElement !== focused) focused.focus({ preventScroll: true });
+    if (pendingAnchor) {
+     cancelAnimationFrame(anchorFrame);
+     anchorFrame = requestAnimationFrame(() => {
+      reconcileAnchor();
+      anchorFrame = 0;
+     });
+    }
    });
   };
+  element.addEventListener('click', onAnchorClick, true);
+  window.addEventListener('hashchange', onHashChange);
+  if (pendingAnchor) refresh();
   void document.fonts.ready.then(refresh);
   element.addEventListener('load', refresh, true);
   const observer = new ResizeObserver(refresh);
   element.querySelectorAll('.approved-gallery, .numbers-content, .verified-milestones').forEach(el => observer.observe(el));
-  return () => { disposed = true; cancelAnimationFrame(frame); observer.disconnect(); element.removeEventListener('load', refresh, true); mm.revert(); context.revert(); };
+  return () => { disposed = true; cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); mm.revert(); context.revert(); };
  }, [root]);
 }

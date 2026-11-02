@@ -1,0 +1,9 @@
+{
+  "task": "ZK-ARRIVAL validation builder",
+  "owned_files": ["tests/e2e/*", "playwright.config.ts", "scripts/capture-arrival-evidence.mjs", ".agent/VALIDATION_BUILDER.json"],
+  "status": "ready_for_integrated_run",
+  "changes": ["Updated cinema flow E2E reveal scroll to expose the button after animation progress; Every Second Counts assertion tolerates line breaks.", "Separated reduced-motion no-download assertions from normal-motion iPhone pre-approach no-eager-load coverage.", "Updated evidence capture for the continuous #film-room cinema: hero after two seconds, desktop pin midpoint/end, and mobile natural-scroll midpoint/final views, plus axe, console, overflow, and video/network details.", "Restored valid gallery, preview label, structured data, two-worlds routing, dynamic reduced-motion, and empty NIL/social-state coverage."],
+  "checks": ["Focused ESLint passed for modified E2E/capture files.", "node --check passed for capture-arrival-evidence.mjs.", "Playwright --list recognized 108 project/test combinations with iPhone WebKit."],
+  "not_run": ["Full Playwright suite and screenshot capture; parent owns integrated execution."],
+  "next_action": "Ready for parent integrated run."
+}

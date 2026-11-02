@@ -1,0 +1,373 @@
+{
+  "timestamp": "2026-11-02T01:47:53.064Z",
+  "results": [
+    {
+      "engine": "chromium",
+      "mode": "desktop",
+      "initialRequests": 0,
+      "anchors": [
+        {
+          "id": "film-room",
+          "top": 0,
+          "bottom": 900,
+          "scroll": 1800,
+          "height": 900,
+          "filmCopyVisible": true
+        },
+        {
+          "id": "journey",
+          "top": 72,
+          "bottom": 1015.453125,
+          "scroll": 4113,
+          "height": 900,
+          "filmCopyVisible": true
+        },
+        {
+          "id": "off-field",
+          "top": 72.453125,
+          "bottom": 2546.671875,
+          "scroll": 5056,
+          "height": 900,
+          "filmCopyVisible": true
+        }
+      ],
+      "playback1": {
+        "time": 1.23097,
+        "paused": false,
+        "ready": 4,
+        "muted": true,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "playback2": {
+        "time": 2.441321,
+        "paused": false,
+        "ready": 4,
+        "muted": true,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "soundBounds": {
+        "x": 172.796875,
+        "y": 650.4375,
+        "width": 195.265625,
+        "height": 48
+      },
+      "native": {
+        "controls": true,
+        "muted": false,
+        "autoplay": false,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "focusReturned": true,
+      "inPageAnchor": {
+        "top": 72.453125,
+        "bottom": 2546.671875,
+        "scroll": 5056,
+        "height": 900
+      },
+      "pinBefore": 3,
+      "reduced": {
+        "pins": 0,
+        "src": null,
+        "copy": true
+      },
+      "motionRestored": {
+        "pins": 3,
+        "overflow": false
+      },
+      "widths": [
+        {
+          "width": 320,
+          "overflow": false,
+          "pins": 0
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "pins": 0
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "pins": 1
+        }
+      ],
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "mode": "mobile",
+      "initialRequests": 0,
+      "anchors": [
+        {
+          "id": "film-room",
+          "top": 84,
+          "bottom": 928,
+          "scroll": 760,
+          "height": 844,
+          "filmCopyVisible": true
+        },
+        {
+          "id": "journey",
+          "top": 64,
+          "bottom": 872.625,
+          "scroll": 2394,
+          "height": 844,
+          "filmCopyVisible": true
+        },
+        {
+          "id": "off-field",
+          "top": 63.625,
+          "bottom": 1512.484375,
+          "scroll": 3203,
+          "height": 844,
+          "filmCopyVisible": true
+        }
+      ],
+      "playback1": {
+        "time": 1.221795,
+        "paused": false,
+        "ready": 4,
+        "muted": true,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "playback2": {
+        "time": 2.431726,
+        "paused": false,
+        "ready": 4,
+        "muted": true,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "soundBounds": {
+        "x": 24,
+        "y": 592.53125,
+        "width": 195.265625,
+        "height": 48
+      },
+      "native": {
+        "controls": true,
+        "muted": false,
+        "autoplay": false,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "focusReturned": true,
+      "inPageAnchor": {
+        "top": 63.625,
+        "bottom": 1512.484375,
+        "scroll": 3203,
+        "height": 844
+      },
+      "pinBefore": 0,
+      "reduced": {
+        "pins": 0,
+        "src": null,
+        "copy": true
+      },
+      "motionRestored": {
+        "pins": 0,
+        "overflow": false
+      },
+      "widths": [
+        {
+          "width": 320,
+          "overflow": false,
+          "pins": 0
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "pins": 0
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "pins": 1
+        }
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "mode": "desktop",
+      "initialRequests": 0,
+      "anchors": [
+        {
+          "id": "film-room",
+          "top": 0,
+          "bottom": 900,
+          "scroll": 1800,
+          "height": 900,
+          "filmCopyVisible": true
+        },
+        {
+          "id": "journey",
+          "top": 72,
+          "bottom": 1015.453125,
+          "scroll": 4113,
+          "height": 900,
+          "filmCopyVisible": true
+        },
+        {
+          "id": "off-field",
+          "top": 72.453125,
+          "bottom": 2546.65625,
+          "scroll": 5056,
+          "height": 900,
+          "filmCopyVisible": true
+        }
+      ],
+      "playback1": {
+        "time": 0.9956042,
+        "paused": false,
+        "ready": 4,
+        "muted": true,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "playback2": {
+        "time": 2.2403336,
+        "paused": false,
+        "ready": 4,
+        "muted": true,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "soundBounds": {
+        "x": 172.796875,
+        "y": 650.4375,
+        "width": 195.28125,
+        "height": 48
+      },
+      "native": {
+        "controls": true,
+        "muted": false,
+        "autoplay": false,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "focusReturned": true,
+      "inPageAnchor": {
+        "top": 72.453125,
+        "bottom": 2546.65625,
+        "scroll": 5056,
+        "height": 900
+      },
+      "pinBefore": 3,
+      "reduced": {
+        "pins": 0,
+        "src": null,
+        "copy": true
+      },
+      "motionRestored": {
+        "pins": 3,
+        "overflow": false
+      },
+      "widths": [
+        {
+          "width": 320,
+          "overflow": false,
+          "pins": 0
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "pins": 0
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "pins": 1
+        }
+      ],
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "mode": "mobile",
+      "initialRequests": 0,
+      "anchors": [
+        {
+          "id": "film-room",
+          "top": 84,
+          "bottom": 928,
+          "scroll": 760,
+          "height": 844,
+          "filmCopyVisible": true
+        },
+        {
+          "id": "journey",
+          "top": 64,
+          "bottom": 872.609375,
+          "scroll": 2394,
+          "height": 844,
+          "filmCopyVisible": true
+        },
+        {
+          "id": "off-field",
+          "top": 64.609375,
+          "bottom": 1513.046875,
+          "scroll": 3202,
+          "height": 844,
+          "filmCopyVisible": true
+        }
+      ],
+      "playback1": {
+        "time": 0.9567501,
+        "paused": false,
+        "ready": 4,
+        "muted": true,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "playback2": {
+        "time": 2.1697503,
+        "paused": false,
+        "ready": 4,
+        "muted": true,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "soundBounds": {
+        "x": 24,
+        "y": 592.53125,
+        "width": 195.28125,
+        "height": 48
+      },
+      "native": {
+        "controls": true,
+        "muted": false,
+        "autoplay": false,
+        "src": "http://127.0.0.1:3100/media/zephyr-cinematic.mp4"
+      },
+      "focusReturned": true,
+      "inPageAnchor": {
+        "top": 64.609375,
+        "bottom": 1513.046875,
+        "scroll": 3202,
+        "height": 844
+      },
+      "pinBefore": 0,
+      "reduced": {
+        "pins": 0,
+        "src": null,
+        "copy": true
+      },
+      "motionRestored": {
+        "pins": 0,
+        "overflow": false
+      },
+      "widths": [
+        {
+          "width": 320,
+          "overflow": false,
+          "pins": 0
+        },
+        {
+          "width": 768,
+          "overflow": false,
+          "pins": 0
+        },
+        {
+          "width": 1024,
+          "overflow": false,
+          "pins": 1
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
