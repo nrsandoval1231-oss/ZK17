@@ -4,6 +4,7 @@ import type { PreviewPhoto } from './site';
  * SVG presentations preserve the photograph and use coordinate clipping; regions
  * hidden by source UI are transparent rather than synthesized. */
 export const arrivalCampaignPhotos: PreviewPhoto[] = [
+  { kind:'preview', id:'campaign-stadium', src:'/media/arrival-campaign/stadium-640.svg', width:706, height:650, alt:'Anna football night-game stadium and field.', focal:'50% 100%', label:'PREVIEW CROP · ORIGINAL PENDING' },
   { kind:'preview', id:'campaign-front', src:'/media/arrival-campaign/front-640.svg', width:330, height:945, alt:'Zephyr Kreye walking in his black number 17 Anna Coyotes uniform and helmet.', focal:'50% 50%', label:'PREVIEW CROP · ORIGINAL PENDING' },
   { kind:'preview', id:'campaign-rear', src:'/media/arrival-campaign/rear-640.svg', width:400, height:730, alt:'Rear view of Zephyr Kreye wearing his white number 17 Anna uniform and purple helmet.', focal:'50% 50%', label:'PREVIEW CROP · ORIGINAL PENDING' },
   { kind:'preview', id:'campaign-back', src:'/media/arrival-campaign/back-640.svg', width:270, height:875, alt:'Zephyr Kreye standing on the sideline in his black number 17 uniform, viewed from behind.', focal:'50% 50%', label:'PREVIEW CROP · ORIGINAL PENDING' },

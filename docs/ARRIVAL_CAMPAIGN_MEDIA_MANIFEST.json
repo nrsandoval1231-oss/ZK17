@@ -1,7 +1,26 @@
 [
   {
+    "id": "stadium",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_33_20 AM.jpg",
+    "sourceSha256": "51ed28df516f43ddcde9de9305eaedb41116582377c5be9bda45d7ce158d86e6",
+    "usage": "preview-only",
+    "rights": "pending",
+    "encoding": "AVIF in self-contained SVG with source-coordinate vector clipping",
+    "viewport": [
+      0,
+      330,
+      706,
+      650
+    ],
+    "note": "Authentic night-game stadium context. Vector viewport excludes all screenshot interface, no stadium is generated.",
+    "outputs": [
+      "/media/arrival-campaign/stadium-320.svg",
+      "/media/arrival-campaign/stadium-640.svg"
+    ]
+  },
+  {
     "id": "front",
-    "sourceName": "source-01.jpg",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_32_52 AM.jpg",
     "sourceSha256": "138b330ea44f4e1b91121579feda7d25cdf6ca3fb466cab9e29f05d6596383df",
     "usage": "preview-only",
     "rights": "pending",
@@ -20,7 +39,7 @@
   },
   {
     "id": "rear",
-    "sourceName": "source-08.jpg",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_33_14 AM.jpg",
     "sourceSha256": "ef495d62e509a4eadd6d8f0a1499315950fa9cf9edca619f26fa51a067fd6adc",
     "usage": "preview-only",
     "rights": "pending",
@@ -39,7 +58,7 @@
   },
   {
     "id": "back",
-    "sourceName": "source-03.jpg",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_33_03 AM.jpg",
     "sourceSha256": "dc785b292576d5a123405ed98174564f1a7f14b899ab8ecf842765e6e00b6b08",
     "usage": "preview-only",
     "rights": "pending",
@@ -58,7 +77,7 @@
   },
   {
     "id": "profile",
-    "sourceName": "source-10.jpg",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_33_17 AM.jpg",
     "sourceSha256": "6e6dfd72c70ad0f7ab694e14094f28e3f3c09edfc0779b6ab6540bec5595f3c8",
     "usage": "preview-only",
     "rights": "pending",
@@ -77,7 +96,7 @@
   },
   {
     "id": "closeup",
-    "sourceName": "source-02.jpg",
+    "sourceName": "ChatGPT Image Nov 2, 2026, 07_32_58 AM.jpg",
     "sourceSha256": "5de6276caeeea218773811bb62a8e2400b00130fdae2cb4a13033799b233833e",
     "usage": "preview-only",
     "rights": "pending",
