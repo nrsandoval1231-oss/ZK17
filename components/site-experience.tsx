@@ -51,6 +51,12 @@ export function Header() {
   {open && <button className="nav-backdrop" aria-label="Close navigation menu" onClick={close} />}
  </>;
 }
+const ownerFieldPhoto: PreviewPhoto = {
+ kind: 'preview', id: 'owner-field-2026-10-16', src: '/media/on-field-owner-2026-10-16.jpg',
+ width: 1611, height: 2297, alt: 'Zephyr Kreye, wearing number 17, prepares to throw a football.',
+ focal: '50% 28%', label: 'OWNER-SUPPLIED PHOTO',
+};
+
 export default function SiteExperience({ profileData, film, stats, features, assets, socials, nilContact, previewPhotos, scenePhotos, campaignPhotos = [], previewMediaMode }: { profileData: PublicProfile; film: MediaAsset | null; assets: MediaAsset[]; socials: SocialLink[]; nilContact: PublicNilContact | null; previewPhotos: PreviewPhoto[]; campaignPhotos?: PreviewPhoto[]; scenePhotos: ScenePhoto[]; previewMediaMode: boolean; stats: StatLine[]; features: OffFieldFeature[]; }) {
  const root = useRef<HTMLElement>(null); const [filmOpen, setFilmOpen] = useState(false); const [selectedFilm, setSelectedFilm] = useState<MediaAsset | null>(null);
  const filmOpener = useRef<HTMLElement | null>(null);
@@ -79,7 +85,7 @@ export default function SiteExperience({ profileData, film, stats, features, ass
   <Header />
   <div className="site-content">
   <ArrivalExperience profile={profileData} photo={arrivalPhoto} photos={previewMediaMode ? [...campaignPhotos, ...scenePhotos, ...previewPhotos] : scenePhotos} film={approvedFilm} />
-  <HomepageChapters profile={profileData} fieldPhoto={fieldPhoto?.kind === 'approved' ? fieldPhoto : arrivalPhoto ?? fieldPhoto} personalPhoto={offFieldPhoto} gallery={[...scenePhotos, ...(previewMediaMode ? previewPhotos : [])].filter((photo,index,items)=>items.findIndex(other=>other.src===photo.src)===index).slice(0,6)} stats={stats} features={features} socials={socials} nilContact={nilContact}/>
+  <HomepageChapters profile={profileData} fieldPhoto={previewMediaMode ? ownerFieldPhoto : fieldPhoto?.kind === 'approved' ? fieldPhoto : arrivalPhoto ?? fieldPhoto} personalPhoto={offFieldPhoto} gallery={[...scenePhotos, ...(previewMediaMode ? previewPhotos : [])].filter((photo,index,items)=>items.findIndex(other=>other.src===photo.src)===index).slice(0,6)} stats={stats} features={features} socials={socials} nilContact={nilContact}/>
 
   </div>
   {filmOpen && <VideoDialog source={selectedFilm?.src ?? null} poster={selectedFilm?.poster} onClose={closeFilm} />}
