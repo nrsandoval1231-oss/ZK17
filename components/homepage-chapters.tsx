@@ -8,8 +8,8 @@ import type { OffFieldFeature, PublicProfile, SocialLink, StatLine } from '@/con
 import type { PublicNilContact } from '@/content/contact';
 import styles from './homepage-chapters.module.css';
 
-type Props = { profile: PublicProfile; fieldPhoto?: EditorialPhotoSource; personalPhoto?: EditorialPhotoSource; closingPhoto?: EditorialPhotoSource; gallery: EditorialPhotoSource[]; stats: StatLine[]; features: OffFieldFeature[]; socials: SocialLink[]; nilContact: PublicNilContact | null };
-export default function HomepageChapters({profile,fieldPhoto,personalPhoto,closingPhoto,gallery,stats,features,socials,nilContact}: Props) {
+type Props = { profile: PublicProfile; fieldPhoto?: EditorialPhotoSource; personalPhoto?: EditorialPhotoSource; gallery: EditorialPhotoSource[]; stats: StatLine[]; features: OffFieldFeature[]; socials: SocialLink[]; nilContact: PublicNilContact | null };
+export default function HomepageChapters({profile,fieldPhoto,personalPhoto,gallery,stats,features,socials,nilContact}: Props) {
  const metrics=homepageStatistics(stats);
  return <div className={styles.chapters}>
   <section id="on-field" className={styles.field} aria-labelledby="field-title">
@@ -27,10 +27,6 @@ export default function HomepageChapters({profile,fieldPhoto,personalPhoto,closi
    <div className={styles.beyondCopy}><p className={styles.index}>04 <i/></p><h2 id="off-title">BEYOND <em>17</em></h2><p className={styles.subtitle}>Beyond the lights. Beyond the game. Beyond 17.</p><p className={styles.introduction}>A look at Zephyr’s world beyond football — the games, movies, and stories he comes back to.</p><OffFieldArcade features={features} athleteName={profile.name} compact/></div>
   </section>
   <JourneyCarousel photos={gallery} socials={socials}/>
-  <section id="next-chapter" className={styles.next} aria-labelledby="next-title">
-   {closingPhoto && <EditorialPhoto photo={closingPhoto} className={styles.rearPhoto} sizes="(max-width: 600px) 100vw, 65vw"/>}
-   <div className={styles.nextCopy}><p className={styles.index}>06 <i/></p><h2 id="next-title">NEXT<br/>CHAPTER.</h2><p className={styles.tagline}>THE STORY IS STILL<br/>BEING WRITTEN.</p></div><BrandLogo className={styles.nextLogo}/>
-  </section>
   <footer id="closing" className={styles.footer}>
    <div className={styles.footerTop}>
     <Link href="/" aria-label="ZK17 home"><BrandLogo className={styles.footerLogo}/></Link>

@@ -9,8 +9,8 @@
 .field { background-blend-mode: soft-light; }
 .fieldHero { position: relative; display: grid; grid-template-columns: 54% 46%; align-items: center; min-height: clamp(390px, 43vw, 680px); }
 .fieldPhoto { position: absolute; inset: 0 auto 0 0; width: 57%; margin: 0; }
-.fieldPhoto picture, .personalPhoto picture, .rearPhoto picture { display: block; width: 100%; height: 100%; }
-.fieldPhoto img, .personalPhoto img, .rearPhoto img { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+.fieldPhoto picture, .personalPhoto picture { display: block; width: 100%; height: 100%; }
+.fieldPhoto img, .personalPhoto img { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
 .fieldPhoto img { object-position: 50% 35% !important; }
 .fieldPhoto::after { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, transparent 60%, #0c0c0e), linear-gradient(0deg,#0c0c0e,transparent 24%); pointer-events: none; }
 .fieldCopy { position: relative; z-index: 1; grid-column: 2; padding: 64px 5vw 70px 0; }
@@ -59,15 +59,6 @@
 .socialLinks { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 28px; }
 .socialLinks a { display: inline-flex; min-height: 44px; align-items: center; font: 500 12px/1.3 var(--display); letter-spacing: .15em; text-transform: uppercase; }
 .photoPending { padding: 40px; font: italic 22px var(--serif); }
-.next { min-height: clamp(300px, 29vw, 500px); position: relative; display: flex; align-items: center; overflow: hidden; padding: 48px 5vw; background: #09090b url('/media/arrival-directors-smoke.png') center / cover; }
-.next { background-color: #1b1322; background-blend-mode: luminosity; }
-.rearPhoto { position: absolute; inset: 0 12% 0 auto; width: 52%; margin: 0; }
-.rearPhoto img { object-fit: cover; object-position: center 18% !important; }
-.rearPhoto::after { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, #09090b,transparent 30%, transparent 78%,#09090b),linear-gradient(0deg,#09090b,transparent 24%); pointer-events: none; }
-.nextCopy { position: relative; z-index: 1; }
-.nextCopy h2 { font-size: clamp(56px, 6.6vw, 106px); line-height: .9; }
-.nextCopy .tagline { padding-left: 17px; border-left: 2px solid var(--accent); font-size: 12px; letter-spacing: .3em; margin-top: 24px; }
-.nextLogo { position: absolute; right: 5vw; width: 115px; height: 115px; }
 .footer { background: #09090d; padding: 48px 4.2vw 16px; }
 .footerTop { display: grid; grid-template-columns: 24% minmax(0,1fr) auto; align-items: center; gap: 24px; }
 .footerTop > a:first-child { margin-left: 2.4vw; width: fit-content; min-height: 44px; }
@@ -136,14 +127,6 @@
  .photoSlide { flex-basis: 66vw; margin-right: -24px; }
  .photoSlide figure { height: 310px; }
  .pagination button { width: 44px; }
- .next { min-height: 510px; align-items: flex-end; padding: 40px 7vw; }
- .rearPhoto { inset: 0 0 0 auto; width: 100%; }
- .rearPhoto img { object-position: 65% top !important; height: 85%; }
- .rearPhoto::after { background: linear-gradient(0deg,#09090b 8%,transparent 80%),linear-gradient(90deg,#09090b80,transparent 65%); }
- .nextCopy h2 { font-size: 62px; }
- .nextCopy .index { margin-bottom: 18px; }
- .nextCopy .tagline { font-size: 10px; letter-spacing: .25em; }
- .nextLogo { right: 6vw; bottom: 44px; width: 76px; height: 76px; }
  .footer { padding: 32px 7vw 16px; }
  .footerTop { grid-template-columns: 56px minmax(0,1fr); gap: 20px; }
  .footerTop > a:first-child { margin-left: 0; }

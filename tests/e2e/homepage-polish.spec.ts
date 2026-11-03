@@ -1,10 +1,10 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-test('six chapters preserve opening, verified unavailable statistics and dedicated destinations',async({page})=>{
+test('five chapters preserve opening, verified unavailable statistics and dedicated destinations',async({page})=>{
  await page.goto('/');
  await expect(page.locator('#on-field')).toBeAttached();
- expect(await page.locator('main section').evaluateAll(items=>items.map(item=>item.id))).toEqual(['arrival','film-room','on-field','off-field','follow-the-journey','next-chapter']);
+ expect(await page.locator('main section').evaluateAll(items=>items.map(item=>item.id))).toEqual(['arrival','film-room','on-field','off-field','follow-the-journey','closing']);
  await expect(page.locator('#journey,[data-field-pin-spacer],.journey-stage,.verified-milestones')).toHaveCount(0);
  await expect(page.locator('a[href="#journey"]')).toHaveCount(0);
  await expect(page.locator('#on-field video,#on-field iframe,#on-field button')).toHaveCount(0);
@@ -62,14 +62,14 @@ test('responsive chapters keep images loaded, no page overflow and accessible co
  await page.goto('/');
  for(const width of [375,390,430,768,1024,1440]){
   await page.setViewportSize({width,height:900});
-  for(const id of ['on-field','off-field','follow-the-journey','next-chapter']){
+  for(const id of ['on-field','off-field','follow-the-journey','closing']){
    await page.locator(`#${id}`).scrollIntoViewIfNeeded();
    await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
    await page.locator(`#${id} img`).evaluateAll(images=>Promise.all(images.map(image=>(image as HTMLImageElement).decode())));
   }
  }
  expect(errors).toEqual([]);
- const result=await new AxeBuilder({page}).include('#on-field').include('#off-field').include('#follow-the-journey').include('#next-chapter').include('#closing').analyze();
+ const result=await new AxeBuilder({page}).include('#on-field').include('#off-field').include('#follow-the-journey').include('#closing').analyze();
  expect(result.violations).toEqual([]);
 });
 

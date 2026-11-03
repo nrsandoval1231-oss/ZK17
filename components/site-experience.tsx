@@ -56,7 +56,7 @@ export default function SiteExperience({ profileData, film, stats, features, ass
  const filmOpener = useRef<HTMLElement | null>(null);
  const approvedFilm = film;
  const photoFor = (scene: PhotoScene): ScenePhoto | PreviewPhoto | undefined => resolveScenePhoto(scene, scenePhotos, previewPhotos, previewMediaMode);
- const arrivalPhoto = photoFor('arrival'); const fieldPhoto = photoFor('on-field'); const offFieldPhoto = photoFor('off-field'); const closingPhoto = photoFor('closing');
+ const arrivalPhoto = photoFor('arrival'); const fieldPhoto = photoFor('on-field'); const offFieldPhoto = photoFor('off-field');
  useStoryMotion(root);
  useEffect(() => {
   const sync = () => {
@@ -79,7 +79,7 @@ export default function SiteExperience({ profileData, film, stats, features, ass
   <Header />
   <div className="site-content">
   <ArrivalExperience profile={profileData} photo={arrivalPhoto} photos={previewMediaMode ? [...campaignPhotos, ...scenePhotos, ...previewPhotos] : scenePhotos} film={approvedFilm} />
-  <HomepageChapters profile={profileData} fieldPhoto={fieldPhoto?.kind === 'approved' ? fieldPhoto : arrivalPhoto ?? fieldPhoto} personalPhoto={offFieldPhoto} closingPhoto={scenePhotos.find(photo=>photo.scene==='closing') ?? (previewMediaMode ? campaignPhotos.find(photo=>photo.id==='directors-rear') : undefined) ?? closingPhoto} gallery={[...scenePhotos, ...(previewMediaMode ? previewPhotos : [])].filter((photo,index,items)=>items.findIndex(other=>other.src===photo.src)===index).slice(0,6)} stats={stats} features={features} socials={socials} nilContact={nilContact}/>
+  <HomepageChapters profile={profileData} fieldPhoto={fieldPhoto?.kind === 'approved' ? fieldPhoto : arrivalPhoto ?? fieldPhoto} personalPhoto={offFieldPhoto} gallery={[...scenePhotos, ...(previewMediaMode ? previewPhotos : [])].filter((photo,index,items)=>items.findIndex(other=>other.src===photo.src)===index).slice(0,6)} stats={stats} features={features} socials={socials} nilContact={nilContact}/>
 
   </div>
   {filmOpen && <VideoDialog source={selectedFilm?.src ?? null} poster={selectedFilm?.poster} onClose={closeFilm} />}
