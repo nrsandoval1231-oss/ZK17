@@ -1,3 +1,30 @@
+# Final verdict — READY FOR DEVELOPMENT PREVIEW
+
+No unresolved material product findings on the frozen local candidate. This is an independent source/browser review, not merge or production approval. The owner authorized development preview only; deployment and remote verification remain the lead's delivery steps.
+
+Candidate: **7e8f5e41d6697478b42d5bc114666ae3f27d9e45**, compared with dc7739e4bead6179042ac3589dfa2c77e13c1dea. Independently verified HEAD equals that commit and the app/components/lib/content/package worktree diff against HEAD is empty after final checks. Protected lib/content/public/package diff against the base is also empty. Any product edit requires affected re-verification.
+
+## Final evidence inspected
+
+- Final lint and typecheck logs: clean; unit-final:62 passed, zero failed.
+- build-final: successful webpack static export, release boundary/prebuild,63-game validation, playoff asset validation.
+- e2e-final:213 passed,7 existing skips, zero failures across desktop Chromium, mobile Chromium, iPhone WebKit emulation, reduced motion. Repaired assertions retain intro phase/visibility, focus, navigation and44px lower bounds; they do not waive behavior.
+- Before/after capture manifests:29 images each covering control families in desktop/portrait/landscape. Independently inspected representative hero, links/primary, playoff, arcade, game-center and media-close frames; final portrait and landscape menu frames now show canonical brand, six readable links and one CLOSE.
+- Independent runtime:21 route/viewport combinations, no horizontal document overflow. Menus retain keyboard wrap and body scroll lock. Final menu repair specifically rerun in8 combinations (Chromium/WebKit x portrait/landscape x home/About): CLOSE focused and center hit-testable; trigger hidden; six links visible; Escape and pointer CLOSE restore MENU focus.
+- Independent repairs checked: three affected logo links44x44; film CLOSE44x44; game CLOSE44.56x44; paper pressed color rgb105,64,170. Arcade four categories each retain three supplied items, selected2px underline and return focus. RegionIII15 games, selected round4 games.
+- Independent animated Chromium/WebKit forward/reverse: SCROLL TO EXPLORE after reveal focuses FilmRoom at top0, introComplete=true; reverse to top restores introComplete=false and cold-logoopacity0.9. Timeline durations/distances remain unchanged.
+- Latest real-Hudl receipt: starts paused, then video currentTime>0.7 in Chromium/WebKit; desktop fullscreen succeeds; no latest pageerrors/overflow; homepage makes zero Hudl requests. Independently tested real iframe identity in both engines through390/844/1440 resize and scrolling: one iframe, one total Hudl navigation, same document marker retained.
+- Source audit: no decorative arrow/chevron references remain in app/components TSX/CSS; obsolete arrow component removed; native select and necessary media controls preserved. Content/data, canonical media/logo assets, six destinations, dependencies and Hudl implementation unchanged.
+
+## Findings disposition and limits
+
+All source findings below are repaired and their affected runtime behavior rechecked. Initial failed suite and incomplete screenshot observations are historical, not accepted evidence. Final source has no open P1/P2 findings from this review.
+
+Physical iPhone validation remains UNKNOWN; WebKit here is browser emulation. Hudl is third party: an earlier local run emitted AdError1101 while playback still worked; latest run is clean, so this is recorded as intermittent vendor behavior rather than suppressed. WebKit fullscreen was not verified. Remote development deployment and exact deployed commit have not been certified by this local verdict. Production and merge are outside authorization.
+
+---
+
+# Historical review trail
 # Independent review: refined controls
 
 Status: IN PROGRESS. No final verdict while product files remain mutable and the server still serves the earlier export.
@@ -44,3 +71,5 @@ First full e2e receipt:190 passed,7 skipped,23 failed. Most failures are tests t
 Further P2 from settled mobile-menu visual review: both trigger and internal CLOSE stay visible when open. At390x844 home, internal CLOSE rectangle x300.28/y20/58.53x44 overlaps trigger CLOSE x313.47/y15.5/58.53x44,z42; center hit testing returns trigger. Route header has MENU over CLOSE instead. Reproduced after650ms on home/About and both390/844 widths. Requires hiding the expanded trigger while keeping internal close, focus trap, and return focus. This was obscured by earlier blank menu screenshots.
 
 Final-built repair checks already verified: three logo links44x44; light-surface pressed color rgb105,64,170; film-room tabindex-1. Chromium and WebKit both navigate/focus FilmRoom at top0, mark introComplete=true, and reverse to coldlogoopacity0.9/introComplete=false.
+
+

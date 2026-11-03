@@ -23,3 +23,5 @@ Protected-surface check: git diff dc7739e -- content lib public brand package.js
 [Interactive comparison](../.agent/evidence/refined-controls/visual-review.html) covers navigation, links/primary, mobilemenu, playoffs, arcade/category/BACK, media and utility families.29baseline and29final screenshots cover1440×900,390×844 and844×390. Baseline comes from immutableDEV00b39a31/product2ec0a703; final shots are from the tested local build. Mobile menus are captured only after links/transform/fonts settle. Screenshots are actual browser captures, not mockups. Approvedreference/spec and initial/final logs are adjacent.
 
 DEV-only deployment and exactcommit/URL/remoteverification are recorded below after delivery. Production/main are not authorized for changes and PR11 remains unmerged.
+
+Independent Astra review accepted product commit7e8f5e41d6697478b42d5bc114666ae3f27d9e45 for PR/authorizedDEV delivery with no unresolved material findings. Report includes source hashes/runtime proof and preserves limitations. Before menu screenshots were recaptured with the same settled-link/font guard as after, so no transition blank is presented as a baseline defect.
