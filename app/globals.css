@@ -163,3 +163,8 @@
  html[data-arrival-boot="pending"] [data-home-experience] .site-header *,
  html[data-arrival-boot="ready"]:not([data-intro-complete="true"]) [data-home-experience] .site-header *{visibility:hidden!important}
 }
+
+/* Seven real destinations share one compact desktop navigation. */
+@media(min-width:900px){.site-header .site-nav{gap:clamp(8px,1.1vw,20px)}.site-header .site-nav a{font-size:10px;letter-spacing:.06em}.site-header .header-wordmark{display:none}.site-header{padding-inline:3vw}}
+@media(min-width:1280px){.site-header .site-nav a{font-size:11px}.site-header .header-wordmark{display:inline}}
+@media(max-width:899px){.site-header{padding-top:env(safe-area-inset-top);height:calc(76px + env(safe-area-inset-top))}.site-header .site-nav{padding-top:calc(90px + env(safe-area-inset-top));padding-bottom:max(24px,env(safe-area-inset-bottom))}}

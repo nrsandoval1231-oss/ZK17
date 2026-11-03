@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import BrandLogo from './brand-logo';
-const destinations = [['/', 'HOME'], ['/film/', 'FILM'], ['/playoffs/', 'PLAYOFFS'], ['/about/', 'ABOUT'], ['/nil-recruiting/', 'NIL / RECRUITING']] as const;
+import { destinations } from '@/content/navigation';
 export default function RouteHeader() {
  const pathname = usePathname();
  const [open, setOpen] = useState(false);

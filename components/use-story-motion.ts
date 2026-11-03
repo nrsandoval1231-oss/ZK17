@@ -13,49 +13,11 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   if (!element) return;
   const mm = gsap.matchMedia();
   const context = gsap.context(() => {
-   mm.add({ desktop: '(min-width: 900px) and (min-height: 650px)', motion: '(prefers-reduced-motion: no-preference)' }, (media) => {
+   mm.add({ motion: '(prefers-reduced-motion: no-preference)' }, (media) => {
     if (!media.conditions?.motion) return;
-    const desktop = media.conditions.desktop;
-    const select = gsap.utils.selector(element);
     // The arrival component owns its own entrance and portal motion.
     const entrance = gsap.timeline({ defaults: { ease: 'power3.out', duration: .65 } });
     entrance.from('.header-logo', { y: -8, opacity: .9 }, 0);
-
-    // A single bounded timeline owns every field layer; no competing scrub triggers.
-    const field = select('#on-field')[0];
-    const story = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
-     trigger: field, start: desktop ? 'top top' : 'top 82%',
-     end: desktop ? '+=65%' : 'top 22%', pin: desktop ? field : false,
-     scrub: desktop ? .45 : true, anticipatePin: desktop ? 1 : 0, invalidateOnRefresh: true,
-    } });
-    story.fromTo('.field-photo img', { scale: 1.025 }, { scale: desktop ? 1.14 : 1.06, duration: 1 }, 0)
-     .fromTo('.field-mark', { xPercent: 10, yPercent: 3 }, { xPercent: -9, yPercent: -4, duration: 1 }, 0)
-     .fromTo('.field-lockup h2', { yPercent: 12, opacity: .9 }, { yPercent: 0, opacity: 1, duration: .48 }, .05)
-     .fromTo('.field-base, .field-caption', { y: 12, opacity: .9 }, { y: 0, opacity: 1, duration: .35 }, .5);
-
-    gsap.utils.toArray<HTMLElement>('[data-reveal]', element).forEach(el => {
-     // Never hide content on a direct anchor landing or on a fast scroll.
-     gsap.from(el, { y: desktop ? 24 : 12, opacity: .9, duration: .65, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 94%', once: true } });
-    });
-    gsap.utils.toArray<HTMLElement>('.approved-gallery > figure', element).forEach(el => {
-     gsap.from(el, { y: 18, scale: .98, opacity: .9, duration: .65, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 94%', once: true } });
-    });
-
-    // The light chapter drifts instead of locking: no motion on arcade controls.
-    gsap.utils.toArray<HTMLElement>('.world-card', element).forEach((card, index) => {
-     gsap.from(card.querySelector('h3'), { y: 18, opacity: .9, duration: .7, ease: 'power2.out', scrollTrigger: { trigger: card, start: 'top 90%', once: true } });
-     gsap.fromTo(card.querySelector('.world-photo img'), { yPercent: index ? -3 : 3, scale: 1.07 }, { yPercent: index ? 3 : -3, ease: 'none', scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: true } });
-    });
-    const rail = select('#offfield-personal .offfield-rail')[0] as HTMLElement | undefined;
-    const track = rail?.querySelector<HTMLElement>('.offfield-track');
-    const travel = () => Math.max(0, (track?.scrollWidth ?? 0) - (rail?.clientWidth ?? 0));
-    if (desktop && rail && track && travel() > 0) gsap.to(track, { x: () => -travel(), ease: 'none', scrollTrigger: { trigger: rail, pin: rail, start: 'top 90px', end: () => `+=${travel()}`, scrub: .45, invalidateOnRefresh: true } });
-
-    gsap.from('.journey-track', { scaleX: 0, ease: 'none', scrollTrigger: { trigger: '.journey-stage', start: 'top 80%', end: 'bottom 65%', scrub: true } });
-    gsap.utils.toArray<HTMLElement>('.verified-milestones article, .journey-end', element).forEach(el => gsap.from(el, { y: 12, opacity: .9, duration: .55, scrollTrigger: { trigger: el, start: 'top 90%', once: true } }));
-    gsap.from('.next-graphic', { yPercent: 10, scale: .94, ease: 'none', scrollTrigger: { trigger: '#next-chapter', start: 'top bottom', end: 'bottom top', scrub: true } });
-    gsap.from('.next-copy h2', { scale: .97, transformOrigin: 'left center', duration: .9, ease: 'power3.out', scrollTrigger: { trigger: '.next-copy', start: 'top 90%', once: true } });
-    gsap.from('.closing-wordmark', { yPercent: 10, opacity: .9, duration: .8, ease: 'power3.out', scrollTrigger: { trigger: '.closing-wordmark', start: 'top 95%', once: true } });
    });
   }, element);
   // Fonts, late local images and filtered data can change trigger geometry.

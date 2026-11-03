@@ -8,11 +8,11 @@ test('skip intro reveals navigation and focuses the film section',async({page})=
  await expect.poll(()=>page.locator('#film-room').evaluate(el=>Math.abs(el.getBoundingClientRect().top))).toBeLessThan(5);
 });
 
-test('five primary links navigate to separate pages and identify the active route',async({page})=>{
- for(const [path,title] of [['/film/','EVERY'],['/about/','ZEPHYR'],['/nil-recruiting/','THE NEXT']] as const){
+test('seven primary links navigate to separate pages and identify the active route',async({page})=>{
+ for(const [path,title] of [['/film/','EVERY'],['/beyond-17/','BEYOND'],['/nil-recruiting/','THE NEXT']] as const){
   await page.goto(path);await expect(page.locator('.site-header')).toBeVisible();
   const nav=page.locator('.site-header nav');if(page.viewportSize()!.width<900)await page.getByRole('button',{name:'Menu',exact:true}).click();
-  await expect(nav.locator('a')).toHaveCount(5);await expect(nav.locator('[aria-current="page"]')).toHaveAttribute('href',path);
+  await expect(nav.locator('a')).toHaveCount(7);await expect(nav.locator('[aria-current="page"]')).toHaveAttribute('href',path);
   await expect(page.getByRole('heading',{level:1})).toContainText(title);
  }
 });

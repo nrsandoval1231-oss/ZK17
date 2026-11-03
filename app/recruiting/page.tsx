@@ -36,7 +36,7 @@ export default function RecruitingPage() {
   </div></section>
   {numbers.length > 0 && <section className="snapshot-section" aria-labelledby="numbers-heading"><div><p className="eyebrow">02 / PROOF IN THE DETAILS</p><h2 id="numbers-heading">THE <em>NUMBERS.</em></h2></div><div>
    {numbers.length ? <div className="stats-list">{numbers.map(stat=><article className="stat-row" key={stat.id}><span>{stat.label}</span><strong>{stat.value}</strong><small>{stat.season} · {stat.gameCount} GAMES</small></article>)}</div> : <div className="snapshot-empty"><span aria-hidden="true">—</span><p>VERIFIED SEASON DATA PENDING</p><p>The record will appear when the full picture is verified.</p></div>}
-   <Link prefetch={false} className="text-action" href="/#numbers">VIEW THE FULL STORY <StoryArrow /></Link>
+   <Link prefetch={false} className="text-action" href="/on-the-field/">VIEW THE FULL STORY <StoryArrow /></Link>
   </div></section>}
   <footer className="snapshot-footer"><p>OFFICIAL ATHLETE PROFILE · VERIFIED INFORMATION ONLY</p><Link prefetch={false} className="text-action" href="/#closing">RETURN TO ZK17 <StoryArrow /></Link></footer>
  </main></>;

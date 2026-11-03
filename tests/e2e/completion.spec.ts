@@ -36,12 +36,9 @@ test('pending film deep link remains closable while approved film uses native co
  await expect(dialog).toHaveCount(0);
 });
 
-test('scrolling releases the field pin and responsive motion leaves a readable document',async({page})=>{
- await page.goto('/');
- await page.evaluate(()=>document.fonts.ready);
- await page.locator('#on-field').scrollIntoViewIfNeeded();
- await page.evaluate(()=>window.scrollBy({top:innerHeight*2,behavior:'instant'}));
- await expect.poll(()=>page.locator('#on-field').evaluate(e=>e.getBoundingClientRect().bottom)).toBeLessThan(100);
+test('dedicated field page scrolls natively and remains readable at every breakpoint',async({page})=>{
+ await page.goto('/on-the-field/');
+ await expect(page.locator('.pin-spacer')).toHaveCount(0);
  await page.emulateMedia({reducedMotion:'reduce'});
  await expect(page.locator('.pin-spacer')).toHaveCount(0);
  for(const width of [320,390,768,1440]){

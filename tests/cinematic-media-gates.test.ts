@@ -2,7 +2,11 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {renderToStaticMarkup} from 'react-dom/server';
 import AboutPage from '../app/about/page';
-import TwoWorlds from '../components/two-worlds';
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+// Node has no CSS loader; visual behavior is covered in browser tests.
+require.extensions['.css'] = module => { module.exports = {}; };
+const TwoWorlds = require('../components/two-worlds').default;
 import {media,scenePhotoAssignments,previewPhotos,type MediaAsset} from '../content/site';
 
 function renderAbout(){return renderToStaticMarkup(AboutPage().props.children[1]);}
@@ -25,8 +29,8 @@ test('About uses source-backed approved scene photographs in either mode',()=>{
  finally{media.pop();scenePhotoAssignments.pop();scenePhotoAssignments.pop();if(prior===undefined)delete process.env.PREVIEW_MEDIA_MODE;else process.env.PREVIEW_MEDIA_MODE=prior;}
 });
 
-test('TwoWorlds omits missing photographs without visual or accessible original-pending labels',()=>{
- const absent=renderToStaticMarkup(TwoWorlds({jerseyNumber:'17'}));assert.equal(absent,'');
+test('discovery keeps both route links when photographs are missing and never fabricates an image',()=>{
+ const absent=renderToStaticMarkup(TwoWorlds({jerseyNumber:'17'}));assert.doesNotMatch(absent,/<img/);assert.match(absent,/href="\/on-the-field\/?"/);assert.match(absent,/href="\/beyond-17\/?"/);
  const partial=renderToStaticMarkup(TwoWorlds({jerseyNumber:'17',onFieldPhoto:previewPhotos[0]}));
- assert.match(partial,/world-card-on/);assert.doesNotMatch(partial,/world-card-off|original.*pending|photo.*pending|PREVIEW CROP/i);
+ assert.equal((partial.match(/<img/g)??[]).length,1);assert.doesNotMatch(partial,/original.*pending|photo.*pending|PREVIEW CROP/i);
 });
