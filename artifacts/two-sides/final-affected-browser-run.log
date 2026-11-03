@@ -1,0 +1,129 @@
+
+Running 88 tests using 3 workers
+
+(node:41632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:41630) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:41631) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓   2 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (2.4s)
+  ✓   3 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (3.2s)
+  ✓   5 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (2.0s)
+  ✓   1 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:16:5 › seven primary links navigate to separate pages and identify the active route (6.1s)
+  ✓   7 [desktop-chromium] › tests/e2e/editorial-controls.spec.ts:52:5 › menu and section actions expose text labels and touch targets (2.9s)
+  ✓   4 [desktop-chromium] › tests/e2e/arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (7.7s)
+  ✓   6 [desktop-chromium] › tests/e2e/editorial-controls.spec.ts:13:5 › site-owned controls contain no arrow text and no nonmedia SVG icons (5.3s)
+  ✓  10 [desktop-chromium] › tests/e2e/intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (2.0s)
+  ✓   9 [desktop-chromium] › tests/e2e/editorial-controls.spec.ts:120:5 › playoff text controls, game center close, and interest categories retain working interactions (3.4s)
+  ✓   8 [desktop-chromium] › tests/e2e/editorial-controls.spec.ts:79:5 › editorial targets and active state remain legible in desktop, portrait, and landscape (4.9s)
+  ✓  11 [desktop-chromium] › tests/e2e/intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (2.0s)
+  ✓  13 [desktop-chromium] › tests/e2e/intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (2.4s)
+  ✓  12 [desktop-chromium] › tests/e2e/intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (4.3s)
+  ✓  14 [desktop-chromium] › tests/e2e/site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (4.3s)
+  ✓  16 [desktop-chromium] › tests/e2e/site.spec.ts:21:5 › navigation supports browser back and forward (1.2s)
+  ✓  17 [desktop-chromium] › tests/e2e/site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (900ms)
+  ✓  18 [desktop-chromium] › tests/e2e/two-sides.spec.ts:4:5 › discovery links to two dedicated worlds and keeps the cinematic opening (1.7s)
+  ✓  19 [desktop-chromium] › tests/e2e/two-sides.spec.ts:14:5 › dedicated worlds load with source references, eight interests and no duplicate highlights (2.0s)
+  ✓  21 [desktop-chromium] › tests/e2e/two-sides.spec.ts:50:5 › all seven navigation destinations resolve to actual pages (2.5s)
+  ✓  15 [desktop-chromium] › tests/e2e/site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (9.5s)
+  ✓  20 [desktop-chromium] › tests/e2e/two-sides.spec.ts:35:5 › worlds respect reduced motion, load images, and fit the viewport (4.8s)
+  ✓  22 [desktop-chromium] › tests/e2e/two-sides.spec.ts:57:5 › photo carousel supports keyboard, horizontal wheel gestures and native vertical scrolling (1.4s)
+(node:43230) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:43238) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:43248) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  23 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (2.0s)
+  ✓  25 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (1.4s)
+  ✓  27 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (1.5s)
+  ✓  24 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:16:5 › seven primary links navigate to separate pages and identify the active route (5.7s)
+  ✓  28 [mobile-chromium] › tests/e2e/editorial-controls.spec.ts:13:5 › site-owned controls contain no arrow text and no nonmedia SVG icons (3.7s)
+  ✓  26 [mobile-chromium] › tests/e2e/arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (5.8s)
+  ✓  29 [mobile-chromium] › tests/e2e/editorial-controls.spec.ts:52:5 › menu and section actions expose text labels and touch targets (1.9s)
+  ✓  32 [mobile-chromium] › tests/e2e/intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (2.3s)
+  ✓  31 [mobile-chromium] › tests/e2e/editorial-controls.spec.ts:120:5 › playoff text controls, game center close, and interest categories retain working interactions (2.9s)
+  ✓  30 [mobile-chromium] › tests/e2e/editorial-controls.spec.ts:79:5 › editorial targets and active state remain legible in desktop, portrait, and landscape (4.1s)
+  ✓  33 [mobile-chromium] › tests/e2e/intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (2.6s)
+  ✓  35 [mobile-chromium] › tests/e2e/intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (2.0s)
+  ✓  34 [mobile-chromium] › tests/e2e/intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (3.7s)
+  ✓  36 [mobile-chromium] › tests/e2e/site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (3.4s)
+  ✓  38 [mobile-chromium] › tests/e2e/site.spec.ts:21:5 › navigation supports browser back and forward (1.7s)
+  ✓  39 [mobile-chromium] › tests/e2e/site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (1.1s)
+  ✓  40 [mobile-chromium] › tests/e2e/two-sides.spec.ts:4:5 › discovery links to two dedicated worlds and keeps the cinematic opening (1.6s)
+  ✓  41 [mobile-chromium] › tests/e2e/two-sides.spec.ts:14:5 › dedicated worlds load with source references, eight interests and no duplicate highlights (1.7s)
+  ✓  43 [mobile-chromium] › tests/e2e/two-sides.spec.ts:50:5 › all seven navigation destinations resolve to actual pages (2.7s)
+  ✓  37 [mobile-chromium] › tests/e2e/site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (8.7s)
+(node:44600) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  44 [mobile-chromium] › tests/e2e/two-sides.spec.ts:57:5 › photo carousel supports keyboard, horizontal wheel gestures and native vertical scrolling (1.5s)
+  ✓  42 [mobile-chromium] › tests/e2e/two-sides.spec.ts:35:5 › worlds respect reduced motion, load images, and fit the viewport (5.5s)
+(node:44659) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:44684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  47 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (1.9s)
+  ✓  45 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (3.3s)
+  ✓  49 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (1.9s)
+  ✓  48 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (7.1s)
+  ✓  50 [iphone-webkit] › tests/e2e/editorial-controls.spec.ts:13:5 › site-owned controls contain no arrow text and no nonmedia SVG icons (6.8s)
+  ✓  51 [iphone-webkit] › tests/e2e/editorial-controls.spec.ts:52:5 › menu and section actions expose text labels and touch targets (3.7s)
+  ✓  46 [iphone-webkit] › tests/e2e/arrival-campaign.spec.ts:16:5 › seven primary links navigate to separate pages and identify the active route (14.7s)
+  ✓  53 [iphone-webkit] › tests/e2e/editorial-controls.spec.ts:120:5 › playoff text controls, game center close, and interest categories retain working interactions (5.8s)
+  ✓  54 [iphone-webkit] › tests/e2e/intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (4.6s)
+  ✓  52 [iphone-webkit] › tests/e2e/editorial-controls.spec.ts:79:5 › editorial targets and active state remain legible in desktop, portrait, and landscape (8.8s)
+  ✓  57 [iphone-webkit] › tests/e2e/intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (2.8s)
+  ✓  55 [iphone-webkit] › tests/e2e/intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (4.4s)
+  ✓  58 [iphone-webkit] › tests/e2e/site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (5.3s)
+  ✓  56 [iphone-webkit] › tests/e2e/intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (10.7s)
+  ✓  60 [iphone-webkit] › tests/e2e/site.spec.ts:21:5 › navigation supports browser back and forward (2.1s)
+  ✓  61 [iphone-webkit] › tests/e2e/site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (925ms)
+  ✓  62 [iphone-webkit] › tests/e2e/two-sides.spec.ts:4:5 › discovery links to two dedicated worlds and keeps the cinematic opening (1.3s)
+  ✓  63 [iphone-webkit] › tests/e2e/two-sides.spec.ts:14:5 › dedicated worlds load with source references, eight interests and no duplicate highlights (3.0s)
+  ✓  59 [iphone-webkit] › tests/e2e/site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (11.6s)
+  ✓  66 [iphone-webkit] › tests/e2e/two-sides.spec.ts:57:5 › photo carousel supports keyboard, horizontal wheel gestures and native vertical scrolling (1.7s)
+(node:46460) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  65 [iphone-webkit] › tests/e2e/two-sides.spec.ts:50:5 › all seven navigation destinations resolve to actual pages (3.6s)
+  ✓  64 [iphone-webkit] › tests/e2e/two-sides.spec.ts:35:5 › worlds respect reduced motion, load images, and fit the viewport (6.3s)
+(node:46633) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+(node:46634) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+  ✓  67 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (1.6s)
+  ✓  68 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (1.5s)
+  ✓  71 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (1.7s)
+  ✓  69 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:16:5 › seven primary links navigate to separate pages and identify the active route (4.8s)
+  ✓  70 [reduced-motion] › tests/e2e/arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (6.5s)
+  ✓  73 [reduced-motion] › tests/e2e/editorial-controls.spec.ts:52:5 › menu and section actions expose text labels and touch targets (2.2s)
+  ✓  72 [reduced-motion] › tests/e2e/editorial-controls.spec.ts:13:5 › site-owned controls contain no arrow text and no nonmedia SVG icons (4.6s)
+  ✓  76 [reduced-motion] › tests/e2e/intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (1.9s)
+  ✓  75 [reduced-motion] › tests/e2e/editorial-controls.spec.ts:120:5 › playoff text controls, game center close, and interest categories retain working interactions (3.4s)
+  ✓  74 [reduced-motion] › tests/e2e/editorial-controls.spec.ts:79:5 › editorial targets and active state remain legible in desktop, portrait, and landscape (4.5s)
+  ✓  77 [reduced-motion] › tests/e2e/intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (2.2s)
+  ✓  79 [reduced-motion] › tests/e2e/intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (2.3s)
+  ✓  78 [reduced-motion] › tests/e2e/intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (4.3s)
+  ✓  82 [reduced-motion] › tests/e2e/site.spec.ts:21:5 › navigation supports browser back and forward (1.4s)
+  ✓  80 [reduced-motion] › tests/e2e/site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (4.3s)
+  ✓  83 [reduced-motion] › tests/e2e/site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (1.1s)
+  ✓  84 [reduced-motion] › tests/e2e/two-sides.spec.ts:4:5 › discovery links to two dedicated worlds and keeps the cinematic opening (2.3s)
+  ✓  85 [reduced-motion] › tests/e2e/two-sides.spec.ts:14:5 › dedicated worlds load with source references, eight interests and no duplicate highlights (2.2s)
+  ✓  87 [reduced-motion] › tests/e2e/two-sides.spec.ts:50:5 › all seven navigation destinations resolve to actual pages (3.4s)
+  ✓  86 [reduced-motion] › tests/e2e/two-sides.spec.ts:35:5 › worlds respect reduced motion, load images, and fit the viewport (5.3s)
+  ✓  81 [reduced-motion] › tests/e2e/site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (10.6s)
+  ✓  88 [reduced-motion] › tests/e2e/two-sides.spec.ts:57:5 › photo carousel supports keyboard, horizontal wheel gestures and native vertical scrolling (1.6s)
+
+  88 passed (1.9m)

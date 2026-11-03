@@ -6,8 +6,11 @@ Branch: `feat/two-sides-dedicated-pages`. Review preview only; no merge or deplo
 - Preserved ArrivalExperience, ArrivalHero, original video bytes and their animation implementation. The homepage now moves directly from its existing opening/cinema into a full-area linked editorial diptych and compact footer.
 - Added `/on-the-field/`: existing field hero composition, six 2026 metrics, source notes, three editorial signature performances and nine-game passing log. No video or duplicate highlights section.
 - Added `/beyond-17/`: warm editorial portrait hero, eight accessible interest categories, owner-supplied picks and explicit unanswered categories. Native scroll-snap gallery supports keyboard navigation and adjacent-image depth when authentic lifestyle photos are added.
-- Shared seven-destination navigation; existing Film/Highlights, Recruiting, NIL, About and Playoffs routes retained. Updated sitemap and recruiting performance link.
+- Shared seven-destination navigation; existing `/highlights/` Hudl experience and `/film/`, Recruiting, NIL, About and Playoffs routes retained. Updated sitemap and recruiting performance link.
 - Removed obsolete downstream homepage section pins and selectors. New pages have no GSAP pins, filters animated continuously, custom drag interception or scroll-jacking.
+
+## Current production integration
+The provided checkout started at `5bfba97`; a fresh remote audit found two newer releases. Merged `origin/main` at `8aa7f5a` before delivery. The current production ArrivalExperience, ArrivalHero, their CSS and motion code, original media, and dedicated Hudl Highlights page are unchanged relative to that release. Native video focus and mobile width-only resize handling from the scroll-stability release are preserved. The requested seven navigation items now use `/highlights/` for Highlights; `/film/` and `/about/` remain available directly.
 
 ## Authentic asset inventory
 No new or generated athlete/family photographs were introduced. Existing crop derivatives are reused byte-for-byte, through responsive AVIF/WebP sources at 360/540/706 widths.
@@ -16,7 +19,7 @@ No new or generated athlete/family photographs were introduced. Existing crop de
 | --- | --- | --- | --- |
 | No. 17 preparing to pass, black uniform | `/media/on-field-706.webp` and AVIF/WebP variants | Homepage left panel, dedicated field hero | Owner-provided football image; existing preview-only crop, originals/rights pending |
 | Helmet-off seated sideline portrait | `/media/portrait-706.webp` and AVIF/WebP variants | Homepage right panel, Beyond hero, single accurately captioned gallery frame | User approved temporary review use; existing preview-only crop |
-| Existing intro standing/action/rear/white layers | Existing `arrival-directors-cut` assets and campaign closeup | Preserved cinematic intro | Existing preview gates unchanged |
+| Existing intro standing/action/rear/white/stadium/color-action layers | Existing `arrival-directors-cut`, owner stadium/action assets and campaign closeup | Preserved cinematic intro | Existing preview gates unchanged |
 | Original cinematic video | `/media/zephyr-monochrome-full.mp4` | Preserved homepage cinema and existing Film experience | Existing owner-approved media record unchanged |
 
 See `MEDIA_INVENTORY.md`, `PREVIEW_MEDIA_MANIFEST.json`, and `MEDIA_SOURCE_HASHES.json` for original source descriptions/hashes. New photo lookup honors `PREVIEW_MEDIA_MODE=false`; the existing public-release distribution gate remains intact. A clean release still requires approved originals and removal/replacement of all preview-only distributed assets.

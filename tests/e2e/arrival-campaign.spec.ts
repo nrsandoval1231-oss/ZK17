@@ -50,7 +50,7 @@ test('static responsive frames preserve all five authentic photo layers',async({
 
 test('homepage keeps the approved field photo and no Hudl player',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');
- await expect(page.locator('#on-field .field-photo')).toBeVisible();
+ await expect(page.locator('#two-sides a[href="/on-the-field/"] img')).toBeVisible();
  await expect(page.locator('iframe[src*="hudl.com"]')).toHaveCount(0);
  await expect(page.locator('.site-header').getByRole('button',{name:'WATCH FILM',exact:true})).toHaveCount(0);
  await expect(page.getByRole('button',{name:'WATCH THE FILM',exact:true})).toHaveCount(0);

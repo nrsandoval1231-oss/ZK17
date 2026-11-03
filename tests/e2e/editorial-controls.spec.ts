@@ -52,7 +52,7 @@ test('site-owned controls contain no arrow text and no nonmedia SVG icons', asyn
 test('menu and section actions expose text labels and touch targets', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.setViewportSize({ width: 390, height: 844 });
-  await page.goto('/about/');
+  await page.goto('/beyond-17/');
   const menu = page.getByRole('button', { name: 'MENU', exact: true });
   await expect(menu).toBeVisible();
   await expect(menu).toHaveAttribute('aria-expanded', 'false');
@@ -62,19 +62,17 @@ test('menu and section actions expose text labels and touch targets', async ({ p
   await expect(close).toBeFocused();
   await expectTouchTarget(close, 'CLOSE');
   await expect(page.locator('#route-nav a')).toHaveCount(7);
-  await expect(page.locator('#route-nav [aria-current="page"]')).toHaveAttribute('href', '/about/');
+  await expect(page.locator('#route-nav [aria-current="page"]')).toHaveAttribute('href', '/beyond-17/');
   await page.keyboard.press('Escape');
   await expect(menu).toBeFocused();
 
   await page.goto('/');
-  for (const name of ['EXPLORE PERSONAL', 'SEE HIM ON FIELD', 'BACK TO TOP']) {
-    const action = page.getByRole('link', { name, exact: true });
-    await expect(action, `${name} action should be present`).toHaveCount(1);
-    await expectTouchTarget(action, name);
+  const discovery = page.getByRole('region', { name: 'Two sides. One Zephyr.' });
+  for (const name of [/ON THE FIELD/, /BEYOND 17/]) {
+    const action = discovery.getByRole('link', { name });
+    await expect(action).toHaveCount(1);
+    await expectTouchTarget(action, String(name));
   }
-  const recruiting = page.getByRole('link', { name: 'RECRUITING SNAPSHOT', exact: true });
-  await expect(recruiting, 'recruiting snapshot action should be present').toHaveCount(1);
-  await expectTouchTarget(recruiting, 'RECRUITING SNAPSHOT');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
@@ -119,7 +117,7 @@ test('editorial targets and active state remain legible in desktop, portrait, an
   }
 });
 
-test('playoff text controls, game center close, and arcade categories retain working interactions', async ({ page }) => {
+test('playoff text controls, game center close, and interest categories retain working interactions', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/playoffs/');
   const rail = page.getByRole('region', { name: 'Interactive tournament bracket' });
@@ -142,27 +140,14 @@ test('playoff text controls, game center close, and arcade categories retain wor
   await close.click();
   await expect(dialog).toHaveCount(0);
 
-  await page.goto('/#offfield-personal');
-  const arcade = page.locator('#offfield-personal');
+  await page.goto('/beyond-17/');
   const categories = ['Games', 'Movies', 'TV Shows', 'Anime'];
   for (const category of categories) {
-    const choice = arcade.getByRole('button', { name: category, exact: true });
+    const choice = page.getByRole('tab', { name: category, exact: true });
     await expectTouchTarget(choice, `${category} category`);
     await choice.click();
-    await expect(arcade.getByRole('listitem')).toHaveCount(3);
-    const back = arcade.getByRole('button', { name: 'BACK TO MENU', exact: true });
-    await expectTouchTarget(back, 'BACK');
-    await back.click();
-    await expect(choice).toBeFocused();
-    await expect(choice).toHaveAttribute('data-selected', 'true');
-    const selectedUnderline = await choice.evaluate((element) => {
-      const text = element.querySelector('span') ?? element;
-      const style = getComputedStyle(text);
-      const after = getComputedStyle(text, '::after');
-      return style.textDecorationLine.includes('underline') || (parseFloat(style.borderBottomWidth) > 0 && style.borderBottomStyle !== 'none') || (after.content !== 'none' && after.content !== 'normal' && parseFloat(after.height) > 0 && after.transform !== 'matrix(0, 0, 0, 1, 0, 0)');
-    });
-    expect(selectedUnderline, 'selected arcade category should use an underline, not color alone').toBe(true);
+    await expect(page.getByRole('tabpanel').getByRole('listitem')).toHaveCount(3);
+    await expect(choice).toHaveAttribute('aria-selected', 'true');
+    await expect(choice).toContainText('−');
   }
-  const start = arcade.getByRole('button', { name: 'PRESS START', exact: true });
-  await expectTouchTarget(start, 'PRESS START');
 });

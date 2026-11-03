@@ -80,7 +80,7 @@ export default function SiteExperience({ profileData, film, assets, previewPhoto
   <div className="site-content">
   <ArrivalExperience profile={profileData} photo={arrivalPhoto} photos={previewMediaMode ? [...campaignPhotos, ...scenePhotos, ...previewPhotos] : scenePhotos} film={approvedFilm} />
   <TwoWorlds onFieldPhoto={fieldPhoto} offFieldPhoto={offFieldPhoto} jerseyNumber={profileData.number} />
-  <WorldFooter />
+  <WorldFooter home />
   </div>
   {filmOpen && <VideoDialog source={selectedFilm?.src ?? null} poster={selectedFilm?.poster} onClose={closeFilm} />}
  </main>;
