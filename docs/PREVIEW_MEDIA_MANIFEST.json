@@ -318,5 +318,17 @@
       "/media/arrival-directors-cut/directors-white-960.webp"
     ],
     "campaign": "arrival-directors-cut"
+  },
+  {
+    "slug": "owner-color-action",
+    "sourceName": "brand/owner-action/owner-original.png",
+    "sourceSha256": "d9db62797ecbac643f5dbd7a6a952742192c121f856337c954957a9b7539061d",
+    "alt": "Zephyr Kreye carrying a football during a game.",
+    "focal": "50% 45%",
+    "usage": "preview-only",
+    "rights": "Owner supplied for this review; separate final-release rights gate retained",
+    "outputs": [
+      "/media/zephyr-color-action.webp"
+    ]
   }
 ]

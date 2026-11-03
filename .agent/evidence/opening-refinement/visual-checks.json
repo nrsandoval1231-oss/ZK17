@@ -1,0 +1,32 @@
+[
+  {
+    "name": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "distance": 2160,
+    "errors": [],
+    "overflow": false
+  },
+  {
+    "name": "iphone-webkit",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "distance": 1350.001,
+    "errors": [],
+    "overflow": false
+  },
+  {
+    "name": "landscape-webkit",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "distance": 624.001,
+    "errors": [],
+    "overflow": false
+  }
+]

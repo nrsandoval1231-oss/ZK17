@@ -33,3 +33,6 @@ Desktop retains positive-travel horizontal intro/CRT storytelling with existing 
 
 ## ZEPHYR KREYE arcade title
 The CRT cabinet title comes from the athlete profile and reads ZEPHYR KREYE. Keep the approved original stadium artwork, pixel title, and native Games/Movies/TV Shows buttons. Clicking a category opens its top-three picks directly; Back/Escape restores focus to that category. Press Start remains a shortcut to the current selection. Keep the arcade quiet, phone-accessible, and within the existing scene and scroll behavior.
+
+## Owner-approved refined controls — 2026-11-02
+Editorial text controls use existing condensed display typography, label-fit fine underlines, readable contrast and44px hit areas. Primaryactions use sharp inversecontrastfills; selectedcontrols have an underline, notcoloralone. MENU/CLOSE/PREVIOUS/NEXT/BACK are textonly; no decorativecontrolarrows/chevrons/pointers, butnative mediaicons/dropdownaffordances andHudlcontrols remain. CanonicalZKmark, allcontent/destinations/arcaderetrofont andphotography preserved. Skipintro removed byexplicitownersteering; hero mobilemontage rearrangedsubtly, timingunchanged. Spec/reference .agent/evidence/refined-controls/.

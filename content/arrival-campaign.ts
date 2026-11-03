@@ -20,4 +20,6 @@ export const arrivalDirectorsPhotos: PreviewPhoto[] = [
   { kind: 'preview', id: 'directors-white', src: '/media/arrival-directors-cut/directors-white-960.webp', width: 470, height: 805, alt: 'Zephyr Kreye seen from behind in his white number 17 uniform.', focal: '50% 40%', label: 'PREVIEW CROP · ORIGINAL PENDING' },
 ];
 
-export const arrivalCampaignPhotos: PreviewPhoto[] = [...arrivalDirectorsPhotos, ...legacyArrivalPhotos];
+export const arrivalCampaignPhotos: PreviewPhoto[] = [...arrivalDirectorsPhotos, ...legacyArrivalPhotos,
+  { kind: 'preview', id: 'owner-color-action', src: '/media/zephyr-color-action.webp', width: 540, height: 474, alt: 'Zephyr Kreye carrying a football during a game.', focal: '50% 45%', label: 'OWNER-SUPPLIED PHOTO' },
+];

@@ -88,14 +88,33 @@ it('rejects conflicting kickoff times from two linked game details in one source
 
 it('the existing manual retriever retains successful metadata and detects repeated snapshots',async()=>{
  const {mkdtemp,writeFile,readFile,rm}=await import('node:fs/promises');const {tmpdir}=await import('node:os');const {join}=await import('node:path');const {execFileSync}=await import('node:child_process');
+ const {pathToFileURL}=await import('node:url');
  const dir=await mkdtemp(join(tmpdir(),'zk17-retrieve-'));const output=join(dir,'output');
  try{
-  // Isolate only the network boundary; execute the real retrieval CLI and real file/hash checks.
-  await writeFile(join(dir,'curl'),`#!/usr/bin/env node
-const fs=require('node:fs');const args=process.argv.slice(2);const output=args[args.indexOf('--output')+1];const pdf=args.at(-1).endsWith('.pdf');fs.writeFileSync(output,pdf?'%PDF-fixture':'<html>fixture</html>');process.stdout.write(JSON.stringify({httpStatus:200,contentType:pdf?'application/pdf':'text/html',redirectURL:''}));\n`,{mode:0o755});
-  const cli=()=>execFileSync(process.execPath,['scripts/retrieve-playoff-sources.mjs',output],{encoding:'utf8',env:{...process.env,PATH:dir+':'+process.env.PATH},stdio:'pipe'});
+  // Preload only in the child: native Windows cannot execute a shebang PATH shim.
+  // The real CLI, HTTP metadata checks, file reads and hashing still run.
+  const preload=join(dir,'mock-curl.mjs');
+  await writeFile(preload,`import childProcess from 'node:child_process';
+import {syncBuiltinESMExports} from 'node:module';
+import {promisify} from 'node:util';
+import {writeFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
+childProcess.execFile=(command,args,options,callback)=>{
+ assert.equal(command,'curl');
+ assert.ok(args.includes('--output'));
+ const output=args[args.indexOf('--output')+1];const pdf=args.at(-1).endsWith('.pdf');
+ const invalid=process.env.ZK17_INVALID_CONTENT==='true';
+ writeFileSync(output,pdf?(invalid?'invalid PDF':'%PDF-fixture'):'<html>fixture</html>');
+ callback(null,JSON.stringify({httpStatus:200,contentType:pdf?'application/pdf':(invalid?'text/plain':'text/html'),redirectURL:''}),'');
+};
+childProcess.execFile[promisify.custom]=(...args)=>new Promise((resolve,reject)=>{
+ childProcess.execFile(...args,(error,stdout,stderr)=>error?reject(error):resolve({stdout,stderr}));
+});
+syncBuiltinESMExports();\n`);
+  const cli=(invalid=false)=>execFileSync(process.execPath,['--import',pathToFileURL(preload).href,'scripts/retrieve-playoff-sources.mjs',output],{encoding:'utf8',env:{...process.env,ZK17_INVALID_CONTENT:String(invalid)},stdio:'pipe'});
   cli();let report=JSON.parse(await readFile(join(output,'report.json'),'utf8'));assert.equal(report.length,4);assert.ok(report.every((r:{sha256:string;bytes:number;changed:boolean;error?:string})=>/^[a-f0-9]{64}$/.test(r.sha256)&&r.bytes>0&&r.changed&&!r.error));
   cli();report=JSON.parse(await readFile(join(output,'report.json'),'utf8'));assert.ok(report.every((r:{changed:boolean})=>!r.changed));
+  assert.throws(()=>cli(true));report=JSON.parse(await readFile(join(output,'report.json'),'utf8'));assert.deepEqual(report.map((r:{error:string})=>r.error),['Expected PDF signature','Expected PDF signature','Expected HTML','Expected HTML']);
  }finally{await rm(dir,{recursive:true,force:true});}
 });
 
@@ -125,17 +144,21 @@ it('late game details preserve an immutable final and do not stall subsequent po
 });
 
 it('both workflow file guards reject unexpected paths and Git failures without external filters',async()=>{
- const {mkdtemp,writeFile,rm}=await import('node:fs/promises');const {tmpdir}=await import('node:os');const {join}=await import('node:path');const {execFileSync}=await import('node:child_process');
+ const {execFileSync}=await import('node:child_process');
  const workflow=readFileSync('.github/workflows/playoff-source-review.yml','utf8');const guards=workflow.match(/ +changed=\$\(git diff --name-only origin\/main\)[\s\S]*?done <<< "\$changed"/g)??[];assert.equal(guards.length,2);
- const dir=await mkdtemp(join(tmpdir(),'zk17-guard-'));
- try{
-  await writeFile(join(dir,'git'),`#!/usr/bin/env node
-if(process.env.ZK17_GIT_FAILURE==='true')process.exit(128);process.stdout.write(process.env.ZK17_CHANGED_PATHS??'');\n`,{mode:0o755});
-  for(const guard of guards){
-   const execute=(paths:string,fail=false)=>execFileSync('bash',['-e','-c',guard],{encoding:'utf8',stdio:'pipe',env:{...process.env,PATH:dir+':'+process.env.PATH,ZK17_CHANGED_PATHS:paths,ZK17_GIT_FAILURE:String(fail)}});
+ for(const guard of guards){
+   // Feed Bash via stdin: WSL launchers do not inherit arbitrary Windows env
+   // variables, and Windows command-line quoting can alter a -c script.
+   // Mock only git; execute the workflow guard verbatim after normalizing CRLF.
+   const quote=(value:string)=>"'"+value.replaceAll("'","'\\''")+"'";
+   const execute=(paths:string,fail=false)=>execFileSync('bash',['-e','-s'],{encoding:'utf8',stdio:'pipe',input:(`git() {
+ [ "$#" -eq 3 ] && [ "$1" = diff ] && [ "$2" = --name-only ] && [ "$3" = origin/main ] || return 99
+ printf '%s' ${quote(paths)}
+ return ${fail?128:0}
+}
+${guard}\n`).replace(/\r\n/g,'\n')});
    execute('');execute('content/playoffs/verified.json\ncontent/playoffs/evidence/latest-sync.json\n');
    for(const paths of ['scripts/evil.ts\n','content/playoffs/verifiedXjson\n','content/playoffs/verified.json\nscripts/evil.ts\n'])assert.throws(()=>execute(paths));
    assert.throws(()=>execute('',true));
-  }
- }finally{await rm(dir,{recursive:true,force:true});}
+ }
 });

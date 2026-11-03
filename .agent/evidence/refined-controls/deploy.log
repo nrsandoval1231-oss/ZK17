@@ -1,0 +1,18 @@
+
+ ⛅️ wrangler 4.130.0
+────────────────────
+▲ [WARNING] Warning: Your working directory is a git repo and has uncommitted changes
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (130/182)
+Uploading... (147/182)
+Uploading... (165/182)
+Uploading... (182/182)
+✨ Success! Uploaded 52 files (130 already uploaded) (1.06 sec)
+
+✨ Uploading _headers
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://b655db03.zk17-review.pages.dev
+✨ Deployment alias URL: https://cinematic-opening-dev.zk17-review.pages.dev

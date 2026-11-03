@@ -28,3 +28,17 @@ ZK-ARRIVAL-CAMPAIGN [PR REVIEW DELIVERED]: PR9 open, productd46943f;51unit/194br
 ZK-ARRIVAL-DIRECTORS-CUT [LOCAL VERIFIED 2026-11-02]: producte1acea9/testbbd4f6b;sevenbeatdesktop/touchstory;56unit,270browserpass18existingconditional skips;lint/type/build;12capturecases/144motion samples;independentreviewsPASS. ExistingPR9previewdeliverypending. No mergeproduction;media rights/physicaldevice review remain open.
 
 DIRECTORS CUT PREVIEW DELIVERED: https://c9641529.zk17-review.pages.dev, c9e0e89. Two-engine live state/layout checks and 11 media hashes PASS. Remote captures inspected; WebKit black media surface limits decoded-playback evidence. All five review threads resolved. Documentation/evidence-only follow-up; product unchanged.
+
+ZK-OPENING-REFINEMENT [IN PROGRESS 2026-11-02]: owner supplied full targeted cinematic build specification and confirmed real Anna stadium PNG. Plan .agent/evidence/opening-refinement/plan.md. Three bounded Luna implementation scopes; final validation and independent Astra review pending. PR delivery authorized; no merge/deploy.
+
+ZK-OPENING-REFINEMENT [LOCAL VERIFIED]: final173browserpass/7existingconditional skips;62unit;lint/type/build. Independent product/test review accepted pending exact candidate handoff. QA docs/OPENING_REFINEMENT_QA.md. PR next; no merge/deploy.
+
+ZK-OPENING-REFINEMENT [PR REVIEW DELIVERED]: PR11 https://github.com/nrsandoval1231-oss/ZK17/pull/11, product ccaab62 independently accepted;173browserpass7conditional skips62unit. No merge/deploy; physicaliPhone performance UNKNOWN.
+
+ZK-HUDL-FINAL-EDITS [LOCAL VERIFIED 2026-11-02]: Hudl/headerbutton +ownerlogo/colorphoto edits. Stablefieldpinfix,62unit,188browserpass7conditional skips1upstreamARIAfail; postmask40affectedpass;buildlinttypepass. QA docs/HUDL_INTEGRATION_QA.md. Independentfinalreview/PR11update next. No merge/deploy.
+
+ZK-HIGHLIGHTS-PAGE [LOCAL VERIFIED]: dedicatedroute/sharednav+restoredhomepageapprovedphoto.62unit/buildlinttypepass;28affectedbrowserpass;finalfullpending. docs/HIGHLIGHTS_PAGE_QA.md. OwnerauthorizedDEVpreview;PR11unmerged.
+
+ZK-REFINED-CONTROLS [LOCAL VERIFIED]: approvednoarrows/editorialcontrols+minorherorearrange+Skipremoval.213browserpass7conditionalskips62unit/buildlinttypepass. Protectedcontent/lib/assets/packageunchanged. QA docs/REFINED_CONTROLS_QA.md. Finalcriticidentity/PR11/DEVdeliverynext;no mergeproduction.
+
+ZK-REFINED-CONTROLS [PR11 / DEV DELIVERED]: b655db03 immutable/6846005 deployed.213browserpass7existingskips62unit/buildlinttype;independentAstraready. RemotecontrolsCSSbyteproofandHudl pass. No merge/production.

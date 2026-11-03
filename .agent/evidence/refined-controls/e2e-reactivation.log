@@ -1,0 +1,17 @@
+
+Running 4 tests using 3 workers
+
+(node:4252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:44752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:45208) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation (1.4s)
+  ok 1 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation (1.6s)
+(node:23956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 4 [reduced-motion] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation (1.3s)
+  ok 3 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation (9.3s)
+
+  4 passed (9.8s)

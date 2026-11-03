@@ -1,0 +1,26 @@
+{
+  "source": "brand/anna-stadium/owner-original.png",
+  "sha256": "ed3b75de4751dabf7b3813cf88a25ebb861f054467f9918ec377db3c29f779cd",
+  "width": 1500,
+  "height": 1001,
+  "confirmation": "Owner confirmed this supplied PNG is a real photograph and authorized its use on 2026-11-02.",
+  "transform": "Resize without enlargement, modest fixed darkening, monochrome or muted-color grade; no synthesis or geometry edits.",
+  "outputs": [
+    {
+      "path": "public/media/anna-stadium-mono-768.webp",
+      "bytes": 36648
+    },
+    {
+      "path": "public/media/anna-stadium-color-768.webp",
+      "bytes": 41478
+    },
+    {
+      "path": "public/media/anna-stadium-mono-1500.webp",
+      "bytes": 164930
+    },
+    {
+      "path": "public/media/anna-stadium-color-1500.webp",
+      "bytes": 180668
+    }
+  ]
+}

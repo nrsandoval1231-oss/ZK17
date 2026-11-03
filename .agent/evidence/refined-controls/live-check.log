@@ -1,0 +1,22 @@
+[
+  {
+    name: 'desktop',
+    homepageHudlRequests: 0,
+    before: { paused: true, time: 0 },
+    after: { paused: false, time: 0.846354 },
+    fullscreen: true,
+    errors: [],
+    overflow: false
+  },
+  {
+    name: 'iphone-webkit',
+    homepageHudlRequests: 0,
+    before: { paused: true, time: 0 },
+    after: { paused: false, time: 0.7453542 },
+    fullscreen: null,
+    errors: [
+      'AdError 1101: The provided containerElement information: element is invalid.'
+    ],
+    overflow: false
+  }
+]

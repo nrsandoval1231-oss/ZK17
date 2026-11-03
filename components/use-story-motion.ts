@@ -23,12 +23,15 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
 
     // A single bounded timeline owns every field layer; no competing scrub triggers.
     const field = select('#on-field')[0];
-    const story = gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
+    // Keep a stable native pin spacer across refresh and breakpoint changes.
+    const fieldSpacer = select('[data-field-pin-spacer]')[0];
+    gsap.timeline({ defaults: { ease: 'none' }, scrollTrigger: {
      trigger: field, start: desktop ? 'top top' : 'top 82%',
      end: desktop ? '+=65%' : 'top 22%', pin: desktop ? field : false,
+     pinSpacer: fieldSpacer,
+     onKill: () => fieldSpacer.classList.remove('pin-spacer'),
      scrub: desktop ? .45 : true, anticipatePin: desktop ? 1 : 0, invalidateOnRefresh: true,
-    } });
-    story.fromTo('.field-photo img', { scale: 1.025 }, { scale: desktop ? 1.14 : 1.06, duration: 1 }, 0)
+    } }).fromTo('.field-photo img', { scale: 1.025 }, { scale: desktop ? 1.14 : 1.06, duration: 1 }, 0)
      .fromTo('.field-mark', { xPercent: 10, yPercent: 3 }, { xPercent: -9, yPercent: -4, duration: 1 }, 0)
      .fromTo('.field-lockup h2', { yPercent: 12, opacity: .9 }, { yPercent: 0, opacity: 1, duration: .48 }, .05)
      .fromTo('.field-base, .field-caption', { y: 12, opacity: .9 }, { y: 0, opacity: 1, duration: .35 }, .5);

@@ -1,0 +1,41 @@
+{
+  "origin": "https://cinematic-opening-dev.zk17-review.pages.dev",
+  "results": [
+    {
+      "name": "desktop",
+      "travel": 2160,
+      "motion": {
+        "frames": 200,
+        "p95ms": 25.299999952316284,
+        "longFrames": 0,
+        "maxMs": 36.5
+      },
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "name": "mobile-chromium",
+      "travel": 1350,
+      "motion": {
+        "frames": 200,
+        "p95ms": 18.100000023841858,
+        "longFrames": 0,
+        "maxMs": 26.80000001192093
+      },
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "name": "iphone-webkit",
+      "travel": 1350.001,
+      "motion": {
+        "frames": 200,
+        "p95ms": 47,
+        "longFrames": 6,
+        "maxMs": 54
+      },
+      "errors": [],
+      "overflow": false
+    }
+  ]
+}

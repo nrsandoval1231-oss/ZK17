@@ -1,0 +1,21 @@
+
+Running 8 tests using 1 worker
+
+(node:15840) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [desktop-chromium] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (808ms)
+  ok 2 [desktop-chromium] › tests\e2e\cinema-framing.spec.ts:21:5 › Film route offers complete duration without autoplay or a scroll recut (467ms)
+(node:18400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 3 [mobile-chromium] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (767ms)
+  ok 4 [mobile-chromium] › tests\e2e\cinema-framing.spec.ts:21:5 › Film route offers complete duration without autoplay or a scroll recut (416ms)
+(node:12532) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 5 [iphone-webkit] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (1.3s)
+  ok 6 [iphone-webkit] › tests\e2e\cinema-framing.spec.ts:21:5 › Film route offers complete duration without autoplay or a scroll recut (932ms)
+(node:39812) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 7 [reduced-motion] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (549ms)
+  ok 8 [reduced-motion] › tests\e2e\cinema-framing.spec.ts:21:5 › Film route offers complete duration without autoplay or a scroll recut (188ms)
+
+  8 passed (7.6s)

@@ -1,0 +1,18 @@
+{
+  "immutable": "https://00b39a31.zk17-review.pages.dev",
+  "source": "2ec0a703155f8917544215834d2b332cf6e30894",
+  "results": [
+    {
+      "url": "https://cinematic-opening-dev.zk17-review.pages.dev/highlights/",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "hasHighlightsLink": true
+    },
+    {
+      "url": "https://zephyrkreye.com/",
+      "status": 200,
+      "noindex": null,
+      "hasHighlightsLink": false
+    }
+  ]
+}

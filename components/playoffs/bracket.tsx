@@ -3,7 +3,6 @@ import {useEffect,useRef} from 'react';
 import {loadPlayoffMotion} from '@/lib/playoffs/motion';
 import {filterGames,rounds,regionNames,type PlayoffGame,type Tournament,type Region,type RoundIndex} from '@/lib/playoffs/tournament';
 import TeamMark from './team-mark';
-import StoryArrow from '@/components/story-arrow';
 import {statusLabels} from './game-center';
 import styles from './playoffs.module.css';
 export type RegionFilter=Region|'all'|'state';
@@ -12,8 +11,8 @@ export function MatchupCard({game,tournament,onOpen,list=false}:{game:PlayoffGam
  return <button data-game-card data-anna={anna||undefined} className={`${styles.matchupCard} ${list?styles.listCard:''}`} onClick={()=>onOpen(game)}>
   <span className="sr-only">Game details: {rounds[game.round].name}. </span><span className={styles.cardMeta}>{game.id.toUpperCase()} <span>{statusLabels[game.status]}</span></span>
   {[game.homeTeamId,game.awayTeamId].map((id,index)=>{const team=tournament.teams.find(team=>team.id===id);return <span className={styles.cardTeam} key={index} data-winner={id&&game.winnerTeamId===id||undefined}><span>{team?.id==='anna'&&team.logo?<TeamMark team={team}/>:null}{team?.name??(game.feederIds.length?`Winner of ${game.feederIds[index].toUpperCase()}`:game.seedLabels[index])}</span><strong>{['live','final'].includes(game.status)?(index===0?game.homeScore:game.awayScore)??'—':'—'}</strong></span>;})}
-  <span className={styles.cardFooter}>{anna?'ANNA’S VERIFIED BRACKET POSITION':'OPEN GAME CENTER'} <StoryArrow/></span>
- </button>;
+  <span className={styles.cardFooter}>{anna?'ANNA’S VERIFIED BRACKET POSITION':'OPEN GAME CENTER'}</span>
+</button>;
 }
 function Board({tournament,region,onOpen}:{tournament:Tournament;region:Region|'state';onOpen:(game:PlayoffGame)=>void}){
  const roundIds=region==='state'?[4,5]:[0,1,2,3];
@@ -43,5 +42,5 @@ export default function Bracket({tournament,region,round,list,onOpen}:{tournamen
  const games=filterGames(tournament,region,round);
  if(list||round!==null)return <div ref={motionRoot} className={styles.matchupList} aria-live="polite">{games.length?games.map(game=><MatchupCard list key={game.id} game={game} tournament={tournament} onOpen={onOpen}/>):<p className={styles.pending}>This round belongs to {region==='state'?'a regional bracket':'the state stage'}. Choose All regions to see every game in this round.</p>}</div>;
  const boards: (Region|'state')[]=region==='all'?[1,2,3,4,'state']:[region];
- return <div ref={motionRoot}><div className={styles.scrollTools}><p>FOLLOW THE CONNECTORS <span aria-hidden="true">→</span> Swipe or use arrow keys to explore.</p><div><button onClick={()=>rail.current?.scrollBy({left:-296,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})} aria-label="Scroll bracket left"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20"><path d="M16 10H4m0 0 5-5m-5 5 5 5" fill="none" stroke="currentColor" strokeWidth="1.4"/></svg></button><button onClick={()=>rail.current?.scrollBy({left:296,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})} aria-label="Scroll bracket right"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 20 20"><path d="M4 10h12m0 0-5-5m5 5-5 5" fill="none" stroke="currentColor" strokeWidth="1.4"/></svg></button></div></div><div ref={rail} className={styles.bracketRail} role="region" aria-label="Interactive tournament bracket" tabIndex={0}>{boards.map(r=><Board key={r} tournament={tournament} region={r} onOpen={onOpen}/>)}</div></div>;
+ return <div ref={motionRoot}><div className={styles.scrollTools}><p>FOLLOW THE CONNECTORS. Swipe or use your keyboard to explore.</p><div><button onClick={()=>rail.current?.scrollBy({left:-296,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})} aria-label="Previous bracket section">PREVIOUS</button><button onClick={()=>rail.current?.scrollBy({left:296,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})} aria-label="Next bracket section">NEXT</button></div></div><div ref={rail} className={styles.bracketRail} role="region" aria-label="Interactive tournament bracket" tabIndex={0}>{boards.map(r=><Board key={r} tournament={tournament} region={r} onOpen={onOpen}/>)}</div></div>;
 }

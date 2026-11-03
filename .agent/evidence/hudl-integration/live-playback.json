@@ -1,0 +1,462 @@
+[
+  {
+    "name": "desktop",
+    "before": [
+      {
+        "paused": true,
+        "currentTime": 0
+      }
+    ],
+    "playing": [
+      {
+        "paused": false,
+        "currentTime": 1.540319
+      },
+      {
+        "paused": true,
+        "currentTime": 0
+      },
+      {
+        "paused": true,
+        "currentTime": 0
+      },
+      {
+        "paused": true,
+        "currentTime": 0
+      },
+      {
+        "paused": true,
+        "currentTime": 0
+      }
+    ],
+    "controls": [
+      {
+        "tag": "DIV",
+        "label": "Video Player",
+        "title": null,
+        "class": "jwplayer jw-reset jw-state-playing jw-stretch-uniform jw-flag-aspect-mode jw-breakpoint-4 jw-no-focus"
+      },
+      {
+        "tag": "VIDEO",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "VIDEO",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "IFRAME",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "IFRAME",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "VIDEO",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "VIDEO",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "IFRAME",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "IFRAME",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "DIV",
+        "label": "Rewind 10 Seconds",
+        "title": null,
+        "class": "jw-icon jw-icon-rewind jw-button-color jw-reset"
+      },
+      {
+        "tag": "DIV",
+        "label": "Pause",
+        "title": null,
+        "class": "jw-icon jw-icon-display jw-button-color jw-reset"
+      },
+      {
+        "tag": "DIV",
+        "label": "Next",
+        "title": null,
+        "class": "jw-icon jw-icon-next jw-button-color jw-reset"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "Next Up Close",
+        "title": null,
+        "class": "jw-icon jw-nextup-close jw-reset"
+      },
+      {
+        "tag": "DIV",
+        "label": "quality",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-settings-quality jw-submenu-quality"
+      },
+      {
+        "tag": "DIV",
+        "label": "sharing",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-settings-sharing jw-submenu-sharing"
+      },
+      {
+        "tag": "DIV",
+        "label": "Close Settings",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-settings-close"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "facebook",
+        "title": null,
+        "class": "jw-reset jw-settings-content-item jw-sharing-link"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "twitter",
+        "title": null,
+        "class": "jw-reset jw-settings-content-item jw-sharing-link"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "email",
+        "title": null,
+        "class": "jw-reset jw-settings-content-item jw-sharing-link"
+      },
+      {
+        "tag": "DIV",
+        "label": "link",
+        "title": null,
+        "class": "jw-reset jw-settings-content-item jw-sharing-copy"
+      },
+      {
+        "tag": "DIV",
+        "label": "Play",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-playback"
+      },
+      {
+        "tag": "DIV",
+        "label": "Rewind 10 Seconds",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-rewind"
+      },
+      {
+        "tag": "DIV",
+        "label": "Next",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-next"
+      },
+      {
+        "tag": "DIV",
+        "label": "Volume",
+        "title": null,
+        "class": "jw-icon jw-icon-tooltip jw-icon-volume jw-button-color jw-reset jw-full"
+      },
+      {
+        "tag": "DIV",
+        "label": "Volume",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-volume jw-full"
+      },
+      {
+        "tag": "DIV",
+        "label": "Live",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-text-live"
+      },
+      {
+        "tag": "DIV",
+        "label": "Logo",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-logo-button"
+      },
+      {
+        "tag": "DIV",
+        "label": "Closed Captions",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-cc jw-settings-submenu-button"
+      },
+      {
+        "tag": "DIV",
+        "label": "Share Video",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-settings-sharing"
+      },
+      {
+        "tag": "DIV",
+        "label": "Settings",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-settings jw-settings-submenu-button"
+      },
+      {
+        "tag": "DIV",
+        "label": "Fullscreen",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-fullscreen"
+      },
+      {
+        "tag": "svg",
+        "label": null,
+        "title": null,
+        "class": {}
+      },
+      {
+        "tag": "svg",
+        "label": null,
+        "title": null,
+        "class": {}
+      },
+      {
+        "tag": "DIV",
+        "label": null,
+        "title": null,
+        "class": "jw-reset jw-tooltip jw-tooltip-fullscreen"
+      }
+    ],
+    "errors": [],
+    "overflow": false
+  },
+  {
+    "name": "iphone-webkit",
+    "before": [
+      {
+        "paused": true,
+        "currentTime": 0
+      },
+      {
+        "paused": true,
+        "currentTime": 0
+      },
+      {
+        "paused": true,
+        "currentTime": 0
+      }
+    ],
+    "playing": [
+      {
+        "paused": false,
+        "currentTime": 1.7800835
+      },
+      {
+        "paused": true,
+        "currentTime": 0
+      },
+      {
+        "paused": true,
+        "currentTime": 0
+      }
+    ],
+    "controls": [
+      {
+        "tag": "DIV",
+        "label": "Video Player",
+        "title": null,
+        "class": "jwplayer jw-reset jw-state-playing jw-stretch-uniform jw-flag-aspect-mode jw-breakpoint-1 jw-flag-small-player jw-no-focus"
+      },
+      {
+        "tag": "VIDEO",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "VIDEO",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "IFRAME",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "IFRAME",
+        "label": null,
+        "title": "Advertisement",
+        "class": ""
+      },
+      {
+        "tag": "DIV",
+        "label": "Rewind 10 Seconds",
+        "title": null,
+        "class": "jw-icon jw-icon-rewind jw-button-color jw-reset"
+      },
+      {
+        "tag": "DIV",
+        "label": "Pause",
+        "title": null,
+        "class": "jw-icon jw-icon-display jw-button-color jw-reset"
+      },
+      {
+        "tag": "DIV",
+        "label": "Next",
+        "title": null,
+        "class": "jw-icon jw-icon-next jw-button-color jw-reset"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "Next Up Close",
+        "title": null,
+        "class": "jw-icon jw-nextup-close jw-reset"
+      },
+      {
+        "tag": "DIV",
+        "label": "quality",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-settings-quality jw-submenu-quality"
+      },
+      {
+        "tag": "DIV",
+        "label": "sharing",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-settings-sharing jw-submenu-sharing"
+      },
+      {
+        "tag": "DIV",
+        "label": "Close Settings",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-settings-close"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "facebook",
+        "title": null,
+        "class": "jw-reset jw-settings-content-item jw-sharing-link"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "twitter",
+        "title": null,
+        "class": "jw-reset jw-settings-content-item jw-sharing-link"
+      },
+      {
+        "tag": "BUTTON",
+        "label": "email",
+        "title": null,
+        "class": "jw-reset jw-settings-content-item jw-sharing-link"
+      },
+      {
+        "tag": "DIV",
+        "label": "link",
+        "title": null,
+        "class": "jw-reset jw-settings-content-item jw-sharing-copy"
+      },
+      {
+        "tag": "DIV",
+        "label": "Play",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-playback"
+      },
+      {
+        "tag": "DIV",
+        "label": "Rewind 10 Seconds",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-rewind"
+      },
+      {
+        "tag": "DIV",
+        "label": "Next",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-next"
+      },
+      {
+        "tag": "DIV",
+        "label": "Volume",
+        "title": null,
+        "class": "jw-icon jw-icon-tooltip jw-icon-volume jw-button-color jw-reset jw-full"
+      },
+      {
+        "tag": "DIV",
+        "label": "Volume",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-volume jw-full"
+      },
+      {
+        "tag": "DIV",
+        "label": "Live",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-text-live"
+      },
+      {
+        "tag": "DIV",
+        "label": "Logo",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-logo-button"
+      },
+      {
+        "tag": "DIV",
+        "label": "AirPlay",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-airplay jw-off"
+      },
+      {
+        "tag": "DIV",
+        "label": "Closed Captions",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-cc jw-settings-submenu-button"
+      },
+      {
+        "tag": "DIV",
+        "label": "Share Video",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-settings-sharing"
+      },
+      {
+        "tag": "DIV",
+        "label": "Settings",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-settings jw-settings-submenu-button"
+      },
+      {
+        "tag": "DIV",
+        "label": "Fullscreen",
+        "title": null,
+        "class": "jw-icon jw-icon-inline jw-button-color jw-reset jw-icon-fullscreen"
+      },
+      {
+        "tag": "svg",
+        "label": null,
+        "title": null,
+        "class": {}
+      },
+      {
+        "tag": "svg",
+        "label": null,
+        "title": null,
+        "class": {}
+      },
+      {
+        "tag": "DIV",
+        "label": null,
+        "title": null,
+        "class": "jw-reset jw-tooltip jw-tooltip-fullscreen"
+      }
+    ],
+    "errors": [],
+    "overflow": false
+  }
+]

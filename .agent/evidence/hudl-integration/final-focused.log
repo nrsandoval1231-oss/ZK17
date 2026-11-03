@@ -1,0 +1,69 @@
+
+Running 40 tests using 3 workers
+
+(node:19936) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28144) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:20520) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (2.6s)
+  ok  3 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (2.8s)
+  ok  2 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (2.8s)
+  ok  6 [desktop-chromium] › tests\e2e\cinema-framing.spec.ts:22:5 › Film route offers complete duration without autoplay or a scroll recut (512ms)
+  ok  5 [desktop-chromium] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (1.3s)
+  ok  4 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.9s)
+  ok  8 [desktop-chromium] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (1.5s)
+  ok 10 [desktop-chromium] › tests\e2e\hudl-highlights.spec.ts:99:5 › field asset refreshes and responsive motion preserve the mounted Hudl document (997ms)
+  ok  9 [desktop-chromium] › tests\e2e\hudl-highlights.spec.ts:5:5 › Hudl highlights embed stays responsive, unobstructed, and separate from navigation (2.6s)
+(node:54476) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:58296) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 11 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (1.2s)
+  ok 12 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (2.7s)
+  ok 13 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (2.3s)
+  ok 14 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (2.4s)
+  ok 15 [mobile-chromium] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (2.4s)
+  ok 16 [mobile-chromium] › tests\e2e\cinema-framing.spec.ts:22:5 › Film route offers complete duration without autoplay or a scroll recut (520ms)
+  ok  7 [desktop-chromium] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (10.3s)
+  ok 18 [mobile-chromium] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (1.0s)
+(node:13364) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 19 [mobile-chromium] › tests\e2e\hudl-highlights.spec.ts:99:5 › field asset refreshes and responsive motion preserve the mounted Hudl document (1.2s)
+(node:8188) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 20 [mobile-chromium] › tests\e2e\hudl-highlights.spec.ts:5:5 › Hudl highlights embed stays responsive, unobstructed, and separate from navigation (2.1s)
+(node:47396) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 17 [mobile-chromium] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (6.2s)
+(node:32752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 22 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (5.4s)
+  ok 24 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (2.0s)
+  ok 25 [iphone-webkit] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (1.3s)
+  ok 26 [iphone-webkit] › tests\e2e\cinema-framing.spec.ts:22:5 › Film route offers complete duration without autoplay or a scroll recut (904ms)
+  ok 23 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (9.3s)
+  ok 28 [iphone-webkit] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (798ms)
+  ok 21 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (15.5s)
+  ok 27 [iphone-webkit] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (6.1s)
+(node:55924) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 31 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (2.0s)
+  ok 32 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (2.1s)
+  ok 29 [iphone-webkit] › tests\e2e\hudl-highlights.spec.ts:5:5 › Hudl highlights embed stays responsive, unobstructed, and separate from navigation (8.9s)
+(node:41140) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 33 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (2.1s)
+  ok 34 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.8s)
+  ok 36 [reduced-motion] › tests\e2e\cinema-framing.spec.ts:22:5 › Film route offers complete duration without autoplay or a scroll recut (251ms)
+  ok 35 [reduced-motion] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (1.3s)
+  ok 38 [reduced-motion] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (648ms)
+  ok 30 [iphone-webkit] › tests\e2e\hudl-highlights.spec.ts:99:5 › field asset refreshes and responsive motion preserve the mounted Hudl document (11.6s)
+(node:53872) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 40 [reduced-motion] › tests\e2e\hudl-highlights.spec.ts:99:5 › field asset refreshes and responsive motion preserve the mounted Hudl document (779ms)
+  ok 39 [reduced-motion] › tests\e2e\hudl-highlights.spec.ts:5:5 › Hudl highlights embed stays responsive, unobstructed, and separate from navigation (2.1s)
+  ok 37 [reduced-motion] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (4.6s)
+
+  40 passed (47.1s)

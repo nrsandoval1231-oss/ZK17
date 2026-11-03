@@ -1,0 +1,82 @@
+
+> zk17-official@0.1.0 test
+> tsx --test tests/*.test.ts
+
+✔ every distributed campaign photo is included in the preview-only release boundary (21.3644ms)
+✔ CLS uses the largest separated session, not the sum of all shifts (0.5673ms)
+✔ CLS splits at the strict five-second boundary and excludes recent input (0.1903ms)
+✔ filtered capture output is isolated, and unknown/unsafe cases fail (0.7798ms)
+✔ metric collection rejects error/missing-hero pages without replacing prior evidence (1195.5412ms)
+✔ unknown capture invocation preserves canonical JSON and images before browser launch (4.3764ms)
+✔ cover scale fills the cinema using the contained video dimensions (0.6142ms)
+✔ unmeasured or invalid dimensions never produce an unsafe video transform (0.4991ms)
+✔ About suppresses review-only photographs and an empty gallery when preview mode is disabled (12.4305ms)
+✔ About uses source-backed approved scene photographs in either mode (1.1906ms)
+✔ TwoWorlds omits missing photographs without visual or accessible original-pending labels (0.9473ms)
+✔ approved full monochrome upload remains byte-identical and retains duration (23.8816ms)
+▶ public NIL inquiry contact
+  ✔ stays unpublished without a record and fails closed at every approval gate (0.5523ms)
+  ✔ returns an approved email with an encoded NIL inquiry subject (0.5407ms)
+  ✔ accepts only clean HTTPS contact URLs (0.1679ms)
+  ✔ rejects malformed email destinations and control characters (0.1384ms)
+  ✔ renders only a pending message when no public contact or social profiles exist (4.8001ms)
+  ✔ renders every approved social profile as an accessible external link (0.9655ms)
+  ✔ renders the approved contact action with its exact safe destination (0.3838ms)
+✔ public NIL inquiry contact (8.3746ms)
+✔ publishes only the owner-approved inquiry destinations with distinct intents (5.0543ms)
+▶ public content eligibility
+  ✔ keeps only source-backed approved media and linked highlights (0.9426ms)
+  ✔ requires source, date, season, and game count before stats appear (0.2111ms)
+  ✔ keeps uncommitted as the only commitment state and holds empty offers/partners/socials (0.1959ms)
+  ✔ uses only source-backed approved photo assignments and prefers them over preview fallbacks (0.2424ms)
+  ✔ keeps commitment content absent by default and renders only an approved enabled record (15.0111ms)
+✔ public content eligibility (18.3191ms)
+✔ uses the exact owner upload for Anna while preserving its dimensions and artwork with an exterior alpha mask (49.2041ms)
+✔ still blocks public release when the original logo is missing (4.5291ms)
+✔ shows only verified game relationships backed by rights-approved public film (0.6246ms)
+✔ recognizes the captured 2026 placeholder page without publishing or touching timestamps (28.1934ms)
+✔ imports explicit qualifiers including a one-sided pair and does not invent a kickoff (27.7571ms)
+✔ uses stable school identities, imports explicit winners and advances through the existing graph (19.1625ms)
+✔ repeated pending or final polls are semantic no-ops (43.8583ms)
+✔ rejects conflicting finals atomically and does not mutate its input (20.4684ms)
+✔ rejects wrong season, division, missing nodes, changed seeds, broken edges and spoofed UIL link (17.1393ms)
+✔ does not turn numeric scores without an explicit winner into finals (13.1559ms)
+✔ rejects changed identity, unknown partial markup, and duplicate schools (49.3263ms)
+✔ accepts only linked game JSON-LD with matching identities and explicit timezone (77.8089ms)
+✔ the CLI dry-run, atomic apply, replay, repeat and conflict path use isolated artifacts (1716.551ms)
+✔ imports a controlled complete 64-team, 63-final fixture through the championship (240.0982ms)
+✔ retrieval permits only an explicitly inventoried same-host canonical redirect (4.4303ms)
+✔ rejects conflicting kickoff times from two linked game details in one source snapshot (8.6856ms)
+✔ the existing manual retriever retains successful metadata and detects repeated snapshots (187.0071ms)
+✔ semantic duplicate detection still validates source and verification metadata (10.8981ms)
+✔ an identical secondary qualifier does not replace official evidence or block unrelated facts (21.2154ms)
+✔ preserves both winners advanced in a batch when the next matchup names only one participant (12.7684ms)
+✔ late game details preserve an immutable final and do not stall subsequent polls (19.0636ms)
+✔ both workflow file guards reject unexpected paths and Git failures without external filters (1388.3013ms)
+▶ 2026 UIL tournament
+  ✔ represents 64 slots and all 63 games in the exact six-round graph (2.2898ms)
+  ✔ normalizes known aliases without fuzzy merging other schools (0.465ms)
+  ✔ advances only an explicitly verified final winner and leaves unrelated games untouched (1.4336ms)
+  ✔ rejects tied, incomplete, negative or unverified finals and winners in live games (2.1432ms)
+  ✔ keeps incomplete live scores provisional and supports postponed/canceled games (1.8479ms)
+  ✔ rejects unknown or missing opponents and an invalid winner (0.9725ms)
+  ✔ rejects conflicting evidence without silently replacing an official result (1.0639ms)
+  ✔ does not seed Anna on alignment alone and never assumes later advancement (1.4327ms)
+  ✔ filters complete regions and keeps state rounds accessible (0.6784ms)
+  ✔ rejects stale and future verification timestamps (2.851ms)
+  ✔ rejects missing propagated winners and placements outside the team district (1.4606ms)
+  ✔ rejects corrupted graph relationships and advancement conflicts (0.3633ms)
+✔ 2026 UIL tournament (23.6373ms)
+▶ release export media boundary
+  ✔ blocks preview files in public sources and in exported output even when preview mode is disabled (9.7677ms)
+  ✔ fails prebuild when commitment reveal is enabled without a published approved announcement (52.1171ms)
+✔ release export media boundary (62.7005ms)
+✔ local static host supports video byte ranges for Safari playback and seeking (129.0143ms)
+ℹ tests 62
+ℹ suites 4
+ℹ pass 62
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4741.4614

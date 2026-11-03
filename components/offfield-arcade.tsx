@@ -77,7 +77,6 @@ export default function OffFieldArcade({ features, athleteName }: { features: Of
                   <div className={styles.choices} role="group" aria-label="Choose a category">
                     {categories.map((category) => (
                       <button type="button" ref={(node) => { choiceRefs.current[category] = node; }} className={styles.choice} key={category} data-selected={selected === category} onClick={() => openCategory(category, category)}>
-                        <span className={styles.pointer} aria-hidden="true"><svg viewBox="0 0 12 14"><path d="M1 1v12l10-6z" /></svg></span>
                         <span>{category}</span>
                       </button>
                     ))}
@@ -88,7 +87,7 @@ export default function OffFieldArcade({ features, athleteName }: { features: Of
               ) : (
                 <div className={styles.detail} aria-live="polite" aria-atomic="true">
                   {details.length ? <><p className={styles.picksLabel}>HIS TOP THREE</p><ol className={styles.picks} aria-label={`Zephyr’s top three ${selected.toLowerCase()}`} role="list">{details.map((detail, index) => <li key={detail}><span className={styles.rank} aria-hidden="true">0{index + 1}</span><span className={styles.pickTitle}>{detail}</span></li>)}</ol></> : <p>{selected} details are coming soon.</p>}
-                  <button ref={backRef} type="button" className={styles.back} onClick={back}><svg aria-hidden="true" viewBox="0 0 20 20"><path d="M16 10H4m0 0 5-5m-5 5 5 5" /></svg> BACK TO MENU</button>
+                  <button ref={backRef} type="button" className={styles.back} aria-label="BACK TO MENU" onClick={back}>BACK</button>
                 </div>
               )}
             </div>

@@ -8,16 +8,20 @@ async function assertAnimatedOpening(page:Page){
  await expect(page.locator('.site-header nav a').first()).toBeHidden();
  await expect(hero.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity','0');
  const distance=await hero.evaluate(el=>parseFloat(el.parentElement!.style.paddingBottom));
- await page.evaluate(y=>scrollTo({top:y,behavior:'instant'}),distance*.5);
+ await page.evaluate(y=>scrollTo({top:y,behavior:'instant'}),distance*.70);
  await expect.poll(()=>hero.locator('[data-arrival-layer="closeup"]').evaluate(el=>Number(getComputedStyle(el).opacity))).toBeGreaterThan(.65);
  await expect(page.locator('.site-header nav a').first()).toBeHidden();
- await page.getByRole('link',{name:'Skip intro'}).click();
+ await expect(hero.getByRole('link',{name:'SCROLL TO EXPLORE',exact:true})).toHaveCount(0);
+ await page.evaluate(y=>scrollTo({top:y,behavior:'instant'}),distance*.96);
+ await expect(page.locator('.site-header')).toBeHidden();
+ await expect(page.locator('html')).toHaveAttribute('data-intro-complete','false');
+ await page.evaluate(y=>scrollTo({top:y+2,behavior:'instant'}),distance);
  await expect(page.locator('.site-header')).toBeVisible();
- await expect(page.locator('#film-room')).toBeFocused();
+ await expect(page.locator('html')).toHaveAttribute('data-intro-complete','true');
 }
 for(const origin of ['/film/','/about/'])test(`client navigation ${origin} to Home owns intro header state`,async({page})=>{
  test.setTimeout(60_000);await page.emulateMedia({reducedMotion:'no-preference'});await page.goto(origin);
- if(page.viewportSize()!.width<900)await page.getByRole('button',{name:'Menu',exact:true}).click();
+ if(page.viewportSize()!.width<900)await page.getByRole('button',{name:'MENU',exact:true}).click();
  await page.locator('#route-nav a[href="/"]').click();await expect(page).toHaveURL(/\/$/);
  await assertAnimatedOpening(page);
 });
@@ -27,7 +31,10 @@ test('reduced motion to normal starts a hidden-header intro on each activation',
  await expect(page.locator('.site-header')).toBeVisible();
  await page.emulateMedia({reducedMotion:'no-preference'});await assertAnimatedOpening(page);
  await page.emulateMedia({reducedMotion:'reduce'});await expect(page.locator('.site-header')).toBeVisible();
- await page.evaluate(()=>scrollTo({top:0,behavior:'instant'}));
+ // Return through the real section action so Film's retained anchor is released.
+ await page.getByRole('link',{name:'BACK TO TOP',exact:true}).click();
+ await expect(page).toHaveURL(/\/#arrival$/);
+ await expect.poll(()=>page.evaluate(()=>scrollY)).toBe(0);
  await page.emulateMedia({reducedMotion:'no-preference'});await assertAnimatedOpening(page);
 });
 

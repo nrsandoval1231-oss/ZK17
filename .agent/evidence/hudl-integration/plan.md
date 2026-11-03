@@ -1,0 +1,9 @@
+# Hudl integration and header button removal
+
+Owner scope2026-11-02: add official Hudl iframe to #on-field replacing its current media; remove exact header WATCH FILM button with play icon, keep other links and hero action/cinematic unchanged. Existing feature branch feat/cinematic-opening-refinement/PR11 reused; reviewed opening source remains protected. No merge/deploy authorized for new changes.
+
+Two independent Luna scopes: implementation owns site-experience.tsx/globals.css and only necessary orphan On Field motion targets in use-story-motion.ts; tests own completion and Hudl E2E. Same component contains header/media so product edits kept with one builder rather than splitting concurrent writes. Parent owns records/QA/live checks; separate Astra critic reviews integrated result.
+
+Acceptance: exact official URL, descriptive title, loading lazy, fullscreen/PiP enabled, no autoplay;16:9 without player overlays/cropping on desktop/portrait/landscape; text/style identity retained; header button+icon+dedicated handlers/styles removed; navigation and separate hero film action retained. Preserve intro source exactly. Run lint/type/unit/build plus full serialized Playwright suite; deterministic third-party mock for layout separate from real Hudl playback/fullscreen evidence. Capture screenshots; report network/iframe restrictions truthfully. Update PR11 review-only with Cloudflare skip delivery prefix; do not merge/deploy.
+
+Owner steering: additionally remove laterbackgroundmonogram; retainopeninglogo; addprovidedactionphoto incolor withsoftbackgroundedges; smallFilmRoomlogo white/transparentnoglow. These explicitchanges override priorpreserve-intro-only restriction within thisbounded scope. Original running/supportingphotos remain; duration unchanged. Finalwork assignments separate3hero files/newphoto fromFilmlogoCSS/tests. Independent finalAstrareview restarted afteruserturninterrupted earlierjobs.

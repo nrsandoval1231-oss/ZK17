@@ -1,0 +1,10 @@
+
+> zk17-official@0.1.0 lint
+> eslint .
+
+
+C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\opening-refinement.spec.ts
+  57:41  warning  'el' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 1 problem (0 errors, 1 warning)
+
