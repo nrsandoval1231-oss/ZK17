@@ -1,25 +1,13 @@
 import { test, expect } from '@playwright/test';
 
-test('scroll to explore completes the intro, reveals navigation and focuses the film section',async({page})=>{
+test('natural scrolling completes the intro and reveals navigation',async({page})=>{
  await page.emulateMedia({reducedMotion:'no-preference'});await page.goto('/');
  const hero=page.locator('#arrival');
- const explore=hero.locator('a[href="#film-room"]');
  await expect(hero).toHaveAttribute('data-arrival-motion','ready');
- await expect(explore).toBeHidden();
- await expect(page.locator('.site-header')).toBeHidden();
- await expect(page.getByText('Skip intro',{exact:true})).toHaveCount(0);
+ await expect(page.getByRole('link',{name:'SCROLL TO EXPLORE',exact:true})).toHaveCount(0);
  const distance=await hero.evaluate(el=>parseFloat(el.parentElement!.style.paddingBottom));
- expect(distance).toBeGreaterThan(0);
- // The remaining section link enters with the statement at .86–.94.
- await page.evaluate(y=>scrollTo({top:y,behavior:'instant'}),distance*.96);
- await expect(explore).toHaveAccessibleName('SCROLL TO EXPLORE');
- await expect(explore).toBeVisible();
- await expect(explore).toHaveCSS('opacity','1');
- await expect(page.locator('.site-header')).toBeHidden();
- await expect(page.locator('html')).toHaveAttribute('data-intro-complete','false');
- await explore.click();
- await expect(page.locator('.site-header')).toBeVisible();await expect(page.locator('#film-room')).toBeFocused();
- await expect.poll(()=>page.locator('#film-room').evaluate(el=>Math.abs(el.getBoundingClientRect().top))).toBeLessThan(5);
+ await page.evaluate(y=>scrollTo({top:y+2,behavior:'instant'}),distance);
+ await expect(page.locator('.site-header')).toBeVisible();
  await expect(page.locator('html')).toHaveAttribute('data-intro-complete','true');
  await expect(page.locator('.site-header').getByRole('button',{name:'WATCH FILM',exact:true})).toHaveCount(0);
  await expect(page.getByRole('button',{name:'WATCH THE FILM',exact:true})).toHaveCount(0);

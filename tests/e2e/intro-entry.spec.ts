@@ -11,18 +11,12 @@ async function assertAnimatedOpening(page:Page){
  await page.evaluate(y=>scrollTo({top:y,behavior:'instant'}),distance*.70);
  await expect.poll(()=>hero.locator('[data-arrival-layer="closeup"]').evaluate(el=>Number(getComputedStyle(el).opacity))).toBeGreaterThan(.65);
  await expect(page.locator('.site-header nav a').first()).toBeHidden();
- const explore=hero.locator('a[href="#film-room"]');
- await expect(explore).toBeHidden();
- // Finish the statement reveal before using its section link; it is not a skip action.
+ await expect(hero.getByRole('link',{name:'SCROLL TO EXPLORE',exact:true})).toHaveCount(0);
  await page.evaluate(y=>scrollTo({top:y,behavior:'instant'}),distance*.96);
- await expect(explore).toHaveAccessibleName('SCROLL TO EXPLORE');
- await expect(explore).toBeVisible();
- await expect(explore).toHaveCSS('opacity','1');
  await expect(page.locator('.site-header')).toBeHidden();
  await expect(page.locator('html')).toHaveAttribute('data-intro-complete','false');
- await explore.click();
+ await page.evaluate(y=>scrollTo({top:y+2,behavior:'instant'}),distance);
  await expect(page.locator('.site-header')).toBeVisible();
- await expect(page.locator('#film-room')).toBeFocused();
  await expect(page.locator('html')).toHaveAttribute('data-intro-complete','true');
 }
 for(const origin of ['/film/','/about/'])test(`client navigation ${origin} to Home owns intro header state`,async({page})=>{

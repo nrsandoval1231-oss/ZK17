@@ -63,6 +63,5 @@ export default function ArrivalHero({ profile, photo, photos = [] }: Props) {
       <p data-arrival-detail className={styles.school}>ANNA COYOTES / {profile.position.toUpperCase()}</p>
     </div>
     <p data-arrival-detail className={styles.footer}>PREPARATION | DISCIPLINE | RESULTS</p>
-    <a data-arrival-detail className={styles.scroll} href="#film-room">SCROLL TO EXPLORE</a>
   </section>;
 }

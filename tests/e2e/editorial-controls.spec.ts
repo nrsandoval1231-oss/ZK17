@@ -67,7 +67,7 @@ test('menu and section actions expose text labels and touch targets', async ({ p
   await expect(menu).toBeFocused();
 
   await page.goto('/');
-  for (const name of ['SCROLL TO EXPLORE', 'EXPLORE PERSONAL', 'SEE HIM ON FIELD', 'BACK TO TOP']) {
+  for (const name of ['EXPLORE PERSONAL', 'SEE HIM ON FIELD', 'BACK TO TOP']) {
     const action = page.getByRole('link', { name, exact: true });
     await expect(action, `${name} action should be present`).toHaveCount(1);
     await expectTouchTarget(action, name);
