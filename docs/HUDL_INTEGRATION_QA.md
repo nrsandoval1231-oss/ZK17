@@ -32,3 +32,5 @@ Final build/lint/type/unit/browser results and independent review will be record
 
 ![Final desktop composition](../.agent/evidence/hudl-integration/final-screenshots/desktop-statement.jpg)
 ![Final mobile composition](../.agent/evidence/hudl-integration/final-screenshots/iphone-webkit-statement.jpg)
+
+Independent Astra review accepted product commit57e2b812da0939a5509562b5d86d1ff6c5681be6 for review-only PR delivery. Hudl upstreamARIA P2 remains documented; no merge/deploy authorization. Exactsourcehashes and evidence are in final-review.md.
