@@ -1,0 +1,14 @@
+[
+  {
+    "url": "https://zephyrkreye.com",
+    "p95ms": 51,
+    "over50": 13,
+    "maxMs": 61
+  },
+  {
+    "url": "https://a720a051.zk17-review.pages.dev",
+    "p95ms": 45,
+    "over50": 2,
+    "maxMs": 55
+  }
+]
