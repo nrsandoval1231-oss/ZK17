@@ -29,6 +29,7 @@ export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Pr
   const rear = find('directors-rear');
   const white = find('directors-white');
   const running = find('directors-action');
+  const colorAction = find('owner-color-action');
   return <section ref={root} id="arrival" data-arrival-hero className={styles.hero} aria-labelledby="arrival-heading">
     <h1 id="arrival-heading" className="sr-only">MAKE THEM REMEMBER.</h1>
     <div className={styles.lights} data-arrival-layer="lights" aria-hidden="true">
@@ -46,10 +47,12 @@ export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Pr
       </picture>
     </div>
     <div className={styles.coldLogo} data-arrival-layer="cold-logo" aria-hidden="true"><Image src={brand.monogram.src} alt="" fill priority unoptimized sizes="75vw" /></div>
-    <div className={styles.monogram} data-arrival-layer="monogram" aria-hidden="true"><Image src={brand.monogram.src} alt="" fill unoptimized sizes="85vw" /></div>
+
     <PhotoLayer photo={find('campaign-closeup') ?? photo} layer="closeup" className={styles.closeup} />
     <PhotoLayer photo={athlete} layer="athlete" className={styles.athlete} decorative={false} eager />
     <PhotoLayer photo={running} layer="running" className={styles.montage} />
+    <PhotoLayer photo={colorAction} layer="color-action-glow" className={`${styles.montage} ${styles.colorActionGlow}`} />
+    <PhotoLayer photo={colorAction} layer="color-action" className={`${styles.montage} ${styles.colorAction}`} />
     <PhotoLayer photo={rear} layer="rear" className={styles.montage} />
     <PhotoLayer photo={white} layer="white" className={styles.montage} />
     <div className={styles.smokeFront} data-arrival-layer="smoke-front" aria-hidden="true" />

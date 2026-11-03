@@ -1,0 +1,39 @@
+[
+  {
+    "name": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "distance": 2160,
+    "errors": [
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Framing 'https://imasdk.googleapis.com/' violates the following report-only Content Security Policy directive: \"frame-src https://hudl.my.site.com js.stripe.com static.olark.com static.hudl.com https://static.hudl.com\". The violation has been logged, but no further action has been taken.\n",
+      "Framing 'https://imasdk.googleapis.com/' violates the following report-only Content Security Policy directive: \"frame-src https://hudl.my.site.com js.stripe.com static.olark.com static.hudl.com https://static.hudl.com\". The violation has been logged, but no further action has been taken.\n",
+      "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+      "Framing 'https://ep2.adtrafficquality.google/' violates the following report-only Content Security Policy directive: \"frame-src https://hudl.my.site.com js.stripe.com static.olark.com static.hudl.com https://static.hudl.com\". The violation has been logged, but no further action has been taken.\n",
+      "Framing 'https://ep2.adtrafficquality.google/' violates the following report-only Content Security Policy directive: \"frame-src https://hudl.my.site.com js.stripe.com static.olark.com static.hudl.com https://static.hudl.com\". The violation has been logged, but no further action has been taken.\n"
+    ],
+    "overflow": false
+  },
+  {
+    "name": "iphone-webkit",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "distance": 1350.001,
+    "errors": [],
+    "overflow": false
+  },
+  {
+    "name": "landscape-webkit",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "distance": 624.001,
+    "errors": [],
+    "overflow": false
+  }
+]

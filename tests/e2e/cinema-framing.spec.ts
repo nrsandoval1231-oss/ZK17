@@ -15,7 +15,8 @@ test('Act II always contains full monochrome film with accessible native control
   await expect(video).toHaveCSS('transform','none');
  }
  await expect(page.getByText(/WATCH WITH SOUND/i)).toHaveCount(0);
- await expect(page.locator('#film-room img')).toHaveCSS('filter','brightness(0)');
+ await expect(page.locator('#film-room img')).toHaveCSS('filter','none');
+ await expect(page.locator('#film-room img')).toHaveAttribute('src','/brand/zk17-monogram-512-v2.png');
 });
 
 test('Film route offers complete duration without autoplay or a scroll recut',async({page})=>{

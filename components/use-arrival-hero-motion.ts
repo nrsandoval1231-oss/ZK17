@@ -21,16 +21,15 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       const beams = lights.querySelectorAll<HTMLElement>('[data-arrival-beam]');
       const smokeBack = layer('smoke-back')!;
       const smokeFront = layer('smoke-front')!;
-      const photoNames = ['athlete', 'closeup', 'rear', 'white', 'running'];
+      const photoNames = ['athlete', 'closeup', 'rear', 'white', 'running', 'color-action-glow', 'color-action'];
       const photos = photoNames.map(name => layer(name)).filter((item): item is HTMLElement => Boolean(item));
       const coldLogo = layer('cold-logo');
       const stadium = layer('stadium');
       const stadiumColor = layer('stadium-color');
-      const monogram = layer('monogram');
       const grain = layer('grain');
       const copy = element.querySelector('[data-arrival-statement]');
       const details = element.querySelectorAll('[data-arrival-detail]');
-      gsap.set([coldLogo, lights, smokeBack, smokeFront, stadium, stadiumColor, monogram, grain, ...photos].filter(Boolean), { opacity: 0 });
+      gsap.set([coldLogo, lights, smokeBack, smokeFront, stadium, stadiumColor, grain, ...photos].filter(Boolean), { opacity: 0 });
       gsap.set(photos, { y: 0, scale: 1.02 });
       gsap.set(beams, { opacity: 0 });
       gsap.set(smokeBack, { opacity: .25 });
@@ -68,7 +67,7 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
         .to(stadium, { opacity: .8, duration: .13 }, .27)
         .to(stadium, { opacity: .22, scale: 1.035, duration: .15 }, .40)
         .to(stadiumColor, { opacity: .25, duration: .09 }, .27)
-        .to(monogram, { opacity: .29, duration: .16 }, .60);
+        ;
       // Keep smoke drift in its CSS-owned animation so GSAP never competes for
       // its transform.
       const reveal = (name: string, at: number, duration: number, opacity: number, scale: number) => {
@@ -82,6 +81,8 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       reveal('rear', .64, .09, .72, 1);
       reveal('white', .70, .09, .72, 1);
       reveal('running', .76, .09, .72, 1);
+      reveal('color-action-glow', .82, .07, .55, 1.04);
+      reveal('color-action', .82, .07, .9, 1);
       timeline.to([copy, ...details], { autoAlpha: 1, duration: .08 }, .86)
         .to({}, { duration: .06 }, .94);
       const skip = element.querySelector<HTMLAnchorElement>('a[href="#film-room"]');
