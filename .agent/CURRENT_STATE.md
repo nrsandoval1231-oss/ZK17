@@ -15,3 +15,5 @@ Owner screenshot correction: hero WATCH THE FILM button removed too, with its ca
 Currentownerrequest: moveHudltoownHIGHLIGHTS /highlights/,keepFILMcinematic;restoreapprovedhomepagefieldphoto.3Lunabuilderscompleted;shared6linknav/metadata/sitemap/newroute. Buildlinttype62unitpass. Initialfull192pass7skip5fail;4testlocatorfixed1WebKitRSCtransientnotreproduced;28affectedpass. Finalfullrerunpending;independentreviewreadyDEVwithdocumentedvendorlimits. QA docs/HIGHLIGHTS_PAGE_QA.md. NextcommitPR11/devpreviewonly;no merge/production.
 
 FinalHIGHLIGHTSsuite197pass7existingskips0fail;62unit/buildlinttype/indexingpass. IndependentreviewreadyDEV. PublishingPR11andDEVpreview source; no merge/production.
+
+HIGHLIGHTSdelivered:PR11source2ec0a703, DEV https://cinematic-opening-dev.zk17-review.pages.dev/highlights/ immutablehttps://00b39a31.zk17-review.pages.dev. Remote desktop/iPhone-WebKitrealplayback andnavigation/nohomepageHudl/nooverflow/errors pass; Chromiumfullscreenpass.197fullbrowserpass7skips,62unit/buildlinttypepass. ProductionhomeHTTP200hasnoHighlightsnav;mainuntouched,PRunmerged. Ownerreviewnext.

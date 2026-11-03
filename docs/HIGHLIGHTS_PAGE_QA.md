@@ -18,3 +18,5 @@ Evidence, source fingerprint and independent review: ../.agent/evidence/highligh
 ![Mobile Highlights](../.agent/evidence/highlights-page/iphone-webkit.jpg)
 
 Final full-browser rerun:197passed,7existingconditional skips,0failures (e2e-final.log), exit0. This includes the repaired navigation assertion and the previously transient WebKit route loop. All62unit tests and build/lint/type/export indexing checks pass. Independent review cleared owner-authorizedDEVpreview; vendor manual-review limitations remain.
+
+DEV delivery verified: https://cinematic-opening-dev.zk17-review.pages.dev/highlights/ ; immutable https://00b39a31.zk17-review.pages.dev at source2ec0a703. Remote real playback, active navigation and homepage separation passed desktop/iPhone-sizedWebKit; desktop fullscreen passed. Preview noindex; production unchanged; PR11unmerged. See live-remote.json and deploy-receipt.json.

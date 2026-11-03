@@ -34,3 +34,9 @@ Reviewer: separately dispatched Astra critic. Baseline/HEAD during review: bc354
 Final aggregate SHA-256: c9329ab3c63bd331b20a3f02ed76567f814df4666fcd1d5b0ce2d237c774edf7. Computed as SHA-256 of JSON of sorted [relativePath, fileSha256] pairs for these 11 files: app/globals.css; app/highlights/highlights.module.css; app/highlights/page.tsx; app/sitemap.ts; components/route-header.tsx; components/site-experience.tsx; components/use-story-motion.ts; content/navigation.ts; tests/e2e/arrival-campaign.spec.ts; tests/e2e/hudl-highlights.spec.ts; tests/e2e/site.spec.ts. Final Hudl spec hash: 64a8ce287b79e31f33c3935a92d7f72e8278434e6d62bc528e3f7c7d3c66d3cc. Final globals hash: 883f36ec6e5ec71f1b01d8b1719f967f4900fc4fe5d18713bd87d701d8045f0f.
 
 No merge, deployment, production change, or routine implementation performed by reviewer.
+
+## Final full-suite addendum
+
+Independently inspected e2e-final.log after the lead repeated the complete suite: 197 passed, 7 conditional skips, zero failures (1.6 minutes). This supersedes the earlier statement that no full run followed the locator repair; the original failed run remains historical evidence. Recomputed the same 11-file aggregate and confirmed it is unchanged: c9329ab3c63bd331b20a3f02ed76567f814df4666fcd1d5b0ce2d237c774edf7. Current product commit at this check: 2ec0a703155f8917544215834d2b332cf6e30894.
+
+Verdict remains READY FOR AUTHORIZED DEVELOPMENT PREVIEW. The current deterministic suite passes. The upstream Axe INCOMPLETE/manual-review findings, physical-device/PiP limits, and lack of a proven root cause for the earlier non-reproducing RSC event remain as documented. Reviewer did not deploy or merge; deployed-preview verification is still separate evidence.
