@@ -15,3 +15,5 @@ Owner reports physical iPhone jitter despite prior browser checks. Branch fix/ip
 
 ## Repair ready for DEV phone retest
 Final source reviewed by independent Astra; no unresolved material findings. Lead build/typecheck/lint pass, unit62pass. Integrated67pass plus1artifactcleanupfailure; affected case isolated rerun1pass. Independent12browserchecks+6earlyloadprobes pass. Evidence .agent/evidence/iphone-scroll/QA.md and review.md. Desktop behavior, rotation/reducedmotion/anchors retained. Physical-iPhone symptom not yet confirmed fixed; publish DEV and open PR, keep production2b788fc unchanged pending owner retest.
+
+DEV deployed product35379f0 as78c08eb7, immutable https://78c08eb7.zk17-review.pages.dev; alias https://cinematic-opening-dev.zk17-review.pages.dev. Live desktop/WebKit startup/rotation/forwardreverse/nooverflow/noerrors pass; preview noindex verified. PR12 https://github.com/nrsandoval1231-oss/ZK17/pull/12. Production unchanged2b788fc. A live script rotation-settlement false negative was diagnosed and corrected, no additional product edit. Await owner physical iPhone swipe retest before merge/release. Evidence in iphone-scroll/QA.md.

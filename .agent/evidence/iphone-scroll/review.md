@@ -1,3 +1,14 @@
+## Deployed candidate clarification and reversal verification
+
+Deployed product:35379f0e4c787aa6be27de8541a43ea1c8af16c5 at https://78c08eb7.zk17-review.pages.dev. Independently confirmed current app/components/lib/content/public/package worktree diff against this commit is empty, and hero hook SHA256 remainsBC61A62987D142AC71394FEEE0F67884F24719EB2A6308971963B13B87DB8D36. No product change was needed for the following verification-script failure.
+
+The first live script falsely reported a missing cold logo after reversal. Its rotation check examined only scrollY/travel≈0.5, which also held before the new geometry applied. Independent exact-script instrumentation showed: landscape viewport844 still had old heroheight844/travel1350/y675; immediate return to portrait also passed; reversal initially reachedy0/logo0.9, then an outstanding180ms rotation timer restoredy675/logo0. This was a scripted programmatic-scroll race, not evidence that timeline invalidation lost its start state. Native touch/wheel/keyboard input already cancels pending rotation restoration.
+
+The corrected script waits for landscape travel624/height390 and portrait travel1350/height844 before checking normalized position and reversal. Independent remote checks against the unchanged deployed product passed desktop original sequence5/5 and WebKit geometry-aware rotation/reversal3/3; each finishedy0/logo0.9/all six inspected athlete-photo layersopacity0, including a further400ms check. latest live-dev.json independently read: desktop/WebKit early scroll and forward/reverse pass, WebKit rotation pass, no pageerrors, no overflow, noindex present.
+
+Verdict remains READY FOR DEV PHYSICAL-PHONE RETEST. These checks verify the exact development candidate; physical-iPhone smoothness and production acceptance remain unverified. A test-only regression addition may follow without changing this product verdict.
+
+---
 # Final scoped verdict: READY FOR DEV PHONE RETEST
 
 No unresolved material findings on the frozen local source reviewed below. This accepts a development preview for owner physical-iPhone evaluation; it does not establish that the reported physical-device jitter is resolved and does not approve production deployment.
@@ -53,4 +64,3 @@ New mobile scene height is measured from a separate100svh probe, avoiding Scroll
 - Recommendations sent: wait for fonts and settled nonzero pin geometry; verify actual requested normalized scroll before rotation; sample every toolbar step (height, top, travel, scrollY, opacity), with animation settlement rather than a fixed short sleep. Do not weaken equality/tolerance assertions or assume physical-iPhone smoothness.
 
 Pending: final candidate freeze, independent rerun, parent integrated deterministic checks, scoped final verdict. Physical iPhone smoothness and hardware frame rate remain UNKNOWN; DEV preview is for owner phone retest, not production acceptance.
-
