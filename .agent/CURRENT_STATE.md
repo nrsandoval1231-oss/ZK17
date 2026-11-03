@@ -7,3 +7,7 @@ Implementation complete, reviewed source freeze pending finalAstrarecord. Stable
 Newphoto original/hash preserved underbrand/owner-action, existingpreviewgates/manifest retained; canonicalwhitealphaPNG reusedwithoutredraw. Finalshotsdesktop/portrait/landscape inspected. Next: finalindependentreview record, commit/push/updatePR11 using Cloudflareskipprefix, no merge/deploy. Existingdevelopmentpreviewstill earlier e2820d3 version. Owner review next.
 
 FinalAstrareview complete:57e2b81 readyforreview-onlyPRwithknownHudlupstreamARIA P2. Final40affectedchecks/62unitpass. PR11beingupdated; allnewcommits useCF-Pages-Skip, no deploy/merge. Ownerreviewnext.
+
+Owner-authorized final development preview deployed: https://cinematic-opening-dev.zk17-review.pages.dev immutable https://1e4d6181.zk17-review.pages.dev source1ffef06. Live desktop/iPhone-WebKit verifies coldlogo, removedlatermark/headerbutton, newcolorphoto+originalrunning, whiteFilmRoommark, realHudlpausedinitialthenplayback. No pageerrors/overflow, noindex present, colorbytesmatch. ProductionHTTP200stillpreviousversion. Receipt .agent/evidence/hudl-integration/dev-final-receipt.json. PR11 remains unmerged; ownertestingnext.
+
+Owner screenshot correction: hero WATCH THE FILM button removed too, with its callback chain/styles. FILMnavigation/Hudl retained. Type/lint/buildpass;23focusedbrowserpass1existingskip. UpdatingPRandowner-authorizeddevelopmentpreview; productionuntouched.

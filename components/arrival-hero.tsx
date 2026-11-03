@@ -8,7 +8,7 @@ import styles from './arrival-hero.module.css';
 import { brand } from '@/content/brand';
 
 type Photo = PreviewPhoto | ScenePhoto;
-type Props = { profile: PublicProfile; photo?: Photo; photos?: Photo[]; onWatch: (button: HTMLButtonElement) => void };
+type Props = { profile: PublicProfile; photo?: Photo; photos?: Photo[] };
 
 function PhotoLayer({ photo, layer, className, decorative = true, eager = false }: { photo?: Photo; layer: string; className: string; decorative?: boolean; eager?: boolean }) {
   if (!photo) return null;
@@ -21,7 +21,7 @@ function PhotoLayer({ photo, layer, className, decorative = true, eager = false 
   </div>;
 }
 
-export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Props) {
+export default function ArrivalHero({ profile, photo, photos = [] }: Props) {
   const root = useRef<HTMLElement>(null);
   useArrivalHeroMotion(root);
   const find = (id: string) => photos.find(item => item.id === id);
@@ -61,7 +61,6 @@ export default function ArrivalHero({ profile, photo, photos = [], onWatch }: Pr
       <p data-arrival-detail className={styles.identity}>{profile.name.toUpperCase()} / QB {profile.number}</p>
       <h1 id="hero-title" aria-hidden="true"><span>MAKE THEM</span>{' '}<span>REMEMBER.</span></h1>
       <p data-arrival-detail className={styles.school}>ANNA COYOTES / {profile.position.toUpperCase()}</p>
-      <button data-arrival-detail className={styles.watch} type="button" onClick={event => onWatch(event.currentTarget)}>WATCH THE FILM <span aria-hidden="true">↗</span></button>
     </div>
     <a className={styles.skip} href="#film-room">Skip intro ↓</a>
     <p data-arrival-detail className={styles.footer}>PREPARATION | DISCIPLINE | RESULTS</p>
