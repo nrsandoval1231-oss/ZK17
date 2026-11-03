@@ -1,0 +1,25 @@
+{
+  "origin": "https://78c08eb7.zk17-review.pages.dev",
+  "results": [
+    {
+      "name": "desktop",
+      "initialDistance": 2160,
+      "earlyScrollStable": true,
+      "rotation": false,
+      "forwardReverse": true,
+      "errors": [],
+      "overflow": false,
+      "noindex": true
+    },
+    {
+      "name": "iphone-webkit",
+      "initialDistance": 1350.001,
+      "earlyScrollStable": true,
+      "rotation": true,
+      "forwardReverse": true,
+      "errors": [],
+      "overflow": false,
+      "noindex": true
+    }
+  ]
+}

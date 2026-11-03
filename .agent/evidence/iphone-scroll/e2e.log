@@ -1,0 +1,178 @@
+
+Running 64 tests using 3 workers
+
+(node:12672) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:38092) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14916) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  3 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (402ms)
+  ok  2 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (687ms)
+  ok  5 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (343ms)
+  ok  4 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (1.3s)
+  ok  6 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (1.1s)
+  ok  7 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (974ms)
+  ok  8 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (881ms)
+  ok  9 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.3s)
+  ok  1 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:16:5 › six primary links navigate to separate pages and identify the active route (4.5s)
+  ok 12 [desktop-chromium] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (346ms)
+  ok 13 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (533ms)
+  ok 14 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (503ms)
+  ok 11 [desktop-chromium] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (2.0s)
+  ok 16 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (424ms)
+  x  10 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:47:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress (2.9s)
+  ok 15 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (942ms)
+(node:58108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23620) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 17 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (450ms)
+(node:42964) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 20 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (501ms)
+  ok 21 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (332ms)
+  ok 19 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (1.3s)
+  ok 18 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:16:5 › six primary links navigate to separate pages and identify the active route (2.0s)
+  ok 22 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (1.4s)
+  ok 23 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (1.4s)
+  ok 24 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (1.2s)
+  ok 25 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.3s)
+  ok 28 [mobile-chromium] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (357ms)
+  ok 27 [mobile-chromium] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (2.1s)
+  ok 29 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (1.4s)
+  ok 26 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:47:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress (3.3s)
+  ok 32 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (455ms)
+  ok 31 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (879ms)
+  ok 30 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (1.5s)
+(node:58496) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:60268) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:19384) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 35 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (923ms)
+  ok 33 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (1.8s)
+  ok 37 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (1.2s)
+  ok 36 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (4.3s)
+  ok 39 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (4.2s)
+  ok 34 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:16:5 › six primary links navigate to separate pages and identify the active route (9.5s)
+  ok 41 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (2.6s)
+  ok 38 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (12.9s)
+  x  42 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:47:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress (3.8s)
+(node:23036) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 44 [iphone-webkit] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (972ms)
+  ok 40 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (9.1s)
+  ok 45 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (2.6s)
+  ok 46 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (2.9s)
+  ok 48 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (1.4s)
+  ok 43 [iphone-webkit] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (7.3s)
+(node:6096) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32388) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 49 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (475ms)
+  ok 51 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (299ms)
+  ok 50 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:16:5 › six primary links navigate to separate pages and identify the active route (1.5s)
+  ok 52 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (1.3s)
+  ok 53 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (416ms)
+  ok 55 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (1.1s)
+  ok 47 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (6.8s)
+  ok 54 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (1.6s)
+(node:56180) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 56 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (1.3s)
+  ok 58 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.4s)
+  ok 60 [reduced-motion] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (434ms)
+  ok 61 [reduced-motion] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (548ms)
+  ok 59 [reduced-motion] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (2.5s)
+  ok 62 [reduced-motion] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (545ms)
+  ok 64 [reduced-motion] › tests\e2e\intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (521ms)
+  ok 63 [reduced-motion] › tests\e2e\intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (964ms)
+  x  57 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:47:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress (3.2s)
+
+
+  1) [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:47:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      58 |   samples.push(await readState());
+      59 |  }
+    > 60 |  expect(samples.every(sample=>Math.abs(sample.distance-before.distance)<1)).toBe(true);
+         |                                                                             ^
+      61 |  expect(samples.every(sample=>sample.height===before.height)).toBe(true);
+      62 |  expect(samples.every(sample=>Math.abs(sample.top-before.top)<1)).toBe(true);
+      63 |  expect(samples.every(sample=>Math.abs(sample.scrollY-before.scrollY)<1)).toBe(true);
+        at C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\arrival-directors-cut.spec.ts:60:77
+
+    Error Context: test-results\arrival-directors-cut-mobi-bcdd9-scene-or-its-scrub-progress-desktop-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\arrival-directors-cut-mobi-bcdd9-scene-or-its-scrub-progress-desktop-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\arrival-directors-cut-mobi-bcdd9-scene-or-its-scrub-progress-desktop-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:47:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      62 |  expect(samples.every(sample=>Math.abs(sample.top-before.top)<1)).toBe(true);
+      63 |  expect(samples.every(sample=>Math.abs(sample.scrollY-before.scrollY)<1)).toBe(true);
+    > 64 |  expect(samples.every(sample=>Math.abs(sample.athlete-before.athlete)<.02)).toBe(true);
+         |                                                                             ^
+      65 |  await context.close();
+      66 | });
+      67 |
+        at C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\arrival-directors-cut.spec.ts:64:77
+
+    Error Context: test-results\arrival-directors-cut-mobi-bcdd9-scene-or-its-scrub-progress-iphone-webkit\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\arrival-directors-cut-mobi-bcdd9-scene-or-its-scrub-progress-iphone-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\arrival-directors-cut-mobi-bcdd9-scene-or-its-scrub-progress-iphone-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:47:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      58 |   samples.push(await readState());
+      59 |  }
+    > 60 |  expect(samples.every(sample=>Math.abs(sample.distance-before.distance)<1)).toBe(true);
+         |                                                                             ^
+      61 |  expect(samples.every(sample=>sample.height===before.height)).toBe(true);
+      62 |  expect(samples.every(sample=>Math.abs(sample.top-before.top)<1)).toBe(true);
+      63 |  expect(samples.every(sample=>Math.abs(sample.scrollY-before.scrollY)<1)).toBe(true);
+        at C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\arrival-directors-cut.spec.ts:60:77
+
+    Error Context: test-results\arrival-directors-cut-mobi-bcdd9-scene-or-its-scrub-progress-reduced-motion\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\arrival-directors-cut-mobi-bcdd9-scene-or-its-scrub-progress-reduced-motion\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\arrival-directors-cut-mobi-bcdd9-scene-or-its-scrub-progress-reduced-motion\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3 failed
+    [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:47:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress 
+    [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:47:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress 
+    [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:47:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress 
+  61 passed (47.0s)
