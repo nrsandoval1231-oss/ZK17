@@ -1,0 +1,35 @@
+{
+  "source": "6846005bac1ab58159a57ac1b7cb748061a86870",
+  "url": "https://cinematic-opening-dev.zk17-review.pages.dev",
+  "immutable": "https://b655db03.zk17-review.pages.dev",
+  "results": [
+    {
+      "name": "desktop",
+      "menu": "hidden",
+      "overflow": false,
+      "activeUnderline": "underline"
+    },
+    {
+      "name": "portrait",
+      "menu": "single CLOSE / Escape focus passed",
+      "overflow": false,
+      "activeUnderline": "underline"
+    }
+  ],
+  "assets": [
+    {
+      "path": "/_next/static/css/b8af82fe9f3e4c6c.css",
+      "status": 200,
+      "matches": true
+    },
+    {
+      "path": "/_next/static/css/70f0594ce63f36a9.css",
+      "status": 200,
+      "matches": true
+    }
+  ],
+  "previewNoindex": "noindex, nofollow",
+  "productionStatus": 200,
+  "productionHasNewMenuLabel": false,
+  "verifiedAt": "2026-11-03T01:41:18.174Z"
+}

@@ -40,3 +40,5 @@ ZK-HUDL-FINAL-EDITS [LOCAL VERIFIED 2026-11-02]: Hudl/headerbutton +ownerlogo/co
 ZK-HIGHLIGHTS-PAGE [LOCAL VERIFIED]: dedicatedroute/sharednav+restoredhomepageapprovedphoto.62unit/buildlinttypepass;28affectedbrowserpass;finalfullpending. docs/HIGHLIGHTS_PAGE_QA.md. OwnerauthorizedDEVpreview;PR11unmerged.
 
 ZK-REFINED-CONTROLS [LOCAL VERIFIED]: approvednoarrows/editorialcontrols+minorherorearrange+Skipremoval.213browserpass7conditionalskips62unit/buildlinttypepass. Protectedcontent/lib/assets/packageunchanged. QA docs/REFINED_CONTROLS_QA.md. Finalcriticidentity/PR11/DEVdeliverynext;no mergeproduction.
+
+ZK-REFINED-CONTROLS [PR11 / DEV DELIVERED]: b655db03 immutable/6846005 deployed.213browserpass7existingskips62unit/buildlinttype;independentAstraready. RemotecontrolsCSSbyteproofandHudl pass. No merge/production.

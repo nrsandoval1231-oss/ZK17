@@ -25,3 +25,7 @@ Protected-surface check: git diff dc7739e -- content lib public brand package.js
 DEV-only deployment and exactcommit/URL/remoteverification are recorded below after delivery. Production/main are not authorized for changes and PR11 remains unmerged.
 
 Independent Astra review accepted product commit7e8f5e41d6697478b42d5bc114666ae3f27d9e45 for PR/authorizedDEV delivery with no unresolved material findings. Report includes source hashes/runtime proof and preserves limitations. Before menu screenshots were recaptured with the same settled-link/font guard as after, so no transition blank is presented as a baseline defect.
+
+## Verified DEV delivery
+Preview: https://cinematic-opening-dev.zk17-review.pages.dev/ ; immutable https://b655db03.zk17-review.pages.dev/ . Deployed source6846005bac1ab58159a57ac1b7cb748061a86870, reviewed product7e8f5e41d6697478b42d5bc114666ae3f27d9e45. Remote desktop/iPhone-sizedWebKit confirms removedSkip/WatchFilm, selectedunderline, desktophiddenMENU, singlemobileCLOSE withEscape/focusreturn, nooverflow; bothhomepageCSSfiles matchlocalbytes. RealremoteHudl starts paused and advances afterclick bothengines; desktopfullscreenpass; nohomepageHudlrequests/latestpageerrors. Previewnoindex verified. ProductionHTTP200doesnotcontainnewMENUmarkup;mainunchanged/PR11unmerged. Exactreceiptsdeploy-receipt.json/live-remote.json.
+The final report-only follow-up commit does not change this deployed product.
