@@ -1,0 +1,59 @@
+
+Running 8 tests using 2 workers
+
+(node:29084) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3140) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [desktop-chromium] › tests\e2e\hudl-highlights.spec.ts:91:5 › field asset refreshes and responsive motion preserve the mounted Hudl document (1.0s)
+  x  2 [desktop-chromium] › tests\e2e\hudl-highlights.spec.ts:5:5 › Hudl highlights embed stays responsive, unobstructed, and separate from navigation (1.0s)
+(node:25824) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:54128) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 4 [mobile-chromium] › tests\e2e\hudl-highlights.spec.ts:91:5 › field asset refreshes and responsive motion preserve the mounted Hudl document (1.0s)
+(node:26936) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 3 [mobile-chromium] › tests\e2e\hudl-highlights.spec.ts:5:5 › Hudl highlights embed stays responsive, unobstructed, and separate from navigation (2.0s)
+(node:6992) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 5 [iphone-webkit] › tests\e2e\hudl-highlights.spec.ts:5:5 › Hudl highlights embed stays responsive, unobstructed, and separate from navigation (8.2s)
+(node:45136) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 6 [iphone-webkit] › tests\e2e\hudl-highlights.spec.ts:91:5 › field asset refreshes and responsive motion preserve the mounted Hudl document (9.1s)
+(node:12628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 7 [reduced-motion] › tests\e2e\hudl-highlights.spec.ts:5:5 › Hudl highlights embed stays responsive, unobstructed, and separate from navigation (2.1s)
+  ok 8 [reduced-motion] › tests\e2e\hudl-highlights.spec.ts:91:5 › field asset refreshes and responsive motion preserve the mounted Hudl document (779ms)
+
+
+  1) [desktop-chromium] › tests\e2e\hudl-highlights.spec.ts:5:5 › Hudl highlights embed stays responsive, unobstructed, and separate from navigation 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      64 |     ]) {
+      65 |       const point = { x, y };
+    > 66 |       expect(await page.evaluate(({ x, y }) => document.elementFromPoint(x, y) === document.querySelector('#on-field iframe'), point)).toBe(true);
+         |                                                                                                                                        ^
+      67 |     }
+      68 |   };
+      69 |   await page.locator('#on-field').scrollIntoViewIfNeeded();
+        at checkUnobstructed (C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\hudl-highlights.spec.ts:66:136)
+        at C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\hudl-highlights.spec.ts:75:3
+
+    Error Context: ..\..\..\..\AppData\Local\Temp\zk17-hudl-focused\hudl-highlights-Hudl-highl-f345a-nd-separate-from-navigation-desktop-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\..\..\..\AppData\Local\Temp\zk17-hudl-focused\hudl-highlights-Hudl-highl-f345a-nd-separate-from-navigation-desktop-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\..\..\..\AppData\Local\Temp\zk17-hudl-focused\hudl-highlights-Hudl-highl-f345a-nd-separate-from-navigation-desktop-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [desktop-chromium] › tests\e2e\hudl-highlights.spec.ts:5:5 › Hudl highlights embed stays responsive, unobstructed, and separate from navigation 
+  7 passed (15.1s)

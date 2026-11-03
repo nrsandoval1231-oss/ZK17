@@ -1,0 +1,231 @@
+
+Running 52 tests using 3 workers
+
+(node:47168) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:41112) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:43:5 › mobile route menu traps focus and restores scroll after Escape (323ms)
+  ok  2 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:3:5 › scroll to explore completes the intro, reveals navigation and focuses the film section (902ms)
+  ok  5 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:63:5 › homepage keeps the approved field photo and no Hudl player (362ms)
+  ok  3 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:28:5 › six primary links navigate to separate pages and identify the active route (1.8s)
+  ok  4 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:51:5 › static responsive frames preserve all five authentic photo layers (1.5s)
+  ok  7 [desktop-chromium] › tests\e2e\editorial-controls.spec.ts:52:5 › menu and section actions expose text labels and touch targets (563ms)
+  ok  8 [desktop-chromium] › tests\e2e\editorial-controls.spec.ts:81:5 › editorial targets and active state remain legible in desktop, portrait, and landscape (1.1s)
+  ok  6 [desktop-chromium] › tests\e2e\editorial-controls.spec.ts:13:5 › site-owned controls contain no arrow text and no nonmedia SVG icons (1.7s)
+  ok 10 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:28:46 › client navigation /film/ to Home owns intro header state (854ms)
+  ok  9 [desktop-chromium] › tests\e2e\editorial-controls.spec.ts:122:5 › playoff text controls, game center close, and arcade categories retain working interactions (1.4s)
+  ok 11 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:28:46 › client navigation /about/ to Home owns intro header state (917ms)
+  ok 13 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:45:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (503ms)
+(node:28076) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 14 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:3:5 › scroll to explore completes the intro, reveals navigation and focuses the film section (647ms)
+  ok 16 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:43:5 › mobile route menu traps focus and restores scroll after Escape (250ms)
+  ok 17 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:51:5 › static responsive frames preserve all five authentic photo layers (1.4s)
+  ok 15 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:28:5 › six primary links navigate to separate pages and identify the active route (2.1s)
+  ok 18 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:63:5 › homepage keeps the approved field photo and no Hudl player (343ms)
+  ok 20 [mobile-chromium] › tests\e2e\editorial-controls.spec.ts:52:5 › menu and section actions expose text labels and touch targets (731ms)
+  ok 19 [mobile-chromium] › tests\e2e\editorial-controls.spec.ts:13:5 › site-owned controls contain no arrow text and no nonmedia SVG icons (1.5s)
+  ok 21 [mobile-chromium] › tests\e2e\editorial-controls.spec.ts:81:5 › editorial targets and active state remain legible in desktop, portrait, and landscape (1.1s)
+  ok 22 [mobile-chromium] › tests\e2e\editorial-controls.spec.ts:122:5 › playoff text controls, game center close, and arcade categories retain working interactions (1.4s)
+  x  12 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation (6.1s)
+(node:25072) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 23 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:28:46 › client navigation /film/ to Home owns intro header state (1.6s)
+  ok 26 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:45:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (464ms)
+  ok 24 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:28:46 › client navigation /about/ to Home owns intro header state (1.7s)
+(node:9588) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:33580) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 27 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:3:5 › scroll to explore completes the intro, reveals navigation and focuses the film section (3.9s)
+  ok 29 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:43:5 › mobile route menu traps focus and restores scroll after Escape (528ms)
+  x  25 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation (6.1s)
+(node:35340) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 31 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:63:5 › homepage keeps the approved field photo and no Hudl player (1.2s)
+  ok 30 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:51:5 › static responsive frames preserve all five authentic photo layers (4.1s)
+  ok 28 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:28:5 › six primary links navigate to separate pages and identify the active route (8.8s)
+  ok 32 [iphone-webkit] › tests\e2e\editorial-controls.spec.ts:13:5 › site-owned controls contain no arrow text and no nonmedia SVG icons (2.8s)
+  ok 33 [iphone-webkit] › tests\e2e\editorial-controls.spec.ts:52:5 › menu and section actions expose text labels and touch targets (1.6s)
+  ok 34 [iphone-webkit] › tests\e2e\editorial-controls.spec.ts:81:5 › editorial targets and active state remain legible in desktop, portrait, and landscape (4.1s)
+  ok 35 [iphone-webkit] › tests\e2e\editorial-controls.spec.ts:122:5 › playoff text controls, game center close, and arcade categories retain working interactions (5.2s)
+  ok 36 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:28:46 › client navigation /film/ to Home owns intro header state (4.8s)
+  ok 39 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:45:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (1.2s)
+(node:64220) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 40 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:3:5 › scroll to explore completes the intro, reveals navigation and focuses the film section (636ms)
+  ok 37 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:28:46 › client navigation /about/ to Home owns intro header state (4.7s)
+(node:64528) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 42 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:43:5 › mobile route menu traps focus and restores scroll after Escape (321ms)
+  ok 41 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:28:5 › six primary links navigate to separate pages and identify the active route (1.4s)
+  ok 44 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:63:5 › homepage keeps the approved field photo and no Hudl player (297ms)
+  ok 43 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:51:5 › static responsive frames preserve all five authentic photo layers (1.2s)
+  ok 46 [reduced-motion] › tests\e2e\editorial-controls.spec.ts:52:5 › menu and section actions expose text labels and touch targets (540ms)
+  ok 45 [reduced-motion] › tests\e2e\editorial-controls.spec.ts:13:5 › site-owned controls contain no arrow text and no nonmedia SVG icons (1.6s)
+  ok 47 [reduced-motion] › tests\e2e\editorial-controls.spec.ts:81:5 › editorial targets and active state remain legible in desktop, portrait, and landscape (1.0s)
+  ok 48 [reduced-motion] › tests\e2e\editorial-controls.spec.ts:122:5 › playoff text controls, game center close, and arcade categories retain working interactions (1.1s)
+  ok 49 [reduced-motion] › tests\e2e\intro-entry.spec.ts:28:46 › client navigation /film/ to Home owns intro header state (708ms)
+  ok 50 [reduced-motion] › tests\e2e\intro-entry.spec.ts:28:46 › client navigation /about/ to Home owns intro header state (714ms)
+  ok 52 [reduced-motion] › tests\e2e\intro-entry.spec.ts:45:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (442ms)
+  x  38 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation (10.3s)
+  x  51 [reduced-motion] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation (6.1s)
+
+
+  1) [desktop-chromium] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation 
+
+    Error: expect(locator).toBeHidden() failed
+
+    Locator:  locator('.site-header')
+    Expected: hidden
+    Received: visible
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeHidden" locator('.site-header') with timeout 5000ms
+      - waiting for locator('.site-header')
+        14 × locator resolved to <header class="site-header">…</header>
+           - unexpected value "visible"
+
+
+       5 |  await expect(hero).toHaveAttribute('data-arrival-motion','ready');
+       6 |  await expect(page.locator('html')).toHaveAttribute('data-arrival-boot','ready');
+    >  7 |  await expect(page.locator('.site-header')).toBeHidden();
+         |                                             ^
+       8 |  await expect(page.locator('.site-header nav a').first()).toBeHidden();
+       9 |  await expect(hero.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity','0');
+      10 |  const distance=await hero.evaluate(el=>parseFloat(el.parentElement!.style.paddingBottom));
+        at assertAnimatedOpening (C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\intro-entry.spec.ts:7:45)
+        at C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\intro-entry.spec.ts:41:59
+
+    Error Context: ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-desktop-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-desktop-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-desktop-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile-chromium] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation 
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator:  locator('#arrival').locator('[data-arrival-layer="athlete"]')
+    Expected: "0"
+    Received: "1"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveCSS" locator('#arrival').locator('[data-arrival-layer="athlete"]') with timeout 5000ms
+      - waiting for locator('#arrival').locator('[data-arrival-layer="athlete"]')
+        - locator resolved to <div data-arrival-layer="athlete" class="arrival-hero_photo__EvTNY arrival-hero_athlete__WLNd0">…</div>
+        - unexpected value "0.6913"
+        13 × locator resolved to <div data-arrival-layer="athlete" class="arrival-hero_photo__EvTNY arrival-hero_athlete__WLNd0">…</div>
+           - unexpected value "1"
+
+
+       7 |  await expect(page.locator('.site-header')).toBeHidden();
+       8 |  await expect(page.locator('.site-header nav a').first()).toBeHidden();
+    >  9 |  await expect(hero.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity','0');
+         |                                                               ^
+      10 |  const distance=await hero.evaluate(el=>parseFloat(el.parentElement!.style.paddingBottom));
+      11 |  await page.evaluate(y=>scrollTo({top:y,behavior:'instant'}),distance*.70);
+      12 |  await expect.poll(()=>hero.locator('[data-arrival-layer="closeup"]').evaluate(el=>Number(getComputedStyle(el).opacity))).toBeGreaterThan(.65);
+        at assertAnimatedOpening (C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\intro-entry.spec.ts:9:63)
+        at C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\intro-entry.spec.ts:41:59
+
+    Error Context: ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-mobile-chromium\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-mobile-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-mobile-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [iphone-webkit] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation 
+
+    Error: expect(locator).toBeHidden() failed
+
+    Locator:  locator('.site-header')
+    Expected: hidden
+    Received: visible
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeHidden" locator('.site-header') with timeout 5000ms
+      - waiting for locator('.site-header')
+        14 × locator resolved to <header class="site-header">…</header>
+           - unexpected value "visible"
+
+
+       5 |  await expect(hero).toHaveAttribute('data-arrival-motion','ready');
+       6 |  await expect(page.locator('html')).toHaveAttribute('data-arrival-boot','ready');
+    >  7 |  await expect(page.locator('.site-header')).toBeHidden();
+         |                                             ^
+       8 |  await expect(page.locator('.site-header nav a').first()).toBeHidden();
+       9 |  await expect(hero.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity','0');
+      10 |  const distance=await hero.evaluate(el=>parseFloat(el.parentElement!.style.paddingBottom));
+        at assertAnimatedOpening (C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\intro-entry.spec.ts:7:45)
+        at C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\intro-entry.spec.ts:41:59
+
+    Error Context: ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-iphone-webkit\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-iphone-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-iphone-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [reduced-motion] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation 
+
+    Error: expect(locator).toBeHidden() failed
+
+    Locator:  locator('.site-header')
+    Expected: hidden
+    Received: visible
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeHidden" locator('.site-header') with timeout 5000ms
+      - waiting for locator('.site-header')
+        14 × locator resolved to <header class="site-header">…</header>
+           - unexpected value "visible"
+
+
+       5 |  await expect(hero).toHaveAttribute('data-arrival-motion','ready');
+       6 |  await expect(page.locator('html')).toHaveAttribute('data-arrival-boot','ready');
+    >  7 |  await expect(page.locator('.site-header')).toBeHidden();
+         |                                             ^
+       8 |  await expect(page.locator('.site-header nav a').first()).toBeHidden();
+       9 |  await expect(hero.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity','0');
+      10 |  const distance=await hero.evaluate(el=>parseFloat(el.parentElement!.style.paddingBottom));
+        at assertAnimatedOpening (C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\intro-entry.spec.ts:7:45)
+        at C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\intro-entry.spec.ts:41:59
+
+    Error Context: ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-reduced-motion\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-reduced-motion\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\..\..\..\AppData\Local\Temp\zk17-refined-controls-astra-repair\intro-entry-reduced-motion-a3968-er-intro-on-each-activation-reduced-motion\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4 failed
+    [desktop-chromium] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation 
+    [mobile-chromium] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation 
+    [iphone-webkit] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation 
+    [reduced-motion] › tests\e2e\intro-entry.spec.ts:35:5 › reduced motion to normal starts a hidden-header intro on each activation 
+  48 passed (40.8s)

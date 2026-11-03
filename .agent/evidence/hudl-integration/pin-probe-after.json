@@ -1,0 +1,69 @@
+{
+  "origin": "http://127.0.0.1:3100",
+  "results": [
+    {
+      "run": 0,
+      "errors": [],
+      "actionError": null,
+      "moves": 0,
+      "failed": [],
+      "loads": 1
+    },
+    {
+      "run": 1,
+      "errors": [],
+      "actionError": null,
+      "moves": 0,
+      "failed": [],
+      "loads": 1
+    },
+    {
+      "run": 2,
+      "errors": [],
+      "actionError": null,
+      "moves": 0,
+      "failed": [],
+      "loads": 1
+    },
+    {
+      "run": 3,
+      "errors": [],
+      "actionError": null,
+      "moves": 0,
+      "failed": [],
+      "loads": 1
+    },
+    {
+      "run": 4,
+      "errors": [],
+      "actionError": null,
+      "moves": 0,
+      "failed": [],
+      "loads": 1
+    },
+    {
+      "run": 5,
+      "errors": [],
+      "actionError": null,
+      "moves": 0,
+      "failed": [],
+      "loads": 1
+    },
+    {
+      "run": 6,
+      "errors": [],
+      "actionError": null,
+      "moves": 0,
+      "failed": [],
+      "loads": 1
+    },
+    {
+      "run": 7,
+      "errors": [],
+      "actionError": null,
+      "moves": 0,
+      "failed": [],
+      "loads": 1
+    }
+  ]
+}

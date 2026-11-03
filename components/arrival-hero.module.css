@@ -1,12 +1,17 @@
-.hero{position:relative;isolation:isolate;overflow:hidden;height:100svh;background:#000;color:#f4f3f3}
-.lights,.stadium,.smokeBack,.smokeFront,.grain,.photo,.monogram{position:absolute;inset:0;pointer-events:none}
+.hero{position:relative;isolation:isolate;overflow:hidden;height:var(--arrival-scene-height,100svh);background:#000;color:#f4f3f3}
+.lights,.stadium,.smokeBack,.smokeFront,.grain,.photo{position:absolute;inset:0;pointer-events:none}
+.coldLogo{position:absolute;inset:8% 18% 15%;z-index:3;pointer-events:none;opacity:0;display:grid;place-items:center;filter:drop-shadow(0 0 26px #c9c8d655)}
+.coldLogo img{object-fit:contain}
 .lights{z-index:1;opacity:.65;background:radial-gradient(ellipse at 50% 0%,#a89dbe22,transparent 55%)}
 .beam{position:absolute;top:-2%;width:30%;height:80%;transform-origin:50% 0;background:linear-gradient(#ffffff60,#beb9d714 27%,transparent 90%);mask-image:linear-gradient(90deg,transparent,#000 48%,transparent)}
 .beam:before{content:'';position:absolute;top:4%;left:45%;width:10%;height:1%;background:#fff;box-shadow:0 0 18px 7px #fff,0 0 60px 20px #cdc4e666}
 .beam:nth-child(1){left:0;transform:rotate(-14deg)}.beam:nth-child(2){left:24%;transform:rotate(-5deg)}.beam:nth-child(3){right:24%;transform:rotate(5deg)}.beam:nth-child(4){right:0;transform:rotate(14deg)}
-.stadium{z-index:0;opacity:.2;background:linear-gradient(#0009,#0006 55%,#000 100%),url('/media/arrival-campaign/stadium-640.svg') center 65%/cover no-repeat;filter:grayscale(1)}
-.smokeBack,.smokeFront{inset:-12%;background:url('/media/arrival-directors-smoke.png') center bottom/125% 80% no-repeat;opacity:.25;mask-image:radial-gradient(ellipse,#000 35%,transparent 75%)}.smokeBack{z-index:1}.smokeFront{z-index:6;opacity:.15}
-.monogram{inset:3% 12% 9%;z-index:1;opacity:.18}.monogram img{object-fit:contain}
+.stadium{z-index:0;opacity:.2;overflow:hidden;background:#000;transform-origin:50% 100%}
+.stadium:after{content:'';position:absolute;inset:0;background:linear-gradient(#0009,#0005 55%,#000d 100%);pointer-events:none}
+.stadium picture{position:absolute;inset:0;display:block}.stadium img{object-fit:cover;object-position:48% center}.stadiumMono{opacity:1}.stadiumColor{opacity:0}
+.smokeBack,.smokeFront{inset:-12%;background:url('/media/arrival-directors-smoke.png') center bottom/125% 80% no-repeat;opacity:.25;mask-image:radial-gradient(ellipse,#000 35%,transparent 75%);animation:smoke-drift 24s ease-in-out infinite alternate;animation-play-state:paused}.hero[data-arrival-active="true"] .smokeBack,.hero[data-arrival-active="true"] .smokeFront{animation-play-state:running}.smokeBack{z-index:1}.smokeFront{z-index:6;opacity:.15;animation-duration:28s;animation-direction:alternate-reverse}
+.coldLogo~.photo{transform:scale(1.006)}
+
 .photo{z-index:2;inset:auto;mask-image:linear-gradient(transparent,#000 10%,#000 75%,transparent);opacity:.72}
 .photoFrame,.photo picture{position:absolute;inset:0;display:block}.photo img{display:block;width:100%;height:100%;object-fit:contain;filter:grayscale(1)}
 .photoFrame{mask-image:linear-gradient(90deg,transparent,#000 16%,#000 80%,transparent)}
@@ -15,20 +20,29 @@
 .montage[data-arrival-layer="rear"]{left:19%;top:9%;width:29%;height:72%;filter:brightness(.65)}
 .montage[data-arrival-layer="white"]{right:0;top:10%;width:31%;height:67%;filter:brightness(.62)}
 .montage[data-arrival-layer="running"]{right:4%;bottom:4%;width:28%;height:38%;z-index:6}
+
 .grain{z-index:7;opacity:.035;background:repeating-radial-gradient(circle,#fff 0 .5px,transparent 1px 4px);background-size:7px 7px}
-.copy{position:absolute;z-index:8;left:5%;bottom:13%;width:75%;text-shadow:0 3px 24px #000}.identity,.school,.footer,.scroll,.skip{font:700 10px/1.4 var(--body);letter-spacing:.15em}.identity{margin:0 0 14px}.copy h1{margin:0;font:700 clamp(64px,8.7vw,150px)/.8 var(--display);letter-spacing:-.035em}.copy h1 span{display:block;white-space:nowrap}.school{margin:17px 0}.watch{border:1px solid #aaa;background:#101015cc;color:#fff;padding:12px 16px;font:700 10px var(--body);letter-spacing:.12em;cursor:pointer}.watch span{margin-left:18px;color:#b087ff}.footer{position:absolute;z-index:8;bottom:4%;left:5%;margin:0}.scroll{position:absolute;z-index:8;bottom:4%;right:5%;color:#ddd;text-decoration:none}.skip{position:absolute;z-index:9;top:20px;right:5%;min-height:44px;display:flex;align-items:center;color:#bbb;text-decoration:none}
-@media(max-width:899px){.copy{left:5%;bottom:15%;width:90%}.copy h1{font-size:clamp(45px,11.4vw,100px)}.athlete{left:21%;top:15%;width:63%;height:68%}.closeup{left:-5%;top:16%;width:43%;height:37%}.montage[data-arrival-layer="rear"]{left:9%;top:9%;width:38%;height:58%}.montage[data-arrival-layer="white"]{right:-6%;top:15%;width:40%;height:53%}.montage[data-arrival-layer="running"]{right:0;bottom:25%;width:36%;height:26%}.identity,.school,.footer,.scroll,.skip{font-size:8px}.monogram{inset:10% -8% 20%}.beam{width:40%}.footer{bottom:4%;max-width:45%}.scroll{bottom:4%}}
-@media(max-height:450px){.copy{bottom:8%}.copy h1{font-size:clamp(34px,7vw,65px)}.identity,.school{margin:6px 0}.footer,.scroll{display:none}.watch{padding:8px 12px}}
+.copy{position:absolute;z-index:8;left:5%;bottom:13%;width:75%;text-shadow:0 3px 24px #000}.identity,.school,.footer{font:700 10px/1.4 var(--body);letter-spacing:.15em}.identity{margin:0 0 14px}.copy h1{margin:0;font:700 clamp(64px,8.7vw,150px)/.8 var(--display);letter-spacing:-.035em}.copy h1 span{display:block;white-space:nowrap}.school{margin:17px 0}.footer{position:absolute;z-index:8;bottom:4%;left:5%;margin:0}
+
+@media(max-width:899px){.copy{left:5%;bottom:15%;width:90%}.copy h1{font-size:clamp(45px,11.4vw,100px)}.athlete{left:23%;top:12%;width:57%;height:67%}.closeup{left:-10%;top:12%;width:37%;height:33%}.montage[data-arrival-layer="rear"]{left:5%;top:7%;width:33%;height:52%}.montage[data-arrival-layer="white"]{right:-10%;top:12%;width:35%;height:48%}.montage[data-arrival-layer="running"]{right:-2%;bottom:28%;width:31%;height:22%}.identity,.school,.footer{font-size:8px}.coldLogo{inset:13% -3% 22%}.beam{width:40%}.footer{bottom:4%;max-width:45%}}
+@media(max-height:450px){.copy{bottom:8%}.copy h1{font-size:clamp(34px,7vw,65px)}.identity,.school{margin:6px 0}.footer{display:none}}
 @media(prefers-reduced-motion:no-preference){:global(html[data-arrival-boot="pending"]) .hero:not([data-arrival-motion="ready"]) [data-arrival-layer],:global(html[data-arrival-boot="pending"]) .hero:not([data-arrival-motion="ready"]) [data-arrival-statement],:global(html[data-arrival-boot="pending"]) .hero:not([data-arrival-motion="ready"]) [data-arrival-detail]{opacity:0;visibility:hidden}}
 /* Source photographs retain real anatomy while their dark edges blend into the stadium. */
 .photo{mix-blend-mode:screen}
 .photoFrame{mask-image:radial-gradient(ellipse 64% 66% at 50% 50%,#000 36%,transparent 94%)}
 .athlete .photoFrame{mask-image:linear-gradient(90deg,transparent,#000 24%,#000 57%,transparent 88%),linear-gradient(transparent,#000 17%,#000 85%,transparent);mask-composite:intersect;-webkit-mask-composite:source-in}
 .montage[data-arrival-layer="white"] .photoFrame{mask-image:linear-gradient(transparent 12%,#000 30%,#000 72%,transparent 98%),linear-gradient(90deg,transparent,#000 23%,#000 75%,transparent);mask-composite:intersect;-webkit-mask-composite:source-in}
-.monogram{inset:-13% 5% 23%}.grain{background-size:3px 3px}
-/* The focal portrait stays opaque: the background monogram must never cross its face. */
+.grain{background-size:3px 3px}
+/* The focal portrait stays opaque. */
 .athlete{mix-blend-mode:normal}
 .montage[data-arrival-layer="rear"] .photoFrame,.montage[data-arrival-layer="white"] .photoFrame{inset:auto 0;top:50%;height:auto;width:100%;transform:translateY(-50%);aspect-ratio:650/1050}
 .montage[data-arrival-layer="white"] .photoFrame{aspect-ratio:470/805}
 @media(prefers-reduced-motion:reduce){.copy,.hero [data-arrival-detail]{opacity:1!important;visibility:visible!important}.photo{opacity:.72!important;transform:none!important}.athlete{opacity:1!important}}
-@media(prefers-reduced-motion:reduce){.lights{opacity:.65!important}.stadium{opacity:.2!important}.monogram{opacity:.29!important}}
+@media(prefers-reduced-motion:reduce){.lights{opacity:.65!important}.stadium{opacity:.2!important}}
+@keyframes smoke-drift{from{transform:translate3d(-2.5%,1.2%,0)}to{transform:translate3d(2.5%,-1.5%,0)}}
+@media(prefers-reduced-motion:reduce){.smokeBack,.smokeFront{animation:none}}
+@media(prefers-reduced-motion:no-preference){:global(html[data-arrival-boot="pending"]) .hero:not([data-arrival-motion="ready"]) .coldLogo{visibility:visible;opacity:.9}:global(html[data-arrival-boot="pending"]) .hero:not([data-arrival-motion="ready"]) .smokeBack{visibility:visible;opacity:.25}:global(html[data-arrival-boot="pending"]) .hero:not([data-arrival-motion="ready"]) .smokeFront{visibility:visible;opacity:.12}}
+@media(prefers-reduced-motion:no-preference){:global(html[data-arrival-boot="pending"]) .hero:not([data-arrival-motion="ready"]) .smokeBack,:global(html[data-arrival-boot="pending"]) .hero:not([data-arrival-motion="ready"]) .smokeFront{animation-play-state:running}}
+
+.montage[data-arrival-layer="color-action-glow"]{right:30%;bottom:4%;width:22%;height:26%;z-index:4;opacity:.6;filter:blur(6px)}.montage[data-arrival-layer="color-action"]{right:30%;bottom:4%;width:22%;height:26%;z-index:6;opacity:.9;mix-blend-mode:normal}.colorAction .photoFrame{mask-image:radial-gradient(ellipse 68% 72% at 50% 48%,#000 30%,transparent 96%)}.colorAction img,.colorActionGlow img{filter:none}.colorAction img{mask-image:linear-gradient(to bottom,transparent,#000 36%,#000),linear-gradient(to right,transparent,#000 16%,#000 75%,transparent);mask-composite:intersect;-webkit-mask-composite:source-in}
+@media(max-width:899px){.montage[data-arrival-layer="color-action-glow"],.montage[data-arrival-layer="color-action"]{right:35%;bottom:25%;width:32%;height:20%}}

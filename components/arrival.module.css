@@ -1,7 +1,7 @@
 .arrival{background:#000;color:#f3f1f7}
 .cinema{position:relative;height:100svh;min-height:500px;overflow:hidden;isolation:isolate;background:#000;color:#f3f1f7}
 .cinemaVideo{position:absolute;inset:96px 0 0;background:#000}.video{display:block;width:100%;height:100%;object-fit:contain;filter:grayscale(1)}
-.blackLogo{position:absolute;top:112px;right:4%;padding:8px;background:radial-gradient(ellipse,#f4f3f0ed,#e8e7e466 50%,transparent 72%);pointer-events:none}.blackLogo img{display:block;width:90px;height:90px;filter:brightness(0)}
+.blackLogo{position:absolute;top:112px;right:4%;pointer-events:none}.blackLogo img{display:block;width:90px;height:90px}
 .filmCopy{position:absolute;left:5%;bottom:9%;pointer-events:none;text-shadow:0 2px 20px #000}.filmCopy p{font:600 9px var(--body);letter-spacing:.16em}.filmCopy h2{font:700 clamp(50px,7vw,112px)/.8 var(--display);letter-spacing:-.03em;margin:15px 0 25px}
 @media(max-width:899px){.cinemaVideo{inset:80px 0 0}.filmCopy{bottom:8%;left:5%}.filmCopy h2{font-size:clamp(42px,10vw,75px)}.blackLogo{top:92px;right:2%}.blackLogo img{width:64px;height:64px}}
 @media(max-width:560px){.cinemaVideo{inset:76px 0 0}.filmCopy{bottom:5%}.filmCopy h2{font-size:12vw}.blackLogo{top:86px}}

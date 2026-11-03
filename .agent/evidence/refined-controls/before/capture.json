@@ -1,0 +1,49 @@
+{
+  "origin": "https://00b39a31.zk17-review.pages.dev",
+  "results": [
+    {
+      "name": "desktop",
+      "shots": [
+        "navigation",
+        "hero",
+        "links-primary",
+        "arcade",
+        "arcade-back",
+        "playoff-controls",
+        "game-center",
+        "utilities",
+        "media-close"
+      ]
+    },
+    {
+      "name": "portrait",
+      "shots": [
+        "navigation",
+        "mobile-menu",
+        "hero",
+        "links-primary",
+        "arcade",
+        "arcade-back",
+        "playoff-controls",
+        "game-center",
+        "utilities",
+        "media-close"
+      ]
+    },
+    {
+      "name": "landscape",
+      "shots": [
+        "navigation",
+        "mobile-menu",
+        "hero",
+        "links-primary",
+        "arcade",
+        "arcade-back",
+        "playoff-controls",
+        "game-center",
+        "utilities",
+        "media-close"
+      ]
+    }
+  ]
+}

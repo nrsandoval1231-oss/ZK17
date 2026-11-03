@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/on-the-field/`, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${base}/beyond-17/`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${base}/film/`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/highlights/`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/about/`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/nil-recruiting/`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/recruiting/`, changeFrequency: 'monthly', priority: 0.8 },

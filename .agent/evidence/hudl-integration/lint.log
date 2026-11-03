@@ -1,0 +1,10 @@
+
+> zk17-official@0.1.0 lint
+> eslint .
+
+
+C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\components\use-story-motion.ts
+  49:178  error  Parsing error: ';' expected
+
+✖ 1 problem (1 error, 0 warnings)
+

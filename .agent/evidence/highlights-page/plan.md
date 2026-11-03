@@ -1,0 +1,5 @@
+# Dedicated Highlights page
+
+Owner approved moving Hudl to its own HIGHLIGHTS tab; FILM remains cinematic. Reuse currentfeaturebranch/PR11. ThreeboundedLuna scopes: route/sharednavigation/sitemap; homepageapprovedphotorestoration/fieldmotion/CSS; regressiontests. Parent integrates/validates and separatelydispatchesAstrareview. No cinematicimage/timingchanges; removedbuttonsremainremoved. RestoreapprovedONFIELDphoto composition (e2820d3), retainstablepinwrapper; nohomeHudlframe. New /highlights/ exactexistingofficialembedattrs,16:9accessibleunobstructed responsiveplayer, metadata+navigation6destinations.
+
+Acceptance: dedicatedroutedirectandnavdesktopmobileactiveitem, realHudlpauseduntilclick/fullscreen, homepagephoto and noiframe, unchangedintro/Film, nooverflow, viewportorientation, relevantchecks. KeepupstreamHudlARIAfailurevisibleonnewrouteaudit, no waiver. Runbuild/type/lint/unit/fullbrowser andindependentreview; ownerexplicitlyaskeddevpreviewupdateforthisiteration, productionunchanged/no merge. Source/evidence checkpointsinexisting.agentrecords.

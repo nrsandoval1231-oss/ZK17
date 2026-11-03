@@ -47,7 +47,7 @@ export function publicPartnerships(items: Partnership[]): Partnership[] { return
 export type PhotoScene = 'arrival' | 'on-field' | 'off-field' | 'closing';
 export type ScenePhotoAssignment = { scene: PhotoScene; assetId: string };
 export type ScenePhoto = { kind: 'approved'; id: string; scene: PhotoScene; src: string; width: number; height: number; alt: string; focalPoint: string };
-export type PreviewPhoto = { kind: 'preview'; id: string; src: string; width: number; height: number; alt: string; focal: string; label: 'PREVIEW CROP · ORIGINAL PENDING' };
+export type PreviewPhoto = { kind: 'preview'; id: string; src: string; width: number; height: number; alt: string; focal: string; label: 'PREVIEW CROP · ORIGINAL PENDING' | 'OWNER-SUPPLIED PHOTO' };
 export const scenePhotoAssignments: ScenePhotoAssignment[] = [];
 export function publicScenePhotos(assignments: ScenePhotoAssignment[], assets: MediaAsset[]): ScenePhoto[] {
  const approvedPhotos = new Map(publicMedia(assets).filter((asset) => asset.kind === 'photo' && Number.isInteger(asset.width) && (asset.width ?? 0) > 0 && Number.isInteger(asset.height) && (asset.height ?? 0) > 0 && !!asset.alt.trim()).map((asset) => [asset.id, asset]));

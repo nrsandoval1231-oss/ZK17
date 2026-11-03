@@ -48,7 +48,7 @@ test('worlds respect reduced motion, load images, and fit the viewport', async (
 });
 
 test('all seven navigation destinations resolve to actual pages', async ({ page }) => {
- for (const route of ['/', '/on-the-field/', '/beyond-17/', '/film/', '/recruiting/', '/nil-recruiting/', '/playoffs/']) {
+ for (const route of ['/', '/on-the-field/', '/beyond-17/', '/highlights/', '/recruiting/', '/nil-recruiting/', '/playoffs/']) {
   expect((await page.goto(route))?.status()).toBe(200);
   await expect(page.locator('main')).toBeVisible();
  }

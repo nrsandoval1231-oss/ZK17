@@ -1,0 +1,50 @@
+
+Running 24 tests using 3 workers
+
+(node:684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:14788) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55324) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  3 [desktop-chromium] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (943ms)
+  ok  4 [desktop-chromium] › tests\e2e\completion.spec.ts:57:5 › snapshot offers a selectable address when clipboard access is unavailable (287ms)
+  ok  2 [desktop-chromium] › tests\e2e\completion.spec.ts:42:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.5s)
+  ok  1 [desktop-chromium] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (2.1s)
+  ok  6 [desktop-chromium] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (807ms)
+(node:33692) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  7 [mobile-chromium] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (890ms)
+  ok  8 [mobile-chromium] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (1.6s)
+  ok  9 [mobile-chromium] › tests\e2e\completion.spec.ts:42:5 › scrolling releases the field pin and responsive motion leaves a readable document (1.2s)
+  ok 10 [mobile-chromium] › tests\e2e\completion.spec.ts:57:5 › snapshot offers a selectable address when clipboard access is unavailable (326ms)
+  ok 12 [mobile-chromium] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (946ms)
+  ok  5 [desktop-chromium] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (5.2s)
+(node:34436) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:63956) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  -  13 [iphone-webkit] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route
+  ok 15 [iphone-webkit] › tests\e2e\completion.spec.ts:42:5 › scrolling releases the field pin and responsive motion leaves a readable document (2.8s)
+  ok 11 [mobile-chromium] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (4.9s)
+(node:13508) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 16 [iphone-webkit] › tests\e2e\completion.spec.ts:57:5 › snapshot offers a selectable address when clipboard access is unavailable (584ms)
+  ok 14 [iphone-webkit] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (3.5s)
+(node:61248) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 18 [iphone-webkit] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (1.1s)
+(node:43028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 19 [reduced-motion] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (863ms)
+  ok 21 [reduced-motion] › tests\e2e\completion.spec.ts:42:5 › scrolling releases the field pin and responsive motion leaves a readable document (868ms)
+  ok 20 [reduced-motion] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (1.1s)
+  ok 22 [reduced-motion] › tests\e2e\completion.spec.ts:57:5 › snapshot offers a selectable address when clipboard access is unavailable (287ms)
+  ok 24 [reduced-motion] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (862ms)
+  ok 23 [reduced-motion] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (3.5s)
+  ok 17 [iphone-webkit] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (7.1s)
+
+  1 skipped
+  23 passed (18.0s)

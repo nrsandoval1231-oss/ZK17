@@ -1,0 +1,35 @@
+{
+  "origin": "http://127.0.0.1:3100",
+  "results": [
+    {
+      "name": "desktop",
+      "homepageHudlRequests": 0,
+      "before": {
+        "paused": true,
+        "time": 0
+      },
+      "after": {
+        "paused": false,
+        "time": 0.715424
+      },
+      "fullscreen": true,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "name": "iphone-webkit",
+      "homepageHudlRequests": 0,
+      "before": {
+        "paused": true,
+        "time": 0
+      },
+      "after": {
+        "paused": false,
+        "time": 0.7095833
+      },
+      "fullscreen": null,
+      "errors": [],
+      "overflow": false
+    }
+  ]
+}

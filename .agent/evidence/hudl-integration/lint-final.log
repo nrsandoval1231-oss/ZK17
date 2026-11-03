@@ -1,0 +1,15 @@
+
+> zk17-official@0.1.0 lint
+> eslint .
+
+
+C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\test-results-hudl-final\.playwright-artifacts-0\traces\resources\c06f57a4bbc15ff395b34e017cff46feaf31bd75.js
+   26:5    warning  'toString' is assigned a value but never used                          @typescript-eslint/no-unused-vars
+  106:17   error    Unexpected aliasing of 'this' to local variable                        @typescript-eslint/no-this-alias
+  259:153  warning  'rule' is defined but never used                                       @typescript-eslint/no-unused-vars
+  287:18   warning  'e' is defined but never used                                          @typescript-eslint/no-unused-vars
+  299:18   warning  'e' is defined but never used                                          @typescript-eslint/no-unused-vars
+  369:5    warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+✖ 6 problems (1 error, 5 warnings)
+

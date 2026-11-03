@@ -1,0 +1,248 @@
+
+Running 180 tests using 3 workers
+
+(node:41360) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:44920) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:44212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok   3 [desktop-chromium] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (862ms)
+  ok   1 [desktop-chromium] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.2s)
+  ok   2 [desktop-chromium] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (1.5s)
+  ok   4 [desktop-chromium] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet (1.1s)
+  ok   5 [desktop-chromium] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport (1.5s)
+  ok   7 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:3:5 › skip intro reveals navigation and focuses the film section (780ms)
+  ok   9 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:20:5 › mobile route menu traps focus and restores scroll after Escape (288ms)
+  ok   8 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:11:5 › five primary links navigate to separate pages and identify the active route (504ms)
+  ok  11 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (1.7s)
+  ok  10 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:28:5 › static responsive frames preserve all five authentic photo layers (1.9s)
+  ok   6 [desktop-chromium] › tests\e2e\arrival-a11y.spec.ts:4:5 › dark opening retains an accessible main heading before the visual statement (6.4s)
+  ok  12 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (3.6s)
+  ok  13 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (3.5s)
+  ok  14 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.2s)
+  ok  15 [desktop-chromium] › tests\e2e\arrival-fallback.spec.ts:2:5 › no JavaScript keeps the complete collage and full Film route available (700ms)
+  ok  18 [desktop-chromium] › tests\e2e\arrival-loading.spec.ts:44:52 › no-js keeps a complete readable composition without an opening guard (462ms)
+  ok  19 [desktop-chromium] › tests\e2e\arrival-loading.spec.ts:44:52 › reduced keeps a complete readable composition without an opening guard (830ms)
+  ok  20 [desktop-chromium] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (1.1s)
+  ok  16 [desktop-chromium] › tests\e2e\arrival-loading.spec.ts:3:5 › slow enabled JavaScript paints darkness before hydration without spoiling the statement (3.7s)
+  ok  21 [desktop-chromium] › tests\e2e\cinema-framing.spec.ts:17:5 › Film route offers complete duration without autoplay or a scroll recut (705ms)
+  ok  22 [desktop-chromium] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (1.1s)
+  ok  23 [desktop-chromium] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (1.6s)
+  ok  24 [desktop-chromium] › tests\e2e\completion.spec.ts:39:5 › scrolling releases the field pin and responsive motion leaves a readable document (751ms)
+  ok  25 [desktop-chromium] › tests\e2e\completion.spec.ts:54:5 › snapshot offers a selectable address when clipboard access is unavailable (340ms)
+  ok  17 [desktop-chromium] › tests\e2e\arrival-loading.spec.ts:32:5 › failed JavaScript loading releases the finite opening guard into a readable fallback (5.5s)
+  ok  26 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:18:46 › client navigation /film/ to Home owns intro header state (793ms)
+  ok  27 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:18:46 › client navigation /about/ to Home owns intro header state (1.5s)
+  ok  29 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:35:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (1.2s)
+  ok  28 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:25:5 › reduced motion to normal starts a hidden-header intro on each activation (1.8s)
+  ok  30 [desktop-chromium] › tests\e2e\opening-refinement.spec.ts:14:5 › opening beats resolve in sequence, images decode, and reverse scroll restores earlier beats (2.0s)
+  ok  33 [desktop-chromium] › tests\e2e\playoffs.spec.ts:35:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (499ms)
+  ok  31 [desktop-chromium] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (2.3s)
+  ok  32 [desktop-chromium] › tests\e2e\playoffs.spec.ts:23:5 › game center supports direct links, Escape, focus and back navigation (2.3s)
+  ok  36 [desktop-chromium] › tests\e2e\playoffs.spec.ts:72:5 › hero downloads exactly one browser-supported responsive image source (378ms)
+  ok  35 [desktop-chromium] › tests\e2e\playoffs.spec.ts:57:5 › late fonts keep the mobile hero layout stable (1.0s)
+  ok  37 [desktop-chromium] › tests\e2e\playoffs.spec.ts:79:5 › uses the exact owner coyote logo without inventing Anna bracket placement (782ms)
+  ok  38 [desktop-chromium] › tests\e2e\site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (1.5s)
+  ok  34 [desktop-chromium] › tests\e2e\playoffs.spec.ts:48:5 › playoffs has no runtime errors or accessibility violations (3.0s)
+  ok  40 [desktop-chromium] › tests\e2e\site.spec.ts:21:5 › navigation supports browser back and forward (509ms)
+  ok  41 [desktop-chromium] › tests\e2e\site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (513ms)
+  ok  42 [desktop-chromium] › tests\e2e\story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story (1.8s)
+  ok  43 [desktop-chromium] › tests\e2e\story-focus.spec.ts:22:5 › programmatic preventScroll is preserved and Tab intent is consumed (1.7s)
+  ok  44 [desktop-chromium] › tests\e2e\story-focus.spec.ts:36:5 › real Tab navigation keeps the focused story control fully visible (1.5s)
+  ok  45 [desktop-chromium] › tests\e2e\story-focus.spec.ts:44:5 › reduced film anchor observes layout that settles after the window resize frame (1.6s)
+  ok  39 [desktop-chromium] › tests\e2e\site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (6.0s)
+(node:12548) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:52836) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  46 [mobile-chromium] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (433ms)
+  -   48 [mobile-chromium] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  -   49 [mobile-chromium] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ok  47 [mobile-chromium] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (932ms)
+  ok  50 [mobile-chromium] › tests\e2e\arrival-a11y.spec.ts:4:5 › dark opening retains an accessible main heading before the visual statement (817ms)
+  ok  52 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:11:5 › five primary links navigate to separate pages and identify the active route (484ms)
+  ok  53 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:20:5 › mobile route menu traps focus and restores scroll after Escape (247ms)
+  ok  51 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:3:5 › skip intro reveals navigation and focuses the film section (2.0s)
+  ok  54 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:28:5 › static responsive frames preserve all five authentic photo layers (1.4s)
+(node:22916) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  57 [mobile-chromium] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (4.2s)
+  ok  55 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (9.0s)
+  ok  56 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (9.1s)
+  ok  59 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.1s)
+  ok  60 [mobile-chromium] › tests\e2e\arrival-fallback.spec.ts:2:5 › no JavaScript keeps the complete collage and full Film route available (1.4s)
+  ok  58 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (3.4s)
+  ok  63 [mobile-chromium] › tests\e2e\arrival-loading.spec.ts:44:52 › no-js keeps a complete readable composition without an opening guard (2.0s)
+  ok  61 [mobile-chromium] › tests\e2e\arrival-loading.spec.ts:3:5 › slow enabled JavaScript paints darkness before hydration without spoiling the statement (3.5s)
+  ok  65 [mobile-chromium] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (806ms)
+  ok  64 [mobile-chromium] › tests\e2e\arrival-loading.spec.ts:44:52 › reduced keeps a complete readable composition without an opening guard (1.8s)
+  ok  66 [mobile-chromium] › tests\e2e\cinema-framing.spec.ts:17:5 › Film route offers complete duration without autoplay or a scroll recut (561ms)
+  ok  68 [mobile-chromium] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (1.0s)
+  ok  62 [mobile-chromium] › tests\e2e\arrival-loading.spec.ts:32:5 › failed JavaScript loading releases the finite opening guard into a readable fallback (5.7s)
+  ok  67 [mobile-chromium] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (1.6s)
+  ok  69 [mobile-chromium] › tests\e2e\completion.spec.ts:39:5 › scrolling releases the field pin and responsive motion leaves a readable document (821ms)
+  ok  70 [mobile-chromium] › tests\e2e\completion.spec.ts:54:5 › snapshot offers a selectable address when clipboard access is unavailable (740ms)
+  ok  71 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:18:46 › client navigation /film/ to Home owns intro header state (2.2s)
+  ok  73 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:25:5 › reduced motion to normal starts a hidden-header intro on each activation (2.1s)
+  ok  72 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:18:46 › client navigation /about/ to Home owns intro header state (2.4s)
+  ok  74 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:35:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (735ms)
+  ok  77 [mobile-chromium] › tests\e2e\playoffs.spec.ts:23:5 › game center supports direct links, Escape, focus and back navigation (2.1s)
+  ok  75 [mobile-chromium] › tests\e2e\opening-refinement.spec.ts:14:5 › opening beats resolve in sequence, images decode, and reverse scroll restores earlier beats (2.9s)
+  ok  78 [mobile-chromium] › tests\e2e\playoffs.spec.ts:35:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (994ms)
+  ok  76 [mobile-chromium] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (3.6s)
+  ok  81 [mobile-chromium] › tests\e2e\playoffs.spec.ts:72:5 › hero downloads exactly one browser-supported responsive image source (600ms)
+  ok  80 [mobile-chromium] › tests\e2e\playoffs.spec.ts:57:5 › late fonts keep the mobile hero layout stable (1.2s)
+  ok  82 [mobile-chromium] › tests\e2e\playoffs.spec.ts:79:5 › uses the exact owner coyote logo without inventing Anna bracket placement (565ms)
+  ok  83 [mobile-chromium] › tests\e2e\site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (1.2s)
+  ok  79 [mobile-chromium] › tests\e2e\playoffs.spec.ts:48:5 › playoffs has no runtime errors or accessibility violations (3.0s)
+  ok  86 [mobile-chromium] › tests\e2e\site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (294ms)
+  ok  87 [mobile-chromium] › tests\e2e\story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story (592ms)
+  ok  85 [mobile-chromium] › tests\e2e\site.spec.ts:21:5 › navigation supports browser back and forward (1.4s)
+  ok  88 [mobile-chromium] › tests\e2e\story-focus.spec.ts:22:5 › programmatic preventScroll is preserved and Tab intent is consumed (723ms)
+  ok  89 [mobile-chromium] › tests\e2e\story-focus.spec.ts:36:5 › real Tab navigation keeps the focused story control fully visible (468ms)
+  ok  90 [mobile-chromium] › tests\e2e\story-focus.spec.ts:44:5 › reduced film anchor observes layout that settles after the window resize frame (613ms)
+  ok  84 [mobile-chromium] › tests\e2e\site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (3.5s)
+(node:27516) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:17968) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11256) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  91 [iphone-webkit] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (1.6s)
+  -   94 [iphone-webkit] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  ok  92 [iphone-webkit] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (1.4s)
+  -   95 [iphone-webkit] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ok  96 [iphone-webkit] › tests\e2e\arrival-a11y.spec.ts:4:5 › dark opening retains an accessible main heading before the visual statement (1.9s)
+  ok  97 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:3:5 › skip intro reveals navigation and focuses the film section (4.0s)
+  ok  98 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:11:5 › five primary links navigate to separate pages and identify the active route (2.5s)
+  ok  93 [iphone-webkit] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (5.7s)
+  ok  99 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:20:5 › mobile route menu traps focus and restores scroll after Escape (711ms)
+  ok 100 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:28:5 › static responsive frames preserve all five authentic photo layers (4.1s)
+  ok 102 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (14.1s)
+  ok 104 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (2.1s)
+  ok 105 [iphone-webkit] › tests\e2e\arrival-fallback.spec.ts:2:5 › no JavaScript keeps the complete collage and full Film route available (2.2s)
+  ok 103 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (14.9s)
+  ok 101 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (22.2s)
+  ok 106 [iphone-webkit] › tests\e2e\arrival-loading.spec.ts:3:5 › slow enabled JavaScript paints darkness before hydration without spoiling the statement (3.9s)
+  ok 108 [iphone-webkit] › tests\e2e\arrival-loading.spec.ts:44:52 › no-js keeps a complete readable composition without an opening guard (1.2s)
+  ok 109 [iphone-webkit] › tests\e2e\arrival-loading.spec.ts:44:52 › reduced keeps a complete readable composition without an opening guard (1.1s)
+  ok 107 [iphone-webkit] › tests\e2e\arrival-loading.spec.ts:32:5 › failed JavaScript loading releases the finite opening guard into a readable fallback (5.5s)
+  -  112 [iphone-webkit] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route
+  ok 111 [iphone-webkit] › tests\e2e\cinema-framing.spec.ts:17:5 › Film route offers complete duration without autoplay or a scroll recut (1.3s)
+  ok 110 [iphone-webkit] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (1.8s)
+  ok 115 [iphone-webkit] › tests\e2e\completion.spec.ts:54:5 › snapshot offers a selectable address when clipboard access is unavailable (752ms)
+  ok 114 [iphone-webkit] › tests\e2e\completion.spec.ts:39:5 › scrolling releases the field pin and responsive motion leaves a readable document (2.6s)
+  ok 113 [iphone-webkit] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (4.9s)
+  ok 116 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:18:46 › client navigation /film/ to Home owns intro header state (6.0s)
+  ok 119 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:35:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (1.5s)
+  ok 117 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:18:46 › client navigation /about/ to Home owns intro header state (5.8s)
+  ok 118 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:25:5 › reduced motion to normal starts a hidden-header intro on each activation (8.9s)
+  ok 120 [iphone-webkit] › tests\e2e\opening-refinement.spec.ts:14:5 › opening beats resolve in sequence, images decode, and reverse scroll restores earlier beats (5.9s)
+  ok 121 [iphone-webkit] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (6.2s)
+  ok 123 [iphone-webkit] › tests\e2e\playoffs.spec.ts:35:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (1.1s)
+  ok 122 [iphone-webkit] › tests\e2e\playoffs.spec.ts:23:5 › game center supports direct links, Escape, focus and back navigation (2.7s)
+  ok 126 [iphone-webkit] › tests\e2e\playoffs.spec.ts:72:5 › hero downloads exactly one browser-supported responsive image source (328ms)
+  ok 125 [iphone-webkit] › tests\e2e\playoffs.spec.ts:57:5 › late fonts keep the mobile hero layout stable (1.2s)
+  ok 127 [iphone-webkit] › tests\e2e\playoffs.spec.ts:79:5 › uses the exact owner coyote logo without inventing Anna bracket placement (737ms)
+  ok 124 [iphone-webkit] › tests\e2e\playoffs.spec.ts:48:5 › playoffs has no runtime errors or accessibility violations (2.8s)
+  ok 130 [iphone-webkit] › tests\e2e\site.spec.ts:21:5 › navigation supports browser back and forward (1.6s)
+  ok 128 [iphone-webkit] › tests\e2e\site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (2.3s)
+  ok 131 [iphone-webkit] › tests\e2e\site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (546ms)
+  ok 133 [iphone-webkit] › tests\e2e\story-focus.spec.ts:22:5 › programmatic preventScroll is preserved and Tab intent is consumed (760ms)
+  ok 134 [iphone-webkit] › tests\e2e\story-focus.spec.ts:36:5 › real Tab navigation keeps the focused story control fully visible (410ms)
+  ok 135 [iphone-webkit] › tests\e2e\story-focus.spec.ts:44:5 › reduced film anchor observes layout that settles after the window resize frame (460ms)
+  ok 129 [iphone-webkit] › tests\e2e\site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (4.5s)
+(node:48044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 136 [reduced-motion] › tests\e2e\arcade.spec.ts:3:5 › category buttons and Press Start open picks and restore keyboard focus (498ms)
+  ok 138 [reduced-motion] › tests\e2e\arcade.spec.ts:44:5 › 320px arcade stays within the viewport with touch-sized controls (266ms)
+  -  139 [reduced-motion] › tests\e2e\arcade.spec.ts:65:5 › reduced-motion desktop arcade stacks its heading and cabinet
+  -  140 [reduced-motion] › tests\e2e\arcade.spec.ts:81:5 › JavaScript-disabled desktop stacks title and CRT within the viewport
+  ok 137 [reduced-motion] › tests\e2e\arcade.spec.ts:23:5 › each category opens its owner-supplied top three directly (780ms)
+  ok 142 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:3:5 › skip intro reveals navigation and focuses the film section (443ms)
+  ok 141 [reduced-motion] › tests\e2e\arrival-a11y.spec.ts:4:5 › dark opening retains an accessible main heading before the visual statement (730ms)
+  ok 143 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:11:5 › five primary links navigate to separate pages and identify the active route (356ms)
+  ok 144 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:20:5 › mobile route menu traps focus and restores scroll after Escape (283ms)
+  ok 145 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:28:5 › static responsive frames preserve all five authentic photo layers (1.2s)
+  ok 146 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (1.3s)
+  x  132 [iphone-webkit] › tests\e2e\story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story (5.9s)
+(node:37052) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 149 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.2s)
+  ok 147 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (2.4s)
+  ok 148 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (2.3s)
+  ok 150 [reduced-motion] › tests\e2e\arrival-fallback.spec.ts:2:5 › no JavaScript keeps the complete collage and full Film route available (367ms)
+  ok 153 [reduced-motion] › tests\e2e\arrival-loading.spec.ts:44:52 › no-js keeps a complete readable composition without an opening guard (393ms)
+  ok 154 [reduced-motion] › tests\e2e\arrival-loading.spec.ts:44:52 › reduced keeps a complete readable composition without an opening guard (480ms)
+  ok 155 [reduced-motion] › tests\e2e\cinema-framing.spec.ts:3:5 › Act II always contains full monochrome film with accessible native controls (625ms)
+  ok 156 [reduced-motion] › tests\e2e\cinema-framing.spec.ts:17:5 › Film route offers complete duration without autoplay or a scroll recut (661ms)
+  ok 151 [reduced-motion] › tests\e2e\arrival-loading.spec.ts:3:5 › slow enabled JavaScript paints darkness before hydration without spoiling the statement (3.5s)
+  ok 157 [reduced-motion] › tests\e2e\completion.spec.ts:4:5 › snapshot is reachable from recruiting navigation and shares the current route (1.2s)
+  ok 158 [reduced-motion] › tests\e2e\completion.spec.ts:22:5 › pending film deep link remains closable while approved film uses native controls (655ms)
+  ok 159 [reduced-motion] › tests\e2e\completion.spec.ts:39:5 › scrolling releases the field pin and responsive motion leaves a readable document (755ms)
+  ok 160 [reduced-motion] › tests\e2e\completion.spec.ts:54:5 › snapshot offers a selectable address when clipboard access is unavailable (308ms)
+  ok 152 [reduced-motion] › tests\e2e\arrival-loading.spec.ts:32:5 › failed JavaScript loading releases the finite opening guard into a readable fallback (5.5s)
+  ok 161 [reduced-motion] › tests\e2e\intro-entry.spec.ts:18:46 › client navigation /film/ to Home owns intro header state (1.0s)
+  ok 162 [reduced-motion] › tests\e2e\intro-entry.spec.ts:18:46 › client navigation /about/ to Home owns intro header state (1.0s)
+  ok 163 [reduced-motion] › tests\e2e\intro-entry.spec.ts:35:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (917ms)
+  ok 164 [reduced-motion] › tests\e2e\intro-entry.spec.ts:25:5 › reduced motion to normal starts a hidden-header intro on each activation (1.6s)
+  ok 166 [reduced-motion] › tests\e2e\playoffs.spec.ts:4:5 › playoffs navigation, complete bracket and region/round filters work (1.8s)
+  ok 167 [reduced-motion] › tests\e2e\playoffs.spec.ts:23:5 › game center supports direct links, Escape, focus and back navigation (1.3s)
+  ok 165 [reduced-motion] › tests\e2e\opening-refinement.spec.ts:14:5 › opening beats resolve in sequence, images decode, and reverse scroll restores earlier beats (3.0s)
+  ok 168 [reduced-motion] › tests\e2e\playoffs.spec.ts:35:5 › mobile bracket scrolls internally without page overflow and respects reduced motion (666ms)
+  ok 171 [reduced-motion] › tests\e2e\playoffs.spec.ts:72:5 › hero downloads exactly one browser-supported responsive image source (239ms)
+  ok 170 [reduced-motion] › tests\e2e\playoffs.spec.ts:57:5 › late fonts keep the mobile hero layout stable (986ms)
+  ok 172 [reduced-motion] › tests\e2e\playoffs.spec.ts:79:5 › uses the exact owner coyote logo without inventing Anna bracket placement (365ms)
+  ok 169 [reduced-motion] › tests\e2e\playoffs.spec.ts:48:5 › playoffs has no runtime errors or accessibility violations (1.9s)
+  ok 173 [reduced-motion] › tests\e2e\site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (847ms)
+  ok 176 [reduced-motion] › tests\e2e\site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (260ms)
+  ok 175 [reduced-motion] › tests\e2e\site.spec.ts:21:5 › navigation supports browser back and forward (327ms)
+  ok 177 [reduced-motion] › tests\e2e\story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story (488ms)
+  ok 178 [reduced-motion] › tests\e2e\story-focus.spec.ts:22:5 › programmatic preventScroll is preserved and Tab intent is consumed (486ms)
+  ok 179 [reduced-motion] › tests\e2e\story-focus.spec.ts:36:5 › real Tab navigation keeps the focused story control fully visible (334ms)
+  ok 180 [reduced-motion] › tests\e2e\story-focus.spec.ts:44:5 › reduced film anchor observes layout that settles after the window resize frame (425ms)
+  ok 174 [reduced-motion] › tests\e2e\site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (2.6s)
+
+
+  1) [iphone-webkit] › tests\e2e\story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story 
+
+    Error: expect(locator).toBeFocused() failed
+
+    Locator:  locator('#target')
+    Expected: focused
+    Received: inactive
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeFocused" locator('#target') with timeout 5000ms
+      - waiting for locator('#target')
+        14 × locator resolved to <button id="target">Partly visible control</button>
+           - unexpected value "inactive"
+
+
+      15 |  const before = await page.evaluate(() => scrollY);
+      16 |  await page.locator('#target').click({ position: { x: 20, y: 10 } });
+    > 17 |  await expect(page.locator('#target')).toBeFocused();
+         |                                        ^
+      18 |  await page.waitForTimeout(150);
+      19 |  expect(await page.evaluate(() => scrollY)).toBe(before);
+      20 | });
+        at C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\story-focus.spec.ts:17:40
+
+    Error Context: test-results\story-focus-pointer-focus--d0924-does-not-recenter-the-story-iphone-webkit\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\story-focus-pointer-focus--d0924-does-not-recenter-the-story-iphone-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\story-focus-pointer-focus--d0924-does-not-recenter-the-story-iphone-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [iphone-webkit] › tests\e2e\story-focus.spec.ts:13:5 › pointer focus on a partly visible control does not recenter the story 
+  7 skipped
+  172 passed (2.6m)

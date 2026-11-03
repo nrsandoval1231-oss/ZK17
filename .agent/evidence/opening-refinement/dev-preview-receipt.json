@@ -1,0 +1,33 @@
+{
+  "url": "https://cinematic-opening-dev.zk17-review.pages.dev",
+  "immutable": "https://ed5d0a54.zk17-review.pages.dev",
+  "source": "e2820d3f8705a17d715d549f8f79c26042efbd42",
+  "results": [
+    {
+      "name": "desktop",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "initial": 0.9,
+      "stadium": 0.8,
+      "header": true,
+      "errors": [],
+      "overflow": false
+    },
+    {
+      "name": "iphone-webkit",
+      "status": 200,
+      "noindex": "noindex, nofollow",
+      "initial": 0.9,
+      "stadium": 0.8,
+      "header": true,
+      "errors": [],
+      "overflow": false
+    }
+  ],
+  "stadiumHashMatches": true,
+  "production": {
+    "status": 200,
+    "hasNewStadium": false
+  },
+  "verifiedAt": "2026-11-02T22:39:19.315Z"
+}

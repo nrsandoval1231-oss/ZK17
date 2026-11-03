@@ -1,0 +1,170 @@
+
+> zk17-official@0.1.0 test
+> tsx --test tests/*.test.ts
+
+✔ every distributed campaign photo is included in the preview-only release boundary (21.2364ms)
+✔ CLS uses the largest separated session, not the sum of all shifts (0.6236ms)
+✔ CLS splits at the strict five-second boundary and excludes recent input (0.1605ms)
+✔ filtered capture output is isolated, and unknown/unsafe cases fail (0.8831ms)
+✔ metric collection rejects error/missing-hero pages without replacing prior evidence (9543.7368ms)
+✔ unknown capture invocation preserves canonical JSON and images before browser launch (17.1212ms)
+✔ cover scale fills the cinema using the contained video dimensions (0.5609ms)
+✔ unmeasured or invalid dimensions never produce an unsafe video transform (0.1071ms)
+✔ About suppresses review-only photographs and an empty gallery when preview mode is disabled (12.3556ms)
+✔ About uses source-backed approved scene photographs in either mode (1.1831ms)
+✔ TwoWorlds omits missing photographs without visual or accessible original-pending labels (0.88ms)
+✔ approved full monochrome upload remains byte-identical and retains duration (29.3698ms)
+▶ public NIL inquiry contact
+  ✔ stays unpublished without a record and fails closed at every approval gate (0.5361ms)
+  ✔ returns an approved email with an encoded NIL inquiry subject (0.5686ms)
+  ✔ accepts only clean HTTPS contact URLs (0.1524ms)
+  ✔ rejects malformed email destinations and control characters (0.1342ms)
+  ✔ renders only a pending message when no public contact or social profiles exist (13.6117ms)
+  ✔ renders every approved social profile as an accessible external link (1.1598ms)
+  ✔ renders the approved contact action with its exact safe destination (0.4934ms)
+✔ public NIL inquiry contact (17.6172ms)
+✔ publishes only the owner-approved inquiry destinations with distinct intents (33.1594ms)
+▶ public content eligibility
+  ✔ keeps only source-backed approved media and linked highlights (1.0216ms)
+  ✔ requires source, date, season, and game count before stats appear (0.1576ms)
+  ✔ keeps uncommitted as the only commitment state and holds empty offers/partners/socials (0.1862ms)
+  ✔ uses only source-backed approved photo assignments and prefers them over preview fallbacks (0.2682ms)
+  ✔ keeps commitment content absent by default and renders only an approved enabled record (4.9718ms)
+✔ public content eligibility (7.7466ms)
+✔ uses the exact owner upload for Anna while preserving its dimensions and artwork with an exterior alpha mask (60.9556ms)
+✔ still blocks public release when the original logo is missing (7.3827ms)
+✔ shows only verified game relationships backed by rights-approved public film (0.5905ms)
+✔ recognizes the captured 2026 placeholder page without publishing or touching timestamps (31.6304ms)
+✔ imports explicit qualifiers including a one-sided pair and does not invent a kickoff (24.0754ms)
+✔ uses stable school identities, imports explicit winners and advances through the existing graph (45.6537ms)
+✔ repeated pending or final polls are semantic no-ops (70.2969ms)
+✔ rejects conflicting finals atomically and does not mutate its input (28.3753ms)
+✔ rejects wrong season, division, missing nodes, changed seeds, broken edges and spoofed UIL link (25.2948ms)
+✔ does not turn numeric scores without an explicit winner into finals (15.4394ms)
+✔ rejects changed identity, unknown partial markup, and duplicate schools (43.6811ms)
+✔ accepts only linked game JSON-LD with matching identities and explicit timezone (90.83ms)
+✔ the CLI dry-run, atomic apply, replay, repeat and conflict path use isolated artifacts (2356.7746ms)
+✔ imports a controlled complete 64-team, 63-final fixture through the championship (533.4358ms)
+✔ retrieval permits only an explicitly inventoried same-host canonical redirect (16.1247ms)
+✔ rejects conflicting kickoff times from two linked game details in one source snapshot (22.1017ms)
+✖ the existing manual retriever retains successful metadata and detects repeated snapshots (8501.2863ms)
+✔ semantic duplicate detection still validates source and verification metadata (44.1203ms)
+✔ an identical secondary qualifier does not replace official evidence or block unrelated facts (47.9196ms)
+✔ preserves both winners advanced in a batch when the next matchup names only one participant (22.9874ms)
+✔ late game details preserve an immutable final and do not stall subsequent polls (48.4447ms)
+✖ both workflow file guards reject unexpected paths and Git failures without external filters (32731.6681ms)
+▶ 2026 UIL tournament
+  ✔ represents 64 slots and all 63 games in the exact six-round graph (1.8494ms)
+  ✔ normalizes known aliases without fuzzy merging other schools (0.3398ms)
+  ✔ advances only an explicitly verified final winner and leaves unrelated games untouched (1.7149ms)
+  ✔ rejects tied, incomplete, negative or unverified finals and winners in live games (1.1833ms)
+  ✔ keeps incomplete live scores provisional and supports postponed/canceled games (1.6484ms)
+  ✔ rejects unknown or missing opponents and an invalid winner (0.8123ms)
+  ✔ rejects conflicting evidence without silently replacing an official result (0.9235ms)
+  ✔ does not seed Anna on alignment alone and never assumes later advancement (1.7466ms)
+  ✔ filters complete regions and keeps state rounds accessible (0.1968ms)
+  ✔ rejects stale and future verification timestamps (0.7398ms)
+  ✔ rejects missing propagated winners and placements outside the team district (2.0243ms)
+  ✔ rejects corrupted graph relationships and advancement conflicts (0.422ms)
+✔ 2026 UIL tournament (14.7273ms)
+▶ release export media boundary
+  ✔ blocks preview files in public sources and in exported output even when preview mode is disabled (13.9044ms)
+  ✔ fails prebuild when commitment reveal is enabled without a published approved announcement (101.426ms)
+✔ release export media boundary (116.0862ms)
+✔ local static host supports video byte ranges for Safari playback and seeking (181.9191ms)
+ℹ tests 62
+ℹ suites 4
+ℹ pass 60
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 46686.0396
+
+✖ failing tests:
+
+test at tests\playoff-sync.test.ts:89:1
+✖ the existing manual retriever retains successful metadata and detects repeated snapshots (8501.2863ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(report.every((r:{changed:boolean})=>!r.changed))
+  
+      at TestContext.<anonymous> (C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\playoff-sync.test.ts:98:85)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\playoff-sync.test.ts:127:1
+✖ both workflow file guards reject unexpected paths and Git failures without external filters (32731.6681ms)
+  Error: Command failed: bash -e -c           changed=$(git diff --name-only origin/main) || { echo 'Unable to inspect data branch'; exit 1; }
+            while IFS= read -r path; do
+              case "$path" in
+                ''|content/playoffs/verified.json|content/playoffs/evidence/latest-sync.json) ;;
+                *) echo 'Unexpected files on data branch; review required'; exit 1 ;;
+              esac
+            done <<< "$changed"
+  .agent/ARCADE_BUILD_COMPLETION.json: line 1: $'{\r': command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 2: objective:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 3: packet:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 4: base:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 5: branch:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 6: sha:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 7: $'},\r': command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 8: start_utc:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 9: finish_utc:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 10: elapsed_seconds:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 11: lane:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 12: model:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 13: config_identity:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 14: token_usage:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 15: changed_files:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 16: app/layout.tsx,
+: No such file or directory
+  .agent/ARCADE_BUILD_COMPLETION.json: line 17: components/site-experience.tsx,
+: No such file or directory
+  .agent/ARCADE_BUILD_COMPLETION.json: line 18: components/offfield-arcade.tsx,
+: No such file or directory
+  .agent/ARCADE_BUILD_COMPLETION.json: line 19: components/offfield-arcade.module.css,
+: No such file or directory
+  .agent/ARCADE_BUILD_COMPLETION.json: line 20: $'package.json,\r': command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 21: $'package-lock.json,\r': command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 22: tests/e2e/arcade.spec.ts,
+: No such file or directory
+  .agent/ARCADE_BUILD_COMPLETION.json: line 23: docs/ARCADE.md,
+: No such file or directory
+  .agent/ARCADE_BUILD_COMPLETION.json: line 24: .agent/ARCADE_BUILD_COMPLETION.json
+: No such file or directory
+  .agent/ARCADE_BUILD_COMPLETION.json: line 25: $'],\r': command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 26: implementation:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 27: Added responsive CRT arcade with semantic native radios, meaningful category screens, truthful coming-soon states, Escape/back behavior, and focus restoration.,
+: No such file or directory
+  .agent/ARCADE_BUILD_COMPLETION.json: line 28: $'Preserved the desktop horizontal story rail with positive-travel guarded GSAP pinning; narrow screens and reduced-motion use normal stacked layout.,\r': command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 29: $'Loaded the licensed self-hosted Press Start 2P font and responsive parent-provided stadium art; HTML remains separate from decorative artwork.,\r': command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 30: $'Replaced the old off-field placeholder rail and feature list, kept the offfield-personal anchor, and removed only its obsolete GSAP rail tween.,\r': command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 31: $'Documented how verified category details may be added and the fictional nature of the illustration.\r': command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 32: $'],\r': command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 33: validation:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 34: commands:: command not found
+  .agent/ARCADE_BUILD_COMPLETION.json: line 72: syntax error: unexpected end of file from `{' command on line 63
+  
+      at genericNodeError (node:internal/errors:986:15)
+      at wrappedFn (node:internal/errors:540:14)
+      at checkExecSyncError (node:child_process:942:11)
+      at execFileSync (node:child_process:978:15)
+      at execute (C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\playoff-sync.test.ts:135:45)
+      at TestContext.<anonymous> (C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\playoff-sync.test.ts:136:4)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    status: 2,
+    signal: null,
+    output: [ null, '', ".agent/ARCADE_BUILD_COMPLETION.json: line 1: $'{\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 2: objective:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 3: packet:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 4: base:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 5: branch:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 6: sha:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 7: $'},\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 8: start_utc:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 9: finish_utc:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 10: elapsed_seconds:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 11: lane:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 12: model:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 13: config_identity:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 14: token_usage:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 15: changed_files:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 16: app/layout.tsx,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 17: components/site-experience.tsx,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 18: components/offfield-arcade.tsx,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 19: components/offfield-arcade.module.css,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 20: $'package.json,\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 21: $'package-lock.json,\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 22: tests/e2e/arcade.spec.ts,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 23: docs/ARCADE.md,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 24: .agent/ARCADE_BUILD_COMPLETION.json\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 25: $'],\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 26: implementation:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 27: Added responsive CRT arcade with semantic native radios, meaningful category screens, truthful coming-soon states, Escape/back behavior, and focus restoration.,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 28: $'Preserved the desktop horizontal story rail with positive-travel guarded GSAP pinning; narrow screens and reduced-motion use normal stacked layout.,\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 29: $'Loaded the licensed self-hosted Press Start 2P font and responsive parent-provided stadium art; HTML remains separate from decorative artwork.,\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 30: $'Replaced the old off-field placeholder rail and feature list, kept the offfield-personal anchor, and removed only its obsolete GSAP rail tween.,\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 31: $'Documented how verified category details may be added and the fictional nature of the illustration.\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 32: $'],\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 33: validation:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 34: commands:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 72: syntax error: unexpected end of file from `{' command on line 63\n" ],
+    pid: 20600,
+    stdout: '',
+    stderr: ".agent/ARCADE_BUILD_COMPLETION.json: line 1: $'{\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 2: objective:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 3: packet:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 4: base:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 5: branch:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 6: sha:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 7: $'},\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 8: start_utc:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 9: finish_utc:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 10: elapsed_seconds:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 11: lane:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 12: model:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 13: config_identity:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 14: token_usage:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 15: changed_files:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 16: app/layout.tsx,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 17: components/site-experience.tsx,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 18: components/offfield-arcade.tsx,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 19: components/offfield-arcade.module.css,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 20: $'package.json,\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 21: $'package-lock.json,\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 22: tests/e2e/arcade.spec.ts,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 23: docs/ARCADE.md,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 24: .agent/ARCADE_BUILD_COMPLETION.json\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 25: $'],\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 26: implementation:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 27: Added responsive CRT arcade with semantic native radios, meaningful category screens, truthful coming-soon states, Escape/back behavior, and focus restoration.,\r: No such file or directory\n.agent/ARCADE_BUILD_COMPLETION.json: line 28: $'Preserved the desktop horizontal story rail with positive-travel guarded GSAP pinning; narrow screens and reduced-motion use normal stacked layout.,\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 29: $'Loaded the licensed self-hosted Press Start 2P font and responsive parent-provided stadium art; HTML remains separate from decorative artwork.,\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 30: $'Replaced the old off-field placeholder rail and feature list, kept the offfield-personal anchor, and removed only its obsolete GSAP rail tween.,\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 31: $'Documented how verified category details may be added and the fictional nature of the illustration.\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 32: $'],\\r': command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 33: validation:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 34: commands:: command not found\n.agent/ARCADE_BUILD_COMPLETION.json: line 72: syntax error: unexpected end of file from `{' command on line 63\n"
+  }

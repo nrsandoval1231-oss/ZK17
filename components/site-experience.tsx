@@ -5,19 +5,19 @@ import BrandLogo from '@/components/brand-logo';
 import ArrivalExperience from '@/components/arrival-experience';
 import TwoWorlds from '@/components/two-worlds';
 import WorldFooter from '@/components/world-footer';
-import Arrow from '@/components/story-arrow';
-import { destinations as scenes } from '@/content/navigation';
 import { resolveScenePhoto } from '@/content/scene-photo-selection';
 import { useStoryMotion } from '@/components/use-story-motion';
 import type { MediaAsset, PreviewPhoto, ScenePhoto, PhotoScene, PublicProfile } from '@/content/site';
 
 
+import { navigationDestinations } from '@/content/navigation';
+const scenes = navigationDestinations;
 function VideoDialog({ source, poster, onClose }: { source: string | null; poster?: string; onClose: () => void }) {
  const dialog = useRef<HTMLDialogElement>(null);
  useEffect(() => { const el = dialog.current; if (!el) return; el.showModal(); const priorOverflow = document.body.style.overflow; document.body.style.overflow = 'hidden'; return () => { if (el.open) el.close(); document.body.style.overflow = priorOverflow; }; }, [onClose]);
- return <dialog ref={dialog} className="film-dialog" aria-label="Film room" onCancel={event => { event.preventDefault(); onClose(); }}><button className="dialog-close" onClick={onClose} aria-label="Close film room">Close <span>×</span></button>{source ? <video controls playsInline preload="none" poster={poster}><source src={source} type="video/mp4" />Your browser does not support video playback.</video> : <div className="film-unavailable"><span className="section-rule" /><p className="eyebrow">FILM ROOM</p><h2>Film arrives<br />when it’s ready.</h2><p>No approved film is available yet.</p><button className="text-action" onClick={onClose}>Return to the story <Arrow /></button></div>}</dialog>;
+ return <dialog ref={dialog} className="film-dialog" aria-label="Film room" onCancel={event => { event.preventDefault(); onClose(); }}><button className="dialog-close" onClick={onClose} aria-label="Close film room">CLOSE</button>{source ? <video controls playsInline preload="none" poster={poster}><source src={source} type="video/mp4" />Your browser does not support video playback.</video> : <div className="film-unavailable"><span className="section-rule" /><p className="eyebrow">FILM ROOM</p><h2>Film arrives<br />when it’s ready.</h2><p>No approved film is available yet.</p><button className="text-action" onClick={onClose}>Return to the story</button></div>}</dialog>;
 }
-export function Header({ onWatch }: { onWatch: (opener: HTMLButtonElement) => void }) {
+export function Header() {
  const [open, setOpen] = useState(false);
  const nav=useRef<HTMLElement>(null); const trigger=useRef<HTMLButtonElement>(null); const restoreTriggerFocus=()=>{let attempts=0;const restore=()=>{const button=trigger.current;if(!button)return;if(getComputedStyle(button).visibility==='visible'&&button.getClientRects().length>0)button.focus();else if(window.innerWidth<900&&attempts++<10)requestAnimationFrame(restore);};requestAnimationFrame(restore);};
  useLayoutEffect(()=>{if(!open)return;const priorOverflow=document.body.style.overflow;const content=document.querySelector<HTMLElement>('.site-content');const priorInert=content?.inert??false;document.body.style.overflow='hidden';if(content)content.inert=true;let focusFrame=0;const focusWhenVisible=()=>{const closeButton=nav.current?.querySelector<HTMLButtonElement>('.nav-close');if(closeButton&&getComputedStyle(closeButton).visibility==='visible'&&closeButton.getClientRects().length>0)closeButton.focus();else focusFrame=requestAnimationFrame(focusWhenVisible);};focusFrame=requestAnimationFrame(focusWhenVisible);const onKey=(event:KeyboardEvent)=>{if(event.key==='Escape'){setOpen(false);restoreTriggerFocus();return;}if(event.key==='Tab'&&nav.current){const items=[...nav.current.querySelectorAll<HTMLElement>('a,button:not([disabled])')];if(event.shiftKey&&document.activeElement===items[0]){event.preventDefault();items.at(-1)?.focus();}else if(!event.shiftKey&&document.activeElement===items.at(-1)){event.preventDefault();items[0]?.focus();}}};document.addEventListener('keydown',onKey);return()=>{cancelAnimationFrame(focusFrame);document.removeEventListener('keydown',onKey);document.body.style.overflow=priorOverflow;if(content)content.inert=priorInert;};},[open]);
@@ -43,14 +43,10 @@ export function Header({ onWatch }: { onWatch: (opener: HTMLButtonElement) => vo
     <span className="header-wordmark" aria-hidden="true">ZEPHYR KREYE</span>
    </Link>
    <nav ref={nav} id="site-nav" className={"site-nav "+(open?"nav-open":"")} aria-label="Main navigation">
-    <button className="nav-close" onClick={close}>Close <span>×</span></button>
+    <button className="nav-close" onClick={close}>CLOSE</button>
     {scenes.map(([id, name], index) => <a key={id} href={id} aria-label={name} aria-current={id === '/' ? 'page' : undefined} onClick={close}><span>0{index + 1}</span>{name}</a>)}
    </nav>
-   <button className="header-watch" aria-label="WATCH FILM" onClick={event => onWatch(event.currentTarget)}>
-    <svg aria-hidden="true" focusable="false" viewBox="0 0 12 12"><path d="M3 1.5 10 6 3 10.5Z"/></svg>
-    <span>WATCH FILM</span>
-   </button>
-   <button ref={trigger} aria-expanded={open} aria-controls="site-nav" className={"menu-toggle "+(open?"is-open":"")} onClick={() => setOpen(!open)}><span>{open ? "Close" : "Menu"}</span><svg aria-hidden="true" focusable="false" viewBox="0 0 20 20"><path d="M2 6h16" /><path d="M2 14h16" /></svg></button>
+   <button ref={trigger} aria-expanded={open} aria-controls="site-nav" className={"menu-toggle "+(open?"is-open":"")} onClick={() => setOpen(!open)}><span>{open ? "CLOSE" : "MENU"}</span></button>
   </header>
   {open && <button className="nav-backdrop" aria-label="Close navigation menu" onClick={close} />}
  </>;
@@ -61,12 +57,6 @@ export default function SiteExperience({ profileData, film, assets, previewPhoto
  const approvedFilm = film;
  const photoFor = (scene: PhotoScene): ScenePhoto | PreviewPhoto | undefined => resolveScenePhoto(scene, scenePhotos, previewPhotos, previewMediaMode);
  const arrivalPhoto = photoFor('arrival'); const fieldPhoto = photoFor('on-field'); const offFieldPhoto = photoFor('off-field');
- const openFilm = (asset: MediaAsset | null = approvedFilm, opener?: HTMLElement) => {
-  const active = document.activeElement;
-  filmOpener.current = opener ?? (active instanceof HTMLElement && active !== document.body ? active : null);
-  history.pushState(null, '', '#film=' + encodeURIComponent(asset?.id ?? 'pending'));
-  setSelectedFilm(asset); setFilmOpen(true);
- };
  useStoryMotion(root);
  useEffect(() => {
   const sync = () => {
@@ -86,9 +76,9 @@ export default function SiteExperience({ profileData, film, assets, previewPhoto
   requestAnimationFrame(() => (filmOpener.current ?? root.current?.querySelector<HTMLElement>('.arrival-watch, #film-room button'))?.focus({ preventScroll: true }));
  }, []);
  return <main ref={root} id="main" data-home-experience data-preview-media={previewMediaMode ? 'enabled' : 'disabled'}>
-  <Header onWatch={(opener) => openFilm(approvedFilm, opener)} />
+  <Header />
   <div className="site-content">
-  <ArrivalExperience profile={profileData} photo={arrivalPhoto} photos={previewMediaMode ? [...campaignPhotos, ...scenePhotos, ...previewPhotos] : scenePhotos} film={approvedFilm} onWatch={(opener) => openFilm(approvedFilm, opener)} />
+  <ArrivalExperience profile={profileData} photo={arrivalPhoto} photos={previewMediaMode ? [...campaignPhotos, ...scenePhotos, ...previewPhotos] : scenePhotos} film={approvedFilm} />
   <TwoWorlds onFieldPhoto={fieldPhoto} offFieldPhoto={offFieldPhoto} jerseyNumber={profileData.number} />
   <WorldFooter />
   </div>

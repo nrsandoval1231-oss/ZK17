@@ -1,0 +1,87 @@
+{
+  "origin": "http://127.0.0.1:3100",
+  "results": [
+    {
+      "run": 0,
+      "errors": [],
+      "actionError": null,
+      "moves": 89,
+      "failed": [],
+      "loads": 80
+    },
+    {
+      "run": 1,
+      "errors": [
+        "NotFoundError: Failed to execute 'insertBefore' on 'Node': The node to be removed is no longer a child of this node. Perhaps it was moved in response to a mutation?\n    at Node.insertBefore (<anonymous>:7:29)\n    at tW (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:17109)\n    at tS.revert (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:25322)\n    at tA (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:14692)\n    at tI (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:15439)\n    at http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:14971"
+      ],
+      "actionError": "locator.click: Timeout 3500ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Skip intro' })\u001b[22m\n\u001b[2m    - locator resolved to <a href=\"#film-room\" class=\"arrival-hero_skip__UByhJ\">Skip intro ↓</a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <section id=\"film-room\" aria-labelledby=\"film-title\" class=\"arrival_cinema__4r_v8\">…</section> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <section id=\"film-room\" aria-labelledby=\"film-title\" class=\"arrival_cinema__4r_v8\">…</section> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    6 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <section id=\"film-room\" aria-labelledby=\"film-title\" class=\"arrival_cinema__4r_v8\">…</section> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+      "moves": 3,
+      "failed": [
+        {
+          "parent": "DIV.site-content",
+          "node": "on-field",
+          "before": "pin-spacer",
+          "stack": "NotFoundError: Failed to execute 'insertBefore' on 'Node': The node to be removed is no longer a child of this node. Perhaps it was moved in response to a mutation?\n    at Node.insertBefore (<anonymous>:7:29)\n    at tW (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:17109)\n    at tS.revert (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:25322)\n    at tA (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:14692)\n    at tI (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:15439)\n    at http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:14971"
+        }
+      ],
+      "loads": 1
+    },
+    {
+      "run": 2,
+      "errors": [],
+      "actionError": null,
+      "moves": 89,
+      "failed": [],
+      "loads": 80
+    },
+    {
+      "run": 3,
+      "errors": [],
+      "actionError": null,
+      "moves": 92,
+      "failed": [],
+      "loads": 84
+    },
+    {
+      "run": 4,
+      "errors": [],
+      "actionError": null,
+      "moves": 89,
+      "failed": [],
+      "loads": 81
+    },
+    {
+      "run": 5,
+      "errors": [],
+      "actionError": null,
+      "moves": 89,
+      "failed": [],
+      "loads": 82
+    },
+    {
+      "run": 6,
+      "errors": [
+        "NotFoundError: Failed to execute 'insertBefore' on 'Node': The node to be removed is no longer a child of this node. Perhaps it was moved in response to a mutation?\n    at Node.insertBefore (<anonymous>:7:29)\n    at tW (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:17109)\n    at tS.revert (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:25322)\n    at tA (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:14692)\n    at tI (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:15439)\n    at http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:14971"
+      ],
+      "actionError": "locator.click: Timeout 3500ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Skip intro' })\u001b[22m\n\u001b[2m    - locator resolved to <a href=\"#film-room\" class=\"arrival-hero_skip__UByhJ\">Skip intro ↓</a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <section id=\"film-room\" aria-labelledby=\"film-title\" class=\"arrival_cinema__4r_v8\">…</section> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <section id=\"film-room\" aria-labelledby=\"film-title\" class=\"arrival_cinema__4r_v8\">…</section> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <section id=\"film-room\" aria-labelledby=\"film-title\" class=\"arrival_cinema__4r_v8\">…</section> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is not stable\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <section id=\"film-room\" aria-labelledby=\"film-title\" class=\"arrival_cinema__4r_v8\">…</section> intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n",
+      "moves": 3,
+      "failed": [
+        {
+          "parent": "DIV.site-content",
+          "node": "on-field",
+          "before": "pin-spacer",
+          "stack": "NotFoundError: Failed to execute 'insertBefore' on 'Node': The node to be removed is no longer a child of this node. Perhaps it was moved in response to a mutation?\n    at Node.insertBefore (<anonymous>:7:29)\n    at tW (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:17109)\n    at tS.revert (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:25322)\n    at tA (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:14692)\n    at tI (http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:15439)\n    at http://127.0.0.1:3100/_next/static/chunks/18-f08ccba3ed6bc63c.js:1:14971"
+        }
+      ],
+      "loads": 1
+    },
+    {
+      "run": 7,
+      "errors": [],
+      "actionError": null,
+      "moves": 89,
+      "failed": [],
+      "loads": 82
+    }
+  ]
+}

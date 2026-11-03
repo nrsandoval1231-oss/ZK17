@@ -1,0 +1,49 @@
+
+Running 28 tests using 2 workers
+
+(node:62672) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:26408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  2 [desktop-chromium] › tests\e2e\hudl-highlights.spec.ts:49:5 › static Highlights iframe survives viewport changes without reloading (330ms)
+  ok  1 [desktop-chromium] › tests\e2e\hudl-highlights.spec.ts:6:5 › dedicated Highlights page embeds official Hudl without autoplay and keeps true 16:9 geometry (367ms)
+  ok  3 [desktop-chromium] › tests\e2e\hudl-highlights.spec.ts:70:5 › Highlights is active on direct load and reachable from desktop and mobile navigation (848ms)
+  ok  4 [desktop-chromium] › tests\e2e\site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (1.3s)
+  ok  6 [desktop-chromium] › tests\e2e\site.spec.ts:21:5 › navigation supports browser back and forward (249ms)
+  ok  7 [desktop-chromium] › tests\e2e\site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (177ms)
+(node:44484) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  8 [mobile-chromium] › tests\e2e\hudl-highlights.spec.ts:6:5 › dedicated Highlights page embeds official Hudl without autoplay and keeps true 16:9 geometry (325ms)
+  ok  9 [mobile-chromium] › tests\e2e\hudl-highlights.spec.ts:49:5 › static Highlights iframe survives viewport changes without reloading (279ms)
+  ok  5 [desktop-chromium] › tests\e2e\site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (2.7s)
+  ok 10 [mobile-chromium] › tests\e2e\hudl-highlights.spec.ts:70:5 › Highlights is active on direct load and reachable from desktop and mobile navigation (841ms)
+(node:42892) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 12 [mobile-chromium] › tests\e2e\site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (768ms)
+  ok 13 [mobile-chromium] › tests\e2e\site.spec.ts:21:5 › navigation supports browser back and forward (1.3s)
+  ok 14 [mobile-chromium] › tests\e2e\site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (168ms)
+  ok 11 [mobile-chromium] › tests\e2e\site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (2.7s)
+(node:34864) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:62568) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 16 [iphone-webkit] › tests\e2e\hudl-highlights.spec.ts:49:5 › static Highlights iframe survives viewport changes without reloading (750ms)
+  ok 15 [iphone-webkit] › tests\e2e\hudl-highlights.spec.ts:6:5 › dedicated Highlights page embeds official Hudl without autoplay and keeps true 16:9 geometry (975ms)
+  ok 18 [iphone-webkit] › tests\e2e\site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (2.0s)
+  ok 19 [iphone-webkit] › tests\e2e\site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (4.5s)
+  ok 20 [iphone-webkit] › tests\e2e\site.spec.ts:21:5 › navigation supports browser back and forward (1.1s)
+  ok 21 [iphone-webkit] › tests\e2e\site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (282ms)
+(node:62048) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 22 [reduced-motion] › tests\e2e\hudl-highlights.spec.ts:6:5 › dedicated Highlights page embeds official Hudl without autoplay and keeps true 16:9 geometry (361ms)
+  ok 23 [reduced-motion] › tests\e2e\hudl-highlights.spec.ts:49:5 › static Highlights iframe survives viewport changes without reloading (260ms)
+  ok 24 [reduced-motion] › tests\e2e\hudl-highlights.spec.ts:70:5 › Highlights is active on direct load and reachable from desktop and mobile navigation (844ms)
+  ok 17 [iphone-webkit] › tests\e2e\hudl-highlights.spec.ts:70:5 › Highlights is active on direct load and reachable from desktop and mobile navigation (11.1s)
+  ok 25 [reduced-motion] › tests\e2e\site.spec.ts:4:5 › dedicated routes load directly without runtime errors or public implementation labels (1.3s)
+(node:55540) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 26 [reduced-motion] › tests\e2e\site.spec.ts:21:5 › navigation supports browser back and forward (242ms)
+  ok 28 [reduced-motion] › tests\e2e\site.spec.ts:27:5 › NIL separates owner-approved inquiry intents and links to the public contact page (182ms)
+  ok 27 [reduced-motion] › tests\e2e\site.spec.ts:13:5 › reduced motion remains static and new routes pass accessibility checks (2.6s)
+
+  28 passed (22.8s)

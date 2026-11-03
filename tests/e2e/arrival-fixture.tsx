@@ -4,5 +4,5 @@ import ArrivalExperience from '../../components/arrival-experience';
 import { profile } from '../../content/site';
 
 createRoot(document.getElementById('root')!).render(
-  <><ArrivalExperience profile={profile} film={null} onWatch={() => {}} /><div style={{ height: '100vh' }} /></>
+  <><ArrivalExperience profile={profile} film={null} /><div style={{ height: '100vh' }} /></>
 );

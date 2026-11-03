@@ -12,6 +12,12 @@ async function openFocusFixture(page: import('@playwright/test').Page) {
 
 test('pointer focus on a partly visible control does not recenter the story', async ({ page }) => {
  await openFocusFixture(page);
+ // Safari buttons do not take native pointer focus. Make this fixture focus
+ // on the real click so every engine exercises focusin after pointerdown.
+ // preventScroll isolates any recentering performed by the story hook.
+ await page.locator('#target').evaluate((el: HTMLElement) => {
+  el.addEventListener('click', () => el.focus({ preventScroll: true }), { once: true });
+ });
  const before = await page.evaluate(() => scrollY);
  await page.locator('#target').click({ position: { x: 20, y: 10 } });
  await expect(page.locator('#target')).toBeFocused();

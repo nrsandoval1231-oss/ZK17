@@ -1,0 +1,49 @@
+{
+  "origin": "http://127.0.0.1:3100",
+  "results": [
+    {
+      "name": "desktop",
+      "shots": [
+        "navigation",
+        "hero",
+        "links-primary",
+        "arcade",
+        "arcade-back",
+        "playoff-controls",
+        "game-center",
+        "utilities",
+        "media-close"
+      ]
+    },
+    {
+      "name": "portrait",
+      "shots": [
+        "navigation",
+        "mobile-menu",
+        "hero",
+        "links-primary",
+        "arcade",
+        "arcade-back",
+        "playoff-controls",
+        "game-center",
+        "utilities",
+        "media-close"
+      ]
+    },
+    {
+      "name": "landscape",
+      "shots": [
+        "navigation",
+        "mobile-menu",
+        "hero",
+        "links-primary",
+        "arcade",
+        "arcade-back",
+        "playoff-controls",
+        "game-center",
+        "utilities",
+        "media-close"
+      ]
+    }
+  ]
+}

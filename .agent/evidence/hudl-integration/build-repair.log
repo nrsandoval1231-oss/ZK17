@@ -1,0 +1,40 @@
+
+> zk17-official@0.1.0 prebuild
+> node scripts/release-check.mjs && tsx scripts/update-playoffs.ts validate && node scripts/validate-playoff-assets.mjs
+
+Preview media mode enabled.
+Validated 63 games and 0 reviewed observations. No results inferred.
+
+> zk17-official@0.1.0 build
+> next build --webpack && node scripts/audit-export.mjs
+
+▲ Next.js 16.4.3 (webpack)
+✓ Running next.config.js took 18ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1643ms
+  Running TypeScript ...
+  Finished TypeScript in 1566ms ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/9) ...
+  Generating static pages using 9 workers (2/9) 
+  Generating static pages using 9 workers (4/9) 
+  Generating static pages using 9 workers (6/9) 
+✓ Generating static pages using 9 workers (9/9) in 253ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /film
+├ ○ /nil-recruiting
+├ ○ /playoffs
+├ ○ /recruiting
+└ ○ /sitemap.xml
+
+
+○  (Static)  prerendered as static content
+
+Preview export media audit skipped for non-release build.
