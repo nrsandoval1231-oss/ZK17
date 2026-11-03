@@ -1,0 +1,107 @@
+[
+  {
+    "width": 375,
+    "height": 900,
+    "reducedMotion": true,
+    "errors": [],
+    "overflow": false,
+    "sections": [
+      "arrival",
+      "film-room",
+      "on-field",
+      "off-field",
+      "follow-the-journey",
+      "next-chapter"
+    ]
+  },
+  {
+    "width": 390,
+    "height": 900,
+    "reducedMotion": true,
+    "errors": [],
+    "overflow": false,
+    "sections": [
+      "arrival",
+      "film-room",
+      "on-field",
+      "off-field",
+      "follow-the-journey",
+      "next-chapter"
+    ]
+  },
+  {
+    "width": 430,
+    "height": 900,
+    "reducedMotion": true,
+    "errors": [],
+    "overflow": false,
+    "sections": [
+      "arrival",
+      "film-room",
+      "on-field",
+      "off-field",
+      "follow-the-journey",
+      "next-chapter"
+    ]
+  },
+  {
+    "width": 768,
+    "height": 900,
+    "reducedMotion": true,
+    "errors": [],
+    "overflow": false,
+    "sections": [
+      "arrival",
+      "film-room",
+      "on-field",
+      "off-field",
+      "follow-the-journey",
+      "next-chapter"
+    ]
+  },
+  {
+    "width": 853,
+    "height": 900,
+    "reducedMotion": true,
+    "errors": [],
+    "overflow": false,
+    "sections": [
+      "arrival",
+      "film-room",
+      "on-field",
+      "off-field",
+      "follow-the-journey",
+      "next-chapter"
+    ]
+  },
+  {
+    "width": 1024,
+    "height": 900,
+    "reducedMotion": true,
+    "errors": [],
+    "overflow": false,
+    "sections": [
+      "arrival",
+      "film-room",
+      "on-field",
+      "off-field",
+      "follow-the-journey",
+      "next-chapter"
+    ]
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "reducedMotion": true,
+    "errors": [],
+    "overflow": false,
+    "sections": [
+      "arrival",
+      "film-room",
+      "on-field",
+      "off-field",
+      "follow-the-journey",
+      "next-chapter"
+    ]
+  }
+]

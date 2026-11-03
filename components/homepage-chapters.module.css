@@ -1,0 +1,147 @@
+.chapters { --paper: #eee8df; --accent: #a653ef; --serif: 'Bodoni Moda', Georgia, 'Times New Roman', serif; background: #09090b; color: #f5f3f0; }
+.chapters h2 { margin: 0; font: italic 500 clamp(68px, 8.8vw, 146px)/.82 var(--serif); letter-spacing: -.065em; }
+.chapters h2 em { font-style: inherit; color: var(--accent); }
+.index { display: flex; align-items: center; gap: 13px; margin: 0 0 22px; font: 500 12px/1.5 var(--display); letter-spacing: .23em; }
+.index span { color: #9d969e; }
+.index i, .rule { display: inline-block; width: 40px; height: 3px; background: var(--accent); }
+.tagline { font: 400 15px/1.7 var(--display); letter-spacing: .42em; }
+.field { position: relative; overflow: hidden; padding-bottom: 26px; background: #0c0c0e url('/media/arrival-directors-smoke.png') center / cover; }
+.field { background-blend-mode: soft-light; }
+.fieldHero { position: relative; display: grid; grid-template-columns: 54% 46%; align-items: center; min-height: clamp(390px, 43vw, 680px); }
+.fieldPhoto { position: absolute; inset: 0 auto 0 0; width: 57%; margin: 0; }
+.fieldPhoto picture, .personalPhoto picture, .rearPhoto picture { display: block; width: 100%; height: 100%; }
+.fieldPhoto img, .personalPhoto img, .rearPhoto img { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); }
+.fieldPhoto img { object-position: 50% 35% !important; }
+.fieldPhoto::after { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, transparent 60%, #0c0c0e), linear-gradient(0deg,#0c0c0e,transparent 24%); pointer-events: none; }
+.fieldCopy { position: relative; z-index: 1; grid-column: 2; padding: 64px 5vw 70px 0; }
+.fieldCopy .index { gap: 10px; font-size: clamp(9px, 1vw, 14px); white-space: nowrap; }
+.rule { margin-bottom: 28px; width: 72px; }
+.fieldCopy h2 em { display: inline-block; margin-left: .33em; }
+.fieldCopy .tagline { margin: 28px 0 0 1.7em; }
+.stats { position: relative; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); width: 88%; max-width: 1400px; margin: -20px auto 0; }
+.stat { display: flex; flex-direction: column; align-items: center; padding: 0 14px; text-align: center; }
+.stat + .stat { border-left: 1px solid #ffffff50; }
+.stat strong { font: italic 500 clamp(40px, 4.8vw, 72px)/1 var(--serif); }
+.stat > span { margin-top: 12px; font: 500 13px/1.2 var(--display); letter-spacing: .25em; }
+.stat > i { width: 50px; height: 2px; margin: 17px 0 11px; background: var(--accent); }
+.stat small { color: #c1bac4; font: 400 10px/1.5 var(--display); letter-spacing: .1em; }
+.statsScope { margin: 22px 20px 0; text-align: center; font: 500 10px/1.6 var(--display); letter-spacing: .17em; color: #bfb7c3; }
+.statsScope span { padding: 0 7px; }
+.beyond { display: grid; grid-template-columns: 50% 50%; align-items: stretch; background: var(--paper); color: #121013; }
+.personalPhoto { position: relative; min-height: clamp(320px, 35vw, 520px); margin: 0; overflow: hidden; }
+.personalPhoto picture { position: absolute; inset: 0; }
+.personalPhoto img { object-position: 50% 35% !important; }
+.beyondCopy { align-self: center; padding: clamp(32px, 4vw, 64px) 5vw clamp(32px, 4vw, 64px) 3.5vw; }
+.beyondCopy h2 { font-size: clamp(55px, 6.7vw, 108px); white-space: nowrap; }
+.beyondCopy h2 em { color: #8526bd; }
+.subtitle { margin: 22px 0 18px; font: italic 400 clamp(16px, 1.6vw, 24px)/1.4 var(--serif); }
+.introduction { max-width: 41ch; margin: 0; font: 400 14px/1.6 var(--body); }
+.social { position: relative; display: grid; grid-template-columns: 38% minmax(0,1fr); align-items: center; padding: 24px 0 18px 5vw; overflow: hidden; background: #0c0b0e url('/media/arrival-directors-smoke.png') center 70% / cover; border-bottom: 1px solid #ddd4df45; }
+.social { background-color: #1b1322; background-blend-mode: luminosity; }
+.socialCopy { position: relative; z-index: 1; }
+.socialCopy h2 { font-size: clamp(40px, 5.1vw, 84px); line-height: .94; }
+.socialCopy .tagline { font-size: 12px; letter-spacing: .3em; margin-top: 25px; }
+.carousel { min-width: 0; }
+.photoRail { position: relative; display: flex; align-items: center; height: clamp(230px, 25vw, 400px); overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; padding-inline: calc((100% - clamp(200px, 23vw, 350px)) / 2); -webkit-overflow-scrolling: touch; }
+.photoRail::-webkit-scrollbar { display: none; }
+.photoSlide { flex: 0 0 clamp(200px, 23vw, 350px); position: relative; scroll-snap-align: center; scroll-snap-stop: normal; transform: scale(.82) rotate(5deg); opacity: .6; transition: transform .4s ease, opacity .4s ease; margin-right: -32px; cursor: pointer; }
+.photoSlide:last-child { margin-right: 0; }
+.photoSlide:nth-child(odd) { transform: scale(.82) rotate(-7deg); }
+.photoSlide[data-active='true'] { transform: scale(1); opacity: 1; z-index: 2; }
+.photoSlide figure { position: relative; margin: 0; height: clamp(200px, 22vw, 350px); border-radius: 18px; overflow: hidden; border: 1px solid #eee5f399; box-shadow: 0 16px 24px #0007; }
+.photoSlide picture { display: block; height: 100%; }
+.photoSlide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.chapters figcaption { position: absolute; left: 12px; bottom: 9px; z-index: 3; max-width: calc(100% - 24px); padding: 4px 6px; background: #09090dde; color: #f5f0fa; font: 400 8px/1.4 var(--display); letter-spacing: .08em; }
+.pagination { display: flex; align-items: center; justify-content: center; }
+.pagination button { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.pagination span { display: block; width: 7px; height: 7px; border: 1px solid #ddd5e3; border-radius: 50%; }
+.pagination button[aria-current] span { border-color: var(--accent); background: var(--accent); }
+.socialLinks { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 28px; }
+.socialLinks a { display: inline-flex; min-height: 44px; align-items: center; font: 500 12px/1.3 var(--display); letter-spacing: .15em; text-transform: uppercase; }
+.photoPending { padding: 40px; font: italic 22px var(--serif); }
+.next { min-height: clamp(300px, 29vw, 500px); position: relative; display: flex; align-items: center; overflow: hidden; padding: 48px 5vw; background: #09090b url('/media/arrival-directors-smoke.png') center / cover; }
+.next { background-color: #1b1322; background-blend-mode: luminosity; }
+.rearPhoto { position: absolute; inset: 0 12% 0 auto; width: 52%; margin: 0; }
+.rearPhoto img { object-fit: cover; object-position: center 18% !important; }
+.rearPhoto::after { position: absolute; inset: 0; content: ''; background: linear-gradient(90deg, #09090b,transparent 30%, transparent 78%,#09090b),linear-gradient(0deg,#09090b,transparent 24%); pointer-events: none; }
+.nextCopy { position: relative; z-index: 1; }
+.nextCopy h2 { font-size: clamp(56px, 6.6vw, 106px); line-height: .9; }
+.nextCopy .tagline { padding-left: 17px; border-left: 2px solid var(--accent); font-size: 12px; letter-spacing: .3em; margin-top: 24px; }
+.nextLogo { position: absolute; right: 5vw; width: 115px; height: 115px; }
+.footer { background: #09090b; padding: 24px 5vw; border-top: 1px solid #eee4f325; }
+.footerTop { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.footerLogo { width: 68px; height: 68px; }
+.footerTop nav { display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.footerTop a { display: inline-flex; align-items: center; min-height: 44px; font: 500 12px var(--display); letter-spacing: .15em; text-decoration: none; }
+.footerTop a:hover { text-decoration: underline; }
+.footerBottom { display: flex; justify-content: space-between; gap: 12px; padding-top: 24px; color: #b9b1bf; font: 400 10px/1.5 var(--display); letter-spacing: .13em; }
+@media (hover:hover) and (prefers-reduced-motion:no-preference) { .photoSlide[data-active='true']:hover { transform: translateY(-5px); } }
+@media (max-width: 900px) {
+ .fieldHero { min-height: 390px; grid-template-columns: 50% 50%; }
+ .fieldCopy { padding-right: 4vw; }
+ .fieldCopy h2 { font-size: 9.5vw; }
+ .fieldCopy .index { flex-wrap: wrap; letter-spacing: .1em; gap: 6px; white-space: normal; }
+ .fieldCopy .tagline { font-size: 11px; letter-spacing: .27em; }
+ .personalPhoto { min-height: 340px; }
+ .beyondCopy { padding: 26px 24px; }
+ .beyondCopy h2 { font-size: 6.6vw; }
+ .introduction { font-size: 13px; }
+ .social { grid-template-columns: 36% minmax(0,1fr); padding-left: 4vw; }
+ .socialCopy h2 { font-size: 5vw; }
+ .socialCopy .tagline { font-size: 10px; }
+}
+@media (max-width: 600px) {
+ .fieldHero { display: flex; flex-direction: column; align-items: stretch; min-height: 0; }
+ .fieldPhoto { position: relative; width: 100%; height: 430px; }
+ .fieldPhoto img { object-position: 50% 28% !important; }
+ .fieldPhoto::after { background: linear-gradient(0deg,#0c0c0e,transparent 27%); }
+ .fieldCopy { margin-top: 0; padding: 0 7vw 32px; }
+ .fieldCopy .index { font-size: 10px; margin-bottom: 12px; gap: 8px; }
+ .rule { width: 48px; margin-bottom: 18px; }
+ .fieldCopy h2 { font-size: clamp(72px, 17vw, 102px); line-height: .84; }
+ .fieldCopy h2 br { display: block; }
+ .fieldCopy h2 em { margin-left: .15em; }
+ .fieldCopy .tagline { margin: 18px 0 0; font-size: 12px; letter-spacing: .34em; }
+ .stats { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px 0; margin: 0 auto; width: 88%; }
+ .stat { padding: 0 8px; }
+ .stat + .stat { border-left: 0; }
+ .stat:nth-child(even) { border-left: 1px solid #ffffff50; }
+ .stat strong { font-size: 48px; }
+ .stat > span { font-size: 12px; }
+ .stat small { font-size: 9px; }
+ .statsScope { font-size: 9px; }
+ .beyond { display: flex; flex-direction: column; }
+ .personalPhoto { height: 370px; min-height: 0; }
+ .personalPhoto img { object-position: 50% 32% !important; }
+ .beyondCopy { padding: 34px 7vw 40px; }
+ .beyondCopy h2 { font-size: clamp(52px,14vw,78px); }
+ .beyondCopy .index { font-size: 11px; margin-bottom: 18px; }
+ .subtitle { font-size: 17px; margin: 18px 0; }
+ .introduction { font-size: 14px; }
+ .social { display: block; padding: 36px 0 22px; }
+ .socialCopy { padding: 0 7vw; }
+ .socialCopy h2 { font-size: clamp(48px,12.5vw,70px); }
+ .socialCopy .index { margin-bottom: 15px; }
+ .socialCopy .tagline { margin: 20px 0 5px; font-size: 11px; }
+ .photoRail { height: 360px; padding-inline: 17vw; }
+ .photoSlide { flex-basis: 66vw; margin-right: -24px; }
+ .photoSlide figure { height: 310px; }
+ .pagination button { width: 44px; }
+ .next { min-height: 510px; align-items: flex-end; padding: 40px 7vw; }
+ .rearPhoto { inset: 0 0 0 auto; width: 100%; }
+ .rearPhoto img { object-position: 65% top !important; height: 85%; }
+ .rearPhoto::after { background: linear-gradient(0deg,#09090b 8%,transparent 80%),linear-gradient(90deg,#09090b80,transparent 65%); }
+ .nextCopy h2 { font-size: 62px; }
+ .nextCopy .index { margin-bottom: 18px; }
+ .nextCopy .tagline { font-size: 10px; letter-spacing: .25em; }
+ .nextLogo { right: 6vw; bottom: 44px; width: 76px; height: 76px; }
+ .footer { padding: 22px 7vw; }
+ .footerTop { align-items: flex-start; gap: 20px; }
+ .footerTop nav { display: flex; flex-direction: column; gap: 0; }
+ .footerTop a { font-size: 11px; }
+ .footerBottom { flex-direction: column; font-size: 9px; }
+}
+@media (prefers-reduced-motion:reduce) {
+ .photoSlide, .photoSlide:nth-child(odd), .photoSlide[data-active='true'] { transition: none; }
+ .photoRail { scroll-behavior: auto; }
+}

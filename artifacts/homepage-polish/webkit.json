@@ -1,0 +1,17 @@
+[
+  {
+    "width": 390,
+    "height": 900,
+    "reducedMotion": true,
+    "errors": [],
+    "overflow": false,
+    "sections": [
+      "arrival",
+      "film-room",
+      "on-field",
+      "off-field",
+      "follow-the-journey",
+      "next-chapter"
+    ]
+  }
+]
