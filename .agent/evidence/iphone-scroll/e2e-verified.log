@@ -1,0 +1,111 @@
+
+Running 68 tests using 2 workers
+
+(node:12264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  2 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (484ms)
+  ok  3 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (284ms)
+  ok  4 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (1.0s)
+  ok  5 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (305ms)
+  ok  6 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (766ms)
+  ok  7 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (911ms)
+  ok  1 [desktop-chromium] › tests\e2e\arrival-campaign.spec.ts:16:5 › six primary links navigate to separate pages and identify the active route (4.3s)
+  ok  8 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (1.1s)
+  ok  9 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.3s)
+  ok 10 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:49:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress (948ms)
+  ok 11 [desktop-chromium] › tests\e2e\arrival-directors-cut.spec.ts:85:5 › ready mobile intro has its scroll spacer before the first swipe (465ms)
+  ok 13 [desktop-chromium] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (336ms)
+  ok 14 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (535ms)
+  ok 15 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (551ms)
+  x  12 [desktop-chromium] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (1.9s)
+(node:42736) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 16 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (1.1s)
+  ok 17 [desktop-chromium] › tests\e2e\intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (569ms)
+(node:60892) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:43836) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 18 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (543ms)
+  ok 20 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (311ms)
+  ok 21 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (1.3s)
+  ok 19 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:16:5 › six primary links navigate to separate pages and identify the active route (2.2s)
+  ok 22 [mobile-chromium] › tests\e2e\arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (346ms)
+  ok 24 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (871ms)
+  ok 23 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (1.4s)
+  ok 25 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (1.1s)
+  ok 26 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.3s)
+  ok 27 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:49:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress (1.1s)
+  ok 28 [mobile-chromium] › tests\e2e\arrival-directors-cut.spec.ts:85:5 › ready mobile intro has its scroll spacer before the first swipe (566ms)
+  ok 30 [mobile-chromium] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (347ms)
+  ok 31 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (1.5s)
+  ok 29 [mobile-chromium] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (2.2s)
+  ok 33 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (654ms)
+  ok 32 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (1.4s)
+  ok 34 [mobile-chromium] › tests\e2e\intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (416ms)
+(node:39220) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:29200) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 36 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (1.3s)
+  ok 37 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (625ms)
+  ok 38 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (3.5s)
+  ok 39 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (1.1s)
+  ok 35 [iphone-webkit] › tests\e2e\arrival-campaign.spec.ts:16:5 › six primary links navigate to separate pages and identify the active route (8.6s)
+  ok 41 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (4.2s)
+  ok 40 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (12.2s)
+  ok 42 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (7.2s)
+  ok 43 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.8s)
+  ok 45 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:85:5 › ready mobile intro has its scroll spacer before the first swipe (1.7s)
+  ok 46 [iphone-webkit] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (5.9s)
+  ok 47 [iphone-webkit] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (839ms)
+  ok 44 [iphone-webkit] › tests\e2e\arrival-directors-cut.spec.ts:49:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress (10.0s)
+  ok 48 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (2.3s)
+  ok 49 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (2.1s)
+  ok 51 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (1.8s)
+(node:51840) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 52 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:3:5 › natural scrolling completes the intro and reveals navigation (426ms)
+  ok 53 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:16:5 › six primary links navigate to separate pages and identify the active route (1.2s)
+  ok 54 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:31:5 › mobile route menu traps focus and restores scroll after Escape (274ms)
+  ok 50 [iphone-webkit] › tests\e2e\intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (5.9s)
+  ok 55 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:39:5 › static responsive frames preserve all five authentic photo layers (1.1s)
+(node:14396) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 57 [reduced-motion] › tests\e2e\arrival-campaign.spec.ts:51:5 › homepage keeps the approved field photo and no Hudl player (367ms)
+  ok 56 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 1440px (1.2s)
+  ok 58 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 390px (819ms)
+  ok 59 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:4:6 › collage accumulates permanently with compact travel at 768px (795ms)
+  ok 60 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:36:5 › rotation preserves normalized intro progress and reduced motion releases the pin (1.2s)
+  ok 61 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:49:5 › mobile toolbar height changes do not shift the pinned scene or its scrub progress (862ms)
+  ok 62 [reduced-motion] › tests\e2e\arrival-directors-cut.spec.ts:85:5 › ready mobile intro has its scroll spacer before the first swipe (422ms)
+  ok 64 [reduced-motion] › tests\e2e\final-cinematic-edits.spec.ts:45:5 › reduced motion presents the completed static color action and transparent FilmRoom logo (297ms)
+  ok 65 [reduced-motion] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /film/ to Home owns intro header state (516ms)
+  ok 66 [reduced-motion] › tests\e2e\intro-entry.spec.ts:22:46 › client navigation /about/ to Home owns intro header state (514ms)
+  ok 63 [reduced-motion] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing (2.2s)
+  ok 67 [reduced-motion] › tests\e2e\intro-entry.spec.ts:29:5 › reduced motion to normal starts a hidden-header intro on each activation (729ms)
+  ok 68 [reduced-motion] › tests\e2e\intro-entry.spec.ts:42:5 › direct Film anchor keeps completed intro navigation and controls visible after refresh (451ms)
+
+
+  1) [desktop-chromium] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing 
+
+    Error: browserContext._wrapApiCall: ENOENT: no such file or directory, open 'C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\test-results\.playwright-artifacts-0\traces\resources\87af06febc716225bad36ebeb029224f504f7914.svg'
+
+      39 |     });
+      40 |     expect(foregroundFilters.every(filter => !filter.includes('blur('))).toBe(true);
+    > 41 |     await context.close();
+         |     ^
+      42 |   }
+      43 | });
+      44 |
+        at C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\tests\e2e\final-cinematic-edits.spec.ts:41:5
+
+    Error: ENOENT: no such file or directory, open 'C:\Users\nrsan\Nucleus\02_Projects\ZK17\source\test-results\.playwright-artifacts-0\3f034cbb725db05d949c1bd9e2708267.zip'
+
+    Error Context: test-results\final-cinematic-edits-fina-7b7d1--action-and-approved-timing-desktop-chromium\error-context.md
+
+  1 failed
+    [desktop-chromium] › tests\e2e\final-cinematic-edits.spec.ts:10:5 › final cinematic layers preserve the cold logo, crisp color action, and approved timing 
+  67 passed (1.0m)

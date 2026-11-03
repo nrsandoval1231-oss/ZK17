@@ -1,0 +1,17 @@
+[
+  {
+    "mode": "original",
+    "p95": 48,
+    "over50": 5
+  },
+  {
+    "mode": "no-blend",
+    "p95": 46,
+    "over50": 2
+  },
+  {
+    "mode": "original-again",
+    "p95": 48,
+    "over50": 6
+  }
+]

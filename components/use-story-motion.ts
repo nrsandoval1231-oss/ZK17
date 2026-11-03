@@ -145,10 +145,21 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
     queueAnchor();
    });
   };
+  let resizeWidth = window.innerWidth;
+  const onResize = () => {
+   const width = window.innerWidth;
+   // Mobile browser chrome changes the visual height while the page is being
+   // swiped. It does not change the authored section layout, and refreshing
+   // every pinned story mid-gesture produces a visible jump. A width change
+   // still refreshes on rotation and breakpoint crossings.
+   if (width === resizeWidth && width < 900) return;
+   resizeWidth = width;
+   refresh();
+  };
   element.addEventListener('click', onAnchorClick, true);
   window.addEventListener('hashchange', onHashChange);
   ScrollTrigger.addEventListener('refresh', queueAnchor);
-  window.addEventListener('resize', refresh);
+  window.addEventListener('resize', onResize);
   // Native video focus may scroll a few pixels after the focus event. Keep an
   // active direct landing aligned until wheel/touch/key input releases it.
   const keepNativeFocusFramed = () => {
@@ -186,9 +197,8 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
   window.addEventListener('keydown', onScrollKey);
   if (pendingAnchor) refresh();
   void document.fonts.ready.then(refresh);
-  element.addEventListener('load', refresh, true);
   const observer = new ResizeObserver(refresh);
   element.querySelectorAll('#film-room, .approved-gallery, .numbers-content, .verified-milestones').forEach(el => observer.observe(el));
-  return () => { disposed = true; releaseAnchor(); clearFocusIntent(); cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); element.removeEventListener('load', refresh, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('resize', refresh); window.removeEventListener('scroll', keepNativeFocusFramed); element.removeEventListener('focusin', releaseOnExternalFocus); document.removeEventListener('focusin', releaseNativeOnExternalFocus); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', onPointer); window.removeEventListener('pointerdown', onPointer); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
+  return () => { disposed = true; releaseAnchor(); clearFocusIntent(); cancelAnimationFrame(frame); cancelAnimationFrame(anchorFrame); observer.disconnect(); element.removeEventListener('click', onAnchorClick, true); window.removeEventListener('hashchange', onHashChange); ScrollTrigger.removeEventListener('refresh', queueAnchor); window.removeEventListener('resize', onResize); window.removeEventListener('scroll', keepNativeFocusFramed); element.removeEventListener('focusin', releaseOnExternalFocus); document.removeEventListener('focusin', releaseNativeOnExternalFocus); window.removeEventListener('wheel', releaseAnchor); window.removeEventListener('touchstart', onPointer); window.removeEventListener('pointerdown', onPointer); window.removeEventListener('keydown', onScrollKey); mm.revert(); context.revert(); };
  }, [root]);
 }
