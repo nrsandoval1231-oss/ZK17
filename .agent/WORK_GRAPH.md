@@ -38,3 +38,5 @@ ZK-OPENING-REFINEMENT [PR REVIEW DELIVERED]: PR11 https://github.com/nrsandoval1
 ZK-HUDL-FINAL-EDITS [LOCAL VERIFIED 2026-11-02]: Hudl/headerbutton +ownerlogo/colorphoto edits. Stablefieldpinfix,62unit,188browserpass7conditional skips1upstreamARIAfail; postmask40affectedpass;buildlinttypepass. QA docs/HUDL_INTEGRATION_QA.md. Independentfinalreview/PR11update next. No merge/deploy.
 
 ZK-HIGHLIGHTS-PAGE [LOCAL VERIFIED]: dedicatedroute/sharednav+restoredhomepageapprovedphoto.62unit/buildlinttypepass;28affectedbrowserpass;finalfullpending. docs/HIGHLIGHTS_PAGE_QA.md. OwnerauthorizedDEVpreview;PR11unmerged.
+
+ZK-REFINED-CONTROLS [LOCAL VERIFIED]: approvednoarrows/editorialcontrols+minorherorearrange+Skipremoval.213browserpass7conditionalskips62unit/buildlinttypepass. Protectedcontent/lib/assets/packageunchanged. QA docs/REFINED_CONTROLS_QA.md. Finalcriticidentity/PR11/DEVdeliverynext;no mergeproduction.

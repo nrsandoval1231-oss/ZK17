@@ -37,7 +37,7 @@ test('failed JavaScript loading releases the finite opening guard into a readabl
  await expect(page.locator('html')).toHaveAttribute('data-arrival-boot','fallback',{timeout:8000});
  await expect(hero.locator('#hero-title')).toBeVisible();
  await expect(hero.locator('[data-arrival-layer="athlete"]')).toHaveCSS('opacity','1');
- await expect(hero.getByRole('link',{name:'Skip intro'})).toBeVisible();
+  await expect(hero.getByRole('link',{name:'SCROLL TO EXPLORE',exact:true})).toBeVisible();
  expect(await hero.evaluate(el=>el.parentElement?.classList.contains('pin-spacer'))).toBe(false);
 });
 

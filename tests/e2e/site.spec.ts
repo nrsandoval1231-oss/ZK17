@@ -19,7 +19,7 @@ test('reduced motion remains static and new routes pass accessibility checks',as
 });
 
 test('navigation supports browser back and forward',async({page})=>{
- await page.goto('/about/');if(page.viewportSize()!.width<900)await page.getByRole('button',{name:'Menu',exact:true}).click();
+ await page.goto('/about/');if(page.viewportSize()!.width<900)await page.getByRole('button',{name:'MENU',exact:true}).click();
  await page.locator('.site-header nav').getByRole('link',{name:/FILM/,exact:false}).click();await expect(page).toHaveURL(/\/film\/$/);
  await page.goBack();await expect(page).toHaveURL(/\/about\/$/);await page.goForward();await expect(page).toHaveURL(/\/film\/$/);
 });

@@ -74,7 +74,7 @@ test('Highlights is active on direct load and reachable from desktop and mobile 
     await page.goto('/');
     await page.locator('#film-room').scrollIntoViewIfNeeded();
     const nav = page.locator('#site-nav');
-    if (width < 900) await page.getByRole('button', { name: 'Menu', exact: true }).click();
+    if (width < 900) await page.getByRole('button', { name: 'MENU', exact: true }).click();
     await expect(nav.locator('a')).toHaveCount(6);
     await nav.getByRole('link', { name: /HIGHLIGHTS/ }).click();
     await expect(page).toHaveURL(/\/highlights\/$/);

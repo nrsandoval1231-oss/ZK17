@@ -85,16 +85,6 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       reveal('color-action', .82, .07, .9, 1);
       timeline.to([copy, ...details], { autoAlpha: 1, duration: .08 }, .86)
         .to({}, { duration: .06 }, .94);
-      const skip = element.querySelector<HTMLAnchorElement>('a[href="#film-room"]');
-      const skipIntro = (event: Event) => {
-        event.preventDefault();
-        const target = document.getElementById('film-room');
-        const trigger = timeline.scrollTrigger;
-        complete(true);
-        if (trigger && target) window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY, behavior: 'instant' });
-        requestAnimationFrame(() => { target?.setAttribute('tabindex', '-1'); target?.focus({ preventScroll: true }); });
-      };
-      skip?.addEventListener('click', skipIntro);
       // Capture progress before a rotation lets competing pin refreshes temporarily
       // reset scroll. Only restore when the visitor was inside this story.
       let stableWidth = window.innerWidth;
@@ -167,7 +157,6 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       element.setAttribute('data-arrival-motion', 'ready');
       window.dispatchEvent(new Event('arrival:motion-ready'));
       return () => {
-        skip?.removeEventListener('click', skipIntro);
         delete document.documentElement.dataset.introComplete;
         delete document.documentElement.dataset.arrivalBoot;
         element.setAttribute('data-arrival-motion', 'static');

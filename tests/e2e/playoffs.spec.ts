@@ -1,22 +1,34 @@
-import {test,expect} from '@playwright/test';
+import {test,expect,type Locator} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+
+async function expectTouchTarget(control:Locator,label:string){
+ const box=await control.boundingBox();
+ expect(box?.width,`${label} should be at least 44 CSS pixels wide`).toBeGreaterThanOrEqual(44);
+ expect(box?.height,`${label} should be at least 44 CSS pixels high`).toBeGreaterThanOrEqual(44);
+}
 
 test('playoffs navigation, complete bracket and region/round filters work',async({page})=>{
  await page.goto('/#film-room');
  await expect(page.locator('.site-header')).toBeVisible();
- if(page.viewportSize()!.width<900)await page.getByRole('button',{name:'Menu'}).click();
+ if(page.viewportSize()!.width<900)await page.getByRole('button',{name:'MENU',exact:true}).click();
  await page.locator('#site-nav').getByRole('link',{name:'PLAYOFFS',exact:true}).click();
  await expect(page).toHaveURL(/\/playoffs\/$/);
  await expect(page.getByRole('heading',{level:1})).toContainText('ROAD TO STATE.');
  await expect(page.locator('.site-header nav a[href="/playoffs/"]')).toHaveAttribute('aria-current','page');
  await page.getByRole('button',{name:'All regions',exact:true}).click();
  await expect(page.locator('[data-game-card]')).toHaveCount(63);
+ await expect(page.getByRole('button',{name:'All regions',exact:true})).toHaveAttribute('aria-pressed','true');
+ await expectTouchTarget(page.getByRole('button',{name:'All regions',exact:true}),'All regions');
+ await expectTouchTarget(page.getByRole('button',{name:'Region III',exact:true}),'Region III');
  await page.getByRole('button',{name:'Region III',exact:true}).click();
  await expect(page.locator('[data-game-card]')).toHaveCount(15);
  await page.getByRole('combobox',{name:'Bracket round'}).selectOption('1');
  await expect(page.locator('[data-game-card]')).toHaveCount(4);
  await page.getByRole('button',{name:'List view',exact:true}).click();
  await expect(page.locator('[data-game-card]')).toHaveCount(4);
+ await expect(page.getByRole('button',{name:'List view',exact:true})).toHaveAttribute('aria-pressed','true');
+ await expectTouchTarget(page.getByRole('button',{name:'List view',exact:true}),'List view');
+ await expectTouchTarget(page.getByRole('button',{name:'Bracket view',exact:true}),'Bracket view');
  await expect(page.getByText('MATCHUP PENDING OFFICIAL CONFIRMATION').first()).toBeVisible();
 });
 
@@ -25,7 +37,7 @@ test('game center supports direct links, Escape, focus and back navigation',asyn
  const dialog=page.getByRole('dialog',{name:'Game center'});
  await expect(dialog).toBeVisible();await expect(dialog).toContainText('Bi-District');
  await expect(dialog).toContainText('Official matchup pending');
- await page.getByRole('button',{name:'Close game center'}).click();
+ await page.getByRole('button',{name:'CLOSE',exact:true}).click();
  await expect(dialog).toHaveCount(0);
  const card=page.locator('[data-game-card]').first();await card.click();
  await expect(dialog).toBeVisible();await page.keyboard.press('Escape');await expect(card).toBeFocused();

@@ -62,8 +62,7 @@ export default function ArrivalHero({ profile, photo, photos = [] }: Props) {
       <h1 id="hero-title" aria-hidden="true"><span>MAKE THEM</span>{' '}<span>REMEMBER.</span></h1>
       <p data-arrival-detail className={styles.school}>ANNA COYOTES / {profile.position.toUpperCase()}</p>
     </div>
-    <a className={styles.skip} href="#film-room">Skip intro ↓</a>
     <p data-arrival-detail className={styles.footer}>PREPARATION | DISCIPLINE | RESULTS</p>
-    <a data-arrival-detail className={styles.scroll} href="#film-room">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+    <a data-arrival-detail className={styles.scroll} href="#film-room">SCROLL TO EXPLORE</a>
   </section>;
 }

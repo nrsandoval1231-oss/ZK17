@@ -1,5 +1,4 @@
 'use client';
-import StoryArrow from '@/components/story-arrow';
 import { useState } from 'react';
 
 export default function SnapshotShare() {
@@ -10,5 +9,5 @@ export default function SnapshotShare() {
   try { await navigator.clipboard.writeText(url); setMessage('Link copied.'); setFallback(''); }
   catch { setFallback(url); setMessage('Copy the snapshot address below.'); }
  }
- return <div className="snapshot-share"><button className="text-action" onClick={copy}>Copy snapshot link <StoryArrow /></button><p role="status" aria-live="polite">{message}</p>{fallback && <label>Snapshot address<input readOnly value={fallback} onFocus={event => event.currentTarget.select()} /></label>}</div>;
+ return <div className="snapshot-share"><button className="text-action" onClick={copy}>COPY SNAPSHOT LINK</button><p role="status" aria-live="polite">{message}</p>{fallback && <label>Snapshot address<input readOnly value={fallback} onFocus={event => event.currentTarget.select()} /></label>}</div>;
 }
