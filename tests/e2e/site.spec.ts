@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 
 test('dedicated routes load directly without runtime errors or public implementation labels',async({page})=>{
  const errors:string[]=[];page.on('pageerror',error=>errors.push(error.message));
- for(const path of ['/','/film/','/about/','/nil-recruiting/','/recruiting/','/playoffs/']){
+ for(const path of ['/','/film/','/highlights/','/about/','/nil-recruiting/','/recruiting/','/playoffs/']){
   const response=await page.goto(path);expect(response?.status()).toBe(200);await expect(page.locator('main')).toBeVisible();
   expect(await page.locator('body').innerText()).not.toMatch(/PREVIEW CROP|Original files pending|WATCH WITH SOUND|PHOTO NEEDED|original\s+(?:photo\s+)?pending/i);
  }
@@ -12,7 +12,7 @@ test('dedicated routes load directly without runtime errors or public implementa
 
 test('reduced motion remains static and new routes pass accessibility checks',async({page})=>{
  await page.emulateMedia({reducedMotion:'reduce'});
- for(const path of ['/','/film/','/about/','/nil-recruiting/']){
+ for(const path of ['/','/film/','/highlights/','/about/','/nil-recruiting/']){
   await page.goto(path);await expect(page.locator('.pin-spacer')).toHaveCount(0);
   expect((await new AxeBuilder({page}).analyze()).violations).toEqual([]);
  }

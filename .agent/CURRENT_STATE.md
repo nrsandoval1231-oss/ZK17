@@ -11,3 +11,7 @@ FinalAstrareview complete:57e2b81 readyforreview-onlyPRwithknownHudlupstreamARIA
 Owner-authorized final development preview deployed: https://cinematic-opening-dev.zk17-review.pages.dev immutable https://1e4d6181.zk17-review.pages.dev source1ffef06. Live desktop/iPhone-WebKit verifies coldlogo, removedlatermark/headerbutton, newcolorphoto+originalrunning, whiteFilmRoommark, realHudlpausedinitialthenplayback. No pageerrors/overflow, noindex present, colorbytesmatch. ProductionHTTP200stillpreviousversion. Receipt .agent/evidence/hudl-integration/dev-final-receipt.json. PR11 remains unmerged; ownertestingnext.
 
 Owner screenshot correction: hero WATCH THE FILM button removed too, with its callback chain/styles. FILMnavigation/Hudl retained. Type/lint/buildpass;23focusedbrowserpass1existingskip. UpdatingPRandowner-authorizeddevelopmentpreview; productionuntouched.
+
+Currentownerrequest: moveHudltoownHIGHLIGHTS /highlights/,keepFILMcinematic;restoreapprovedhomepagefieldphoto.3Lunabuilderscompleted;shared6linknav/metadata/sitemap/newroute. Buildlinttype62unitpass. Initialfull192pass7skip5fail;4testlocatorfixed1WebKitRSCtransientnotreproduced;28affectedpass. Finalfullrerunpending;independentreviewreadyDEVwithdocumentedvendorlimits. QA docs/HIGHLIGHTS_PAGE_QA.md. NextcommitPR11/devpreviewonly;no merge/production.
+
+FinalHIGHLIGHTSsuite197pass7existingskips0fail;62unit/buildlinttype/indexingpass. IndependentreviewreadyDEV. PublishingPR11andDEVpreview source; no merge/production.

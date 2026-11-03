@@ -8,11 +8,11 @@ test('skip intro reveals navigation and focuses the film section',async({page})=
  await expect.poll(()=>page.locator('#film-room').evaluate(el=>Math.abs(el.getBoundingClientRect().top))).toBeLessThan(5);
 });
 
-test('five primary links navigate to separate pages and identify the active route',async({page})=>{
- for(const [path,title] of [['/film/','EVERY'],['/about/','ZEPHYR'],['/nil-recruiting/','THE NEXT']] as const){
+test('six primary links navigate to separate pages and identify the active route',async({page})=>{
+ for(const [path,title] of [['/film/','EVERY'],['/highlights/','HIGHLIGHTS'],['/playoffs/','ROAD TO STATE'],['/about/','ZEPHYR'],['/nil-recruiting/','THE NEXT']] as const){
   await page.goto(path);await expect(page.locator('.site-header')).toBeVisible();
   const nav=page.locator('.site-header nav');if(page.viewportSize()!.width<900)await page.getByRole('button',{name:'Menu',exact:true}).click();
-  await expect(nav.locator('a')).toHaveCount(5);await expect(nav.locator('[aria-current="page"]')).toHaveAttribute('href',path);
+  await expect(nav.locator('a')).toHaveCount(6);await expect(nav.locator('[aria-current="page"]')).toHaveAttribute('href',path);
   await expect(page.getByRole('heading',{level:1})).toContainText(title);
  }
 });
@@ -35,4 +35,12 @@ test('static responsive frames preserve all five authentic photo layers',async({
   }
   await expect(page.locator('#hero-title')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  }
+});
+
+test('homepage keeps the approved field photo and no Hudl player',async({page})=>{
+ await page.emulateMedia({reducedMotion:'reduce'});await page.goto('/');
+ await expect(page.locator('#on-field .field-photo')).toBeVisible();
+ await expect(page.locator('iframe[src*="hudl.com"]')).toHaveCount(0);
+ await expect(page.locator('.site-header').getByRole('button',{name:'WATCH FILM',exact:true})).toHaveCount(0);
+ await expect(page.getByRole('button',{name:'WATCH THE FILM',exact:true})).toHaveCount(0);
 });
