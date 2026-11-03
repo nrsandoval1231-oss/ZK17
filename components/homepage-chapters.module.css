@@ -30,7 +30,7 @@
 .beyond { display: grid; grid-template-columns: 50% 50%; align-items: stretch; background: var(--paper); color: #121013; }
 .personalPhoto { position: relative; min-height: clamp(320px, 35vw, 520px); margin: 0; overflow: hidden; }
 .personalPhoto picture { position: absolute; inset: 0; }
-.personalPhoto img { object-position: 50% 35% !important; }
+.personalPhoto img { object-position: 50% 8% !important; }
 .beyondCopy { align-self: center; padding: clamp(32px, 4vw, 64px) 5vw clamp(32px, 4vw, 64px) 3.5vw; }
 .beyondCopy h2 { font-size: clamp(55px, 6.7vw, 108px); white-space: nowrap; }
 .beyondCopy h2 em { color: #8526bd; }
@@ -112,7 +112,7 @@
  .statsScope { font-size: 9px; }
  .beyond { display: flex; flex-direction: column; }
  .personalPhoto { height: 370px; min-height: 0; }
- .personalPhoto img { object-position: 50% 32% !important; }
+ .personalPhoto img { object-position: 50% 8% !important; }
  .beyondCopy { padding: 34px 7vw 40px; }
  .beyondCopy h2 { font-size: clamp(52px,14vw,78px); }
  .beyondCopy .index { font-size: 11px; margin-bottom: 18px; }
