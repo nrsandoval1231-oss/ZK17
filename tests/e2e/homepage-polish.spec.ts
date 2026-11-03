@@ -4,7 +4,8 @@ import AxeBuilder from '@axe-core/playwright';
 test('five chapters preserve opening, verified unavailable statistics and dedicated destinations',async({page})=>{
  await page.goto('/');
  await expect(page.locator('#on-field')).toBeAttached();
- expect(await page.locator('main section').evaluateAll(items=>items.map(item=>item.id))).toEqual(['arrival','film-room','on-field','off-field','follow-the-journey','closing']);
+ expect(await page.locator('main section').evaluateAll(items=>items.map(item=>item.id))).toEqual(['arrival','film-room','on-field','off-field','follow-the-journey']);
+ await expect(page.locator('footer#closing')).toBeAttached();
  await expect(page.locator('#journey,[data-field-pin-spacer],.journey-stage,.verified-milestones')).toHaveCount(0);
  await expect(page.locator('a[href="#journey"]')).toHaveCount(0);
  await expect(page.locator('#on-field video,#on-field iframe,#on-field button')).toHaveCount(0);
