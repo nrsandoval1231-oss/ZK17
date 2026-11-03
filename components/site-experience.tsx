@@ -57,6 +57,12 @@ const ownerFieldPhoto: PreviewPhoto = {
  focal: '50% 28%', label: 'OWNER-SUPPLIED PHOTO',
 };
 
+const ownerBeyondPhoto: PreviewPhoto = {
+ kind: 'preview', id: 'owner-beyond-17', src: '/media/beyond-17-owner.webp',
+ width: 864, height: 1821, alt: 'Zephyr Kreye smiling in a light ZK T-shirt.',
+ focal: '50% 28%', label: 'OWNER-SUPPLIED PHOTO',
+};
+
 export default function SiteExperience({ profileData, film, stats, features, assets, socials, nilContact, previewPhotos, scenePhotos, campaignPhotos = [], previewMediaMode }: { profileData: PublicProfile; film: MediaAsset | null; assets: MediaAsset[]; socials: SocialLink[]; nilContact: PublicNilContact | null; previewPhotos: PreviewPhoto[]; campaignPhotos?: PreviewPhoto[]; scenePhotos: ScenePhoto[]; previewMediaMode: boolean; stats: StatLine[]; features: OffFieldFeature[]; }) {
  const root = useRef<HTMLElement>(null); const [filmOpen, setFilmOpen] = useState(false); const [selectedFilm, setSelectedFilm] = useState<MediaAsset | null>(null);
  const filmOpener = useRef<HTMLElement | null>(null);
@@ -85,7 +91,7 @@ export default function SiteExperience({ profileData, film, stats, features, ass
   <Header />
   <div className="site-content">
   <ArrivalExperience profile={profileData} photo={arrivalPhoto} photos={previewMediaMode ? [...campaignPhotos, ...scenePhotos, ...previewPhotos] : scenePhotos} film={approvedFilm} />
-  <HomepageChapters profile={profileData} fieldPhoto={previewMediaMode ? ownerFieldPhoto : fieldPhoto?.kind === 'approved' ? fieldPhoto : arrivalPhoto ?? fieldPhoto} personalPhoto={offFieldPhoto} gallery={[...scenePhotos, ...(previewMediaMode ? previewPhotos : [])].filter((photo,index,items)=>items.findIndex(other=>other.src===photo.src)===index).slice(0,6)} stats={stats} features={features} socials={socials} nilContact={nilContact}/>
+  <HomepageChapters profile={profileData} fieldPhoto={previewMediaMode ? ownerFieldPhoto : fieldPhoto?.kind === 'approved' ? fieldPhoto : arrivalPhoto ?? fieldPhoto} personalPhoto={previewMediaMode ? ownerBeyondPhoto : offFieldPhoto} footerPhoto={offFieldPhoto} gallery={[...scenePhotos, ...(previewMediaMode ? previewPhotos : [])].filter((photo,index,items)=>items.findIndex(other=>other.src===photo.src)===index).slice(0,6)} stats={stats} features={features} socials={socials} nilContact={nilContact}/>
 
   </div>
   {filmOpen && <VideoDialog source={selectedFilm?.src ?? null} poster={selectedFilm?.poster} onClose={closeFilm} />}

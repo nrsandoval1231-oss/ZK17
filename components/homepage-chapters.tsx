@@ -8,8 +8,8 @@ import type { OffFieldFeature, PublicProfile, SocialLink, StatLine } from '@/con
 import type { PublicNilContact } from '@/content/contact';
 import styles from './homepage-chapters.module.css';
 
-type Props = { profile: PublicProfile; fieldPhoto?: EditorialPhotoSource; personalPhoto?: EditorialPhotoSource; gallery: EditorialPhotoSource[]; stats: StatLine[]; features: OffFieldFeature[]; socials: SocialLink[]; nilContact: PublicNilContact | null };
-export default function HomepageChapters({profile,fieldPhoto,personalPhoto,gallery,stats,features,socials,nilContact}: Props) {
+type Props = { profile: PublicProfile; fieldPhoto?: EditorialPhotoSource; personalPhoto?: EditorialPhotoSource; footerPhoto?: EditorialPhotoSource; gallery: EditorialPhotoSource[]; stats: StatLine[]; features: OffFieldFeature[]; socials: SocialLink[]; nilContact: PublicNilContact | null };
+export default function HomepageChapters({profile,fieldPhoto,personalPhoto,footerPhoto,gallery,stats,features,socials,nilContact}: Props) {
  const metrics=homepageStatistics(stats);
  return <div className={styles.chapters}>
   <section id="on-field" className={styles.field} aria-labelledby="field-title">
@@ -35,7 +35,7 @@ export default function HomepageChapters({profile,fieldPhoto,personalPhoto,galle
    </div>
    <div className={styles.footerIdentity}>
     <BrandLogo className={styles.footerMonogram}/>
-    {personalPhoto && <EditorialPhoto photo={personalPhoto} className={styles.footerPortrait} sizes="(max-width: 600px) 86vw, 40vw"/>}
+    {footerPhoto && <EditorialPhoto photo={footerPhoto} className={styles.footerPortrait} sizes="(max-width: 600px) 86vw, 40vw"/>}
    </div>
    <div className={styles.footerBottom}>
     <span>© {new Date().getFullYear()} {profile.name.toUpperCase()}</span>
