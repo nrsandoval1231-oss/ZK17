@@ -11,8 +11,7 @@
 .personalWorld{width:53%;margin-left:-7%;background:#332b29}
 .worldImage{display:block;position:absolute;inset:0}
 .worldImage img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.65,.3,1)}
-.fieldWorld .worldImage img{filter:grayscale(1);object-position:50% 35%!important}
-.personalWorld .worldImage img{object-position:51% 30%!important}
+.fieldWorld .worldImage img{filter:grayscale(1)}
 .world:after{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(0deg,rgba(7,6,10,.94),transparent 65%),linear-gradient(90deg,rgba(7,6,10,.2),transparent)}
 .worldNumber{position:absolute;top:30px;left:5vw;font:500 10px var(--body);letter-spacing:.18em;z-index:1}
 .personalWorld .worldNumber{left:7vw}
@@ -79,7 +78,7 @@
 .beyondIntro{font:400 14px/1.8 var(--body);max-width:290px;color:#675f64;margin:0}
 .beyondSignature{font:500 19px var(--display);margin-top:45px;color:#62515e;letter-spacing:.015em}
 .beyondPortrait{position:relative;overflow:hidden;background:#332d2a}
-.beyondPortrait picture{display:block;width:100%;height:100%}.beyondPortrait img{width:100%;height:100%;object-fit:cover;object-position:51% 32%!important}
+.beyondPortrait picture{display:block;width:100%;height:100%}.beyondPortrait img{width:100%;height:100%;object-fit:cover}
 .beyondPortrait:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#17131866,transparent 45%);pointer-events:none}
 .beyondPortrait>p{position:absolute;bottom:22px;left:30px;color:var(--white);z-index:1;font:500 9px var(--body);letter-spacing:.15em}
 .heroSideNote{position:absolute;bottom:38px;left:6vw;font:500 8px var(--body);letter-spacing:.18em;color:#625361}
@@ -110,6 +109,7 @@
 .lifeFrame.activeFrame{transform:scale(1);z-index:1}
 .lifeFrame picture{display:block;height:min(56vw,620px);background:#2a242c;box-shadow:0 15px 35px #30233620}
 .lifeFrame img{width:100%;height:100%;object-fit:cover}
+.lifeFrame picture[data-photo-kind='owner'] img{object-fit:contain}
 .lifeFrame figcaption{display:flex;gap:20px;font:400 11px/1.5 var(--body);padding:25px 5px 0;color:#655767}
 .lifeFrame figcaption span{font-size:9px;color:#79509d}
 .singlePhoto{justify-content:center;padding-inline:6vw}
@@ -121,11 +121,11 @@
 @media(max-width:900px){.signature{grid-template-columns:25px 1fr}.signatureNumbers{grid-column:2;grid-template-columns:90px 90px;gap:18px}.sectionHeading{margin-bottom:40px}.metricGrid{gap:25px}.season,.signatures,.gameLog,.interests,.lifeGallery{padding-top:75px;padding-bottom:75px}.beyondHero{min-height:680px}.beyondCopy{padding-top:45px}.beyondCopy h1{font-size:clamp(100px,16vw,155px)}.beyondIntro{max-width:245px}.interestLayout{gap:4vw;grid-template-columns:1fr 1.3fr}.interestPanel{padding:35px 25px}.interestPanel h3{font-size:56px}.interestPanel li{font-size:27px;gap:12px}}
 @media(max-width:700px){
 .discovery{padding-top:45px}.discoveryHeading{padding:0 6vw 30px;gap:18px}.discoveryHeading h2{font-size:clamp(58px,13.6vw,90px)}.discoveryHeading>p:last-child{font-size:10px;max-width:78px}.discoveryHeading>.kicker{font-size:8px}
-.split{display:block;height:auto;min-height:0}.world,.personalWorld{width:100%;margin:0;height:clamp(350px,58svh,510px);clip-path:none}.personalWorld{border-top:1px solid #a998bd}.divider{display:none}.worldNumber,.personalWorld .worldNumber{left:7vw;top:22px}.worldCopy,.personalWorld .worldCopy{left:7vw;bottom:30px}.worldCopy h3{font-size:clamp(64px,16vw,105px)}.worldCopy p{font-size:9px;margin-bottom:15px}.worldImage img{object-position:50% 27%!important}.personalWorld .worldImage img{object-position:51% 26%!important}
+.split{display:block;height:auto;min-height:0}.world,.personalWorld{width:100%;margin:0;height:clamp(350px,58svh,510px);clip-path:none}.personalWorld{border-top:1px solid #a998bd}.divider{display:none}.worldNumber,.personalWorld .worldNumber{left:7vw;top:22px}.worldCopy,.personalWorld .worldCopy{left:7vw;bottom:30px}.worldCopy h3{font-size:clamp(64px,16vw,105px)}.worldCopy p{font-size:9px;margin-bottom:15px}
 .footer{flex-wrap:wrap;padding-top:30px;gap:15px 20px}.footer p{font-size:8px;margin-left:auto}.footer>a:last-child{width:100%;border-top:1px solid #ffffff20;padding-top:22px}
-.fieldHero{min-height:640px!important;height:90svh!important;padding-inline:7vw!important;align-items:flex-end!important;padding-bottom:90px!important}.fieldHero :global(.field-art){width:100%;opacity:.8}.fieldHero :global(.field-art):after{background:linear-gradient(0deg,#0e0d12,transparent 85%)}.fieldHero :global(.field-lines){opacity:.3}.fieldHero :global(.field-mark){top:30%;right:5%}.fieldHero :global(.field-caption){bottom:20px;left:7vw}.fieldHero h1{font-size:clamp(95px,22vw,155px);margin:20px 0 30px}.fieldPhoto img{object-position:55% 32%!important}
+.fieldHero{min-height:640px!important;height:90svh!important;padding-inline:7vw!important;align-items:flex-end!important;padding-bottom:90px!important}.fieldHero :global(.field-art){width:100%;opacity:.8}.fieldHero :global(.field-art):after{background:linear-gradient(0deg,#0e0d12,transparent 85%)}.fieldHero :global(.field-lines){opacity:.3}.fieldHero :global(.field-mark){top:30%;right:5%}.fieldHero :global(.field-caption){bottom:20px;left:7vw}.fieldHero h1{font-size:clamp(95px,22vw,155px);margin:20px 0 30px}
 .sectionHeading{gap:20px;align-items:start;flex-direction:column;margin-bottom:35px}.sectionHeading h2{font-size:clamp(50px,12vw,80px)}.sectionHeading>p{font-size:11px}.sectionHeading .kicker{margin-bottom:18px;font-size:9px}.season h2{font-size:130px}.season h2 span{font-size:35px}.metricGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 6vw}.metric strong{font-size:clamp(65px,17vw,100px)}.metric>p{font-size:8px;letter-spacing:.08em;min-height:20px}.metric a{font-size:9px}.sourceNotes{font-size:11px}.sourceNotes summary{font-size:9px}.signature{padding:30px 0;gap:18px 10px}.signature h3{font-size:38px}.signature .kicker{font-size:8px}.signatureOpponent{font-size:12px}.signatureNumbers strong{font-size:64px}.signatureNumbers a{font-size:9px}.gameLog .sectionHeading{margin-bottom:25px}
-.beyondHero{display:flex;flex-direction:column;height:auto;min-height:0;padding-top:76px;max-height:none}.beyondCopy{padding:45px 7vw 35px;display:block}.beyondCopy>.kicker{font-size:9px;margin-bottom:22px}.beyondCopy h1{font-size:clamp(108px,28vw,170px);margin-bottom:22px}.beyondSubtitle{font-size:9px;margin-bottom:17px}.beyondIntro{max-width:290px;font-size:13px;line-height:1.7}.beyondSignature{display:none}.beyondPortrait{height:clamp(350px,55svh,530px);margin-left:15vw;width:85vw}.beyondPortrait img{object-position:51% 30%!important}.beyondPortrait>p{font-size:8px;left:18px;bottom:13px}.heroSideNote{bottom:25px;left:6vw;writing-mode:vertical-rl;font-size:7px}
+.beyondHero{display:flex;flex-direction:column;height:auto;min-height:0;padding-top:76px;max-height:none}.beyondCopy{padding:45px 7vw 35px;display:block}.beyondCopy>.kicker{font-size:9px;margin-bottom:22px}.beyondCopy h1{font-size:clamp(108px,28vw,170px);margin-bottom:22px}.beyondSubtitle{font-size:9px;margin-bottom:17px}.beyondIntro{max-width:290px;font-size:13px;line-height:1.7}.beyondSignature{display:none}.beyondPortrait{height:clamp(350px,55svh,530px);margin-left:15vw;width:85vw}.beyondPortrait>p{font-size:8px;left:18px;bottom:13px}.heroSideNote{bottom:25px;left:6vw;writing-mode:vertical-rl;font-size:7px}
 .interestLayout{display:flex;flex-direction:column;gap:25px}.tabs{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.tabs button{font-size:23px;min-height:52px;gap:10px}.tabs button>span:first-child{font-size:8px}.tabMark{font-size:20px}.interestPanel{min-height:350px;padding:30px 25px}.interestPanel h3{font-size:58px;margin-bottom:25px}.interestPanel>.kicker{font-size:8px;margin-bottom:20px}.interestPanel li{font-size:28px}.panelNumber{font-size:270px}.panelSource{margin-top:25px}
 .photoRail{padding-inline:11vw;scroll-padding-inline:11vw}.lifeFrame{flex-basis:78vw;margin:0 -1vw}.lifeFrame picture{height:105vw;max-height:570px}.singlePhoto .lifeFrame{flex-basis:78vw}.lifeFrame figcaption{font-size:10px;gap:15px}.galleryPending{font-size:11px}.lifeGallery .sectionHeading{padding-inline:6vw}
 }

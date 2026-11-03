@@ -1,0 +1,202 @@
+[
+  {
+    "id": "discovery-field",
+    "src": "/media/selected/discovery-field-1280.avif",
+    "width": 1280,
+    "height": 1707,
+    "alt": "Zephyr Kreye standing in his black number 17 uniform, photographed in black and white.",
+    "focalPoint": "50% 40%",
+    "variants": [
+      {
+        "width": 360,
+        "webp": "/media/selected/discovery-field-360.webp",
+        "avif": "/media/selected/discovery-field-360.avif"
+      },
+      {
+        "width": 706,
+        "webp": "/media/selected/discovery-field-706.webp",
+        "avif": "/media/selected/discovery-field-706.avif"
+      },
+      {
+        "width": 1280,
+        "webp": "/media/selected/discovery-field-1280.webp",
+        "avif": "/media/selected/discovery-field-1280.avif"
+      }
+    ],
+    "source": "2026-10-06_instagram_DeIdiOjDl_s-3.jpg (local post)",
+    "sourceDate": "2026-11-03",
+    "sha256": "4873c8c4cb0550078a97e7b5b3745b6a3c4960469eb26170db61e36449347945"
+  },
+  {
+    "id": "field-hero",
+    "src": "/media/selected/field-hero-1280.avif",
+    "width": 1280,
+    "height": 1707,
+    "alt": "Zephyr Kreye wearing number 17 and preparing to throw during a football game.",
+    "focalPoint": "50% 40%",
+    "variants": [
+      {
+        "width": 360,
+        "webp": "/media/selected/field-hero-360.webp",
+        "avif": "/media/selected/field-hero-360.avif"
+      },
+      {
+        "width": 706,
+        "webp": "/media/selected/field-hero-706.webp",
+        "avif": "/media/selected/field-hero-706.avif"
+      },
+      {
+        "width": 1280,
+        "webp": "/media/selected/field-hero-1280.webp",
+        "avif": "/media/selected/field-hero-1280.avif"
+      }
+    ],
+    "source": "2026-09-28_instagram_Dd2BzvLm11i-4.jpg (local post)",
+    "sourceDate": "2026-11-03",
+    "sha256": "8a1c9169ca5c1fb6b7050fdd7419b4fe937cf9aa561534e51783a5aad6f1f5cf"
+  },
+  {
+    "id": "personal-home",
+    "src": "/media/selected/personal-home-706.avif",
+    "width": 706,
+    "height": 941,
+    "alt": "Zephyr with two other people at home, sharing a celebratory gift moment.",
+    "focalPoint": "75% 45%",
+    "variants": [
+      {
+        "width": 360,
+        "webp": "/media/selected/personal-home-360.webp",
+        "avif": "/media/selected/personal-home-360.avif"
+      },
+      {
+        "width": 706,
+        "webp": "/media/selected/personal-home-706.webp",
+        "avif": "/media/selected/personal-home-706.avif"
+      }
+    ],
+    "source": "IMG_1782.jpeg (owner library)",
+    "sourceDate": "2026-11-03",
+    "sha256": "22b5a2e117ebf80b3525b8490f01da7d335a57e11469218365b202b0c66b4f70"
+  },
+  {
+    "id": "personal-sideline",
+    "src": "/media/selected/personal-sideline-706.avif",
+    "width": 706,
+    "height": 941,
+    "alt": "Zephyr in his white number 17 uniform standing with another person after a night football game.",
+    "focalPoint": "55% 55%",
+    "variants": [
+      {
+        "width": 360,
+        "webp": "/media/selected/personal-sideline-360.webp",
+        "avif": "/media/selected/personal-sideline-360.avif"
+      },
+      {
+        "width": 706,
+        "webp": "/media/selected/personal-sideline-706.webp",
+        "avif": "/media/selected/personal-sideline-706.avif"
+      }
+    ],
+    "source": "IMG_5274(1).jpeg (owner library)",
+    "sourceDate": "2026-11-03",
+    "sha256": "9e581fdf5d95cd3740062b2251df5de3afbb4b37a3088853b3f832adab0561f6"
+  },
+  {
+    "id": "personal-birthday",
+    "src": "/media/selected/personal-birthday-706.avif",
+    "width": 706,
+    "height": 941,
+    "alt": "Zephyr at home wearing a black hoodie beside a birthday banner and balloons.",
+    "focalPoint": "65% 60%",
+    "variants": [
+      {
+        "width": 360,
+        "webp": "/media/selected/personal-birthday-360.webp",
+        "avif": "/media/selected/personal-birthday-360.avif"
+      },
+      {
+        "width": 706,
+        "webp": "/media/selected/personal-birthday-706.webp",
+        "avif": "/media/selected/personal-birthday-706.avif"
+      }
+    ],
+    "source": "IMG_4944(1).jpeg (owner library)",
+    "sourceDate": "2026-11-03",
+    "sha256": "99f7c479aee6d51774a8219dec9e5b2773ccc92c22e3d984ac6df2f7b11152f4"
+  },
+  {
+    "id": "personal-portrait",
+    "src": "/media/selected/personal-portrait-700.avif",
+    "width": 700,
+    "height": 1050,
+    "alt": "Zephyr at home wearing a black hoodie beside a birthday banner and balloons.",
+    "focalPoint": "50% 0%",
+    "variants": [
+      {
+        "width": 360,
+        "webp": "/media/selected/personal-portrait-360.webp",
+        "avif": "/media/selected/personal-portrait-360.avif"
+      },
+      {
+        "width": 700,
+        "webp": "/media/selected/personal-portrait-700.webp",
+        "avif": "/media/selected/personal-portrait-700.avif"
+      }
+    ],
+    "crop": {
+      "height": 1050,
+      "left": 430,
+      "width": 700,
+      "top": 450
+    },
+    "source": "IMG_4944(1).jpeg (owner library)",
+    "sourceDate": "2026-11-03",
+    "sha256": "99f7c479aee6d51774a8219dec9e5b2773ccc92c22e3d984ac6df2f7b11152f4"
+  },
+  {
+    "id": "personal-outing",
+    "src": "/media/selected/personal-outing-706.avif",
+    "width": 706,
+    "height": 941,
+    "alt": "Zephyr with three other people beside gorilla sculptures indoors.",
+    "focalPoint": "42% 48%",
+    "variants": [
+      {
+        "width": 360,
+        "webp": "/media/selected/personal-outing-360.webp",
+        "avif": "/media/selected/personal-outing-360.avif"
+      },
+      {
+        "width": 706,
+        "webp": "/media/selected/personal-outing-706.webp",
+        "avif": "/media/selected/personal-outing-706.avif"
+      }
+    ],
+    "source": "IMG_3041.jpeg (owner library)",
+    "sourceDate": "2026-11-03",
+    "sha256": "0e8ee5a707498d4df9c31e7f762515f99273691f4d65084141407c9fb6271ae0"
+  },
+  {
+    "id": "personal-golf",
+    "src": "/media/selected/personal-golf-706.avif",
+    "width": 706,
+    "height": 941,
+    "alt": "Zephyr and another person at an indoor golf driving range.",
+    "focalPoint": "51% 59%",
+    "variants": [
+      {
+        "width": 360,
+        "webp": "/media/selected/personal-golf-360.webp",
+        "avif": "/media/selected/personal-golf-360.avif"
+      },
+      {
+        "width": 706,
+        "webp": "/media/selected/personal-golf-706.webp",
+        "avif": "/media/selected/personal-golf-706.avif"
+      }
+    ],
+    "source": "IMG_1545.jpeg (owner library)",
+    "sourceDate": "2026-11-03",
+    "sha256": "b7e0d6faa53db672f8dc04dbfe7a72414d61abb98cc6422ce5078d8647841b57"
+  }
+]

@@ -14,6 +14,12 @@ try {
    if (response?.status() !== 200) throw new Error(`Cannot capture ${path}: HTTP ${response?.status()}`);
    await page.evaluate(() => document.fonts.ready);
    const target = name === 'discovery' ? page.locator('#two-sides') : page;
+   const images = name === 'discovery' ? target.locator('img') : page.locator('main img');
+   for (const image of await images.all()) {
+    await image.scrollIntoViewIfNeeded();
+    await image.evaluate(async (element) => { await element.decode(); });
+   }
+   await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
    if (name === 'discovery') await target.scrollIntoViewIfNeeded();
    await target.screenshot({ path: `${directory}/${name}-${viewport.name}.png`, ...(name === 'discovery' ? { style: '.site-header{visibility:hidden!important}' } : { fullPage: true }) });
   }

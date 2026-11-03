@@ -5,6 +5,7 @@ import BrandLogo from '@/components/brand-logo';
 import ArrivalExperience from '@/components/arrival-experience';
 import TwoWorlds from '@/components/two-worlds';
 import WorldFooter from '@/components/world-footer';
+import type { AthletePhotoData } from '@/components/athlete-photo';
 import { resolveScenePhoto } from '@/content/scene-photo-selection';
 import { useStoryMotion } from '@/components/use-story-motion';
 import type { MediaAsset, PreviewPhoto, ScenePhoto, PhotoScene, PublicProfile } from '@/content/site';
@@ -51,7 +52,7 @@ export function Header() {
   {open && <button className="nav-backdrop" aria-label="Close navigation menu" onClick={close} />}
  </>;
 }
-export default function SiteExperience({ profileData, film, assets, previewPhotos, scenePhotos, campaignPhotos = [], previewMediaMode }: { profileData: PublicProfile; film: MediaAsset | null; assets: MediaAsset[]; previewPhotos: PreviewPhoto[]; campaignPhotos?: PreviewPhoto[]; scenePhotos: ScenePhoto[]; previewMediaMode: boolean; }) {
+export default function SiteExperience({ profileData, film, assets, previewPhotos, scenePhotos, campaignPhotos = [], previewMediaMode, discoveryFieldPhoto, discoveryPortraitPhoto }: { profileData: PublicProfile; film: MediaAsset | null; assets: MediaAsset[]; previewPhotos: PreviewPhoto[]; campaignPhotos?: PreviewPhoto[]; scenePhotos: ScenePhoto[]; previewMediaMode: boolean; discoveryFieldPhoto?: AthletePhotoData; discoveryPortraitPhoto?: AthletePhotoData; }) {
  const root = useRef<HTMLElement>(null); const [filmOpen, setFilmOpen] = useState(false); const [selectedFilm, setSelectedFilm] = useState<MediaAsset | null>(null);
  const filmOpener = useRef<HTMLElement | null>(null);
  const approvedFilm = film;
@@ -79,7 +80,7 @@ export default function SiteExperience({ profileData, film, assets, previewPhoto
   <Header />
   <div className="site-content">
   <ArrivalExperience profile={profileData} photo={arrivalPhoto} photos={previewMediaMode ? [...campaignPhotos, ...scenePhotos, ...previewPhotos] : scenePhotos} film={approvedFilm} />
-  <TwoWorlds onFieldPhoto={fieldPhoto} offFieldPhoto={offFieldPhoto} jerseyNumber={profileData.number} />
+  <TwoWorlds onFieldPhoto={discoveryFieldPhoto ?? fieldPhoto} offFieldPhoto={discoveryPortraitPhoto ?? offFieldPhoto} jerseyNumber={profileData.number} />
   <WorldFooter home />
   </div>
   {filmOpen && <VideoDialog source={selectedFilm?.src ?? null} poster={selectedFilm?.poster} onClose={closeFilm} />}

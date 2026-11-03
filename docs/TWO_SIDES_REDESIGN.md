@@ -12,19 +12,22 @@ Branch: `feat/two-sides-dedicated-pages`. Review preview only; no merge or deplo
 ## Current production integration
 The provided checkout started at `5bfba97`; a fresh remote audit found two newer releases. Merged `origin/main` at `8aa7f5a` before delivery. The current production ArrivalExperience, ArrivalHero, their CSS and motion code, original media, and dedicated Hudl Highlights page are unchanged relative to that release. Native video focus and mobile width-only resize handling from the scroll-stability release are preserved. The requested seven navigation items now use `/highlights/` for Highlights; `/film/` and `/about/` remain available directly.
 
-## Authentic asset inventory
-No new or generated athlete/family photographs were introduced. Existing crop derivatives are reused byte-for-byte, through responsive AVIF/WebP sources at 360/540/706 widths.
+## Authentic asset inventory — updated 2026-11-03
+Owner requested these selections for PR13 and explicitly excluded the restaurant image. The homepage discovery field panel now uses the real standing Anna17 photograph; the dedicated field hero uses the separate real throwing-action photo. Beyond17 uses a standard editorial crop of original `IMG_4944(1).jpeg`, with its full birthday frame available in the gallery. Five original personal library photographs replace the prior repeated football sideline fallback.
 
-| Photograph | Existing source | Used in | Status |
-| --- | --- | --- | --- |
-| No. 17 preparing to pass, black uniform | `/media/on-field-706.webp` and AVIF/WebP variants | Homepage left panel, dedicated field hero | Owner-provided football image; existing preview-only crop, originals/rights pending |
-| Helmet-off seated sideline portrait | `/media/portrait-706.webp` and AVIF/WebP variants | Homepage right panel, Beyond hero, single accurately captioned gallery frame | User approved temporary review use; existing preview-only crop |
-| Existing intro standing/action/rear/white/stadium/color-action layers | Existing `arrival-directors-cut`, owner stadium/action assets and campaign closeup | Preserved cinematic intro | Existing preview gates unchanged |
-| Original cinematic video | `/media/zephyr-monochrome-full.mp4` | Preserved homepage cinema and existing Film experience | Existing owner-approved media record unchanged |
+| Role | Original | Processing/status |
+| --- | --- | --- |
+| Discovery field | `2026-10-06_instagram_DeIdiOjDl_s-3.jpg` | Existing local Media photograph; responsive encodes |
+| Dedicated field hero | `2026-09-28_instagram_Dd2BzvLm11i-4.jpg` | Existing local Media photograph; responsive encodes |
+| Beyond/discovery personal portrait | `IMG_4944(1).jpeg` | Original library birthday photograph; documented 700x1050 editorial crop |
+| Personal gallery | `IMG_1782.jpeg`, `IMG_5274(1).jpeg`, `IMG_3041.jpeg`, `IMG_1545.jpeg`, `IMG_4944(1).jpeg` | Original library home, stadium, outing, golf and birthday images; full aspect ratio preserved |
+| Cinematic opening | Existing intro/video assets | Assignments and media unchanged |
 
-See `MEDIA_INVENTORY.md`, `PREVIEW_MEDIA_MANIFEST.json`, and `MEDIA_SOURCE_HASHES.json` for original source descriptions/hashes. New photo lookup honors `PREVIEW_MEDIA_MODE=false`; the existing public-release distribution gate remains intact. A clean release still requires approved originals and removal/replacement of all preview-only distributed assets.
+Original library files were retrieved through the owner's authenticated ChatGPT file viewers. Original filenames and SHA-256 values, source dimensions, crop rectangle and exact output hashes are in `docs/SELECTED_PHOTOS.json`. No raw original or embedded EXIF/GPS metadata is distributed. No generated person, restaurant image, or invented family relationship is used. Captions stay neutral.
 
-The latest approved mockup, smiling restaurant/lifestyle portrait, fishing, home gaming, canyon, Christmas family, Sandbox VR and friends/family images were not present. They have not been fabricated or substituted with unrelated sports images. Exact fidelity to the unseen mockup is not claimed. `content/life.ts` is the empty lifestyle-photo inventory; add approved photographs with caption/source/date there. Only one sideline frame appears until the inventory is populated, so production multi-photo swiping cannot be evaluated with current content. A test-only three-photo fixture exercises the actual carousel without shipping sample family content.
+Eight selection records produce36 AVIF/WebP derivatives under `/media/selected/`; widths are360,706,1280 where the source supports them, including actual smaller native widths. Metadata is stripped; no upscaling. `scripts/prepare-selected-photos.mjs <local-photo-spec.json>` reproduces the assets from local originals. Input paths stay in an untracked local spec; committed provenance contains original basenames and hashes. See `content/selected-photos.json` for exact responsive paths and per-image focal points.
+
+Owner selection for this PR is separate from final public-release rights approval. All new selections are suppressed by `PREVIEW_MEDIA_MODE=false`, and every derivative is registered in `PREVIEW_MEDIA_MANIFEST.json` as preview-only so `PUBLIC_RELEASE=true` rejects distribution until separately cleared. No merge or deployment is authorized. Outgoing update commits use `[CF-Pages-Skip]` to suppress automatic Cloudflare deployments.
 
 ## Statistics evidence
 Every displayed metric/game carries its own source URL and verification date in `content/performance.ts`. Verification date: **2026-11-03**. Primary record: [MaxPreps Anna athlete statistics](https://www.maxpreps.com/tx/anna/anna-coyotes/athletes/zephyr-kreye/football/stats/?careerid=ns0up151d9jp9), explicitly labeled coach-entered, updated Nov. 2, 2026, 7:35 a.m. PT. Coverage: nine games through Oct. 30, **in-season**, not a completed season.
@@ -47,8 +50,8 @@ Retrieved public evidence is retained under `docs/evidence/two-sides/`. MaxPreps
 ## Content updates
 - Season/game data: `content/performance.ts`; update evidence and dates together. Missing values remain null. Unit tests enforce eligibility and unknown-value handling.
 - Existing four interest categories: owner-supplied `content/site.ts` picks. Music, Favorites, Adventure, Family & Friends await Zephyr's answers; no opinions invented.
-- Portrait selection: `content/athlete-photos.ts`, reusing existing approved scene lookup and preview switch.
+- Photo selection: `content/athlete-photos.ts` assigns separate discovery/field/personal roles and retains the preview switch; `content/life.ts` selects the original personal gallery.
 
 ## Validation and known limits
 Detailed final results and screenshots: `artifacts/two-sides/README.md`.
-Physical iPhone Safari has not been tested. Automated iPhone WebKit emulation is reported separately. The carousel uses native touch scrolling and does not intercept touchmove, but final gesture review with the real lifestyle photo collection and a physical phone remains necessary.
+Physical iPhone Safari has not been tested. Automated iPhone WebKit emulation is reported separately. The carousel uses native touch scrolling and does not intercept touchmove, but final gesture review on a physical phone remains necessary; the selected original-photo gallery is exercised in automated browser checks.

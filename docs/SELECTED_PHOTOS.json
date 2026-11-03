@@ -1,0 +1,296 @@
+[
+  {
+    "id": "discovery-field",
+    "sourceName": "2026-10-06_instagram_DeIdiOjDl_s-3.jpg",
+    "source": "local post",
+    "sourceSha256": "4873c8c4cb0550078a97e7b5b3745b6a3c4960469eb26170db61e36449347945",
+    "sourceDimensions": {
+      "width": 1365,
+      "height": 1820
+    },
+    "outputDimensions": {
+      "width": 1280,
+      "height": 1707
+    },
+    "usage": "preview-only",
+    "rights": "Owner supplied for PR review; final-release rights gate retained",
+    "outputs": [
+      {
+        "path": "/media/selected/discovery-field-360.webp",
+        "sha256": "af04a1212c9494b801ac790e1148602b3e9f5d1f69a3398ec06c9f103d4df40d"
+      },
+      {
+        "path": "/media/selected/discovery-field-360.avif",
+        "sha256": "b4c1bb1bc93f1e557fe0c7518be8cfd3308680d8c33aad3113c9cf254542334c"
+      },
+      {
+        "path": "/media/selected/discovery-field-706.webp",
+        "sha256": "76ce650a37d2b03fb3234c6f7cbddedf79258c78f5d694539acd3e83cac38376"
+      },
+      {
+        "path": "/media/selected/discovery-field-706.avif",
+        "sha256": "da20d65124232a31ca8e9c9fbfccea42f313f250c2bfcfc057622dabea70124b"
+      },
+      {
+        "path": "/media/selected/discovery-field-1280.webp",
+        "sha256": "003b3f1f3c99e32a72b541d950d62607c54c510620757fe3c5f4b1ed61220d19"
+      },
+      {
+        "path": "/media/selected/discovery-field-1280.avif",
+        "sha256": "b6c3a12a1af9ef285f570b03db639188c0ec540863e5467f9048a61e9e3342c5"
+      }
+    ]
+  },
+  {
+    "id": "field-hero",
+    "sourceName": "2026-09-28_instagram_Dd2BzvLm11i-4.jpg",
+    "source": "local post",
+    "sourceSha256": "8a1c9169ca5c1fb6b7050fdd7419b4fe937cf9aa561534e51783a5aad6f1f5cf",
+    "sourceDimensions": {
+      "width": 1365,
+      "height": 1820
+    },
+    "outputDimensions": {
+      "width": 1280,
+      "height": 1707
+    },
+    "usage": "preview-only",
+    "rights": "Owner supplied for PR review; final-release rights gate retained",
+    "outputs": [
+      {
+        "path": "/media/selected/field-hero-360.webp",
+        "sha256": "847ac6ef07f16db05051febcf9dec70b7122ce96269e9d5035d3656dfb53acb4"
+      },
+      {
+        "path": "/media/selected/field-hero-360.avif",
+        "sha256": "63e952ca6e2713e2d09532c3f98e70413063f55cfbd4d53a13894788bc779584"
+      },
+      {
+        "path": "/media/selected/field-hero-706.webp",
+        "sha256": "cc139b43db2033e8e2a3fcf6ce71ee017b5b4363895b5979715b29d7098e18b1"
+      },
+      {
+        "path": "/media/selected/field-hero-706.avif",
+        "sha256": "400fb8df8529b87514bfa8996ab512ce3c5090f4c420c1de53469835984dc1ff"
+      },
+      {
+        "path": "/media/selected/field-hero-1280.webp",
+        "sha256": "42cce3e93526d4efd9c77c3bfd10141c901c78ca7f51ac3b8f7d52a36b485fa6"
+      },
+      {
+        "path": "/media/selected/field-hero-1280.avif",
+        "sha256": "bc6628e263b09d197326732968842d32edbad7207951392543b1568afe191f6c"
+      }
+    ]
+  },
+  {
+    "id": "personal-home",
+    "sourceName": "IMG_1782.jpeg",
+    "source": "owner library",
+    "sourceSha256": "22b5a2e117ebf80b3525b8490f01da7d335a57e11469218365b202b0c66b4f70",
+    "sourceDimensions": {
+      "width": 1152,
+      "height": 1536
+    },
+    "outputDimensions": {
+      "width": 706,
+      "height": 941
+    },
+    "usage": "preview-only",
+    "rights": "Owner supplied for PR review; final-release rights gate retained",
+    "outputs": [
+      {
+        "path": "/media/selected/personal-home-360.webp",
+        "sha256": "19917863473456184d5a18758607d3c84a1d907d8ae43307bfdd258d46104bb1"
+      },
+      {
+        "path": "/media/selected/personal-home-360.avif",
+        "sha256": "27d6ce43da8982f221406a2f4da33a8f2d9995675b7e796eaa09b19ba8c02ed4"
+      },
+      {
+        "path": "/media/selected/personal-home-706.webp",
+        "sha256": "b15160b929aee5269382b04a5e834f865a5b2ae949c8515879da7d1fe40911cf"
+      },
+      {
+        "path": "/media/selected/personal-home-706.avif",
+        "sha256": "c1a2dd5891b2a82f29bf4a0e1eec6d1d12621fc85b8fa01d2f1aecb014178e23"
+      }
+    ]
+  },
+  {
+    "id": "personal-sideline",
+    "sourceName": "IMG_5274(1).jpeg",
+    "source": "owner library",
+    "sourceSha256": "9e581fdf5d95cd3740062b2251df5de3afbb4b37a3088853b3f832adab0561f6",
+    "sourceDimensions": {
+      "width": 1152,
+      "height": 1536
+    },
+    "outputDimensions": {
+      "width": 706,
+      "height": 941
+    },
+    "usage": "preview-only",
+    "rights": "Owner supplied for PR review; final-release rights gate retained",
+    "outputs": [
+      {
+        "path": "/media/selected/personal-sideline-360.webp",
+        "sha256": "8c1d443454a8935316ef9dc8047d5f958cc28f86d1e6cdfce6ed602fa9f82776"
+      },
+      {
+        "path": "/media/selected/personal-sideline-360.avif",
+        "sha256": "7ace2fa6586a71a4900d2b0c86d1b71255448e1680cfc849e13c96a98713df35"
+      },
+      {
+        "path": "/media/selected/personal-sideline-706.webp",
+        "sha256": "fe3a5fd0be500ba3cc8d8deb2ec0a3ea7ce7dbfc41ed517bdf7ae8e3c02a52cf"
+      },
+      {
+        "path": "/media/selected/personal-sideline-706.avif",
+        "sha256": "2cb5c52a7454d6cdffe933c888d7fc83833822f71c397cbda70029b4161daf74"
+      }
+    ]
+  },
+  {
+    "id": "personal-birthday",
+    "sourceName": "IMG_4944(1).jpeg",
+    "source": "owner library",
+    "sourceSha256": "99f7c479aee6d51774a8219dec9e5b2773ccc92c22e3d984ac6df2f7b11152f4",
+    "sourceDimensions": {
+      "width": 1152,
+      "height": 1536
+    },
+    "outputDimensions": {
+      "width": 706,
+      "height": 941
+    },
+    "usage": "preview-only",
+    "rights": "Owner supplied for PR review; final-release rights gate retained",
+    "outputs": [
+      {
+        "path": "/media/selected/personal-birthday-360.webp",
+        "sha256": "a9040c8f4ebc40277d98a757ef3c2657fc18cdcf3d9bda35bf9eb4c946ffcf8c"
+      },
+      {
+        "path": "/media/selected/personal-birthday-360.avif",
+        "sha256": "c8ef0b1ad6a17568daa25c144090b1b9814b8d4856049b4113790a8c172f7de8"
+      },
+      {
+        "path": "/media/selected/personal-birthday-706.webp",
+        "sha256": "a5be848a52d3fedab2b0c1ea42012e621836841716630aef112c5802840fdb3b"
+      },
+      {
+        "path": "/media/selected/personal-birthday-706.avif",
+        "sha256": "655b1d49d709c71304d68e2b5b9295afbbde7ff00eae4684baf62ae076f84692"
+      }
+    ]
+  },
+  {
+    "id": "personal-portrait",
+    "sourceName": "IMG_4944(1).jpeg",
+    "source": "owner library",
+    "sourceSha256": "99f7c479aee6d51774a8219dec9e5b2773ccc92c22e3d984ac6df2f7b11152f4",
+    "sourceDimensions": {
+      "width": 1152,
+      "height": 1536
+    },
+    "crop": {
+      "height": 1050,
+      "left": 430,
+      "width": 700,
+      "top": 450
+    },
+    "outputDimensions": {
+      "width": 700,
+      "height": 1050
+    },
+    "usage": "preview-only",
+    "rights": "Owner supplied for PR review; final-release rights gate retained",
+    "outputs": [
+      {
+        "path": "/media/selected/personal-portrait-360.webp",
+        "sha256": "4ffc1cc42ed2d4e2518ac3d904b3c6b6d4f2260c975318c40b2477dadd4f8330"
+      },
+      {
+        "path": "/media/selected/personal-portrait-360.avif",
+        "sha256": "dd546284d84c6cb1e1a5983f536f7db6bffee22b7c9c7051f2d66dc3628847e7"
+      },
+      {
+        "path": "/media/selected/personal-portrait-700.webp",
+        "sha256": "9ef0ca48f2ebf9edc9e38b9d8e7821a064292231a4007b000403e9984319df79"
+      },
+      {
+        "path": "/media/selected/personal-portrait-700.avif",
+        "sha256": "449765ab5e5d1d30e86e5a00b0bd0384c9326c4eeb1ee00cd1b0a58acecdc2bf"
+      }
+    ]
+  },
+  {
+    "id": "personal-outing",
+    "sourceName": "IMG_3041.jpeg",
+    "source": "owner library",
+    "sourceSha256": "0e8ee5a707498d4df9c31e7f762515f99273691f4d65084141407c9fb6271ae0",
+    "sourceDimensions": {
+      "width": 1152,
+      "height": 1536
+    },
+    "outputDimensions": {
+      "width": 706,
+      "height": 941
+    },
+    "usage": "preview-only",
+    "rights": "Owner supplied for PR review; final-release rights gate retained",
+    "outputs": [
+      {
+        "path": "/media/selected/personal-outing-360.webp",
+        "sha256": "57b59738e9f75afa8e73a63f2d3e076c41966e60c37afccc71e0539fda42214c"
+      },
+      {
+        "path": "/media/selected/personal-outing-360.avif",
+        "sha256": "8543b5f18d5a2becf2f8181e16b8481e3151e54d142705e4eaa412db43a4f460"
+      },
+      {
+        "path": "/media/selected/personal-outing-706.webp",
+        "sha256": "0f9e1887f5fc2f60384d840ddbbae7da11d0a7cc555aed6a666e8646ee14a61f"
+      },
+      {
+        "path": "/media/selected/personal-outing-706.avif",
+        "sha256": "f5163154287b2701c70565004677af3f421392971b233c717d7a4a94c0a32a9a"
+      }
+    ]
+  },
+  {
+    "id": "personal-golf",
+    "sourceName": "IMG_1545.jpeg",
+    "source": "owner library",
+    "sourceSha256": "b7e0d6faa53db672f8dc04dbfe7a72414d61abb98cc6422ce5078d8647841b57",
+    "sourceDimensions": {
+      "width": 1152,
+      "height": 1536
+    },
+    "outputDimensions": {
+      "width": 706,
+      "height": 941
+    },
+    "usage": "preview-only",
+    "rights": "Owner supplied for PR review; final-release rights gate retained",
+    "outputs": [
+      {
+        "path": "/media/selected/personal-golf-360.webp",
+        "sha256": "ea406ac8619d664032fe1b69c212c25c97228543d9ede804ae6e1fc1d439c47c"
+      },
+      {
+        "path": "/media/selected/personal-golf-360.avif",
+        "sha256": "e276cd3b6ca72c5c29114b8337491e85872d4c7ef193cacb66925251b916875b"
+      },
+      {
+        "path": "/media/selected/personal-golf-706.webp",
+        "sha256": "ae17293477773d0f62200f1087e8426653022c9779a3b4ed8e49fefb0e2d3c1e"
+      },
+      {
+        "path": "/media/selected/personal-golf-706.avif",
+        "sha256": "9475388fc2236a74d0b8e71f8329bec6da6dbdc865e1c9ae8224b82e0c544802"
+      }
+    ]
+  }
+]
