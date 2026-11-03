@@ -51,9 +51,13 @@ export function useStoryMotion(root: RefObject<HTMLElement | null>) {
    const cinema = id === 'film-room' ? ScrollTrigger.getById('arrival-cinema') : undefined;
    const scrollPadding = Number.parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
    // The full-height film stage must align with the viewport even without a pin.
-   const top = id === 'film-room'
-    ? cinema?.end ?? target.getBoundingClientRect().top + window.scrollY
-    : target.getBoundingClientRect().top + window.scrollY - scrollPadding;
+   // A pinned Arrival can report top:0 far into its scroll interval. Its
+   // trigger start is the actual document-top destination for Back to Top.
+   const top = id === 'arrival'
+    ? ScrollTrigger.getById('arrival-hero')?.start ?? 0
+    : id === 'film-room'
+     ? cinema?.end ?? target.getBoundingClientRect().top + window.scrollY
+     : target.getBoundingClientRect().top + window.scrollY - scrollPadding;
    window.scrollTo({ top: Math.max(0, top), behavior: 'instant' });
   };
   // Late images and pin refreshes can move an anchor after its first landing.

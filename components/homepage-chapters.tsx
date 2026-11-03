@@ -32,8 +32,19 @@ export default function HomepageChapters({profile,fieldPhoto,personalPhoto,closi
    <div className={styles.nextCopy}><p className={styles.index}>06 <i/></p><h2 id="next-title">NEXT<br/>CHAPTER.</h2><p className={styles.tagline}>THE STORY IS STILL<br/>BEING WRITTEN.</p></div><BrandLogo className={styles.nextLogo}/>
   </section>
   <footer id="closing" className={styles.footer}>
-   <div className={styles.footerTop}><Link href="/" aria-label="ZK17 home"><BrandLogo className={styles.footerLogo}/></Link><nav aria-label="Contact and recruiting"><Link href="/nil-recruiting/">NIL / RECRUITING</Link><Link href="/recruiting/">RECRUITING SNAPSHOT</Link>{nilContact && <a href={nilContact.href}>CONTACT</a>}<a href="#arrival">BACK TO TOP</a></nav></div>
-   <div className={styles.footerBottom}><span>© {new Date().getFullYear()} {profile.name.toUpperCase()}</span><span>{profile.school.toUpperCase()} / CLASS OF {profile.classYear}</span></div>
+   <div className={styles.footerTop}>
+    <Link href="/" aria-label="ZK17 home"><BrandLogo className={styles.footerLogo}/></Link>
+    <p className={styles.footerStatement}>THE STORY IS STILL BEING WRITTEN.<br/>{profile.name.toUpperCase()} · QB1<br/>BIGGER STAGE. SAME MINDSET.</p>
+    <a className={styles.footerBackTop} href="#arrival">BACK TO TOP</a>
+   </div>
+   <div className={styles.footerIdentity}>
+    <BrandLogo className={styles.footerMonogram}/>
+    {personalPhoto && <EditorialPhoto photo={personalPhoto} className={styles.footerPortrait} sizes="(max-width: 600px) 86vw, 40vw"/>}
+   </div>
+   <div className={styles.footerBottom}>
+    <span>© {new Date().getFullYear()} {profile.name.toUpperCase()}</span>
+    <nav className={styles.footerLinks} aria-label="Contact and recruiting"><Link href="/nil-recruiting/">NIL / RECRUITING</Link><Link href="/recruiting/">RECRUITING SNAPSHOT</Link>{nilContact && <a href={nilContact.href}>CONTACT</a>}</nav>
+   </div>
   </footer>
  </div>;
 }

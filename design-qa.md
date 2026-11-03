@@ -36,3 +36,7 @@ See `artifacts/homepage-polish/QA.md` for final commands/counts and `astra-revie
 - Populate statistics and social links only when the existing source/approval system has verified records.
 
 No merge or deployment performed.
+
+## Subsequent owner-selected footer refinement
+
+The owner supplied a new 1206px-wide footer reference after the initial PR. The footer now follows that composition: small canonical sword and three-line statement above a monumental sword / square monochrome sideline portrait, prominent underlined Back to Top and quiet copyright rules. Existing approved recruiting/contact links remain at the baseline. See `artifacts/homepage-polish/footer/1206.jpg`, responsive footer screenshots and `footer/QA.md`. The parent compared the screenshot against the conversation image; Astra independently verified the described composition and responsive/accessibility behavior. It found and verified the fix for a pinned Arrival anchor destination error; no unresolved P1/P2 footer defect remains. This update does not resolve the separate missing original-photography blocker for exact acceptance of the full homepage.

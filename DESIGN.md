@@ -34,3 +34,7 @@ At 375/390/430px, stack field photography and typography, render 2×2 statistics
 ## Review
 
 Typecheck, lint, production export, unit/content tests, browser route/interaction checks, responsive captures and WebKit/reduced-motion verification precede handoff. Screenshots and statistics notes accompany the feature PR. No merge or deployment before owner review. Asset omissions and physical iPhone limitations must be stated honestly.
+
+## Owner-selected identity footer — November 3
+
+Replace the compact footer with the supplied dark identity-footer reference: small sword at upper left, the three-line story / ZEPHYR KREYE · QB1 / BIGGER STAGE statement centered, prominent underlined BACK TO TOP at upper right, monumental canonical sword on the left and authentic monochrome sideline portrait on the right. Thin horizontal rules frame the copyright baseline; approved recruiting/contact links remain quiet at the bottom. This belongs to the existing closing/footer experience, not a seventh chapter. Phones stack the monumental mark and portrait with readable statement and 44px targets. Retain photo approval/preview gates.

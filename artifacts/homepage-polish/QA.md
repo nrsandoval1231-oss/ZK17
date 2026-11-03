@@ -56,3 +56,7 @@ Intentional skips: the CDP-native swipe test runs only in mobile Chromium; WebKi
 `before/` contains reduced-motion desktop/mobile captures of the original homepage. `after/` includes per-chapter screenshots and 1× stitched comparison strips at each viewport. `webkit/` contains the 390px WebKit screenshots. Comparison strips stitch the actual four browser-rendered section captures without resizing. The fixed header and skip-link are hidden only during section captures so they cannot obscure content. The supplied mockup is a conversation attachment, not a workspace source image; no fabricated pixel-diff score is claimed.
 
 Current authentic sideline/football crops differ from the mockup's lifestyle photography and are mostly review-only. Approved lifestyle/smiling/helmeted-throwing originals, plus physical iPhone testing, remain necessary before final visual acceptance. No generated athlete, invented profile, invented statistics or commitment claim was introduced. No merge/deployment performed.
+
+## Footer update after owner reference selection
+
+See `footer/QA.md` and `footer-astra-review.md` for the selected identity footer, seven responsive screenshots and the supporting Back to Top anchor correction. Updated focused results: 16 Chromium/mobile/reduced-motion checks passed (two intentional skips), five iPhone WebKit checks passed (one CDP skip). Full unit suite remains 65 passing; TypeScript, lint and build passed. Earlier captures in `after/` document the four chapter sections; the new footer evidence is in `footer/`.

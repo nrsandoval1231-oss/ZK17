@@ -32,3 +32,7 @@ Truth before spectacle. Authentic subject visibility and smooth iPhone scrolling
 ## Delivery
 
 Feature branch and owner-review PR with before/after and responsive screenshots, verification results, statistics/source notes and unresolved assets. Do not merge or deploy before owner review.
+
+## Footer refinement
+
+Owner selected the dark identity-footer reference on November 3: story statement, monumental canonical sword, authentic monochrome sideline portrait, Back to Top and restrained copyright rules. Keep approved recruiting/contact access at the baseline; this remains part of the sixth closing experience.

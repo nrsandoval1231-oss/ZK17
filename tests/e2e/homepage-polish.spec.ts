@@ -95,3 +95,15 @@ test('native touch swipe moves the journal while a vertical gesture scrolls the 
  await expect.poll(()=>page.evaluate(()=>scrollY)).toBeGreaterThan(vertical+50);
  await cdp.detach();
 });
+
+test('footer Back to Top returns to the start of the cinematic Arrival pin',async({page})=>{
+ await page.emulateMedia({reducedMotion:'no-preference'});
+ await page.goto('/');
+ await expect(page.locator('#arrival')).toHaveAttribute('data-arrival-motion','ready');
+ const back=page.getByRole('link',{name:'BACK TO TOP',exact:true});
+ await back.scrollIntoViewIfNeeded();
+ await expect.poll(()=>page.evaluate(()=>scrollY)).toBeGreaterThan(1000);
+ await back.click();
+ await expect(page).toHaveURL(/#arrival$/);
+ await expect.poll(()=>page.evaluate(()=>scrollY)).toBeLessThan(2);
+});
