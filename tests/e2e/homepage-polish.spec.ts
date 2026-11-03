@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-test('five chapters preserve opening, verified unavailable statistics and dedicated destinations',async({page})=>{
+test('five chapters preserve opening, sourced season statistics and dedicated destinations',async({page})=>{
  await page.goto('/');
  await expect(page.locator('#on-field')).toBeAttached();
  expect(await page.locator('main section').evaluateAll(items=>items.map(item=>item.id))).toEqual(['arrival','film-room','on-field','off-field','follow-the-journey']);
@@ -15,8 +15,8 @@ test('five chapters preserve opening, verified unavailable statistics and dedica
  await expect(strip).toContainText('TOTAL TD');
  await expect(strip).toContainText('QB RATING');
  await expect(strip).toContainText('COMP %');
- await expect(strip.locator('strong[aria-label="Unavailable"]')).toHaveCount(4);
- await expect(page.getByRole('navigation',{name:'Verified social profiles'})).toHaveCount(0);
+ await expect(strip.locator('strong')).toHaveText(['2,001','28','106.4','64.8%']);
+ await expect(page.getByRole('navigation',{name:'Verified social profiles'}).getByRole('link')).toHaveText(['X (opens in a new tab)','Instagram (opens in a new tab)','TikTok (opens in a new tab)']);
  for(const route of ['/about/','/film/','/highlights/','/playoffs/','/nil-recruiting/','/recruiting/']){
   const response=await page.goto(route);
   expect(response?.status()).toBe(200);

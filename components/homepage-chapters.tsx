@@ -20,7 +20,7 @@ export default function HomepageChapters({profile,fieldPhoto,personalPhoto,galle
    <div className={styles.stats} aria-label={`${homepageStatsSeason} season statistics`}>
     {metrics.map(metric=><div className={styles.stat} key={metric.label}><strong aria-label={metric.value===null?'Unavailable':undefined}>{metric.value===null?'—':metric.value.toLocaleString('en-US')+(metric.label==='COMP %'?'%':'')}</strong><span>{metric.label}</span><i/><small>{metric.value===null?'NOT YET VERIFIED':metric.note}</small></div>)}
    </div>
-   <p className={styles.statsScope}>{homepageStatsSeason} SEASON <span>·</span> {metrics.every(metric=>metric.value===null)?'VERIFIED SEASON RECORD PENDING':'PASSING + RUSHING TOTALS · SOURCE-DEFINED QB RATING'}</p>
+   <p className={styles.statsScope}>{homepageStatsSeason} SEASON <span>·</span> {metrics.every(metric=>metric.value===null)?'VERIFIED SEASON RECORD PENDING':<>THROUGH OCT 30 · 9 GAMES · <a href={metrics[0].sources[0]}>MAXPREPS</a></>}</p>
   </section>
   <section id="off-field" className={styles.beyond} aria-labelledby="off-title">
    {personalPhoto && <EditorialPhoto photo={personalPhoto} className={styles.personalPhoto} sizes="(max-width: 600px) 100vw, 50vw"/>}
