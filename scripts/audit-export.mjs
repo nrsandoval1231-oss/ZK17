@@ -26,7 +26,9 @@ export async function auditPreviewDistribution({
       const candidate = resolve(base, safeName);
       const relativePath = relative(base, candidate);
       if (relativePath === '..' || relativePath.startsWith(`..${sep}`)) throw new Error(`Preview media path escapes its distribution directory: ${output}`);
-      if (await exists(candidate)) {
+      if (!(await exists(candidate))) {
+        previewFiles.push(`${root === publicDirectory ? 'public' : 'out'}/${safeName} (missing)`);
+      } else {
         const bytes = await readFile(candidate);
         const outputHash = createHash('sha256').update(bytes).digest('hex');
         const sourceHash = previewSourceHashes.get(output);
@@ -36,7 +38,7 @@ export async function auditPreviewDistribution({
       }
     }
   }
-  if (previewFiles.length) throw new Error(`Public release blocked: ${previewFiles.length} preview-only media file(s) are unapproved or changed in the public/export distribution.`);
+  if (previewFiles.length) throw new Error(`Public release blocked: ${previewFiles.length} required preview derivative(s) are missing, unapproved, or changed in the public/export distribution.`);
   return { blocked: false, previewFiles: [] };
 }
 

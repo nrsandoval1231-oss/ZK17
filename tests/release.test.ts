@@ -1,5 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { mkdtemp, mkdir, rm, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
@@ -7,7 +8,7 @@ import { spawnSync } from 'node:child_process';
 import { auditPreviewDistribution } from '../scripts/audit-export.mjs';
 
 describe('release export media boundary', () => {
-  it('blocks preview files in public sources and in exported output even when preview mode is disabled', async () => {
+  it('requires every approved derivative in both public and exported output and verifies its hash', async () => {
     const root = await mkdtemp(join(tmpdir(), 'zk17-release-audit-'));
     const publicDirectory = join(root, 'public');
     const exportDirectory = join(root, 'out');
@@ -17,12 +18,19 @@ describe('release export media boundary', () => {
       await mkdir(join(publicDirectory, 'media'), { recursive: true });
       await mkdir(join(exportDirectory, 'media'), { recursive: true });
       await writeFile(join(publicDirectory, previewPath), 'preview');
-      await assert.rejects(auditPreviewDistribution({ previewOutputs: [output], publicDirectory, exportDirectory, publicRelease: true }), /preview-only media file/);
-      await rm(join(publicDirectory, previewPath));
-      await writeFile(join(exportDirectory, previewPath), 'preview');
-      await assert.rejects(auditPreviewDistribution({ previewOutputs: [output], publicDirectory, exportDirectory, publicRelease: true }), /preview-only media file/);
+      const bytes = Buffer.from('preview');
+      const hash = createHash('sha256').update(bytes).digest('hex');
+      const sourceHash = 'a'.repeat(64);
+      const previewApprovals = [{ status: 'approved', approvedBy: 'owner', sourceSha256: sourceHash, outputPaths: [output], outputSha256: { [output]: hash } }];
+      const previewSourceHashes = new Map([[output, sourceHash]]);
+      await assert.rejects(auditPreviewDistribution({ previewOutputs: [output], previewApprovals, previewSourceHashes, publicDirectory, exportDirectory, publicRelease: true }), /missing/);
+      await writeFile(join(exportDirectory, previewPath), bytes);
+      await assert.doesNotReject(auditPreviewDistribution({ previewOutputs: [output], previewApprovals, previewSourceHashes, publicDirectory, exportDirectory, publicRelease: true }));
+      await writeFile(join(exportDirectory, previewPath), 'changed');
+      await assert.rejects(auditPreviewDistribution({ previewOutputs: [output], previewApprovals, previewSourceHashes, publicDirectory, exportDirectory, publicRelease: true }), /changed/);
       await rm(join(exportDirectory, previewPath));
-      await assert.doesNotReject(auditPreviewDistribution({ previewOutputs: [output], publicDirectory, exportDirectory, publicRelease: true }));
+      await rm(join(publicDirectory, previewPath));
+      await assert.rejects(auditPreviewDistribution({ previewOutputs: [output], previewApprovals, previewSourceHashes, publicDirectory, exportDirectory, publicRelease: true }), /missing/);
     } finally {
       await rm(root, { recursive: true, force: true });
     }
