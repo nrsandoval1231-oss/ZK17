@@ -7,6 +7,18 @@ async function exists(path) {
   try { await access(path); return true; } catch { return false; }
 }
 
+/** @typedef {{ status: string; approvedBy: string; sourceSha256: string; outputPaths?: string[]; outputSha256?: Record<string, string> }} MediaApproval */
+
+/**
+ * @param {{
+ *   previewOutputs: string[];
+ *   previewApprovals?: MediaApproval[];
+ *   previewSourceHashes?: Map<string, string>;
+ *   publicDirectory?: string;
+ *   exportDirectory?: string;
+ *   publicRelease?: boolean;
+ * }} options
+ */
 export async function auditPreviewDistribution({
   previewOutputs,
   previewApprovals = [],
