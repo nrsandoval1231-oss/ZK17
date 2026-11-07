@@ -42,7 +42,7 @@ export const offFieldFeatures: OffFieldFeature[] = [
  { label: 'Games', verifiedDetails: ['Madden', 'GTA 6', 'The Last of Us'] },
  { label: 'Movies', verifiedDetails: ['A Bronx Tale', 'Interstellar', 'Step Brothers'] },
  { label: 'TV Shows', verifiedDetails: ['The Sopranos', 'Breaking Bad', 'Game of Thrones'] },
- { label: 'Anime', verifiedDetails: ['Berserk', 'Attack on Titan', 'Demon Slayer'] },
+ { label: 'Anime', verifiedDetails: ['Attack on Titan', 'Fullmetal Alchemist: Brotherhood', 'Vinland Saga'] },
 ];
 export const commitmentAnnouncement = announcementData as CommitmentAnnouncement | null;
 export function publicCommitmentReveal(mode: string | undefined, announcement: CommitmentAnnouncement | null): CommitmentReveal {

@@ -12,7 +12,7 @@ export const metadata:Metadata={title:'Road to State | 2026 Anna Coyotes Playoff
 export default function PlayoffsPage(){
  const tournament=getTournament();
  const films=publicGameFilms(gameFilmAssignments as GameFilmAssignment[],media,new Set(tournament.games.map(game=>game.id)));
- const photo=resolveScenePhoto('on-field',publicScenePhotos(scenePhotoAssignments,media),previewPhotos,process.env.PREVIEW_MEDIA_MODE!=='false');
+ const photo=resolveScenePhoto('on-field',publicScenePhotos(scenePhotoAssignments,media),previewPhotos,process.env.PREVIEW_MEDIA_MODE!=='false'||process.env.PUBLIC_RELEASE==='true');
  if(photo?.kind==='preview'){
   const base=photo.src.replace(/-706\.webp$/,'');
   preload(`${base}-706.avif`,{as:'image',type:'image/avif',imageSrcSet:`${base}-360.avif 360w, ${base}-540.avif 540w, ${base}-706.avif 706w`,imageSizes:'(max-width:700px) 75vw, 50vw',fetchPriority:'high'});
