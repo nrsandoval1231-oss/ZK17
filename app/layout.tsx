@@ -5,6 +5,7 @@ import '@fontsource/barlow-condensed/latin-500.css';
 import '@fontsource/barlow-condensed/latin-600.css';
 import '@fontsource/barlow-condensed/latin-700.css';
 import '@fontsource/dm-sans/latin-400.css';
+import '@fontsource/bodoni-moda/latin-500-italic.css';
 import '@fontsource/dm-sans/latin-500.css';
 import '@fontsource/dm-sans/latin-600.css';
 import '@fontsource/press-start-2p/latin-400.css';

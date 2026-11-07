@@ -1,29 +1,17 @@
 'use client';
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import NextChapter from '@/components/next-chapter';
-import VerifiedStatRows from '@/components/verified-stat-rows';
 import BrandLogo from '@/components/brand-logo';
 import ArrivalExperience from '@/components/arrival-experience';
-import TwoWorlds from '@/components/two-worlds';
-import OffFieldArcade from '@/components/offfield-arcade';
-import ConnectSection from '@/components/connect-section';
 import type { PublicNilContact } from '@/content/contact';
 import { resolveScenePhoto } from '@/content/scene-photo-selection';
 import { useStoryMotion } from '@/components/use-story-motion';
-import type { Highlight, StatLine, Milestone, MediaAsset, OffFieldFeature, SocialLink, PreviewPhoto, ScenePhoto, PhotoScene, PublicProfile, CommitmentReveal } from '@/content/site';
+import type { StatLine, MediaAsset, OffFieldFeature, SocialLink, PreviewPhoto, ScenePhoto, PhotoScene, PublicProfile } from '@/content/site';
 
 
+import HomepageChapters from './homepage-chapters';
 import { navigationDestinations } from '@/content/navigation';
 const scenes = navigationDestinations;
-function Placeholder({ label, variant = 'field', className = '' }: { label: string; variant?: 'field' | 'portrait' | 'film' | 'abstract'; className?: string }) { return <div className={`media-placeholder media-${variant} ${className}`} role="img" aria-label={`Designed media placeholder. ${label}. No athlete photo supplied.`}><span className="placeholder-mark" aria-hidden="true">17</span><span className="placeholder-caption"><i />{label}</span></div>; }
-function ResponsivePhoto({ item, className = '', priority = false }: { item: PreviewPhoto | ScenePhoto; className?: string; priority?: boolean }) {
- const base=item.kind === 'preview' ? item.src.replace(/-706\.webp$/, '') : null;
- const variants=(format: string)=>[360,540,706].map((width)=>`${base}-${width}.${format} ${width}w`).join(', ');
- const focal=item.kind === 'preview' ? item.focal : item.focalPoint;
- return <figure className={`responsive-photo ${className} ${item.kind === 'approved' ? 'approved-photo' : 'preview-photo'}`}><picture>{base&&<><source type="image/avif" srcSet={variants('avif')} sizes="(max-width: 560px) 92vw, (max-width: 900px) 75vw, 52vw"/><source type="image/webp" srcSet={variants('webp')} sizes="(max-width: 560px) 92vw, (max-width: 900px) 75vw, 52vw"/></>}<Image src={item.src} alt={item.alt} width={item.width} height={item.height} priority={priority} unoptimized style={{objectPosition:focal}}/></picture></figure>;
-}
 function VideoDialog({ source, poster, onClose }: { source: string | null; poster?: string; onClose: () => void }) {
  const dialog = useRef<HTMLDialogElement>(null);
  useEffect(() => { const el = dialog.current; if (!el) return; el.showModal(); const priorOverflow = document.body.style.overflow; document.body.style.overflow = 'hidden'; return () => { if (el.open) el.close(); document.body.style.overflow = priorOverflow; }; }, [onClose]);
@@ -63,22 +51,24 @@ export function Header() {
   {open && <button className="nav-backdrop" aria-label="Close navigation menu" onClick={close} />}
  </>;
 }
-export default function SiteExperience({ profileData, film, highlights, stats, milestones, features, commitmentReveal, assets, socials, nilContact, previewPhotos, scenePhotos, campaignPhotos = [], previewMediaMode }: { profileData: PublicProfile; film: MediaAsset | null; highlights: Highlight[]; assets: MediaAsset[]; socials: SocialLink[]; nilContact: PublicNilContact | null; previewPhotos: PreviewPhoto[]; campaignPhotos?: PreviewPhoto[]; scenePhotos: ScenePhoto[]; previewMediaMode: boolean; stats: StatLine[]; milestones: Milestone[]; features: OffFieldFeature[]; commitmentReveal: CommitmentReveal }) {
- const root = useRef<HTMLElement>(null); const [filmOpen, setFilmOpen] = useState(false); const [selectedFilm, setSelectedFilm] = useState<MediaAsset | null>(null); const [season, setSeason] = useState<number | 'all'>('all'); const [filmSeason, setFilmSeason] = useState<number | 'all'>('all');
+const ownerFieldPhoto: PreviewPhoto = {
+ kind: 'preview', id: 'owner-field-2026-10-16', src: '/media/on-field-owner-2026-10-16.jpg',
+ width: 1611, height: 2297, alt: 'Zephyr Kreye, wearing number 17, prepares to throw a football.',
+ focal: '50% 28%', label: 'OWNER-SUPPLIED PHOTO',
+};
+
+const ownerBeyondPhoto: PreviewPhoto = {
+ kind: 'preview', id: 'owner-beyond-17', src: '/media/beyond-17-owner.webp',
+ width: 864, height: 1821, alt: 'Zephyr Kreye smiling in a light ZK T-shirt.',
+ focal: '50% 28%', label: 'OWNER-SUPPLIED PHOTO',
+};
+
+export default function SiteExperience({ profileData, film, stats, features, assets, socials, nilContact, previewPhotos, scenePhotos, campaignPhotos = [], previewMediaMode }: { profileData: PublicProfile; film: MediaAsset | null; assets: MediaAsset[]; socials: SocialLink[]; nilContact: PublicNilContact | null; previewPhotos: PreviewPhoto[]; campaignPhotos?: PreviewPhoto[]; scenePhotos: ScenePhoto[]; previewMediaMode: boolean; stats: StatLine[]; features: OffFieldFeature[]; }) {
+ const root = useRef<HTMLElement>(null); const [filmOpen, setFilmOpen] = useState(false); const [selectedFilm, setSelectedFilm] = useState<MediaAsset | null>(null);
  const filmOpener = useRef<HTMLElement | null>(null);
  const approvedFilm = film;
  const photoFor = (scene: PhotoScene): ScenePhoto | PreviewPhoto | undefined => resolveScenePhoto(scene, scenePhotos, previewPhotos, previewMediaMode);
- const arrivalPhoto = photoFor('arrival'); const fieldPhoto = photoFor('on-field'); const offFieldPhoto = photoFor('off-field'); const closingPhoto = photoFor('closing');
- const availableStats = stats.filter((item) => season === 'all' || item.season === season);
- const availableHighlights = highlights.filter((item) => filmSeason === 'all' || item.season === filmSeason);
- const gallerySeasons = [...new Set(highlights.map((item) => item.season))].sort((a,b)=>b-a);
- const openFilm = (asset: MediaAsset | null = approvedFilm, opener?: HTMLElement) => {
-  const active = document.activeElement;
-  filmOpener.current = opener ?? (active instanceof HTMLElement && active !== document.body ? active : null);
-  history.pushState(null, '', '#film=' + encodeURIComponent(asset?.id ?? 'pending'));
-  setSelectedFilm(asset); setFilmOpen(true);
- };
- const availableMilestones = milestones;
+ const arrivalPhoto = photoFor('arrival'); const fieldPhoto = photoFor('on-field'); const offFieldPhoto = photoFor('off-field');
  useStoryMotion(root);
  useEffect(() => {
   const sync = () => {
@@ -101,13 +91,8 @@ export default function SiteExperience({ profileData, film, highlights, stats, m
   <Header />
   <div className="site-content">
   <ArrivalExperience profile={profileData} photo={arrivalPhoto} photos={previewMediaMode ? [...campaignPhotos, ...scenePhotos, ...previewPhotos] : scenePhotos} film={approvedFilm} />
-  <div data-field-pin-spacer><section className="scene on-field" id="on-field" aria-labelledby="field-title"><span id="field-story" className="field-story-anchor" aria-hidden="true"/><div className="field-art">{fieldPhoto&&<ResponsivePhoto item={fieldPhoto} className="field-photo"/>}<div className="field-lines" /><span className="field-mark" aria-hidden="true">{profileData.number}</span><div className="field-caption"><span>FIG. 01</span><span>FOOTBALL / ANNA COYOTES</span><span>{profileData.location.toUpperCase()}</span></div></div><div className="field-lockup"><p className="eyebrow"><i /> ON THE FIELD</p><h2 id="field-title">ON THE FIELD</h2><div className="field-base"><span>{profileData.position.toUpperCase()} <b>{profileData.number}</b></span><p>{profileData.school}.<br />Class of {profileData.classYear}.</p></div></div><span className="scene-edge">ON FIELD <i /> 01 / 08</span></section></div>
-  <section className="scene journey" id="journey" aria-labelledby="journey-title"><div className="journey-head" data-reveal><p className="eyebrow">A STORY STILL IN MOTION</p><h2 id="journey-title">THE <em>JOURNEY.</em></h2><p className="journey-intro">A {profileData.position.toLowerCase()} at {profileData.school} in {profileData.location}. Class of {profileData.classYear}.</p></div><div className="journey-stage"><div className="journey-track" aria-hidden="true" /><span className="journey-marker" aria-hidden="true"><i /></span><span className="journey-origin">CLASS OF {profileData.classYear}</span><div className="journey-empty"><h3>{profileData.school.split(' ')[0].toUpperCase()}<br /><em>{profileData.school.split(' ').slice(1).join(' ').toUpperCase()}.</em></h3><p>{profileData.position} · {profileData.location}</p></div><div className="journey-end">IN PROGRESS <span>—</span> {profileData.classYear}</div></div><div className="verified-milestones">{availableMilestones.map((item) => <article key={item.id}><time>{item.date}</time><h3>{item.title}</h3>{item.detail && <p>{item.detail}</p>}</article>)}</div><span className="scene-edge">THE JOURNEY <i /> 04 / 08</span></section>
-  <section className="scene off-field" id="off-field" aria-labelledby="off-title"><div className="offfield-head" data-reveal><h2 id="off-title" className="sr-only">Off field</h2><a className="offfield-inquiry" href="#nil-inquiries">NIL &amp; BUSINESS INQUIRIES</a></div><TwoWorlds onFieldPhoto={arrivalPhoto} offFieldPhoto={offFieldPhoto} jerseyNumber={profileData.number}/><OffFieldArcade features={features} athleteName={profileData.name}/><span className="scene-edge dark-edge">OFF FIELD <i /> 03 / 08</span></section>
-  <section className="media-gallery" id="media" aria-labelledby="media-title"><div className="feature-list"><h2 id="media-title">THE STORY, IN FRAMES.</h2>{gallerySeasons.length>0&&<label className="gallery-season">SEASON<select aria-label="Filter the media gallery by season" value={filmSeason} onChange={(event)=>setFilmSeason(event.target.value==='all'?'all':Number(event.target.value))}><option value="all">ALL</option>{gallerySeasons.map((year)=><option key={year} value={year}>{year}</option>)}</select></label>}<div className="approved-gallery">{previewPhotos.map((photo)=><ResponsivePhoto key={photo.id} item={photo}/>)}{availableHighlights.map((item)=>{const asset=assets.find((candidate)=>candidate.id===item.assetId);if(!asset||asset.id===approvedFilm?.id)return null;return <figure key={item.id}>{asset.kind==='photo'?<Image src={asset.src??''} alt={asset.alt} width={asset.width??1200} height={asset.height??800} unoptimized/>:<button className="gallery-film" onClick={(event)=>openFilm(asset,event.currentTarget)} aria-label={`Play ${item.title}`}><Placeholder variant="film" label={item.title}/><span className="play-glyph" aria-hidden="true">▶</span></button>}<figcaption>{item.title} · {item.season}</figcaption></figure>})}</div>{availableHighlights.every((item)=>!assets.some((asset)=>asset.id===item.assetId&&asset.id!==approvedFilm?.id))&&<p className="gallery-empty">ZEPHYR KREYE / ANNA COYOTES</p>}</div></section>
-  {stats.length > 0 && <section className="scene numbers" id="numbers" aria-labelledby="numbers-title"><div className="numbers-head" data-reveal><p className="eyebrow">PROOF IN THE DETAILS</p><h2 id="numbers-title">NUMBERS<br /><em>THAT MEAN IT.</em></h2><p>Season numbers appear when the full picture is verified.</p></div><div className="numbers-content"><div className="numbers-toolbar"><span>SEASON VIEW</span><label className="select-wrap"><span className="sr-only">Filter statistics by season</span><select value={season} onChange={(event) => setSeason(event.target.value === 'all' ? 'all' : Number(event.target.value))}><option value="all">ALL SEASONS</option>{[...new Set([...stats.map((item) => item.season), ...highlights.map((item) => item.season)])].sort((a,b) => b-a).map((year) => <option value={year} key={year}>{year}</option>)}</select></label></div>{availableStats.length ? <VerifiedStatRows stats={availableStats}/> : <div className="numbers-empty"><span className="empty-dash">—</span><p>NO VERIFIED SEASON DATA YET</p><span>Numbers belong to the full story.<br />This page will grow when the record is ready.</span></div>}</div><span className="scene-edge">NUMBERS <i /> 05 / 08</span></section>}
-  <NextChapter reveal={commitmentReveal} classYear={profileData.classYear}/>
-  <footer className="scene closing" id="closing"><div className="closing-top"><a className="brand" href="#arrival" aria-label="ZK17 home"><BrandLogo className="footer-logo"/></a><p>THE STORY IS STILL BEING WRITTEN.<br />ZEPHYR KREYE · QB1<br />BIGGER STAGE. SAME MINDSET.</p><a className="back-top" href="#arrival">BACK TO TOP</a></div><div className="closing-identity">{closingPhoto&&<ResponsivePhoto item={closingPhoto} className="closing-photo"/>}<div className="closing-wordmark" aria-label="ZK17"><BrandLogo className="closing-logo"/></div></div><div className="closing-bottom"><p>© {new Date().getFullYear()} {profileData.name.toUpperCase()}</p><span>{profileData.location.toUpperCase()} <i /> CLASS OF ’{String(profileData.classYear).slice(-2)}</span></div><ConnectSection socials={socials} nilContact={nilContact}/><div className="closing-future"><a href="/nil-recruiting/">RECRUITING SNAPSHOT</a><span>MORE OF THE STORY</span><span>THE STORY IS STILL BEING WRITTEN. ZEPHYR KREYE · QB1 <i /></span></div></footer>
+  <HomepageChapters profile={profileData} fieldPhoto={previewMediaMode ? ownerFieldPhoto : fieldPhoto?.kind === 'approved' ? fieldPhoto : arrivalPhoto ?? fieldPhoto} personalPhoto={previewMediaMode ? ownerBeyondPhoto : offFieldPhoto} footerPhoto={offFieldPhoto} gallery={[...scenePhotos, ...(previewMediaMode ? previewPhotos : [])].filter((photo,index,items)=>items.findIndex(other=>other.src===photo.src)===index).slice(0,6)} stats={stats} features={features} socials={socials} nilContact={nilContact}/>
+
   </div>
   {filmOpen && <VideoDialog source={selectedFilm?.src ?? null} poster={selectedFilm?.poster} onClose={closeFilm} />}
  </main>;

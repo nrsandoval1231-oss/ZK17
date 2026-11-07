@@ -8,7 +8,7 @@ import styles from './offfield-arcade.module.css';
 const categories = ['Games', 'Movies', 'TV Shows', 'Anime'] as const;
 type Category = (typeof categories)[number];
 
-export default function OffFieldArcade({ features, athleteName }: { features: OffFieldFeature[]; athleteName: string }) {
+export default function OffFieldArcade({ features, athleteName, compact = false }: { features: OffFieldFeature[]; athleteName: string; compact?: boolean }) {
   const [selected, setSelected] = useState<Category>('Games');
   const [started, setStarted] = useState(false);
   const startRef = useRef<HTMLButtonElement>(null);
@@ -38,6 +38,14 @@ export default function OffFieldArcade({ features, athleteName }: { features: Of
       back();
     }
   };
+
+  if (compact) return <div className={styles.compact} id="offfield-personal" onKeyDown={handleKeyDown}>
+    <p className={styles.compactLabel}>PLAYER17 <span>/ HIS PICKS</span></p>
+    <div className={styles.compactChoices} role="group" aria-label="Choose a category">{categories.map(category=><button type="button" key={category} ref={node=>{choiceRefs.current[category]=node;}} aria-expanded={started && selected===category} aria-controls="player17-picks" onClick={()=>openCategory(category,category)}>{category}</button>)}</div>
+    <div id="player17-picks" hidden={!started} className={styles.compactDetails}>
+      {started && <><p>{selected.toUpperCase()} / HIS TOP THREE</p><ol>{details.map(detail=><li key={detail}>{detail}</li>)}</ol><button ref={backRef} type="button" onClick={back} aria-label="BACK TO MENU">BACK</button></>}
+    </div>
+  </div>;
 
   return (
     <section className={styles.arcade} id="offfield-personal" aria-labelledby="arcade-heading" onKeyDown={handleKeyDown}>

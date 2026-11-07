@@ -6,7 +6,7 @@ export type CommitmentAnnouncement = Verification & { rights: 'approved'; school
 export type CommitmentReveal = { mode: 'disabled' } | { mode: 'enabled'; school: string; displayCopy: string; sourceDate: string };
 export type MediaAsset = Verification & { id: string; kind: 'photo' | 'video'; title: string; src: string | null; poster?: string; width?: number; height?: number; alt: string; focalPoint?: string; rights: 'pending' | 'approved' };
 export type Highlight = Verification & { id: string; title: string; season: number; assetId: string; description?: string };
-export type StatLine = Verification & { id: string; label: string; value: number; season: number; gameCount: number };
+export type StatLine = Verification & { id: string; label: string; value: number; season: number; gameCount: number; metric?: 'passing-yards' | 'rushing-yards' | 'passing-td' | 'rushing-td' | 'qb-rating' | 'completion-percent'; scope?: 'season-total'; ratingMethod?: string };
 export type Milestone = Verification & { id: string; date: string; title: string; detail?: string };
 export type Offer = Verification & { id: string; school: string; date: string };
 export type SocialLink = Verification & { id: string; label: string; url: string };
@@ -15,10 +15,27 @@ export type OffFieldFeature = { label: 'Games' | 'Movies' | 'TV Shows' | 'Anime'
 export const profile: PublicProfile = { name: 'Zephyr Kreye', school: 'Anna High School', location: 'Texas', position: 'Quarterback', number: '17', classYear: 2027, commitment: 'UNCOMMITTED' };
 export const media: MediaAsset[] = [{ id: 'zephyr-cinematic', kind: 'video', title: 'Zephyr Kreye — Cinematic Film', src: '/media/zephyr-monochrome-full.mp4', poster: '/media/zephyr-cinematic-poster.webp', alt: 'Cinematic football footage featuring Zephyr Kreye', rights: 'approved', verified: true, published: true, source: 'Owner-supplied video upload', sourceDate: '2026-11-01' }];
 export const highlights: Highlight[] = [];
-export const stats: StatLine[] = [];
+const anna2026MaxPreps = {
+ verified: true, published: true, season: 2026, gameCount: 9, scope: 'season-total' as const,
+ source: 'https://www.maxpreps.com/tx/anna/anna-coyotes/athletes/zephyr-kreye/football/stats/?careerid=ns0up151d9jp9',
+ sourceDate: '2026-11-02',
+};
+export const stats: StatLine[] = [
+ { ...anna2026MaxPreps, id: 'anna-2026-pass-yards', metric: 'passing-yards', label: 'Passing yards', value: 1774 },
+ { ...anna2026MaxPreps, id: 'anna-2026-rush-yards', metric: 'rushing-yards', label: 'Rushing yards', value: 227 },
+ { ...anna2026MaxPreps, id: 'anna-2026-pass-td', metric: 'passing-td', label: 'Passing touchdowns', value: 21 },
+ { ...anna2026MaxPreps, id: 'anna-2026-rush-td', metric: 'rushing-td', label: 'Rushing touchdowns', value: 7 },
+ { ...anna2026MaxPreps, id: 'anna-2026-rating', metric: 'qb-rating', label: 'QB rating', value: 106.4, ratingMethod: 'MaxPreps passer rating' },
+ { ...anna2026MaxPreps, id: 'anna-2026-completion', metric: 'completion-percent', label: 'Completion percentage', value: 64.8 },
+];
 export const milestones: Milestone[] = [{ id: 'anna-hs', date: 'CLASS OF 2027', title: 'Anna High School', verified: true, published: true, source: 'Owner-confirmed profile', sourceDate: '2026-10-25' }];
 export const offers: Offer[] = [];
-export const socials: SocialLink[] = [];
+const ownerSocialProfile = { verified: true, published: true, source: 'Owner-supplied profile link', sourceDate: '2026-11-03' };
+export const socials: SocialLink[] = [
+ { ...ownerSocialProfile, id: 'x', label: 'X', url: 'https://x.com/ZephyrKreye' },
+ { ...ownerSocialProfile, id: 'instagram', label: 'Instagram', url: 'https://www.instagram.com/zephrok/' },
+ { ...ownerSocialProfile, id: 'tiktok', label: 'TikTok', url: 'https://www.tiktok.com/@z_.cry' },
+];
 export const partnerships: Partnership[] = [];
 // Owner-supplied top-three picks, in the supplied order.
 export const offFieldFeatures: OffFieldFeature[] = [

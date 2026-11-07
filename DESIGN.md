@@ -1,38 +1,40 @@
-# ZK17 design direction
-Owner-pinned cinematic editorial world. Experience mode. Black film frames, purple restrained marks, monumental condensed identity, asymmetric type/photographic compositions; soft-white off-field interlude with dark ink. Seven considered structural carriers: athlete campaign, film titles, fashion contact sheet, football field geometry, music sleeve, editorial spread, personal archive. Explicit owner brief fixes the world and overrides concept roll d50f03af; no further concept approval needed. Code-led implementation per owner request to build directly with safe placeholders; no workflow default saved.
-First viewport: generous near-black frame, fixed compact supplied monogram left, sparse navigation right, enormous two-line ZEPHYR KREYE lower-left. Oversized outlined 17 extends through right-side photographic aperture. Small lavender notch/rule and location/class identity anchor the image area. Visible but discreet ORIGINAL PHOTO NEEDED / MEDIA PLACEHOLDER label. No athlete silhouettes or unrelated stock.
-Narrative: Arrival -> full-screen On Field -> Film Room -> bright Off Field with gaming/movies/music, content pending -> expanding Journey -> restrained Numbers empty state -> Next Chapter dramatic message -> monumental closing identity and approved-contact pending status.
-Typography: self-hosted OFL condensed display (Barlow Condensed or equivalent), clean sans body, occasional Georgia italic for editorial connective phrase. Display sizes deliberately oversized per owner's brief, scale clamp on phones. No emoji UI.
-Signature interaction: desktop On Field holds image aperture while large three-part typography crosses frame; Off Field horizontal progression uses real section height and reverts to vertical on mobile. Timeline vertical progress only while scrolling; nextchapter final mark reveal. All content visible without JS; transforms/opacity motion, matchMedia cleanup and reduced-motion static alternative.
-Media: no photo files available. Local CSS/SVG geometric typography is explicitly placeholder identity artwork, never represented as athlete photography. Maintain media manifest with requested aspect/focal/rights. Future images picture AVIF/WebP, explicit dimensions, lazy except hero.
-Mobile: 390 and 412 compositions, giant 17 as backdrop, title in two lines with safe margins, simpler header/menu, vertical natural scene sequence, touch controls >=44px. No pinned horizontal below 900px.
-Controls: strong focus lavender ring, subtle line-based links, native full-screen video dialog only for approved sources, keyboard Escape. Missing film links to honest availability panel, not a dead play button.
-Quality: memory of a premium campaign even before media arrives. Avoid repetitive cards and repeated technical pending paragraphs. Photo placeholders can be large art-directed spaces with compact labels. Future portrait must retain strongest visual role.
+# ZK17 — approved cinematic homepage
 
-## Preview media integration
-Owner authorized photo-area crops for preview only. Arrival uses authentic black-and-white standing #17 portrait, On Field throwing action, closing seated sideline portrait. Clearly visible preview crop/original pending labels; no screenshot interface elements. Replaces abstract media apertures where supplied crops exist. Preserve display-led editorial structure.
-## Direction contract
-THESIS: An athlete identity told through full-screen football photography and oversized names, carrying Anna High School into an open next chapter.
-OWN-WORLD: Obsidian/carbon film frames, restrained signature purple, condensed Barlow typography, clean DM Sans, editorial italic connective phrases, authentic owner media with preview labels.
-STORY: Arrive in Zephyr's identity; enter his football world and film room; move to a lighter personal chapter; trace the confirmed journey; hold unverified numbers; leave the future open; close on ZK17 and professional media/contact availability.
-FIRST VIEWPORT: Zephyr Kreye's name, #17 identity, authentic black-and-white preview portrait, concise school/class information, film/journey actions and discreet scroll invitation. Main content readable before animation.
-FORM: Owner-pinned cinematic editorial brief overrides direction seed d50f03af. Desktop may pin football photography and advance a horizontal personal story; phones use vertical natural scrolling. No copied Lando layouts or assets; no generated athlete.
+The owner-supplied November 3, 2026 mockup is the visual authority for sections 03–06. This is a targeted homepage redesign, not a rebuild. Preserve the existing MAKE THEM REMEMBER Arrival and EVERY SECOND COUNTS experiences, their motion ownership, canonical ZK sword monogram, dedicated routes and verified content gates.
 
-## Canonical identity mark
-The owner-approved supplied ZK sword monogram is the identity mark in navigation, closing art, favicon, and social art. Preserve the exact square composition and use it as the sole ZK17 logo; keep the athlete name and #17 storytelling typography as editorial content, without companion ZK17 wordmarks. See `docs/BRAND.md` for source hash and deterministic asset generation.
+## Six chapters, in order
 
-Transparent logo variants use the exact original JPEG as a self-contained SVG luminance mask; preserve the supplied square framing and negative spaces. Do not trace, redraw, crop, or place a background behind the mark. Where white mark contrast needs support, use the complete carbon archive panel surface.
+1. MAKE THEM REMEMBER — existing cinematic Arrival, unchanged.
+2. EVERY SECOND COUNTS — existing hero and film experience, unchanged.
+3. ON THE FIELD — obsidian, authentic monochrome athlete portrait on the left, large italic editorial serif ON THE / purple FIELD on the right, THE COMPETITOR and ZEPHYR KREYE / QB / #17. Finish with a single four-column statistical strip: TOTAL YARDS, TOTAL TD, QB RATING, COMP %. No embedded highlights, Hudl, Game Film or extra statistics section.
+4. BEYOND 17 — warm ivory editorial spread, authentic personal photograph on the left, black BEYOND / purple 17 on the right, supporting line “Beyond the lights. Beyond the game. Beyond 17.” Compact PLAYER17 categories preserve Games, Movies, TV Shows and Anime, approved rankings, Back/Escape and focus restoration. No duplicated personal introduction, giant cabinet or pinned horizontal rail on the homepage. The reusable full arcade remains available in its component.
+5. FOLLOW THE JOURNEY — dark atmospheric photography rail, editorial white/purple headline and THE STORY CONTINUES. Centered dominant photograph, overlapping receding neighbors, native horizontal swipe and scroll snapping. Keyboard Left/Right/Home/End and accessible 44px pagination. Verified social destinations only; no widgets, counts, decorative arrows or autoplay.
+6. NEXT CHAPTER — dark stadium atmosphere, authentic rear-facing #17 photograph when available, THE STORY IS STILL BEING WRITTEN, canonical sword identity and compact footer with existing recruiting destinations. No commitment announcement.
 
-## Two-worlds extension
-The Off Field scene opens with oversized ON FIELD/OFF FIELD type above full, authentic helmet-on arrival and helmet-off sideline preview photos in a restrained staggered diptych. Keep the faces and uniforms intact, retain preview labels, and do not mirror or synthesize a matching portrait. The cards route into the existing On Field and personal-content sections. The same scene retains its horizontal personal rail. NIL inquiry contact stays null until an owner-approved public representative destination is ready to commit; private pending details never belong in repository files. Approved social links remain individually source-gated.
+The standalone Journey timeline, its anchor, spacers, triggers and homepage styles are removed. Verified milestone records remain in `content/site.ts` for potential future reuse; do not create a Journey page.
 
-## Approved PLAYER17 arcade
-Owner approved the phone-accessible concept public/concepts/player17/off-field-v1.png and requested implementation. Replace the old personal placeholder rail/list with a native interactive CRT arcade, preserving paired authentic portraits, NIL inquiry anchor and the canonical transparent monogram. The large paper intro A DIFFERENT / italic kind of game. precedes a curved carbon display, PLAYER17 pixel title, original fictional stadium art, and real Games/Movies/TV Shows controls. The original generated mockup is a reference, never the user interface.
-Native category buttons open the owner-approved top-three list immediately. Press Start remains a shortcut to the current category; Back/Escape restores focus to the activating control. Typed verifiedDetails retain the supplied ranking. No favorites inferred. No sound or autoplay. Self-hosted Press Start2P under OFL; distributed license in public/licenses/. Separate AVIF/WebP illustration, lazy-loaded with intrinsic dimensions; no generated athlete or likeness.
-Desktop retains positive-travel horizontal intro/CRT storytelling with existing GSAP lifecycle and header-safe pin. Phones and reduced-motion stack naturally. Preserve eight primary scenes and all existing navigation/media/contact gates. See docs/ARCADE.md and docs/ARCADE_ART.json for updates and art provenance.
+## Visual system
 
-## ZEPHYR KREYE arcade title
-The CRT cabinet title comes from the athlete profile and reads ZEPHYR KREYE. Keep the approved original stadium artwork, pixel title, and native Games/Movies/TV Shows buttons. Clicking a category opens its top-three picks directly; Back/Escape restores focus to that category. Press Start remains a shortcut to the current selection. Keep the arcade quiet, phone-accessible, and within the existing scene and scroll behavior.
+Obsidian #09090D and charcoal; warm ivory #eee8df; restrained signature purple and lavender. Self-hosted OFL Bodoni Moda italic supplies the high-contrast editorial serif (Georgia fallback), Barlow Condensed remains the small uppercase campaign labeling, DM Sans remains the body face. Preserve self-hosted licensed fonts and existing brand assets. Photography is the primary visual; no generic cards or generated athlete likenesses.
 
-## Owner-approved refined controls — 2026-11-02
-Editorial text controls use existing condensed display typography, label-fit fine underlines, readable contrast and44px hit areas. Primaryactions use sharp inversecontrastfills; selectedcontrols have an underline, notcoloralone. MENU/CLOSE/PREVIOUS/NEXT/BACK are textonly; no decorativecontrolarrows/chevrons/pointers, butnative mediaicons/dropdownaffordances andHudlcontrols remain. CanonicalZKmark, allcontent/destinations/arcaderetrofont andphotography preserved. Skipintro removed byexplicitownersteering; hero mobilemontage rearrangedsubtly, timingunchanged. Spec/reference .agent/evidence/refined-controls/.
+Canonical identity remains the exact owner-supplied square ZK sword monogram. Do not trace, redraw or add a competing wordmark. See `docs/BRAND.md`.
+
+## Photography and evidence
+
+Existing preview crops remain review-only under PREVIEW_MEDIA_MODE; they retain visible original-pending labels and are never promoted to approved media. Approved scene assignments take precedence. No generated faces, stock athletes, inferred biography or synthetic alterations. The repository currently lacks the mockup’s helmeted throwing portrait, casual lifestyle and smiling lifestyle originals. Use authentic existing football and sideline photography for review and disclose the mismatch. Rear-facing review photography already exists in the director’s-cut assets.
+
+Statistics use the explicit 2026 season adapter in `content/homepage-stats.ts`. Passing and rushing components must be verified complete-season totals for the same season/game count, with exactly one record per metric. Never sum an already-aggregated total with a component. QB rating requires the source’s named calculation; do not infer or convert rating systems. Unverified values show an em dash with NOT YET VERIFIED. No mockup numbers. Current verified stats and social profiles are empty.
+
+## Motion, responsive and accessibility
+
+Natural vertical flow throughout chapters 03–06. Preserve opening GSAP behavior, but no field pin, timeline motion or personal rail pin. Reuse existing atmospheric smoke artwork with bounded transforms and opacity; no continuous animations. Carousel uses native scroll, never cancels vertical touch gestures; reduced motion removes depth transitions and uses instant selection. No forced smooth scrolling in reduced motion.
+
+At 375/390/430px, stack field photography and typography, render 2×2 statistics, stack Beyond imagery and introduction, and show adjacent carousel photos. At 768/1024px retain deliberate split compositions when readable; desktop mirrors mockup proportions. Respect subject visibility, readable labels, intrinsic image dimensions and no horizontal document overflow. Preserve accessible menus, visible focus, semantic headings and touch targets >=44px.
+
+## Review
+
+Typecheck, lint, production export, unit/content tests, browser route/interaction checks, responsive captures and WebKit/reduced-motion verification precede handoff. Screenshots and statistics notes accompany the feature PR. No merge or deployment before owner review. Asset omissions and physical iPhone limitations must be stated honestly.
+
+## Owner-selected identity footer — November 3
+
+Replace the compact footer with the supplied dark identity-footer reference: small sword at upper left, the three-line story / ZEPHYR KREYE · QB1 / BIGGER STAGE statement centered, prominent underlined BACK TO TOP at upper right, monumental canonical sword on the left and authentic monochrome sideline portrait on the right. Thin horizontal rules frame the copyright baseline; approved recruiting/contact links remain quiet at the bottom. This belongs to the existing closing/footer experience, not a seventh chapter. Phones stack the monumental mark and portrait with readable statement and 44px targets. Retain photo approval/preview gates.

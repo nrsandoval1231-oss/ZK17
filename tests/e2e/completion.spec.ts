@@ -28,8 +28,11 @@ test('pending film deep link remains closable while approved film uses native co
  await expect(page).toHaveURL(/#film-room$/);
  await page.goto('/#film-room');
  await expect(page.locator('.site-header')).toBeVisible();
+ if(!await page.evaluate(()=>matchMedia('(prefers-reduced-motion: reduce)').matches)) await expect(page.locator('#arrival')).toHaveAttribute('data-arrival-motion','ready');
+ await page.evaluate(()=>new Promise<void>(resolve=>requestAnimationFrame(()=>requestAnimationFrame(()=>resolve()))));
  await page.emulateMedia({reducedMotion:'reduce'});
- await expect(page.locator('.pin-spacer')).toHaveCount(0);
+ // Software-rendered WebKit can deliver media-query cleanup after its video frame settles.
+ await expect(page.locator('.pin-spacer')).toHaveCount(0,{timeout:15000});
  await expect(page.getByRole('button',{name:'WATCH THE FILM',exact:true})).toHaveCount(0);
  await page.goto('/#film=zephyr-cinematic');
  const dialog=page.getByRole('dialog',{name:'Film room'});
@@ -39,7 +42,7 @@ test('pending film deep link remains closable while approved film uses native co
  await expect(dialog).toHaveCount(0);
 });
 
-test('scrolling releases the field pin and responsive motion leaves a readable document',async({page})=>{
+test('scrolling past the field and responsive motion leave a readable document',async({page})=>{
  await page.goto('/');
  await page.evaluate(()=>document.fonts.ready);
  await page.locator('#on-field').scrollIntoViewIfNeeded();
@@ -49,7 +52,7 @@ test('scrolling releases the field pin and responsive motion leaves a readable d
  await expect(page.locator('.pin-spacer')).toHaveCount(0);
  for(const width of [320,390,768,1440]){
   await page.setViewportSize({width,height:844});
-  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  }
  await expect(page.locator('#field-title')).toHaveCSS('opacity','1');
 });
