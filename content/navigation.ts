@@ -1,6 +1,5 @@
 export const navigationDestinations = [
   ['/', 'HOME'],
-  ['/film/', 'FILM'],
   ['/highlights/', 'HIGHLIGHTS'],
   ['/playoffs/', 'PLAYOFFS'],
   ['/about/', 'ABOUT'],
