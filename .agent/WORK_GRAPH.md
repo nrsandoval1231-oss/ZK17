@@ -42,3 +42,5 @@ ZK-HIGHLIGHTS-PAGE [LOCAL VERIFIED]: dedicatedroute/sharednav+restoredhomepageap
 ZK-REFINED-CONTROLS [LOCAL VERIFIED]: approvednoarrows/editorialcontrols+minorherorearrange+Skipremoval.213browserpass7conditionalskips62unit/buildlinttypepass. Protectedcontent/lib/assets/packageunchanged. QA docs/REFINED_CONTROLS_QA.md. Finalcriticidentity/PR11/DEVdeliverynext;no mergeproduction.
 
 ZK-REFINED-CONTROLS [PR11 / DEV DELIVERED]: b655db03 immutable/6846005 deployed.213browserpass7existingskips62unit/buildlinttype;independentAstraready. RemotecontrolsCSSbyteproofandHudl pass. No merge/production.
+
+ZK-HERO-MONTAGE [RELEASE PR / BUILD PASS / ASTRA ACCEPT]: `.agent/PACKET-HERO-MONTAGE.md`; dev preview `https://fcc73554.zk17-review.pages.dev`. Public release preflight/export audit and independent Astra review pass. Cloudflare production branch verified as `main`, production build configured for release gates and video-range worker. Fresh PR, merge, and live verification pending.

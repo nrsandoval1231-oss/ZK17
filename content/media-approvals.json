@@ -394,6 +394,87 @@
       "outputSha256": {
         "/media/beyond-17-owner.webp": "1b6da3c76f64202d2b151a3b6fde84e6cec9cdb323625911257f66905106a6e5"
       }
+    },
+    {
+      "sourceSha256": "85c745b32e386a3418f8ed8e86d8d2e55d74b6bb67f57f1827b53cd2de0bb87e",
+      "outputPaths": ["/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-4.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-4.jpg": "85c745b32e386a3418f8ed8e86d8d2e55d74b6bb67f57f1827b53cd2de0bb87e"}
+    },
+    {
+      "sourceSha256": "af99fdd28c9e8a6c4297b2c82277590fddd9679676cf5e685962aab638944dd6",
+      "outputPaths": ["/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-5.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-5.jpg": "af99fdd28c9e8a6c4297b2c82277590fddd9679676cf5e685962aab638944dd6"}
+    },
+    {
+      "sourceSha256": "a310f61fa41a9cca8680267b92d98208de0322d1f0e9e03cb4f611d7c69513bf",
+      "outputPaths": ["/media/arrival-montage/2026-09-13_instagram_DdPP_jJm_6P-2.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-09-13_instagram_DdPP_jJm_6P-2.jpg": "a310f61fa41a9cca8680267b92d98208de0322d1f0e9e03cb4f611d7c69513bf"}
+    },
+    {
+      "sourceSha256": "7f1ec216f68b8acdce637e6f47b52a19a5531ea330ea8ddf94b8ec6f12864b7e",
+      "outputPaths": ["/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-1.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-1.jpg": "7f1ec216f68b8acdce637e6f47b52a19a5531ea330ea8ddf94b8ec6f12864b7e"}
+    },
+    {
+      "sourceSha256": "8b307209727926e073214ee40b29e007f10e104a5ffd75ed4ae5611dfd12dfb1",
+      "outputPaths": ["/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-3.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-3.jpg": "8b307209727926e073214ee40b29e007f10e104a5ffd75ed4ae5611dfd12dfb1"}
+    },
+    {
+      "sourceSha256": "df18d1443f532b7025606cd834d028a516c2fe6d190cb7b66ecf397ce95a0769",
+      "outputPaths": ["/media/arrival-montage/2026-10-06_instagram_DeIdiOjDl_s-4.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-10-06_instagram_DeIdiOjDl_s-4.jpg": "df18d1443f532b7025606cd834d028a516c2fe6d190cb7b66ecf397ce95a0769"}
+    },
+    {
+      "sourceSha256": "23d443888e43bbdbd8192d59c9e883b842ab4075b07f3b8dd60b14f2c52425c9",
+      "outputPaths": ["/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-1.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-1.jpg": "23d443888e43bbdbd8192d59c9e883b842ab4075b07f3b8dd60b14f2c52425c9"}
+    },
+    {
+      "sourceSha256": "952e2fcac178bac93e818c37c21f890c803de849ae77510ca4e095591eecd21d",
+      "outputPaths": ["/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-3.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-3.jpg": "952e2fcac178bac93e818c37c21f890c803de849ae77510ca4e095591eecd21d"}
+    },
+    {
+      "sourceSha256": "0cdd37764a1acebddcdc552a038ad57d13ca3baf6bd66ecd5cf10447cd45c30f",
+      "outputPaths": ["/media/arrival-montage/2026-10-26_instagram_De9-EMzm1tD-2.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-10-26_instagram_De9-EMzm1tD-2.jpg": "0cdd37764a1acebddcdc552a038ad57d13ca3baf6bd66ecd5cf10447cd45c30f"}
     }
   ]
 }

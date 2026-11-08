@@ -37,8 +37,9 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       const beams = lights.querySelectorAll<HTMLElement>('[data-arrival-beam]');
       const smokeBack = layer('smoke-back')!;
       const smokeFront = layer('smoke-front')!;
-      const photoNames = ['athlete', 'closeup', 'rear', 'white', 'running', 'color-action-glow', 'color-action'];
+      const photoNames = ['athlete', 'closeup', 'rear', 'white', 'running', 'color-action-glow', 'color-action', ...Array.from({ length: 9 }, (_, index) => `montage-${String(index + 1).padStart(2, '0')}`)];
       const photos = photoNames.map(name => layer(name)).filter((item): item is HTMLElement => Boolean(item));
+      const extraMontage = photoNames.filter(name => name.startsWith('montage-')).map(layer).filter((item): item is HTMLElement => Boolean(item));
       const coldLogo = layer('cold-logo');
       const stadium = layer('stadium');
       const stadiumColor = layer('stadium-color');
@@ -96,10 +97,11 @@ export function useArrivalHeroMotion(root: RefObject<HTMLElement | null>) {
       };
       reveal('athlete', .40, .09, .4, 1.01);
       reveal('athlete', .49, .09, 1, 1);
-      reveal('closeup', .57, .09, .72, 1);
-      reveal('rear', .64, .09, .72, 1);
-      reveal('white', .70, .09, .72, 1);
-      reveal('running', .76, .09, .72, 1);
+      reveal('closeup', .57, .09, .38, 1);
+      reveal('rear', .64, .09, .36, 1);
+      reveal('white', .70, .09, .36, 1);
+      timeline.to(extraMontage, { opacity: .29, scale: 1, duration: .05, stagger: .01 }, .70);
+      reveal('running', .76, .09, .4, 1);
       reveal('color-action-glow', .82, .07, .55, 1.04);
       reveal('color-action', .82, .07, .9, 1);
       timeline.to([copy, ...details], { autoAlpha: 1, duration: .08 }, .86)

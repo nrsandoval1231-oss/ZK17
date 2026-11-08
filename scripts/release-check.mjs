@@ -18,6 +18,17 @@ if (publicRelease) {
     '/media/zephyr-color-action.webp',
     '/media/on-field-owner-2026-10-16.jpg',
     '/media/beyond-17-owner.webp',
+    ...[
+      '2026-08-30_instagram_DcrQ0a7GzXN-4.jpg',
+      '2026-08-30_instagram_DcrQ0a7GzXN-5.jpg',
+      '2026-09-13_instagram_DdPP_jJm_6P-2.jpg',
+      '2026-09-28_instagram_Dd2BzvLm11i-1.jpg',
+      '2026-09-28_instagram_Dd2BzvLm11i-3.jpg',
+      '2026-10-06_instagram_DeIdiOjDl_s-4.jpg',
+      '2026-10-11_instagram_DeXXLOBG2zQ-1.jpg',
+      '2026-10-11_instagram_DeXXLOBG2zQ-3.jpg',
+      '2026-10-26_instagram_De9-EMzm1tD-2.jpg',
+    ].map((name) => `/media/arrival-montage/${name}`),
   ]);
   const sources = new Map();
   for (const entry of manifests.flat()) {
