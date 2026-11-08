@@ -4,7 +4,7 @@ import {preload} from 'react-dom';
 import gameFilmAssignments from '@/content/playoffs/game-films.json';
 import {publicGameFilms,type GameFilmAssignment} from '@/lib/playoffs/highlights';
 import PlayoffsExperience from '@/components/playoffs/playoffs-experience';
-import {getTournament,verification} from '@/content/playoffs';
+import {getTournament,verification,seasonSummary} from '@/content/playoffs';
 import {media,scenePhotoAssignments,previewPhotos,publicScenePhotos} from '@/content/site';
 import {resolveScenePhoto} from '@/content/scene-photo-selection';
 const canonical=(()=>{try{const url=new URL(process.env.SITE_URL??'https://zephyrkreye.com');return url.protocol==='https:'&&!/(example|localhost|127\.0\.0\.1)/i.test(url.hostname)?`${url.origin}/playoffs/`:undefined;}catch{return undefined;}})();
@@ -17,5 +17,5 @@ export default function PlayoffsPage(){
   const base=photo.src.replace(/-706\.webp$/,'');
   preload(`${base}-706.avif`,{as:'image',type:'image/avif',imageSrcSet:`${base}-360.avif 360w, ${base}-540.avif 540w, ${base}-706.avif 706w`,imageSizes:'(max-width:700px) 75vw, 50vw',fetchPriority:'high'});
  }else if(photo)preload(photo.src,{as:'image',fetchPriority:'high'});
- return <><RouteHeader /><PlayoffsExperience tournament={tournament} films={films} checkedAt={verification.checkedAt} verificationScope={verification.scope} photo={photo??null}/></>;
+ return <><RouteHeader /><PlayoffsExperience tournament={tournament} films={films} checkedAt={verification.checkedAt} verificationScope={verification.scope} seasonSummary={seasonSummary} photo={photo??null}/></>;
 }

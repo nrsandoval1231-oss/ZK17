@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "season": 2026,
   "division": "5A-DII",
-  "checkedAt": "2026-11-01T03:47:20.741058Z",
-  "verificationScope": "Anna alignment and UIL tournament structure only; no 2026 playoff matchup or result has been verified.",
+  "checkedAt": "2026-11-08T03:23:48.250Z",
+  "verificationScope": "Source-backed game updates, Anna alignment and UIL bracket structure; check individual game sources and timestamps.",
   "sources": [
     {
       "id": "uil-alignment",
-      "label": "UIL 2026\u201328 5A Division II alignment",
+      "label": "UIL 2026–28 5A Division II alignment",
       "url": "https://realignment.uiltexas.org/alignments/2026/5AD2FB2026.pdf",
       "authority": "uil",
       "season": 2026,
@@ -15,7 +15,7 @@
     },
     {
       "id": "uil-structure",
-      "label": "UIL 2026 blank football bracket \u00b7 2A\u20135A D1/D2",
+      "label": "UIL 2026 blank football bracket · 2A–5A D1/D2",
       "url": "https://realignment.uiltexas.org/alignments/2026/FB_BB_VB_Blank_Brackets.pdf",
       "authority": "uil",
       "season": 2026,
@@ -36,6 +36,56 @@
       "authority": "school",
       "season": 2026,
       "retrievedAt": "2026-11-01T03:44:54.093Z"
+    },
+    {
+      "id": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+      "label": "UIL-linked MaxPreps 2026 5A D2 bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-08T03:23:16.477Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "6543066c6e547e4a0cc8eed3f6279b35ce8c16df328211e00ef6034edf7ab8b0"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "d788e23c6b1fd0c01b67492d59de68bb60d15f573cf79106c770a5d601905a57"
+        }
+      ]
+    },
+    {
+      "season": 2026,
+      "evidence": [
+        {
+          "sha256": "725876faad4cc93a22bc2af8ebbde056cd0838d9f2014511f56410fabd8cac3a",
+          "url": "https://www.maxpreps.com/tx/anna/anna-coyotes/football/schedule/"
+        }
+      ],
+      "authority": "secondary",
+      "id": "anna-maxpreps-schedule",
+      "url": "https://www.maxpreps.com/tx/anna/anna-coyotes/football/schedule/",
+      "retrievedAt": "2026-11-08T03:23:46.779Z",
+      "label": "Anna Coyotes 2026–27 schedule and season record"
+    },
+    {
+      "season": 2026,
+      "evidence": [
+        {
+          "sha256": "2c4ea267d69388ea2b60eeac990a7bdaa36a9e965613d37107fbe3fa4d97a54a",
+          "url": "https://www.maxpreps.com/tx/football/game/anna-vs-the-colony/11-13-2026/?c=4514c2fd-fae6-40a6-bec7-62dfa191696f"
+        },
+        {
+          "sha256": "f33d1ee3de536c1996d65486419b20e90b58cb737459d342d7af6e0563441029",
+          "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule"
+        }
+      ],
+      "authority": "secondary",
+      "id": "anna-colony-game",
+      "url": "https://www.maxpreps.com/tx/football/game/anna-vs-the-colony/11-13-2026/?c=4514c2fd-fae6-40a6-bec7-62dfa191696f",
+      "retrievedAt": "2026-11-08T03:23:48.250Z",
+      "label": "Anna vs The Colony playoff game details"
     }
   ],
   "teams": [
@@ -44,12 +94,1022 @@
       "name": "Anna Coyotes",
       "aliases": [
         "Anna",
-        "Anna High School"
+        "Anna High School",
+        "maxpreps:eb6bb436-fdd0-4583-9ac0-5f086e8761ae"
       ],
       "district": 4,
       "region": 1,
       "logo": null
+    },
+    {
+      "id": "mp-b53ed77b-e4f4-4174-966a-84cfcf5aeac6",
+      "name": "Chapin",
+      "aliases": [
+        "maxpreps:b53ed77b-e4f4-4174-966a-84cfcf5aeac6"
+      ],
+      "district": 1,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-95c592de-1bf7-4ab3-972a-08e8aa86a958",
+      "name": "Legacy",
+      "aliases": [
+        "maxpreps:95c592de-1bf7-4ab3-972a-08e8aa86a958"
+      ],
+      "district": 2,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-8d12a56a-c035-4930-a126-8d144076b8d0",
+      "name": "Frisco",
+      "aliases": [
+        "maxpreps:8d12a56a-c035-4930-a126-8d144076b8d0"
+      ],
+      "district": 4,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-cd55b9aa-23e9-4239-9ea9-2fda68706dea",
+      "name": "Colleyville Heritage",
+      "aliases": [
+        "maxpreps:cd55b9aa-23e9-4239-9ea9-2fda68706dea"
+      ],
+      "district": 3,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-7c4c5c93-8816-4135-ad85-dab4b8583891",
+      "name": "Palo Duro",
+      "aliases": [
+        "maxpreps:7c4c5c93-8816-4135-ad85-dab4b8583891"
+      ],
+      "district": 2,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-540b1cdb-27ed-462a-bf27-5b8d8dd51d11",
+      "name": "Burges",
+      "aliases": [
+        "maxpreps:540b1cdb-27ed-462a-bf27-5b8d8dd51d11"
+      ],
+      "district": 1,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-761e1afd-d386-4edd-a4ef-5e4f79d1fbf0",
+      "name": "Lovejoy",
+      "aliases": [
+        "maxpreps:761e1afd-d386-4edd-a4ef-5e4f79d1fbf0"
+      ],
+      "district": 3,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-a779a2c9-df77-4d6f-a04e-dfc380fe0f70",
+      "name": "Celina",
+      "aliases": [
+        "maxpreps:a779a2c9-df77-4d6f-a04e-dfc380fe0f70"
+      ],
+      "district": 4,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-c45343b8-f2c8-410d-b896-66d3aeea5851",
+      "name": "Argyle",
+      "aliases": [
+        "maxpreps:c45343b8-f2c8-410d-b896-66d3aeea5851"
+      ],
+      "district": 3,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-ba4ec0a4-7fa6-473e-967b-7a68ca169609",
+      "name": "Panther Creek",
+      "aliases": [
+        "maxpreps:ba4ec0a4-7fa6-473e-967b-7a68ca169609"
+      ],
+      "district": 4,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-e4827d31-9641-4195-a2c3-dd69ad7aaa62",
+      "name": "Wylie",
+      "aliases": [
+        "maxpreps:e4827d31-9641-4195-a2c3-dd69ad7aaa62"
+      ],
+      "district": 2,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-edfaac0b-2ecb-491b-876f-48bde40b9d46",
+      "name": "Del Valle",
+      "aliases": [
+        "maxpreps:edfaac0b-2ecb-491b-876f-48bde40b9d46"
+      ],
+      "district": 1,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-15f74e18-a4b1-451a-92aa-d022ed36204d",
+      "name": "The Colony",
+      "aliases": [
+        "maxpreps:15f74e18-a4b1-451a-92aa-d022ed36204d"
+      ],
+      "district": 3,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-b4713352-a2cb-4bfe-949a-edbe500f9b29",
+      "name": "Canutillo",
+      "aliases": [
+        "maxpreps:b4713352-a2cb-4bfe-949a-edbe500f9b29"
+      ],
+      "district": 1,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-55e7ef00-811a-40df-b9f5-845fbdd07fe4",
+      "name": "Cooper",
+      "aliases": [
+        "maxpreps:55e7ef00-811a-40df-b9f5-845fbdd07fe4"
+      ],
+      "district": 2,
+      "region": 1,
+      "logo": null
+    },
+    {
+      "id": "mp-6bb655cf-3020-4ea8-a2c7-c35800ec1953",
+      "name": "Whitehouse",
+      "aliases": [
+        "maxpreps:6bb655cf-3020-4ea8-a2c7-c35800ec1953"
+      ],
+      "district": 6,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-24c7e91a-f7e6-4bd1-90ba-7caaba91302f",
+      "name": "Belton",
+      "aliases": [
+        "maxpreps:24c7e91a-f7e6-4bd1-90ba-7caaba91302f"
+      ],
+      "district": 8,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-916f5473-8238-4ead-8744-be9467f8a75b",
+      "name": "Ennis",
+      "aliases": [
+        "maxpreps:916f5473-8238-4ead-8744-be9467f8a75b"
+      ],
+      "district": 7,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-b1970802-ad92-4d06-9f15-b9c99cc842da",
+      "name": "Terrell",
+      "aliases": [
+        "maxpreps:b1970802-ad92-4d06-9f15-b9c99cc842da"
+      ],
+      "district": 6,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-3d69ea74-957b-45f9-b53f-6cdbe454ed46",
+      "name": "Midlothian Heritage",
+      "aliases": [
+        "maxpreps:3d69ea74-957b-45f9-b53f-6cdbe454ed46"
+      ],
+      "district": 7,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-33b9aee3-e54b-42da-aac1-1464b6adc2c1",
+      "name": "Ellison",
+      "aliases": [
+        "maxpreps:33b9aee3-e54b-42da-aac1-1464b6adc2c1"
+      ],
+      "district": 8,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-ea5d461e-e9e0-483b-82a5-a4277a220dd2",
+      "name": "Mansfield Timberview",
+      "aliases": [
+        "maxpreps:ea5d461e-e9e0-483b-82a5-a4277a220dd2"
+      ],
+      "district": 7,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-447ed459-9d40-4224-aa74-346172f1cbdf",
+      "name": "Waco",
+      "aliases": [
+        "maxpreps:447ed459-9d40-4224-aa74-346172f1cbdf"
+      ],
+      "district": 8,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-8c113220-90fe-4ef8-b458-8c0629d620f4",
+      "name": "Texas",
+      "aliases": [
+        "maxpreps:8c113220-90fe-4ef8-b458-8c0629d620f4"
+      ],
+      "district": 6,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-4da31f19-c07f-423f-861d-c4a8cce51b10",
+      "name": "Brenham",
+      "aliases": [
+        "maxpreps:4da31f19-c07f-423f-861d-c4a8cce51b10"
+      ],
+      "district": 8,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-ec178cdb-f1c4-47c2-99a6-a07cee853fb7",
+      "name": "Seguin",
+      "aliases": [
+        "maxpreps:ec178cdb-f1c4-47c2-99a6-a07cee853fb7"
+      ],
+      "district": 7,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-33cebbc7-67f6-4c66-8fd1-b12f7c1bf72f",
+      "name": "Hallsville",
+      "aliases": [
+        "maxpreps:33cebbc7-67f6-4c66-8fd1-b12f7c1bf72f"
+      ],
+      "district": 6,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-d60711a7-4a6a-4134-9834-2dc509231682",
+      "name": "Montgomery",
+      "aliases": [
+        "maxpreps:d60711a7-4a6a-4134-9834-2dc509231682"
+      ],
+      "district": 9,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-c4980880-125a-4471-9a81-f5e14acf31c2",
+      "name": "Dayton",
+      "aliases": [
+        "maxpreps:c4980880-125a-4471-9a81-f5e14acf31c2"
+      ],
+      "district": 10,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-47648dd4-12ea-4e97-bb1f-53394bf9194e",
+      "name": "Pflugerville",
+      "aliases": [
+        "maxpreps:47648dd4-12ea-4e97-bb1f-53394bf9194e"
+      ],
+      "district": 12,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-36804062-1b76-4407-bfb2-611987cd826c",
+      "name": "Tomas",
+      "aliases": [
+        "maxpreps:36804062-1b76-4407-bfb2-611987cd826c"
+      ],
+      "district": 11,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-d45fe67b-132a-4902-bb2e-9a113e25b37a",
+      "name": "Port Neches-Groves",
+      "aliases": [
+        "maxpreps:d45fe67b-132a-4902-bb2e-9a113e25b37a"
+      ],
+      "district": 10,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-53835be8-1d03-4059-9a09-49e88f682a96",
+      "name": "West Fork",
+      "aliases": [
+        "maxpreps:53835be8-1d03-4059-9a09-49e88f682a96"
+      ],
+      "district": 9,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-d4c6bc64-6f30-403d-9828-cc38b55d8e3c",
+      "name": "Fort Bend Marshall",
+      "aliases": [
+        "maxpreps:d4c6bc64-6f30-403d-9828-cc38b55d8e3c"
+      ],
+      "district": 11,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-ce1be5f2-e5ed-4073-9a2c-a67ad8f13db3",
+      "name": "Crockett",
+      "aliases": [
+        "maxpreps:ce1be5f2-e5ed-4073-9a2c-a67ad8f13db3"
+      ],
+      "district": 12,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-afa276f8-84eb-4fcd-b785-18420afd50f4",
+      "name": "Almeta Crawford",
+      "aliases": [
+        "maxpreps:afa276f8-84eb-4fcd-b785-18420afd50f4"
+      ],
+      "district": 11,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-86d83ae5-2f4e-40ff-a034-cb2112387588",
+      "name": "Elgin",
+      "aliases": [
+        "maxpreps:86d83ae5-2f4e-40ff-a034-cb2112387588"
+      ],
+      "district": 12,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-850020a1-7635-40fc-bfc8-f7c77d95c019",
+      "name": "Texas City",
+      "aliases": [
+        "maxpreps:850020a1-7635-40fc-bfc8-f7c77d95c019"
+      ],
+      "district": 10,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-49cc3751-aa79-424a-8036-42593c70617b",
+      "name": "Lake Creek",
+      "aliases": [
+        "maxpreps:49cc3751-aa79-424a-8036-42593c70617b"
+      ],
+      "district": 9,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-a03335a4-e848-4fad-bc6c-0a47216b2170",
+      "name": "Bastrop",
+      "aliases": [
+        "maxpreps:a03335a4-e848-4fad-bc6c-0a47216b2170"
+      ],
+      "district": 12,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-c2500760-c49e-4ee7-9393-b35a418ea142",
+      "name": "Victoria West",
+      "aliases": [
+        "maxpreps:c2500760-c49e-4ee7-9393-b35a418ea142"
+      ],
+      "district": 11,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-db96ef3f-9d7c-40c0-89ca-fe8b11a73af1",
+      "name": "Huntsville",
+      "aliases": [
+        "maxpreps:db96ef3f-9d7c-40c0-89ca-fe8b11a73af1"
+      ],
+      "district": 9,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-4a31a92c-1004-4ba0-bb9e-f9c4d026dafe",
+      "name": "Nederland",
+      "aliases": [
+        "maxpreps:4a31a92c-1004-4ba0-bb9e-f9c4d026dafe"
+      ],
+      "district": 10,
+      "region": 3,
+      "logo": null
+    },
+    {
+      "id": "mp-db2da669-ae13-4f7e-8523-3be0b32b053f",
+      "name": "Brackenridge",
+      "aliases": [
+        "maxpreps:db2da669-ae13-4f7e-8523-3be0b32b053f"
+      ],
+      "district": 14,
+      "region": 4,
+      "logo": null
+    },
+    {
+      "id": "mp-c8567519-b7b4-44bc-85f6-354242d6bdc8",
+      "name": "Mission Veterans Memorial",
+      "aliases": [
+        "maxpreps:c8567519-b7b4-44bc-85f6-354242d6bdc8"
+      ],
+      "district": 16,
+      "region": 4,
+      "logo": null
+    },
+    {
+      "id": "mp-ccd24da9-93e6-4dad-aeb3-dd9f95dbae74",
+      "name": "Mercedes",
+      "aliases": [
+        "maxpreps:ccd24da9-93e6-4dad-aeb3-dd9f95dbae74"
+      ],
+      "district": 15,
+      "region": 4,
+      "logo": null
+    },
+    {
+      "id": "mp-3de0639a-f7a5-4e1a-8c89-e0d0d0b58258",
+      "name": "Sam Houston",
+      "aliases": [
+        "maxpreps:3de0639a-f7a5-4e1a-8c89-e0d0d0b58258"
+      ],
+      "district": 14,
+      "region": 4,
+      "logo": null
+    },
+    {
+      "id": "mp-e74bd9fa-ed90-439d-9341-a60fb50fa7d3",
+      "name": "Ray",
+      "aliases": [
+        "maxpreps:e74bd9fa-ed90-439d-9341-a60fb50fa7d3"
+      ],
+      "district": 15,
+      "region": 4,
+      "logo": null
+    },
+    {
+      "id": "mp-7cc2d2e1-46c5-4d84-9755-b487b95399d8",
+      "name": "Cigarroa",
+      "aliases": [
+        "maxpreps:7cc2d2e1-46c5-4d84-9755-b487b95399d8"
+      ],
+      "district": 16,
+      "region": 4,
+      "logo": null
+    },
+    {
+      "id": "mp-2a824672-6cae-43ea-b82a-4a5d22711881",
+      "name": "Gregory-Portland",
+      "aliases": [
+        "maxpreps:2a824672-6cae-43ea-b82a-4a5d22711881"
+      ],
+      "district": 15,
+      "region": 4,
+      "logo": null
+    },
+    {
+      "id": "mp-90b59be3-7150-4b68-a1fa-3fefe4b13fd1",
+      "name": "Pioneer",
+      "aliases": [
+        "maxpreps:90b59be3-7150-4b68-a1fa-3fefe4b13fd1"
+      ],
+      "district": 16,
+      "region": 4,
+      "logo": null
+    },
+    {
+      "id": "mp-3bb9ad06-2f84-4302-974c-23488996eaaa",
+      "name": "Harlandale",
+      "aliases": [
+        "maxpreps:3bb9ad06-2f84-4302-974c-23488996eaaa"
+      ],
+      "district": 14,
+      "region": 4,
+      "logo": null
+    },
+    {
+      "id": "mp-aab923b5-b024-432d-a17e-c5e8fbddfd9d",
+      "name": "Sharyland",
+      "aliases": [
+        "maxpreps:aab923b5-b024-432d-a17e-c5e8fbddfd9d"
+      ],
+      "district": 16,
+      "region": 4,
+      "logo": null
+    },
+    {
+      "id": "mp-20bda3c3-1551-48dc-a607-e86f798d1556",
+      "name": "Pace",
+      "aliases": [
+        "maxpreps:20bda3c3-1551-48dc-a607-e86f798d1556"
+      ],
+      "district": 15,
+      "region": 4,
+      "logo": null
+    },
+    {
+      "id": "mp-8e64dd04-89dc-4482-8462-afae6d94626e",
+      "name": "McCollum",
+      "aliases": [
+        "maxpreps:8e64dd04-89dc-4482-8462-afae6d94626e"
+      ],
+      "district": 14,
+      "region": 4,
+      "logo": null
     }
   ],
-  "observations": []
+  "observations": [
+    {
+      "gameId": "r1-bi-1",
+      "homeTeamId": "mp-b53ed77b-e4f4-4174-966a-84cfcf5aeac6",
+      "awayTeamId": "mp-95c592de-1bf7-4ab3-972a-08e8aa86a958",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-2",
+      "homeTeamId": "mp-8d12a56a-c035-4930-a126-8d144076b8d0",
+      "awayTeamId": "mp-cd55b9aa-23e9-4239-9ea9-2fda68706dea",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-3",
+      "homeTeamId": "mp-7c4c5c93-8816-4135-ad85-dab4b8583891",
+      "awayTeamId": "mp-540b1cdb-27ed-462a-bf27-5b8d8dd51d11",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-4",
+      "homeTeamId": "mp-761e1afd-d386-4edd-a4ef-5e4f79d1fbf0",
+      "awayTeamId": "mp-a779a2c9-df77-4d6f-a04e-dfc380fe0f70",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-5",
+      "homeTeamId": "mp-c45343b8-f2c8-410d-b896-66d3aeea5851",
+      "awayTeamId": "mp-ba4ec0a4-7fa6-473e-967b-7a68ca169609",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-6",
+      "homeTeamId": "mp-e4827d31-9641-4195-a2c3-dd69ad7aaa62",
+      "awayTeamId": "mp-edfaac0b-2ecb-491b-876f-48bde40b9d46",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-7",
+      "homeTeamId": "anna",
+      "awayTeamId": "mp-15f74e18-a4b1-451a-92aa-d022ed36204d",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:30:00+00:00",
+      "venue": "Coyote Stadium",
+      "sourceId": "anna-colony-game",
+      "verifiedAt": "2026-11-08T03:23:48.250Z",
+      "reviewedBy": "manual-review:MaxPreps game detail and Anna official schedule"
+    },
+    {
+      "gameId": "r1-bi-8",
+      "homeTeamId": "mp-b4713352-a2cb-4bfe-949a-edbe500f9b29",
+      "awayTeamId": "mp-55e7ef00-811a-40df-b9f5-845fbdd07fe4",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-1",
+      "homeTeamId": null,
+      "awayTeamId": "mp-6bb655cf-3020-4ea8-a2c7-c35800ec1953",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-2",
+      "homeTeamId": "mp-24c7e91a-f7e6-4bd1-90ba-7caaba91302f",
+      "awayTeamId": "mp-916f5473-8238-4ead-8744-be9467f8a75b",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-3",
+      "homeTeamId": "mp-b1970802-ad92-4d06-9f15-b9c99cc842da",
+      "awayTeamId": null,
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-4",
+      "homeTeamId": "mp-3d69ea74-957b-45f9-b53f-6cdbe454ed46",
+      "awayTeamId": "mp-33b9aee3-e54b-42da-aac1-1464b6adc2c1",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-5",
+      "homeTeamId": "mp-ea5d461e-e9e0-483b-82a5-a4277a220dd2",
+      "awayTeamId": "mp-447ed459-9d40-4224-aa74-346172f1cbdf",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-6",
+      "homeTeamId": "mp-8c113220-90fe-4ef8-b458-8c0629d620f4",
+      "awayTeamId": null,
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-7",
+      "homeTeamId": "mp-4da31f19-c07f-423f-861d-c4a8cce51b10",
+      "awayTeamId": "mp-ec178cdb-f1c4-47c2-99a6-a07cee853fb7",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-8",
+      "homeTeamId": null,
+      "awayTeamId": "mp-33cebbc7-67f6-4c66-8fd1-b12f7c1bf72f",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-1",
+      "homeTeamId": "mp-d60711a7-4a6a-4134-9834-2dc509231682",
+      "awayTeamId": "mp-c4980880-125a-4471-9a81-f5e14acf31c2",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-2",
+      "homeTeamId": "mp-47648dd4-12ea-4e97-bb1f-53394bf9194e",
+      "awayTeamId": "mp-36804062-1b76-4407-bfb2-611987cd826c",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-3",
+      "homeTeamId": "mp-d45fe67b-132a-4902-bb2e-9a113e25b37a",
+      "awayTeamId": "mp-53835be8-1d03-4059-9a09-49e88f682a96",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-4",
+      "homeTeamId": "mp-d4c6bc64-6f30-403d-9828-cc38b55d8e3c",
+      "awayTeamId": "mp-ce1be5f2-e5ed-4073-9a2c-a67ad8f13db3",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-5",
+      "homeTeamId": "mp-afa276f8-84eb-4fcd-b785-18420afd50f4",
+      "awayTeamId": "mp-86d83ae5-2f4e-40ff-a034-cb2112387588",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-6",
+      "homeTeamId": "mp-850020a1-7635-40fc-bfc8-f7c77d95c019",
+      "awayTeamId": "mp-49cc3751-aa79-424a-8036-42593c70617b",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-7",
+      "homeTeamId": "mp-a03335a4-e848-4fad-bc6c-0a47216b2170",
+      "awayTeamId": "mp-c2500760-c49e-4ee7-9393-b35a418ea142",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-8",
+      "homeTeamId": "mp-db96ef3f-9d7c-40c0-89ca-fe8b11a73af1",
+      "awayTeamId": "mp-4a31a92c-1004-4ba0-bb9e-f9c4d026dafe",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-1",
+      "homeTeamId": null,
+      "awayTeamId": "mp-db2da669-ae13-4f7e-8523-3be0b32b053f",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-2",
+      "homeTeamId": "mp-c8567519-b7b4-44bc-85f6-354242d6bdc8",
+      "awayTeamId": "mp-ccd24da9-93e6-4dad-aeb3-dd9f95dbae74",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-3",
+      "homeTeamId": "mp-3de0639a-f7a5-4e1a-8c89-e0d0d0b58258",
+      "awayTeamId": null,
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-4",
+      "homeTeamId": "mp-e74bd9fa-ed90-439d-9341-a60fb50fa7d3",
+      "awayTeamId": "mp-7cc2d2e1-46c5-4d84-9755-b487b95399d8",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-5",
+      "homeTeamId": "mp-2a824672-6cae-43ea-b82a-4a5d22711881",
+      "awayTeamId": "mp-90b59be3-7150-4b68-a1fa-3fefe4b13fd1",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-6",
+      "homeTeamId": "mp-3bb9ad06-2f84-4302-974c-23488996eaaa",
+      "awayTeamId": null,
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-7",
+      "homeTeamId": "mp-aab923b5-b024-432d-a17e-c5e8fbddfd9d",
+      "awayTeamId": "mp-20bda3c3-1551-48dc-a607-e86f798d1556",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-8",
+      "homeTeamId": null,
+      "awayTeamId": "mp-8e64dd04-89dc-4482-8462-afae6d94626e",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
+      "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    }
+  ],
+  "seasonSummary": {
+    "sourceId": "anna-maxpreps-schedule",
+    "lastResultDate": "2026-11-06",
+    "district": "8–0",
+    "districtPlace": "1st",
+    "pointsFor": 438,
+    "overall": "10–0",
+    "pointsAgainst": 224,
+    "lastResult": "Anna 56–31 Prosper Richland"
+  }
 }

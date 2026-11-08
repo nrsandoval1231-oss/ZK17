@@ -13,6 +13,7 @@ export function getTournament() {
  return tournament;
 }
 export const verification = {checkedAt:data.checkedAt,scope:data.verificationScope};
+export const seasonSummary = data.seasonSummary as {overall:string;district:string;districtPlace:string;pointsFor:number;pointsAgainst:number;lastResult:string;lastResultDate:string;sourceId:string};
 export const teamInformation = {
  name:'Anna Coyotes',school:'Anna High School',location:'Anna, Texas',classification:'5A Division II',district:'District 4',region:'Region I',
  alignmentSourceId:'uil-alignment',coaching:null,seasonSchedule:null,
