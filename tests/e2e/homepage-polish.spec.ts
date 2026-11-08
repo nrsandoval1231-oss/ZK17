@@ -27,7 +27,7 @@ test('five chapters preserve opening, sourced season statistics and dedicated de
 
 test('PLAYER17 keeps all approved interests, Escape and return focus',async({page})=>{
  await page.goto('/#off-field');
- for(const [category,pick] of [['Games','Madden'],['Movies','A Bronx Tale'],['TV Shows','The Sopranos'],['Anime','Berserk']]){
+ for(const [category,pick] of [['Games','Madden'],['Movies','A Bronx Tale'],['TV Shows','The Sopranos'],['Anime','Vinland Saga']]){
   const button=page.getByRole('button',{name:category,exact:true});
   await button.click();
   await expect(page.locator('#player17-picks')).toContainText(pick);
@@ -108,4 +108,15 @@ test('footer Back to Top returns to the start of the cinematic Arrival pin',asyn
  await back.click();
  await expect(page).toHaveURL(/#arrival$/);
  await expect.poll(()=>page.evaluate(()=>scrollY)).toBeLessThan(2);
+});
+
+test('PLAYER17 previews picks on desktop hover without moving focus', async ({page,isMobile}) => {
+ test.skip(isMobile, 'Touch uses the category button.');
+ await page.goto('/#off-field');
+ await page.getByRole('button',{name:'Movies',exact:true}).hover();
+ await expect(page.locator('#player17-picks')).toContainText('A Bronx Tale');
+ await page.getByRole('button',{name:'Anime',exact:true}).hover();
+ await expect(page.locator('#player17-picks')).toContainText('Vinland Saga');
+ await page.locator('#off-title').hover();
+ await expect(page.locator('#player17-picks')).toBeHidden();
 });

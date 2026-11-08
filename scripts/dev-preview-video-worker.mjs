@@ -5,9 +5,9 @@ const videos = new Set([
 
 export default {
   async fetch(request, env) {
-    const { hostname, pathname } = new URL(request.url);
+    const { pathname } = new URL(request.url);
     const range = /^bytes=(\d*)-(\d*)$/i.exec(request.headers.get('Range') ?? '');
-    if (!hostname.endsWith('.zk17-review.pages.dev') || request.method !== 'GET' ||
+    if (request.method !== 'GET' ||
         !videos.has(pathname) || !range || (!range[1] && !range[2])) {
       return env.ASSETS.fetch(request);
     }

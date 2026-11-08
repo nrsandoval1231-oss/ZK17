@@ -22,4 +22,13 @@ export const arrivalDirectorsPhotos: PreviewPhoto[] = [
 
 export const arrivalCampaignPhotos: PreviewPhoto[] = [...arrivalDirectorsPhotos, ...legacyArrivalPhotos,
   { kind: 'preview', id: 'owner-color-action', src: '/media/zephyr-color-action.webp', width: 540, height: 474, alt: 'Zephyr Kreye carrying a football during a game.', focal: '50% 45%', label: 'OWNER-SUPPLIED PHOTO' },
+  { kind: 'preview', id: 'hero-montage-1', src: '/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-4.jpg', width: 1365, height: 1820, alt: 'Zephyr Kreye in a white number 17 uniform, seen from behind.', focal: '50% 45%', label: 'OWNER-SUPPLIED PHOTO' },
+  { kind: 'preview', id: 'hero-montage-2', src: '/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-5.jpg', width: 1365, height: 1820, alt: 'Zephyr Kreye celebrating with teammates after a game.', focal: '50% 48%', label: 'OWNER-SUPPLIED PHOTO' },
+  { kind: 'preview', id: 'hero-montage-3', src: '/media/arrival-montage/2026-09-13_instagram_DdPP_jJm_6P-2.jpg', width: 1365, height: 1820, alt: 'Zephyr Kreye running with the football during a game.', focal: '50% 50%', label: 'OWNER-SUPPLIED PHOTO' },
+  { kind: 'preview', id: 'hero-montage-4', src: '/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-1.jpg', width: 1365, height: 1820, alt: 'Zephyr Kreye preparing to pass in a white uniform.', focal: '50% 45%', label: 'OWNER-SUPPLIED PHOTO' },
+  { kind: 'preview', id: 'hero-montage-5', src: '/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-3.jpg', width: 1365, height: 1820, alt: 'Anna Coyotes players lined up during a football play.', focal: '50% 72%', label: 'OWNER-SUPPLIED PHOTO' },
+  { kind: 'preview', id: 'hero-montage-6', src: '/media/arrival-montage/2026-10-06_instagram_DeIdiOjDl_s-4.jpg', width: 1365, height: 1820, alt: 'Zephyr Kreye in his purple number 17 uniform under the stadium lights.', focal: '50% 38%', label: 'OWNER-SUPPLIED PHOTO' },
+  { kind: 'preview', id: 'hero-montage-7', src: '/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-1.jpg', width: 1365, height: 1820, alt: 'Zephyr Kreye in a white uniform on the field.', focal: '50% 48%', label: 'OWNER-SUPPLIED PHOTO' },
+  { kind: 'preview', id: 'hero-montage-8', src: '/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-3.jpg', width: 1365, height: 1820, alt: 'Zephyr Kreye preparing to throw during a game.', focal: '50% 55%', label: 'OWNER-SUPPLIED PHOTO' },
+  { kind: 'preview', id: 'hero-montage-9', src: '/media/arrival-montage/2026-10-26_instagram_De9-EMzm1tD-2.jpg', width: 1365, height: 1820, alt: 'Zephyr Kreye celebrating with a teammate.', focal: '50% 45%', label: 'OWNER-SUPPLIED PHOTO' },
 ];

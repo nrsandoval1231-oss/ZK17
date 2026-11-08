@@ -42,7 +42,11 @@ export default function JourneyCarousel({ photos, socials }: { photos: Editorial
    }}>
     {photos.map((photo,index)=><div className={styles.photoSlide} key={photo.id} role="group" aria-roledescription="slide" aria-label={`${index+1} of ${photos.length}`} data-active={active===index} onClick={()=>select(index)}><EditorialPhoto photo={photo} sizes="(max-width: 600px) 66vw, (max-width: 900px) 42vw, 24vw"/></div>)}
    </div><div className={styles.pagination} role="group" aria-label="Choose a photograph">{photos.map((photo,index)=><button key={photo.id} type="button" aria-label={`Show photograph ${index+1}`} aria-current={active===index?'true':undefined} onClick={()=>select(index)}><span/></button>)}</div><p className="sr-only" aria-live="polite">Photograph {active+1} of {photos.length}</p></> : <p className={styles.photoPending}>The next frame is still to come.</p>}
-   {socials.length > 0 && <nav className={styles.socialLinks} aria-label="Verified social profiles">{socials.map(link=><a key={link.id} href={link.url} target="_blank" rel="noopener noreferrer">{link.label}<span className="sr-only"> (opens in a new tab)</span></a>)}</nav>}
+   {socials.length > 0 && <nav className={styles.socialLinks} aria-label="Verified social profiles">{socials.map(link=><a key={link.id} href={link.url} target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true">
+    {link.id === 'x' && <path d="M18.9 2H22l-6.8 7.8L23.2 22H17l-4.9-7.4L5.6 22H2.4l7.4-8.5L2 2h6.4l4.4 6.7L18.9 2ZM17.9 20h1.7L7.4 4H5.6l12.3 16Z"/>}
+    {link.id === 'instagram' && <><rect x="2.5" y="2.5" width="19" height="19" rx="5" fill="none" stroke="currentColor" strokeWidth="2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" strokeWidth="2"/><circle cx="17.6" cy="6.5" r="1.2"/></>}
+    {link.id === 'tiktok' && <path d="M16.6 2c.4 2.7 1.9 4.3 4.5 4.5v3.2a8 8 0 0 1-4.5-1.4v7.4a6.3 6.3 0 1 1-6.3-6.3l1 .1v3.3a3.1 3.1 0 1 0 2 2.9V2h3.3Z"/>}
+   </svg><span className="sr-only">{link.label} (opens in a new tab)</span></a>)}</nav>}
   </div>
  </section>;
 }

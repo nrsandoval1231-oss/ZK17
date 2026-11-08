@@ -29,7 +29,10 @@ export default function ArrivalHero({ profile, photo, photos = [] }: Props) {
   const rear = find('directors-rear');
   const white = find('directors-white');
   const running = find('directors-action');
-  const colorAction = find('owner-color-action');
+  const extraMontage = Array.from({ length: 9 }, (_, index) => {
+    const photo = find(`hero-montage-${index + 1}`);
+    return photo ? { photo, layer: `montage-${String(index + 1).padStart(2, '0')}` } : null;
+  }).filter((item): item is { photo: Photo; layer: string } => item !== null);
   return <section ref={root} id="arrival" data-arrival-hero className={styles.hero} aria-labelledby="arrival-heading">
     <h1 id="arrival-heading" className="sr-only">MAKE THEM REMEMBER.</h1>
     <div className={styles.lights} data-arrival-layer="lights" aria-hidden="true">
@@ -51,10 +54,9 @@ export default function ArrivalHero({ profile, photo, photos = [] }: Props) {
     <PhotoLayer photo={find('campaign-closeup') ?? photo} layer="closeup" className={styles.closeup} />
     <PhotoLayer photo={athlete} layer="athlete" className={styles.athlete} decorative={false} eager />
     <PhotoLayer photo={running} layer="running" className={styles.montage} />
-    <PhotoLayer photo={colorAction} layer="color-action-glow" className={`${styles.montage} ${styles.colorActionGlow}`} />
-    <PhotoLayer photo={colorAction} layer="color-action" className={`${styles.montage} ${styles.colorAction}`} />
     <PhotoLayer photo={rear} layer="rear" className={styles.montage} />
     <PhotoLayer photo={white} layer="white" className={styles.montage} />
+    {extraMontage.map(({ photo: montagePhoto, layer }) => <PhotoLayer key={layer} photo={montagePhoto} layer={layer} className={`${styles.montage} ${styles.collagePhoto}`} />)}
     <div className={styles.smokeFront} data-arrival-layer="smoke-front" aria-hidden="true" />
     <div className={styles.grain} data-arrival-layer="grain" aria-hidden="true" />
     <div className={styles.copy} data-arrival-statement>

@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "sourceSha256": "922d6be9e2b45d922665beada1593ad7a3f904682487d5e238e7defd306564c4",
+      "outputPaths": [
+        "/media/arrival-360.avif",
+        "/media/arrival-360.webp",
+        "/media/arrival-540.avif",
+        "/media/arrival-540.webp",
+        "/media/arrival-706.avif",
+        "/media/arrival-706.webp"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-360.avif": "b0f0999b309dd772c3d03fb7e63d05b43f1423ee20160f2d06c1bec0cbc79aa9",
+        "/media/arrival-360.webp": "bf99c1315e72208aced97e090ffd6d4dc75d7c25a73f114152c1cfb4e32eba01",
+        "/media/arrival-540.avif": "12761a14de8ec0543b723ed2e8eb7756b95764f0bc0c9a91e120725fe40b84d8",
+        "/media/arrival-540.webp": "93163f9fb6b60cf925ec6719d2c8488bb03aa5bed719de8444cc280066e8416c",
+        "/media/arrival-706.avif": "f86f43e67b073c38727eee67a235f5001510f32e244f68c5ff7b026b70f203f8",
+        "/media/arrival-706.webp": "39376befe8b4addb049b40b33eef9961487d7a88dea004046672e733dcc37712"
+      }
+    },
+    {
+      "sourceSha256": "2e454d84056a98e7c5f84176f25b75d68644c0c32a59577f1d602aa5c4633a08",
+      "outputPaths": [
+        "/media/on-field-360.avif",
+        "/media/on-field-360.webp",
+        "/media/on-field-540.avif",
+        "/media/on-field-540.webp",
+        "/media/on-field-706.avif",
+        "/media/on-field-706.webp"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/on-field-360.avif": "1395b02a20076adca51e82a9e180b008e3b0d2053e439131a7a31e016f64eb02",
+        "/media/on-field-360.webp": "7ae578198a176d24b5868bcbe482e3dad1418ae38b52a6ddcf503fbe8abb50f7",
+        "/media/on-field-540.avif": "625f0f1c354bc1e336015dc955123520ec1909ef6355bd3c8cfdecc0873719f1",
+        "/media/on-field-540.webp": "8c63cf5414e965d7d0d80df9a26ff02f287c745ae741df5f2524d5826088a994",
+        "/media/on-field-706.avif": "16fcc41151c1b8ade426a90e6716f6d7b002f382263f0aacba3623aeffc09b6f",
+        "/media/on-field-706.webp": "7abb719790e55f4ed0f6c4f565008139bf029ab41d108e375c6c2145c4144971"
+      }
+    },
+    {
+      "sourceSha256": "f2746d74b3b940a86fb10ee7536eea856765af5c96a70887d47f1da4a1ff4e5e",
+      "outputPaths": [
+        "/media/portrait-360.avif",
+        "/media/portrait-360.webp",
+        "/media/portrait-540.avif",
+        "/media/portrait-540.webp",
+        "/media/portrait-706.avif",
+        "/media/portrait-706.webp"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/portrait-360.avif": "77dd09a49514b218229cfd85271bb486a0d876db12c1ea91a333be15f91bc337",
+        "/media/portrait-360.webp": "195bbce5eabb598adf77faa6d8a9359718ab0e19d6774a37268a19a6e916b5e7",
+        "/media/portrait-540.avif": "72d897c8157971b334183aafe7568eb1b67b9fd4040cca494891bcab0cd9da59",
+        "/media/portrait-540.webp": "7a833c67ebd2cfd62f0613a211a6b9505907de161849079d56890fd984e987c6",
+        "/media/portrait-706.avif": "f62c926fcdbf6e8852f8a90139fac0337c5594901691202c499893840e82fb09",
+        "/media/portrait-706.webp": "28a6b84424a07c3d61bd1c13c5dfd2fbe7425cf54099d9b18c9103220213dee5"
+      }
+    },
+    {
+      "sourceSha256": "1bb1e281e51fc3584827368a515aeaceb67cfa373acefc43513a0f1ada82911d",
+      "outputPaths": [
+        "/media/throwing-360.avif",
+        "/media/throwing-360.webp",
+        "/media/throwing-540.avif",
+        "/media/throwing-540.webp",
+        "/media/throwing-706.avif",
+        "/media/throwing-706.webp"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/throwing-360.avif": "df3949cf3d4ffaf6aed25d8ef582cca2a31fab57a672729089102143767c5a98",
+        "/media/throwing-360.webp": "f6e99f190ba1e27a97d391c834f17f203f27eb26b0f6865832639628275db3d0",
+        "/media/throwing-540.avif": "0f8513fc1d5185ec16ad3ea39accaaf49440442074b2442c2bb8cb103ee8ec99",
+        "/media/throwing-540.webp": "1fdd41316492837200c42d49756cbb7e6a12601963c058d4c84178a4c47e9d1e",
+        "/media/throwing-706.avif": "327b15b2e30819d58fe16a06f0d9292757de792b10d58667b495d7b7d9bbfade",
+        "/media/throwing-706.webp": "8fd296d29092e2bda661a285ef1849c174a0c1b75295d8d2060a9159bfe95279"
+      }
+    },
+    {
+      "sourceSha256": "e2b75448b5864c6df555a2116be3877de96c420df9ab843f93a724620b59c5dc",
+      "outputPaths": [
+        "/media/running-360.avif",
+        "/media/running-360.webp",
+        "/media/running-540.avif",
+        "/media/running-540.webp",
+        "/media/running-706.avif",
+        "/media/running-706.webp"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/running-360.avif": "f8b88344b71a7d2b6e45d5ee7c3f2ca06fa3a2399669448f7a8608f8b7b01b31",
+        "/media/running-360.webp": "ed3d341e0b7b071af5d03b2c420def7cc855620be2b2e398cf3ad464fdf4ac76",
+        "/media/running-540.avif": "c0b70f3a78e4b3c4d5a61bed31cc189bcc5d6fe7ba6476eb127c26269adbfaae",
+        "/media/running-540.webp": "6665b4ad62be1e551752942d06d45cb7db40db8495bb0bedd87c0497e6fb8c02",
+        "/media/running-706.avif": "d54a3e1137f7038be1449c42d74e543d525b2f3829406d0716fa80861a35b3ce",
+        "/media/running-706.webp": "ce6537f458ed58d5baae0666a71ddeab9a7c9579bbb9d6e015e20ed3610645f2"
+      }
+    },
+    {
+      "sourceSha256": "51ed28df516f43ddcde9de9305eaedb41116582377c5be9bda45d7ce158d86e6",
+      "outputPaths": [
+        "/media/arrival-campaign/stadium-320.svg",
+        "/media/arrival-campaign/stadium-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/stadium-320.svg": "04e5fb599b8b70a588c36faf7d7d6c16a64536080fd05983dcc0a3378c08da7a",
+        "/media/arrival-campaign/stadium-640.svg": "4b32bcc951fa396ef258d426d615949293644b9d184eab4fd3d98cb94102d2bc"
+      }
+    },
+    {
+      "sourceSha256": "138b330ea44f4e1b91121579feda7d25cdf6ca3fb466cab9e29f05d6596383df",
+      "outputPaths": [
+        "/media/arrival-campaign/front-320.svg",
+        "/media/arrival-campaign/front-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/front-320.svg": "95a4b58221812ea65f1f4f4f6372d2be50a72d02bf02c0ff1c6f572b9f3178ef",
+        "/media/arrival-campaign/front-640.svg": "ace65e4164b4c043c1ab99442b3be84e684842160302de4f719f220fb8dfbf93"
+      }
+    },
+    {
+      "sourceSha256": "ef495d62e509a4eadd6d8f0a1499315950fa9cf9edca619f26fa51a067fd6adc",
+      "outputPaths": [
+        "/media/arrival-campaign/rear-320.svg",
+        "/media/arrival-campaign/rear-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/rear-320.svg": "1cb303a421f96630fbbbf9d90ce1aa9e7deb8764d5e323ff59e07be0ab2a70dc",
+        "/media/arrival-campaign/rear-640.svg": "bcdad4cf90cb0abd707bd30985715aff43daca6d09080802a7a0075d9f845a1d"
+      }
+    },
+    {
+      "sourceSha256": "dc785b292576d5a123405ed98174564f1a7f14b899ab8ecf842765e6e00b6b08",
+      "outputPaths": [
+        "/media/arrival-campaign/back-320.svg",
+        "/media/arrival-campaign/back-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/back-320.svg": "ce657c6ab60eaa2023879a80dab928cb995cccf2ad8ea1702afea32df58efd3f",
+        "/media/arrival-campaign/back-640.svg": "b5bb3a6e081cd9612471f57445b5c84858fb192b222b305ca56abc2b7cb13193"
+      }
+    },
+    {
+      "sourceSha256": "6e6dfd72c70ad0f7ab694e14094f28e3f3c09edfc0779b6ab6540bec5595f3c8",
+      "outputPaths": [
+        "/media/arrival-campaign/profile-320.svg",
+        "/media/arrival-campaign/profile-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/profile-320.svg": "dd6e9fff03569e44f6c4851bc3843c29903bcb5028b32bd04e53e7b62130b03f",
+        "/media/arrival-campaign/profile-640.svg": "cfdbcd1b024fad565041dee8a0e2cf5a569e9c171225cff4bd6dad58d0367fbb"
+      }
+    },
+    {
+      "sourceSha256": "5de6276caeeea218773811bb62a8e2400b00130fdae2cb4a13033799b233833e",
+      "outputPaths": [
+        "/media/arrival-campaign/closeup-320.svg",
+        "/media/arrival-campaign/closeup-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/closeup-320.svg": "cd4b1c212a2bbf9319e2252888b9b13504a8361ee442d08728304acffb5c2a26",
+        "/media/arrival-campaign/closeup-640.svg": "9961ae35a9d38d8e1ff2a7640ce15266d6861674d18bfa7e7d8fa772fc195d26"
+      }
+    },
+    {
+      "sourceSha256": "b3bec17cb19b621053014813d55d8bc495f0c8aaa151108e6e0a9606260c9a15",
+      "outputPaths": [
+        "/media/arrival-directors-cut/directors-action-480.webp",
+        "/media/arrival-directors-cut/directors-action-960.webp"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-directors-cut/directors-action-480.webp": "6785f6ee3fe0fe641decb5eba1ec6568b9ef9bbf486dded120449a3602f0e070",
+        "/media/arrival-directors-cut/directors-action-960.webp": "6785f6ee3fe0fe641decb5eba1ec6568b9ef9bbf486dded120449a3602f0e070"
+      }
+    },
+    {
+      "sourceSha256": "9cee838def18c6fa5da905210375d81012e3a8f8d2bce72bd692376f7516118e",
+      "outputPaths": [
+        "/media/arrival-directors-cut/directors-standing-480.webp",
+        "/media/arrival-directors-cut/directors-standing-960.webp"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-directors-cut/directors-standing-480.webp": "bb361ddd61e37f3f718c3f85a183f57688b9a4d07a719873ae127bf4b93e1453",
+        "/media/arrival-directors-cut/directors-standing-960.webp": "e3d8b19104c874cc48765001faa7bde105104f1c584d79864912c2e25ab2cdd4"
+      }
+    },
+    {
+      "sourceSha256": "6b0d75f6cc9346ac8ce4856448641aeccd80ae8b1b7a5235574d24a0cbd29d09",
+      "outputPaths": [
+        "/media/arrival-directors-cut/directors-rear-480.webp",
+        "/media/arrival-directors-cut/directors-rear-960.webp"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-directors-cut/directors-rear-480.webp": "5581fe7c00294779d4f8588d832a382259e6d339227b1f8a3a836bfbaa1d18a8",
+        "/media/arrival-directors-cut/directors-rear-960.webp": "fc39a2f8872c81ddeb3386fe4c77d7957c7cfdeec7e37ee38f68abcead0d9362"
+      }
+    },
+    {
+      "sourceSha256": "1e014c150e30e057fe44d20e14f4578113aca1a6f685c26d78670630f1ce5b7a",
+      "outputPaths": [
+        "/media/arrival-directors-cut/directors-white-480.webp",
+        "/media/arrival-directors-cut/directors-white-960.webp"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-directors-cut/directors-white-480.webp": "a1768ed110e7380984cb84351eb18e9ec484f453edab9db56bd9c28303358ac9",
+        "/media/arrival-directors-cut/directors-white-960.webp": "a1768ed110e7380984cb84351eb18e9ec484f453edab9db56bd9c28303358ac9"
+      }
+    },
+    {
+      "sourceSha256": "d9db62797ecbac643f5dbd7a6a952742192c121f856337c954957a9b7539061d",
+      "outputPaths": [
+        "/media/zephyr-color-action.webp"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/zephyr-color-action.webp": "a88a97d3b59a6d8c95d514e20a8305f937521039138c74c81ea17827d1730d81"
+      }
+    },
+    {
+      "sourceSha256": "51ed28df516f43ddcde9de9305eaedb41116582377c5be9bda45d7ce158d86e6",
+      "outputPaths": [
+        "/media/arrival-campaign/stadium-320.svg",
+        "/media/arrival-campaign/stadium-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/stadium-320.svg": "04e5fb599b8b70a588c36faf7d7d6c16a64536080fd05983dcc0a3378c08da7a",
+        "/media/arrival-campaign/stadium-640.svg": "4b32bcc951fa396ef258d426d615949293644b9d184eab4fd3d98cb94102d2bc"
+      }
+    },
+    {
+      "sourceSha256": "138b330ea44f4e1b91121579feda7d25cdf6ca3fb466cab9e29f05d6596383df",
+      "outputPaths": [
+        "/media/arrival-campaign/front-320.svg",
+        "/media/arrival-campaign/front-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/front-320.svg": "95a4b58221812ea65f1f4f4f6372d2be50a72d02bf02c0ff1c6f572b9f3178ef",
+        "/media/arrival-campaign/front-640.svg": "ace65e4164b4c043c1ab99442b3be84e684842160302de4f719f220fb8dfbf93"
+      }
+    },
+    {
+      "sourceSha256": "ef495d62e509a4eadd6d8f0a1499315950fa9cf9edca619f26fa51a067fd6adc",
+      "outputPaths": [
+        "/media/arrival-campaign/rear-320.svg",
+        "/media/arrival-campaign/rear-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/rear-320.svg": "1cb303a421f96630fbbbf9d90ce1aa9e7deb8764d5e323ff59e07be0ab2a70dc",
+        "/media/arrival-campaign/rear-640.svg": "bcdad4cf90cb0abd707bd30985715aff43daca6d09080802a7a0075d9f845a1d"
+      }
+    },
+    {
+      "sourceSha256": "dc785b292576d5a123405ed98174564f1a7f14b899ab8ecf842765e6e00b6b08",
+      "outputPaths": [
+        "/media/arrival-campaign/back-320.svg",
+        "/media/arrival-campaign/back-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/back-320.svg": "ce657c6ab60eaa2023879a80dab928cb995cccf2ad8ea1702afea32df58efd3f",
+        "/media/arrival-campaign/back-640.svg": "b5bb3a6e081cd9612471f57445b5c84858fb192b222b305ca56abc2b7cb13193"
+      }
+    },
+    {
+      "sourceSha256": "6e6dfd72c70ad0f7ab694e14094f28e3f3c09edfc0779b6ab6540bec5595f3c8",
+      "outputPaths": [
+        "/media/arrival-campaign/profile-320.svg",
+        "/media/arrival-campaign/profile-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/profile-320.svg": "dd6e9fff03569e44f6c4851bc3843c29903bcb5028b32bd04e53e7b62130b03f",
+        "/media/arrival-campaign/profile-640.svg": "cfdbcd1b024fad565041dee8a0e2cf5a569e9c171225cff4bd6dad58d0367fbb"
+      }
+    },
+    {
+      "sourceSha256": "5de6276caeeea218773811bb62a8e2400b00130fdae2cb4a13033799b233833e",
+      "outputPaths": [
+        "/media/arrival-campaign/closeup-320.svg",
+        "/media/arrival-campaign/closeup-640.svg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/arrival-campaign/closeup-320.svg": "cd4b1c212a2bbf9319e2252888b9b13504a8361ee442d08728304acffb5c2a26",
+        "/media/arrival-campaign/closeup-640.svg": "9961ae35a9d38d8e1ff2a7640ce15266d6861674d18bfa7e7d8fa772fc195d26"
+      }
+    },
+    {
+      "sourceSha256": "ac53a4ddf18f9ce050dd925be1208ed361645824f3fb0396f734eee3502e3a3e",
+      "outputPaths": [
+        "/media/on-field-owner-2026-10-16.jpg"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/on-field-owner-2026-10-16.jpg": "ac53a4ddf18f9ce050dd925be1208ed361645824f3fb0396f734eee3502e3a3e"
+      }
+    },
+    {
+      "sourceSha256": "1b6da3c76f64202d2b151a3b6fde84e6cec9cdb323625911257f66905106a6e5",
+      "outputPaths": [
+        "/media/beyond-17-owner.webp"
+      ],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-07",
+      "basis": "Owner authorized publication of the currently used preview photos and edits for production-identical release.",
+      "outputSha256": {
+        "/media/beyond-17-owner.webp": "1b6da3c76f64202d2b151a3b6fde84e6cec9cdb323625911257f66905106a6e5"
+      }
+    },
+    {
+      "sourceSha256": "85c745b32e386a3418f8ed8e86d8d2e55d74b6bb67f57f1827b53cd2de0bb87e",
+      "outputPaths": ["/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-4.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-4.jpg": "85c745b32e386a3418f8ed8e86d8d2e55d74b6bb67f57f1827b53cd2de0bb87e"}
+    },
+    {
+      "sourceSha256": "af99fdd28c9e8a6c4297b2c82277590fddd9679676cf5e685962aab638944dd6",
+      "outputPaths": ["/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-5.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-5.jpg": "af99fdd28c9e8a6c4297b2c82277590fddd9679676cf5e685962aab638944dd6"}
+    },
+    {
+      "sourceSha256": "a310f61fa41a9cca8680267b92d98208de0322d1f0e9e03cb4f611d7c69513bf",
+      "outputPaths": ["/media/arrival-montage/2026-09-13_instagram_DdPP_jJm_6P-2.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-09-13_instagram_DdPP_jJm_6P-2.jpg": "a310f61fa41a9cca8680267b92d98208de0322d1f0e9e03cb4f611d7c69513bf"}
+    },
+    {
+      "sourceSha256": "7f1ec216f68b8acdce637e6f47b52a19a5531ea330ea8ddf94b8ec6f12864b7e",
+      "outputPaths": ["/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-1.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-1.jpg": "7f1ec216f68b8acdce637e6f47b52a19a5531ea330ea8ddf94b8ec6f12864b7e"}
+    },
+    {
+      "sourceSha256": "8b307209727926e073214ee40b29e007f10e104a5ffd75ed4ae5611dfd12dfb1",
+      "outputPaths": ["/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-3.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-3.jpg": "8b307209727926e073214ee40b29e007f10e104a5ffd75ed4ae5611dfd12dfb1"}
+    },
+    {
+      "sourceSha256": "df18d1443f532b7025606cd834d028a516c2fe6d190cb7b66ecf397ce95a0769",
+      "outputPaths": ["/media/arrival-montage/2026-10-06_instagram_DeIdiOjDl_s-4.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-10-06_instagram_DeIdiOjDl_s-4.jpg": "df18d1443f532b7025606cd834d028a516c2fe6d190cb7b66ecf397ce95a0769"}
+    },
+    {
+      "sourceSha256": "23d443888e43bbdbd8192d59c9e883b842ab4075b07f3b8dd60b14f2c52425c9",
+      "outputPaths": ["/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-1.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-1.jpg": "23d443888e43bbdbd8192d59c9e883b842ab4075b07f3b8dd60b14f2c52425c9"}
+    },
+    {
+      "sourceSha256": "952e2fcac178bac93e818c37c21f890c803de849ae77510ca4e095591eecd21d",
+      "outputPaths": ["/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-3.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-3.jpg": "952e2fcac178bac93e818c37c21f890c803de849ae77510ca4e095591eecd21d"}
+    },
+    {
+      "sourceSha256": "0cdd37764a1acebddcdc552a038ad57d13ca3baf6bd66ecd5cf10447cd45c30f",
+      "outputPaths": ["/media/arrival-montage/2026-10-26_instagram_De9-EMzm1tD-2.jpg"],
+      "status": "approved",
+      "approvedBy": "owner",
+      "approvedOn": "2026-11-08",
+      "basis": "Owner confirmed permission to publish the supplied photo and its requested site treatment.",
+      "outputSha256": {"/media/arrival-montage/2026-10-26_instagram_De9-EMzm1tD-2.jpg": "0cdd37764a1acebddcdc552a038ad57d13ca3baf6bd66ecd5cf10447cd45c30f"}
+    }
+  ]
+}

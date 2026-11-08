@@ -11,6 +11,8 @@ type Category = (typeof categories)[number];
 export default function OffFieldArcade({ features, athleteName, compact = false }: { features: OffFieldFeature[]; athleteName: string; compact?: boolean }) {
   const [selected, setSelected] = useState<Category>('Games');
   const [started, setStarted] = useState(false);
+  const [hovered, setHovered] = useState<Category | null>(null);
+  const activeCategory = hovered ?? (started ? selected : null);
   const startRef = useRef<HTMLButtonElement>(null);
   const backRef = useRef<HTMLButtonElement>(null);
   const choiceRefs = useRef<Partial<Record<Category, HTMLButtonElement | null>>>({});
@@ -33,17 +35,18 @@ export default function OffFieldArcade({ features, athleteName, compact = false 
   };
   const back = () => setStarted(false);
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
-    if (event.key === 'Escape' && started) {
+    if (event.key === 'Escape' && (started || hovered)) {
       event.preventDefault();
+      setHovered(null);
       back();
     }
   };
 
-  if (compact) return <div className={styles.compact} id="offfield-personal" onKeyDown={handleKeyDown}>
+  if (compact) return <div className={styles.compact} id="offfield-personal" onKeyDown={handleKeyDown} onPointerLeave={()=>setHovered(null)}>
     <p className={styles.compactLabel}>PLAYER17 <span>/ HIS PICKS</span></p>
-    <div className={styles.compactChoices} role="group" aria-label="Choose a category">{categories.map(category=><button type="button" key={category} ref={node=>{choiceRefs.current[category]=node;}} aria-expanded={started && selected===category} aria-controls="player17-picks" onClick={()=>openCategory(category,category)}>{category}</button>)}</div>
-    <div id="player17-picks" hidden={!started} className={styles.compactDetails}>
-      {started && <><p>{selected.toUpperCase()} / HIS TOP THREE</p><ol>{details.map(detail=><li key={detail}>{detail}</li>)}</ol><button ref={backRef} type="button" onClick={back} aria-label="BACK TO MENU">BACK</button></>}
+    <div className={styles.compactChoices} role="group" aria-label="Choose a category">{categories.map(category=><button type="button" key={category} ref={node=>{choiceRefs.current[category]=node;}} aria-expanded={activeCategory===category} aria-controls="player17-picks" onPointerEnter={event=>{if(event.pointerType==='mouse') setHovered(category);}} onClick={()=>{setHovered(null);openCategory(category,category);}}>{category}</button>)}</div>
+    <div id="player17-picks" hidden={!activeCategory} className={styles.compactDetails}>
+      {activeCategory && <><p>{activeCategory.toUpperCase()} / HIS TOP THREE</p><ol>{(featureMap.get(activeCategory) ?? []).slice(0,3).map((detail,index)=><li key={detail}><span aria-hidden="true">0{index+1}</span>{detail}</li>)}</ol>{started && <button ref={backRef} type="button" onClick={()=>{setHovered(null);back();}} aria-label="BACK TO MENU">BACK</button>}</>}
     </div>
   </div>;
 

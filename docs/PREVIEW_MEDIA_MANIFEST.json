@@ -330,5 +330,104 @@
     "outputs": [
       "/media/zephyr-color-action.webp"
     ]
+  },
+  {
+    "slug": "hero-montage-1",
+    "sourceName": "2026-08-30_instagram_DcrQ0a7GzXN-4.jpg",
+    "sourceSha256": "85c745b32e386a3418f8ed8e86d8d2e55d74b6bb67f57f1827b53cd2de0bb87e",
+    "alt": "Zephyr Kreye in a white number 17 uniform, seen from behind.",
+    "usage": "preview-only",
+    "rights": "Owner authorized publication 2026-11-08",
+    "outputs": [
+      "/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-4.jpg"
+    ]
+  },
+  {
+    "slug": "hero-montage-2",
+    "sourceName": "2026-08-30_instagram_DcrQ0a7GzXN-5.jpg",
+    "sourceSha256": "af99fdd28c9e8a6c4297b2c82277590fddd9679676cf5e685962aab638944dd6",
+    "alt": "Zephyr Kreye celebrating with teammates after a game.",
+    "usage": "preview-only",
+    "rights": "Owner authorized publication 2026-11-08",
+    "outputs": [
+      "/media/arrival-montage/2026-08-30_instagram_DcrQ0a7GzXN-5.jpg"
+    ]
+  },
+  {
+    "slug": "hero-montage-3",
+    "sourceName": "2026-09-13_instagram_DdPP_jJm_6P-2.jpg",
+    "sourceSha256": "a310f61fa41a9cca8680267b92d98208de0322d1f0e9e03cb4f611d7c69513bf",
+    "alt": "Zephyr Kreye running with the football during a game.",
+    "usage": "preview-only",
+    "rights": "Owner authorized publication 2026-11-08",
+    "outputs": [
+      "/media/arrival-montage/2026-09-13_instagram_DdPP_jJm_6P-2.jpg"
+    ]
+  },
+  {
+    "slug": "hero-montage-4",
+    "sourceName": "2026-09-28_instagram_Dd2BzvLm11i-1.jpg",
+    "sourceSha256": "7f1ec216f68b8acdce637e6f47b52a19a5531ea330ea8ddf94b8ec6f12864b7e",
+    "alt": "Zephyr Kreye preparing to pass in a white uniform.",
+    "usage": "preview-only",
+    "rights": "Owner authorized publication 2026-11-08",
+    "outputs": [
+      "/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-1.jpg"
+    ]
+  },
+  {
+    "slug": "hero-montage-5",
+    "sourceName": "2026-09-28_instagram_Dd2BzvLm11i-3.jpg",
+    "sourceSha256": "8b307209727926e073214ee40b29e007f10e104a5ffd75ed4ae5611dfd12dfb1",
+    "alt": "Anna Coyotes players lined up during a football play.",
+    "usage": "preview-only",
+    "rights": "Owner authorized publication 2026-11-08",
+    "outputs": [
+      "/media/arrival-montage/2026-09-28_instagram_Dd2BzvLm11i-3.jpg"
+    ]
+  },
+  {
+    "slug": "hero-montage-6",
+    "sourceName": "2026-10-06_instagram_DeIdiOjDl_s-4.jpg",
+    "sourceSha256": "df18d1443f532b7025606cd834d028a516c2fe6d190cb7b66ecf397ce95a0769",
+    "alt": "Zephyr Kreye in his purple number 17 uniform under the stadium lights.",
+    "usage": "preview-only",
+    "rights": "Owner authorized publication 2026-11-08",
+    "outputs": [
+      "/media/arrival-montage/2026-10-06_instagram_DeIdiOjDl_s-4.jpg"
+    ]
+  },
+  {
+    "slug": "hero-montage-7",
+    "sourceName": "2026-10-11_instagram_DeXXLOBG2zQ-1.jpg",
+    "sourceSha256": "23d443888e43bbdbd8192d59c9e883b842ab4075b07f3b8dd60b14f2c52425c9",
+    "alt": "Zephyr Kreye in a white uniform on the field.",
+    "usage": "preview-only",
+    "rights": "Owner authorized publication 2026-11-08",
+    "outputs": [
+      "/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-1.jpg"
+    ]
+  },
+  {
+    "slug": "hero-montage-8",
+    "sourceName": "2026-10-11_instagram_DeXXLOBG2zQ-3.jpg",
+    "sourceSha256": "952e2fcac178bac93e818c37c21f890c803de849ae77510ca4e095591eecd21d",
+    "alt": "Zephyr Kreye preparing to throw during a game.",
+    "usage": "preview-only",
+    "rights": "Owner authorized publication 2026-11-08",
+    "outputs": [
+      "/media/arrival-montage/2026-10-11_instagram_DeXXLOBG2zQ-3.jpg"
+    ]
+  },
+  {
+    "slug": "hero-montage-9",
+    "sourceName": "2026-10-26_instagram_De9-EMzm1tD-2.jpg",
+    "sourceSha256": "0cdd37764a1acebddcdc552a038ad57d13ca3baf6bd66ecd5cf10447cd45c30f",
+    "alt": "Zephyr Kreye celebrating with a teammate.",
+    "usage": "preview-only",
+    "rights": "Owner authorized publication 2026-11-08",
+    "outputs": [
+      "/media/arrival-montage/2026-10-26_instagram_De9-EMzm1tD-2.jpg"
+    ]
   }
 ]
