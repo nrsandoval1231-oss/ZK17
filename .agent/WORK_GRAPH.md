@@ -43,6 +43,6 @@ ZK-REFINED-CONTROLS [LOCAL VERIFIED]: approvednoarrows/editorialcontrols+minorhe
 
 ZK-REFINED-CONTROLS [PR11 / DEV DELIVERED]: b655db03 immutable/6846005 deployed.213browserpass7existingskips62unit/buildlinttype;independentAstraready. RemotecontrolsCSSbyteproofandHudl pass. No merge/production.
 
-ZK-HERO-MONTAGE [PR15/16 MERGED / PROD BLOCKED]: `.agent/PACKET-HERO-MONTAGE.md`; release merged at `93c0f640`; follow-up Windows gate fix merged at `b905169b`. Existing canonical Road to State mockup gate (`content/playoffs/brand.json` has `mockupPath:null`) blocks production; preserve it. Live hero montage remains unpublished; both live MP4 range requests return206.
+ZK-HERO-MONTAGE [PR15/16/17/18 MERGED / OWNER APPROVED FOR PROD]: `.agent/PACKET-HERO-MONTAGE.md`; release merged at `93c0f640`; playoff data PR17 and nav PR18 also merged. Owner approved final review preview on 2026-11-08. `brand.json` now records preview URL/commit acceptance as alternative to missing standalone mockup; all photo/asset evidence gates remain enabled. Run public release build and verify before deploy.
 
 ZK-PLAYOFF-DATA [PR17 PREVIEW DEPLOYED / FINAL REVIEW PENDING]: fresh UIL-linked MaxPreps 2026 bracket plus Anna current record and Nov 13 scheduled game. Preview build, data validation (63 games/32 observations), typecheck, and local page render pass. Production build remains blocked by missing canonical owner mockup; keep gate unchanged; last-result date now renders from the verified data field.

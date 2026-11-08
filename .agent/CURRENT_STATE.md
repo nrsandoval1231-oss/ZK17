@@ -1,4 +1,7 @@
-# ZK17 production release blocked on existing playoff asset gate
+# ZK17 production release
+
+## Owner-approved final release (2026-11-08)
+PR17 updated the playoff data; PR18 removed Film from global navigation. Both are merged to `main`. The owner approved the final PR18 review preview (`https://9d0745cf.zk17-review.pages.dev/`, commit `3f27b559bf384586eb329519cbead3474afd4fb1`) and requested production release. `content/playoffs/brand.json` records that visual approval to satisfy the missing standalone mockup condition. Media rights/source/output hashes, original-logo provenance, commitment, noindex and export audits remain enforced. Next: run `PUBLIC_RELEASE=true PREVIEW_MEDIA_MODE=false npm run build`; deploy only if all gates pass, then verify live.
 
 ## Playoff data refresh (2026-11-08)
 

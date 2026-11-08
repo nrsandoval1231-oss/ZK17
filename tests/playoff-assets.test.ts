@@ -26,7 +26,16 @@ it('uses the exact owner upload for Anna while preserving its dimensions and art
  assert.ok(cleared>40000);assert.ok(whiteDetails>500);
  assert.equal(result[3],0);
  assert.equal((await validatePlayoffAssets({publicRelease:false})).ready,true);
- await assert.rejects(()=>validatePlayoffAssets({publicRelease:true}),/canonical owner mockup/);
+ assert.equal((await validatePlayoffAssets({publicRelease:true})).ready,true);
+});
+it('rejects owner visual approval unless it references a review deployment and commit',async()=>{
+ const directory=await mkdtemp(join(tmpdir(),'zk-playoff-approval-'));
+ try{
+  const manifest=JSON.parse(await readFile('content/playoffs/brand.json','utf8'));
+  manifest.visualApproval.reviewedUrl='https://example.com/';
+  const manifestPath=join(directory,'brand.json');await writeFile(manifestPath,JSON.stringify(manifest));
+  await assert.rejects(()=>validatePlayoffAssets({manifestPath,publicRelease:true}),/canonical owner mockup or recorded owner approval/);
+ }finally{await rm(directory,{recursive:true,force:true});}
 });
 it('still blocks public release when the original logo is missing',async()=>{
  const directory=await mkdtemp(join(tmpdir(),'zk-playoff-brand-'));
