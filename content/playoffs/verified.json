@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "season": 2026,
   "division": "5A-DII",
-  "checkedAt": "2026-11-08T03:23:48.250Z",
+  "checkedAt": "2026-11-08T13:16:39.608Z",
   "verificationScope": "Source-backed game updates, Anna alignment and UIL bracket structure; check individual game sources and timestamps.",
   "sources": [
     {
@@ -86,6 +86,24 @@
       "url": "https://www.maxpreps.com/tx/football/game/anna-vs-the-colony/11-13-2026/?c=4514c2fd-fae6-40a6-bec7-62dfa191696f",
       "retrievedAt": "2026-11-08T03:23:48.250Z",
       "label": "Anna vs The Colony playoff game details"
+    },
+    {
+      "id": "uil-linked-maxpreps-7ffcfacc3075a5b6",
+      "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+      "label": "UIL-linked MaxPreps 2026 5A D2 bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-08T13:16:39.608Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "deb416ce1dcc74354dd2fd98db312ba5e1406abe6f8c6a5118030f1a6df598c5"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "7ffcfacc3075a5b62ee784dd5cedcb97ea141256cdd977471ff7485cc59f5967"
+        }
+      ]
     }
   ],
   "teams": [
@@ -650,6 +668,46 @@
       "district": 14,
       "region": 4,
       "logo": null
+    },
+    {
+      "id": "mp-7cb7e6a9-f837-4204-8c37-f9cb9dd17ce8",
+      "name": "South Oak Cliff",
+      "aliases": [
+        "maxpreps:7cb7e6a9-f837-4204-8c37-f9cb9dd17ce8"
+      ],
+      "district": 5,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-1e54cc6b-4076-4a76-b2ea-d0631c5bff2c",
+      "name": "Samuell",
+      "aliases": [
+        "maxpreps:1e54cc6b-4076-4a76-b2ea-d0631c5bff2c"
+      ],
+      "district": 5,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-36c0cace-6022-4dee-b1f2-c0058997ecad",
+      "name": "Wilson",
+      "aliases": [
+        "maxpreps:36c0cace-6022-4dee-b1f2-c0058997ecad"
+      ],
+      "district": 5,
+      "region": 2,
+      "logo": null
+    },
+    {
+      "id": "mp-a3bd01c9-3acc-45bb-917d-d01b7ef73ce1",
+      "name": "Hillcrest",
+      "aliases": [
+        "maxpreps:a3bd01c9-3acc-45bb-917d-d01b7ef73ce1"
+      ],
+      "district": 5,
+      "region": 2,
+      "logo": null
     }
   ],
   "observations": [
@@ -1099,6 +1157,62 @@
       "venue": null,
       "sourceId": "uil-linked-maxpreps-d788e23c6b1fd0c0",
       "verifiedAt": "2026-11-08T03:23:16.477Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-1",
+      "homeTeamId": "mp-7cb7e6a9-f837-4204-8c37-f9cb9dd17ce8",
+      "awayTeamId": "mp-6bb655cf-3020-4ea8-a2c7-c35800ec1953",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-7ffcfacc3075a5b6",
+      "verifiedAt": "2026-11-08T13:16:39.608Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-3",
+      "homeTeamId": "mp-b1970802-ad92-4d06-9f15-b9c99cc842da",
+      "awayTeamId": "mp-1e54cc6b-4076-4a76-b2ea-d0631c5bff2c",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-7ffcfacc3075a5b6",
+      "verifiedAt": "2026-11-08T13:16:39.608Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-6",
+      "homeTeamId": "mp-8c113220-90fe-4ef8-b458-8c0629d620f4",
+      "awayTeamId": "mp-36c0cace-6022-4dee-b1f2-c0058997ecad",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-7ffcfacc3075a5b6",
+      "verifiedAt": "2026-11-08T13:16:39.608Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-8",
+      "homeTeamId": "mp-a3bd01c9-3acc-45bb-917d-d01b7ef73ce1",
+      "awayTeamId": "mp-33cebbc7-67f6-4c66-8fd1-b12f7c1bf72f",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "pending",
+      "winnerTeamId": null,
+      "kickoff": null,
+      "venue": null,
+      "sourceId": "uil-linked-maxpreps-7ffcfacc3075a5b6",
+      "verifiedAt": "2026-11-08T13:16:39.608Z",
       "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
     }
   ],
