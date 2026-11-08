@@ -1,7 +1,7 @@
-# ZK17 production release in progress
+# ZK17 production release blocked on existing playoff asset gate
 
 ## Current production release (2026-11-08)
-Branch `release/production-20261107`, based on `main` at `1203f2c`. Includes nine owner-authorized hero montage photos and responsive placements, previous video-range and release work. Public release build and export audit pass with all nine media approvals. Astra independently accepted the exact candidate; no P1/P2 findings. Cloudflare Pages project `zk17-review` production branch remains `main`; production build command runs the release build and prepares the video-range worker. Release PR and live deployment are pending. Packet `.agent/PACKET-HERO-MONTAGE.md`.
+PR15 merged at `93c0f6406525d01696e83b96246900a6bfdcc522`; Cloudflare production build failed before deployment because `content/playoffs/brand.json` has `mockupPath:null`, required by the existing public-release gate. `docs/PLAYOFFS_DATA.md` documents that the canonical Road to State mockup remains unavailable; do not bypass this gate. Live `https://zephyrkreye.com` remains on the prior production deployment and does not include the nine-photo montage. Both live MP4 byte-range requests still return HTTP206. Cloudflare production branch is still `main`, with release build and range-worker preparation configured. To finish, obtain the canonical owner mockup and set its verified path; rerun public build, then let the `main` deployment succeed. Packet `.agent/PACKET-HERO-MONTAGE.md`.
 
 PR #11 squash merged at 2026-11-03T01:59:53Z. Deployed source: 2b788fcf6e70a3706b47fd325e014da9aea25fc1. Cloudflare production deployment: a8a5f16c-4444-40eb-a8da-99606c98c479. Live: https://zephyrkreye.com/. Local checkout is main at the deployed merge commit.
 

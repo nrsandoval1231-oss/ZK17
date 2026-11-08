@@ -43,4 +43,4 @@ ZK-REFINED-CONTROLS [LOCAL VERIFIED]: approvednoarrows/editorialcontrols+minorhe
 
 ZK-REFINED-CONTROLS [PR11 / DEV DELIVERED]: b655db03 immutable/6846005 deployed.213browserpass7existingskips62unit/buildlinttype;independentAstraready. RemotecontrolsCSSbyteproofandHudl pass. No merge/production.
 
-ZK-HERO-MONTAGE [RELEASE PR / BUILD PASS / ASTRA ACCEPT]: `.agent/PACKET-HERO-MONTAGE.md`; dev preview `https://fcc73554.zk17-review.pages.dev`. Public release preflight/export audit and independent Astra review pass. Cloudflare production branch verified as `main`, production build configured for release gates and video-range worker. Fresh PR, merge, and live verification pending.
+ZK-HERO-MONTAGE [PR15 MERGED / PROD BLOCKED]: `.agent/PACKET-HERO-MONTAGE.md`; merged at `93c0f640`. Production build stopped at existing canonical Road to State mockup gate (`content/playoffs/brand.json` has `mockupPath:null`). Do not bypass. Live montage deployment pending owner-supplied mockup; existing production MP4 range requests return206.

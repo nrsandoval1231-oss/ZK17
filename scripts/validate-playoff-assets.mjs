@@ -1,6 +1,7 @@
 import {readFile,access} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {resolve,relative,sep} from 'node:path';
+import {fileURLToPath} from 'node:url';
 import sharp from 'sharp';
 
 export async function validatePlayoffAssets({manifestPath=resolve('content/playoffs/brand.json'),publicRelease=process.env.PUBLIC_RELEASE==='true'}={}){
@@ -21,4 +22,4 @@ export async function validatePlayoffAssets({manifestPath=resolve('content/playo
  if(brand.mockupPath)await access(resolve(brand.mockupPath));
  return {ready:true};
 }
-if(process.argv[1]&&resolve(process.argv[1])===new URL(import.meta.url).pathname){validatePlayoffAssets().then(result=>console.log(result.ready?'Playoff brand provenance verified.':result.reason)).catch(error=>{console.error(error.message);process.exitCode=1;});}
+if(process.argv[1]&&resolve(process.argv[1])===resolve(fileURLToPath(import.meta.url))){validatePlayoffAssets().then(result=>console.log(result.ready?'Playoff brand provenance verified.':result.reason)).catch(error=>{console.error(error.message);process.exitCode=1;});}
