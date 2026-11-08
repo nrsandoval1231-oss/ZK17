@@ -48,8 +48,8 @@
 @media(max-width:899px){.montage[data-arrival-layer="color-action-glow"],.montage[data-arrival-layer="color-action"]{right:35%;bottom:25%;width:32%;height:20%}}
 @media (max-width: 600px) {
  .athlete { left: 25%; top: -8%; width: 50%; height: 64%; }
- .closeup { left: 0; top: -5%; width: 29%; height: 34%; }
- .montage[data-arrival-layer="rear"] { left: 1%; top: 31%; width: 26%; height: 31%; }
+ .closeup { visibility: hidden !important; }
+ .montage[data-arrival-layer="rear"] { left: 0; top: 0; width: 27%; height: 42%; }
  .montage[data-arrival-layer="white"] { right: 0; top: -5%; width: 28%; height: 45%; }
  .montage[data-arrival-layer="running"] { right: 0; top: 44%; bottom: auto; width: 28%; height: 23%; }
  .montage[data-arrival-layer="color-action-glow"],
