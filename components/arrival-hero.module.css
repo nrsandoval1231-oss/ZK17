@@ -47,10 +47,10 @@
 .montage[data-arrival-layer="color-action-glow"]{right:30%;bottom:4%;width:22%;height:26%;z-index:4;opacity:.6;filter:blur(6px)}.montage[data-arrival-layer="color-action"]{right:30%;bottom:4%;width:22%;height:26%;z-index:6;opacity:.9;mix-blend-mode:normal}.colorAction .photoFrame{mask-image:radial-gradient(ellipse 68% 72% at 50% 48%,#000 30%,transparent 96%)}.colorAction img,.colorActionGlow img{filter:none}.colorAction img{mask-image:linear-gradient(to bottom,transparent,#000 36%,#000),linear-gradient(to right,transparent,#000 16%,#000 75%,transparent);mask-composite:intersect;-webkit-mask-composite:source-in}
 @media(max-width:899px){.montage[data-arrival-layer="color-action-glow"],.montage[data-arrival-layer="color-action"]{right:35%;bottom:25%;width:32%;height:20%}}
 @media (max-width: 600px) {
- .athlete { left: 26%; top: 7%; width: 48%; height: 55%; }
- .closeup { left: 0; top: 8%; width: 28%; height: 29%; }
+ .athlete { left: 25%; top: -8%; width: 50%; height: 64%; }
+ .closeup { left: 0; top: -5%; width: 29%; height: 34%; }
  .montage[data-arrival-layer="rear"] { left: 1%; top: 31%; width: 26%; height: 31%; }
- .montage[data-arrival-layer="white"] { right: 0; top: 10%; width: 27%; height: 39%; }
+ .montage[data-arrival-layer="white"] { right: 0; top: -5%; width: 28%; height: 45%; }
  .montage[data-arrival-layer="running"] { right: 0; top: 44%; bottom: auto; width: 28%; height: 23%; }
  .montage[data-arrival-layer="color-action-glow"],
  .montage[data-arrival-layer="color-action"] { left: 29%; right: auto; bottom: 25%; width: 36%; height: 20%; }
