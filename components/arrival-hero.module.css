@@ -50,3 +50,5 @@
  .montage[data-arrival-layer="color-action-glow"],
  .montage[data-arrival-layer="color-action"] { left: 32%; right: auto; top: -2%; bottom: auto; width: 36%; height: 25%; }
 }
+.montage[data-arrival-layer="color-action-glow"],
+.montage[data-arrival-layer="color-action"] { left: 34%; right: auto; top: 0; bottom: auto; width: 32%; height: 25%; }
