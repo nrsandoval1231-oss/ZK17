@@ -17,7 +17,7 @@ export function trustedURL(value:string,kind:'bracket'|'game'|'team'){
  check(u.protocol==='https:'&&u.hostname==='www.maxpreps.com'&&!u.username&&!u.password&&!u.port,'Untrusted MaxPreps URL');
  if(kind==='bracket'&&u.href!==CANONICAL_BRACKET_URL)check(u.pathname==='/tournament/view.aspx'&&u.searchParams.get('bracketid')===BRACKET_ID&&u.searchParams.get('tournamentid')==='7a33d24f-4de2-43eb-aa37-7987d5c334ab'&&u.searchParams.get('ssid')==='2286cd80-c46d-4739-8dd1-92a67ca8daa7','Wrong competition URL');
  if(kind==='game')check(/^\/tx\/football\/game\/[a-z\d-]+\/\d{2}-\d{2}-2026\/$/i.test(u.pathname)&&u.searchParams.has('c'),'Unrecognized 2026 game URL');
- if(kind==='team')check(/^\/tx\/[a-z\d-]+\/[a-z\d-]+\/football\/26-27\/schedule\/$/i.test(u.pathname),'Unrecognized 2026 team URL');
+ if(kind==='team')check(/^\/tx\/[a-z\d-]+\/[a-z\d-]+\/football\/(?:26-27\/schedule\/)?$/i.test(u.pathname),'Unrecognized 2026 team URL');
  u.hash='';return u.href;
 }
 export function discoverBracket(uilHtml:string){
