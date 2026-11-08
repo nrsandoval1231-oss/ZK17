@@ -6,6 +6,13 @@
   "height": 276,
   "ownerApproved": true,
   "mockupPath": null,
-  "note": "Owner requested exterior background removal. Transparent PNG derived deterministically from the immutable original JPEG using scripts/generate-anna-logo.mjs. Original dimensions and retained RGB pixels are unchanged; interior white artwork is preserved. Canonical mockup pending.",
+  "visualApproval": {
+    "status": "approved",
+    "approvedBy": "owner",
+    "approvedOn": "2026-11-08",
+    "reviewedUrl": "https://9d0745cf.zk17-review.pages.dev/",
+    "reviewedCommit": "3f27b559bf384586eb329519cbead3474afd4fb1"
+  },
+  "note": "Owner requested exterior background removal. Transparent PNG derived deterministically from the immutable original JPEG using scripts/generate-anna-logo.mjs. Original dimensions and retained RGB pixels are unchanged; interior white artwork is preserved. Owner approved the final review preview for visual release on 2026-11-08.",
   "transparent": true
 }
