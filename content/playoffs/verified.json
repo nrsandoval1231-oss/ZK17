@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "season": 2026,
   "division": "5A-DII",
-  "checkedAt": "2026-11-08T21:59:29.635Z",
+  "checkedAt": "2026-11-09T06:17:22.363Z",
   "verificationScope": "Source-backed game updates, Anna alignment and UIL bracket structure; check individual game sources and timestamps.",
   "sources": [
     {
@@ -472,6 +472,72 @@
         {
           "url": "https://www.maxpreps.com/tx/football/game/pace-brownsville-vs-sharyland-mission/11-12-2026/?c=3c0eb4a2-f67a-4d12-a8e2-a9998210237c",
           "sha256": "d2f1ffe78eda2c214061c92b28a64e8e293fececaf88b5fc8fe24cb892e47e1a"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-256abb15747d010c",
+      "url": "https://www.maxpreps.com/tx/football/game/pflugerville-vs-tomas-richmond/11-14-2026/?c=91185988-3893-4b4d-b34e-2226620e18c1",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-09T06:17:22.363Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "176fd843c7e001cc150f66fc2c44e0ccc51e12baeb90caba267335978bd70f47"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "9a20367da0c19ddb429806ebbbd45d08d289bd145826e0ae3294917686cb57e7"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/pflugerville-vs-tomas-richmond/11-14-2026/?c=91185988-3893-4b4d-b34e-2226620e18c1",
+          "sha256": "3769ddebb889ea53893212b8c78797b80122ef86e8b5be972d21686dd78b4183"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-2de497cd0d1a5907",
+      "url": "https://www.maxpreps.com/tx/football/game/huntsville-vs-nederland/11-13-2026/?c=29353273-28b8-43df-a4d2-03daa5b85b92",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-09T06:17:22.363Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "176fd843c7e001cc150f66fc2c44e0ccc51e12baeb90caba267335978bd70f47"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "9a20367da0c19ddb429806ebbbd45d08d289bd145826e0ae3294917686cb57e7"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/huntsville-vs-nederland/11-13-2026/?c=29353273-28b8-43df-a4d2-03daa5b85b92",
+          "sha256": "7a96557e547e804708563ff497b404f955d845cdaaa18b4acf4eea83344b1a1c"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-6046149fd82b80b0",
+      "url": "https://www.maxpreps.com/tx/football/game/gregory-portland-vs-pioneer-mission/11-13-2026/?c=67046068-09dc-471b-8f97-0bda9286816d",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-09T06:17:22.363Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "176fd843c7e001cc150f66fc2c44e0ccc51e12baeb90caba267335978bd70f47"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "9a20367da0c19ddb429806ebbbd45d08d289bd145826e0ae3294917686cb57e7"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/gregory-portland-vs-pioneer-mission/11-13-2026/?c=67046068-09dc-471b-8f97-0bda9286816d",
+          "sha256": "28dd26a1bad51a024624318c58289cf6003bca4dd575c72fac2e01f70f1c01c4"
         }
       ]
     }
@@ -1889,6 +1955,48 @@
       "venue": null,
       "sourceId": "uil-linked-maxpreps-79e1e71547e0c39b",
       "verifiedAt": "2026-11-08T21:59:29.635Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-2",
+      "homeTeamId": "mp-47648dd4-12ea-4e97-bb1f-53394bf9194e",
+      "awayTeamId": "mp-36804062-1b76-4407-bfb2-611987cd826c",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T20:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-256abb15747d010c",
+      "verifiedAt": "2026-11-09T06:17:22.363Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-8",
+      "homeTeamId": "mp-db96ef3f-9d7c-40c0-89ca-fe8b11a73af1",
+      "awayTeamId": "mp-4a31a92c-1004-4ba0-bb9e-f9c4d026dafe",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-2de497cd0d1a5907",
+      "verifiedAt": "2026-11-09T06:17:22.363Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-5",
+      "homeTeamId": "mp-2a824672-6cae-43ea-b82a-4a5d22711881",
+      "awayTeamId": "mp-90b59be3-7150-4b68-a1fa-3fefe4b13fd1",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-6046149fd82b80b0",
+      "verifiedAt": "2026-11-09T06:17:22.363Z",
       "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
     }
   ],
