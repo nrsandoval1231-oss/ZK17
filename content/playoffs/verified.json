@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "season": 2026,
   "division": "5A-DII",
-  "checkedAt": "2026-11-09T06:17:22.363Z",
+  "checkedAt": "2026-11-09T16:26:42.627Z",
   "verificationScope": "Source-backed game updates, Anna alignment and UIL bracket structure; check individual game sources and timestamps.",
   "sources": [
     {
@@ -538,6 +538,94 @@
         {
           "url": "https://www.maxpreps.com/tx/football/game/gregory-portland-vs-pioneer-mission/11-13-2026/?c=67046068-09dc-471b-8f97-0bda9286816d",
           "sha256": "28dd26a1bad51a024624318c58289cf6003bca4dd575c72fac2e01f70f1c01c4"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-fac5474da28dd74e",
+      "url": "https://www.maxpreps.com/tx/football/game/burges-el-paso-vs-palo-duro-amarillo/11-12-2026/?c=14921ead-d900-415d-9e62-ad74aab7a1b1",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-09T16:26:42.627Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "31ab678de86d674cba73f07a2aa15ca57d4e6b195ced9daa433aaa47e14b54dd"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "45caa8a4d160ee82b2f1fe7db23ba95fa2c64b6e96ac90fda0a298fc690a6c39"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/burges-el-paso-vs-palo-duro-amarillo/11-12-2026/?c=14921ead-d900-415d-9e62-ad74aab7a1b1",
+          "sha256": "0f2bddee85ce90992bcdd0e4e333d4935694416fd69cbbb67b3de4bc66fd4f37"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-756274d2c6096c07",
+      "url": "https://www.maxpreps.com/tx/football/game/celina-vs-lovejoy-lucas/11-13-2026/?c=24c690e5-c132-415d-b058-9da69cebd7bc",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-09T16:26:42.627Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "31ab678de86d674cba73f07a2aa15ca57d4e6b195ced9daa433aaa47e14b54dd"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "45caa8a4d160ee82b2f1fe7db23ba95fa2c64b6e96ac90fda0a298fc690a6c39"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/celina-vs-lovejoy-lucas/11-13-2026/?c=24c690e5-c132-415d-b058-9da69cebd7bc",
+          "sha256": "2df7bc9797cbee6b24b7cc168d1d1ca8619e413fe29ba9aa0ea2cfda78a10549"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-ae429528f02bf74c",
+      "url": "https://www.maxpreps.com/tx/football/game/almeta-crawford-rosharon-vs-elgin/11-12-2026/?c=0a5411b6-ce22-4e76-a3b0-eafd62ce5c2f",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-09T16:26:42.627Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "31ab678de86d674cba73f07a2aa15ca57d4e6b195ced9daa433aaa47e14b54dd"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "45caa8a4d160ee82b2f1fe7db23ba95fa2c64b6e96ac90fda0a298fc690a6c39"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/almeta-crawford-rosharon-vs-elgin/11-12-2026/?c=0a5411b6-ce22-4e76-a3b0-eafd62ce5c2f",
+          "sha256": "c99ad3bd52fcabc3d5eaa8a1a6c2cd00bf873877f69442a981cbc3748f7fd7c8"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-4cc21358183d7bd3",
+      "url": "https://www.maxpreps.com/tx/football/game/alamo-heights-san-antonio-vs-mccollum-san-antonio/11-12-2026/?c=debc763f-7f81-4f76-b66b-b36df23c9511",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-09T16:26:42.627Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "31ab678de86d674cba73f07a2aa15ca57d4e6b195ced9daa433aaa47e14b54dd"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "45caa8a4d160ee82b2f1fe7db23ba95fa2c64b6e96ac90fda0a298fc690a6c39"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/alamo-heights-san-antonio-vs-mccollum-san-antonio/11-12-2026/?c=debc763f-7f81-4f76-b66b-b36df23c9511",
+          "sha256": "90f6530a2f2c1b35a273a540e9d5019c69f47af8b65124d126c995fd22c4314e"
         }
       ]
     }
@@ -1997,6 +2085,62 @@
       "venue": null,
       "sourceId": "maxpreps-game-6046149fd82b80b0",
       "verifiedAt": "2026-11-09T06:17:22.363Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-3",
+      "homeTeamId": "mp-7c4c5c93-8816-4135-ad85-dab4b8583891",
+      "awayTeamId": "mp-540b1cdb-27ed-462a-bf27-5b8d8dd51d11",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-13T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-fac5474da28dd74e",
+      "verifiedAt": "2026-11-09T16:26:42.627Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-4",
+      "homeTeamId": "mp-761e1afd-d386-4edd-a4ef-5e4f79d1fbf0",
+      "awayTeamId": "mp-a779a2c9-df77-4d6f-a04e-dfc380fe0f70",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:30:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-756274d2c6096c07",
+      "verifiedAt": "2026-11-09T16:26:42.627Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-5",
+      "homeTeamId": "mp-afa276f8-84eb-4fcd-b785-18420afd50f4",
+      "awayTeamId": "mp-86d83ae5-2f4e-40ff-a034-cb2112387588",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-13T00:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-ae429528f02bf74c",
+      "verifiedAt": "2026-11-09T16:26:42.627Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-8",
+      "homeTeamId": "mp-e41933ef-bffb-4574-be33-23ff30f74c6b",
+      "awayTeamId": "mp-8e64dd04-89dc-4482-8462-afae6d94626e",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-13T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-4cc21358183d7bd3",
+      "verifiedAt": "2026-11-09T16:26:42.627Z",
       "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
     }
   ],

@@ -1,505 +1,516 @@
 {
   "adapter": "maxpreps-v1",
-  "uilSha256": "176fd843c7e001cc150f66fc2c44e0ccc51e12baeb90caba267335978bd70f47",
-  "bracketSha256": "9a20367da0c19ddb429806ebbbd45d08d289bd145826e0ae3294917686cb57e7",
+  "uilSha256": "31ab678de86d674cba73f07a2aa15ca57d4e6b195ced9daa433aaa47e14b54dd",
+  "bracketSha256": "45caa8a4d160ee82b2f1fe7db23ba95fa2c64b6e96ac90fda0a298fc690a6c39",
   "bracketURL": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
-  "retrievedAt": "2026-11-09T06:17:22.363Z",
+  "retrievedAt": "2026-11-09T16:26:42.627Z",
   "mode": "apply",
-  "added": 3,
+  "added": 4,
   "warnings": [
     "r1-bi-2: Mismatched game detail",
-    "r1-bi-4: Mismatched game detail",
     "r2-bi-6: Mismatched game detail",
     "r2-bi-8: Mismatched game detail",
     "r3-bi-3: Mismatched game detail",
-    "r3-bi-5: Mismatched game detail",
     "r3-bi-6: Mismatched game detail",
     "r3-bi-7: Mismatched game detail",
     "r4-bi-2: Mismatched game detail",
     "r4-bi-3: Mismatched game detail",
-    "r4-bi-6: Mismatched game detail",
-    "r4-bi-8: Mismatched game detail"
+    "r4-bi-6: Mismatched game detail"
   ],
   "retrievals": [
     {
       "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
-      "retrievedAt": "2026-11-09T06:17:13.567Z",
+      "retrievedAt": "2026-11-09T16:26:33.799Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
       "bytes": 62304,
-      "sha256": "176fd843c7e001cc150f66fc2c44e0ccc51e12baeb90caba267335978bd70f47"
+      "sha256": "31ab678de86d674cba73f07a2aa15ca57d4e6b195ced9daa433aaa47e14b54dd"
     },
     {
       "url": "https://www.maxpreps.com/tournament/T9IzeuJN60OqN3mH1cM0qw/tLjwFS0ZCEKCjE8m85zmqA/football-26/2026-uil-texas-football-state-championships-2026-football-conference-5a-d2.htm",
-      "retrievedAt": "2026-11-09T06:17:14.366Z",
+      "retrievedAt": "2026-11-09T16:26:34.422Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 213158,
-      "sha256": "9a20367da0c19ddb429806ebbbd45d08d289bd145826e0ae3294917686cb57e7",
+      "bytes": 213712,
+      "sha256": "45caa8a4d160ee82b2f1fe7db23ba95fa2c64b6e96ac90fda0a298fc690a6c39",
       "originalURL": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/colleyville-heritage-vs-frisco/11-12-2026/?c=58820efd-5cad-4d12-8159-50c34b48ae20",
-      "retrievedAt": "2026-11-09T06:17:15.499Z",
-      "httpStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "redirectURL": "",
-      "bytes": 341703,
-      "sha256": "b50418024348e1e84526b16422d676bdc69c446b58dbbfe8739bf8534868d04f"
-    },
-    {
       "url": "https://www.maxpreps.com/tx/football/game/burges-el-paso-vs-palo-duro-amarillo/11-12-2026/?c=14921ead-d900-415d-9e62-ad74aab7a1b1",
-      "retrievedAt": "2026-11-09T06:17:15.502Z",
+      "retrievedAt": "2026-11-09T16:26:34.905Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 349816,
-      "sha256": "e723614db6965e2a73a23042a3d2cfb5fcaa8c04ca75e4dd59e544699cf8c40c"
+      "bytes": 349805,
+      "sha256": "0f2bddee85ce90992bcdd0e4e333d4935694416fd69cbbb67b3de4bc66fd4f37"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/chapin-el-paso-vs-legacy-wichita-falls/11-13-2026/?c=6427679e-4620-4b57-b01a-2837ab407be9",
-      "retrievedAt": "2026-11-09T06:17:15.496Z",
+      "retrievedAt": "2026-11-09T16:26:34.899Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 362010,
-      "sha256": "6923292589e270d438c398bf8fd1b07a6abf76b94bf8440bded8a1840726b3de"
+      "bytes": 362097,
+      "sha256": "5a53c3d9d99ee29d3f13c5e9d9d3910f0c9d292292ca75cb97c18becf469a89a"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/celina-vs-lovejoy-lucas/11-13-2026/?c=24c690e5-c132-415d-b058-9da69cebd7bc",
-      "retrievedAt": "2026-11-09T06:17:15.506Z",
+      "retrievedAt": "2026-11-09T16:26:34.909Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 370724,
-      "sha256": "6e921de9518f6b2f10372540797c4a5b880b660213a39a6db8e55282f26dc294"
+      "bytes": 371821,
+      "sha256": "2df7bc9797cbee6b24b7cc168d1d1ca8619e413fe29ba9aa0ea2cfda78a10549"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/del-valle-el-paso-vs-wylie-abilene/11-13-2026/?c=1bf74794-b152-42dc-870b-b43b9dec35d2",
-      "retrievedAt": "2026-11-09T06:17:16.004Z",
+      "url": "https://www.maxpreps.com/tx/football/game/colleyville-heritage-vs-frisco/11-12-2026/?c=58820efd-5cad-4d12-8159-50c34b48ae20",
+      "retrievedAt": "2026-11-09T16:26:34.902Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 361178,
-      "sha256": "8bd8278de1bad639c54ee04ad5f71b3a0668ea1c303df5a11d428a6eb4500b36"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/argyle-vs-panther-creek-frisco/11-13-2026/?c=8292d13b-c799-483a-9898-c2edebda8f45",
-      "retrievedAt": "2026-11-09T06:17:16.001Z",
-      "httpStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "redirectURL": "",
-      "bytes": 371735,
-      "sha256": "33cca30e1d310acfdde43dd785d292024859775384514fb0784ccb816955a9c6"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/canutillo-vs-cooper-abilene/11-13-2026/?c=15abc81e-2af8-45c6-800b-5c03316d2169",
-      "retrievedAt": "2026-11-09T06:17:16.010Z",
-      "httpStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "redirectURL": "",
-      "bytes": 368587,
-      "sha256": "f3a4fec119f27396176053631240f7aff07a42dab7f03109124bae035398be54"
+      "bytes": 341791,
+      "sha256": "8f7f161274e1d474ad9914686f6420095b1da672edc414fa32d18a224f60c2d4"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/anna-vs-the-colony/11-13-2026/?c=4514c2fd-fae6-40a6-bec7-62dfa191696f",
-      "retrievedAt": "2026-11-09T06:17:16.007Z",
+      "retrievedAt": "2026-11-09T16:26:35.346Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 380724,
-      "sha256": "58b109639c4b5a7eb5670d1c7ca9c95f406a77c43fd07ead588baa680162ba2c"
+      "bytes": 380809,
+      "sha256": "0e039d51da3505826d6cebe2d6353d365ba45ab16b7e977101dbd39b5ed1ba39"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/argyle-vs-panther-creek-frisco/11-13-2026/?c=8292d13b-c799-483a-9898-c2edebda8f45",
+      "retrievedAt": "2026-11-09T16:26:35.340Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "redirectURL": "",
+      "bytes": 371824,
+      "sha256": "c412d305bd33e0ebddb0918fa42c639ac484e10d1c52134ffab4585638cb7651"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/del-valle-el-paso-vs-wylie-abilene/11-13-2026/?c=1bf74794-b152-42dc-870b-b43b9dec35d2",
+      "retrievedAt": "2026-11-09T16:26:35.343Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "redirectURL": "",
+      "bytes": 361263,
+      "sha256": "e79a53859d31daa887ff7552fe8c67321e3461db9b4f42cf496a8f94d75e790b"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/canutillo-vs-cooper-abilene/11-13-2026/?c=15abc81e-2af8-45c6-800b-5c03316d2169",
+      "retrievedAt": "2026-11-09T16:26:35.349Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "redirectURL": "",
+      "bytes": 368675,
+      "sha256": "f321b5a9eb2d81b75fff442555a06b4c230114ccc555b32b8246004821306287"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/ellison-killeen-vs-midlothian-heritage/11-13-2026/?c=bde9d27a-a194-423a-a7b7-0bb89381ad83",
-      "retrievedAt": "2026-11-09T06:17:16.345Z",
+      "retrievedAt": "2026-11-09T16:26:37.468Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 377303,
-      "sha256": "52d525b1a622dbfbf304ac6be5d834d49ce1aa09a2dbdafd9e2705060a512497"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/belton-vs-ennis/11-13-2026/?c=03cd4005-3fa5-4a51-8290-1a203a9f78c9",
-      "retrievedAt": "2026-11-09T06:17:16.339Z",
-      "httpStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "redirectURL": "",
-      "bytes": 381312,
-      "sha256": "909b2878f5716ff3a7747b7555e397eaa10837fd3a289fef2b1142209611bd2e"
+      "bytes": 377390,
+      "sha256": "67b2d464af81eeb371c23badab311ccd8f9df664a0f151e3d92856e6160af98c"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/samuell-dallas-vs-terrell/11-12-2026/?c=38d1760c-41b6-41b6-932f-afabadc8d689",
-      "retrievedAt": "2026-11-09T06:17:16.341Z",
+      "retrievedAt": "2026-11-09T16:26:37.464Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 372171,
-      "sha256": "5b294b139822b6a8c2d91fb2e4bd2f7e691aa312954b923ee75d435fd4817552"
+      "bytes": 372266,
+      "sha256": "c83219858f21386812e4f216b2f0551e60b1a023eab964b50c18221e930c5cb6"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/belton-vs-ennis/11-13-2026/?c=03cd4005-3fa5-4a51-8290-1a203a9f78c9",
+      "retrievedAt": "2026-11-09T16:26:37.461Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "redirectURL": "",
+      "bytes": 381402,
+      "sha256": "4ed0e06622a284ee189ca43367c8fca5edb4d90f509afafb1531dbf124c96357"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/south-oak-cliff-dallas-vs-whitehouse/11-12-2026/?c=336c4242-8512-42b5-ac4b-8a2ba940bc88",
-      "retrievedAt": "2026-11-09T06:17:16.335Z",
+      "retrievedAt": "2026-11-09T16:26:37.457Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 366800,
-      "sha256": "54df0db2842323e7d041afb3bcab5444db79ebbdaeb80b6f1aec468525e5a7f2"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/brenham-vs-seguin-arlington/11-13-2026/?c=4271ad2f-0a51-4bcb-8cef-401b1d733eef",
-      "retrievedAt": "2026-11-09T06:17:16.803Z",
-      "httpStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "redirectURL": "",
-      "bytes": 371616,
-      "sha256": "19f44ade18aef7044fc9cf08ecb0ba821fb57f003e7e5ea7c34d9be024185b30"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/texas-texarkana-vs-wilson-dallas/11-12-2026/?c=1010365d-72d9-41af-85a6-1704e4fe49e9",
-      "retrievedAt": "2026-11-09T06:17:16.800Z",
-      "httpStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "redirectURL": "",
-      "bytes": 352917,
-      "sha256": "19ad8f0cabf09a9a626084d68c9c85f0f68464554ba77c1ebb21d92131afbfd8"
+      "bytes": 366881,
+      "sha256": "c2b72e5d59621805332489f03a08b3c08d4cc85c70b8c2cb793a573af3eb8c88"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/hallsville-vs-hillcrest-dallas/11-12-2026/?c=d6e1c734-58c5-421e-9aa2-110e725f9e7b",
-      "retrievedAt": "2026-11-09T06:17:16.806Z",
+      "retrievedAt": "2026-11-09T16:26:39.946Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 341934,
-      "sha256": "30f4b6d31aa2d90503482ffe1574820f9b24ad37780c8242e35f84f1b6b317f2"
+      "bytes": 342017,
+      "sha256": "8484fb1ec9c32f5b19e8c067c540d370b5f94632e2b8a293d5e5e1cea83c05e7"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/mansfield-timberview-arlington-vs-waco/11-13-2026/?c=e3284e13-55f0-4165-b26b-7ebb9d837ab3",
-      "retrievedAt": "2026-11-09T06:17:16.796Z",
+      "retrievedAt": "2026-11-09T16:26:39.936Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 380266,
-      "sha256": "3d27ed332b74445dade52e698fc600db7d11d28e534711e7dd1946bb660360ce"
+      "bytes": 380357,
+      "sha256": "d40f6b932af45f390ea1b1996d2bf1ab1177b7b0a22b55637412d8c6125f0231"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/pflugerville-vs-tomas-richmond/11-14-2026/?c=91185988-3893-4b4d-b34e-2226620e18c1",
-      "retrievedAt": "2026-11-09T06:17:17.180Z",
+      "url": "https://www.maxpreps.com/tx/football/game/texas-texarkana-vs-wilson-dallas/11-12-2026/?c=1010365d-72d9-41af-85a6-1704e4fe49e9",
+      "retrievedAt": "2026-11-09T16:26:39.939Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 347096,
-      "sha256": "3769ddebb889ea53893212b8c78797b80122ef86e8b5be972d21686dd78b4183"
+      "bytes": 353005,
+      "sha256": "464b3e1b6a0f374c636dc53419ec80cacc2265b0cb9b153ef0e2ec0052e33a5b"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/port-neches-groves-vs-west-fork-kingwood/11-12-2026/?c=cb624a56-2a77-4950-933c-59d3c28e6950",
-      "retrievedAt": "2026-11-09T06:17:17.183Z",
+      "url": "https://www.maxpreps.com/tx/football/game/brenham-vs-seguin-arlington/11-13-2026/?c=4271ad2f-0a51-4bcb-8cef-401b1d733eef",
+      "retrievedAt": "2026-11-09T16:26:39.942Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 354293,
-      "sha256": "bb7a38bf1b2ab9a8e882157af18cd2f08b89b8e57169192c83f8e148ede43835"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/crockett-austin-vs-fort-bend-marshall-missouri-city/11-13-2026/?c=842d7fa1-70af-4045-8ee1-287677b2c8ae",
-      "retrievedAt": "2026-11-09T06:17:17.187Z",
-      "httpStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "redirectURL": "",
-      "bytes": 357115,
-      "sha256": "648a3eb2e8eeef27fd710fdbd0156ff77cc8a7a7822e149f4f68b4a73a5da60e"
+      "bytes": 371706,
+      "sha256": "4161d3aa687f500cbcc863a209498a76463a12ed6e52c20465b2e1fb466585be"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/dayton-vs-montgomery/11-13-2026/?c=c3cce10f-f414-4b93-86fa-3a743e4f5e08",
-      "retrievedAt": "2026-11-09T06:17:17.177Z",
+      "retrievedAt": "2026-11-09T16:26:40.412Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 365838,
-      "sha256": "5ebd0a9c76b05842385baf3d8aec3b840b99e9a7fc12d6b0ccc78e1395fe1845"
+      "bytes": 365928,
+      "sha256": "30544730facdceaa631998cd04422ccd6e94f83aafba25ba500059fd0a020a35"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/almeta-crawford-rosharon-vs-elgin/11-12-2026/?c=0a5411b6-ce22-4e76-a3b0-eafd62ce5c2f",
-      "retrievedAt": "2026-11-09T06:17:17.613Z",
+      "url": "https://www.maxpreps.com/tx/football/game/crockett-austin-vs-fort-bend-marshall-missouri-city/11-13-2026/?c=842d7fa1-70af-4045-8ee1-287677b2c8ae",
+      "retrievedAt": "2026-11-09T16:26:40.423Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 356076,
-      "sha256": "c48dc210aca9abc652aa09bf26a2e001ca365ab25f00533cd79019a38010f80c"
+      "bytes": 357209,
+      "sha256": "a5bd17d0f0dffe6df32cc2dc665ed4be1e9024c85c151df669cbafd44cf274e6"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/bastrop-vs-victoria-west/11-12-2026/?c=4e0274ea-21b5-4dca-9030-832ad8a01831",
-      "retrievedAt": "2026-11-09T06:17:17.620Z",
+      "url": "https://www.maxpreps.com/tx/football/game/pflugerville-vs-tomas-richmond/11-14-2026/?c=91185988-3893-4b4d-b34e-2226620e18c1",
+      "retrievedAt": "2026-11-09T16:26:40.416Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 344445,
-      "sha256": "abcd9d0acb4f24bf560c0a7ad3d88f8d5d3f1476173469625ea7e9b1d67c149e"
+      "bytes": 347184,
+      "sha256": "7c62b2bb17031e30f27884bf929c4fc42bec63cf66bfc1171cec8c996f666884"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/lake-creek-montgomery-vs-texas-city/11-12-2026/?c=2af66978-9eed-430a-89f9-9d8b0be2ed0d",
-      "retrievedAt": "2026-11-09T06:17:17.617Z",
+      "url": "https://www.maxpreps.com/tx/football/game/port-neches-groves-vs-west-fork-kingwood/11-12-2026/?c=cb624a56-2a77-4950-933c-59d3c28e6950",
+      "retrievedAt": "2026-11-09T16:26:40.419Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 346693,
-      "sha256": "71553dbf08f618b962be228802c9b123fced1cebbbcc6c15ac866978a4b6bf22"
+      "bytes": 354386,
+      "sha256": "5b56733a8d13b4afbf15899d0b04b3c4ef352ff62e9a3f7ee521674f19592c3f"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/huntsville-vs-nederland/11-13-2026/?c=29353273-28b8-43df-a4d2-03daa5b85b92",
-      "retrievedAt": "2026-11-09T06:17:17.623Z",
+      "retrievedAt": "2026-11-09T16:26:40.932Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 363414,
-      "sha256": "7a96557e547e804708563ff497b404f955d845cdaaa18b4acf4eea83344b1a1c"
+      "bytes": 363406,
+      "sha256": "6e97b3e2a25be25facecdba80ded8fe1c080dfe0cbe96433a45f6b206d17f3be"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/lake-creek-montgomery-vs-texas-city/11-12-2026/?c=2af66978-9eed-430a-89f9-9d8b0be2ed0d",
+      "retrievedAt": "2026-11-09T16:26:40.925Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "redirectURL": "",
+      "bytes": 346785,
+      "sha256": "a9d1f093de951278694f79d13b23ff40acfcb9df71296272dce15ea2b3323005"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/bastrop-vs-victoria-west/11-12-2026/?c=4e0274ea-21b5-4dca-9030-832ad8a01831",
+      "retrievedAt": "2026-11-09T16:26:40.928Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "redirectURL": "",
+      "bytes": 327523,
+      "sha256": "0d1fa9f151743535c225a98cea3eeb939dbcd1201bb35b2a979660ce37da04eb"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/almeta-crawford-rosharon-vs-elgin/11-12-2026/?c=0a5411b6-ce22-4e76-a3b0-eafd62ce5c2f",
+      "retrievedAt": "2026-11-09T16:26:40.921Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "redirectURL": "",
+      "bytes": 353268,
+      "sha256": "c99ad3bd52fcabc3d5eaa8a1a6c2cd00bf873877f69442a981cbc3748f7fd7c8"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/mercedes-vs-mission-veterans-memorial/11-12-2026/?c=9dbe5ad9-6ea7-48e1-8294-b68519655285",
-      "retrievedAt": "2026-11-09T06:17:18.154Z",
+      "retrievedAt": "2026-11-09T16:26:41.366Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 328333,
-      "sha256": "bcd8ea72d671529a01b20df71ddddac22be23f724d0af4cacf62ef2653e28a41"
+      "bytes": 328420,
+      "sha256": "eb6a2964048b9b9b59a86768af75dda9e34ed889ab57fa95f6bcecb22331527a"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/legacy-ranch-liberty-hill-vs-sam-houston-san-antonio/11-12-2026/?c=a8f88f7e-d91a-4317-a2f3-10008445313f",
-      "retrievedAt": "2026-11-09T06:17:18.159Z",
+      "retrievedAt": "2026-11-09T16:26:41.370Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 353954,
-      "sha256": "7ad6e4834d1c75336a152124a8f267c5eb42f65655d449f829f4ace6c165d77a"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/cigarroa-laredo-vs-ray-corpus-christi/11-12-2026/?c=bd9cacd3-65df-48f7-8829-1e078aec863b",
-      "retrievedAt": "2026-11-09T06:17:18.165Z",
-      "httpStatus": 200,
-      "contentType": "text/html; charset=utf-8",
-      "redirectURL": "",
-      "bytes": 367969,
-      "sha256": "2789989a3072d102d35d8feabd76ff717c8c018a59664d0500fedd8ed45b4b45"
+      "bytes": 354042,
+      "sha256": "f0e4d469fd440bc107f9c4956dec54b9fcb5a4ccef4634baf452777e9530fd4e"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/boerne-vs-brackenridge-san-antonio/11-12-2026/?c=076828d5-dbf1-4ed0-a711-329e655e88cb",
-      "retrievedAt": "2026-11-09T06:17:18.148Z",
+      "retrievedAt": "2026-11-09T16:26:41.363Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 350149,
-      "sha256": "14d61f80300c4460c43ad959a261aa03e0e6c470108d058d04b21459ef40ed34"
+      "bytes": 350233,
+      "sha256": "80c13acb6a3edb54bdeb29f74b4156e6b6a1736615812364672d64e542cf1fbb"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/harlandale-san-antonio-vs-liberty-hill/11-12-2026/?c=2af02a1b-d889-4d6d-a6b9-5bf1505c10c4",
-      "retrievedAt": "2026-11-09T06:17:21.588Z",
+      "url": "https://www.maxpreps.com/tx/football/game/cigarroa-laredo-vs-ray-corpus-christi/11-12-2026/?c=bd9cacd3-65df-48f7-8829-1e078aec863b",
+      "retrievedAt": "2026-11-09T16:26:41.374Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 353116,
-      "sha256": "87c250b1448182c4ef89090c0efec0c5ecd03cea10f9f55dd263294c608c03c8"
+      "bytes": 368007,
+      "sha256": "70caf72bc15febdb16d7307d4977b70edf00d96a6b2eea7188639441ba8f1a83"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/alamo-heights-san-antonio-vs-mccollum-san-antonio/11-12-2026/?c=debc763f-7f81-4f76-b66b-b36df23c9511",
-      "retrievedAt": "2026-11-09T06:17:21.594Z",
+      "retrievedAt": "2026-11-09T16:26:42.140Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 357663,
-      "sha256": "afe0b76cff178805c8917d2c759bdf2441c33e5a327a2420224a93b58dbf5cfb"
+      "bytes": 357740,
+      "sha256": "90f6530a2f2c1b35a273a540e9d5019c69f47af8b65124d126c995fd22c4314e"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/pace-brownsville-vs-sharyland-mission/11-12-2026/?c=3c0eb4a2-f67a-4d12-a8e2-a9998210237c",
-      "retrievedAt": "2026-11-09T06:17:21.591Z",
+      "retrievedAt": "2026-11-09T16:26:42.136Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 362997,
-      "sha256": "a9088a548099dd9ca672593e40ab5ab258314b033fc8ff7db94fba035a92dceb"
+      "bytes": 363082,
+      "sha256": "d7f6e4edb3fce6fb428e55aca082c0700caf13caf14a99c4245f571a0fec2991"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/harlandale-san-antonio-vs-liberty-hill/11-12-2026/?c=2af02a1b-d889-4d6d-a6b9-5bf1505c10c4",
+      "retrievedAt": "2026-11-09T16:26:42.133Z",
+      "httpStatus": 200,
+      "contentType": "text/html; charset=utf-8",
+      "redirectURL": "",
+      "bytes": 353204,
+      "sha256": "1cc6764dfc75e69b2936f613fffdc5cffe3662c45c9cd6a3de041293ed3b5248"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/gregory-portland-vs-pioneer-mission/11-13-2026/?c=67046068-09dc-471b-8f97-0bda9286816d",
-      "retrievedAt": "2026-11-09T06:17:21.585Z",
+      "retrievedAt": "2026-11-09T16:26:42.130Z",
       "httpStatus": 200,
       "contentType": "text/html; charset=utf-8",
       "redirectURL": "",
-      "bytes": 343414,
-      "sha256": "28dd26a1bad51a024624318c58289cf6003bca4dd575c72fac2e01f70f1c01c4"
+      "bytes": 343505,
+      "sha256": "7c3957bd86f29baa0c875c793b58d9100ce9e28e6595b1b668b33dcb17325cdf"
     }
   ],
   "details": [
     {
-      "url": "https://www.maxpreps.com/tx/football/game/colleyville-heritage-vs-frisco/11-12-2026/?c=58820efd-5cad-4d12-8159-50c34b48ae20",
-      "sha256": "b50418024348e1e84526b16422d676bdc69c446b58dbbfe8739bf8534868d04f"
-    },
-    {
       "url": "https://www.maxpreps.com/tx/football/game/burges-el-paso-vs-palo-duro-amarillo/11-12-2026/?c=14921ead-d900-415d-9e62-ad74aab7a1b1",
-      "sha256": "e723614db6965e2a73a23042a3d2cfb5fcaa8c04ca75e4dd59e544699cf8c40c"
+      "sha256": "0f2bddee85ce90992bcdd0e4e333d4935694416fd69cbbb67b3de4bc66fd4f37"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/chapin-el-paso-vs-legacy-wichita-falls/11-13-2026/?c=6427679e-4620-4b57-b01a-2837ab407be9",
-      "sha256": "6923292589e270d438c398bf8fd1b07a6abf76b94bf8440bded8a1840726b3de"
+      "sha256": "5a53c3d9d99ee29d3f13c5e9d9d3910f0c9d292292ca75cb97c18becf469a89a"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/celina-vs-lovejoy-lucas/11-13-2026/?c=24c690e5-c132-415d-b058-9da69cebd7bc",
-      "sha256": "6e921de9518f6b2f10372540797c4a5b880b660213a39a6db8e55282f26dc294"
+      "sha256": "2df7bc9797cbee6b24b7cc168d1d1ca8619e413fe29ba9aa0ea2cfda78a10549"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/del-valle-el-paso-vs-wylie-abilene/11-13-2026/?c=1bf74794-b152-42dc-870b-b43b9dec35d2",
-      "sha256": "8bd8278de1bad639c54ee04ad5f71b3a0668ea1c303df5a11d428a6eb4500b36"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/argyle-vs-panther-creek-frisco/11-13-2026/?c=8292d13b-c799-483a-9898-c2edebda8f45",
-      "sha256": "33cca30e1d310acfdde43dd785d292024859775384514fb0784ccb816955a9c6"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/canutillo-vs-cooper-abilene/11-13-2026/?c=15abc81e-2af8-45c6-800b-5c03316d2169",
-      "sha256": "f3a4fec119f27396176053631240f7aff07a42dab7f03109124bae035398be54"
+      "url": "https://www.maxpreps.com/tx/football/game/colleyville-heritage-vs-frisco/11-12-2026/?c=58820efd-5cad-4d12-8159-50c34b48ae20",
+      "sha256": "8f7f161274e1d474ad9914686f6420095b1da672edc414fa32d18a224f60c2d4"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/anna-vs-the-colony/11-13-2026/?c=4514c2fd-fae6-40a6-bec7-62dfa191696f",
-      "sha256": "58b109639c4b5a7eb5670d1c7ca9c95f406a77c43fd07ead588baa680162ba2c"
+      "sha256": "0e039d51da3505826d6cebe2d6353d365ba45ab16b7e977101dbd39b5ed1ba39"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/argyle-vs-panther-creek-frisco/11-13-2026/?c=8292d13b-c799-483a-9898-c2edebda8f45",
+      "sha256": "c412d305bd33e0ebddb0918fa42c639ac484e10d1c52134ffab4585638cb7651"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/del-valle-el-paso-vs-wylie-abilene/11-13-2026/?c=1bf74794-b152-42dc-870b-b43b9dec35d2",
+      "sha256": "e79a53859d31daa887ff7552fe8c67321e3461db9b4f42cf496a8f94d75e790b"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/canutillo-vs-cooper-abilene/11-13-2026/?c=15abc81e-2af8-45c6-800b-5c03316d2169",
+      "sha256": "f321b5a9eb2d81b75fff442555a06b4c230114ccc555b32b8246004821306287"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/ellison-killeen-vs-midlothian-heritage/11-13-2026/?c=bde9d27a-a194-423a-a7b7-0bb89381ad83",
-      "sha256": "52d525b1a622dbfbf304ac6be5d834d49ce1aa09a2dbdafd9e2705060a512497"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/belton-vs-ennis/11-13-2026/?c=03cd4005-3fa5-4a51-8290-1a203a9f78c9",
-      "sha256": "909b2878f5716ff3a7747b7555e397eaa10837fd3a289fef2b1142209611bd2e"
+      "sha256": "67b2d464af81eeb371c23badab311ccd8f9df664a0f151e3d92856e6160af98c"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/samuell-dallas-vs-terrell/11-12-2026/?c=38d1760c-41b6-41b6-932f-afabadc8d689",
-      "sha256": "5b294b139822b6a8c2d91fb2e4bd2f7e691aa312954b923ee75d435fd4817552"
+      "sha256": "c83219858f21386812e4f216b2f0551e60b1a023eab964b50c18221e930c5cb6"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/belton-vs-ennis/11-13-2026/?c=03cd4005-3fa5-4a51-8290-1a203a9f78c9",
+      "sha256": "4ed0e06622a284ee189ca43367c8fca5edb4d90f509afafb1531dbf124c96357"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/south-oak-cliff-dallas-vs-whitehouse/11-12-2026/?c=336c4242-8512-42b5-ac4b-8a2ba940bc88",
-      "sha256": "54df0db2842323e7d041afb3bcab5444db79ebbdaeb80b6f1aec468525e5a7f2"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/brenham-vs-seguin-arlington/11-13-2026/?c=4271ad2f-0a51-4bcb-8cef-401b1d733eef",
-      "sha256": "19f44ade18aef7044fc9cf08ecb0ba821fb57f003e7e5ea7c34d9be024185b30"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/texas-texarkana-vs-wilson-dallas/11-12-2026/?c=1010365d-72d9-41af-85a6-1704e4fe49e9",
-      "sha256": "19ad8f0cabf09a9a626084d68c9c85f0f68464554ba77c1ebb21d92131afbfd8"
+      "sha256": "c2b72e5d59621805332489f03a08b3c08d4cc85c70b8c2cb793a573af3eb8c88"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/hallsville-vs-hillcrest-dallas/11-12-2026/?c=d6e1c734-58c5-421e-9aa2-110e725f9e7b",
-      "sha256": "30f4b6d31aa2d90503482ffe1574820f9b24ad37780c8242e35f84f1b6b317f2"
+      "sha256": "8484fb1ec9c32f5b19e8c067c540d370b5f94632e2b8a293d5e5e1cea83c05e7"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/mansfield-timberview-arlington-vs-waco/11-13-2026/?c=e3284e13-55f0-4165-b26b-7ebb9d837ab3",
-      "sha256": "3d27ed332b74445dade52e698fc600db7d11d28e534711e7dd1946bb660360ce"
+      "sha256": "d40f6b932af45f390ea1b1996d2bf1ab1177b7b0a22b55637412d8c6125f0231"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/pflugerville-vs-tomas-richmond/11-14-2026/?c=91185988-3893-4b4d-b34e-2226620e18c1",
-      "sha256": "3769ddebb889ea53893212b8c78797b80122ef86e8b5be972d21686dd78b4183"
+      "url": "https://www.maxpreps.com/tx/football/game/texas-texarkana-vs-wilson-dallas/11-12-2026/?c=1010365d-72d9-41af-85a6-1704e4fe49e9",
+      "sha256": "464b3e1b6a0f374c636dc53419ec80cacc2265b0cb9b153ef0e2ec0052e33a5b"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/port-neches-groves-vs-west-fork-kingwood/11-12-2026/?c=cb624a56-2a77-4950-933c-59d3c28e6950",
-      "sha256": "bb7a38bf1b2ab9a8e882157af18cd2f08b89b8e57169192c83f8e148ede43835"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/crockett-austin-vs-fort-bend-marshall-missouri-city/11-13-2026/?c=842d7fa1-70af-4045-8ee1-287677b2c8ae",
-      "sha256": "648a3eb2e8eeef27fd710fdbd0156ff77cc8a7a7822e149f4f68b4a73a5da60e"
+      "url": "https://www.maxpreps.com/tx/football/game/brenham-vs-seguin-arlington/11-13-2026/?c=4271ad2f-0a51-4bcb-8cef-401b1d733eef",
+      "sha256": "4161d3aa687f500cbcc863a209498a76463a12ed6e52c20465b2e1fb466585be"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/dayton-vs-montgomery/11-13-2026/?c=c3cce10f-f414-4b93-86fa-3a743e4f5e08",
-      "sha256": "5ebd0a9c76b05842385baf3d8aec3b840b99e9a7fc12d6b0ccc78e1395fe1845"
+      "sha256": "30544730facdceaa631998cd04422ccd6e94f83aafba25ba500059fd0a020a35"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/almeta-crawford-rosharon-vs-elgin/11-12-2026/?c=0a5411b6-ce22-4e76-a3b0-eafd62ce5c2f",
-      "sha256": "c48dc210aca9abc652aa09bf26a2e001ca365ab25f00533cd79019a38010f80c"
+      "url": "https://www.maxpreps.com/tx/football/game/crockett-austin-vs-fort-bend-marshall-missouri-city/11-13-2026/?c=842d7fa1-70af-4045-8ee1-287677b2c8ae",
+      "sha256": "a5bd17d0f0dffe6df32cc2dc665ed4be1e9024c85c151df669cbafd44cf274e6"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/bastrop-vs-victoria-west/11-12-2026/?c=4e0274ea-21b5-4dca-9030-832ad8a01831",
-      "sha256": "abcd9d0acb4f24bf560c0a7ad3d88f8d5d3f1476173469625ea7e9b1d67c149e"
+      "url": "https://www.maxpreps.com/tx/football/game/pflugerville-vs-tomas-richmond/11-14-2026/?c=91185988-3893-4b4d-b34e-2226620e18c1",
+      "sha256": "7c62b2bb17031e30f27884bf929c4fc42bec63cf66bfc1171cec8c996f666884"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/lake-creek-montgomery-vs-texas-city/11-12-2026/?c=2af66978-9eed-430a-89f9-9d8b0be2ed0d",
-      "sha256": "71553dbf08f618b962be228802c9b123fced1cebbbcc6c15ac866978a4b6bf22"
+      "url": "https://www.maxpreps.com/tx/football/game/port-neches-groves-vs-west-fork-kingwood/11-12-2026/?c=cb624a56-2a77-4950-933c-59d3c28e6950",
+      "sha256": "5b56733a8d13b4afbf15899d0b04b3c4ef352ff62e9a3f7ee521674f19592c3f"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/huntsville-vs-nederland/11-13-2026/?c=29353273-28b8-43df-a4d2-03daa5b85b92",
-      "sha256": "7a96557e547e804708563ff497b404f955d845cdaaa18b4acf4eea83344b1a1c"
+      "sha256": "6e97b3e2a25be25facecdba80ded8fe1c080dfe0cbe96433a45f6b206d17f3be"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/lake-creek-montgomery-vs-texas-city/11-12-2026/?c=2af66978-9eed-430a-89f9-9d8b0be2ed0d",
+      "sha256": "a9d1f093de951278694f79d13b23ff40acfcb9df71296272dce15ea2b3323005"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/bastrop-vs-victoria-west/11-12-2026/?c=4e0274ea-21b5-4dca-9030-832ad8a01831",
+      "sha256": "0d1fa9f151743535c225a98cea3eeb939dbcd1201bb35b2a979660ce37da04eb"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/almeta-crawford-rosharon-vs-elgin/11-12-2026/?c=0a5411b6-ce22-4e76-a3b0-eafd62ce5c2f",
+      "sha256": "c99ad3bd52fcabc3d5eaa8a1a6c2cd00bf873877f69442a981cbc3748f7fd7c8"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/mercedes-vs-mission-veterans-memorial/11-12-2026/?c=9dbe5ad9-6ea7-48e1-8294-b68519655285",
-      "sha256": "bcd8ea72d671529a01b20df71ddddac22be23f724d0af4cacf62ef2653e28a41"
+      "sha256": "eb6a2964048b9b9b59a86768af75dda9e34ed889ab57fa95f6bcecb22331527a"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/legacy-ranch-liberty-hill-vs-sam-houston-san-antonio/11-12-2026/?c=a8f88f7e-d91a-4317-a2f3-10008445313f",
-      "sha256": "7ad6e4834d1c75336a152124a8f267c5eb42f65655d449f829f4ace6c165d77a"
-    },
-    {
-      "url": "https://www.maxpreps.com/tx/football/game/cigarroa-laredo-vs-ray-corpus-christi/11-12-2026/?c=bd9cacd3-65df-48f7-8829-1e078aec863b",
-      "sha256": "2789989a3072d102d35d8feabd76ff717c8c018a59664d0500fedd8ed45b4b45"
+      "sha256": "f0e4d469fd440bc107f9c4956dec54b9fcb5a4ccef4634baf452777e9530fd4e"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/boerne-vs-brackenridge-san-antonio/11-12-2026/?c=076828d5-dbf1-4ed0-a711-329e655e88cb",
-      "sha256": "14d61f80300c4460c43ad959a261aa03e0e6c470108d058d04b21459ef40ed34"
+      "sha256": "80c13acb6a3edb54bdeb29f74b4156e6b6a1736615812364672d64e542cf1fbb"
     },
     {
-      "url": "https://www.maxpreps.com/tx/football/game/harlandale-san-antonio-vs-liberty-hill/11-12-2026/?c=2af02a1b-d889-4d6d-a6b9-5bf1505c10c4",
-      "sha256": "87c250b1448182c4ef89090c0efec0c5ecd03cea10f9f55dd263294c608c03c8"
+      "url": "https://www.maxpreps.com/tx/football/game/cigarroa-laredo-vs-ray-corpus-christi/11-12-2026/?c=bd9cacd3-65df-48f7-8829-1e078aec863b",
+      "sha256": "70caf72bc15febdb16d7307d4977b70edf00d96a6b2eea7188639441ba8f1a83"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/alamo-heights-san-antonio-vs-mccollum-san-antonio/11-12-2026/?c=debc763f-7f81-4f76-b66b-b36df23c9511",
-      "sha256": "afe0b76cff178805c8917d2c759bdf2441c33e5a327a2420224a93b58dbf5cfb"
+      "sha256": "90f6530a2f2c1b35a273a540e9d5019c69f47af8b65124d126c995fd22c4314e"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/pace-brownsville-vs-sharyland-mission/11-12-2026/?c=3c0eb4a2-f67a-4d12-a8e2-a9998210237c",
-      "sha256": "a9088a548099dd9ca672593e40ab5ab258314b033fc8ff7db94fba035a92dceb"
+      "sha256": "d7f6e4edb3fce6fb428e55aca082c0700caf13caf14a99c4245f571a0fec2991"
+    },
+    {
+      "url": "https://www.maxpreps.com/tx/football/game/harlandale-san-antonio-vs-liberty-hill/11-12-2026/?c=2af02a1b-d889-4d6d-a6b9-5bf1505c10c4",
+      "sha256": "1cc6764dfc75e69b2936f613fffdc5cffe3662c45c9cd6a3de041293ed3b5248"
     },
     {
       "url": "https://www.maxpreps.com/tx/football/game/gregory-portland-vs-pioneer-mission/11-13-2026/?c=67046068-09dc-471b-8f97-0bda9286816d",
-      "sha256": "28dd26a1bad51a024624318c58289cf6003bca4dd575c72fac2e01f70f1c01c4"
+      "sha256": "7c3957bd86f29baa0c875c793b58d9100ce9e28e6595b1b668b33dcb17325cdf"
     }
   ],
   "observations": [
     {
-      "gameId": "r3-bi-2",
-      "homeTeamId": "mp-47648dd4-12ea-4e97-bb1f-53394bf9194e",
-      "awayTeamId": "mp-36804062-1b76-4407-bfb2-611987cd826c",
+      "gameId": "r1-bi-3",
+      "homeTeamId": "mp-7c4c5c93-8816-4135-ad85-dab4b8583891",
+      "awayTeamId": "mp-540b1cdb-27ed-462a-bf27-5b8d8dd51d11",
       "homeScore": null,
       "awayScore": null,
       "status": "scheduled",
       "winnerTeamId": null,
-      "kickoff": "2026-11-14T20:00:00+00:00",
+      "kickoff": "2026-11-13T01:00:00+00:00",
       "venue": null,
-      "sourceId": "maxpreps-game-256abb15747d010c",
-      "verifiedAt": "2026-11-09T06:17:22.363Z",
+      "sourceId": "maxpreps-game-fac5474da28dd74e",
+      "verifiedAt": "2026-11-09T16:26:42.627Z",
       "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
     },
     {
-      "gameId": "r3-bi-8",
-      "homeTeamId": "mp-db96ef3f-9d7c-40c0-89ca-fe8b11a73af1",
-      "awayTeamId": "mp-4a31a92c-1004-4ba0-bb9e-f9c4d026dafe",
+      "gameId": "r1-bi-4",
+      "homeTeamId": "mp-761e1afd-d386-4edd-a4ef-5e4f79d1fbf0",
+      "awayTeamId": "mp-a779a2c9-df77-4d6f-a04e-dfc380fe0f70",
       "homeScore": null,
       "awayScore": null,
       "status": "scheduled",
       "winnerTeamId": null,
-      "kickoff": "2026-11-14T01:00:00+00:00",
+      "kickoff": "2026-11-14T01:30:00+00:00",
       "venue": null,
-      "sourceId": "maxpreps-game-2de497cd0d1a5907",
-      "verifiedAt": "2026-11-09T06:17:22.363Z",
+      "sourceId": "maxpreps-game-756274d2c6096c07",
+      "verifiedAt": "2026-11-09T16:26:42.627Z",
       "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
     },
     {
-      "gameId": "r4-bi-5",
-      "homeTeamId": "mp-2a824672-6cae-43ea-b82a-4a5d22711881",
-      "awayTeamId": "mp-90b59be3-7150-4b68-a1fa-3fefe4b13fd1",
+      "gameId": "r3-bi-5",
+      "homeTeamId": "mp-afa276f8-84eb-4fcd-b785-18420afd50f4",
+      "awayTeamId": "mp-86d83ae5-2f4e-40ff-a034-cb2112387588",
       "homeScore": null,
       "awayScore": null,
       "status": "scheduled",
       "winnerTeamId": null,
-      "kickoff": "2026-11-14T01:00:00+00:00",
+      "kickoff": "2026-11-13T00:00:00+00:00",
       "venue": null,
-      "sourceId": "maxpreps-game-6046149fd82b80b0",
-      "verifiedAt": "2026-11-09T06:17:22.363Z",
+      "sourceId": "maxpreps-game-ae429528f02bf74c",
+      "verifiedAt": "2026-11-09T16:26:42.627Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-8",
+      "homeTeamId": "mp-e41933ef-bffb-4574-be33-23ff30f74c6b",
+      "awayTeamId": "mp-8e64dd04-89dc-4482-8462-afae6d94626e",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-13T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-4cc21358183d7bd3",
+      "verifiedAt": "2026-11-09T16:26:42.627Z",
       "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
     }
   ],
