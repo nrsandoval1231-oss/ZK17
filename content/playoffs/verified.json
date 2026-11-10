@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "season": 2026,
   "division": "5A-DII",
-  "checkedAt": "2026-11-10T01:29:39.412Z",
+  "checkedAt": "2026-11-10T14:48:28.224Z",
   "verificationScope": "Source-backed game updates, Anna alignment and UIL bracket structure; check individual game sources and timestamps.",
   "sources": [
     {
@@ -714,6 +714,116 @@
         {
           "url": "https://www.maxpreps.com/tx/football/game/mercedes-vs-mission-veterans-memorial/11-13-2026/?c=9dbe5ad9-6ea7-48e1-8294-b68519655285",
           "sha256": "4ce27b6580a618443b8899fd51ea5417ed1c578a9b7a3e470eda29e1e18b2b28"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-6c5512c8b5abf001",
+      "url": "https://www.maxpreps.com/tx/football/game/texas-texarkana-vs-wilson-dallas/11-13-2026/?c=1010365d-72d9-41af-85a6-1704e4fe49e9",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-10T14:48:28.224Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "841952fb5bd71c8aeab12b55e7fa2a0432b77610c7601a008d4106b47f8bf330"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "86bb6471fe311c7f96992d244ac39c3d40799606e529b9eeef26c4990a3de92d"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/texas-texarkana-vs-wilson-dallas/11-13-2026/?c=1010365d-72d9-41af-85a6-1704e4fe49e9",
+          "sha256": "9fad829f6337fc95a15b679e550bad94cc624a0e92f44553e19b7b689a6e9df6"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-646980dd376729c3",
+      "url": "https://www.maxpreps.com/tx/football/game/hallsville-vs-hillcrest-dallas/11-13-2026/?c=d6e1c734-58c5-421e-9aa2-110e725f9e7b",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-10T14:48:28.224Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "841952fb5bd71c8aeab12b55e7fa2a0432b77610c7601a008d4106b47f8bf330"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "86bb6471fe311c7f96992d244ac39c3d40799606e529b9eeef26c4990a3de92d"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/hallsville-vs-hillcrest-dallas/11-13-2026/?c=d6e1c734-58c5-421e-9aa2-110e725f9e7b",
+          "sha256": "7acc3bf392ff22bf4327888026a44169783ef29dd166eeb9d5c67c126d0d31ee"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-52e3937e65bfaab5",
+      "url": "https://www.maxpreps.com/tx/football/game/lake-creek-montgomery-vs-texas-city/11-13-2026/?c=2af66978-9eed-430a-89f9-9d8b0be2ed0d",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-10T14:48:28.224Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "841952fb5bd71c8aeab12b55e7fa2a0432b77610c7601a008d4106b47f8bf330"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "86bb6471fe311c7f96992d244ac39c3d40799606e529b9eeef26c4990a3de92d"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/lake-creek-montgomery-vs-texas-city/11-13-2026/?c=2af66978-9eed-430a-89f9-9d8b0be2ed0d",
+          "sha256": "ce49047451b42687a6e70f589958776e78a1cd9c56aa2c5618727d86fad6f9b3"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-5b447f4ed21b5023",
+      "url": "https://www.maxpreps.com/tx/football/game/legacy-ranch-liberty-hill-vs-sam-houston-san-antonio/11-13-2026/?c=a8f88f7e-d91a-4317-a2f3-10008445313f",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-10T14:48:28.224Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "841952fb5bd71c8aeab12b55e7fa2a0432b77610c7601a008d4106b47f8bf330"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "86bb6471fe311c7f96992d244ac39c3d40799606e529b9eeef26c4990a3de92d"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/legacy-ranch-liberty-hill-vs-sam-houston-san-antonio/11-13-2026/?c=a8f88f7e-d91a-4317-a2f3-10008445313f",
+          "sha256": "6aa869006111446e65e8f5fc0373b6954ca74a92d852953133d6a8cf5c8ee2fb"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-cb66e88b72f87748",
+      "url": "https://www.maxpreps.com/tx/football/game/harlandale-san-antonio-vs-liberty-hill/11-13-2026/?c=2af02a1b-d889-4d6d-a6b9-5bf1505c10c4",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-10T14:48:28.224Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "841952fb5bd71c8aeab12b55e7fa2a0432b77610c7601a008d4106b47f8bf330"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "86bb6471fe311c7f96992d244ac39c3d40799606e529b9eeef26c4990a3de92d"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/harlandale-san-antonio-vs-liberty-hill/11-13-2026/?c=2af02a1b-d889-4d6d-a6b9-5bf1505c10c4",
+          "sha256": "d19dd184c216df51a16b59fcbab951502c915d073797ef1499bc4ca801188ac2"
         }
       ]
     }
@@ -2285,6 +2395,76 @@
       "venue": null,
       "sourceId": "maxpreps-game-a95ec47e73a73880",
       "verifiedAt": "2026-11-10T01:29:39.412Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-6",
+      "homeTeamId": "mp-8c113220-90fe-4ef8-b458-8c0629d620f4",
+      "awayTeamId": "mp-36c0cace-6022-4dee-b1f2-c0058997ecad",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-6c5512c8b5abf001",
+      "verifiedAt": "2026-11-10T14:48:28.224Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r2-bi-8",
+      "homeTeamId": "mp-a3bd01c9-3acc-45bb-917d-d01b7ef73ce1",
+      "awayTeamId": "mp-33cebbc7-67f6-4c66-8fd1-b12f7c1bf72f",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:30:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-646980dd376729c3",
+      "verifiedAt": "2026-11-10T14:48:28.224Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-6",
+      "homeTeamId": "mp-850020a1-7635-40fc-bfc8-f7c77d95c019",
+      "awayTeamId": "mp-49cc3751-aa79-424a-8036-42593c70617b",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-52e3937e65bfaab5",
+      "verifiedAt": "2026-11-10T14:48:28.224Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-3",
+      "homeTeamId": "mp-3de0639a-f7a5-4e1a-8c89-e0d0d0b58258",
+      "awayTeamId": "mp-f169e2e1-d884-4111-8b91-e7bda852426d",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-5b447f4ed21b5023",
+      "verifiedAt": "2026-11-10T14:48:28.224Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-6",
+      "homeTeamId": "mp-3bb9ad06-2f84-4302-974c-23488996eaaa",
+      "awayTeamId": "mp-8ad78532-e54e-4479-9294-bf595496d9d1",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-cb66e88b72f87748",
+      "verifiedAt": "2026-11-10T14:48:28.224Z",
       "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
     }
   ],
