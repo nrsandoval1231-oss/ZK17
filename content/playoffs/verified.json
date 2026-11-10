@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "season": 2026,
   "division": "5A-DII",
-  "checkedAt": "2026-11-09T16:26:42.627Z",
+  "checkedAt": "2026-11-10T01:29:39.412Z",
   "verificationScope": "Source-backed game updates, Anna alignment and UIL bracket structure; check individual game sources and timestamps.",
   "sources": [
     {
@@ -626,6 +626,94 @@
         {
           "url": "https://www.maxpreps.com/tx/football/game/alamo-heights-san-antonio-vs-mccollum-san-antonio/11-12-2026/?c=debc763f-7f81-4f76-b66b-b36df23c9511",
           "sha256": "90f6530a2f2c1b35a273a540e9d5019c69f47af8b65124d126c995fd22c4314e"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-16922d1a43adadf4",
+      "url": "https://www.maxpreps.com/tx/football/game/colleyville-heritage-vs-frisco/11-13-2026/?c=58820efd-5cad-4d12-8159-50c34b48ae20",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-10T01:29:39.412Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "27985ecad2ba717c146be0bdfc32d72feacd806c60b11ad7e88f49b010bc9867"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "af24a17a543327083e2337d30cfadb8e9cb62b3a61ed6d530c2497782d9978ec"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/colleyville-heritage-vs-frisco/11-13-2026/?c=58820efd-5cad-4d12-8159-50c34b48ae20",
+          "sha256": "4dbc2c5c2ac83bd720f581009bddcdf96b4f0f8ecd943955e61c472f41d06e1f"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-863f38676c3f9c58",
+      "url": "https://www.maxpreps.com/tx/football/game/port-neches-groves-vs-west-fork-kingwood/11-13-2026/?c=cb624a56-2a77-4950-933c-59d3c28e6950",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-10T01:29:39.412Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "27985ecad2ba717c146be0bdfc32d72feacd806c60b11ad7e88f49b010bc9867"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "af24a17a543327083e2337d30cfadb8e9cb62b3a61ed6d530c2497782d9978ec"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/port-neches-groves-vs-west-fork-kingwood/11-13-2026/?c=cb624a56-2a77-4950-933c-59d3c28e6950",
+          "sha256": "84a3dff45e78940e59a49ef95ec18894538b1f48f904766b018720b13cfdc808"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-8acf45f5641e91a6",
+      "url": "https://www.maxpreps.com/tx/football/game/bastrop-vs-victoria-west/11-13-2026/?c=4e0274ea-21b5-4dca-9030-832ad8a01831",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-10T01:29:39.412Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "27985ecad2ba717c146be0bdfc32d72feacd806c60b11ad7e88f49b010bc9867"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "af24a17a543327083e2337d30cfadb8e9cb62b3a61ed6d530c2497782d9978ec"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/bastrop-vs-victoria-west/11-13-2026/?c=4e0274ea-21b5-4dca-9030-832ad8a01831",
+          "sha256": "5eeb87be3bef6ae01e889b11a6c4fba0e0559b0598b426c603ec0a3ca048d784"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-a95ec47e73a73880",
+      "url": "https://www.maxpreps.com/tx/football/game/mercedes-vs-mission-veterans-memorial/11-13-2026/?c=9dbe5ad9-6ea7-48e1-8294-b68519655285",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-10T01:29:39.412Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "27985ecad2ba717c146be0bdfc32d72feacd806c60b11ad7e88f49b010bc9867"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "af24a17a543327083e2337d30cfadb8e9cb62b3a61ed6d530c2497782d9978ec"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/mercedes-vs-mission-veterans-memorial/11-13-2026/?c=9dbe5ad9-6ea7-48e1-8294-b68519655285",
+          "sha256": "4ce27b6580a618443b8899fd51ea5417ed1c578a9b7a3e470eda29e1e18b2b28"
         }
       ]
     }
@@ -2141,6 +2229,62 @@
       "venue": null,
       "sourceId": "maxpreps-game-4cc21358183d7bd3",
       "verifiedAt": "2026-11-09T16:26:42.627Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-2",
+      "homeTeamId": "mp-8d12a56a-c035-4930-a126-8d144076b8d0",
+      "awayTeamId": "mp-cd55b9aa-23e9-4239-9ea9-2fda68706dea",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-16922d1a43adadf4",
+      "verifiedAt": "2026-11-10T01:29:39.412Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-3",
+      "homeTeamId": "mp-d45fe67b-132a-4902-bb2e-9a113e25b37a",
+      "awayTeamId": "mp-53835be8-1d03-4059-9a09-49e88f682a96",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-863f38676c3f9c58",
+      "verifiedAt": "2026-11-10T01:29:39.412Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r3-bi-7",
+      "homeTeamId": "mp-a03335a4-e848-4fad-bc6c-0a47216b2170",
+      "awayTeamId": "mp-c2500760-c49e-4ee7-9393-b35a418ea142",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-8acf45f5641e91a6",
+      "verifiedAt": "2026-11-10T01:29:39.412Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r4-bi-2",
+      "homeTeamId": "mp-c8567519-b7b4-44bc-85f6-354242d6bdc8",
+      "awayTeamId": "mp-ccd24da9-93e6-4dad-aeb3-dd9f95dbae74",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-a95ec47e73a73880",
+      "verifiedAt": "2026-11-10T01:29:39.412Z",
       "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
     }
   ],
