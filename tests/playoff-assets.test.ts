@@ -26,7 +26,8 @@ it('uses the exact owner upload for Anna while preserving its dimensions and art
  assert.ok(cleared>40000);assert.ok(whiteDetails>500);
  assert.equal(result[3],0);
  assert.equal((await validatePlayoffAssets({publicRelease:false})).ready,true);
- await assert.rejects(()=>validatePlayoffAssets({publicRelease:true}),/canonical owner mockup/);
+ // The owner-authorized live site must accept verified data updates without a design reference.
+ assert.equal((await validatePlayoffAssets({publicRelease:true})).ready,true);
 });
 it('still blocks public release when the original logo is missing',async()=>{
  const directory=await mkdtemp(join(tmpdir(),'zk-playoff-brand-'));
