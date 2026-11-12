@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "season": 2026,
   "division": "5A-DII",
-  "checkedAt": "2026-11-10T14:48:28.224Z",
+  "checkedAt": "2026-11-12T15:06:49.152Z",
   "verificationScope": "Source-backed game updates, Anna alignment and UIL bracket structure; check individual game sources and timestamps.",
   "sources": [
     {
@@ -824,6 +824,28 @@
         {
           "url": "https://www.maxpreps.com/tx/football/game/harlandale-san-antonio-vs-liberty-hill/11-13-2026/?c=2af02a1b-d889-4d6d-a6b9-5bf1505c10c4",
           "sha256": "d19dd184c216df51a16b59fcbab951502c915d073797ef1499bc4ca801188ac2"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-f9aa6d5f6e0b0e55",
+      "url": "https://www.maxpreps.com/tx/football/game/canutillo-vs-cooper-abilene/11-13-2026/?c=15abc81e-2af8-45c6-800b-5c03316d2169",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-12T15:06:49.152Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "3a07cbb8268d31bc1a703df97b3144592c50c2dc69124f190f41a3a1c6cecbf3"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "d6ba91dde0191f44f31eca290218c0c475696c62d2a3093ec5ba2c6023427d18"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/canutillo-vs-cooper-abilene/11-13-2026/?c=15abc81e-2af8-45c6-800b-5c03316d2169",
+          "sha256": "a87405455794ddc26114670073ff597d8044c6c9c8c5b638e1a9b0c9677ed55b"
         }
       ]
     }
@@ -2465,6 +2487,20 @@
       "venue": null,
       "sourceId": "maxpreps-game-cb66e88b72f87748",
       "verifiedAt": "2026-11-10T14:48:28.224Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-8",
+      "homeTeamId": "mp-b4713352-a2cb-4bfe-949a-edbe500f9b29",
+      "awayTeamId": "mp-55e7ef00-811a-40df-b9f5-845fbdd07fe4",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "winnerTeamId": null,
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-f9aa6d5f6e0b0e55",
+      "verifiedAt": "2026-11-12T15:06:49.152Z",
       "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
     }
   ],
