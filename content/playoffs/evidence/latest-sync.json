@@ -1262,6 +1262,38 @@
         "reviewedBy": "manual-review:Anna Athletics schedule and MaxPreps game details"
       },
       "note": "Official Anna Athletics 2026–2027 schedule confirms Abilene Cooper, Nov 20 at 7:30 PM Central, and Coyote Stadium in Anna, TX. MaxPreps corroborates opponent/date/kickoff. The Nov 15 adapter warnings and records are retained as history."
+    },
+    {
+      "retrievedAt": "2026-11-17T12:29:08.855Z",
+      "source": {
+        "id": "anna-maxpreps-season-1ee443d61e0f4779",
+        "label": "Anna Coyotes 2026–27 schedule and season record through the Bi-District final",
+        "authority": "secondary",
+        "season": 2026,
+        "url": "https://www.maxpreps.com/tx/anna/anna-coyotes/football/schedule/",
+        "retrievedAt": "2026-11-17T12:29:08.855Z",
+        "evidence": [
+          {
+            "url": "https://www.maxpreps.com/tx/anna/anna-coyotes/football/schedule/",
+            "sha256": "1ee443d61e0f4779cd28beff3d84a89154d1a9b7bb137a29905a8e8e178122bb"
+          },
+          {
+            "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+            "sha256": "5e7f91d15e12b7eb96fd081d5fead045d847d5b8b4dccaa1398a1c70a0249f2e"
+          }
+        ]
+      },
+      "seasonSummary": {
+        "sourceId": "anna-maxpreps-season-1ee443d61e0f4779",
+        "lastResultDate": "2026-11-13",
+        "district": "8–0",
+        "districtPlace": "1st",
+        "pointsFor": 480,
+        "overall": "11–0",
+        "pointsAgainst": 234,
+        "lastResult": "Anna 42–10 The Colony"
+      },
+      "note": "The 11 official Anna Athletics finals and the MaxPreps season summary agree on 11–0 overall and scoring of 480–234; the August 21 entry has no final and is excluded. District record and position remain unchanged; the last final is November 13 vs The Colony."
     }
   ]
 }

@@ -1768,6 +1768,24 @@
           "sha256": "2aab641397a5d3fce46f6de63f131074c6186e28a2f53008179ea235fa7a06b4"
         }
       ]
+    },
+    {
+      "id": "anna-maxpreps-season-1ee443d61e0f4779",
+      "label": "Anna Coyotes 2026–27 schedule and season record through the Bi-District final",
+      "authority": "secondary",
+      "season": 2026,
+      "url": "https://www.maxpreps.com/tx/anna/anna-coyotes/football/schedule/",
+      "retrievedAt": "2026-11-17T12:29:08.855Z",
+      "evidence": [
+        {
+          "url": "https://www.maxpreps.com/tx/anna/anna-coyotes/football/schedule/",
+          "sha256": "1ee443d61e0f4779cd28beff3d84a89154d1a9b7bb137a29905a8e8e178122bb"
+        },
+        {
+          "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+          "sha256": "5e7f91d15e12b7eb96fd081d5fead045d847d5b8b4dccaa1398a1c70a0249f2e"
+        }
+      ]
     }
   ],
   "teams": [
@@ -4014,13 +4032,13 @@
     }
   ],
   "seasonSummary": {
-    "sourceId": "anna-maxpreps-schedule",
-    "lastResultDate": "2026-11-06",
+    "sourceId": "anna-maxpreps-season-1ee443d61e0f4779",
+    "lastResultDate": "2026-11-13",
     "district": "8–0",
     "districtPlace": "1st",
-    "pointsFor": 438,
-    "overall": "10–0",
-    "pointsAgainst": 224,
-    "lastResult": "Anna 56–31 Prosper Richland"
+    "pointsFor": 480,
+    "overall": "11–0",
+    "pointsAgainst": 234,
+    "lastResult": "Anna 42–10 The Colony"
   }
 }
