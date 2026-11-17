@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "season": 2026,
   "division": "5A-DII",
-  "checkedAt": "2026-11-12T23:34:10.383Z",
+  "checkedAt": "2026-11-17T12:27:01.337Z",
   "verificationScope": "Source-backed game updates, Anna alignment and UIL bracket structure; check individual game sources and timestamps.",
   "sources": [
     {
@@ -870,6 +870,86 @@
           "sha256": "aa9a85394e64f4928cfcd3447e991433e6f0d53118ee84354d8b508253fee5ff"
         }
       ]
+    },
+    {
+      "id": "maxpreps-game-e7a0e53b402fa6bc",
+      "url": "https://www.maxpreps.com/tx/football/game/anna-vs-the-colony/11-13-2026/?c=4514c2fd-fae6-40a6-bec7-62dfa191696f",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-15T06:20:56.228Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "6c347d5eb79f323a00e5e66b747bb8bec8912dad36ae00f213943d8b1fe1c325"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "dd877f614195702b913fe493937e19c2c5bbbf7defdb311cbe5a9332fd0b38ea"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/anna-vs-the-colony/11-13-2026/?c=4514c2fd-fae6-40a6-bec7-62dfa191696f",
+          "sha256": "9b5bac4e6838b23f9e0c7be075711b49aecefaad2e1c5b3605a1ee2b95830b9e"
+        }
+      ]
+    },
+    {
+      "id": "maxpreps-game-beac309f84184ba7",
+      "url": "https://www.maxpreps.com/tx/football/game/canutillo-vs-cooper-abilene/11-13-2026/?c=15abc81e-2af8-45c6-800b-5c03316d2169",
+      "label": "UIL-linked MaxPreps game detail and bracket",
+      "authority": "secondary",
+      "season": 2026,
+      "retrievedAt": "2026-11-15T06:20:56.228Z",
+      "evidence": [
+        {
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "sha256": "6c347d5eb79f323a00e5e66b747bb8bec8912dad36ae00f213943d8b1fe1c325"
+        },
+        {
+          "url": "https://www.maxpreps.com/tournament/view.aspx?tournamentid=7a33d24f-4de2-43eb-aa37-7987d5c334ab&ssid=2286cd80-c46d-4739-8dd1-92a67ca8daa7&bracketid=15f0b8b4-192d-4208-828c-4f26f39ce6a8",
+          "sha256": "dd877f614195702b913fe493937e19c2c5bbbf7defdb311cbe5a9332fd0b38ea"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/canutillo-vs-cooper-abilene/11-13-2026/?c=15abc81e-2af8-45c6-800b-5c03316d2169",
+          "sha256": "2b18c4efe0c64b9dd8a0d2d5ee31e97481e9e5a50ff1ebf697c64f77e95262d5"
+        }
+      ]
+    },
+    {
+      "id": "anna-school-area-5e7f91d15e12b7eb",
+      "label": "Anna Athletics official 2026–27 schedule: Area playoff vs Abilene Cooper",
+      "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+      "authority": "school",
+      "season": 2026,
+      "retrievedAt": "2026-11-17T12:27:01.337Z",
+      "evidence": [
+        {
+          "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+          "sha256": "5e7f91d15e12b7eb96fd081d5fead045d847d5b8b4dccaa1398a1c70a0249f2e"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/anna-vs-cooper-abilene/11-20-2026/?c=43ad421c-5010-4e31-a4b8-4641a2c34529",
+          "sha256": "2aab641397a5d3fce46f6de63f131074c6186e28a2f53008179ea235fa7a06b4"
+        }
+      ]
+    },
+    {
+      "id": "anna-maxpreps-season-1ee443d61e0f4779",
+      "label": "Anna Coyotes 2026–27 schedule and season record through the Bi-District final",
+      "authority": "secondary",
+      "season": 2026,
+      "url": "https://www.maxpreps.com/tx/anna/anna-coyotes/football/schedule/",
+      "retrievedAt": "2026-11-17T12:29:08.855Z",
+      "evidence": [
+        {
+          "url": "https://www.maxpreps.com/tx/anna/anna-coyotes/football/schedule/",
+          "sha256": "1ee443d61e0f4779cd28beff3d84a89154d1a9b7bb137a29905a8e8e178122bb"
+        },
+        {
+          "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+          "sha256": "5e7f91d15e12b7eb96fd081d5fead045d847d5b8b4dccaa1398a1c70a0249f2e"
+        }
+      ]
     }
   ],
   "teams": [
@@ -1027,9 +1107,10 @@
     },
     {
       "id": "mp-55e7ef00-811a-40df-b9f5-845fbdd07fe4",
-      "name": "Cooper",
+      "name": "Abilene Cooper",
       "aliases": [
-        "maxpreps:55e7ef00-811a-40df-b9f5-845fbdd07fe4"
+        "maxpreps:55e7ef00-811a-40df-b9f5-845fbdd07fe4",
+        "Cooper"
       ],
       "district": 2,
       "region": 1,
@@ -2538,16 +2619,58 @@
       "sourceId": "maxpreps-game-956990df74f83b76",
       "verifiedAt": "2026-11-12T23:34:10.383Z",
       "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-7",
+      "homeTeamId": "anna",
+      "awayTeamId": "mp-15f74e18-a4b1-451a-92aa-d022ed36204d",
+      "homeScore": 42,
+      "awayScore": 10,
+      "status": "final",
+      "winnerTeamId": "anna",
+      "kickoff": "2026-11-14T01:30:00+00:00",
+      "venue": "Coyote Stadium",
+      "sourceId": "maxpreps-game-e7a0e53b402fa6bc",
+      "verifiedAt": "2026-11-15T06:20:56.228Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-bi-8",
+      "homeTeamId": "mp-b4713352-a2cb-4bfe-949a-edbe500f9b29",
+      "awayTeamId": "mp-55e7ef00-811a-40df-b9f5-845fbdd07fe4",
+      "homeScore": 21,
+      "awayScore": 41,
+      "status": "final",
+      "winnerTeamId": "mp-55e7ef00-811a-40df-b9f5-845fbdd07fe4",
+      "kickoff": "2026-11-14T01:00:00+00:00",
+      "venue": null,
+      "sourceId": "maxpreps-game-beac309f84184ba7",
+      "verifiedAt": "2026-11-15T06:20:56.228Z",
+      "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-area-4",
+      "homeTeamId": "anna",
+      "awayTeamId": "mp-55e7ef00-811a-40df-b9f5-845fbdd07fe4",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "kickoff": "2026-11-21T01:30:00+00:00",
+      "venue": "Coyote Stadium",
+      "winnerTeamId": null,
+      "sourceId": "anna-school-area-5e7f91d15e12b7eb",
+      "verifiedAt": "2026-11-17T12:27:01.337Z",
+      "reviewedBy": "manual-review:Anna Athletics schedule and MaxPreps game details"
     }
   ],
   "seasonSummary": {
-    "sourceId": "anna-maxpreps-schedule",
-    "lastResultDate": "2026-11-06",
+    "sourceId": "anna-maxpreps-season-1ee443d61e0f4779",
+    "lastResultDate": "2026-11-13",
     "district": "8–0",
     "districtPlace": "1st",
-    "pointsFor": 438,
-    "overall": "10–0",
-    "pointsAgainst": 224,
-    "lastResult": "Anna 56–31 Prosper Richland"
+    "pointsFor": 480,
+    "overall": "11–0",
+    "pointsAgainst": 234,
+    "lastResult": "Anna 42–10 The Colony"
   }
 }
