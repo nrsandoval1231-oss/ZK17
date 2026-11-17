@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "season": 2026,
   "division": "5A-DII",
-  "checkedAt": "2026-11-15T06:20:56.228Z",
+  "checkedAt": "2026-11-17T12:27:01.337Z",
   "verificationScope": "Source-backed game updates, Anna alignment and UIL bracket structure; check individual game sources and timestamps.",
   "sources": [
     {
@@ -1750,6 +1750,24 @@
           "sha256": "6975f1dec2b8d7a2d9c237b9d73e0d333473b530b253615ab5b3677b3d11c53e"
         }
       ]
+    },
+    {
+      "id": "anna-school-area-5e7f91d15e12b7eb",
+      "label": "Anna Athletics official 2026–27 schedule: Area playoff vs Abilene Cooper",
+      "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+      "authority": "school",
+      "season": 2026,
+      "retrievedAt": "2026-11-17T12:27:01.337Z",
+      "evidence": [
+        {
+          "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+          "sha256": "5e7f91d15e12b7eb96fd081d5fead045d847d5b8b4dccaa1398a1c70a0249f2e"
+        },
+        {
+          "url": "https://www.maxpreps.com/tx/football/game/anna-vs-cooper-abilene/11-20-2026/?c=43ad421c-5010-4e31-a4b8-4641a2c34529",
+          "sha256": "2aab641397a5d3fce46f6de63f131074c6186e28a2f53008179ea235fa7a06b4"
+        }
+      ]
     }
   ],
   "teams": [
@@ -1907,9 +1925,10 @@
     },
     {
       "id": "mp-55e7ef00-811a-40df-b9f5-845fbdd07fe4",
-      "name": "Cooper",
+      "name": "Abilene Cooper",
       "aliases": [
-        "maxpreps:55e7ef00-811a-40df-b9f5-845fbdd07fe4"
+        "maxpreps:55e7ef00-811a-40df-b9f5-845fbdd07fe4",
+        "Cooper"
       ],
       "district": 2,
       "region": 1,
@@ -3978,6 +3997,20 @@
       "sourceId": "maxpreps-game-4cffea4f8cae8386",
       "verifiedAt": "2026-11-15T06:20:56.228Z",
       "reviewedBy": "source-adapter:maxpreps-v1 (UIL-linked; graph and identity validated)"
+    },
+    {
+      "gameId": "r1-area-4",
+      "homeTeamId": "anna",
+      "awayTeamId": "mp-55e7ef00-811a-40df-b9f5-845fbdd07fe4",
+      "homeScore": null,
+      "awayScore": null,
+      "status": "scheduled",
+      "kickoff": "2026-11-21T01:30:00+00:00",
+      "venue": "Coyote Stadium",
+      "winnerTeamId": null,
+      "sourceId": "anna-school-area-5e7f91d15e12b7eb",
+      "verifiedAt": "2026-11-17T12:27:01.337Z",
+      "reviewedBy": "manual-review:Anna Athletics schedule and MaxPreps game details"
     }
   ],
   "seasonSummary": {
