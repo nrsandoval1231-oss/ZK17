@@ -612,5 +612,359 @@
         ]
       }
     ]
-  }
+  },
+  "manualUpdates": [
+    {
+      "retrievedAt": "2026-11-21T14:12:55.098Z",
+      "scope": "Anna Area final, exact required Regional feeder finals, Regional opponent/kickoff/venue, season summary only",
+      "retrievals": [
+        {
+          "key": "uil",
+          "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+          "retrievedAt": "2026-11-21T14:11:13.227161+00:00",
+          "sha256": "b28cfbae7bd8ed9617ce154ce9e23c61c3f6b1cdb7dddc1b4f53e6c19e165680",
+          "httpStatus": 200,
+          "bytes": 62304
+        },
+        {
+          "key": "bracket",
+          "url": "https://www.maxpreps.com/tournament/T9IzeuJN60OqN3mH1cM0qw/tLjwFS0ZCEKCjE8m85zmqA/football-26/2026-uil-texas-football-state-championships-2026-football-conference-5a-d2.htm",
+          "retrievedAt": "2026-11-21T14:11:17.167735+00:00",
+          "sha256": "ed30da4be30b8ff84b928a7d4f629b925f14ea0fb7794cff6c17300396c60fdc",
+          "httpStatus": 200,
+          "bytes": 279317
+        },
+        {
+          "key": "school",
+          "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+          "retrievedAt": "2026-11-21T14:11:22.536712+00:00",
+          "sha256": "220a6d551a484d71c33e9c9a85f137df5f4cf4eecc6c1b44e869479bb6496154",
+          "httpStatus": 200,
+          "bytes": 191505
+        },
+        {
+          "key": "season",
+          "url": "https://www.maxpreps.com/tx/anna/anna-coyotes/football/schedule/",
+          "retrievedAt": "2026-11-21T14:11:24.843312+00:00",
+          "sha256": "06836fa5ae12f8ec0673a169859ff74eee2cde6b04b2b13f64434bfaa578e490",
+          "httpStatus": 200,
+          "bytes": 340686
+        },
+        {
+          "key": "anna-final",
+          "url": "https://www.maxpreps.com/tx/football/game/anna-vs-cooper-abilene/11-20-2026/?c=43ad421c-5010-4e31-a4b8-4641a2c34529",
+          "retrievedAt": "2026-11-21T14:11:27.336899+00:00",
+          "sha256": "5cd6981e7753614bd5564a17cc0cd3a1f63759aa67083e9c56e05ce5ca5c0473",
+          "httpStatus": 200,
+          "bytes": 285894
+        },
+        {
+          "key": "next",
+          "url": "https://www.maxpreps.com/tx/football/game/anna-vs-argyle/11-27-2026/?c=2b8f8818-e1ad-4d73-871c-a185e4308a84",
+          "retrievedAt": "2026-11-21T14:11:30.283028+00:00",
+          "sha256": "080ed5bb16807db617e84da040e160abebd48df997ed169f09705024d5db009c",
+          "httpStatus": 200,
+          "bytes": 364593
+        },
+        {
+          "key": "argyle-school",
+          "url": "https://www.argyleeaglessports.com/sport/football/boys/?tab=schedule",
+          "retrievedAt": "2026-11-21T14:11:34.689118+00:00",
+          "sha256": "0aacbba931c58fcd668630f864deebd2094c2bd2f32d617c29c39093093b5b90",
+          "httpStatus": 200,
+          "bytes": 203676
+        }
+      ],
+      "observations": [
+        {
+          "gameId": "r1-bi-5",
+          "homeTeamId": "mp-c45343b8-f2c8-410d-b896-66d3aeea5851",
+          "awayTeamId": "mp-ba4ec0a4-7fa6-473e-967b-7a68ca169609",
+          "homeScore": 65,
+          "awayScore": 17,
+          "status": "final",
+          "kickoff": "2026-11-14T01:00:00+00:00",
+          "venue": null,
+          "winnerTeamId": "mp-c45343b8-f2c8-410d-b896-66d3aeea5851",
+          "sourceId": "reviewed-uil-feeders-ed30da4be30b8ff8",
+          "verifiedAt": "2026-11-21T14:12:55.098Z",
+          "reviewedBy": "manual-review:official Anna/Argyle schedules, exact UIL-linked graph and published game finals"
+        },
+        {
+          "gameId": "r1-bi-6",
+          "homeTeamId": "mp-e4827d31-9641-4195-a2c3-dd69ad7aaa62",
+          "awayTeamId": "mp-edfaac0b-2ecb-491b-876f-48bde40b9d46",
+          "homeScore": 41,
+          "awayScore": 17,
+          "status": "final",
+          "kickoff": "2026-11-14T01:00:00+00:00",
+          "venue": null,
+          "winnerTeamId": "mp-e4827d31-9641-4195-a2c3-dd69ad7aaa62",
+          "sourceId": "reviewed-uil-feeders-ed30da4be30b8ff8",
+          "verifiedAt": "2026-11-21T14:12:55.098Z",
+          "reviewedBy": "manual-review:official Anna/Argyle schedules, exact UIL-linked graph and published game finals"
+        },
+        {
+          "gameId": "r1-area-3",
+          "homeTeamId": "mp-c45343b8-f2c8-410d-b896-66d3aeea5851",
+          "awayTeamId": "mp-e4827d31-9641-4195-a2c3-dd69ad7aaa62",
+          "homeScore": 77,
+          "awayScore": 48,
+          "status": "final",
+          "kickoff": null,
+          "venue": null,
+          "winnerTeamId": "mp-c45343b8-f2c8-410d-b896-66d3aeea5851",
+          "sourceId": "reviewed-uil-feeders-ed30da4be30b8ff8",
+          "verifiedAt": "2026-11-21T14:12:55.098Z",
+          "reviewedBy": "manual-review:official Anna/Argyle schedules, exact UIL-linked graph and published game finals"
+        },
+        {
+          "gameId": "r1-area-4",
+          "homeTeamId": "anna",
+          "awayTeamId": "mp-55e7ef00-811a-40df-b9f5-845fbdd07fe4",
+          "homeScore": 63,
+          "awayScore": 43,
+          "status": "final",
+          "kickoff": "2026-11-21T01:30:00+00:00",
+          "venue": "Coyote Stadium",
+          "winnerTeamId": "anna",
+          "sourceId": "anna-school-area-final-220a6d551a484d71",
+          "verifiedAt": "2026-11-21T14:12:55.098Z",
+          "reviewedBy": "manual-review:official Anna/Argyle schedules, exact UIL-linked graph and published game finals"
+        },
+        {
+          "gameId": "r1-regional-2",
+          "homeTeamId": "mp-c45343b8-f2c8-410d-b896-66d3aeea5851",
+          "awayTeamId": "anna",
+          "homeScore": null,
+          "awayScore": null,
+          "status": "scheduled",
+          "winnerTeamId": null,
+          "kickoff": "2026-11-27T22:00:00+00:00",
+          "venue": "Prosper ISD Children's Health Stadium, Prosper, TX",
+          "sourceId": "argyle-school-regional-0aacbba931c58fcd",
+          "verifiedAt": "2026-11-21T14:12:55.098Z",
+          "reviewedBy": "manual-review:Argyle official schedule for 4 PM CT; Anna official schedule for venue; exact UIL-linked game details and feeder graph"
+        }
+      ],
+      "sources": [
+        {
+          "id": "reviewed-uil-feeders-ed30da4be30b8ff8",
+          "label": "UIL-linked exact feeder finals for Anna Regional opponent",
+          "authority": "secondary",
+          "season": 2026,
+          "url": "https://www.maxpreps.com/tournament/T9IzeuJN60OqN3mH1cM0qw/tLjwFS0ZCEKCjE8m85zmqA/football-26/2026-uil-texas-football-state-championships-2026-football-conference-5a-d2.htm",
+          "retrievedAt": "2026-11-21T14:12:55.098Z",
+          "evidence": [
+            {
+              "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+              "sha256": "b28cfbae7bd8ed9617ce154ce9e23c61c3f6b1cdb7dddc1b4f53e6c19e165680"
+            },
+            {
+              "url": "https://www.maxpreps.com/tournament/T9IzeuJN60OqN3mH1cM0qw/tLjwFS0ZCEKCjE8m85zmqA/football-26/2026-uil-texas-football-state-championships-2026-football-conference-5a-d2.htm",
+              "sha256": "ed30da4be30b8ff84b928a7d4f629b925f14ea0fb7794cff6c17300396c60fdc"
+            },
+            {
+              "url": "https://www.argyleeaglessports.com/sport/football/boys/?tab=schedule",
+              "sha256": "0aacbba931c58fcd668630f864deebd2094c2bd2f32d617c29c39093093b5b90"
+            }
+          ]
+        },
+        {
+          "id": "anna-school-area-final-220a6d551a484d71",
+          "label": "Anna Athletics Area final: Anna 63–43 Abilene Cooper",
+          "authority": "school",
+          "season": 2026,
+          "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+          "retrievedAt": "2026-11-21T14:12:55.098Z",
+          "evidence": [
+            {
+              "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+              "sha256": "b28cfbae7bd8ed9617ce154ce9e23c61c3f6b1cdb7dddc1b4f53e6c19e165680"
+            },
+            {
+              "url": "https://www.maxpreps.com/tournament/T9IzeuJN60OqN3mH1cM0qw/tLjwFS0ZCEKCjE8m85zmqA/football-26/2026-uil-texas-football-state-championships-2026-football-conference-5a-d2.htm",
+              "sha256": "ed30da4be30b8ff84b928a7d4f629b925f14ea0fb7794cff6c17300396c60fdc"
+            },
+            {
+              "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+              "sha256": "220a6d551a484d71c33e9c9a85f137df5f4cf4eecc6c1b44e869479bb6496154"
+            },
+            {
+              "url": "https://www.maxpreps.com/tx/football/game/anna-vs-cooper-abilene/11-20-2026/?c=43ad421c-5010-4e31-a4b8-4641a2c34529",
+              "sha256": "5cd6981e7753614bd5564a17cc0cd3a1f63759aa67083e9c56e05ce5ca5c0473"
+            }
+          ]
+        },
+        {
+          "id": "argyle-school-regional-0aacbba931c58fcd",
+          "label": "Argyle Athletics Regional schedule vs Anna: Nov 27, 4 PM Central, Prosper ISD Stadium",
+          "authority": "school",
+          "season": 2026,
+          "url": "https://www.argyleeaglessports.com/sport/football/boys/?tab=schedule",
+          "retrievedAt": "2026-11-21T14:12:55.098Z",
+          "evidence": [
+            {
+              "url": "https://www.uiltexas.org/football/playoff-brackets/5AD2",
+              "sha256": "b28cfbae7bd8ed9617ce154ce9e23c61c3f6b1cdb7dddc1b4f53e6c19e165680"
+            },
+            {
+              "url": "https://www.maxpreps.com/tournament/T9IzeuJN60OqN3mH1cM0qw/tLjwFS0ZCEKCjE8m85zmqA/football-26/2026-uil-texas-football-state-championships-2026-football-conference-5a-d2.htm",
+              "sha256": "ed30da4be30b8ff84b928a7d4f629b925f14ea0fb7794cff6c17300396c60fdc"
+            },
+            {
+              "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+              "sha256": "220a6d551a484d71c33e9c9a85f137df5f4cf4eecc6c1b44e869479bb6496154"
+            },
+            {
+              "url": "https://www.maxpreps.com/tx/football/game/anna-vs-argyle/11-27-2026/?c=2b8f8818-e1ad-4d73-871c-a185e4308a84",
+              "sha256": "080ed5bb16807db617e84da040e160abebd48df997ed169f09705024d5db009c"
+            },
+            {
+              "url": "https://www.argyleeaglessports.com/sport/football/boys/?tab=schedule",
+              "sha256": "0aacbba931c58fcd668630f864deebd2094c2bd2f32d617c29c39093093b5b90"
+            }
+          ]
+        },
+        {
+          "id": "anna-season-06836fa5ae12f8ec",
+          "label": "Anna Athletics completed 2026 games and MaxPreps season totals",
+          "authority": "school",
+          "season": 2026,
+          "url": "https://www.maxpreps.com/tx/anna/anna-coyotes/football/schedule/",
+          "retrievedAt": "2026-11-21T14:12:55.098Z",
+          "evidence": [
+            {
+              "url": "https://www.gocoyoteu.com/sport/football/boys/?tab=schedule",
+              "sha256": "220a6d551a484d71c33e9c9a85f137df5f4cf4eecc6c1b44e869479bb6496154"
+            },
+            {
+              "url": "https://www.maxpreps.com/tx/anna/anna-coyotes/football/schedule/",
+              "sha256": "06836fa5ae12f8ec0673a169859ff74eee2cde6b04b2b13f64434bfaa578e490"
+            }
+          ]
+        }
+      ],
+      "graphEvidence": [
+        {
+          "gameId": "r1-bi-5",
+          "sourceMatchupId": "c9d2d755-fb7e-4a6c-907d-e8d683acb199",
+          "feeders": [
+            "00000000-0000-0000-0000-000000000000",
+            "00000000-0000-0000-0000-000000000000"
+          ],
+          "scores": [
+            65,
+            17
+          ],
+          "winnerTeamId": "mp-c45343b8-f2c8-410d-b896-66d3aeea5851"
+        },
+        {
+          "gameId": "r1-bi-6",
+          "sourceMatchupId": "35d9a0b1-e4ef-4690-89b9-2c776b649807",
+          "feeders": [
+            "00000000-0000-0000-0000-000000000000",
+            "00000000-0000-0000-0000-000000000000"
+          ],
+          "scores": [
+            41,
+            17
+          ],
+          "winnerTeamId": "mp-e4827d31-9641-4195-a2c3-dd69ad7aaa62"
+        },
+        {
+          "gameId": "r1-area-3",
+          "sourceMatchupId": "0ab9235e-06cd-4c1b-b8de-9734de85ff57",
+          "feeders": [
+            "c9d2d755-fb7e-4a6c-907d-e8d683acb199",
+            "35d9a0b1-e4ef-4690-89b9-2c776b649807"
+          ],
+          "scores": [
+            77,
+            48
+          ],
+          "winnerTeamId": "mp-c45343b8-f2c8-410d-b896-66d3aeea5851"
+        },
+        {
+          "gameId": "r1-area-4",
+          "sourceMatchupId": "9a2ac12d-4991-478f-8d72-37c30f23fffc",
+          "feeders": [
+            "9edd31d4-49ff-44d8-9716-3559006be6ff",
+            "8581a9f5-d7e5-4c19-89c7-7b7f2927ad17"
+          ],
+          "scores": [
+            63,
+            43
+          ],
+          "winnerTeamId": "anna"
+        }
+      ],
+      "seasonSummary": {
+        "sourceId": "anna-season-06836fa5ae12f8ec",
+        "lastResultDate": "2026-11-20",
+        "district": "8–0",
+        "districtPlace": "1st",
+        "pointsFor": 543,
+        "overall": "12–0",
+        "pointsAgainst": 277,
+        "lastResult": "Anna 63–43 Abilene Cooper"
+      },
+      "completedSeasonScores": [
+        [
+          49,
+          31
+        ],
+        [
+          38,
+          27
+        ],
+        [
+          42,
+          27
+        ],
+        [
+          42,
+          21
+        ],
+        [
+          70,
+          14
+        ],
+        [
+          16,
+          14
+        ],
+        [
+          49,
+          7
+        ],
+        [
+          41,
+          24
+        ],
+        [
+          35,
+          28
+        ],
+        [
+          56,
+          31
+        ],
+        [
+          42,
+          10
+        ],
+        [
+          63,
+          43
+        ]
+      ],
+      "notes": [
+        "Anna official schedule lists Nov 27 time TBA; no conflicting time. Argyle official varsity schedule and exact UIL-linked game both explicitly confirm 4 PM Central. Venue independently supported by Anna and Argyle school schedules.",
+        "Do not use SportsEvent location school address as venue.",
+        "Only directly required feeder games changed; disputed Bastrop–Victoria West and broad PR #22 untouched.",
+        "No existing final or observation overwritten. August 21 unscored scrimmage excluded from record."
+      ]
+    }
+  ]
 }
